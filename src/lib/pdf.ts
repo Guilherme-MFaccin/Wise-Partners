@@ -182,6 +182,31 @@ export class DocumentoPdf {
     this.y -= 8;
   }
 
+  // Uma linha de tabela com larguras próprias (frações da largura útil), para tabelas com células mescladas
+  linhaTabela(celulas: { texto: string; fracao: number; negrito?: boolean }[], o: { tamanho?: number; destaque?: boolean } = {}) {
+    const tamanho = o.tamanho ?? 8.5;
+    const total = A4[0] - 2 * MARGEM;
+    const pad = 4;
+    const altLinha = tamanho * 1.35;
+    const conteudo = celulas.map((c) => {
+      const larg = c.fracao * total;
+      const fonte = c.negrito ? this.negrito : this.fonte;
+      return { larg, fonte, linhas: this.quebrar(c.texto ?? "", fonte, tamanho, larg - 2 * pad) };
+    });
+    const altura = Math.max(1, ...conteudo.map((c) => c.linhas.length)) * altLinha + 2 * pad;
+    this.garantir(altura);
+    let x = MARGEM;
+    for (const c of conteudo) {
+      this.pagina.drawRectangle({ x, y: this.y - altura, width: c.larg, height: altura, borderColor: LINHA, borderWidth: 0.6,
+        color: o.destaque ? rgb(0.95, 0.97, 0.96) : undefined });
+      c.linhas.forEach((l, k) => {
+        if (l) this.pagina.drawText(l, { x: x + pad, y: this.y - pad - tamanho - k * altLinha + 1, size: tamanho, font: c.fonte, color: TEXTO });
+      });
+      x += c.larg;
+    }
+    this.y -= altura;
+  }
+
   async salvar(): Promise<Uint8Array> {
     return this.doc.save();
   }
