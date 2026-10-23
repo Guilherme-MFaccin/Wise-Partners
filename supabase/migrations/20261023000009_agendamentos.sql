@@ -37,10 +37,10 @@ begin
 
   -- Recalcular status, próximos passos e contrapartidas: todo dia às 6h30
   perform cron.schedule('wise-rotina-diaria', '30 9 * * *', 'select public.rotina_diaria()');
-  -- Resumo diário: dias úteis às 7h (a função ignora feriados)
-  perform cron.schedule('wise-resumo-diario', '0 10 * * 1-5', 'select public.chamar_rotina(''resumo-diario'')');
-  -- Relatório semanal do Diretor: segunda às 8h (dia e hora configuráveis; reagende se mudar)
-  perform cron.schedule('wise-relatorio-semanal', '0 11 * * 1', 'select public.chamar_rotina(''relatorio-semanal'')');
+  -- Resumo diário e relatório semanal: de hora em hora; as funções conferem o dia útil, o dia da
+  -- semana e o horário configurados em configuracoes (padrão: 7h e segunda às 8h de Brasília)
+  perform cron.schedule('wise-resumo-diario', '0 * * * *', 'select public.chamar_rotina(''resumo-diario'')');
+  perform cron.schedule('wise-relatorio-semanal', '5 * * * *', 'select public.chamar_rotina(''relatorio-semanal'')');
   -- Avisos imediatos por e-mail: a cada 5 minutos
   perform cron.schedule('wise-notificacoes', '*/5 * * * *', 'select public.chamar_rotina(''enviar-notificacoes'')');
   -- Backup completo: domingo às 3h

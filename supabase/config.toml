@@ -1,0 +1,36 @@
+# Configuração do Supabase CLI para este projeto (supabase link --project-ref <ref>)
+project_id = "portal-wise-partners"
+
+[auth]
+site_url = "http://localhost:8080"
+additional_redirect_urls = ["http://localhost:8080/"]
+# Só entra quem foi convidado: o login usa link mágico com shouldCreateUser = false
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+
+# Funções públicas ou chamadas pelo pg_cron: a própria função confere token, segredo ou papel.
+[functions.rfp-publica]
+verify_jwt = false
+
+[functions.rfp-clique]
+verify_jwt = false
+
+[functions.enviar-notificacoes]
+verify_jwt = false
+
+[functions.resumo-diario]
+verify_jwt = false
+
+[functions.relatorio-semanal]
+verify_jwt = false
+
+[functions.backup]
+verify_jwt = false
+
+[functions.ai-gateway]
+verify_jwt = true
+
+[functions.convidar-usuario]
+verify_jwt = true
