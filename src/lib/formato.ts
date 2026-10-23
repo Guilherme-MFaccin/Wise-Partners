@@ -50,8 +50,8 @@ export function minutosParaHoras(min: number | null | undefined) {
 // Regra de redação: nenhum texto do sistema ou da IA usa travessão nem meia-risca.
 export function semTravessao(t: string) {
   return t
-    .replace(/(\d)\s*[–—]\s*(\d)/g, "$1 a $2")
-    .replace(/\s*[—–]\s*/g, ", ")
+    .replace(/(\d)\s*[\u2013\u2014]\s*(\d)/g, "$1 a $2")
+    .replace(/\s*[\u2014\u2013]\s*/g, ", ")
     .replace(/,\s*,/g, ",");
 }
 

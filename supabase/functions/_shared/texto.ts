@@ -1,8 +1,8 @@
 // Regra de redação: nenhum texto gerado pelo sistema usa travessão nem meia-risca.
 export function semTravessao(t: string): string {
   return t
-    .replace(/(\d)\s*[–—]\s*(\d)/g, "$1 a $2")
-    .replace(/\s*[—–]\s*/g, ", ")
+    .replace(/(\d)\s*[\u2013\u2014]\s*(\d)/g, "$1 a $2")
+    .replace(/\s*[\u2014\u2013]\s*/g, ", ")
     .replace(/,\s*,/g, ",");
 }
 

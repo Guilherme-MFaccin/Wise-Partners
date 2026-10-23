@@ -423,7 +423,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
     if (!arquivo) return toast.error("Escolha o PDF assinado no Autentique.");
     setEnviando(true);
     try {
-      const nome = arquivo.name.replace(/[^\w.\-]+/g, "_");
+      const nome = arquivo.name.replace(/[^\w.-]+/g, "_");
       const caminho = `${parceiro.id}/contratos/${crypto.randomUUID()}-${nome}`;
       const up = await supabase.storage.from("documentos").upload(caminho, arquivo, { contentType: arquivo.type || "application/pdf" });
       if (up.error) throw up.error;
