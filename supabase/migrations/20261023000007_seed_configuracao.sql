@@ -80,7 +80,7 @@ insert into public.criterios_icp (chave, descricao, ordem) values
 
 insert into public.configuracoes (chave, valor, descricao) values
   ('email_financeiro', '""', 'E-mail do responsável financeiro que recebe os avisos de comissão a pagar'),
-  ('wise_hub_url', '""', 'Endereço do Wise Hub (botão no portal do parceiro, pacotes B e A)'),
+  ('wise_hub_url', '"https://www.wisemakershub.com/inicio"', 'Endereço do Wise Hub (botão no portal do parceiro, pacotes B e A)'),
   ('app_url', '""', 'Endereço público do portal, usado nos links dos e-mails e da página de RFP'),
   ('horario_alertas', '"07:00"', 'Horário do e-mail diário (Brasília, hora cheia)'),
   ('relatorio_semanal_dia', '1', 'Dia da semana do relatório do Diretor (1 = segunda)'),
