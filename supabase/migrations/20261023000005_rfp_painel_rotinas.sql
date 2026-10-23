@@ -73,7 +73,7 @@ declare
   v_dias int := public.config_int('validade_link_rfp_dias', 30);
   v_blocos jsonb := coalesce(p_blocos, '[]');
   v_cliente uuid;
-  o record;
+  v_op record;
   v_tipos text[];
 begin
   if not public.pode_gerir_pedido(p_pedido) then
@@ -116,10 +116,10 @@ begin
   end if;
 
   -- Parceiros sem WhatsApp comercial: aviso ao consultor
-  for o in select distinct o.parceiro_id, p.nome_fantasia from public.pedido_rfp_opcoes o join public.parceiros p on p.id = o.parceiro_id
+  for v_op in select distinct o.parceiro_id, p.nome_fantasia from public.pedido_rfp_opcoes o join public.parceiros p on p.id = o.parceiro_id
            where o.pedido_id = p_pedido and o.selecionado loop
-    if public.somente_digitos(public.valor_campo(o.parceiro_id, 'whatsapp_comercial') #>> '{}') is null then
-      v_avisos := v_avisos || to_jsonb(format('%s não tem WhatsApp comercial: a página mostra o e-mail comercial.', o.nome_fantasia));
+    if public.somente_digitos(public.valor_campo(v_op.parceiro_id, 'whatsapp_comercial') #>> '{}') is null then
+      v_avisos := v_avisos || to_jsonb(format('%s não tem WhatsApp comercial: a página mostra o e-mail comercial.', v_op.nome_fantasia));
     end if;
   end loop;
 
@@ -144,10 +144,10 @@ begin
     end if;
     update public.pedidos_rfp set cliente_id = v_cliente where id = p_pedido;
   end if;
-  for o in select distinct o.parceiro_id from public.pedido_rfp_opcoes o where o.pedido_id = p_pedido and o.selecionado loop
-    if not exists (select 1 from public.indicacoes i where i.pedido_rfp_id = p_pedido and i.parceiro_id = o.parceiro_id) then
+  for v_op in select distinct o.parceiro_id from public.pedido_rfp_opcoes o where o.pedido_id = p_pedido and o.selecionado loop
+    if not exists (select 1 from public.indicacoes i where i.pedido_rfp_id = p_pedido and i.parceiro_id = v_op.parceiro_id) then
       insert into public.indicacoes (sentido, parceiro_id, empresa_grupo_id, cliente_id, origem, origem_detalhe, pedido_rfp_id, responsavel_id)
-      values ('grupo_para_parceiro', o.parceiro_id, r.empresa_grupo_id, v_cliente, 'rfp', 'Pedido de RFP', p_pedido, r.consultor_id);
+      values ('grupo_para_parceiro', v_op.parceiro_id, r.empresa_grupo_id, v_cliente, 'rfp', 'Pedido de RFP', p_pedido, r.consultor_id);
     end if;
   end loop;
 
