@@ -153,6 +153,19 @@ describe("Funções exclusivas", () => {
       await q.sql("select public.resultado_canal('2026-01-01', '2026-12-31')");
     }));
 
+  it("todo papel interno abre o painel por etapa; indicadores só de admin vêm sem valor para os outros", () =>
+    transacao(async (q) => {
+      for (const u of [U.admin, U.parcerias, U.consultor, U.comercial, U.financeiro]) {
+        await q.como(u);
+        const p = (await q.um("select public.painel_v2() as p")).p;
+        const roi = p.indicadores.find((i: any) => i.chave === "roi");
+        if (u === U.admin) expect(roi).toBeTruthy();
+        else expect(roi?.valor ?? null).toBeNull();
+      }
+      await q.como(U.parceiroA);
+      await q.falha("select public.painel_v2()");
+    }));
+
   it("anônimo e autenticado não executam config(); anônimo não chama as funções novas", () =>
     transacao(async (q) => {
       await q.como(null);

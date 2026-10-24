@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { Plus, RefreshCw, X } from "lucide-react";
+import { Link2, Plus, RefreshCw, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Cabecalho } from "@/components/comum/Cabecalho";
@@ -17,9 +17,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { CLASSE_CARD } from "@/components/painel/Blocos";
 import { DetalheIndicacao } from "@/components/indicacoes/DetalheIndicacao";
 import { NovaIndicacaoDialog } from "@/components/indicacoes/NovaIndicacaoDialog";
-import { indicacaoParada, SELECT_INDICACAO, useEmpresasGrupo, type Indicacao } from "@/components/indicacoes/dados";
+import { DIAS_PARADA, indicacaoParada, SELECT_INDICACAO, slaVencidos, useEmpresasGrupo, type Indicacao } from "@/components/indicacoes/dados";
 import { data, moeda } from "@/lib/formato";
-import { ETAPAS_INDICACAO, ORIGENS_INDICACAO, rotulo, SENTIDOS } from "@/lib/rotulos";
+import { ETAPAS_INDICACAO, ORIGENS_INDICACAO, PRAZOS_SLA, rotulo, SENTIDOS } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 
 const TODOS = "__todos";
@@ -27,7 +27,7 @@ const PODEM_REGISTRAR = ["admin", "parcerias", "consultor", "comercial"];
 
 type Filtros = {
   sentido: string; empresa: string; parceiro: string | null; etapa: string; origem: string; icp: string;
-  de: string; ate: string; aguardando: boolean; paradas: boolean;
+  de: string; ate: string; aguardando: boolean; paradas: boolean; sla: boolean; qualificadas: boolean;
 };
 
 // Indicações (História 6). Esta tela não mostra comissões; o detalhe só as consulta para quem pode vê-las.
@@ -39,19 +39,21 @@ export default function Indicacoes() {
   const [filtros, setFiltros] = useState<Filtros>(() => ({
     sentido: TODOS, empresa: TODOS, parceiro: params.get("parceiro"), etapa: TODOS, origem: TODOS, icp: TODOS,
     de: params.get("de") ?? "", ate: params.get("ate") ?? "",
-    aguardando: params.get("aguardando") === "1", paradas: params.get("paradas") === "1",
+    aguardando: params.get("aguardando") === "1", paradas: params.get("paradas") === "1", sla: params.get("sla") === "1",
+    qualificadas: false,
   }));
   const set = <K extends keyof Filtros>(k: K, v: Filtros[K]) => setFiltros((x) => ({ ...x, [k]: v }));
   const detalheId = params.get("id");
 
   // Links de outras telas (painel, ficha do parceiro) chegam por parâmetros; aplica quando mudam
-  const chaveParams = ["parceiro", "de", "ate", "aguardando", "paradas"].map((k) => params.get(k) ?? "").join("|");
+  const chaveParams = ["parceiro", "de", "ate", "aguardando", "paradas", "sla"].map((k) => params.get(k) ?? "").join("|");
   useEffect(() => {
-    const [parceiro, de, ate, aguardando, paradas] = chaveParams.split("|");
-    if (!parceiro && !de && !ate && !aguardando && !paradas) return;
+    const [parceiro, de, ate, aguardando, paradas, sla] = chaveParams.split("|");
+    if (!parceiro && !de && !ate && !aguardando && !paradas && !sla) return;
     setFiltros((x) => ({
       ...x, parceiro: parceiro || x.parceiro, de: de || x.de, ate: ate || x.ate,
       aguardando: aguardando ? aguardando === "1" : x.aguardando, paradas: paradas ? paradas === "1" : x.paradas,
+      sla: sla ? sla === "1" : x.sla,
     }));
   }, [chaveParams]);
 
@@ -87,14 +89,17 @@ export default function Indicacoes() {
       && (!f.de || i.data >= f.de)
       && (!f.ate || i.data <= f.ate)
       && (!f.aguardando || !!i.atualizacao_pendente)
-      && (!f.paradas || indicacaoParada(i)));
+      && (!f.paradas || indicacaoParada(i))
+      && (!f.sla || slaVencidos(i).length > 0)
+      && (!f.qualificadas || i.qualificada));
   }, [consulta.data, filtros]);
 
   const temFiltro = filtros.sentido !== TODOS || filtros.empresa !== TODOS || !!filtros.parceiro || filtros.etapa !== TODOS
-    || filtros.origem !== TODOS || filtros.icp !== TODOS || !!filtros.de || !!filtros.ate || filtros.aguardando || filtros.paradas;
+    || filtros.origem !== TODOS || filtros.icp !== TODOS || !!filtros.de || !!filtros.ate || filtros.aguardando || filtros.paradas
+    || filtros.sla || filtros.qualificadas;
 
   function limpar() {
-    setFiltros({ sentido: TODOS, empresa: TODOS, parceiro: null, etapa: TODOS, origem: TODOS, icp: TODOS, de: "", ate: "", aguardando: false, paradas: false });
+    setFiltros({ sentido: TODOS, empresa: TODOS, parceiro: null, etapa: TODOS, origem: TODOS, icp: TODOS, de: "", ate: "", aguardando: false, paradas: false, sla: false, qualificadas: false });
     setParams(detalheId ? { id: detalheId } : {}, { replace: true });
   }
 
@@ -178,7 +183,13 @@ export default function Indicacoes() {
               <Checkbox checked={filtros.aguardando} onCheckedChange={(c) => set("aguardando", !!c)} /> Aguardando confirmação
             </label>
             <label className="flex items-center gap-2">
-              <Checkbox checked={filtros.paradas} onCheckedChange={(c) => set("paradas", !!c)} /> Paradas há 30 dias
+              <Checkbox checked={filtros.paradas} onCheckedChange={(c) => set("paradas", !!c)} /> Paradas há {DIAS_PARADA} dias
+            </label>
+            <label className="flex items-center gap-2">
+              <Checkbox checked={filtros.sla} onCheckedChange={(c) => set("sla", !!c)} /> SLA vencido
+            </label>
+            <label className="flex items-center gap-2">
+              <Checkbox checked={filtros.qualificadas} onCheckedChange={(c) => set("qualificadas", !!c)} /> Qualificadas
             </label>
           </div>
         </div>
@@ -211,6 +222,7 @@ export default function Indicacoes() {
                     {data(i.data)} · {rotulo(SENTIDOS, i.sentido)} · {rotulo(ORIGENS_INDICACAO, i.origem)}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
+                    {i.nota_qualidade != null && <span className="font-medium">Nota {i.nota_qualidade}</span>}
                     {i.valor_base != null && <span className="font-medium">{moeda(i.valor_base)}</span>}
                     {i.responsavel?.nome && <span className="text-muted-foreground">Resp.: {i.responsavel.nome}</span>}
                     <Marcadores i={i} />
@@ -232,6 +244,7 @@ export default function Indicacoes() {
                   <TableHead>Sentido</TableHead>
                   <TableHead>Origem</TableHead>
                   <TableHead>Etapa</TableHead>
+                  <TableHead className="text-right">Nota</TableHead>
                   <TableHead className="text-right">Valor base</TableHead>
                   <TableHead>Responsável</TableHead>
                 </TableRow>
@@ -249,6 +262,7 @@ export default function Indicacoes() {
                     <TableCell className="whitespace-nowrap text-xs">{i.sentido === "parceiro_para_grupo" ? "Recebida" : "Enviada"}</TableCell>
                     <TableCell className="whitespace-nowrap text-xs">{rotulo(ORIGENS_INDICACAO, i.origem)}</TableCell>
                     <TableCell><SeloEstado estado={i.etapa} mapa={ETAPAS_INDICACAO} /></TableCell>
+                    <TableCell className="whitespace-nowrap text-right font-medium">{i.nota_qualidade ?? ""}</TableCell>
                     <TableCell className="whitespace-nowrap text-right">{i.valor_base != null ? moeda(i.valor_base) : ""}</TableCell>
                     <TableCell className="max-w-[140px] truncate text-xs">{i.responsavel?.nome ?? ""}</TableCell>
                   </TableRow>
@@ -272,11 +286,16 @@ export default function Indicacoes() {
 }
 
 function Marcadores({ i }: { i: Indicacao }) {
+  const vencidos = slaVencidos(i);
   return (
     <>
       {i.atualizacao_pendente && <Pilula tom="alerta"><RefreshCw className="mr-1 h-3 w-3" /> Aguardando confirmação</Pilula>}
+      {vencidos.length > 0 && <Pilula tom="perigo" className="whitespace-normal">SLA vencido: {vencidos.map((k) => rotulo(PRAZOS_SLA, k)).join(", ")}</Pilula>}
       {indicacaoParada(i) && <Pilula tom="perigo">Parada</Pilula>}
-      {i.aderente_icp === true && <Pilula tom="menta">ICP</Pilula>}
+      {i.qualificada ? <Pilula tom="menta">Qualificada</Pilula> : i.icp_confirmado ? <Pilula tom="menta">ICP confirmado</Pilula>
+        : i.aderente_icp === true && <Pilula tom="menta">ICP</Pilula>}
+      {i.link_id && <Pilula tom="info"><Link2 className="mr-1 h-3 w-3" /> Link</Pilula>}
+      {i.protecao_expirada && <Pilula>Proteção expirada</Pilula>}
     </>
   );
 }

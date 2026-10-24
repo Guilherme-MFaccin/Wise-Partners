@@ -52,8 +52,8 @@ export default function Ficha() {
 
   const p = parceiroQ.data;
   const publicado = useMemo(() => Object.fromEntries((valoresQ.data ?? []).map((v) => [v.campo_id, v.valor])), [valoresQ.data]);
-  const pendente = (propostasQ.data ?? []).find((x) => x.estado === "pendente");
-  const historico = (propostasQ.data ?? []).filter((x) => x.estado === "aprovada" || x.estado === "recusada");
+  const pendente = (propostasQ.data ?? []).find((x) => x.estado === "pendente" && !Object.keys(x.valores ?? {}).some((k) => k.startsWith("parceria.")));
+  const historico = (propostasQ.data ?? []).filter((x) => (x.estado === "aprovada" || x.estado === "recusada") && !Object.keys(x.valores ?? {}).some((k) => k.startsWith("parceria.")));
 
   // Seções: perfil comum (pelo tipo de parceria) e campos de cada categoria da empresa
   const secoes = useMemo(() => {

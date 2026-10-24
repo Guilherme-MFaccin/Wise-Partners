@@ -1,4 +1,4 @@
-import { NATUREZAS, PACOTES, PERIODICIDADES, TIPOS_PARCERIA } from "@/lib/rotulos";
+import { ETAPAS_JORNADA, NATUREZAS, PACOTES, PERIODICIDADES, TIPOS_PARCERIA, rotulo } from "@/lib/rotulos";
 import { TabelaConfig, type ColunaConfig, type Opcao } from "./TabelaConfig";
 
 // Seções simples da tela de configurações, todas pelo editor genérico.
@@ -74,14 +74,17 @@ export function SecaoContrapartidas({ somenteLeitura }: { somenteLeitura: boolea
 const COL_TIPOS_ATIVIDADE: ColunaConfig[] = [
   { chave: "nome", rotulo: "Nome", tipo: "texto", obrigatoria: true },
   { chave: "minutos", rotulo: "Duração estimada (minutos)", tipo: "numero", obrigatoria: true },
+  { chave: "etapa_jornada", rotulo: "Etapa da jornada", tipo: "select", opcoes: op(ETAPAS_JORNADA) },
+  { chave: "chave", rotulo: "Chave (opcional)", tipo: "texto", fixaAposCriar: true, ajuda: "Identificador usado pelas rotinas do portal; definido na criação." },
   { chave: "ordem", rotulo: "Ordem", tipo: "numero" },
   { chave: "ativo", rotulo: "Ativo", tipo: "booleano" },
 ];
-const NOVO_TIPO_ATIVIDADE = { nome: "", minutos: 30, ordem: 99, ativo: true };
+const NOVO_TIPO_ATIVIDADE = { nome: "", minutos: 30, etapa_jornada: null, chave: null, ordem: 99, ativo: true };
 export function SecaoTiposAtividade({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (
     <TabelaConfig tabela="tipos_atividade" pk={["id"]} colunas={COL_TIPOS_ATIVIDADE} novo={NOVO_TIPO_ATIVIDADE} podeExcluir
-      tituloItem={(l) => l.nome} somenteLeitura={somenteLeitura} />
+      tituloItem={(l) => `${l.ativo ? "" : "(inativo) "}${l.nome}${l.etapa_jornada ? ` · ${rotulo(ETAPAS_JORNADA, l.etapa_jornada)}` : ""}`}
+      somenteLeitura={somenteLeitura} />
   );
 }
 

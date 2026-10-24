@@ -38,7 +38,8 @@ export function Classificacao({ parceiro: p }: { parceiro: Parceiro }) {
   useEffect(() => setF(inicial()), [p.carteira_icp, p.nivel, p.nivel_ajuste_motivo, p.pacote]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const carteira = f.carteira === "" ? null : Number(f.carteira);
-  const sugerido = calcularNivelSugerido(niveis, p.tipo_parceria, carteira);
+  // Com a carteira gravada, vale o nível de entrada do banco (faixa ajustada pela qualidade do scorecard)
+  const sugerido = comercial && carteira === p.carteira_icp && p.nivel_sugerido ? p.nivel_sugerido : calcularNivelSugerido(niveis, p.tipo_parceria, carteira);
   // Sem nível escolhido, o banco usa o sugerido
   const nivelEfetivo = f.nivel || sugerido || "";
   const ajusteManual = comercial && !!sugerido && !!nivelEfetivo && nivelEfetivo !== sugerido;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CalendarClock } from "lucide-react";
 import { Pilula, SeloNivel, SeloStatus } from "@/components/comum/Selos";
 import { data } from "@/lib/formato";
+import { ETAPAS, ETAPAS_FUNIL, ETAPAS_PAUSA, ETAPAS_PERDA, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { SeletorEtapa } from "./SeletorEtapa";
 import type { Categoria, Etapa, ParceiroCategoria, ParceiroLista, ProximoPasso } from "./dados";
@@ -20,9 +21,13 @@ export function QuadroFunil({
   const nomeCategoria = new Map(categorias.map((c) => [c.id, c.nome]));
   const principal = new Map(vinculos.filter((v) => v.principal).map((v) => [v.parceiro_id, nomeCategoria.get(v.categoria_id) ?? ""]));
   const passoPor = new Map(passos.map((p) => [p.parceiro_id, p]));
-  const funil = etapas.filter((e) => !e.perda);
-  const perdas = etapas.filter((e) => e.perda);
-  const perdidos = parceiros.filter((p) => perdas.some((e) => e.codigo === p.etapa));
+  // Sequência do funil, pausa (nutrição) e perdas pelos rótulos; o nome vem do banco quando houver
+  const nomeEtapa = (c: string) => etapas.find((e) => e.codigo === c)?.nome ?? rotulo(ETAPAS, c);
+  const funil = ETAPAS_FUNIL.map((c) => ({ codigo: c, nome: nomeEtapa(c) }));
+  const perdas = ETAPAS_PERDA.map((c) => ({ codigo: c, nome: nomeEtapa(c) }));
+  const perdidos = parceiros.filter((p) => ETAPAS_PERDA.includes(p.etapa));
+  const emNutricao = parceiros.filter((p) => ETAPAS_PAUSA.includes(p.etapa))
+    .sort((a, b) => (a.nutricao_ate ?? "9999").localeCompare(b.nutricao_ate ?? "9999"));
 
   const cartao = (p: ParceiroLista, mostrarEtapa = false) => (
     <CartaoFunil key={p.id} parceiro={p} categoria={principal.get(p.id)} passo={passoPor.get(p.id)} podeEditar={podeEditar}
@@ -31,7 +36,7 @@ export function QuadroFunil({
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
         {funil.map((e) => {
           const lista = parceiros.filter((p) => p.etapa === e.codigo);
           return (
@@ -47,6 +52,18 @@ export function QuadroFunil({
           );
         })}
       </div>
+
+      <section className="rounded-[14px] border border-white/10 bg-card/60 p-3">
+        <header className="mb-3 flex items-center justify-between gap-2 px-1">
+          <h3 className="text-sm font-semibold">{nomeEtapa("nutricao")}</h3>
+          <Pilula tom={emNutricao.length ? "info" : "neutro"}>{emNutricao.length}</Pilula>
+        </header>
+        {emNutricao.length ? (
+          <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-4">{emNutricao.map((p) => cartao(p))}</div>
+        ) : (
+          <p className="px-1 pb-1 text-xs text-muted-foreground">Nenhum parceiro em nutrição.</p>
+        )}
+      </section>
 
       <section className="rounded-[14px] border border-white/10 bg-card/60 p-3">
         <header className="mb-3 flex items-center justify-between gap-2 px-1">
@@ -80,6 +97,11 @@ function CartaoFunil({
         <SeloStatus status={p.status_atividade} />
         {etapaNome && <Pilula tom="perigo">{etapaNome}</Pilula>}
       </div>
+      {p.etapa === "nutricao" && p.nutricao_ate && (
+        <p className="mt-2 flex items-center gap-1.5 text-xs text-sky-300">
+          <CalendarClock className="h-3.5 w-3.5 shrink-0" /> Retomada em {data(p.nutricao_ate)}
+        </p>
+      )}
       {passo && (
         <p className={cn("mt-2 flex items-start gap-1.5 text-xs", vencido ? "text-red-300" : "text-muted-foreground")}>
           <CalendarClock className="mt-0.5 h-3.5 w-3.5 shrink-0" />

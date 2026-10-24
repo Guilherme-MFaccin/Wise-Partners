@@ -117,7 +117,8 @@ function Funil({ parceiro, aprovado, podeEditar, onMudou }: { parceiro: any; apr
     <Secao titulo="Etapa da negociação" acoes={<Pilula tom={perdido ? "perigo" : "menta"}>{ETAPAS[parceiro.etapa]}</Pilula>}>
       <ol className="grid grid-cols-2 gap-2 sm:grid-cols-4">
         {ETAPAS_FUNIL.map((e, i) => {
-          const bloqueada = (e === "fechamento" && !aprovado) || (e === "onboarding" && (!aprovado || !parceiro.data_assinatura));
+          const bloqueada = (e === "fechamento" && !aprovado) || (e === "onboarding" && (!aprovado || !parceiro.data_assinatura))
+            || (e === "parceria_ativa" && !parceiro.data_assinatura);
           return (
             <li key={e}>
               <button
@@ -501,7 +502,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
         </div>
       )}
 
-      {podeEditar && parceiro.data_assinatura && aprovado && parceiro.etapa !== "onboarding" && !ETAPAS_PERDA.includes(parceiro.etapa) && (
+      {podeEditar && parceiro.data_assinatura && aprovado && !["onboarding", "parceria_ativa"].includes(parceiro.etapa) && !ETAPAS_PERDA.includes(parceiro.etapa) && (
         <div className="mt-4 border-t border-white/10 pt-4">
           <Button onClick={() => onboarding.mutate()} disabled={onboarding.isPending}>Iniciar onboarding</Button>
           <p className="mt-2 text-xs text-muted-foreground">Cria as tarefas do pacote com prazo de 2 dias úteis, as contrapartidas e, no pacote A, a entrada na fila do Base Ativa.</p>

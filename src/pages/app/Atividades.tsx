@@ -18,16 +18,28 @@ import { Textarea } from "@/components/ui/textarea";
 import { Barra, CLASSE_CARD, Indicador } from "@/components/painel/Blocos";
 import { calcularPeriodo, SeletorPeriodo, type Periodo } from "@/components/painel/periodo";
 import { toastErro } from "@/lib/erros";
-import { data, hojeISO, minutosParaHoras } from "@/lib/formato";
+import { Pilula } from "@/components/comum/Selos";
+import { data, hojeISO, minutosParaHoras, moeda } from "@/lib/formato";
+import { ETAPAS_JORNADA, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 
-type TipoAtividade = { id: string; nome: string; minutos: number; ordem: number };
+type TipoAtividade = { id: string; nome: string; minutos: number; ordem: number; etapa_jornada: string | null };
 type Atividade = {
   id: string; data: string; minutos: number; descricao: string | null; parceiro_id: string | null; pessoa_id: string | null;
+  etapa_jornada: string | null; custo?: { custo: number | null; custo_hora: number | null } | null;
   tipo: { nome: string } | null; parceiro: { id: string; nome_fantasia: string } | null; pessoa: { nome: string } | null;
 };
-type Visao = "parceiro" | "pessoa" | "tipo" | "lista";
-type Grupo = { chave: string; nome: string; link?: string; quantidade: number; minutos: number };
+type Visao = "parceiro" | "pessoa" | "tipo" | "etapa" | "lista";
+type Grupo = { chave: string; nome: string; link?: string; quantidade: number; minutos: number; custo: number };
+
+const TODAS = "__todas";
+const SEM_ETAPA = "__sem";
+
+// Custo da atividade (só vem preenchido para administradores); nulo quando a pessoa não tem custo-hora
+function custoDe(a: Atividade): number | null {
+  const c = Array.isArray(a.custo) ? a.custo[0] : a.custo;
+  return c && c.custo !== null && c.custo !== undefined ? Number(c.custo) : null;
+}
 
 const PODEM_REGISTRAR = ["admin", "parcerias", "consultor"];
 
@@ -36,7 +48,7 @@ function useTiposAtividade() {
     queryKey: ["tipos-atividade"],
     staleTime: 5 * 60_000,
     queryFn: async () => {
-      const { data: r, error } = await supabase.from("tipos_atividade").select("id, nome, minutos, ordem").eq("ativo", true).order("ordem");
+      const { data: r, error } = await supabase.from("tipos_atividade").select("id, nome, minutos, ordem, etapa_jornada").eq("ativo", true).order("ordem");
       if (error) throw error;
       return (r ?? []) as TipoAtividade[];
     },
@@ -45,17 +57,19 @@ function useTiposAtividade() {
 
 // Atividades (FR-060): quantidade e tempo estimado por parceiro, por pessoa e por tipo. Só informativo, sem limite de horas.
 export default function Atividades() {
-  const { perfil } = useAuth();
+  const { perfil, isAdmin } = useAuth();
+  const [etapa, setEtapa] = useState(TODAS);
   const [periodo, setPeriodo] = useState<Periodo>(() => calcularPeriodo("30d"));
   const [visao, setVisao] = useState<Visao>("parceiro");
   const [novaAberta, setNovaAberta] = useState(false);
 
   const consulta = useQuery({
-    queryKey: ["atividades", periodo.inicio, periodo.fim],
+    queryKey: ["atividades", periodo.inicio, periodo.fim, isAdmin],
     queryFn: async () => {
       const { data: r, error } = await supabase
         .from("atividades")
-        .select("id, data, minutos, descricao, parceiro_id, pessoa_id, tipo:tipos_atividade(nome), parceiro:parceiros(id, nome_fantasia), pessoa:perfis!atividades_pessoa_id_fkey(nome)")
+        // O custo da atividade (atividades_custo) só é lido por administradores; para os demais nem é pedido
+        .select(`id, data, minutos, descricao, parceiro_id, pessoa_id, etapa_jornada, tipo:tipos_atividade(nome), parceiro:parceiros(id, nome_fantasia), pessoa:perfis!atividades_pessoa_id_fkey(nome)${isAdmin ? ", custo:atividades_custo(custo, custo_hora)" : ""}`)
         .gte("data", periodo.inicio)
         .lte("data", periodo.fim)
         .order("data", { ascending: false });
@@ -63,25 +77,31 @@ export default function Atividades() {
       return (r ?? []) as unknown as Atividade[];
     },
   });
-  const atividades = useMemo(() => consulta.data ?? [], [consulta.data]);
+  const atividades = useMemo(
+    () => (consulta.data ?? []).filter((a) => etapa === TODAS || (etapa === SEM_ETAPA ? !a.etapa_jornada : a.etapa_jornada === etapa)),
+    [consulta.data, etapa],
+  );
 
   const grupos = useMemo(() => {
     if (visao === "lista") return [];
     const mapa = new Map<string, Grupo>();
     for (const a of atividades) {
-      let g: Omit<Grupo, "quantidade" | "minutos">;
+      let g: Omit<Grupo, "quantidade" | "minutos" | "custo">;
       if (visao === "parceiro") {
         g = a.parceiro
           ? { chave: a.parceiro.id, nome: a.parceiro.nome_fantasia, link: `/app/parceiros/${a.parceiro.id}` }
           : { chave: "__sem", nome: "Sem parceiro (atividades internas)" };
       } else if (visao === "pessoa") {
         g = { chave: a.pessoa_id ?? "__sem", nome: a.pessoa?.nome ?? "Sem pessoa" };
+      } else if (visao === "etapa") {
+        g = { chave: a.etapa_jornada ?? "__sem", nome: a.etapa_jornada ? rotulo(ETAPAS_JORNADA, a.etapa_jornada) : "Sem etapa da jornada" };
       } else {
         g = { chave: a.tipo?.nome ?? "__sem", nome: a.tipo?.nome ?? "Sem tipo" };
       }
-      const atual = mapa.get(g.chave) ?? { ...g, quantidade: 0, minutos: 0 };
+      const atual = mapa.get(g.chave) ?? { ...g, quantidade: 0, minutos: 0, custo: 0 };
       atual.quantidade += 1;
       atual.minutos += Number(a.minutos ?? 0);
+      atual.custo += Number(custoDe(a) ?? 0);
       mapa.set(g.chave, atual);
     }
     return [...mapa.values()].sort((a, b) => b.minutos - a.minutos);
@@ -89,6 +109,8 @@ export default function Atividades() {
 
   const totalMin = atividades.reduce((s, a) => s + Number(a.minutos ?? 0), 0);
   const parceiros = new Set(atividades.map((a) => a.parceiro_id).filter(Boolean)).size;
+  const custoTotal = atividades.reduce((s, a) => s + Number(custoDe(a) ?? 0), 0);
+  const semCusto = atividades.filter((a) => isAdmin && custoDe(a) === null).length;
   const maximo = Math.max(1, ...grupos.map((g) => g.minutos));
   const podeRegistrar = !!perfil && PODEM_REGISTRAR.includes(perfil.papel);
 
@@ -96,7 +118,7 @@ export default function Atividades() {
     <div>
       <Cabecalho
         titulo="Atividades"
-        descricao="Esforço por parceiro, por pessoa e por tipo de atividade."
+        descricao="Esforço por parceiro, por pessoa, por tipo e por etapa da jornada."
         acoes={podeRegistrar && <Button onClick={() => setNovaAberta(true)}><Plus /> Registrar atividade</Button>}
       />
 
@@ -107,10 +129,25 @@ export default function Atividades() {
         </p>
       </div>
 
-      <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <Select value={etapa} onValueChange={setEtapa}>
+          <SelectTrigger className="w-full sm:w-64" aria-label="Etapa da jornada"><SelectValue /></SelectTrigger>
+          <SelectContent>
+            <SelectItem value={TODAS}>Todas as etapas da jornada</SelectItem>
+            {Object.entries(ETAPAS_JORNADA).map(([k, v]) => <SelectItem key={k} value={k}>{v}</SelectItem>)}
+            <SelectItem value={SEM_ETAPA}>Sem etapa</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+
+      <div className={cn("mb-4 grid grid-cols-1 gap-3", isAdmin ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-3")}>
         <Indicador rotulo="Atividades no período" valor={atividades.length} />
         <Indicador rotulo="Tempo estimado" valor={minutosParaHoras(totalMin)} />
         <Indicador rotulo="Parceiros envolvidos" valor={parceiros} />
+        {isAdmin && (
+          <Indicador rotulo="Custo das horas" valor={moeda(custoTotal)}
+            detalhe={semCusto > 0 ? `${semCusto} ${semCusto === 1 ? "atividade" : "atividades"} sem custo-hora informado` : "Visível só para administradores"} />
+        )}
       </div>
 
       <Tabs value={visao} onValueChange={(v) => setVisao(v as Visao)} className="mb-4">
@@ -118,6 +155,7 @@ export default function Atividades() {
           <TabsTrigger value="parceiro">Por parceiro</TabsTrigger>
           <TabsTrigger value="pessoa">Por pessoa</TabsTrigger>
           <TabsTrigger value="tipo">Por tipo</TabsTrigger>
+          <TabsTrigger value="etapa">Por etapa</TabsTrigger>
           <TabsTrigger value="lista">Lista</TabsTrigger>
         </TabsList>
       </Tabs>
@@ -136,6 +174,7 @@ export default function Atividades() {
                   : <span className="min-w-0 truncate font-medium">{g.nome}</span>}
                 <span className="shrink-0 text-sm text-muted-foreground">
                   {g.quantidade} {g.quantidade === 1 ? "atividade" : "atividades"} · {minutosParaHoras(g.minutos)}
+                  {isAdmin && g.custo > 0 ? ` · ${moeda(g.custo)}` : ""}
                 </span>
               </div>
               <Barra valor={g.minutos} maximo={maximo} className="mt-2 h-1.5" cor="bg-menta-500/70" />
@@ -149,8 +188,16 @@ export default function Atividades() {
           {atividades.map((a) => (
             <li key={a.id} className={cn(CLASSE_CARD, "p-3 text-sm")}>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="font-medium">{a.tipo?.nome}</span>
-                <span className="text-xs text-muted-foreground">{data(a.data)} · {minutosParaHoras(a.minutos)}</span>
+                <span className="flex flex-wrap items-center gap-2">
+                  <span className="font-medium">{a.tipo?.nome}</span>
+                  {a.etapa_jornada && <Pilula>{rotulo(ETAPAS_JORNADA, a.etapa_jornada)}</Pilula>}
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  {data(a.data)} · {minutosParaHoras(a.minutos)}
+                  {isAdmin && (custoDe(a) === null
+                    ? <span className="text-warning"> · custo não informado</span>
+                    : <span className="font-semibold text-foreground"> · {moeda(custoDe(a))}</span>)}
+                </span>
               </div>
               <p className="text-muted-foreground">
                 {a.parceiro ? <Link to={`/app/parceiros/${a.parceiro.id}`} className="hover:text-menta-400">{a.parceiro.nome_fantasia}</Link> : "Sem parceiro"}
@@ -230,7 +277,11 @@ function NovaAtividadeDialog({ aberto, onOpenChange }: { aberto: boolean; onOpen
             <Select value={tipoId} onValueChange={escolherTipo}>
               <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
               <SelectContent>
-                {tipos.map((t) => <SelectItem key={t.id} value={t.id}>{t.nome} ({minutosParaHoras(t.minutos)})</SelectItem>)}
+                {tipos.map((t) => (
+                  <SelectItem key={t.id} value={t.id}>
+                    {t.nome} ({minutosParaHoras(t.minutos)}{t.etapa_jornada ? ` · ${rotulo(ETAPAS_JORNADA, t.etapa_jornada)}` : ""})
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>

@@ -3,7 +3,6 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Loader2, ShieldAlert } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
 import { ParceiroBusca } from "@/components/comum/ParceiroBusca";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -15,10 +14,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { mensagemErro, toastErro } from "@/lib/erros";
 import { hojeISO } from "@/lib/formato";
 import { ORIGENS_INDICACAO, SENTIDOS } from "@/lib/rotulos";
+import { cn } from "@/lib/utils";
 import { useCriteriosIcp, useEmpresasGrupo, usePerfisInternos } from "./dados";
 
-// Origens que a equipe interna escolhe (portal do parceiro e RFP são preenchidas pelo sistema).
-const ORIGENS_INTERNAS = Object.keys(ORIGENS_INDICACAO).filter((o) => o !== "portal_parceiro" && o !== "rfp");
+// Origens que a equipe interna escolhe (portal do parceiro, link do parceiro e RFP são preenchidas pelo sistema).
+const ORIGENS_INTERNAS = Object.keys(ORIGENS_INDICACAO).filter((o) => !["portal_parceiro", "rfp", "link_parceiro"].includes(o));
 const RESPONSAVEL_PADRAO = "__padrao";
 
 type Form = {
@@ -38,6 +38,9 @@ type Form = {
   aderencia: Record<string, boolean>;
   cliente_existente: boolean;
   observacoes: string;
+  necessidade: string;
+  prazo_meses: string;
+  valor_total: string;
 };
 
 function vazio(parceiroId: string | null): Form {
@@ -45,6 +48,7 @@ function vazio(parceiroId: string | null): Form {
     sentido: "parceiro_para_grupo", parceiro_id: parceiroId, empresa_grupo_id: "", cliente_razao_social: "", cliente_cnpj: "",
     contato_nome: "", contato_email: "", contato_telefone: "", consentimento: false, origem: "grupo_whatsapp", origem_detalhe: "",
     data: hojeISO(), responsavel_id: RESPONSAVEL_PADRAO, aderencia: {}, cliente_existente: false, observacoes: "",
+    necessidade: "", prazo_meses: "", valor_total: "",
   };
 }
 
@@ -55,21 +59,18 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
   parceiroInicial?: string | null;
   onCriada?: (id: string) => void;
 }) {
-  const { isAdmin } = useAuth();
   const qc = useQueryClient();
   const { data: empresas = [] } = useEmpresasGrupo();
   const { data: criterios = [] } = useCriteriosIcp();
   const { data: perfis = [] } = usePerfisInternos();
   const [f, setF] = useState<Form>(() => vazio(parceiroInicial ?? null));
-  // Cliente duplicado: mensagem do banco e justificativa da exceção (só administrador)
+  // Cliente duplicado: a proteção de 180 dias não tem exceção; só mostramos a mensagem do banco
   const [duplicado, setDuplicado] = useState<string | null>(null);
-  const [justificativa, setJustificativa] = useState("");
 
   useEffect(() => {
     if (aberto) {
       setF(vazio(parceiroInicial ?? null));
       setDuplicado(null);
-      setJustificativa("");
     }
   }, [aberto, parceiroInicial]);
 
@@ -80,7 +81,7 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
   const valido = !!f.parceiro_id && !!f.empresa_grupo_id && !!f.cliente_razao_social.trim() && (!temDadoPessoal || f.consentimento);
 
   const registrar = useMutation({
-    mutationFn: async (excecao: string | null) => {
+    mutationFn: async () => {
       // Aderência só vai quando algum critério foi marcado; sem marcação, fica "não avaliada"
       const avaliou = Object.values(f.aderencia).some(Boolean);
       const aderencia_icp = avaliou ? Object.fromEntries(criterios.map((c) => [c.chave, !!f.aderencia[c.chave]])) : {};
@@ -101,7 +102,9 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
         aderencia_icp,
         cliente_existente: mostraClienteExistente ? f.cliente_existente : false,
         observacoes: f.observacoes.trim(),
-        excecao_justificativa: excecao ?? "",
+        necessidade: f.necessidade.trim(),
+        prazo_meses: empresa?.codigo === "wise" ? f.prazo_meses.trim() : "",
+        valor_total: empresa && empresa.codigo !== "wise" ? f.valor_total.trim() : "",
       };
       const { data, error } = await supabase.rpc("registrar_indicacao", { p });
       if (error) throw error;
@@ -117,7 +120,6 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
     onError: (e: any) => {
       if (e?.hint === "duplicado") {
         setDuplicado(mensagemErro(e));
-        if (!isAdmin) toastErro(e);
         return;
       }
       toastErro(e);
@@ -136,7 +138,7 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
           className="space-y-5"
           onSubmit={(e) => {
             e.preventDefault();
-            if (valido) registrar.mutate(null);
+            if (valido) registrar.mutate();
           }}
         >
           <div className="grid gap-4 sm:grid-cols-2">
@@ -241,6 +243,23 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
             </fieldset>
           )}
 
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Campo rotulo="Necessidade do cliente" className="sm:col-span-2">
+              <Textarea rows={2} value={f.necessidade} placeholder="O que o cliente precisa (conta na nota de qualidade)"
+                onChange={(e) => set("necessidade", e.target.value)} />
+            </Campo>
+            {empresa?.codigo === "wise" && (
+              <Campo rotulo="Prazo do contrato de consultoria (meses, opcional)">
+                <Input type="number" inputMode="numeric" min="1" step="1" value={f.prazo_meses} onChange={(e) => set("prazo_meses", e.target.value)} />
+              </Campo>
+            )}
+            {empresa && empresa.codigo !== "wise" && (
+              <Campo rotulo="Valor total da venda (opcional)">
+                <Input type="number" inputMode="decimal" min="0" step="0.01" value={f.valor_total} onChange={(e) => set("valor_total", e.target.value)} />
+              </Campo>
+            )}
+          </div>
+
           <Campo rotulo="Observações">
             <Textarea rows={3} value={f.observacoes} onChange={(e) => set("observacoes", e.target.value)} />
           </Campo>
@@ -248,20 +267,9 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
           {duplicado && (
             <div className="space-y-3 rounded-[14px] border border-warning/50 bg-warning/10 p-4 text-sm">
               <p className="flex items-start gap-2 font-semibold text-warning"><ShieldAlert className="mt-0.5 h-4 w-4 shrink-0" /> {duplicado}</p>
-              {isAdmin ? (
-                <>
-                  <p className="text-muted-foreground">
-                    Como administrador, você pode registrar uma exceção justificada. Ela só vale para contato sem interação há 6 meses ou mais.
-                  </p>
-                  <Textarea rows={2} placeholder="Justificativa da exceção" value={justificativa} onChange={(e) => setJustificativa(e.target.value)} />
-                  <Button type="button" variant="outline" disabled={!justificativa.trim() || registrar.isPending}
-                    onClick={() => registrar.mutate(justificativa.trim())}>
-                    Registrar com exceção
-                  </Button>
-                </>
-              ) : (
-                <p className="text-muted-foreground">Só um administrador pode registrar exceção ao primeiro registro.</p>
-              )}
+              <p className="text-muted-foreground">
+                A indicação fica protegida por 180 dias desde a última interação com o cliente, sem exceção. Depois disso, um novo registro é aceito.
+              </p>
             </div>
           )}
 
@@ -277,9 +285,9 @@ export function NovaIndicacaoDialog({ aberto, onOpenChange, parceiroInicial, onC
   );
 }
 
-function Campo({ rotulo, children }: { rotulo: string; children: React.ReactNode }) {
+function Campo({ rotulo, children, className }: { rotulo: string; children: React.ReactNode; className?: string }) {
   return (
-    <div className="min-w-0 space-y-1.5">
+    <div className={cn("min-w-0 space-y-1.5", className)}>
       <Label className="text-xs text-muted-foreground">{rotulo}</Label>
       {children}
     </div>

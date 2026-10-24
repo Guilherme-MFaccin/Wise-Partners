@@ -16,6 +16,15 @@ import { Secao } from "../ui";
 import { invalidarParceiro, nomePerfil, preenchido, useCampos, useParceiroCampos, usePerfis, type Parceiro } from "../dados";
 import { CHAVES_APRESENTACAO } from "./campos";
 
+// Campos de "Nossa parceria" que o parceiro também pode propor (chaves "parceria.<coluna>")
+const CAMPOS_PARCERIA: CampoDef[] = [
+  { id: "parceria.modelos_atuacao", rotulo: "Nossa parceria: modelo de atuação", tipo: "multipla" },
+  { id: "parceria.valor_desejado", rotulo: "Nossa parceria: o que o parceiro quer ganhar", tipo: "texto_longo" },
+  { id: "parceria.oferta_valor", rotulo: "Nossa parceria: o que a Wise oferece", tipo: "texto_longo" },
+  { id: "parceria.entrega_valor", rotulo: "Nossa parceria: como o valor é entregue", tipo: "texto_longo" },
+  { id: "parceria.valor_criado", rotulo: "Nossa parceria: valor criado", tipo: "texto_longo" },
+] as unknown as CampoDef[];
+
 type Proposta = {
   id: string;
   valores: Record<string, any>;
@@ -49,15 +58,16 @@ export function AbaFichaApresentacao({ parceiro: p }: { parceiro: Parceiro }) {
   const [ocupado, setOcupado] = useState(false);
 
   if (campos.isLoading || valores.isLoading) return <Carregando />;
-  const todos = campos.data ?? [];
-  const atual = new Map((valores.data ?? []).map((v) => [v.campo_id, v.valor]));
+  const todos = [...(campos.data ?? []), ...CAMPOS_PARCERIA];
+  const atual = new Map<string, any>((valores.data ?? []).map((v) => [v.campo_id, v.valor]));
+  for (const c of CAMPOS_PARCERIA) atual.set(c.id, (p as any)[c.id.slice("parceria.".length)] ?? null);
   const comum = todos.filter((c) => c.escopo === "comum_comercial");
   const apresentacao = CHAVES_APRESENTACAO.map((k) => comum.find((c) => c.chave === k)).filter(Boolean) as CampoDef[];
   const porChave = (k: string) => {
     const c = apresentacao.find((x) => x.chave === k);
     return c ? atual.get(c.id) : null;
   };
-  const pendente = propostas.data?.find((x) => x.estado === "pendente");
+  const pendentes = (propostas.data ?? []).filter((x) => x.estado === "pendente");
   const historico = (propostas.data ?? []).filter((x) => x.estado !== "pendente");
 
   async function revisar(pr: Proposta, aprovar: boolean, motivoRecusa?: string) {
@@ -83,8 +93,8 @@ export function AbaFichaApresentacao({ parceiro: p }: { parceiro: Parceiro }) {
         </p>
       )}
 
-      {pendente && (
-        <Secao
+      {pendentes.map((pendente) => (
+        <Secao key={pendente.id}
           titulo={<span className="flex items-center gap-2">Proposta do parceiro pendente <Pilula tom="alerta">Aguardando validação</Pilula></span>}
           descricao={`Enviada em ${dataHora(pendente.created_at)}${nomePerfil(perfis, pendente.proposta_por) ? ` por ${nomePerfil(perfis, pendente.proposta_por)}` : ""}. A ficha publicada só muda depois da aprovação.`}
           className="border-warning/40"
@@ -97,7 +107,7 @@ export function AbaFichaApresentacao({ parceiro: p }: { parceiro: Parceiro }) {
         >
           <Diferencas proposta={pendente} campos={todos} atual={atual} />
         </Secao>
-      )}
+      ))}
 
       {p.tipo_parceria === "comercial" && (
         <>

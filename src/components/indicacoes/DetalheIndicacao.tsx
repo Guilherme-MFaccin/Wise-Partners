@@ -20,11 +20,12 @@ import {
   BENEFICIARIOS, ESTADOS_COMISSAO, ESTADOS_COMISSAO_RECEBER, ETAPAS_INDICACAO, ORIGENS_INDICACAO, rotulo, SENTIDOS,
 } from "@/lib/rotulos";
 import { AtualizacaoPendente } from "./AtualizacaoPendente";
+import { Checagens, FormValidacao, QualidadeSla } from "./QualidadeIndicacao";
 import { rotuloValorBase, SELECT_INDICACAO, useCriteriosIcp, type Indicacao } from "./dados";
 
 // Detalhe da indicação. Parcerias atualiza o andamento direto na tabela (a RLS permite só a esse papel).
 export function DetalheIndicacao({ id, onOpenChange }: { id: string | null; onOpenChange: (aberto: boolean) => void }) {
-  const { isParcerias, veComissao } = useAuth();
+  const { isParcerias, veComissao, perfil } = useAuth();
   const consulta = useQuery({
     queryKey: ["indicacoes", "detalhe", id],
     enabled: !!id,
@@ -54,7 +55,11 @@ export function DetalheIndicacao({ id, onOpenChange }: { id: string | null; onOp
             <>
               <AtualizacaoPendente indicacao={i} podeConfirmar={isParcerias} />
               <Dados i={i} />
+              <QualidadeSla i={i} />
+              {/* Validação: parcerias ou o responsável pela indicação (o banco confere) */}
+              {i.sentido === "parceiro_para_grupo" && (isParcerias || i.responsavel_id === perfil?.id) && <FormValidacao i={i} />}
               {isParcerias && <FormAndamento i={i} />}
+              {i.etapa === "fechada" && <Checagens i={i} podeRegistrar={isParcerias || i.responsavel_id === perfil?.id} />}
               {/* Comissões só existem para quem vê comissão: para os demais, nem a consulta é feita */}
               {veComissao && <ComissoesDaIndicacao indicacaoId={i.id} />}
             </>
@@ -141,6 +146,7 @@ function Item({ rotulo: r, children, largo }: { rotulo: string; children: ReactN
 type Andamento = {
   etapa: string; data_reuniao: string; valor_base: string; data_fechamento: string; data_compensacao: string;
   observacoes: string; cliente_existente: boolean; excecao_duplicidade: string;
+  necessidade: string; prazo_meses: string; valor_total: string;
 };
 
 function doRegistro(i: Indicacao): Andamento {
@@ -153,6 +159,9 @@ function doRegistro(i: Indicacao): Andamento {
     observacoes: i.observacoes ?? "",
     cliente_existente: i.cliente_existente,
     excecao_duplicidade: i.excecao_duplicidade ?? "",
+    necessidade: i.necessidade ?? "",
+    prazo_meses: i.prazo_meses != null ? String(i.prazo_meses) : "",
+    valor_total: i.valor_total != null ? String(i.valor_total) : "",
   };
 }
 
@@ -174,6 +183,9 @@ function FormAndamento({ i }: { i: Indicacao }) {
         data_compensacao: f.data_compensacao || null,
         observacoes: f.observacoes.trim() || null,
         cliente_existente: f.cliente_existente,
+        necessidade: f.necessidade.trim() || null,
+        prazo_meses: f.prazo_meses === "" ? null : Number(f.prazo_meses),
+        valor_total: f.valor_total === "" ? null : Number(f.valor_total),
       };
       // Exceção para cliente existente: só administrador registra
       if (isAdmin) alteracoes.excecao_duplicidade = f.excecao_duplicidade.trim() || null;
@@ -219,7 +231,19 @@ function FormAndamento({ i }: { i: Indicacao }) {
         <Campo rotulo="Compensação do primeiro pagamento">
           <Input type="date" value={f.data_compensacao} onChange={(e) => set("data_compensacao", e.target.value)} />
         </Campo>
+        {i.empresa?.codigo === "wise" ? (
+          <Campo rotulo="Prazo do contrato (meses)">
+            <Input type="number" inputMode="numeric" min="1" step="1" value={f.prazo_meses} onChange={(e) => set("prazo_meses", e.target.value)} />
+          </Campo>
+        ) : (
+          <Campo rotulo="Valor total da venda">
+            <Input type="number" inputMode="decimal" step="0.01" min="0" value={f.valor_total} onChange={(e) => set("valor_total", e.target.value)} />
+          </Campo>
+        )}
       </div>
+      <Campo rotulo="Necessidade do cliente">
+        <Textarea rows={2} value={f.necessidade} onChange={(e) => set("necessidade", e.target.value)} />
+      </Campo>
       <Campo rotulo="Observações">
         <Textarea rows={3} value={f.observacoes} onChange={(e) => set("observacoes", e.target.value)} />
       </Campo>

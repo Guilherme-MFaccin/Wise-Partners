@@ -19,8 +19,9 @@ export type Opcao = { valor: string; rotulo: string };
 export type ColunaConfig = {
   chave: string;
   rotulo: string;
-  tipo: "texto" | "textarea" | "numero" | "booleano" | "select" | "linhas" | "multi" | "json" | "data";
+  tipo: "texto" | "textarea" | "numero" | "booleano" | "select" | "linhas" | "multi" | "json" | "data" | "objeto";
   opcoes?: Opcao[];
+  campos?: Opcao[]; // tipo "objeto": cada chave do JSON vira um campo de texto (ex.: régua 0, 0,5 e 1)
   fixaAposCriar?: boolean; // códigos e chaves: definidos na criação, depois só leitura
   somenteLeitura?: boolean;
   vazioNulo?: boolean; // múltipla escolha vazia grava nulo (ex.: "todos os níveis")
@@ -53,6 +54,7 @@ function paraEdicao(colunas: ColunaConfig[], linha: Record<string, any>) {
     if (c.tipo === "linhas") r[c.chave] = Array.isArray(v) ? v.join("\n") : "";
     if (c.tipo === "json") r[c.chave] = v === null || v === undefined ? "" : JSON.stringify(v, null, 2);
     if (c.tipo === "numero") r[c.chave] = v ?? "";
+    if (c.tipo === "objeto") r[c.chave] = v && typeof v === "object" ? { ...v } : {};
   }
   return r;
 }
@@ -68,6 +70,9 @@ function paraBanco(colunas: ColunaConfig[], estado: Record<string, any>) {
         try { r[c.chave] = String(v ?? "").trim() ? JSON.parse(v) : null; } catch { throw new Error(`${c.rotulo}: JSON inválido.`); }
         break;
       case "numero": r[c.chave] = v === "" || v === null || v === undefined ? null : Number(v); break;
+      case "objeto":
+        r[c.chave] = Object.fromEntries((c.campos ?? []).map((f) => [f.valor, String(v?.[f.valor] ?? "").trim()]));
+        break;
       case "multi": r[c.chave] = Array.isArray(v) && v.length ? v : c.vazioNulo ? null : []; break;
       case "texto": case "textarea": r[c.chave] = typeof v === "string" ? (v.trim() === "" ? null : v) : v ?? null; break;
       default: r[c.chave] = v ?? null;
@@ -218,7 +223,7 @@ function LinhaConfig({
         <div className="border-t border-white/10 p-3 sm:p-4">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {colunas.filter((c) => !c.visivel || c.visivel(estado)).map((c) => (
-              <div key={c.chave} className={cn("min-w-0 space-y-1.5", (c.larga || c.tipo === "textarea" || c.tipo === "linhas" || c.tipo === "json") && "sm:col-span-2 lg:col-span-3")}>
+              <div key={c.chave} className={cn("min-w-0 space-y-1.5", (c.larga || c.tipo === "textarea" || c.tipo === "linhas" || c.tipo === "json" || c.tipo === "objeto") && "sm:col-span-2 lg:col-span-3")}>
                 <Label className="text-xs text-muted-foreground">{c.rotulo}</Label>
                 <Editor coluna={c} valor={estado[c.chave]} onChange={(v) => set(c.chave, v)}
                   disabled={somenteLeitura || c.somenteLeitura || (c.fixaAposCriar && !nova)} />
@@ -252,6 +257,19 @@ function Editor({ coluna, valor, onChange, disabled }: { coluna: ColunaConfig; v
       return <Input type="number" inputMode="decimal" step="any" value={valor ?? ""} disabled={disabled} onChange={(e) => onChange(e.target.value)} />;
     case "data":
       return <Input type="date" value={valor ?? ""} disabled={disabled} onChange={(e) => onChange(e.target.value)} />;
+    case "objeto": {
+      const obj: Record<string, string> = valor && typeof valor === "object" ? valor : {};
+      return (
+        <div className="grid gap-2 sm:grid-cols-3">
+          {coluna.campos!.map((f) => (
+            <div key={f.valor} className="space-y-1">
+              <span className="text-xs text-muted-foreground">{f.rotulo}</span>
+              <Textarea rows={2} value={obj[f.valor] ?? ""} disabled={disabled} onChange={(e) => onChange({ ...obj, [f.valor]: e.target.value })} />
+            </div>
+          ))}
+        </div>
+      );
+    }
     case "booleano":
       return <div className="flex h-10 items-center"><Switch checked={!!valor} disabled={disabled} onCheckedChange={onChange} /></div>;
     case "select":

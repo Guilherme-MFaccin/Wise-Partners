@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toastErro } from "@/lib/erros";
-import { NATUREZAS, PERFIS_INSTITUCIONAIS, TIPOS_PARCERIA } from "@/lib/rotulos";
+import { NATUREZAS, ORIGENS_PARCEIRO, PERFIS_INSTITUCIONAIS, TIPOS_PARCERIA } from "@/lib/rotulos";
+import { ParceiroBusca } from "@/components/comum/ParceiroBusca";
 import { Campo } from "./ui";
 import { invalidarParceiro, perfisInternos, useCategorias, useEtapas, usePerfis } from "./dados";
 
@@ -24,6 +25,9 @@ type Form = {
   cidade: string;
   uf: string;
   origem: string;
+  origem_tipo: string;
+  origem_parceiro_id: string | null;
+  origem_perfil_id: string;
   responsavel_id: string;
   etapa: string;
 };
@@ -31,7 +35,7 @@ type Form = {
 function formInicial(responsavel: string): Form {
   return {
     nome_fantasia: "", razao_social: "", cnpj: "", tipo_parceria: "comercial", natureza_juridica: "", perfil_institucional: "",
-    categoria_id: "", cidade: "", uf: "", origem: "", responsavel_id: responsavel, etapa: "sem_contato",
+    categoria_id: "", cidade: "", uf: "", origem: "", origem_tipo: "", origem_parceiro_id: null, origem_perfil_id: "", responsavel_id: responsavel, etapa: "sem_contato",
   };
 }
 
@@ -74,6 +78,10 @@ export function NovoParceiroDialog({ aberto, onOpenChange }: { aberto: boolean; 
         cidade: f.cidade.trim() || null,
         uf: f.uf.trim().toUpperCase() || null,
         origem: f.origem.trim() || null,
+        origem_detalhe: f.origem.trim() || null,
+        origem_tipo: f.origem_tipo || null,
+        origem_parceiro_id: f.origem_tipo === "indicacao_parceiro" ? f.origem_parceiro_id : null,
+        origem_perfil_id: f.origem_tipo === "indicacao_interna" ? f.origem_perfil_id || null : null,
         responsavel_id: f.responsavel_id || null,
         etapa: f.etapa,
         created_by: perfil?.id,
@@ -153,7 +161,7 @@ export function NovoParceiroDialog({ aberto, onOpenChange }: { aberto: boolean; 
             <Select value={f.etapa} onValueChange={(v) => set("etapa", v)}>
               <SelectTrigger><SelectValue /></SelectTrigger>
               <SelectContent>
-                {etapas.filter((e) => !e.perda && !["fechamento", "onboarding"].includes(e.codigo)).map((e) => (
+                {etapas.filter((e) => !e.perda && !e.pausa && !["fechamento", "onboarding", "parceria_ativa", "nutricao"].includes(e.codigo)).map((e) => (
                   <SelectItem key={e.codigo} value={e.codigo}>{e.nome}</SelectItem>
                 ))}
               </SelectContent>
@@ -165,8 +173,31 @@ export function NovoParceiroDialog({ aberto, onOpenChange }: { aberto: boolean; 
           <Campo rotulo="UF">
             <Input value={f.uf} maxLength={2} onChange={(e) => set("uf", e.target.value)} className="uppercase" />
           </Campo>
-          <Campo rotulo="Origem do contato">
-            <Input value={f.origem} onChange={(e) => set("origem", e.target.value)} placeholder="Ex.: indicação, evento, prospecção" />
+          <Campo rotulo="Origem do parceiro">
+            <Select value={f.origem_tipo} onValueChange={(v) => set("origem_tipo", v)}>
+              <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+              <SelectContent>
+                {Object.entries(ORIGENS_PARCEIRO).map(([k, v]) => <SelectItem key={k} value={k}>{v}</SelectItem>)}
+              </SelectContent>
+            </Select>
+          </Campo>
+          {f.origem_tipo === "indicacao_parceiro" && (
+            <Campo rotulo="Parceiro que indicou">
+              <ParceiroBusca valor={f.origem_parceiro_id} onChange={(v) => set("origem_parceiro_id", v)} placeholder="Escolha o parceiro" />
+            </Campo>
+          )}
+          {f.origem_tipo === "indicacao_interna" && (
+            <Campo rotulo="Pessoa da Wise que indicou">
+              <Select value={f.origem_perfil_id} onValueChange={(v) => set("origem_perfil_id", v)}>
+                <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
+                <SelectContent>
+                  {perfisInternos(perfis).map((p) => <SelectItem key={p.id} value={p.id}>{p.nome}</SelectItem>)}
+                </SelectContent>
+              </Select>
+            </Campo>
+          )}
+          <Campo rotulo="Detalhe da origem">
+            <Input value={f.origem} onChange={(e) => set("origem", e.target.value)} placeholder="Ex.: nome do evento, campanha" />
           </Campo>
           <Campo rotulo="Responsável">
             <Select value={f.responsavel_id} onValueChange={(v) => set("responsavel_id", v)}>

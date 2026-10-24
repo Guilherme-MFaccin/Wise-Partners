@@ -704,7 +704,7 @@ begin
   return jsonb_build_object(
     'periodo', jsonb_build_object('inicio', v_ini, 'fim', v_fim),
     'fase', (select fase from public.fase_programa order by desde desc, created_at desc limit 1),
-    'sugestao_fase', public.sugerir_fase(),
+    'sugestao_fase', case when public.is_parcerias() or public.is_consultor() then public.sugerir_fase() end,
     'indicadores', (select coalesce(jsonb_agg(jsonb_build_object(
         'chave', i.chave, 'etapa', i.etapa, 'nome', i.nome, 'formato', i.formato, 'destaque', i.destaque,
         'valor', v_atual -> i.chave, 'anterior', v_ant -> i.chave,

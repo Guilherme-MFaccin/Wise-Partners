@@ -38,6 +38,28 @@ export type Parceiro = {
   data_encerramento: string | null;
   autorizacao_marca: boolean;
   created_at: string;
+  // v2 (Método Octo)
+  modelos_atuacao: string[] | null;
+  valor_desejado: string | null;
+  oferta_valor: string | null;
+  entrega_valor: string | null;
+  valor_criado: string | null;
+  origem_tipo: string | null;
+  origem_detalhe: string | null;
+  origem_parceiro_id: string | null;
+  origem_perfil_id: string | null;
+  horas_semana_combinadas: number | null;
+  nivel_entrada: string | null;
+  elegibilidade_motivo: string | null;
+  em_observacao_ate: string | null;
+  pacote_pendente: string | null;
+  pacote_pendente_em: string | null;
+  pacote_pendente_motivo: string | null;
+  etapa_antes_nutricao: string | null;
+  nutricao_ate: string | null;
+  nutricao_cadencia_dias: number | null;
+  anonimo_ranking: boolean;
+  aceita_cruzamento_contrato: boolean;
 };
 
 export type Categoria = {
@@ -49,7 +71,7 @@ export type Categoria = {
   ativa: boolean;
 };
 
-export type Etapa = { codigo: string; nome: string; ordem: number; perda: boolean };
+export type Etapa = { codigo: string; nome: string; ordem: number; perda: boolean; pausa?: boolean };
 export type Nivel = { tipo_parceria: string; codigo: string; nome: string; faixa_min: number | null; faixa_max: number | null };
 export type Pacote = { codigo: string; nome: string; niveis_permitidos: string[]; ordem: number };
 export type TipoAtividade = { id: string; nome: string; minutos: number; ordem: number; ativo: boolean };
@@ -114,6 +136,19 @@ export function useTiposAtividade() {
     queryKey: ["cfg", "tipos-atividade"],
     ...CFG,
     queryFn: () => lista<TipoAtividade>(supabase.from("tipos_atividade").select("*").order("ordem")),
+  });
+}
+
+// Valor de um parâmetro de configuracoes (a RLS limita o que cada papel lê)
+export function useConfigValor<T = any>(chave: string) {
+  return useQuery({
+    queryKey: ["cfg", "valor", chave],
+    ...CFG,
+    queryFn: async () => {
+      const { data, error } = await supabase.from("configuracoes").select("valor").eq("chave", chave).maybeSingle();
+      if (error) throw error;
+      return (data?.valor ?? null) as T | null;
+    },
   });
 }
 
@@ -284,10 +319,11 @@ export type ParceiroLista = Pick<
   Parceiro,
   | "id" | "nome_fantasia" | "razao_social" | "cnpj" | "cidade" | "uf" | "tipo_parceria" | "perfil_institucional" | "natureza_juridica"
   | "etapa" | "nivel" | "pacote" | "status_atividade" | "responsavel_id" | "data_assinatura" | "ultimo_contato" | "motivo_perda"
+  | "nutricao_ate" | "origem_tipo"
 >;
 
 const COLUNAS_LISTA =
-  "id, nome_fantasia, razao_social, cnpj, cidade, uf, tipo_parceria, perfil_institucional, natureza_juridica, etapa, nivel, pacote, status_atividade, responsavel_id, data_assinatura, ultimo_contato, motivo_perda";
+  "id, nome_fantasia, razao_social, cnpj, cidade, uf, tipo_parceria, perfil_institucional, natureza_juridica, etapa, nivel, pacote, status_atividade, responsavel_id, data_assinatura, ultimo_contato, motivo_perda, nutricao_ate, origem_tipo";
 
 export function useCarteira() {
   const parceiros = useQuery({

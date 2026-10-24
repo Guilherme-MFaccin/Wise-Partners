@@ -21,8 +21,11 @@ begin
         raise exception 'Campo % não pode ser alterado pelo parceiro.', k using errcode = '42501';
       end if;
     end loop;
-    update public.propostas_ficha set estado = 'substituida'
-     where parceiro_id = new.parceiro_id and estado = 'pendente';
+    -- Uma proposta nova substitui a pendente do mesmo tipo (ficha ou parceria)
+    update public.propostas_ficha pf set estado = 'substituida'
+     where pf.parceiro_id = new.parceiro_id and pf.estado = 'pendente'
+       and exists (select 1 from jsonb_object_keys(pf.valores) ch where ch like 'parceria.%')
+           = exists (select 1 from jsonb_object_keys(new.valores) ch where ch like 'parceria.%');
     new.proposta_por := coalesce(new.proposta_por, auth.uid());
   end if;
   return new;
