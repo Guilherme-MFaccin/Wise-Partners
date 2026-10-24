@@ -6,7 +6,7 @@
 
 ## Summary
 
-Evolução da v1 sem remover nada. Todas as regras novas ficam no banco (gatilhos, funções e RLS), em migrações aditivas a partir de `20261024000010`. A interface ganha telas novas na área interna e no portal do parceiro e uma página pública para o link de indicação. Duas Edge Functions novas: `indicacao-publica` (pública, resposta neutra) e `cruzamento-carteiras` (comparação em memória, sem guardar a lista do parceiro).
+Evolução da v1 sem remover nada. Todas as regras novas ficam no banco (gatilhos, funções e RLS), em migrações aditivas de `20261024000010` a `20261024000020`. A interface ganha telas novas na área interna e no portal do parceiro e uma página pública para o link de indicação. Duas Edge Functions novas: `indicacao-publica` (pública, resposta neutra) e `cruzamento-carteiras` (comparação em memória, sem guardar a lista do parceiro).
 
 ## Technical Context
 
@@ -35,6 +35,6 @@ Igual à v1 (TypeScript 5.8, React 18, Deno 2, PL/pgSQL, Vitest com PostgreSQL 1
 
 ## Verificação
 
-* `npm run test:db`: 124 testes (69 da v1, atualizados para 180 e 15 dias, e 55 da v2).
+* `npm run test:db`: 128 testes (69 da v1, atualizados para 180 e 15 dias, e 59 da v2).
 * `npm test`: contrato, certificado e cruzamento.
 * `deno check` das 10 Edge Functions; `tsc`, `eslint` e `vite build` do front.

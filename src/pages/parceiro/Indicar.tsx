@@ -110,7 +110,7 @@ export default function Indicar() {
 
             <div>
               <h3 className="text-sm font-semibold">Texto sugerido para divulgar</h3>
-              <p className="mt-2 whitespace-pre-line rounded-[10px] border border-white/10 bg-white/5 p-3 text-sm">{mensagem}</p>
+              <p className="mt-2 whitespace-pre-line break-all rounded-[10px] border border-white/10 bg-white/5 p-3 text-sm">{mensagem}</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 <Button variant="outline" size="sm" onClick={() => copiar(mensagem, "Texto copiado.")}><Copy /> Copiar texto e link</Button>
                 <Button variant="outline" size="sm" asChild>

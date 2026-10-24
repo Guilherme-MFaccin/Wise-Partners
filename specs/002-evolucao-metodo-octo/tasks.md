@@ -11,6 +11,7 @@
 - [x] 0017 rotinas diária e trimestral, pendências v2, painel da v1 com 15 dias, ajustes de RLS e de funções da v1
 - [x] 0018 dados iniciais da v2
 - [x] 0019 agendamento da rotina trimestral
+- [x] 0020 proposta de alteração da parceria pelo fluxo de validação da ficha
 
 ## Testes
 - [x] Testes da v1 atualizados (proteção de 180 dias e indicação parada em 15 dias)

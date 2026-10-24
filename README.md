@@ -95,7 +95,7 @@ A constituição pede que dados reais só entrem depois dos testes de acesso. Ro
 
 ## Atualização da v1 para a v2
 
-1. `npx supabase db push` aplica as migrações `20261024000010` a `20261024000019`, todas aditivas. Elas criam as tabelas novas com RLS, o bucket privado `trilhas`, os dados iniciais da v2 (atividades por esforço, critérios do scorecard, requisitos de nível, régua, catálogo de ações da Wise, indicadores, trilha "Como vender a Wise Makers" em rascunho, parâmetros e textos de e-mail) e o agendamento `wise-rotina-trimestral`.
+1. `npx supabase db push` aplica as migrações `20261024000010` a `20261024000020`, todas aditivas. Elas criam as tabelas novas com RLS, o bucket privado `trilhas`, os dados iniciais da v2 (atividades por esforço, critérios do scorecard, requisitos de nível, régua, catálogo de ações da Wise, indicadores, trilha "Como vender a Wise Makers" em rascunho, parâmetros e textos de e-mail) e o agendamento `wise-rotina-trimestral`.
 2. `npx supabase functions deploy` publica as funções novas (`indicacao-publica`, `cruzamento-carteiras`) e as atualizadas.
 3. A remuneração de referência do Guilherme (R$ 4.500,00, 220 horas, fator 1,0) já vem cadastrada pelo e-mail e se liga ao perfil sozinha. Outras pessoas: Custos, Remunerações.
 4. O contrato comercial gerado passa a ser a v2 (`public/modelos/comercial.docx`; a v1 fica em `comercial_v1.docx`). Para quem assinar a v2 ou o aditivo com a cláusula 10.4, marque "Aceita cruzamento de carteiras" na aba Nossa parceria.
