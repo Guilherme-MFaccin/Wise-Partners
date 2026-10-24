@@ -38,6 +38,18 @@ npm run test:db   # sobe um PostgreSQL temporário, aplica as migrações e roda
 
 Na v2, os testes cobrem a matriz de acesso das tabelas novas (só administrador vê remuneração, custos e resultado do canal; parceiro não vê faixa, maturidade, desligamento nem dados de outros parceiros; anônimo não chama `config()`), o nível de entrada pelo scorecard, a subida imediata, a observação e a proposta de rebaixamento, a proteção de 180 dias, o SLA nos dois sentidos, a nota de qualidade, a ativação e os 90 e 120 dias do onboarding, as faixas com 20 parceiros, o fluxo de desligamento, os pontos únicos por evento, o ROI do exemplo da História 1 (receita de R$ 72.000,00, custo de R$ 4.318,18, ROI de 1.567%), o cruzamento de 50 CNPJs que só grava as 5 coincidências e a página `/i/:token` com resposta neutra.
 
+## Dados de demonstração (só local)
+
+`supabase/seed_demo.sql` cria dados fictícios para avaliar o visual: 40 parceiros em todas as etapas, níveis e categorias, 3 usuários internos e 6 de parceiros, 9 meses de pontos de contato, cerca de 90 indicações nas três empresas e nos dois sentidos, comissões em todos os estados, ciclos do Base Ativa, um pedido de RFP publicado e dados da v2 (scorecards, onboarding, ações, maturidade, pesquisa, comunicado e custos).
+
+**Nunca** rode esse arquivo no projeto de produção e nunca o mova para `supabase/migrations`. Ele para sozinho se o banco já tiver parceiros. Para usar, num banco local recém criado com as migrações aplicadas:
+
+```bash
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f supabase/seed_demo.sql
+```
+
+Usuários de demonstração (e-mails fictícios, sem senha; no Supabase local, entre pelo link mágico do Inbucket): `guilherme@demo.wisemakers.local` (administrador), `igor@demo.wisemakers.local` (Diretor), `mariana@demo.wisemakers.local` (consultora) e, de parceiros, `ana@araucaria.demo` (responsável da Sistemas Araucária).
+
 ## Implantação
 
 ### 1. Banco
