@@ -71,7 +71,7 @@ describe("Parceiro: só a própria parceria", () => {
     transacao(async (q) => {
       await q.como(U.parceiroA);
       const cfg = await q.sql("select chave from public.configuracoes order by chave");
-      expect(cfg.map((c) => c.chave)).toEqual(["calendario_eventos", "calendario_mentoria", "materiais_parceiro", "wise_hub_url"]);
+      expect(cfg.map((c) => c.chave)).toEqual(["calendario_eventos", "calendario_mentoria", "link_indicacao_texto", "materiais_parceiro", "regras_publicadas", "termo_cruzamento_texto", "termo_cruzamento_versao", "wise_hub_url"]);
       expect(await q.sql("select * from public.catalogo_contrapartidas")).toHaveLength(0);
       expect(await q.sql("select * from public.textos_email")).toHaveLength(0);
     }));

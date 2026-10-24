@@ -242,33 +242,41 @@ describe("Indicações e comissões das três empresas", () => {
       }
     }));
 
-  it("aplica o primeiro registro a cliente duplicado (por CNPJ ou nome) e só admin abre exceção após 6 meses", () =>
+  it("aplica o primeiro registro a cliente duplicado (por CNPJ ou nome) com proteção de 180 dias da última interação, sem exceção", () =>
     transacao(async (q) => {
       const emp = await empresa(q, "wise");
       await q.como(U.parcerias);
-      await q.sql("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda','cliente_cnpj','11.222.333/0001-81'))", [P.A, emp]);
+      const primeira = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda','cliente_cnpj','11.222.333/0001-81')) as id", [P.A, emp]);
       let msg = await q.falha("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Outro nome','cliente_cnpj','11222333000181'))", [P.B, emp]);
-      expect(msg).toMatch(/Parceiro Alfa.*primeiro registro/);
+      expect(msg).toMatch(/Parceiro Alfa.*primeiro registro.*proteção até/);
       msg = await q.falha("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','METALURGICA UNICA LTDA'))", [P.B, emp]);
       expect(msg).toMatch(/primeiro registro/);
       // Parceiro recebe mensagem neutra, sem o nome do outro parceiro
       await q.como(U.parceiroB);
       msg = await q.falha("select public.registrar_indicacao(jsonb_build_object('empresa_grupo_id',$1::text,'cliente_razao_social','Metalúrgica Única Ltda'))", [emp]);
       expect(msg).not.toMatch(/Alfa/);
-      // Exceção: parcerias não pode; admin só após 6 meses sem interação
-      await q.como(U.parcerias);
-      msg = await q.falha("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda','excecao_justificativa','reengajou'))", [P.B, emp]);
-      expect(msg).toMatch(/administradores/);
+      // A exceção de administrador deixou de existir (v2)
       await q.como(U.admin);
       msg = await q.falha("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda','excecao_justificativa','reengajou'))", [P.B, emp]);
-      expect(msg).toMatch(/6 meses/);
+      expect(msg).toMatch(/primeiro registro/);
+      // Interação recente renova a proteção: 179 dias ainda protege
       await q.sistema();
-      await q.sql("update public.indicacoes set ultima_atualizacao = now() - interval '7 months', data = public.hoje() - 220 where cliente_id = (select id from public.clientes where cnpj_digitos = '11222333000181')");
-      await q.sql("update public.clientes set ultima_interacao = public.hoje() - 220 where cnpj_digitos = '11222333000181'");
-      await q.como(U.admin);
-      const r = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda','excecao_justificativa','Reengajado pelo Beta após 7 meses')) as id", [P.B, emp]);
-      const i = await q.um("select excecao_duplicidade, excecao_por from public.indicacoes where id = $1", [r.id]);
-      expect(i).toEqual({ excecao_duplicidade: "Reengajado pelo Beta após 7 meses", excecao_por: U.admin });
+      const cli = "(select id from public.clientes where cnpj_digitos = '11222333000181')";
+      await q.sql(`update public.indicacoes set ultima_atualizacao = now() - interval '179 days', data = public.hoje() - 179 where cliente_id = ${cli}`);
+      await q.sql(`update public.clientes set ultima_interacao = public.hoje() - 179 where id = ${cli}`);
+      await q.como(U.parcerias);
+      await q.falha("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda'))", [P.B, emp]);
+      // Depois de 180 dias sem interação: aceita, atribui a quem reengajou e avisa o primeiro parceiro
+      await q.sistema();
+      await q.sql(`update public.indicacoes set ultima_atualizacao = now() - interval '181 days', data = public.hoje() - 181 where cliente_id = ${cli}`);
+      await q.sql(`update public.clientes set ultima_interacao = public.hoje() - 181 where id = ${cli}`);
+      await q.como(U.parcerias);
+      const r = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Metalúrgica Única Ltda')) as id", [P.B, emp]);
+      await q.sistema();
+      expect((await q.um("select parceiro_id from public.indicacoes where id = $1", [r.id])).parceiro_id).toBe(P.B);
+      expect((await q.um("select protecao_expirada from public.indicacoes where id = $1", [primeira.id])).protecao_expirada).toBe(true);
+      const n = await q.sql("select * from public.notificacoes where usuario_id = $1 and tipo = 'protecao_expirada'", [U.parceiroA]);
+      expect(n.length).toBe(1);
     }));
 
   it("não salva dados pessoais do cliente sem consentimento declarado", () =>
@@ -303,15 +311,15 @@ describe("Indicações e comissões das três empresas", () => {
       expect(i).toEqual({ etapa: "reuniao", atualizacao_pendente: null, reuniao: true });
     }));
 
-  it("indicações sem atualização há 30 dias entram nos alertas do responsável", () =>
+  it("indicações sem atualização há 15 dias entram nos alertas do responsável", () =>
     transacao(async (q) => {
       const emp = await empresa(q, "wise");
       await q.como(U.parcerias);
       const r = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Parada SA')) as id", [P.C, emp]);
       await q.sistema();
-      await q.sql("update public.indicacoes set ultima_atualizacao = now() - interval '31 days' where id = $1", [r.id]);
+      await q.sql("update public.indicacoes set ultima_atualizacao = now() - interval '16 days' where id = $1", [r.id]);
       // a coluna é atualizada pelo gatilho só quando campos de negócio mudam
-      const v = await q.um("select ultima_atualizacao < now() - interval '30 days' as parada from public.indicacoes where id = $1", [r.id]);
+      const v = await q.um("select ultima_atualizacao < now() - interval '15 days' as parada from public.indicacoes where id = $1", [r.id]);
       expect(v.parada).toBe(true);
       const pend = await q.um("select public.pendencias_diarias() as p");
       const meu = pend.p.find((x: any) => x.usuario_id === U.parcerias);
