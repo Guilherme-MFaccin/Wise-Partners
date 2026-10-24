@@ -208,7 +208,7 @@ begin
   update public.coincidencias_cruzamento
      set virou = case when p_virou in ('indicacao', 'acao') then p_virou end,
          referencia_id = case when p_virou in ('indicacao', 'acao') then p_referencia end,
-         descartada = (p_virou = 'descartar'),
+         descartada = coalesce(p_virou = 'descartar', false),
          observacao = coalesce(p_observacao, observacao),
          decidido_por = auth.uid(), decidido_em = now()
    where id = p_id;

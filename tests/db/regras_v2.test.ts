@@ -481,3 +481,30 @@ describe("Link exclusivo de indicação (/i/:token)", () => {
       expect((await q.um("select public.link_indicacao_publico($1) as r", [token])).r).toEqual({ estado: "indisponivel" });
     }));
 });
+
+describe("Ações da Wise e decisões do cruzamento", () => {
+  it("concluir ação mescla alcance e inscritos e mantém comprovada com o link já guardado", () =>
+    transacao(async (q) => {
+      await q.sistema();
+      const a = (await q.um("select id from public.acoes_wise where parceiro_id = $1 limit 1", [P.A])).id;
+      await q.como(U.parcerias);
+      await q.sql("select public.concluir_acao_wise($1, '{\"comprovacao_link\": \"https://x.com/post\", \"alcance\": 10, \"inscritos\": 3}')", [a]);
+      await q.sql("select public.concluir_acao_wise($1, '{\"observacao\": \"ajuste\", \"inscritos\": 4}')", [a]);
+      await q.sistema();
+      const r = await q.um("select estado, resultado from public.acoes_wise where id = $1", [a]);
+      expect(r).toEqual({ estado: "comprovada", resultado: { alcance: 10, inscritos: 4 } });
+    }));
+
+  it("decisão de coincidência pode ser desfeita", () =>
+    transacao(async (q) => {
+      const emp = (await q.um("select id from public.empresas_grupo where codigo = 'wise'")).id;
+      const b = await q.um("insert into public.base_wise_cruzamento (cnpj_raiz, razao_social, tipo, empresa_grupo_id) values ('12345678', 'X', 'cliente', $1) returning id", [emp]);
+      const ac = await q.um("insert into public.aceites_cruzamento (parceiro_id, perfil_id, versao_termo) values ($1, $2, 1) returning id", [P.A, U.parceiroA]);
+      const cz = await q.um("insert into public.cruzamentos (parceiro_id, aceite_id, total_enviado) values ($1, $2, 20) returning id", [P.A, ac.id]);
+      const c = await q.um("insert into public.coincidencias_cruzamento (cruzamento_id, parceiro_id, base_wise_id, tipo_parceiro, quadrante, acao_sugerida, expira_em) values ($1, $2, $3, 'cliente', 'cliente_comum', 'Case', current_date + 10) returning id", [cz.id, P.A, b.id]);
+      await q.como(U.parcerias);
+      await q.sql("select public.decidir_coincidencia($1, 'descartar')", [c.id]);
+      await q.sql("select public.decidir_coincidencia($1, null)", [c.id]);
+      expect(await q.um("select descartada, virou from public.coincidencias_cruzamento where id = $1", [c.id])).toEqual({ descartada: false, virou: null });
+    }));
+});

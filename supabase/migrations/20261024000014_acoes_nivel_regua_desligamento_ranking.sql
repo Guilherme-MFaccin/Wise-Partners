@@ -83,16 +83,22 @@ language plpgsql security definer set search_path = public as $$
 declare
   a public.acoes_wise;
   v_data date := coalesce((p->>'data')::date, public.hoje());
-  v_comprovada boolean := coalesce(p->>'comprovacao_link', p->>'comprovacao_caminho') is not null;
+  v_comprovada boolean;
+  v_resultado jsonb;
 begin
   if not public.is_parcerias() then raise exception 'Sem permissão.' using errcode = '42501'; end if;
   select * into a from public.acoes_wise where id = p_id;
   if a.id is null then raise exception 'Ação não encontrada.' using errcode = 'P0001'; end if;
+  -- Comprovada quando há comprovação nova ou já guardada
+  v_comprovada := coalesce(nullif(p->>'comprovacao_link', ''), nullif(p->>'comprovacao_caminho', ''), a.comprovacao_link, a.comprovacao_caminho) is not null;
+  -- Resultado: mescla o objeto recebido e as chaves soltas alcance e inscritos com o que já existe
+  v_resultado := coalesce(a.resultado, '{}'::jsonb) || coalesce(p->'resultado', '{}'::jsonb)
+                 || jsonb_strip_nulls(jsonb_build_object('alcance', p->'alcance', 'inscritos', p->'inscritos'));
   update public.acoes_wise
      set estado = case when v_comprovada then 'comprovada' else 'feita' end, concluida_em = v_data,
-         comprovacao_link = coalesce(p->>'comprovacao_link', comprovacao_link),
-         comprovacao_caminho = coalesce(p->>'comprovacao_caminho', comprovacao_caminho),
-         resultado = coalesce(p->'resultado', resultado), observacao = coalesce(p->>'observacao', observacao)
+         comprovacao_link = coalesce(nullif(p->>'comprovacao_link', ''), comprovacao_link),
+         comprovacao_caminho = coalesce(nullif(p->>'comprovacao_caminho', ''), comprovacao_caminho),
+         resultado = v_resultado, observacao = coalesce(p->>'observacao', observacao)
    where id = p_id;
   if coalesce((p->>'custo')::numeric, 0) > 0 then
     if not public.is_admin() then raise exception 'Somente administradores lançam custos.' using errcode = '42501'; end if;
