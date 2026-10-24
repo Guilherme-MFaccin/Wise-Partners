@@ -1,4 +1,5 @@
-// Relatório semanal do Diretor (FR-067): indicadores do painel, mudanças da semana e pontos de atenção.
+// Relatório semanal do Diretor (FR-067, FR-141): número principal, ROI do trimestre, indicadores em destaque,
+// mudanças da semana e pontos de atenção.
 // O pg_cron chama de hora em hora; a função confere o dia e o horário configurados.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin, agoraBrasilia, ehRotina, urlDoApp } from "../_shared/supabase.ts";
@@ -20,8 +21,26 @@ Deno.serve(async (req) => {
   const ini = new Date(new Date(fim + "T12:00:00Z").getTime() - 7 * 86400_000).toISOString().slice(0, 10);
   const { data: p, error } = await sb.rpc("painel_semanal", { p_inicio: ini, p_fim: fim });
   if (error) return erro(error.message, 500);
+  const { data: v2 } = await sb.rpc("relatorio_semanal_v2", { p_inicio: ini, p_fim: fim });
   const app = await urlDoApp(sb);
   const link = (id: string) => `${app}/app/parceiros/${id}`;
+  const pct = (v: unknown) => (v === null || v === undefined ? "sem dados" : `${Math.round(Number(v) * 100)}%`);
+  const principal = v2
+    ? [
+        `Número principal: ${v2.clientes_icp_trimestre ?? 0} cliente(s) no ICP via parceiros no trimestre (${v2.clientes_icp_semana ?? 0} nesta semana)`,
+        `ROI do canal no trimestre: ${pct(v2.roi_trimestre)} (receita ${moeda(Number(v2.receita_trimestre ?? 0))}, custo ${moeda(Number(v2.custo_trimestre ?? 0))})`,
+      ]
+    : [];
+  const valorDestaque = (d: any) => {
+    const v = d.valor;
+    if (v === null || v === undefined) return "sem dados";
+    if (typeof v === "object") return Object.entries(v).map(([k, x]) => `${k.replace(/_/g, " ")} ${typeof x === "object" ? JSON.stringify(x) : x}`).join(", ") || "sem dados";
+    if (d.formato === "percentual") return d.chave === "roi" ? pct(v) : `${v}%`;
+    if (d.formato === "moeda") return moeda(Number(v));
+    if (d.formato === "dias") return `${v} dias`;
+    return String(v);
+  };
+  const destaques = ((v2?.destaques ?? []) as any[]).map((d) => ({ texto: `${d.nome}: ${valorDestaque(d)}` }));
 
   // Comissões do período (o Diretor é administrador e vê valores)
   const { data: com } = await sb.from("comissoes").select("valor, estado, beneficiario, paga_em");
@@ -61,11 +80,11 @@ Deno.serve(async (req) => {
     const m = await modeloEmail(sb, "relatorio_semanal", { nome: d.nome.split(" ")[0] });
     const html = layoutEmail({
       titulo: `${m.assunto} (${dataBr(ini)} a ${dataBr(fim)})`,
-      paragrafos: [m.corpo, ...indicadores],
-      htmlExtra: listaHtml("Mudanças da semana", mudancas.map((t) => ({ texto: t }))) + atencao,
+      paragrafos: [m.corpo, ...principal, ...indicadores],
+      htmlExtra: listaHtml("Indicadores em destaque", destaques) + listaHtml("Mudanças da semana", mudancas.map((t) => ({ texto: t }))) + atencao,
       botao: { texto: "Abrir o painel", url: `${app}/app` },
     });
-    await enviarEmail(d.email, m.assunto, html, [m.corpo, ...indicadores, "", ...mudancas].join("\n"));
+    await enviarEmail(d.email, m.assunto, html, [m.corpo, ...principal, ...indicadores, "", ...destaques.map((x) => x.texto), "", ...mudancas].join("\n"));
     enviados++;
   }
   return json({ enviados });

@@ -679,9 +679,9 @@ begin
       'receita_atribuida', v_res->'receita_atribuida',
       'participacao_receita', case when public.config_num('receita_nova_wise_periodo', 0) > 0
                                    then round((v_res->>'receita_atribuida')::numeric * 100 / public.config_num('receita_nova_wise_periodo', 0), 1) end,
-      'receita_por_nivel', (select coalesce(jsonb_object_agg(coalesce(p.nivel, 'sem'), s), '{}') from (
-                              select x.parceiro_id, sum(x.valor) s from public._planilha_custos(p_ini, p_fim) x where x.tipo_linha = 'receita' group by 1) y
-                            join public.parceiros p on p.id = y.parceiro_id));
+      'receita_por_nivel', (select coalesce(jsonb_object_agg(y.nivel, y.s), '{}') from (
+                              select coalesce(p.nivel, 'sem') as nivel, sum(x.valor) s from public._planilha_custos(p_ini, p_fim) x
+                              join public.parceiros p on p.id = x.parceiro_id where x.tipo_linha = 'receita' group by 1) y));
   end if;
   return v;
 end $$;

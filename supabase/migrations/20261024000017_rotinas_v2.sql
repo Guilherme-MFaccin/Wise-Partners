@@ -500,3 +500,29 @@ begin
     execute format('revoke execute on function public.%s from public, anon, authenticated', f);
   end loop;
 end $$;
+
+-- ---------------------------------------------------------------------------
+-- Dados do relatório semanal do Diretor (FR-141): número principal, ROI do trimestre e destaques.
+-- Só a Edge Function relatorio-semanal (service_role) chama.
+-- ---------------------------------------------------------------------------
+create or replace function public.relatorio_semanal_v2(p_inicio date, p_fim date) returns jsonb
+language plpgsql stable security definer set search_path = public as $$
+declare
+  v_tri date := date_trunc('quarter', p_fim)::date;
+  v_sem jsonb := public._indicadores_valores(p_inicio, p_fim, true);
+  v_res jsonb := public._metricas_canal((select coalesce(jsonb_agg(to_jsonb(x)), '[]') from public._planilha_custos(v_tri, p_fim) x),
+                                        public.config_num('margem_contribuicao_pct', 100) / 100);
+begin
+  return jsonb_build_object(
+    'clientes_icp_semana', v_sem->'clientes_icp',
+    'clientes_icp_trimestre', v_res->'clientes_icp',
+    'roi_trimestre', v_res->'roi',
+    'custo_trimestre', v_res->'custo_total',
+    'receita_trimestre', v_res->'receita_atribuida',
+    'fase', (select fase from public.fase_programa order by desde desc, created_at desc limit 1),
+    'destaques', (select coalesce(jsonb_agg(jsonb_build_object('chave', i.chave, 'etapa', i.etapa, 'nome', i.nome, 'formato', i.formato,
+                    'valor', v_sem->i.chave) order by i.ordem), '[]')
+                  from public.indicadores i where i.ativo and i.destaque));
+end $$;
+revoke execute on function public.relatorio_semanal_v2(date, date) from public, anon, authenticated;
+grant execute on function public.relatorio_semanal_v2(date, date) to service_role;

@@ -8,10 +8,18 @@ import { dataBr } from "../_shared/texto.ts";
 const GRUPOS: [string, string][] = [
   ["followups_vencidos", "Follow-ups vencidos"],
   ["aprovacoes_pendentes", "Aprovações de assinatura pendentes"],
+  ["desligamentos_para_aprovar", "Desligamentos para decidir"],
+  ["sla_vencido", "Indicações com prazo vencido"],
   ["negociacoes_paradas", "Negociações paradas"],
+  ["regua_atrasada", "Reuniões de acompanhamento atrasadas"],
+  ["onboarding_sem_ativacao", "Onboarding sem ativação"],
+  ["em_risco", "Parceiros em risco de desligamento"],
+  ["propostas_rebaixamento", "Propostas de rebaixamento de nível"],
   ["status_atividade", "Mudanças de status de atividade"],
   ["contrapartidas_atrasadas", "Contrapartidas atrasadas"],
-  ["indicacoes_paradas", "Indicações sem atualização há 30 dias"],
+  ["acoes_wise_atrasadas", "Ações da Wise atrasadas"],
+  ["checagens_cliente", "Checagens de clientes indicados"],
+  ["indicacoes_paradas", "Indicações sem atualização há 15 dias"],
   ["propostas_ficha", "Propostas de alteração de ficha"],
 ];
 

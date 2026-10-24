@@ -29,6 +29,12 @@ verify_jwt = false
 [functions.backup]
 verify_jwt = false
 
+[functions.indicacao-publica]
+verify_jwt = false
+
+[functions.cruzamento-carteiras]
+verify_jwt = true
+
 [functions.ai-gateway]
 verify_jwt = true
 

@@ -128,7 +128,7 @@ Devolva: {"blocos": [...]}.`,
       };
     case "pauta_semanal":
       return {
-        instrucao: `Com os indicadores do painel do programa, escreva a pauta da reunião semanal entre o Gerente de Parcerias e o Diretor: tópicos numerados, objetivos, com os nomes dos parceiros que pedem ação (follow-ups vencidos, parceiros esfriando, negociações paradas, aprovações pendentes, contrapartidas atrasadas, categorias sem 3 opções, fila do Base Ativa) e a distância até a meta de assinados.
+        instrucao: `Com os indicadores do painel do programa, escreva a pauta da reunião semanal entre o Gerente de Parcerias e o Diretor: tópicos numerados, objetivos, com os nomes dos parceiros que pedem ação (follow-ups vencidos, parceiros esfriando, negociações paradas, aprovações pendentes, contrapartidas atrasadas, categorias sem 3 opções, fila do Base Ativa), a distância até a meta de assinados e, quando vierem nos dados, o número principal (clientes no ICP via parceiros), os indicadores em destaque por etapa da jornada, parceiros em risco, régua atrasada, indicações com prazo vencido e onboarding sem ativação. Não cite custos, salários nem ROI.
 Devolva: {"pauta": string em texto simples, pronto para copiar}.`,
         dados: e.painel,
       };

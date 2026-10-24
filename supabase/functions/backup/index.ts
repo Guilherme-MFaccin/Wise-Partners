@@ -12,6 +12,14 @@ const TABELAS = [
   "quadros_identificacao", "contratos_gerados", "tarefas_onboarding", "contrapartidas", "comprovacoes",
   "ciclos_base_ativa", "base_ativa_encontros", "clientes", "indicacoes", "comissoes", "pedidos_rfp", "pedido_rfp_opcoes",
   "paginas_rfp", "eventos_rfp", "historico", "notificacoes",
+  // v2
+  "remuneracoes", "atividades_custo", "custos_diretos", "criterios_scorecard", "scorecards", "planos_onboarding",
+  "marcos_onboarding", "trilhas", "trilha_modulos", "trilha_perguntas", "trilha_gabarito", "trilha_progresso",
+  "trilha_tentativas", "certificados", "links_indicacao", "checagens_cliente", "catalogo_acoes_wise", "acoes_wise",
+  "pontos_ranking", "premiacoes", "faixas", "regua_atendimento", "fluxos_desligamento", "requisitos_nivel",
+  "revisoes_nivel", "fase_programa", "indicadores", "metas", "pesquisas_satisfacao", "avaliacoes_maturidade",
+  "versoes_regras", "comunicados", "comunicado_leituras", "metas_pessoa", "base_wise_cruzamento",
+  "aceites_cruzamento", "cruzamentos", "coincidencias_cruzamento",
 ];
 
 function csv(linhas: Record<string, unknown>[]) {
