@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T12:00:00Z",
+  "title": "Design System: Portal Wise Partners",
+  "extensions": {
+    "colorMeta": {
+      "menta-sinal": { "role": "primary", "displayName": "Menta sinal", "canonical": "#00e193", "tonalRamp": ["#0d4d37", "#0a6b48", "#00905e", "#00b877", "#00e193", "#4defa9", "#8ef7c9", "#c3fbe2"] },
+      "fundo-app": { "role": "neutral", "displayName": "Fundo do app", "canonical": "#101012", "tonalRamp": ["#000000", "#101012", "#1c1c20", "#303036", "#61616a", "#adadb3", "#e7e7e9", "#ffffff"] },
+      "alerta-ambar": { "role": "tertiary", "displayName": "Âmbar de alerta", "canonical": "#f5a623" },
+      "perigo-vermelho": { "role": "tertiary", "displayName": "Vermelho de perigo", "canonical": "#f0473a" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Logotipo e títulos de páginas públicas; número principal da tela (regra da skill)." },
+      "body": { "displayName": "Corpo", "purpose": "Texto, células e descrições, 14 px." }
+    },
+    "shadows": [
+      { "name": "popover", "value": "0 8px 24px rgba(0,0,0,.45)", "purpose": "Só em camadas flutuantes (regra da skill)." }
+    ],
+    "motion": [
+      { "name": "duration-fast", "value": "120ms", "purpose": "Mudanças de estado pequenas (regra da skill, ainda não no código)." },
+      { "name": "ease-out", "value": "cubic-bezier(.2,.8,.2,1)", "purpose": "Entrada de elementos (regra da skill, ainda não no código)." }
+    ],
+    "breakpoints": [ { "name": "sm", "value": "640px" }, { "name": "md", "value": "768px" }, { "name": "lg", "value": "1024px" }, { "name": "xl", "value": "1280px" } ]
+  },
+  "components": [
+    { "name": "Botão principal", "kind": "button", "refersTo": "button-primary", "description": "Ação principal da tela.",
+      "html": "<button class=\"ds-btn-primary\">Registrar contato</button>",
+      "css": ".ds-btn-primary { background: #00e193; color: #101012; height: 40px; padding: 0 16px; border: none; border-radius: 9999px; font: 600 14px 'Plus Jakarta Sans', sans-serif; transition: background .15s; } .ds-btn-primary:hover { background: rgba(0,225,147,.9); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(0,225,147,.18); }" },
+    { "name": "Botão contorno", "kind": "button", "refersTo": "button-outline", "description": "Ação secundária.",
+      "html": "<button class=\"ds-btn-outline\">Exportar PDF</button>",
+      "css": ".ds-btn-outline { background: #101012; color: #fff; height: 40px; padding: 0 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 9999px; font: 600 14px 'Plus Jakarta Sans', sans-serif; } .ds-btn-outline:hover { background: #303036; }" },
+    { "name": "Campo", "kind": "input", "refersTo": "input", "description": "Campo de texto.",
+      "html": "<input class=\"ds-input\" placeholder=\"Buscar parceiro\">",
+      "css": ".ds-input { background: #101012; color: #fff; height: 40px; padding: 0 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 10px; font: 400 14px 'Plus Jakarta Sans', sans-serif; } .ds-input:focus-visible { outline: none; box-shadow: 0 0 0 2px #00e193; }" },
+    { "name": "Card", "kind": "card", "refersTo": "card", "description": "Seção de conteúdo.",
+      "html": "<div class=\"ds-card\"><p class=\"ds-card-rotulo\">Parceiros assinados</p><p class=\"ds-card-valor\">13 de 100</p></div>",
+      "css": ".ds-card { background: #1c1c20; color: #fff; border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 16px; font-family: 'Plus Jakarta Sans', sans-serif; } .ds-card-rotulo { margin: 0; font-size: 12px; color: #adadb3; } .ds-card-valor { margin: 4px 0 0; font-size: 28px; font-weight: 700; }" },
+    { "name": "Pílula menta", "kind": "chip", "refersTo": "pilula-menta", "description": "Estado positivo.",
+      "html": "<span class=\"ds-pilula\">Parceria ativa</span>",
+      "css": ".ds-pilula { display: inline-flex; padding: 2px 10px; border-radius: 9999px; background: rgba(0,225,147,.15); color: #4defa9; font: 600 12px 'Plus Jakarta Sans', sans-serif; }" },
+    { "name": "Item ativo da navegação", "kind": "nav", "refersTo": "nav-item-ativo", "description": "Item ativo da barra lateral.",
+      "html": "<a class=\"ds-nav\">Painel</a>",
+      "css": ".ds-nav { display: flex; padding: 8px 12px; border-radius: 8px; background: rgba(0,225,147,.1); color: #12e893; font: 500 14px 'Plus Jakarta Sans', sans-serif; text-decoration: none; }" }
+  ],
+  "narrative": {
+    "northStar": "Sinal sobre silêncio",
+    "overview": "Uma ferramenta de trabalho escura, calma e precisa, na linha de Linear, Stripe Dashboard e Attio, com a assinatura da Wise Makers: fundo quase preto, texto branco e o verde menta reservado para o que pede atenção.",
+    "keyCharacteristics": ["Tema escuro único, sem modo claro.", "Profundidade por superfície e borda branca translúcida, quase sem sombra.", "Plus Jakarta Sans em toda a interface; Baloo 2 só no logotipo e em títulos públicos.", "Pílulas arredondadas para estados, níveis e botões.", "Sem gráficos: números em cards e barras de progresso simples."],
+    "rules": [
+      { "name": "A Regra do Sinal", "body": "O menta marca o que pede ação ou bateu a meta; se mais de 10% da área visível está menta, há excesso.", "section": "colors" },
+      { "name": "A Regra da Cor com Significado", "body": "Âmbar é alerta, vermelho é perigo. Nenhuma das duas serve para negativo neutro.", "section": "colors" },
+      { "name": "A Regra Plana", "body": "Camadas se separam por superfície e borda, não por sombra; sombra só em camadas flutuantes.", "section": "elevation" }
+    ],
+    "dos": ["Do usar o menta só como sinal (botão principal, item ativo, valor que bateu a meta).", "Do separar camadas por superfície e borda branca translúcida.", "Do mostrar nível pelo nome para parceiros e clientes.", "Do escrever sem travessão nem meia-risca."],
+    "donts": ["Don't criar valores soltos de raio, cor ou tamanho de fonte: usar os tokens.", "Don't usar vermelho para variação negativa neutra.", "Don't usar Baloo 2 em tabelas, botões ou rótulos."]
+  }
+}
