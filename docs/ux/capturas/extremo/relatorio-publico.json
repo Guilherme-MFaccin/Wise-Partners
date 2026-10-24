@@ -1,0 +1,29 @@
+[
+  {
+    "tela": "rfp-publica",
+    "rota": "/r/RuADqfrnXpT0gwkBn_D8ZN4qozyiwOp5In73Suxgm3I",
+    "largura": 375,
+    "alturaPagina": 4510,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "rfp-publica",
+    "rota": "/r/RuADqfrnXpT0gwkBn_D8ZN4qozyiwOp5In73Suxgm3I",
+    "largura": 768,
+    "alturaPagina": 3079,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "rfp-publica",
+    "rota": "/r/RuADqfrnXpT0gwkBn_D8ZN4qozyiwOp5In73Suxgm3I",
+    "largura": 1440,
+    "alturaPagina": 3079,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  }
+]
