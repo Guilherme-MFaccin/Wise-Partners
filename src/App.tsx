@@ -26,16 +26,37 @@ const Configuracoes = lazy(() => import("@/pages/app/Configuracoes"));
 const Usuarios = lazy(() => import("@/pages/app/Usuarios"));
 const Conta = lazy(() => import("@/pages/Conta"));
 const Notificacoes = lazy(() => import("@/pages/Notificacoes"));
+const Resultado = lazy(() => import("@/pages/app/Resultado"));
+const Custos = lazy(() => import("@/pages/app/Custos"));
+const Maturidade = lazy(() => import("@/pages/app/Maturidade"));
+const Acoes = lazy(() => import("@/pages/app/Acoes"));
+const Capacitacao = lazy(() => import("@/pages/app/Capacitacao"));
+const Comunicados = lazy(() => import("@/pages/app/Comunicados"));
+const Ranking = lazy(() => import("@/pages/app/Ranking"));
+const Cruzamento = lazy(() => import("@/pages/app/Cruzamento"));
+const MeuPainel = lazy(() => import("@/pages/app/MeuPainel"));
 
 const PInicio = lazy(() => import("@/pages/parceiro/Inicio"));
-const PContrapartidas = lazy(() => import("@/pages/parceiro/Contrapartidas"));
 const PIndicacoes = lazy(() => import("@/pages/parceiro/Indicacoes"));
 const PRfps = lazy(() => import("@/pages/parceiro/Rfps"));
 const PFicha = lazy(() => import("@/pages/parceiro/Ficha"));
 const PMateriais = lazy(() => import("@/pages/parceiro/Materiais"));
 const PUsuarios = lazy(() => import("@/pages/parceiro/Usuarios"));
+const PNivel = lazy(() => import("@/pages/parceiro/Nivel"));
+const PParceria = lazy(() => import("@/pages/parceiro/Parceria"));
+const POnboarding = lazy(() => import("@/pages/parceiro/Onboarding"));
+const PCapacitacao = lazy(() => import("@/pages/parceiro/Capacitacao"));
+const PTrilha = lazy(() => import("@/pages/parceiro/Trilha"));
+const PIndicar = lazy(() => import("@/pages/parceiro/Indicar"));
+const PAcoes = lazy(() => import("@/pages/parceiro/Acoes"));
+const PRegras = lazy(() => import("@/pages/parceiro/Regras"));
+const PComunicados = lazy(() => import("@/pages/parceiro/Comunicados"));
+const PRanking = lazy(() => import("@/pages/parceiro/Ranking"));
+const PPesquisa = lazy(() => import("@/pages/parceiro/Pesquisa"));
+const PCruzamento = lazy(() => import("@/pages/parceiro/Cruzamento"));
 
 const PaginaRfp = lazy(() => import("@/pages/publico/PaginaRfp"));
+const IndicacaoLink = lazy(() => import("@/pages/publico/IndicacaoLink"));
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 30_000, retry: 1, refetchOnWindowFocus: false } } });
 
@@ -69,6 +90,7 @@ export default function App() {
                 <Route path="/" element={<Inicio />} />
                 <Route path="/entrar" element={<Entrar />} />
                 <Route path="/r/:token" element={<PaginaRfp />} />
+                <Route path="/i/:token" element={<IndicacaoLink />} />
                 <Route path="/app" element={<Protegida publico="interno"><AppLayout /></Protegida>}>
                   <Route index element={<Painel />} />
                   <Route path="parceiros" element={<Parceiros />} />
@@ -85,10 +107,31 @@ export default function App() {
                   <Route path="usuarios" element={<Usuarios />} />
                   <Route path="conta" element={<Conta />} />
                   <Route path="notificacoes" element={<Notificacoes />} />
+                  <Route path="resultado" element={<Resultado />} />
+                  <Route path="custos" element={<Custos />} />
+                  <Route path="maturidade" element={<Maturidade />} />
+                  <Route path="acoes" element={<Acoes />} />
+                  <Route path="capacitacao" element={<Capacitacao />} />
+                  <Route path="comunicados" element={<Comunicados />} />
+                  <Route path="ranking" element={<Ranking />} />
+                  <Route path="cruzamento" element={<Cruzamento />} />
+                  <Route path="meu-painel" element={<MeuPainel />} />
                 </Route>
                 <Route path="/parceiro" element={<Protegida publico="parceiro"><ParceiroLayout /></Protegida>}>
                   <Route index element={<PInicio />} />
-                  <Route path="contrapartidas" element={<PContrapartidas />} />
+                  <Route path="contrapartidas" element={<Navigate to="/parceiro/acoes" replace />} />
+                  <Route path="acoes" element={<PAcoes />} />
+                  <Route path="nivel" element={<PNivel />} />
+                  <Route path="parceria" element={<PParceria />} />
+                  <Route path="onboarding" element={<POnboarding />} />
+                  <Route path="capacitacao" element={<PCapacitacao />} />
+                  <Route path="capacitacao/:trilha" element={<PTrilha />} />
+                  <Route path="indicar" element={<PIndicar />} />
+                  <Route path="regras" element={<PRegras />} />
+                  <Route path="comunicados" element={<PComunicados />} />
+                  <Route path="ranking" element={<PRanking />} />
+                  <Route path="pesquisa" element={<PPesquisa />} />
+                  <Route path="cruzamento" element={<PCruzamento />} />
                   <Route path="indicacoes" element={<PIndicacoes />} />
                   <Route path="rfps" element={<PRfps />} />
                   <Route path="ficha" element={<PFicha />} />

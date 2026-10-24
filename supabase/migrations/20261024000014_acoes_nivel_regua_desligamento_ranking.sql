@@ -627,7 +627,7 @@ begin
         v_ok := v_qual >= coalesce((rq.regra->>'indicacoes_qualificadas')::int, 999999)
              or v_cli >= coalesce((rq.regra->>'clientes_fechados')::int, 999999);
         if not v_ok then
-          v_falta := v_falta || format('%s indicações qualificadas ou %s clientes fechados no ICP em %s dias (hoje: %s e %s)',
+          v_falta := v_falta || format('%s indicações qualificadas ou %s cliente(s) fechado(s) no ICP em %s dias (hoje: %s e %s)',
             rq.regra->>'indicacoes_qualificadas', rq.regra->>'clientes_fechados', v_janela, v_qual, v_cli);
         end if;
       elsif g = 'capacitacao' then

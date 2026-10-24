@@ -377,7 +377,7 @@ begin
   select count(*) into v_ativos12 from public.checagens_cliente where parceiro_id = p.id and marco = '12m' and cliente_ativo;
   n := case when v_fechados = 0 and v_qual = 0 then 1 when v_ativos12 > 0 then 5 when v_fechados > 0 then 3 else 2 end;
   r := r || jsonb_build_object('resultado', jsonb_build_object('nota', n, 'motivo',
-    format('%s clientes fechados, %s ativos aos 12 meses', v_fechados, v_ativos12)));
+    format('%s cliente(s) fechado(s), %s ativo(s) aos 12 meses', v_fechados, v_ativos12)));
   return r;
 end $$;
 

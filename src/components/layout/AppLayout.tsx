@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
   Bell, BarChart3, Building2, Handshake, Wallet, FileSearch, Users2, Clock, Inbox, Upload, Settings, UserCog, Menu, LogOut, Plus, UserCircle,
+  TrendingUp, Receipt, Radar, CalendarRange, GraduationCap, Megaphone, Trophy, GitMerge, Target,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { useNaoLidas } from "@/hooks/useNotificacoes";
@@ -23,6 +24,15 @@ const ITENS: Item[] = [
   { to: "/app/base-ativa", rotulo: "Base Ativa", icone: Users2, papeis: ["admin", "parcerias", "consultor", "comercial"] },
   { to: "/app/atividades", rotulo: "Atividades", icone: Clock, papeis: ["admin", "parcerias", "consultor", "comercial"] },
   { to: "/app/pendencias", rotulo: "Pendências", icone: Inbox, papeis: ["admin", "parcerias"] },
+  { to: "/app/meu-painel", rotulo: "Meu painel", icone: Target, papeis: ["admin", "parcerias"] },
+  { to: "/app/resultado", rotulo: "Resultado do canal", icone: TrendingUp, papeis: ["admin"] },
+  { to: "/app/custos", rotulo: "Custos", icone: Receipt, papeis: ["admin"] },
+  { to: "/app/acoes", rotulo: "Ações conjuntas", icone: CalendarRange, papeis: ["admin", "parcerias", "consultor"] },
+  { to: "/app/capacitacao", rotulo: "Capacitação", icone: GraduationCap, papeis: ["admin", "parcerias", "consultor", "comercial"] },
+  { to: "/app/comunicados", rotulo: "Comunicados", icone: Megaphone, papeis: ["admin", "parcerias", "consultor"] },
+  { to: "/app/ranking", rotulo: "Ranking e faixas", icone: Trophy, papeis: ["admin", "parcerias", "consultor"] },
+  { to: "/app/maturidade", rotulo: "Maturidade", icone: Radar, papeis: ["admin", "parcerias", "consultor"] },
+  { to: "/app/cruzamento", rotulo: "Cruzamento", icone: GitMerge, papeis: ["admin", "parcerias"] },
   { to: "/app/importar", rotulo: "Importação", icone: Upload, papeis: ["admin"] },
   { to: "/app/configuracoes", rotulo: "Configurações", icone: Settings, papeis: ["admin", "parcerias"] },
   { to: "/app/usuarios", rotulo: "Usuários", icone: UserCog, papeis: ["admin", "parcerias"] },

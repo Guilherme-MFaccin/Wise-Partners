@@ -97,7 +97,7 @@ export function validarLinhas(linhas: Record<string, string>[], ref: Referencias
       if (e) etapa = e;
       else erros.push(`Etapa "${v("etapa")}" não reconhecida.`);
     }
-    if (etapa === "fechamento" || etapa === "onboarding") erros.push(`Etapa "${ETAPAS[etapa]}" exige aprovação do Diretor; importe numa etapa anterior.`);
+    if (etapa === "fechamento" || etapa === "onboarding" || etapa === "parceria_ativa") erros.push(`Etapa "${ETAPAS[etapa]}" exige aprovação do Diretor; importe numa etapa anterior.`);
 
     let perfilInst: string | null = null;
     let catPrincipal: string | null = null;
