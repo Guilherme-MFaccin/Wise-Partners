@@ -1,0 +1,272 @@
+[
+  {
+    "tela": "painel",
+    "rota": "/app",
+    "largura": 375,
+    "alturaPagina": 5449,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "painel",
+    "rota": "/app",
+    "largura": 768,
+    "alturaPagina": 3409,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "painel",
+    "rota": "/app",
+    "largura": 1440,
+    "alturaPagina": 2725,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-categorias",
+    "rota": "/app/parceiros?vista=categorias",
+    "largura": 375,
+    "alturaPagina": 7470,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-categorias",
+    "rota": "/app/parceiros?vista=categorias",
+    "largura": 768,
+    "alturaPagina": 4227,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-categorias",
+    "rota": "/app/parceiros?vista=categorias",
+    "largura": 1440,
+    "alturaPagina": 3206,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-funil",
+    "rota": "/app/parceiros?vista=funil",
+    "largura": 375,
+    "alturaPagina": 7495,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-funil",
+    "rota": "/app/parceiros?vista=funil",
+    "largura": 768,
+    "alturaPagina": 4891,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-funil",
+    "rota": "/app/parceiros?vista=funil",
+    "largura": 1440,
+    "alturaPagina": 3173,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-lista",
+    "rota": "/app/parceiros?vista=lista",
+    "largura": 375,
+    "alturaPagina": 6641,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-lista",
+    "rota": "/app/parceiros?vista=lista",
+    "largura": 768,
+    "alturaPagina": 3989,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "parceiros-lista",
+    "rota": "/app/parceiros?vista=lista",
+    "largura": 1440,
+    "alturaPagina": 3809,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "ficha-elite",
+    "rota": "/app/parceiros/d0000000-0000-4000-a000-000000001001",
+    "largura": 375,
+    "alturaPagina": 4503,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "ficha-elite",
+    "rota": "/app/parceiros/d0000000-0000-4000-a000-000000001001",
+    "largura": 768,
+    "alturaPagina": 3374,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "ficha-elite",
+    "rota": "/app/parceiros/d0000000-0000-4000-a000-000000001001",
+    "largura": 1440,
+    "alturaPagina": 2572,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "indicacoes",
+    "rota": "/app/indicacoes",
+    "largura": 375,
+    "alturaPagina": 18715,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "indicacoes",
+    "rota": "/app/indicacoes",
+    "largura": 768,
+    "alturaPagina": 8752,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "indicacoes",
+    "rota": "/app/indicacoes",
+    "largura": 1440,
+    "alturaPagina": 8564,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "comissoes",
+    "rota": "/app/comissoes",
+    "largura": 375,
+    "alturaPagina": 7211,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "comissoes",
+    "rota": "/app/comissoes",
+    "largura": 768,
+    "alturaPagina": 5051,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "comissoes",
+    "rota": "/app/comissoes",
+    "largura": 1440,
+    "alturaPagina": 4797,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "base-ativa",
+    "rota": "/app/base-ativa",
+    "largura": 375,
+    "alturaPagina": 812,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "base-ativa",
+    "rota": "/app/base-ativa",
+    "largura": 768,
+    "alturaPagina": 900,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "base-ativa",
+    "rota": "/app/base-ativa",
+    "largura": 1440,
+    "alturaPagina": 900,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "atividades",
+    "rota": "/app/atividades",
+    "largura": 375,
+    "alturaPagina": 2400,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "atividades",
+    "rota": "/app/atividades",
+    "largura": 768,
+    "alturaPagina": 2068,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "atividades",
+    "rota": "/app/atividades",
+    "largura": 1440,
+    "alturaPagina": 1970,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "configuracoes",
+    "rota": "/app/configuracoes",
+    "largura": 375,
+    "alturaPagina": 2922,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "configuracoes",
+    "rota": "/app/configuracoes",
+    "largura": 768,
+    "alturaPagina": 2138,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "configuracoes",
+    "rota": "/app/configuracoes",
+    "largura": 1440,
+    "alturaPagina": 1796,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  }
+]

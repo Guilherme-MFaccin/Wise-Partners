@@ -1,0 +1,56 @@
+[
+  {
+    "tela": "portal-inicio",
+    "rota": "/parceiro",
+    "largura": 375,
+    "alturaPagina": 2516,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "portal-inicio",
+    "rota": "/parceiro",
+    "largura": 768,
+    "alturaPagina": 1776,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "portal-inicio",
+    "rota": "/parceiro",
+    "largura": 1440,
+    "alturaPagina": 1276,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "portal-indicacoes",
+    "rota": "/parceiro/indicacoes",
+    "largura": 375,
+    "alturaPagina": 1113,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "portal-indicacoes",
+    "rota": "/parceiro/indicacoes",
+    "largura": 768,
+    "alturaPagina": 929,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  },
+  {
+    "tela": "portal-indicacoes",
+    "rota": "/parceiro/indicacoes",
+    "largura": 1440,
+    "alturaPagina": 900,
+    "rolagemHorizontal": false,
+    "travessao": false,
+    "erros": []
+  }
+]
