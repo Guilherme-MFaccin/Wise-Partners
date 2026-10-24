@@ -508,3 +508,20 @@ describe("Ações da Wise e decisões do cruzamento", () => {
       expect(await q.um("select descartada, virou from public.coincidencias_cruzamento where id = $1", [c.id])).toEqual({ descartada: false, virou: null });
     }));
 });
+
+describe("Nossa parceria: proposta do parceiro", () => {
+  it("parceiro propõe modelo de atuação e proposta de valor; aplica só depois da validação", () =>
+    transacao(async (q) => {
+      await q.como(U.parceiroA);
+      await q.sql(`insert into public.propostas_ficha (parceiro_id, valores) values ($1, '{"parceria.modelos_atuacao": ["Indicador", "Co-venda"], "parceria.valor_desejado": "Mais receita recorrente"}')`, [P.A]);
+      expect(await q.falha(`insert into public.propostas_ficha (parceiro_id, valores) values ($1, '{"parceria.nivel": "A"}')`, [P.A])).toMatch(/não pode ser alterado/);
+      await q.sistema();
+      expect((await q.um("select valor_desejado from public.parceiros where id = $1", [P.A])).valor_desejado).toBeNull();
+      const pr = (await q.um("select id from public.propostas_ficha where parceiro_id = $1 and estado = 'pendente'", [P.A])).id;
+      await q.como(U.parcerias);
+      await q.sql("select public.revisar_proposta_ficha($1, true)", [pr]);
+      await q.sistema();
+      expect(await q.um("select modelos_atuacao, valor_desejado from public.parceiros where id = $1", [P.A]))
+        .toEqual({ modelos_atuacao: ["Indicador", "Co-venda"], valor_desejado: "Mais receita recorrente" });
+    }));
+});

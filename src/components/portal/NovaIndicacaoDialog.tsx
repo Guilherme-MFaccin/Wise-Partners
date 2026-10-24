@@ -15,7 +15,7 @@ import { useEmpresasGrupo } from "@/components/rfp/dados";
 
 const VAZIO = {
   empresa_grupo_id: "", cliente_razao_social: "", cliente_cnpj: "", contato_nome: "", contato_email: "", contato_telefone: "",
-  consentimento: false, observacoes: "",
+  consentimento: false, necessidade: "", observacoes: "",
 };
 
 // Indicação do parceiro para uma empresa do grupo. O banco força sentido e origem e aplica
@@ -47,6 +47,7 @@ export function NovaIndicacaoDialog({ aberto, onClose }: { aberto: boolean; onCl
           contato_email: f.contato_email.trim() || null,
           contato_telefone: f.contato_telefone.trim() || null,
           consentimento: temDadosPessoais ? f.consentimento : false,
+          necessidade: f.necessidade.trim() || null,
           observacoes: f.observacoes.trim() || null,
         },
       });
@@ -54,6 +55,7 @@ export function NovaIndicacaoDialog({ aberto, onClose }: { aberto: boolean; onCl
       toast.success("Indicação registrada. O seu responsável na Wise foi avisado.");
       qc.invalidateQueries({ queryKey: ["portal-indicacoes"] });
       qc.invalidateQueries({ queryKey: ["portal-indicacoes-contagem"] });
+      qc.invalidateQueries({ queryKey: ["portal-meu-nivel"] });
       fechar();
     } catch (e) {
       toastErro(e);
@@ -109,9 +111,15 @@ export function NovaIndicacaoDialog({ aberto, onClose }: { aberto: boolean; onCl
             )}
           </fieldset>
           <div className="space-y-1.5">
+            <Label htmlFor="necessidade">Necessidade do cliente</Label>
+            <Textarea id="necessidade" rows={3} value={f.necessidade} onChange={(e) => set("necessidade", e.target.value)}
+              placeholder="O que o cliente precisa resolver na área comercial" />
+            <p className="text-xs text-muted-foreground">CNPJ e necessidade descrita aumentam a qualidade da indicação.</p>
+          </div>
+          <div className="space-y-1.5">
             <Label htmlFor="obs">Observações</Label>
-            <Textarea id="obs" rows={3} value={f.observacoes} onChange={(e) => set("observacoes", e.target.value)}
-              placeholder="O que o cliente precisa e como chegou até vocês" />
+            <Textarea id="obs" rows={2} value={f.observacoes} onChange={(e) => set("observacoes", e.target.value)}
+              placeholder="Como o cliente chegou até vocês e o que mais a Wise deve saber" />
           </div>
         </div>
         <DialogFooter>
