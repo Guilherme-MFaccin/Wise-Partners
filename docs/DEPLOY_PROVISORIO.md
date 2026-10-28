@@ -4,6 +4,7 @@ Banco, autenticação e Edge Functions num projeto Supabase novo; o site estáti
 
 ## Parte 1. O que o Guilherme faz (cerca de 15 minutos)
 
+0. **Repositório no GitHub** (também necessário para o Lovable). Em github.com, New repository: nome `portal-wise-partners`, **Private**, sem README, sem .gitignore e sem licença (vazio). Avise no chat da sessão em que o código está, para o Claude enviar as branches `main` e `ux-fundacao`. Sem isso, uma sessão nova não encontra o código.
 1. **Projeto Supabase.** Em supabase.com, entre com `guilherme@wisemakers.com.br` (importante: sem SMTP próprio, o Supabase só envia o link de acesso para e-mails da equipe do projeto). New project: nome `portal-wise-partners`, região South America (São Paulo), uma senha forte para o banco (guarde com você). Ao terminar, copie o **Reference ID** em Project Settings, General. Ele não é segredo: pode mandar no chat.
 2. **Conta Netlify.** Em netlify.com, crie uma conta gratuita.
 3. **Duas chaves de acesso**, que **não devem ser coladas no chat**:
@@ -12,7 +13,7 @@ Banco, autenticação e Edge Functions num projeto Supabase novo; o site estáti
 4. **Guardar as chaves no ambiente do Claude Code:** no menu do ambiente na barra de título da sessão, Edit. Em Network secrets (ou API credentials; se não houver essa seção, em variáveis de ambiente), crie:
    * `SUPABASE_ACCESS_TOKEN` com a chave da Supabase;
    * `NETLIFY_AUTH_TOKEN` com a chave da Netlify.
-5. **Nova sessão:** as chaves só aparecem numa sessão nova. Abra uma e escreva: "Faça o deploy provisório seguindo `docs/DEPLOY_PROVISORIO.md`. O Reference ID é XXXX." Se quiser os dados reais já no deploy, anexe na mesma mensagem o arquivo `carga_real.sql` (a pasta `dados-reais/` fica fora do git e não existe numa sessão nova).
+5. **Nova sessão:** as chaves só aparecem numa sessão nova. Abra uma com o repositório `portal-wise-partners` e escreva: "Faça o deploy provisório seguindo `docs/DEPLOY_PROVISORIO.md`. O Reference ID é XXXX." Se quiser os dados reais já no deploy, anexe na mesma mensagem o arquivo `carga_real.sql` (a pasta `dados-reais/` fica fora do git e não existe numa sessão nova).
 
 As duas chaves dão acesso de escrita às contas. Depois do deploy, apague-as nas próprias contas (Supabase e Netlify) e no ambiente.
 
