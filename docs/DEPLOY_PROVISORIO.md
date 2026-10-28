@@ -2,6 +2,13 @@
 
 Banco, autenticação e Edge Functions num projeto Supabase novo; o site estático (pasta `dist`) na Netlify. Depois, o Lovable se conecta ao mesmo projeto Supabase e a Netlify pode ser desligada.
 
+## Estado em 28/10/2026
+
+* **GitHub: feito.** Código em `Guilherme-MFaccin/wise-partners`, branches `main` (app) e `ux-fundacao` (app igual, mais documentos de UX, este roteiro e `public/_redirects`). Use a branch `ux-fundacao`.
+* **Netlify: feito.** Site `portal-wise-partners` em https://portal-wise-partners.netlify.app, publicado com `VITE_SUPABASE_URL=https://eiozuvnzvqlqslihyooz.supabase.co` e a chave pública do projeto. A Netlify ligou a proteção de visitantes (só quem entra com a conta Netlify da equipe vê o site); para abrir ao público: Site configuration, Access & security, Visitor access. Não é preciso publicar o site de novo para concluir o deploy.
+* **Supabase: falta.** Projeto `eiozuvnzvqlqslihyooz` criado e vazio. Faltam os passos 2, 3, 5, 6, 7, 9 e 10 da Parte 2 (o passo 4 e o 8 já foram feitos). O banco não é alcançável pela porta 5432 a partir do ambiente do Claude (endereço só IPv6 e pooler bloqueado): tudo pela API de gestão, com `SUPABASE_ACCESS_TOKEN`.
+* `APP_URL` = https://portal-wise-partners.netlify.app
+
 ## Parte 1. O que o Guilherme faz (cerca de 15 minutos)
 
 0. **Repositório no GitHub** (também necessário para o Lovable). Em github.com, New repository: nome `portal-wise-partners`, **Private**, sem README, sem .gitignore e sem licença (vazio). Avise no chat da sessão em que o código está, para o Claude enviar as branches `main` e `ux-fundacao`. Sem isso, uma sessão nova não encontra o código.
