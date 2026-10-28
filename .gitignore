@@ -8,3 +8,4 @@ supabase/.temp
 
 # Dados reais das parcerias (dados pessoais e anotações internas)
 dados-reais/
+deploy-sql/
