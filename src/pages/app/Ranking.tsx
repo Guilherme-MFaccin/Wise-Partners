@@ -71,7 +71,7 @@ function TelaRanking({ podeEditar }: { podeEditar: boolean }) {
 
   return (
     <div>
-      <Cabecalho titulo="Ranking e faixas" descricao="Pontuação dos parceiros comerciais assinados, faixas internas de atendimento e premiação anual." />
+      <Cabecalho titulo="Ranking e faixas" descricao="Quem se destaca no ano? Pontuação dos parceiros comerciais assinados, faixas internas de atendimento e premiação anual. É reconhecimento, sem meta." />
 
       <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
         {/* Ranking */}

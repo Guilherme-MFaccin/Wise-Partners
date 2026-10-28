@@ -1,11 +1,17 @@
 import { data, minutosParaHoras, moeda, semTravessao } from "@/lib/formato";
 import { ETAPAS, rotulo, STATUS_ATIVIDADE } from "@/lib/rotulos";
+import { fraseFunil } from "@/components/metas/FunilReverso";
+import type { FunilReverso } from "@/components/metas/dados";
 
-// Formato devolvido por painel_semanal(p_inicio, p_fim) (migração 0005).
+// Formato devolvido por painel_semanal(p_inicio, p_fim) (migrações 0005 e 0022).
+// meta_assinados e assinados são do trimestre corrente; assinados_total é desde o início do programa.
 export type PainelDados = {
   periodo: { inicio: string; fim: string };
-  meta_assinados: number;
+  trimestre: string;
+  meta_assinados: number | null;
   assinados: number;
+  assinados_total: number;
+  funil_reverso: FunilReverso | null;
   funil: { etapa: string; nome: string; perda: boolean; total: number }[];
   followups_vencidos: { id: string; parceiro_id: string; parceiro: string; descricao: string; data: string; responsavel_id: string | null }[];
   esfriando: { parceiro_id: string; parceiro: string; status: string; ultimo_contato: string | null; motivo: string | null }[];
@@ -32,8 +38,11 @@ export function normalizarPainel(p: any): PainelDados {
   const ind = p?.indicacoes ?? {};
   return {
     periodo: p?.periodo ?? { inicio: "", fim: "" },
-    meta_assinados: Number(p?.meta_assinados ?? 0),
+    trimestre: p?.trimestre ?? "",
+    meta_assinados: p?.meta_assinados === null || p?.meta_assinados === undefined ? null : Number(p.meta_assinados),
     assinados: Number(p?.assinados ?? 0),
+    assinados_total: Number(p?.assinados_total ?? 0),
+    funil_reverso: p?.funil_reverso ?? null,
     funil: p?.funil ?? [],
     followups_vencidos: p?.followups_vencidos ?? [],
     esfriando: p?.esfriando ?? [],
@@ -81,9 +90,12 @@ export function montarPautaLocal(p: PainelDados): string {
   l.push(`Período: ${data(p.periodo.inicio)} a ${data(p.periodo.fim)}`);
   l.push("");
 
-  const faltam = Math.max(0, p.meta_assinados - p.assinados);
-  topico("Meta de assinados", [
-    `${p.assinados} parceiros assinados de ${p.meta_assinados}; faltam ${faltam}.`,
+  const fraseMeta = p.funil_reverso ? fraseFunil(p.funil_reverso) : null;
+  topico("Meta de assinados do trimestre", [
+    p.meta_assinados === null
+      ? `${p.assinados} parceiros assinados no trimestre; sem meta cadastrada.`
+      : `${p.assinados} parceiros assinados no trimestre de ${p.meta_assinados}. ${p.assinados_total} desde o início do programa.`,
+    fraseMeta ? [fraseMeta.titulo, fraseMeta.detalhe].filter(Boolean).join(" ") : "",
     p.contratos_assinados.length
       ? `Assinados no período: ${nomes(p.contratos_assinados.map((c) => c.parceiro))}.`
       : "Nenhum contrato assinado no período.",

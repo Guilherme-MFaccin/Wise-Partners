@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ok } from "@/lib/erros";
 import { hojeISO } from "@/lib/formato";
+import { MARCOS_ONBOARDING, rotulo } from "@/lib/rotulos";
 
 // Dados da v2 no portal do parceiro. As funções do banco já devolvem só o que o parceiro pode ver
 // (sem faixa, maturidade, desligamento nem notas internas).
@@ -18,6 +19,11 @@ export type MeuNivel = {
   pacote_pendente_em: string | null;
   atual: CumpreNivel | null;
   acima: CumpreNivel | null;
+  // Resultado na janela do requisito (180 dias) e no trimestre (migração 0022)
+  resultado?: {
+    janela_dias: number; trimestre: string;
+    qualificadas_janela: number; clientes_janela: number; qualificadas_trimestre: number; clientes_trimestre: number;
+  };
 };
 
 export function useMeuNivel() {
@@ -61,6 +67,26 @@ export function usePlanoOnboarding() {
 const ORDEM_MARCOS = ["encontro_alinhamento", "encontro_vendas", "marco_30", "encontro_produto", "marco_60", "encontro_pos_venda", "marco_90"];
 export function ordenarMarcos(m: Marco[]) {
   return [...m].sort((a, b) => a.prazo.localeCompare(b.prazo) || ORDEM_MARCOS.indexOf(a.tipo) - ORDEM_MARCOS.indexOf(b.tipo));
+}
+
+// Nome, prazo e descrição de cada item do plano vêm de marcos_onboarding_config (migração 0022);
+// os textos abaixo são a reserva enquanto a configuração carrega.
+export type MarcoConfig = { tipo: string; nome: string; descricao: string; dias: number | null; ordem: number };
+
+export function useMarcosConfig() {
+  return useQuery({
+    queryKey: ["marcos-config"],
+    staleTime: 10 * 60_000,
+    queryFn: async () => (ok<any>(await supabase.from("marcos_onboarding_config").select("tipo, nome, descricao, dias, ordem").order("ordem")) ?? []) as MarcoConfig[],
+  });
+}
+
+export function nomeMarco(cfg: MarcoConfig[] | undefined, tipo: string) {
+  return cfg?.find((m) => m.tipo === tipo)?.nome ?? rotulo(MARCOS_ONBOARDING, tipo);
+}
+
+export function descricaoMarco(cfg: MarcoConfig[] | undefined, tipo: string) {
+  return cfg?.find((m) => m.tipo === tipo)?.descricao ?? DESCRICAO_MARCOS[tipo] ?? "";
 }
 
 // O que acontece em cada item do plano (Apêndice F)

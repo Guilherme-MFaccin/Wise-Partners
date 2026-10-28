@@ -1,5 +1,5 @@
-// Relatório semanal do Diretor (FR-067, FR-141): número principal, ROI do trimestre, indicadores em destaque,
-// mudanças da semana e pontos de atenção.
+// Relatório semanal do Diretor (FR-067, FR-141): metas do trimestre e funil até a meta (migração 0022), número principal,
+// ROI do trimestre, indicadores em destaque, mudanças da semana e pontos de atenção.
 // O pg_cron chama de hora em hora; a função confere o dia e o horário configurados.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin, agoraBrasilia, ehRotina, urlDoApp } from "../_shared/supabase.ts";
@@ -42,6 +42,25 @@ Deno.serve(async (req) => {
   };
   const destaques = ((v2?.destaques ?? []) as any[]).map((d) => ({ texto: `${d.nome}: ${valorDestaque(d)}` }));
 
+  // Metas do trimestre (só as cadastradas) e o funil até a meta de assinados
+  const num = (v: unknown) => new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 1 }).format(Number(v ?? 0));
+  const valorMeta = (i: any, v: unknown) => {
+    const n = v !== null && typeof v === "object" ? (v as any).nps : v;
+    if (n === null || n === undefined) return "sem dados";
+    if (i.chave === "roi") return pct(n);
+    if (i.formato === "percentual") return `${num(n)}%`;
+    if (i.formato === "moeda") return moeda(Number(n));
+    return num(n);
+  };
+  const metasTri = ((v2?.metas?.itens ?? []) as any[]).filter((i) => i.meta !== null)
+    .map((i) => ({ texto: `${i.nome}: ${valorMeta(i, i.realizado)} de ${valorMeta(i, i.meta)}` }));
+  const f = v2?.metas?.funil;
+  const funil = !f ? null
+    : f.meta === null ? `Funil: sem meta de assinados no trimestre; o funil atual projeta ${num(f.projecao)} assinaturas.`
+    : Number(f.faltam) === 0 ? `Funil: meta de assinados do trimestre atingida (${num(f.assinados)} de ${num(f.meta)}).`
+    : `Funil: faltam ${num(f.faltam)} assinaturas em ${num(f.dias_uteis_restantes)} dias úteis; o funil projeta ${num(f.projecao)}` +
+      (Number(f.lacuna) > 0 ? `. Para cobrir a diferença: cerca de ${num(f.reunioes_necessarias)} reuniões realizadas ou ${num(f.contatos_necessarios)} contatos novos.` : ".");
+
   // Comissões do período (o Diretor é administrador e vê valores)
   const { data: com } = await sb.from("comissoes").select("valor, estado, beneficiario, paga_em");
   const soma = (f: (c: any) => boolean) => (com ?? []).filter(f).reduce((a, c) => a + Number(c.valor ?? 0), 0);
@@ -60,7 +79,10 @@ Deno.serve(async (req) => {
     `Indicações registradas: ${p.indicacoes.total} (${p.indicacoes.do_parceiro} dos parceiros, ${p.indicacoes.para_parceiro} para parceiros), ${p.indicacoes.fechadas} fechadas`,
   ];
   const indicadores = [
-    `Assinados: ${p.assinados} de ${p.meta_assinados} (faltam ${Math.max(0, p.meta_assinados - p.assinados)})`,
+    p.meta_assinados === null
+      ? `Assinados no trimestre: ${p.assinados} (sem meta cadastrada) · ${p.assinados_total} desde o início`
+      : `Assinados no trimestre: ${p.assinados} de ${p.meta_assinados} · ${p.assinados_total} desde o início`,
+    ...(funil ? [funil] : []),
     `Funil: ${p.funil.filter((e: any) => !e.perda && e.total > 0).map((e: any) => `${e.nome} ${e.total}`).join(", ")}`,
     `Comissões a pagar: ${moeda(aPagar)} · a receber: ${moeda(aReceber)}`,
     `Fila do Base Ativa: ${p.fila_base_ativa.length} parceiro(s)`,
@@ -81,10 +103,10 @@ Deno.serve(async (req) => {
     const html = layoutEmail({
       titulo: `${m.assunto} (${dataBr(ini)} a ${dataBr(fim)})`,
       paragrafos: [m.corpo, ...principal, ...indicadores],
-      htmlExtra: listaHtml("Indicadores em destaque", destaques) + listaHtml("Mudanças da semana", mudancas.map((t) => ({ texto: t }))) + atencao,
+      htmlExtra: listaHtml("Metas do trimestre", metasTri) + listaHtml("Indicadores em destaque", destaques) + listaHtml("Mudanças da semana", mudancas.map((t) => ({ texto: t }))) + atencao,
       botao: { texto: "Abrir o painel", url: `${app}/app` },
     });
-    await enviarEmail(d.email, m.assunto, html, [m.corpo, ...principal, ...indicadores, "", ...destaques.map((x) => x.texto), "", ...mudancas].join("\n"));
+    await enviarEmail(d.email, m.assunto, html, [m.corpo, ...principal, ...indicadores, "", ...metasTri.map((x) => x.texto), "", ...destaques.map((x) => x.texto), "", ...mudancas].join("\n"));
     enviados++;
   }
   return json({ enviados });

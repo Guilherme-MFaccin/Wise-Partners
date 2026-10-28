@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Star } from "lucide-react";
-import { Barra, CLASSE_CARD } from "@/components/painel/Blocos";
+import { CLASSE_CARD } from "@/components/painel/Blocos";
 import { moeda } from "@/lib/formato";
 import { cn } from "@/lib/utils";
 import { dias, horas, meses, numero, pct, roiPct, rotuloChave } from "./formato";
 
-// Indicador do painel por etapa da jornada, como devolvido por painel_v2() (migração 0015).
+// Indicador do painel por frente, como devolvido por painel_v2() (migrações 0015 e 0022). A meta fica no bloco
+// de metas do trimestre: o período escolhido no painel nem sempre é um trimestre.
 export type IndicadorV2 = {
   chave: string;
   etapa: string;
@@ -14,7 +15,7 @@ export type IndicadorV2 = {
   destaque: boolean;
   valor: any;
   anterior: any;
-  meta: number | null;
+  aceita_meta?: boolean;
 };
 
 const LISTA_MOEDA = new Set(["custo_total_tipo", "receita_por_nivel"]);
@@ -83,49 +84,18 @@ function Comparacao({ ind }: { ind: IndicadorV2 }) {
   );
 }
 
-function Meta({ ind }: { ind: IndicadorV2 }) {
-  if (vazio(ind.meta)) return null;
-  const meta = Number(ind.meta);
-  const atual = typeof ind.valor === "number" ? ind.valor : Number(ind.valor);
-  const metaTexto = formatarIndicador(ind, meta);
-  return (
-    <div className="mt-2 space-y-1">
-      <p className="text-xs text-muted-foreground">Meta: <span className="font-semibold text-foreground">{metaTexto}</span></p>
-      {Number.isFinite(atual) && meta > 0 && <Barra valor={atual} maximo={meta} className="h-1.5" />}
-    </div>
-  );
-}
-
-// Cartão de um indicador, com valor, comparação com o período anterior e meta
+// Cartão de um indicador, com valor e comparação com o período anterior
 export function CartaoIndicador({ ind }: { ind: IndicadorV2 }) {
   let corpo: ReactNode;
-  let rodape: ReactNode = (
-    <>
-      <Comparacao ind={ind} />
-      <Meta ind={ind} />
-    </>
-  );
+  let rodape: ReactNode = <Comparacao ind={ind} />;
 
-  if (ind.chave === "assinados_meta" && ind.valor && typeof ind.valor === "object") {
-    const v = Number(ind.valor.valor ?? 0);
-    const m = Number(ind.meta ?? ind.valor.meta ?? 0);
-    corpo = <p className="text-2xl font-bold">{numero(v)} <span className="text-sm font-normal text-muted-foreground">de {numero(m)}</span></p>;
-    rodape = m > 0 ? (
-      <div className="mt-2 space-y-1">
-        <Barra valor={v} maximo={m} className="h-1.5" />
-        <p className="text-xs text-muted-foreground">Faltam {numero(Math.max(0, m - v))} parceiros assinados.</p>
-      </div>
-    ) : null;
-  } else if (ind.chave === "nps" && ind.valor && typeof ind.valor === "object") {
+  if (ind.chave === "nps" && ind.valor && typeof ind.valor === "object") {
     const r = Number(ind.valor.respostas ?? 0);
     corpo = <p className="text-2xl font-bold">{r > 0 && !vazio(ind.valor.nps) ? numero(ind.valor.nps) : "Sem respostas"}</p>;
     rodape = (
-      <>
-        <p className="text-xs text-muted-foreground">
-          {r} {r === 1 ? "resposta" : "respostas"}{!vazio(ind.valor.media) ? ` · nota média ${numero(ind.valor.media)}` : ""}
-        </p>
-        <Meta ind={{ ...ind, valor: ind.valor.nps }} />
-      </>
+      <p className="text-xs text-muted-foreground">
+        {r} {r === 1 ? "resposta" : "respostas"}{!vazio(ind.valor.media) ? ` · nota média ${numero(ind.valor.media)}` : ""}
+      </p>
     );
   } else if (ind.chave === "ciclo_venda" && ind.valor && typeof ind.valor === "object") {
     corpo = <p className="text-2xl font-bold">{vazio(ind.valor.parceiro) ? "Sem dados" : dias(ind.valor.parceiro)}</p>;
@@ -136,7 +106,7 @@ export function CartaoIndicador({ ind }: { ind: IndicadorV2 }) {
     );
   } else if (ind.valor && typeof ind.valor === "object") {
     corpo = <ListaValores chave={ind.chave} valor={ind.valor} />;
-    rodape = <Meta ind={{ ...ind, valor: null }} />;
+    rodape = null;
   } else {
     corpo = <p className={cn("text-2xl font-bold", vazio(ind.valor) && "text-base font-semibold text-muted-foreground")}>{formatarIndicador(ind, ind.valor)}</p>;
   }

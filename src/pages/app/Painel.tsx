@@ -13,13 +13,16 @@ import { PainelJornada, type PainelV2 } from "@/components/painel/PainelJornada"
 import { calcularPeriodo, SeletorPeriodo, type Periodo } from "@/components/painel/periodo";
 import { normalizarPainel } from "@/components/painel/pauta";
 import { PautaDialog } from "@/components/painel/PautaDialog";
+import { BlocoMetas } from "@/components/metas/BlocoMetas";
+import { FunilReverso } from "@/components/metas/FunilReverso";
+import { useMetasTrimestre } from "@/components/metas/dados";
 import { mensagemErro } from "@/lib/erros";
 import { data } from "@/lib/formato";
 
 type Aba = "jornada" | "lista";
 
-// Painel semanal: por etapa da jornada (painel_v2, História 7) e a lista completa da v1 (painel_semanal).
-// Os dois respeitam a RLS de quem consulta; a pauta da semana continua usando o painel da v1.
+// Painel semanal: metas do trimestre e funil reverso no topo (metas_trimestre), indicadores por frente
+// (painel_v2, História 7) e a lista completa da v1 (painel_semanal). Tudo respeita a RLS de quem consulta.
 export default function Painel() {
   const { veComissao } = useAuth();
   const [params, setParams] = useSearchParams();
@@ -36,6 +39,8 @@ export default function Painel() {
     },
   });
   const p = useMemo(() => (v1.data ? normalizarPainel(v1.data) : null), [v1.data]);
+
+  const metas = useMetasTrimestre();
 
   const v2 = useQuery({
     queryKey: ["painel-v2", periodo.inicio, periodo.fim],
@@ -59,7 +64,7 @@ export default function Painel() {
     <div>
       <Cabecalho
         titulo="Painel"
-        descricao="Indicadores por etapa da jornada do parceiro para a reunião semanal do Wise Partners."
+        descricao="Estamos no ritmo das metas do trimestre e o que pede atenção nesta semana?"
         acoes={
           <Button onClick={() => setPautaAberta(true)} disabled={!p}>
             <Sparkles /> Pauta da semana
@@ -67,6 +72,16 @@ export default function Painel() {
         }
       />
 
+      {metas.isLoading && <Carregando />}
+      {metas.error && (metas.error as any)?.code !== "42501" && <ErroCarga erro={metas.error} />}
+      {metas.data && (
+        <div className="mb-6 grid grid-cols-1 gap-4 xl:grid-cols-2">
+          <BlocoMetas dados={metas.data} />
+          <FunilReverso funil={metas.data.funil} />
+        </div>
+      )}
+
+      <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-muted-foreground">Indicadores da semana</h2>
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <SeletorPeriodo valor={periodo} onChange={setPeriodo} />
         <p className="text-xs text-muted-foreground">Período: {data(periodo.inicio)} a {data(periodo.fim)}</p>
@@ -74,7 +89,7 @@ export default function Painel() {
 
       <Tabs value={aba} onValueChange={mudarAba}>
         <TabsList className="mb-4 h-auto flex-wrap">
-          <TabsTrigger value="jornada" className="gap-1.5"><Route className="h-4 w-4" /> Por etapa da jornada</TabsTrigger>
+          <TabsTrigger value="jornada" className="gap-1.5"><Route className="h-4 w-4" /> Por frente</TabsTrigger>
           <TabsTrigger value="lista" className="gap-1.5"><ListChecks className="h-4 w-4" /> Lista completa</TabsTrigger>
         </TabsList>
 
@@ -82,7 +97,7 @@ export default function Painel() {
           {v2.isLoading && <Carregando />}
           {v2.error && (
             (v2.error as any)?.code === "42501" ? (
-              <Vazio titulo="Painel por etapa indisponível para o seu perfil">
+              <Vazio titulo="Painel por frente indisponível para o seu perfil">
                 {mensagemErro(v2.error)} A lista completa continua disponível.
                 <div className="mt-3"><Button size="sm" variant="outline" onClick={() => mudarAba("lista")}>Abrir a lista completa</Button></div>
               </Vazio>

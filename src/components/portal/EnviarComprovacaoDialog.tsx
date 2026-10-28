@@ -21,12 +21,15 @@ export function EnviarComprovacaoDialog({ contrapartida, onClose }: { contrapart
   const [link, setLink] = useState("");
   const [arquivo, setArquivo] = useState<File | null>(null);
   const [observacao, setObservacao] = useState("");
+  const [quantidade, setQuantidade] = useState("");
+  const pedeQuantidade = contrapartida?.meta_modo === "valor" && contrapartida.meta_quantidade !== null;
   const [enviando, setEnviando] = useState(false);
 
-  const valido = forma === "link" ? /^https?:\/\/\S+$/.test(link.trim()) : !!arquivo;
+  const valido = (forma === "link" ? /^https?:\/\/\S+$/.test(link.trim()) : !!arquivo)
+    && (!pedeQuantidade || (quantidade.trim() !== "" && Number(quantidade) >= 0));
 
   function fechar() {
-    setLink(""); setArquivo(null); setObservacao(""); setForma("link");
+    setLink(""); setArquivo(null); setObservacao(""); setQuantidade(""); setForma("link");
     onClose();
   }
 
@@ -46,6 +49,7 @@ export function EnviarComprovacaoDialog({ contrapartida, onClose }: { contrapart
         link: forma === "link" ? link.trim() : null,
         caminho,
         observacao: observacao.trim() || null,
+        quantidade: pedeQuantidade ? Number(quantidade) : null,
         enviada_por: perfil.id,
         estado: "enviada",
       });
@@ -84,6 +88,14 @@ export function EnviarComprovacaoDialog({ contrapartida, onClose }: { contrapart
             <div className="space-y-1.5">
               <Label htmlFor="arquivo">Arquivo (print, PDF ou imagem)</Label>
               <Input id="arquivo" type="file" onChange={(e) => setArquivo(e.target.files?.[0] ?? null)} />
+            </div>
+          )}
+          {pedeQuantidade && (
+            <div className="space-y-1.5">
+              <Label htmlFor="quantidade">Quantos {contrapartida?.meta_unidade ?? "itens"} hoje</Label>
+              <Input id="quantidade" type="number" inputMode="numeric" min="0" className="w-40" value={quantidade}
+                onChange={(e) => setQuantidade(e.target.value)} aria-describedby="quantidade-dica" />
+              <p id="quantidade-dica" className="text-xs text-muted-foreground">A meta é {contrapartida?.meta_quantidade}. A Wise confere pela comprovação.</p>
             </div>
           )}
           <div className="space-y-1.5">

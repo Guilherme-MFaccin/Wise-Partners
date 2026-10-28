@@ -1,23 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
-import { Briefcase, ChevronRight, Clock, Loader2, Pencil, Save, Target, X } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { Briefcase, ChevronRight, Clock, Settings2, Target } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
 import { Pilula, SeloStatus } from "@/components/comum/Selos";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Barra, CLASSE_CARD } from "@/components/painel/Blocos";
+import { CLASSE_CARD } from "@/components/painel/Blocos";
+import { BarraMeta } from "@/components/metas/BlocoMetas";
+import { FunilReverso } from "@/components/metas/FunilReverso";
+import { INDICADORES_PESSOA, type FunilReverso as Funil } from "@/components/metas/dados";
 import { rotuloTrimestre, trimestreDe, trimestresProximos, usePessoasInternas } from "@/components/gestao/dados";
-import { horas, numero } from "@/components/gestao/formato";
+import { horas, numero, pct } from "@/components/gestao/formato";
 import { AcessoRestrito } from "@/components/gestao/Restrito";
-import { ok, toastErro } from "@/lib/erros";
-import { data, hojeISO, moeda } from "@/lib/formato";
+import { ok } from "@/lib/erros";
+import { data, hojeISO } from "@/lib/formato";
 import { ETAPAS, PAPEIS, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 
@@ -26,19 +25,13 @@ type PainelPessoal = {
   trimestre: string; inicio: string; fim: string;
   carteira: { parceiro_id: string; parceiro: string; etapa: string; nivel: string | null; status: string | null; regua: Regua }[];
   metas: Record<string, number>;
-  realizado: { assinados: number; ativados: number; clientes_icp: number; receita: number };
+  realizado: { assinados: number; ativados: number; clientes_icp: number; reunioes: number; regua_em_dia: number | null };
+  funil: Funil;
   horas: number;
 };
 
-// Indicadores das metas por pessoa (FR-178), na ordem da tela
-const INDICADORES: { chave: keyof PainelPessoal["realizado"]; rotulo: string; moeda?: boolean }[] = [
-  { chave: "assinados", rotulo: "Novos parceiros assinados" },
-  { chave: "ativados", rotulo: "Parceiros ativados" },
-  { chave: "clientes_icp", rotulo: "Clientes fechados no ICP pela carteira" },
-  { chave: "receita", rotulo: "Receita atribuída", moeda: true },
-];
-
-// Carteira e metas por pessoa (História 15). Admin vê e edita de qualquer pessoa; parcerias vê só o próprio.
+// Carteira e metas por pessoa (História 15, revisão de metas de 28/10/2026). Admin vê qualquer pessoa; parcerias vê só o próprio.
+// As metas são definidas em Configurações, Metas, aba Pessoas.
 export default function MeuPainel() {
   const { perfil, isParcerias } = useAuth();
   if (!perfil || !isParcerias) {
@@ -52,7 +45,6 @@ function TelaMeuPainel() {
   const hoje = new Date(hojeISO() + "T12:00:00");
   const [pessoaId, setPessoaId] = useState(perfil!.id);
   const [trimestre, setTrimestre] = useState(trimestreDe(hoje));
-  const [editando, setEditando] = useState(false);
   const { data: pessoas = [] } = usePessoasInternas();
 
   const q = useQuery({
@@ -65,11 +57,11 @@ function TelaMeuPainel() {
   return (
     <div>
       <Cabecalho titulo={pessoaId === perfil!.id ? "Meu painel" : `Painel de ${nomePessoa}`}
-        descricao="Carteira de parceiros, metas do trimestre e horas dedicadas." />
+        descricao="Estou no ritmo das minhas metas do trimestre e qual parceiro da carteira precisa de mim?" />
 
       <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center">
         {isAdmin && (
-          <Select value={pessoaId} onValueChange={(v) => { setPessoaId(v); setEditando(false); }}>
+          <Select value={pessoaId} onValueChange={setPessoaId}>
             <SelectTrigger className="w-full sm:w-72" aria-label="Pessoa"><SelectValue /></SelectTrigger>
             <SelectContent>
               {pessoas.filter((x) => x.ativo || x.id === pessoaId).map((x) => (
@@ -78,7 +70,7 @@ function TelaMeuPainel() {
             </SelectContent>
           </Select>
         )}
-        <Select value={trimestre} onValueChange={(v) => { setTrimestre(v); setEditando(false); }}>
+        <Select value={trimestre} onValueChange={setTrimestre}>
           <SelectTrigger className="w-full sm:w-56" aria-label="Trimestre"><SelectValue /></SelectTrigger>
           <SelectContent>
             {trimestresProximos(hoje, 6, 2).map((t) => <SelectItem key={t} value={t}>{rotuloTrimestre(t)}</SelectItem>)}
@@ -92,31 +84,35 @@ function TelaMeuPainel() {
 
       {p && (
         <div className="space-y-4">
-          <section className={cn(CLASSE_CARD, "p-4 sm:p-5")}>
-            <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="flex items-center gap-2 font-semibold"><Target className="h-5 w-5 text-menta-400" /> Metas do trimestre</h2>
-              {isAdmin && !editando && <Button size="sm" variant="outline" onClick={() => setEditando(true)}><Pencil /> Editar metas</Button>}
-            </div>
-            {editando ? (
-              <EditorMetas perfilId={pessoaId} trimestre={trimestre} metas={p.metas} onFechar={() => setEditando(false)} />
-            ) : (
+          <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+            <section className={cn(CLASSE_CARD, "min-w-0 p-4 sm:p-5")}>
+              <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <h2 className="flex items-center gap-2 font-semibold"><Target className="h-5 w-5 text-menta-400" /> Metas do trimestre</h2>
+                {isAdmin && (
+                  <Link to="/app/configuracoes?aba=metas" className="inline-flex items-center gap-1 text-sm text-menta-400 hover:underline">
+                    <Settings2 className="h-4 w-4" /> Editar metas
+                  </Link>
+                )}
+              </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                {INDICADORES.map((i) => {
-                  const real = Number(p.realizado[i.chave] ?? 0);
+                {INDICADORES_PESSOA.map((i) => {
+                  const bruto = p.realizado[i.chave];
+                  const real = bruto === null || bruto === undefined ? null : Number(bruto);
                   const meta = p.metas[i.chave];
-                  const fmt = (v: number) => (i.moeda ? moeda(v) : numero(v));
+                  const fmt = (v: number) => (i.percentual ? pct(v) : numero(v));
+                  const temMeta = meta !== undefined && meta !== null && Number(meta) > 0;
                   return (
                     <div key={i.chave} className="rounded-[10px] bg-white/5 p-3">
                       <p className="text-xs text-muted-foreground">{i.rotulo}</p>
-                      <p className="mt-1 text-xl font-bold">
-                        {fmt(real)}
-                        {meta !== undefined && meta !== null && <span className="text-sm font-normal text-muted-foreground"> de {fmt(Number(meta))}</span>}
+                      <p className="mt-1 text-xl font-bold tabular-nums">
+                        {real === null ? <span className="text-base font-semibold text-muted-foreground">Sem parceiros com régua</span> : fmt(real)}
+                        {temMeta && <span className="text-sm font-normal text-muted-foreground"> de {fmt(Number(meta))}</span>}
                       </p>
-                      {meta !== undefined && meta !== null && Number(meta) > 0 ? (
+                      {temMeta ? (
                         <>
-                          <Barra valor={real} maximo={Number(meta)} className="mt-2 h-1.5" />
+                          <BarraMeta valor={real ?? 0} meta={Number(meta)} className="mt-2" />
                           <p className="mt-1 text-xs text-muted-foreground">
-                            {real >= Number(meta) ? "Meta atingida" : `${Math.round((real / Number(meta)) * 100)}% da meta`}
+                            {(real ?? 0) >= Number(meta) ? "Meta atingida" : `${Math.round(((real ?? 0) / Number(meta)) * 100)}% da meta`}
                           </p>
                         </>
                       ) : (
@@ -126,12 +122,15 @@ function TelaMeuPainel() {
                   );
                 })}
               </div>
-            )}
-            <p className="mt-3 text-xs text-muted-foreground">Os resultados contam para quem era responsável pelo parceiro na data de cada evento.</p>
-          </section>
+              <p className="mt-3 text-xs text-muted-foreground">
+                Os resultados contam para quem era responsável pelo parceiro na data de cada evento. Régua em dia é o retrato de hoje.
+              </p>
+            </section>
+            <FunilReverso funil={p.funil} pessoal />
+          </div>
 
-          <div className="grid gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-            <section className={cn(CLASSE_CARD, "p-4 sm:p-5")}>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
+            <section className={cn(CLASSE_CARD, "min-w-0 p-4 sm:p-5")}>
               <h2 className="mb-3 flex items-center gap-2 font-semibold">
                 <Briefcase className="h-5 w-5 text-menta-400" /> Carteira <span className="text-sm font-normal text-muted-foreground">({p.carteira.length})</span>
               </h2>
@@ -171,59 +170,6 @@ function TelaMeuPainel() {
           </div>
         </div>
       )}
-    </div>
-  );
-}
-
-// Edição das metas da pessoa no trimestre (metas_pessoa): vazio remove a meta
-function EditorMetas({ perfilId, trimestre, metas, onFechar }: { perfilId: string; trimestre: string; metas: Record<string, number>; onFechar: () => void }) {
-  const qc = useQueryClient();
-  const [valores, setValores] = useState<Record<string, string>>({});
-  const [salvando, setSalvando] = useState(false);
-  useEffect(() => {
-    setValores(Object.fromEntries(INDICADORES.map((i) => [i.chave, metas[i.chave] === undefined || metas[i.chave] === null ? "" : String(metas[i.chave])])));
-  }, [metas]);
-
-  async function salvar() {
-    setSalvando(true);
-    try {
-      const gravar = INDICADORES.filter((i) => valores[i.chave]?.trim() !== "")
-        .map((i) => ({ perfil_id: perfilId, trimestre, indicador: i.chave, valor: Number(valores[i.chave]) }));
-      if (gravar.some((g) => !Number.isFinite(g.valor) || g.valor < 0)) throw new Error("Informe metas com números positivos.");
-      const remover = INDICADORES.filter((i) => valores[i.chave]?.trim() === "" && metas[i.chave] !== undefined).map((i) => i.chave);
-      if (gravar.length) {
-        const { error } = await supabase.from("metas_pessoa").upsert(gravar, { onConflict: "perfil_id,trimestre,indicador" });
-        if (error) throw error;
-      }
-      if (remover.length) {
-        const { error } = await supabase.from("metas_pessoa").delete().eq("perfil_id", perfilId).eq("trimestre", trimestre).in("indicador", remover);
-        if (error) throw error;
-      }
-      toast.success("Metas salvas.");
-      qc.invalidateQueries({ queryKey: ["painel-pessoal", perfilId, trimestre] });
-      onFechar();
-    } catch (e) {
-      toastErro(e);
-    } finally {
-      setSalvando(false);
-    }
-  }
-
-  return (
-    <div className="space-y-3">
-      <div className="grid gap-3 sm:grid-cols-2">
-        {INDICADORES.map((i) => (
-          <div key={i.chave} className="space-y-1.5">
-            <Label className="text-xs text-muted-foreground">{i.rotulo}{i.moeda ? " (R$)" : ""}</Label>
-            <Input type="number" inputMode="decimal" min="0" step={i.moeda ? "0.01" : "1"} placeholder="Sem meta"
-              value={valores[i.chave] ?? ""} onChange={(e) => setValores((v) => ({ ...v, [i.chave]: e.target.value }))} />
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-end gap-2">
-        <Button variant="ghost" size="sm" onClick={onFechar}><X /> Cancelar</Button>
-        <Button size="sm" onClick={salvar} disabled={salvando}>{salvando ? <Loader2 className="animate-spin" /> : <Save />} Salvar metas</Button>
-      </div>
     </div>
   );
 }

@@ -36,7 +36,7 @@ export default function Nivel() {
 
   return (
     <div className="space-y-6">
-      <Cabecalho titulo="Meu nível" descricao="O nível acompanha os resultados da parceria. Veja o que já está cumprido e o que falta." />
+      <Cabecalho titulo="Meu nível" descricao="O que já está cumprido e o que falta para o próximo nível? O nível acompanha os resultados dos últimos 180 dias." />
 
       <section className="grid gap-4 rounded-[14px] border border-white/10 bg-card p-4 sm:grid-cols-3 sm:p-5">
         <div>
@@ -75,6 +75,25 @@ export default function Nivel() {
             {n.pacote_pendente_em ? `, a partir de ${data(n.pacote_pendente_em)}` : ""}. Até lá, as entregas do pacote atual continuam valendo.
           </p>
         </div>
+      )}
+
+      {n.resultado && (
+        <section className="grid gap-4 rounded-[14px] border border-white/10 bg-card p-4 sm:grid-cols-2 sm:p-5">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Últimos {n.resultado.janela_dias} dias (vale para o nível)</p>
+            <p className="mt-1 text-sm tabular-nums">
+              <span className="text-xl font-bold">{n.resultado.qualificadas_janela}</span> indicações qualificadas ·{" "}
+              <span className="text-xl font-bold">{n.resultado.clientes_janela}</span> {n.resultado.clientes_janela === 1 ? "cliente fechado" : "clientes fechados"}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Neste trimestre</p>
+            <p className="mt-1 text-sm tabular-nums">
+              <span className="text-xl font-bold">{n.resultado.qualificadas_trimestre}</span> indicações qualificadas ·{" "}
+              <span className="text-xl font-bold">{n.resultado.clientes_trimestre}</span> {n.resultado.clientes_trimestre === 1 ? "cliente fechado" : "clientes fechados"}
+            </p>
+          </div>
+        </section>
       )}
 
       {n.atual && (

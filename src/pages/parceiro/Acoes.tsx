@@ -10,6 +10,7 @@ import { Pilula } from "@/components/comum/Selos";
 import { estadoContrapartida, useMinhasContrapartidas, type Contrapartida } from "@/components/portal/dados";
 import { useAcoesWise, type AcaoWise } from "@/components/portal/dadosV2";
 import { EnviarComprovacaoDialog } from "@/components/portal/EnviarComprovacaoDialog";
+import { MetaContrapartida } from "@/components/metas/MetaContrapartida";
 
 type Tom = "menta" | "neutro" | "info" | "alerta" | "perigo";
 const TOM: Record<string, Tom> = {
@@ -72,7 +73,7 @@ function LadoParceiro({ lista, carregando, erro, onEnviar }: { lista: Contrapart
                       {rotulo(PERIODICIDADES, c.periodicidade)}
                       {c.proxima_data && <> · próxima data {data(c.proxima_data)}</>}
                     </p>
-                    {c.meta && <p className="text-sm">Meta: {c.meta}</p>}
+                    <MetaContrapartida c={c} className="pt-1" />
                     <p className="text-sm text-muted-foreground">Comprovação esperada: {c.comprovacao}</p>
                     {est.codigo === "recusada" && est.motivo && (
                       <p className="text-sm text-red-300">Motivo da recusa: {est.motivo}</p>

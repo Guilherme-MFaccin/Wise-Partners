@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ok } from "@/lib/erros";
+import { CAMPOS_META_CONTRAPARTIDA, type MetaDaContrapartida } from "@/components/metas/MetaContrapartida";
 
 // Dados do portal do parceiro. A RLS devolve só o que é da empresa do usuário;
 // as consultas também nunca pedem colunas internas (estratégico, anotações, comissão do responsável).
@@ -30,15 +31,14 @@ export function useMeuParceiro() {
   });
 }
 
-export type Contrapartida = {
+export type Contrapartida = MetaDaContrapartida & {
   id: string;
   nome: string;
   periodicidade: string;
   comprovacao: string;
-  meta: string | null;
   proxima_data: string | null;
   estado: string;
-  comprovacoes: { id: string; estado: string; motivo_recusa: string | null; created_at: string; link: string | null; caminho: string | null }[];
+  comprovacoes: { id: string; estado: string; motivo_recusa: string | null; created_at: string; link: string | null; caminho: string | null; quantidade: number | null }[];
 };
 
 export function useMinhasContrapartidas() {
@@ -48,7 +48,7 @@ export function useMinhasContrapartidas() {
     queryKey: ["portal-contrapartidas", perfil?.parceiro_id],
     queryFn: async () =>
       ok<any>(await supabase.from("contrapartidas")
-        .select("id, nome, periodicidade, comprovacao, meta, proxima_data, estado, comprovacoes(id, estado, motivo_recusa, created_at, link, caminho)")
+        .select(`id, nome, periodicidade, comprovacao, proxima_data, estado, ${CAMPOS_META_CONTRAPARTIDA}, comprovacoes(id, estado, motivo_recusa, created_at, link, caminho, quantidade)`)
         .eq("parceiro_id", perfil!.parceiro_id).eq("ativa", true)
         .order("proxima_data", { ascending: true, nullsFirst: false })) as Contrapartida[],
   });
