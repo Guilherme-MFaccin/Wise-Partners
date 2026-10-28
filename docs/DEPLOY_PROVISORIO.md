@@ -2,12 +2,19 @@
 
 Banco, autenticação e Edge Functions num projeto Supabase novo; o site estático (pasta `dist`) na Netlify. Depois, o Lovable se conecta ao mesmo projeto Supabase e a Netlify pode ser desligada.
 
-## Estado em 28/10/2026
+## Estado em 28/10/2026: deploy provisório concluído
 
-* **GitHub: feito.** Código em `Guilherme-MFaccin/wise-partners`, branches `main` (app) e `ux-fundacao` (app igual, mais documentos de UX, este roteiro e `public/_redirects`). Use a branch `ux-fundacao`.
-* **Netlify: feito.** Site `portal-wise-partners` em https://portal-wise-partners.netlify.app, publicado com `VITE_SUPABASE_URL=https://eiozuvnzvqlqslihyooz.supabase.co` e a chave pública do projeto. A Netlify ligou a proteção de visitantes (só quem entra com a conta Netlify da equipe vê o site); para abrir ao público: Site configuration, Access & security, Visitor access. Não é preciso publicar o site de novo para concluir o deploy.
-* **Supabase: falta.** Projeto `eiozuvnzvqlqslihyooz` criado e vazio. Faltam os passos 2, 3, 5, 6, 7, 9 e 10 da Parte 2 (o passo 4 e o 8 já foram feitos). O banco não é alcançável pela porta 5432 a partir do ambiente do Claude (endereço só IPv6 e pooler bloqueado): tudo pela API de gestão, com `SUPABASE_ACCESS_TOKEN`.
-* `APP_URL` = https://portal-wise-partners.netlify.app
+* **GitHub:** `Guilherme-MFaccin/wise-partners`, branches `main` e `ux-fundacao`.
+* **Netlify:** https://portal-wise-partners.netlify.app (proteção de visitantes da Netlify ligada: Site configuration, Access & security, Visitor access).
+* **Supabase** (`eiozuvnzvqlqslihyooz`, região us-east-1):
+  * 20 migrações aplicadas pela API de gestão e registradas em `supabase_migrations.schema_migrations` (um `db push` futuro não as reaplica);
+  * Vault com `project_url` e `cron_secret`; 6 agendamentos no pg_cron;
+  * 10 Edge Functions publicadas, segredos `APP_URL` e `CRON_SECRET`; sem `RESEND_API_KEY`, `EMAIL_FROM` e `AI_API_KEY` (e-mails próprios e IA desligados);
+  * autenticação: Site URL e Redirect URLs do portal, cadastro aberto desligado; modelos de e-mail no padrão da Supabase (o plano gratuito só permite mudar com SMTP próprio);
+  * usuário `guilherme@wisemakers.com.br` criado, perfil admin;
+  * testes de acesso: sem login, todas as tabelas e funções recusam; logado, o painel responde;
+  * carga real: 32 parceiros, 44 contatos, 33 interações, 81 h (R$ 1.656,82).
+* **Pendente:** e-mail do Igor; SMTP do Resend (e-mails em português e convites para quem não é da equipe da Supabase); chave de IA.
 
 ## Parte 1. O que o Guilherme faz (cerca de 15 minutos)
 
