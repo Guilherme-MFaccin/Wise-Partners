@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
-import { Loader2, Pencil, Search, UserPlus } from "lucide-react";
+import { KeyRound, Loader2, Pencil, Search, UserPlus } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ok, toastErro } from "@/lib/erros";
@@ -16,6 +16,7 @@ import { Pilula } from "@/components/comum/Selos";
 import { useParceirosResumo } from "@/components/comum/ParceiroBusca";
 import { ConvidarUsuarioDialog } from "@/components/usuarios/ConvidarUsuarioDialog";
 import { EditarUsuarioDialog, type UsuarioLinha } from "@/components/usuarios/EditarUsuarioDialog";
+import { RedefinirSenhaDialog } from "@/components/usuarios/RedefinirSenhaDialog";
 
 type Perfil = UsuarioLinha & { created_at: string; empresa: { nome: string } | null; parceiro: { nome_fantasia: string } | null };
 type Convite = {
@@ -25,11 +26,12 @@ type Convite = {
 type Historico = { id: number; registro_id: string; campo: string; valor_anterior: string | null; valor_novo: string | null; autor_id: string | null; created_at: string };
 
 const CAMPOS_HISTORICO: Record<string, string> = {
-  criado: "Acesso criado", email: "E-mail", papel: "Papel", ativo: "Ativo", is_diretor: "Diretor",
+  criado: "Acesso criado", senha: "Senha", email: "E-mail", papel: "Papel", ativo: "Ativo", is_diretor: "Diretor",
   is_responsavel_parceiro: "Responsável do parceiro", parceiro_id: "Parceiro",
 };
 
-// Usuários e acessos (FR-001, FR-007, FR-072). Admin gere tudo; parcerias convida e desativa usuários de parceiros.
+// Usuários e acessos (FR-001, FR-007, FR-072). Admin gere tudo; parcerias cria, desativa e redefine a senha de usuários
+// de parceiros. O acesso é por e-mail e senha; a senha provisória é repassada à pessoa por quem cria o acesso.
 export default function Usuarios() {
   const { isAdmin, isParcerias, perfil } = useAuth();
   const qc = useQueryClient();
@@ -37,6 +39,7 @@ export default function Usuarios() {
   const [convidando, setConvidando] = useState(false);
   const [editando, setEditando] = useState<UsuarioLinha | null>(null);
   const [alterando, setAlterando] = useState<string | null>(null);
+  const [senhaDe, setSenhaDe] = useState<Perfil | null>(null);
   const { data: parceiros = [] } = useParceirosResumo();
 
   const perfisQ = useQuery({
@@ -113,8 +116,11 @@ export default function Usuarios() {
             {p.email} · {p.papel === "parceiro" ? p.parceiro?.nome_fantasia : p.empresa?.nome ?? "Sem empresa"} · desde {data(p.created_at)}
           </p>
         </div>
-        <div className="flex shrink-0 gap-2">
+        <div className="flex shrink-0 flex-wrap gap-2">
           {isAdmin && <Button size="sm" variant="outline" onClick={() => setEditando(p)}><Pencil /> Editar</Button>}
+          {(isAdmin || p.papel === "parceiro") && p.id !== perfil?.id && p.ativo && (
+            <Button size="sm" variant="outline" onClick={() => setSenhaDe(p)}><KeyRound /> Redefinir senha</Button>
+          )}
           {!isAdmin && p.papel === "parceiro" && p.id !== perfil?.id && (
             <Button size="sm" variant="outline" disabled={alterando === p.id} onClick={() => definirAcesso(p, !p.ativo)}>
               {alterando === p.id && <Loader2 className="animate-spin" />} {p.ativo ? "Desativar" : "Reativar"}
@@ -127,8 +133,8 @@ export default function Usuarios() {
 
   return (
     <div>
-      <Cabecalho titulo="Usuários" descricao={isAdmin ? "Acessos internos e de parceiros." : "Você pode convidar e desativar usuários de parceiros."}
-        acoes={<Button onClick={() => setConvidando(true)}><UserPlus /> Convidar</Button>} />
+      <Cabecalho titulo="Usuários" descricao={isAdmin ? "Acessos internos e de parceiros, com e-mail e senha." : "Você pode criar, desativar e redefinir a senha de usuários de parceiros."}
+        acoes={<Button onClick={() => setConvidando(true)}><UserPlus /> Criar acesso</Button>} />
       <div className="relative mb-4">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input className="pl-9" placeholder="Buscar por nome, e-mail ou parceiro" value={busca} onChange={(e) => setBusca(e.target.value)} />
@@ -138,7 +144,7 @@ export default function Usuarios() {
           <TabsList className="mb-4 h-auto flex-wrap justify-start">
             <TabsTrigger value="internos">Internos ({internos.length})</TabsTrigger>
             <TabsTrigger value="parceiros">Parceiros ({deParceiros.length})</TabsTrigger>
-            <TabsTrigger value="convites">Convites pendentes ({convitesQ.data?.length ?? 0})</TabsTrigger>
+            <TabsTrigger value="convites">Acessos sem conta ({convitesQ.data?.length ?? 0})</TabsTrigger>
             <TabsTrigger value="historico">Histórico de acesso</TabsTrigger>
           </TabsList>
           <TabsContent value="internos">
@@ -148,7 +154,7 @@ export default function Usuarios() {
             {deParceiros.length ? <ul className="grid gap-3">{deParceiros.map((p) => <Cartao key={p.id} p={p} />)}</ul> : <Vazio titulo="Nenhum usuário de parceiro" />}
           </TabsContent>
           <TabsContent value="convites">
-            {!convitesQ.data?.length ? <Vazio titulo="Nenhum convite pendente">O convite some daqui quando a pessoa entra pela primeira vez.</Vazio> : (
+            {!convitesQ.data?.length ? <Vazio titulo="Nenhum acesso sem conta">Acessos criados pela tela já nascem com conta e senha. Aqui só aparecem os preparados direto no banco, que viram conta quando o usuário é criado.</Vazio> : (
               <ul className="grid gap-2">
                 {convitesQ.data.map((c) => (
                   <li key={c.email} className="rounded-[14px] border border-white/10 bg-card p-3 text-sm">
@@ -159,7 +165,7 @@ export default function Usuarios() {
                       {c.is_responsavel_parceiro && <Pilula tom="menta">Responsável do parceiro</Pilula>}
                     </div>
                     <p className="break-all text-muted-foreground">
-                      {c.email} · {c.parceiro?.nome_fantasia ?? c.empresa?.nome ?? ""} · convidado em {data(c.created_at)}
+                      {c.email} · {c.parceiro?.nome_fantasia ?? c.empresa?.nome ?? ""} · preparado em {data(c.created_at)}
                     </p>
                   </li>
                 ))}
@@ -174,7 +180,7 @@ export default function Usuarios() {
                     <p>
                       <span className="font-semibold">{nomePerfil.get(h.registro_id) ?? "Usuário"}</span>
                       <span className="text-muted-foreground"> · {CAMPOS_HISTORICO[h.campo] ?? h.campo}: </span>
-                      {h.campo === "criado" ? valorHistorico("email", h.valor_novo) : (
+                      {h.campo === "criado" ? valorHistorico("email", h.valor_novo) : h.campo === "senha" ? h.valor_novo : (
                         <>{valorHistorico(h.campo, h.valor_anterior)} para {valorHistorico(h.campo, h.valor_novo)}</>
                       )}
                     </p>
@@ -190,6 +196,7 @@ export default function Usuarios() {
       )}
       <ConvidarUsuarioDialog aberto={convidando} onClose={() => setConvidando(false)} onConvidado={recarregar} />
       <EditarUsuarioDialog usuario={editando} onClose={() => setEditando(null)} onSalvo={recarregar} />
+      <RedefinirSenhaDialog usuario={senhaDe} onClose={() => { setSenhaDe(null); recarregar(); }} />
     </div>
   );
 }

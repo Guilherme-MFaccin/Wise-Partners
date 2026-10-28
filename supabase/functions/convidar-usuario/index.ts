@@ -1,6 +1,8 @@
-// Convite de usuário (FR-001, FR-007, FR-072). Quem pode convidar quem:
-// administrador convida qualquer papel; time de parcerias convida usuários de parceiro;
-// o responsável do parceiro convida usuários da própria empresa.
+// Criação de acesso (FR-001, FR-002, FR-007, FR-072). Quem pode dar acesso a quem:
+// administrador cria qualquer papel; time de parcerias cria usuários de parceiro;
+// o responsável do parceiro cria usuários da própria empresa.
+// O acesso é por e-mail e senha: a conta nasce com uma senha provisória, que quem criou repassa à pessoa.
+// A senha nunca vai por e-mail; o portal pede a troca pela faixa de senha provisória.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin, perfilDaRequisicao, urlDoApp } from "../_shared/supabase.ts";
 import { enviarEmail, layoutEmail, modeloEmail } from "../_shared/email.ts";
@@ -19,7 +21,9 @@ Deno.serve(async (req) => {
     let parceiroId: string | null = b.parceiro_id ?? null;
     let responsavel = !!b.is_responsavel_parceiro;
     const diretor = !!b.is_diretor;
+    const senha = String(b.senha ?? "");
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !nome) return erro("Informe nome e e-mail válidos.");
+    if (senha.length < 6) return erro("A senha provisória precisa de pelo menos 6 caracteres.");
     if (!PAPEIS.includes(papel)) return erro("Papel inválido.");
 
     if (quem.papel === "admin") {
@@ -59,38 +63,38 @@ Deno.serve(async (req) => {
     });
 
     const app = await urlDoApp(sb);
-    const redirectTo = app ? `${app}/` : undefined;
     const { data: lista } = await sb.auth.admin.listUsers({ page: 1, perPage: 1000 });
     const jaNoAuth = lista?.users?.find((u) => (u.email ?? "").toLowerCase() === email);
 
     if (jaNoAuth) {
-      // Usuário do Auth sem perfil (ex.: removido antes): cria o perfil a partir do convite
+      // Usuário do Auth sem perfil (ex.: removido antes): nova senha provisória e perfil a partir do convite
+      const at = await sb.auth.admin.updateUserById(jaNoAuth.id, {
+        password: senha, email_confirm: true, user_metadata: { senha_provisoria: true },
+      });
+      if (at.error) return erro(at.error.message);
       const ins = await sb.from("perfis").insert({
         id: jaNoAuth.id, nome, email, papel, empresa_grupo_id: convite.empresa_grupo_id, parceiro_id: convite.parceiro_id,
         is_diretor: convite.is_diretor, is_responsavel_parceiro: convite.is_responsavel_parceiro,
       });
       if (ins.error) return erro(ins.error.message);
       await sb.from("convites").delete().eq("email", email);
+    } else {
+      // A conta nasce confirmada; o gatilho do banco cria o perfil a partir do convite
+      const novo = await sb.auth.admin.createUser({
+        email, password: senha, email_confirm: true, user_metadata: { senha_provisoria: true, nome },
+      });
+      if (novo.error) return erro(novo.error.message);
     }
 
-    // Link de acesso: enviado com o modelo da Wise pelo Resend; sem Resend, o próprio Supabase envia.
-    if (Deno.env.get("RESEND_API_KEY")) {
-      const tipo = jaNoAuth ? "magiclink" : "invite";
-      const { data: link, error } = await sb.auth.admin.generateLink({ type: tipo as any, email, options: { redirectTo } });
-      if (error) return erro(error.message);
+    // Aviso por e-mail (só com o Resend configurado): diz que o acesso existe e onde entrar, sem a senha
+    if (Deno.env.get("RESEND_API_KEY") && app) {
       const chave = papel === "parceiro" ? "convite_parceiro" : "convite_interno";
       const m = await modeloEmail(sb, chave, { nome });
       await enviarEmail(email, m.assunto, layoutEmail({
-        titulo: m.assunto, paragrafos: m.corpo.split("\n\n"), botao: { texto: "Entrar no portal", url: link.properties.action_link },
-      }), `${m.corpo}\n\n${link.properties.action_link}`);
-    } else if (!jaNoAuth) {
-      const { error } = await sb.auth.admin.inviteUserByEmail(email, { redirectTo });
-      if (error) return erro(error.message);
-    } else {
-      const { error } = await sb.auth.signInWithOtp({ email, options: { shouldCreateUser: false, emailRedirectTo: redirectTo } });
-      if (error) return erro(error.message);
+        titulo: m.assunto, paragrafos: m.corpo.split("\n\n"), botao: { texto: "Entrar no portal", url: `${app}/entrar` },
+      }), `${m.corpo}\n\n${app}/entrar`);
     }
-    return json({ ok: true, mensagem: `Convite enviado para ${email}.` });
+    return json({ ok: true, mensagem: `Acesso criado para ${email}.` });
   } catch (e) {
     return erro(e instanceof Error ? e.message : String(e), 500);
   }

@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
   Award, Bell, BookOpen, FileSearch, GraduationCap, Handshake, Home, IdCard, LogOut, Megaphone, Menu, MessageSquareHeart,
-  Rocket, Scale, Send, Shuffle, Sparkles, Trophy, Users, CalendarCheck,
+  Rocket, Scale, Send, Shuffle, Sparkles, Trophy, UserCircle, Users, CalendarCheck,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { AvisoSenhaProvisoria } from "@/components/conta/AvisoSenhaProvisoria";
 import { useNaoLidas } from "@/hooks/useNotificacoes";
 import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
@@ -79,8 +80,13 @@ export function ParceiroLayout() {
   const { data: n = 0 } = useNaoLidas();
   const rodape = (
     <div className="shrink-0 border-t border-white/10 pt-4">
-      <p className="truncate px-2 text-sm font-semibold">{perfil?.nome}</p>
-      <p className="truncate px-2 text-xs text-muted-foreground">{perfil?.email}</p>
+      <Link to="/parceiro/conta" onClick={() => setMenu(false)} className="flex items-center gap-2 rounded-[8px] px-2 py-1 hover:bg-white/5">
+        <UserCircle className="h-5 w-5 shrink-0 text-neutro-300" aria-hidden="true" />
+        <span className="min-w-0">
+          <span className="block truncate text-sm font-semibold">{perfil?.nome}</span>
+          <span className="block truncate text-xs text-muted-foreground">Minha conta</span>
+        </span>
+      </Link>
       <Button variant="ghost" size="sm" className="mt-2 w-full justify-start" onClick={async () => { await sair(); navigate("/entrar"); }}>
         <LogOut /> Sair
       </Button>
@@ -119,6 +125,7 @@ export function ParceiroLayout() {
             {n > 0 && <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-neutro-900">{n}</span>}
           </Link>
         </header>
+        <AvisoSenhaProvisoria />
         <main className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6"><Outlet /></main>
       </div>
     </div>

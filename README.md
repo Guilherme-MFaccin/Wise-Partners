@@ -9,7 +9,7 @@ Especificações: `specs/001-portal-wise-partners/` (v1) e `specs/002-evolucao-m
 ## Pilha
 
 * Vite, React 18, TypeScript, Tailwind CSS e shadcn/ui (estrutura compatível com o Lovable)
-* Supabase: autenticação por link no e-mail, PostgreSQL com Row Level Security, Storage privado e Edge Functions (Deno)
+* Supabase: autenticação por e-mail e senha, PostgreSQL com Row Level Security, Storage privado e Edge Functions (Deno)
 * pg_cron e pg_net para as rotinas, Resend para e-mails
 * IA por uma Edge Function única (`ai-gateway`), com o provedor definido por variável de ambiente (Lovable AI por padrão)
 
@@ -74,10 +74,11 @@ npx supabase functions deploy
 
 Em Authentication, no painel do Supabase:
 
-* Desligue o cadastro aberto (Allow new users to sign up). Só entra quem foi convidado.
-* Em URL Configuration, informe o endereço do portal em Site URL e em Redirect URLs.
-* Traduza os modelos de e-mail de Magic Link e Invite para o português, sem travessões.
-* Recomendado: configure o SMTP do Resend em Authentication, SMTP Settings, para que os links saiam do domínio da Wise.
+* Desligue o cadastro aberto (Allow new users to sign up). Só entra quem recebeu acesso.
+* O login é por e-mail e senha (provedor Email, ligado por padrão). As contas são criadas pela tela Usuários, com uma senha provisória que quem cria repassa à pessoa; o portal mostra uma faixa pedindo a troca até ela escolher uma senha só dela (pelo menos 8 caracteres).
+* Em URL Configuration, informe o endereço do portal em Site URL e em Redirect URLs (o link de "Esqueci minha senha" volta para `/redefinir-senha`).
+* Traduza o modelo de e-mail Reset Password para o português, sem travessões (no plano gratuito, só com SMTP próprio).
+* Recomendado: configure o SMTP do Resend em Authentication, SMTP Settings. Sem ele, o e-mail de "Esqueci minha senha" só chega a quem é da equipe do projeto Supabase; quem não receber pede a um administrador para redefinir a senha na tela Usuários.
 
 ### 4. Frontend
 
@@ -85,7 +86,7 @@ Crie um `.env` a partir do `.env.example` com `VITE_SUPABASE_URL` e `VITE_SUPABA
 
 ### 5. Primeiro acesso
 
-A migração deixa um convite para `guilherme@wisemakers.com.br` como administrador. Crie esse usuário em Authentication, Users, Add user (ou Send invitation): o perfil é criado sozinho a partir do convite. Depois, pela tela Usuários, convide o Igor como administrador com a marcação de Diretor (só ele aprova assinaturas) e o responsável financeiro.
+A migração deixa um convite para `guilherme@wisemakers.com.br` como administrador. Crie esse usuário em Authentication, Users, Add user, Create new user, com uma senha e "Auto Confirm User": o perfil é criado sozinho a partir do convite. Depois, pela tela Usuários, crie o acesso do Igor como administrador com a marcação de Diretor (só ele aprova assinaturas) e o do responsável financeiro.
 
 Em Configurações, Parâmetros, preencha o e-mail do financeiro, o endereço do Wise Hub e o endereço do portal.
 

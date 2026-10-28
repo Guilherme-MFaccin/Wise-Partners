@@ -5,6 +5,7 @@ import {
   TrendingUp, Receipt, Radar, CalendarRange, GraduationCap, Megaphone, Trophy, GitMerge, Target,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { AvisoSenhaProvisoria } from "@/components/conta/AvisoSenhaProvisoria";
 import { useNaoLidas } from "@/hooks/useNotificacoes";
 import { RegistroRapidoProvider, useRegistroRapido } from "@/hooks/useRegistroRapido";
 import { Logo } from "@/components/comum/Logo";
@@ -147,6 +148,7 @@ function Estrutura() {
           </div>
           <Sino />
         </header>
+        <AvisoSenhaProvisoria />
         <main className="mx-auto w-full max-w-7xl px-4 py-6 pb-24 sm:px-6">
           <Outlet />
         </main>

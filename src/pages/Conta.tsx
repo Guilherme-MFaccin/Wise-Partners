@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { Loader2, Lock, Save } from "lucide-react";
 import { toast } from "sonner";
@@ -6,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando } from "@/components/comum/Estados";
+import { TrocarSenha } from "@/components/conta/TrocarSenha";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -36,9 +38,11 @@ const ALERTAS_IMEDIATOS: Alerta[] = [
 // Papéis que recebem o e-mail diário de pendências
 const RECEBEM_DIARIO = ["admin", "parcerias", "consultor", "comercial"];
 
-// Minha conta: nome, telefone e preferências de alerta. Papel e acesso são protegidos por gatilho no banco.
+// Minha conta (interna e do parceiro): nome, telefone, senha e preferências de alerta.
+// Papel e acesso são protegidos por gatilho no banco.
 export default function Conta() {
   const { perfil, recarregarPerfil } = useAuth();
+  const location = useLocation();
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
   const [desativados, setDesativados] = useState<string[]>([]);
@@ -49,6 +53,11 @@ export default function Conta() {
     setTelefone(perfil.telefone ?? "");
     setDesativados(perfil.alertas_desativados ?? []);
   }, [perfil]);
+
+  // Link "Troque agora" do aviso de senha provisória: leva direto à seção de senha
+  useEffect(() => {
+    if (perfil && location.hash === "#senha") document.getElementById("senha")?.scrollIntoView({ block: "start" });
+  }, [perfil, location.hash]);
 
   // Alertas obrigatórios do papel: sempre recebidos
   const obrigatoriosDiarios: Alerta[] = perfil?.is_diretor ? [{ tipo: "aprovacoes_pendentes", rotulo: "Aprovações de assinatura pendentes" }] : [];
@@ -126,7 +135,7 @@ export default function Conta() {
         <GrupoAlertas
           titulo="Avisos imediatos por e-mail"
           descricao="Enviados quando o evento acontece. Desmarcados, continuam aparecendo nas notificações do portal."
-          alertas={perfil.papel === "financeiro" ? [] : ALERTAS_IMEDIATOS}
+          alertas={perfil.papel === "financeiro" || perfil.papel === "parceiro" ? [] : ALERTAS_IMEDIATOS}
           obrigatorios={obrigatoriosImediatos}
           desativados={desativados}
           onAlternar={alternar}
@@ -138,6 +147,10 @@ export default function Conta() {
           </Button>
         </div>
       </form>
+
+      <div className="mt-6">
+        <TrocarSenha />
+      </div>
     </div>
   );
 }
