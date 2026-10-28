@@ -29,7 +29,7 @@ export function periodoAnterior(inicio: string, fim: string) {
   return { inicio: format(subDays(ini, dias), "yyyy-MM-dd"), fim: format(subDays(ini, 1), "yyyy-MM-dd") };
 }
 
-// Painel por etapa da jornada do parceiro (História 7, Apêndice L): destaques primeiro, lista completa por etapa.
+// Painel por frente da jornada do parceiro (História 7, Apêndice L): destaques primeiro, lista completa por frente.
 export function PainelJornada({ dados }: { dados: PainelV2 }) {
   const [aba, setAba] = useState("destaques");
   const porEtapa = useMemo(() => {
@@ -49,7 +49,7 @@ export function PainelJornada({ dados }: { dados: PainelV2 }) {
       <CartaoFase fase={dados.fase} sugestao={dados.sugestao_fase} />
 
       <p className="text-xs text-muted-foreground">
-        Comparação com o período anterior: {data(ant.inicio)} a {data(ant.fim)}. Metas do trimestre ou do ano em Configurações, Indicadores e metas.
+        Comparação com o período anterior: {data(ant.inicio)} a {data(ant.fim)}. As metas ficam no bloco do trimestre, acima.
       </p>
 
       {porEtapa.length === 0 ? (

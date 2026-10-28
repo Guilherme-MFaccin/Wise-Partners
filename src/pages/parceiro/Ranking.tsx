@@ -41,7 +41,7 @@ export default function Ranking() {
 
   return (
     <div className="space-y-6">
-      <Cabecalho titulo="Ranking" descricao="Pontos por indicações qualificadas, reuniões, clientes fechados, pessoas certificadas e ações comprovadas."
+      <Cabecalho titulo="Ranking" descricao="Como estamos no reconhecimento do ano? Pontos por indicações qualificadas, reuniões, clientes fechados, pessoas certificadas e ações comprovadas. O ranking não tem meta: quem define o nível são os requisitos."
         acoes={
           <>
             <Select value={String(ano)} onValueChange={(v) => { setAno(Number(v)); setPeriodo("ano"); }}>

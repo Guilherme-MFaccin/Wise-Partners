@@ -16,15 +16,16 @@ import { data, dataHora } from "@/lib/formato";
 import { ESTADOS_CONTRAPARTIDA, PERIODICIDADES, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { Campo, Secao } from "../ui";
+import { CAMPOS_META_CONTRAPARTIDA, MetaContrapartida, type MetaDaContrapartida } from "@/components/metas/MetaContrapartida";
 import { abrirArquivo, invalidarParceiro, nomeArquivoSeguro, nomePerfil, usePerfis } from "../dados";
 
-type Contrapartida = {
-  id: string; nome: string; periodicidade: string; comprovacao: string; meta: string | null; proxima_data: string | null;
+type Contrapartida = MetaDaContrapartida & {
+  id: string; nome: string; periodicidade: string; comprovacao: string; proxima_data: string | null;
   estado: string; ativa: boolean;
 };
 type Comprovacao = {
   id: string; contrapartida_id: string; enviada_por: string | null; link: string | null; caminho: string | null; observacao: string | null;
-  estado: "enviada" | "validada" | "recusada"; motivo_recusa: string | null; validada_por: string | null; validada_em: string | null; created_at: string;
+  estado: "enviada" | "validada" | "recusada"; motivo_recusa: string | null; quantidade: number | null; validada_por: string | null; validada_em: string | null; created_at: string;
 };
 type Tarefa = { id: string; descricao: string; prazo: string; feita: boolean; feita_em: string | null; responsavel_id: string | null };
 
@@ -39,7 +40,7 @@ export function AbaContrapartidas({ parceiroId }: { parceiroId: string }) {
     queryKey: ["parceiro", parceiroId, "contrapartidas"],
     queryFn: async () => {
       const [c, k, t] = await Promise.all([
-        supabase.from("contrapartidas").select("*").eq("parceiro_id", parceiroId).order("ativa", { ascending: false }).order("proxima_data", { nullsFirst: false }),
+        supabase.from("contrapartidas").select(`*, ${CAMPOS_META_CONTRAPARTIDA}`).eq("parceiro_id", parceiroId).order("ativa", { ascending: false }).order("proxima_data", { nullsFirst: false }),
         supabase.from("comprovacoes").select("*").eq("parceiro_id", parceiroId).order("created_at", { ascending: false }),
         supabase.from("tarefas_onboarding").select("*").eq("parceiro_id", parceiroId).order("prazo").order("created_at"),
       ]);
@@ -135,7 +136,7 @@ export function AbaContrapartidas({ parceiroId }: { parceiroId: string }) {
                         {rotulo(PERIODICIDADES, c.periodicidade)} · Comprovação: {c.comprovacao}
                         {c.proxima_data ? ` · Próxima data: ${data(c.proxima_data)}` : ""}
                       </p>
-                      {c.meta && <p className="mt-0.5 text-xs text-muted-foreground">Meta: {c.meta}</p>}
+                      <MetaContrapartida c={c} className="mt-2" />
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
                       {!c.ativa && <Pilula>Inativa</Pilula>}
@@ -170,6 +171,7 @@ export function AbaContrapartidas({ parceiroId }: { parceiroId: string }) {
                                 </Button>
                               )}
                             </div>
+                            {k.quantidade !== null && k.quantidade !== undefined && <p className="mt-1 tabular-nums">Informado: {k.quantidade} {c.meta_unidade ?? ""}</p>}
                             {k.observacao && <p className="mt-1 whitespace-pre-wrap break-words text-muted-foreground">{k.observacao}</p>}
                             {k.motivo_recusa && <p className="mt-1 text-red-300">Motivo da recusa: {k.motivo_recusa}</p>}
                             {k.validada_em && (
@@ -222,11 +224,17 @@ function EnviarComprovacao({
   const [link, setLink] = useState("");
   const [arquivo, setArquivo] = useState<File | null>(null);
   const [observacao, setObservacao] = useState("");
+  const [quantidade, setQuantidade] = useState("");
   const [salvando, setSalvando] = useState(false);
+  const pedeQuantidade = contrapartida.meta_modo === "valor" && contrapartida.meta_quantidade !== null;
 
   async function salvar() {
     if (!link.trim() && !arquivo) {
       toast.error("Informe um link ou anexe um arquivo.");
+      return;
+    }
+    if (pedeQuantidade && (quantidade.trim() === "" || Number(quantidade) < 0)) {
+      toast.error(`Informe quantos ${contrapartida.meta_unidade ?? "itens"} a comprovação mostra.`);
       return;
     }
     setSalvando(true);
@@ -241,7 +249,7 @@ function EnviarComprovacao({
     }
     const { error } = await supabase.from("comprovacoes").insert({
       contrapartida_id: contrapartida.id, parceiro_id: parceiroId, link: link.trim() || null, caminho,
-      observacao: observacao.trim() || null, enviada_por: perfil?.id,
+      observacao: observacao.trim() || null, enviada_por: perfil?.id, quantidade: pedeQuantidade ? Number(quantidade) : null,
     });
     setSalvando(false);
     if (error) return toastErro(error);
@@ -262,6 +270,11 @@ function EnviarComprovacao({
           <Campo rotulo="Arquivo (print, PDF, relatório)">
             <Input type="file" onChange={(e) => setArquivo(e.target.files?.[0] ?? null)} />
           </Campo>
+          {pedeQuantidade && (
+            <Campo rotulo={`Quantos ${contrapartida.meta_unidade ?? "itens"} (meta: ${contrapartida.meta_quantidade})`}>
+              <Input type="number" inputMode="numeric" min="0" className="w-40" value={quantidade} onChange={(e) => setQuantidade(e.target.value)} />
+            </Campo>
+          )}
           <Campo rotulo="Observação"><Textarea rows={2} value={observacao} onChange={(e) => setObservacao(e.target.value)} /></Campo>
         </div>
         <DialogFooter className="gap-2">

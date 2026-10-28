@@ -9,6 +9,7 @@ import { Carregando, ErroCarga } from "@/components/comum/Estados";
 import { NovoParceiroDialog } from "@/components/parceiros/NovoParceiroDialog";
 import { VisaoCategorias } from "@/components/parceiros/VisaoCategorias";
 import { QuadroFunil } from "@/components/parceiros/QuadroFunil";
+import { LinhaFunil } from "@/components/metas/FunilReverso";
 import { ListaParceiros } from "@/components/parceiros/ListaParceiros";
 import { useCarteira, useCategorias, useEtapas, usePerfis } from "@/components/parceiros/dados";
 
@@ -61,6 +62,7 @@ export default function Parceiros() {
             <VisaoCategorias parceiros={parceiros.data ?? []} vinculos={vinculos.data ?? []} categorias={categorias.data ?? []} etapas={etapas.data ?? []} />
           </TabsContent>
           <TabsContent value="funil">
+            <LinhaFunil versao={parceiros.dataUpdatedAt} />
             <QuadroFunil parceiros={parceiros.data ?? []} etapas={etapas.data ?? []} vinculos={vinculos.data ?? []}
               categorias={categorias.data ?? []} passos={passos.data ?? []} podeEditar={isParcerias} />
           </TabsContent>

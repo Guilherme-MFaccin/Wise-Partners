@@ -55,14 +55,21 @@ const COL_CONTRAPARTIDAS: ColunaConfig[] = [
   { chave: "niveis", rotulo: "Níveis (nenhum marcado = todos)", tipo: "multi", opcoes: NIVEIS_OP, vazioNulo: true },
   { chave: "natureza_juridica", rotulo: "Natureza jurídica (nenhuma = todas)", tipo: "multi", opcoes: op(NATUREZAS), vazioNulo: true, visivel: (l) => l.tipo_parceria === "institucional" },
   { chave: "comprovacao", rotulo: "Forma de comprovação", tipo: "texto", obrigatoria: true },
-  { chave: "meta", rotulo: "Meta", tipo: "texto" },
+  { chave: "meta", rotulo: "Meta (texto para o parceiro)", tipo: "texto", larga: true },
+  { chave: "meta_quantidade", rotulo: "Meta: quantidade", tipo: "numero", ajuda: "Vazio: sem meta medida, só cumprida ou não." },
+  { chave: "meta_unidade", rotulo: "Meta: unidade", tipo: "texto", ajuda: "Ex.: usuários ativos, publicação, evento.", visivel: (l) => l.meta_quantidade !== "" && l.meta_quantidade !== null && l.meta_quantidade !== undefined },
+  { chave: "meta_prazo_dias", rotulo: "Meta: prazo em dias", tipo: "numero", ajuda: "Nas periódicas, conta a janela dos últimos dias.", visivel: (l) => l.meta_quantidade !== "" && l.meta_quantidade !== null && l.meta_quantidade !== undefined },
+  { chave: "meta_modo", rotulo: "Meta: como medir", tipo: "select", opcoes: [
+    { valor: "contagem", rotulo: "Contar as comprovações validadas" },
+    { valor: "valor", rotulo: "Número informado na última comprovação" },
+  ], visivel: (l) => l.meta_quantidade !== "" && l.meta_quantidade !== null && l.meta_quantidade !== undefined },
   { chave: "ordem", rotulo: "Ordem", tipo: "numero" },
   { chave: "ativa", rotulo: "Ativa", tipo: "booleano" },
   { chave: "periodicidade_por_pacote", rotulo: "Periodicidade por pacote (JSON, ex.: {\"A\": \"quinzenal\"})", tipo: "json" },
 ];
 const NOVA_CONTRAPARTIDA = {
   nome: "", tipo_parceria: "comercial", periodicidade: "mensal", prazo_inicial_dias: 0, pacotes: [], niveis: null,
-  natureza_juridica: null, comprovacao: "", meta: null, ordem: 999, ativa: true, periodicidade_por_pacote: {},
+  natureza_juridica: null, comprovacao: "", meta: null, meta_quantidade: null, meta_unidade: null, meta_prazo_dias: null, meta_modo: "contagem", ordem: 999, ativa: true, periodicidade_por_pacote: {},
 };
 export function SecaoContrapartidas({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (

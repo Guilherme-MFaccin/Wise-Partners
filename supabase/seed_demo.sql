@@ -536,11 +536,18 @@ insert into public.custos_diretos (data, categoria, valor, descricao, parceiro_i
   (current_date - 60, 'ferramentas', 290, 'Ferramenta de assinatura eletrônica', null),
   (current_date - 20, 'evento', 1200, 'Encontro do Base Ativa da Araucária', pg_temp.uid(1001));
 
--- Metas do ano e do trimestre
+-- Metas do trimestre: programa e a parte do Gerente de Parcerias (o ano é a soma dos trimestres)
 insert into public.metas (indicador_chave, periodo, valor) values
-  ('clientes_icp', to_char(current_date, 'YYYY'), 24),
   ('clientes_icp', to_char(current_date, 'YYYY-"T"Q'), 6),
-  ('ativados', to_char(current_date, 'YYYY'), 15);
+  ('assinados', to_char(current_date, 'YYYY-"T"Q'), 8),
+  ('ativados', to_char(current_date, 'YYYY-"T"Q'), 4),
+  ('nps', to_char(current_date, 'YYYY-"T"Q'), 50);
+insert into public.metas_pessoa (perfil_id, trimestre, indicador, valor) values
+  (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'clientes_icp', 6),
+  (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'assinados', 8),
+  (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'ativados', 4),
+  (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'reunioes', 12),
+  (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'regua_em_dia', 90);
 
 -- -------------------------------------------------------------------------------------
 -- Rotinas: status de atividade, régua, faixas e alertas como no dia a dia

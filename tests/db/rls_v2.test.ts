@@ -39,7 +39,7 @@ async function semear(q: Q) {
   const ac = await q.um("insert into public.aceites_cruzamento (parceiro_id, perfil_id, versao_termo) values ($1, $2, 1) returning id", [P.A, U.parceiroA]);
   const cz = await q.um("insert into public.cruzamentos (parceiro_id, aceite_id, total_enviado, totais) values ($1, $2, 30, '{\"coincidencias\":1}') returning id", [P.A, ac.id]);
   await q.sql("insert into public.coincidencias_cruzamento (cruzamento_id, parceiro_id, base_wise_id, tipo_parceiro, quadrante, acao_sugerida, expira_em) values ($1, $2, $3, 'cliente', 'cliente_comum', 'Case', current_date + 180)", [cz.id, P.A, base.id]);
-  await q.sql("insert into public.metas (indicador_chave, periodo, valor) values ('clientes_icp', '2026', 12)");
+  await q.sql("insert into public.metas (indicador_chave, periodo, valor) values ('clientes_icp', '2026-T4', 12)");
   await q.sql("insert into public.metas_pessoa (perfil_id, trimestre, indicador, valor) values ($1, '2026-T4', 'clientes_icp', 3)", [U.parcerias]);
 }
 
@@ -84,6 +84,8 @@ const MATRIZ: { tabela: string; filtro?: string; leem: Papel[] }[] = [
   { tabela: "avaliacoes_maturidade", filtro: `parceiro_id = '${P.A}'`, leem: ["admin", "parcerias", "consultor"] },
   { tabela: "versoes_regras", leem: ["admin", "parcerias", "consultor", "comercial", "parceiroA", "parceiroB"] },
   { tabela: "metas_pessoa", leem: ["admin", "parcerias"] },
+  { tabela: "criterios_fase", leem: ["admin", "parcerias", "consultor"] },
+  { tabela: "marcos_onboarding_config", leem: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiroA", "parceiroB"] },
   { tabela: "base_wise_cruzamento", leem: ["admin", "parcerias"] },
   { tabela: "aceites_cruzamento", filtro: `parceiro_id = '${P.A}'`, leem: ["admin", "parcerias", "parceiroA"] },
   { tabela: "cruzamentos", filtro: `parceiro_id = '${P.A}'`, leem: ["admin", "parcerias", "parceiroA"] },

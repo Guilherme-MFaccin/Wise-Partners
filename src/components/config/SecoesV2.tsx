@@ -344,40 +344,35 @@ function FormRequisito({
 }
 
 // ---------------------------------------------------------------------------
-// Indicadores do painel e metas (Apêndice L)
+// Indicadores do painel (Apêndice L). As metas ficam na seção Metas (migração 0022).
 // ---------------------------------------------------------------------------
-type IndicadorCat = { chave: string; etapa: string; nome: string; formato: string; destaque: boolean; so_admin: boolean; ordem: number; ativo: boolean };
-type Meta = { indicador_chave: string; periodo: string; valor: number };
+type IndicadorCat = { chave: string; etapa: string; nome: string; formato: string; destaque: boolean; so_admin: boolean; ordem: number; ativo: boolean; aceita_meta: boolean; principal: boolean };
 
 export function SecaoIndicadores({ somenteLeitura }: { somenteLeitura: boolean }) {
   const ind = useQuery({
     queryKey: ["config", "indicadores"],
     queryFn: async () => (ok<any>(await supabase.from("indicadores").select("*").order("etapa").order("ordem")) ?? []) as IndicadorCat[],
   });
-  const metas = useQuery({
-    queryKey: ["config", "metas"],
-    queryFn: async () => (ok<any>(await supabase.from("metas").select("*").order("periodo", { ascending: false })) ?? []) as Meta[],
-  });
-  const porEtapa = useMemo(() => Object.keys(ETAPAS_PAINEL).map((e) => ({ etapa: e, itens: (ind.data ?? []).filter((i) => i.etapa === e) })), [ind.data]);
+  const porFrente = useMemo(() => Object.keys(ETAPAS_PAINEL).map((e) => ({ frente: e, itens: (ind.data ?? []).filter((i) => i.etapa === e) })), [ind.data]);
 
-  if (ind.isLoading || metas.isLoading) return <Carregando />;
+  if (ind.isLoading) return <Carregando />;
   if (ind.error) return <ErroCarga erro={ind.error} />;
-  if (metas.error) return <ErroCarga erro={metas.error} />;
 
   return (
     <div className="space-y-4">
       <Aviso tom="info">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
-        Os indicadores em destaque aparecem primeiro no painel e no relatório semanal. Metas valem para o trimestre ("2026-T4") ou para o ano
-        ("2027"); a do trimestre tem preferência. Indicadores só do administrador não aparecem para os demais papéis.
+        <span>
+          Os indicadores em destaque aparecem primeiro no painel e no relatório semanal. Indicadores só do administrador não aparecem para os demais
+          papéis. As metas ficam em <Link to="/app/configuracoes?aba=metas" className="text-menta-400 hover:underline">Configurações, Metas</Link>, só para
+          os indicadores marcados como "Recebe meta".
+        </span>
       </Aviso>
-      {porEtapa.map((g) => g.itens.length > 0 && (
-        <section key={g.etapa} className={cn(CLASSE_CARD, "p-3 sm:p-4")}>
-          <h3 className="mb-2 font-semibold">{rotulo(ETAPAS_PAINEL, g.etapa)}</h3>
+      {porFrente.map((g) => g.itens.length > 0 && (
+        <section key={g.frente} className={cn(CLASSE_CARD, "p-3 sm:p-4")}>
+          <h3 className="mb-2 font-semibold">{rotulo(ETAPAS_PAINEL, g.frente)}</h3>
           <ul className="divide-y divide-white/10">
-            {g.itens.map((i) => (
-              <LinhaIndicador key={i.chave} ind={i} metas={(metas.data ?? []).filter((m) => m.indicador_chave === i.chave)} somenteLeitura={somenteLeitura} />
-            ))}
+            {g.itens.map((i) => <LinhaIndicador key={i.chave} ind={i} somenteLeitura={somenteLeitura} />)}
           </ul>
         </section>
       ))}
@@ -385,22 +380,12 @@ export function SecaoIndicadores({ somenteLeitura }: { somenteLeitura: boolean }
   );
 }
 
-// ROI vem como fração do banco: a meta é digitada e mostrada em %
-const ehRoi = (chave: string) => chave === "roi";
-const paraTela = (chave: string, v: number) => (ehRoi(chave) ? v * 100 : v);
-const paraBanco = (chave: string, v: number) => (ehRoi(chave) ? v / 100 : v);
-const unidade = (formato: string, chave: string) =>
-  ehRoi(chave) || formato === "percentual" ? "%" : formato === "moeda" ? "R$" : formato === "dias" ? "dias" : formato === "horas" ? "h" : "";
-
-function LinhaIndicador({ ind, metas, somenteLeitura }: { ind: IndicadorCat; metas: Meta[]; somenteLeitura: boolean }) {
+function LinhaIndicador({ ind, somenteLeitura }: { ind: IndicadorCat; somenteLeitura: boolean }) {
   const qc = useQueryClient();
   const [estado, setEstado] = useState(ind);
   useEffect(() => setEstado(ind), [ind]);
-  const [periodo, setPeriodo] = useState("");
-  const [valor, setValor] = useState("");
   const [salvando, setSalvando] = useState(false);
   const alterado = JSON.stringify(estado) !== JSON.stringify(ind);
-  const un = unidade(ind.formato, ind.chave);
 
   async function salvar() {
     setSalvando(true);
@@ -419,30 +404,14 @@ function LinhaIndicador({ ind, metas, somenteLeitura }: { ind: IndicadorCat; met
     }
   }
 
-  async function adicionarMeta() {
-    if (!/^\d{4}(-T[1-4])?$/.test(periodo.trim())) return toast.error('Período no formato "2027" ou "2027-T1".');
-    if (valor === "" || !Number.isFinite(Number(valor))) return toast.error("Informe o valor da meta.");
-    const { error } = await supabase.from("metas")
-      .upsert({ indicador_chave: ind.chave, periodo: periodo.trim(), valor: paraBanco(ind.chave, Number(valor)) }, { onConflict: "indicador_chave,periodo" });
-    if (error) return toastErro(error);
-    setPeriodo(""); setValor("");
-    toast.success("Meta salva.");
-    qc.invalidateQueries({ queryKey: ["config", "metas"] });
-    qc.invalidateQueries({ queryKey: ["painel-v2"] });
-  }
-
-  async function removerMeta(m: Meta) {
-    const { error } = await supabase.from("metas").delete().eq("indicador_chave", m.indicador_chave).eq("periodo", m.periodo);
-    if (error) return toastErro(error);
-    qc.invalidateQueries({ queryKey: ["config", "metas"] });
-    qc.invalidateQueries({ queryKey: ["painel-v2"] });
-  }
-
   return (
     <li className="space-y-2 py-3">
       <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-        <Input className="min-w-0 lg:flex-1" value={estado.nome} disabled={somenteLeitura} aria-label="Nome do indicador"
-          onChange={(e) => setEstado({ ...estado, nome: e.target.value })} />
+        <div className="flex min-w-0 items-center gap-2 lg:flex-1">
+          <Input className="min-w-0 flex-1" value={estado.nome} disabled={somenteLeitura} aria-label="Nome do indicador"
+            onChange={(e) => setEstado({ ...estado, nome: e.target.value })} />
+          {ind.principal ? <Pilula tom="menta">Principal</Pilula> : ind.aceita_meta ? <Pilula>Recebe meta</Pilula> : null}
+        </div>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           {([["destaque", "Destaque"], ["ativo", "Ativo"], ["so_admin", "Só administrador"]] as const).map(([k, r]) => (
             <label key={k} className="flex items-center gap-1.5">
@@ -460,26 +429,6 @@ function LinhaIndicador({ ind, metas, somenteLeitura }: { ind: IndicadorCat; met
             </Button>
           )}
         </div>
-      </div>
-      <div className="flex flex-wrap items-center gap-1.5 text-xs">
-        <span className="text-muted-foreground">Metas:</span>
-        {metas.length === 0 && <span className="text-muted-foreground">nenhuma</span>}
-        {metas.map((m) => (
-          <span key={m.periodo} className="inline-flex items-center gap-1 rounded-full bg-white/5 px-2 py-0.5">
-            {m.periodo.replace("-T", " T")}: <strong>{paraTela(ind.chave, Number(m.valor)).toLocaleString("pt-BR")}{un ? ` ${un}` : ""}</strong>
-            {!somenteLeitura && (
-              <button type="button" aria-label="Remover meta" className="text-muted-foreground hover:text-red-300" onClick={() => removerMeta(m)}><X className="h-3 w-3" /></button>
-            )}
-          </span>
-        ))}
-        {!somenteLeitura && ind.formato !== "lista" && (
-          <span className="inline-flex items-center gap-1">
-            <Input className="h-7 w-24 text-xs" placeholder="2027-T1" value={periodo} onChange={(e) => setPeriodo(e.target.value)} aria-label="Período da meta" />
-            <Input className="h-7 w-24 text-xs" type="number" inputMode="decimal" placeholder={un ? `Valor (${un})` : "Valor"} value={valor}
-              onChange={(e) => setValor(e.target.value)} aria-label="Valor da meta" />
-            <Button variant="outline" size="sm" className="h-7 px-2" onClick={adicionarMeta}><Plus /> Meta</Button>
-          </span>
-        )}
       </div>
     </li>
   );

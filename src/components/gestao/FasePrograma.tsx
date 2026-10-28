@@ -12,8 +12,8 @@ import { FASES_PROGRAMA, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { numero } from "./formato";
 
-// Retorno de sugerir_fase() (migração 0015)
-export type Criterio = { nome: string; atual: number | null; meta: number | null; ok: boolean | null };
+// Retorno de sugerir_fase() (migração 0022): critérios de criterios_fase; os sem indicador são marcados à mão
+export type Criterio = { id?: string; nome: string; indicador?: string | null; atual: number | null; meta: number | null; ok: boolean | null; manual?: boolean };
 export type SugestaoFase = { fase: string; proxima: string | null; pronta: boolean; criterios: Criterio[] };
 
 export function useSugestaoFase(habilitado = true) {
@@ -56,14 +56,15 @@ export function ListaCriterios({ criterios, apenasFaltantes = false }: { criteri
       {lista.map((c) => {
         const Icone = c.ok === true ? CheckCircle2 : c.ok === false ? Circle : MinusCircle;
         return (
-          <li key={c.nome} className="flex items-start gap-2">
+          <li key={c.id ?? c.nome} className="flex items-start gap-2">
             <Icone className={cn("mt-0.5 h-4 w-4 shrink-0", c.ok === true ? "text-menta-400" : c.ok === false ? "text-warning" : "text-muted-foreground")} />
             <span className="min-w-0 flex-1">
               {c.nome}
               {c.meta !== null && c.atual !== null && (
                 <span className="text-muted-foreground"> · {numero(c.atual)} de {numero(c.meta)}</span>
               )}
-              {c.atual === null && <span className="text-muted-foreground"> · conferência manual</span>}
+              {c.manual && <span className="text-muted-foreground"> · {c.ok ? "marcado como atingido" : "conferência manual"}</span>}
+              {!c.manual && c.atual === null && <span className="text-muted-foreground"> · sem dados</span>}
             </span>
           </li>
         );

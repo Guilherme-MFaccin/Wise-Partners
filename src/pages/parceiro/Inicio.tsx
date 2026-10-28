@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowRight, Award, CalendarCheck, CheckCircle2, Circle, ExternalLink, FileSearch, Flag, Handshake, ListChecks, Mail, Megaphone, MessageSquareHeart } from "lucide-react";
+import { ArrowRight, CalendarCheck, CheckCircle2, Circle, ExternalLink, FileSearch, Handshake, ListChecks, Mail, Megaphone, MessageSquareHeart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ok } from "@/lib/erros";
 import { data, hojeISO } from "@/lib/formato";
-import { MARCOS_ONBOARDING, PACOTES, nomeNivel, rotulo } from "@/lib/rotulos";
+import { PACOTES, rotulo } from "@/lib/rotulos";
 import { Button } from "@/components/ui/button";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga } from "@/components/comum/Estados";
 import { SeloNivel } from "@/components/comum/Selos";
 import { estadoContrapartida, useMeuParceiro, useMeusRfps, useMinhasContrapartidas, useParametro } from "@/components/portal/dados";
-import {
-  DESCRICAO_MARCOS, adicionarDias, useAcoesWise, useMeuNivel, useMeusComunicados, useMinhaPesquisa, usePlanoOnboarding,
-} from "@/components/portal/dadosV2";
+import { adicionarDias, useAcoesWise, useMeuNivel, useMeusComunicados, useMinhaPesquisa, usePlanoOnboarding } from "@/components/portal/dadosV2";
+import { SeusObjetivos } from "@/components/portal/SeusObjetivos";
 
 export default function Inicio() {
   const { perfil } = useAuth();
@@ -67,14 +66,9 @@ export default function Inicio() {
   const mostraHub = assinado && !!pacoteQ.data?.wise_hub && !!hubUrl;
   const tarefas = tarefasQ.data ?? [];
 
-  // Próximo nível: o que falta, pelo nome do nível (nunca letras)
+  // Nível e onboarding entram no quadro "Seus objetivos"
   const nivel = nivelQ.data;
-  const faltaAcima = nivel?.acima && !nivel.acima.cumpre
-    ? Object.values(nivel.acima.grupos ?? {}).flatMap((g) => (g.cumprido ? [] : g.faltante ?? []))
-    : [];
-  // Onboarding: próximo item do plano enquanto não houve ativação
   const plano = onboardingQ.data?.plano;
-  const proximoMarco = plano && plano.situacao === "em_andamento" ? (onboardingQ.data?.marcos ?? []).find((m) => !m.cumprido_em) : undefined;
   // Ações da semana: atrasadas e previstas para os próximos 7 dias, dos dois lados
   const hoje = hojeISO();
   const limite = adicionarDias(hoje, 7);
@@ -130,39 +124,9 @@ export default function Inicio() {
         </Link>
       )}
 
+      <SeusObjetivos plano={plano} marcos={onboardingQ.data?.marcos ?? []} nivel={nivel} contrapartidas={contrapartidasQ.data ?? []} />
+
       <div className="grid gap-4 lg:grid-cols-2">
-        {nivel && nivel.tipo === "comercial" && nivel.nivel && (
-          <Painel icone={Award} titulo={`Nível ${nomeNivel("comercial", nivel.nivel)}`} to="/parceiro/nivel" link="Ver meu nível">
-            {nivel.em_observacao_ate && (
-              <p className="mb-2 text-warning">Em observação até {data(nivel.em_observacao_ate)}.</p>
-            )}
-            {nivel.acima ? (
-              nivel.acima.cumpre ? (
-                <p>Vocês já cumprem os requisitos do {nomeNivel("comercial", nivel.acima.nivel)}.</p>
-              ) : (
-                <>
-                  <p className="text-muted-foreground">Para chegar ao {nomeNivel("comercial", nivel.acima.nivel)}, falta:</p>
-                  <ul className="mt-2 space-y-1">
-                    {faltaAcima.slice(0, 4).map((f) => <li key={f} className="flex gap-2"><span className="text-warning">•</span><span>{f}</span></li>)}
-                  </ul>
-                </>
-              )
-            ) : (
-              <p className="text-muted-foreground">
-                {nivel.atual?.cumpre ? "Nível mais alto do programa, com os requisitos em dia." : "Nível mais alto do programa. Veja o que manter em dia para a próxima revisão."}
-              </p>
-            )}
-          </Painel>
-        )}
-        {proximoMarco && (
-          <Painel icone={Flag} titulo="Próximo passo do onboarding" to="/parceiro/onboarding" link="Ver o plano de 90 dias">
-            <p className="font-semibold">{rotulo(MARCOS_ONBOARDING, proximoMarco.tipo)}</p>
-            <p className={proximoMarco.prazo < hoje ? "text-warning" : "text-muted-foreground"}>
-              {proximoMarco.prazo < hoje ? "Venceu em" : "Até"} {data(proximoMarco.prazo)}
-            </p>
-            <p className="mt-1 text-muted-foreground">{DESCRICAO_MARCOS[proximoMarco.tipo]}</p>
-          </Painel>
-        )}
         <Painel icone={CalendarCheck} titulo="Ações da semana" to="/parceiro/acoes" link="Ver ações conjuntas">
           {acoesSemana.length === 0 ? (
             <p className="text-muted-foreground">Nenhuma ação atrasada ou prevista para os próximos 7 dias.</p>

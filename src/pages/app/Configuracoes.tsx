@@ -14,6 +14,7 @@ import {
 } from "@/components/config/SecoesV2";
 import { CategoriasCampos } from "@/components/config/CategoriasCampos";
 import { ModelosContrato } from "@/components/config/ModelosContrato";
+import { SecaoMetas } from "@/components/config/Metas";
 import { Parametros } from "@/components/config/Parametros";
 import { Backup } from "@/components/config/Backup";
 
@@ -32,7 +33,8 @@ const ABAS: (Secao & { admin?: boolean })[] = [
   { id: "pontos", rotulo: "Pontos e premiação" },
   { id: "atividades", rotulo: "Tipos de atividade" },
   { id: "custos", rotulo: "Custos e remunerações", admin: true },
-  { id: "indicadores", rotulo: "Indicadores e metas" },
+  { id: "indicadores", rotulo: "Indicadores do painel" },
+  { id: "metas", rotulo: "Metas" },
   { id: "fase", rotulo: "Fase do programa" },
   { id: "regras", rotulo: "Regras publicadas" },
   { id: "etapas", rotulo: "Etapas e motivos de perda" },
@@ -70,6 +72,7 @@ export default function Configuracoes() {
     atividades: <SecaoTiposAtividade somenteLeitura={leitura} />,
     custos: isAdmin ? <SecaoCustos /> : null,
     indicadores: <SecaoIndicadores somenteLeitura={leitura} />,
+    metas: <SecaoMetas somenteLeitura={leitura} />,
     fase: <SecaoFase podeDefinir={isAdmin} />,
     regras: <SecaoRegras podePublicar={isAdmin} somenteLeitura={leitura} />,
     etapas: <SecaoEtapas somenteLeitura={leitura} />,

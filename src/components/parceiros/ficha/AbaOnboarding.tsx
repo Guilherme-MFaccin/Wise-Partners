@@ -24,6 +24,7 @@ import { cn } from "@/lib/utils";
 import { Campo, Info, Numero, Secao } from "../ui";
 import { invalidarParceiro, isAssinado, useEtapas, type Parceiro } from "../dados";
 import { vencida } from "./v2";
+import { nomeMarco, useMarcosConfig } from "@/components/portal/dadosV2";
 import { BotaoCopiar } from "./BotaoCopiar";
 
 type Plano = {
@@ -39,6 +40,7 @@ const TOM_SITUACAO: Record<string, "menta" | "alerta" | "perigo"> = { em_andamen
 // Onboarding em 90 dias (História 5, Apêndice F) e link exclusivo de indicação (História 6).
 export function AbaOnboarding({ parceiro: p }: { parceiro: Parceiro }) {
   const { isParcerias } = useAuth();
+  const { data: cfg } = useMarcosConfig();
   const [encontro, setEncontro] = useState<Marco | null>(null);
   const q = useQuery({
     queryKey: ["parceiro", p.id, "onboarding"],
@@ -73,7 +75,7 @@ export function AbaOnboarding({ parceiro: p }: { parceiro: Parceiro }) {
                     </span>
                     <div className="flex flex-wrap items-start justify-between gap-2 text-sm">
                       <div className="min-w-0">
-                        <p className={cn("font-medium", !ehEncontro && "text-neutro-300")}>{rotulo(MARCOS_ONBOARDING, m.tipo)}</p>
+                        <p className={cn("font-medium", !ehEncontro && "text-neutro-300")}>{nomeMarco(cfg, m.tipo)}</p>
                         <p className={cn("text-xs", atrasado ? "text-red-300" : "text-muted-foreground")}>
                           {feito ? `Cumprido em ${data(m.cumprido_em)}` : `Prazo ${data(m.prazo)}${atrasado ? " (atrasado)" : ""}`}
                         </p>
@@ -122,6 +124,7 @@ function Resumo({ plano: pl }: { plano: Plano }) {
 
 function RegistrarEncontro({ parceiroId, marco, onFechar }: { parceiroId: string; marco: Marco; onFechar: () => void }) {
   const qc = useQueryClient();
+  const { data: cfg } = useMarcosConfig();
   const [dia, setDia] = useState(hojeISO());
   const [texto, setTexto] = useState("");
   const [salvando, setSalvando] = useState(false);
@@ -142,7 +145,7 @@ function RegistrarEncontro({ parceiroId, marco, onFechar }: { parceiroId: string
     <Dialog open onOpenChange={(v) => !v && onFechar()}>
       <DialogContent className="max-h-[100dvh] max-w-md overflow-y-auto sm:max-h-[90vh] sm:rounded-[14px]">
         <DialogHeader>
-          <DialogTitle>{rotulo(MARCOS_ONBOARDING, marco.tipo)}</DialogTitle>
+          <DialogTitle>{nomeMarco(cfg, marco.tipo)}</DialogTitle>
           <DialogDescription>Cria o ponto de contato e a atividade com o esforço do catálogo.</DialogDescription>
         </DialogHeader>
         <div className="space-y-3">

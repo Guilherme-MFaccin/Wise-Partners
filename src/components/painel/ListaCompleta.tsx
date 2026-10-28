@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import {
-  AlarmClock, BadgeCheck, CalendarCheck, Clock, FileSignature, FileText, Gauge, Handshake, Hourglass, Layers, ListOrdered,
+  AlarmClock, BadgeCheck, CalendarCheck, Clock, FileSignature, FileText, Handshake, Hourglass, Layers, ListOrdered,
   PauseCircle, Snowflake, TriangleAlert, Wallet,
 } from "lucide-react";
 import { Pilula, SeloStatus } from "@/components/comum/Selos";
@@ -11,28 +11,12 @@ import { Barra, Bloco, CLASSE_CARD, Indicador, ListaParceiros } from "./Blocos";
 import type { PainelDados } from "./pauta";
 import type { Periodo } from "./periodo";
 
-// Painel da v1 (painel_semanal), mantido como aba "Lista completa" do painel por etapa da jornada.
+// Painel da v1 (painel_semanal), mantido como aba "Lista completa" do painel. A meta de assinados fica no bloco
+// de metas do trimestre, acima das abas.
 export function ListaCompleta({ p, periodo, veComissao }: { p: PainelDados; periodo: Periodo; veComissao: boolean }) {
   const linkPeriodo = `/app/indicacoes?de=${periodo.inicio}&ate=${periodo.fim}`;
   return (
     <div className="space-y-4">
-      {/* Meta de assinados */}
-      <section className={cn(CLASSE_CARD, "p-4 sm:p-5")}>
-        <div className="flex flex-wrap items-end justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <Gauge className="h-5 w-5 text-menta-400" />
-            <h2 className="font-semibold">Distância até a meta</h2>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            <span className="text-2xl font-bold text-foreground">{p.assinados}</span> de {p.meta_assinados} assinados
-          </p>
-        </div>
-        <Barra valor={p.assinados} maximo={p.meta_assinados} className="mt-3 h-3" />
-        <p className="mt-2 text-sm text-muted-foreground">
-          Faltam <span className="font-semibold text-foreground">{Math.max(0, p.meta_assinados - p.assinados)}</span> parceiros assinados.
-        </p>
-      </section>
-
       {/* Funil */}
       <Funil funil={p.funil} />
 
