@@ -7,7 +7,9 @@ import { cn } from "@/lib/utils";
 import { SeletorEtapa } from "./SeletorEtapa";
 import type { Categoria, Etapa, ParceiroCategoria, ParceiroLista, ProximoPasso } from "./dados";
 
-// Quadro por etapa do funil. No celular as etapas ficam empilhadas (sem rolagem horizontal).
+// Quadro por etapa do funil: uma faixa contínua, na ordem do funil, com rolagem horizontal dentro do quadro
+// (a página não rola para o lado). Colunas de largura fixa. A partir de md o quadro ocupa a altura da tela e cada
+// coluna rola por dentro, para a barra horizontal ficar sempre à vista; no celular a rolagem encaixa coluna a coluna.
 export function QuadroFunil({
   parceiros, etapas, vinculos, categorias, passos, podeEditar,
 }: {
@@ -36,16 +38,21 @@ export function QuadroFunil({
 
   return (
     <div className="space-y-6">
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+      <div
+        className="-mx-1 flex snap-x snap-mandatory items-start gap-4 overflow-x-auto px-1 pb-3 sm:snap-none md:h-[calc(100dvh-15rem)] md:min-h-[420px]"
+        tabIndex={0}
+        role="region"
+        aria-label="Quadro do funil de parceiros, role para o lado para ver todas as etapas"
+      >
         {funil.map((e) => {
           const lista = parceiros.filter((p) => p.etapa === e.codigo);
           return (
-            <section key={e.codigo} className="min-w-0 rounded-[14px] border border-white/10 bg-card/60 p-3">
+            <section key={e.codigo} className="flex w-[272px] shrink-0 snap-start flex-col rounded-[14px] border border-white/10 bg-card/60 p-3 md:max-h-full">
               <header className="mb-3 flex items-center justify-between gap-2 px-1">
                 <h3 className="text-sm font-semibold">{e.nome}</h3>
                 <Pilula tom={lista.length ? "menta" : "neutro"}>{lista.length}</Pilula>
               </header>
-              <div className="space-y-2">
+              <div className="min-h-0 space-y-2 md:-mr-1 md:overflow-y-auto md:pr-1">
                 {lista.length ? lista.map((p) => cartao(p)) : <p className="px-1 pb-1 text-xs text-muted-foreground">Nenhum parceiro.</p>}
               </div>
             </section>
