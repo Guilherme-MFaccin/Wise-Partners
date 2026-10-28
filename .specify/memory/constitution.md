@@ -74,7 +74,7 @@ O Wise Partners é um canal de aquisição. O número principal do programa são
 ## Restrições técnicas
 
 * Compatível com o Lovable, para seguir evoluindo lá: React com TypeScript, Vite, Tailwind CSS, shadcn/ui e Supabase (autenticação, PostgreSQL com Row Level Security, Storage e Edge Functions).
-* Login por link de acesso enviado por e-mail, sem senha, para todos os usuários com conta.
+* Login com e-mail e senha para todos os usuários com conta (alterado em 28/10/2026, a pedido de Guilherme Faccin; antes era por link no e-mail, sem senha). A conta nasce com uma senha provisória, repassada por quem cria o acesso, e o portal pede a troca. Cadastro aberto desligado: só entra quem recebeu acesso.
 * IA pelo provedor disponível no ambiente (Lovable AI ou equivalente configurado por variável de ambiente), sem contratar serviço pago novo sem aprovação.
 * E-mails pelo Resend, no domínio da Wise.
 * O Wise Hub é uma plataforma separada, voltada também à carteira do parceiro; o portal apenas oferece o link de acesso. Os dois sistemas não compartilham banco nem login. As trilhas que ensinam o parceiro a vender a Wise ficam no portal e nunca são publicadas no Wise Hub.
@@ -97,4 +97,6 @@ O Wise Partners é um canal de aquisição. O número principal do programa são
 
 Esta constituição prevalece sobre outras práticas. Alterações exigem registro, aprovação de Guilherme Faccin (Gerente de Parcerias) e Igor Makoto (Diretor) e plano de migração quando afetarem dados existentes. Mudança nos princípios IV.3, IV.4, IV.9 ou IV.10 exige também a versão correspondente do contrato de parceria. Toda revisão verifica conformidade com os princípios acima.
 
-**Version**: 2.0.0 | **Ratified**: 2026-10-23 | **Last Amended**: 2026-10-23
+**Version**: 2.1.0 | **Ratified**: 2026-10-23 | **Last Amended**: 2026-10-28
+
+Alteração 2.1.0 (MINOR, 28/10/2026): restrição técnica de login, de link no e-mail para e-mail e senha. Pedido de Guilherme Faccin; falta o registro da aprovação de Igor Makoto.

@@ -166,7 +166,7 @@ Cada ponto de contato e entrega tem um tipo (reunião, check-in, encontro do Bas
 
 ### User Story 8 - Portal do parceiro (Priority: P3)
 
-O responsável do parceiro entra com link de acesso por e-mail e vê: resumo da parceria (nível, pacote, início), entregas e contrapartidas com o que está em dia e pendente, onde enviar comprovações, indicações feitas e recebidas com status e comissões, os pedidos de RFP em que foi apresentado (com o nome do cliente), materiais (certificado, selos, apresentações), calendário da mentoria mensal e dos eventos, páginas institucionais da Wise Makers, da Tríade e da Swallow e o botão de acesso ao Wise Hub. Ele propõe atualizações da ficha de apresentação, que só valem depois de validadas pela Wise, e registra novas indicações para qualquer das três empresas.
+O responsável do parceiro entra com e-mail e senha e vê: resumo da parceria (nível, pacote, início), entregas e contrapartidas com o que está em dia e pendente, onde enviar comprovações, indicações feitas e recebidas com status e comissões, os pedidos de RFP em que foi apresentado (com o nome do cliente), materiais (certificado, selos, apresentações), calendário da mentoria mensal e dos eventos, páginas institucionais da Wise Makers, da Tríade e da Swallow e o botão de acesso ao Wise Hub. Ele propõe atualizações da ficha de apresentação, que só valem depois de validadas pela Wise, e registra novas indicações para qualquer das três empresas.
 
 **Why this priority**: Dá transparência ao parceiro e reduz o trabalho da Wise para manter fichas e indicações atualizadas, mas depende de parceiros assinados.
 
@@ -243,7 +243,7 @@ Antes do uso, o administrador importa os parceiros atuais (planilha), os documen
 **Usuários, papéis e acesso**
 
 * **FR-001**: O sistema DEVE oferecer os papéis administrador, time de parcerias, consultor ou gerente de conta, comercial, financeiro e usuário de parceiro, com usuários internos vinculados a uma empresa do grupo (Wise Makers, Tríade ou Swallow).
-* **FR-002**: O sistema DEVE autenticar todos os usuários com conta por link de acesso enviado por e-mail, sem senha.
+* **FR-002**: O sistema DEVE autenticar todos os usuários com conta por e-mail e senha. A conta é criada por quem dá o acesso, com uma senha provisória que o portal pede para trocar; a pessoa pode criar uma senha nova pelo link "Esqueci minha senha" ou receber uma senha provisória nova de quem gerencia o acesso. (Alterado em 28/10/2026; antes: link de acesso por e-mail, sem senha.)
 * **FR-003**: O sistema DEVE garantir que usuários de parceiro acessem apenas dados da própria empresa, inclusive arquivos e exportações.
 * **FR-004**: O sistema DEVE mostrar valores de comissão apenas a administradores, ao time de parcerias e, na tela de comissões a pagar, ao financeiro; o parceiro vê apenas as próprias comissões, nunca a do responsável pela parceria.
 * **FR-005**: O sistema DEVE ocultar de parceiros e clientes a marcação de parceiro estratégico, anotações internas e dados de outros parceiros e clientes.

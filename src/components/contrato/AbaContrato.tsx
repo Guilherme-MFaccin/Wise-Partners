@@ -17,6 +17,8 @@ import { data as fmtData, dataHora, hojeISO } from "@/lib/formato";
 import { ETAPAS, ETAPAS_FUNIL, ETAPAS_PERDA } from "@/lib/rotulos";
 import { camposVisiveis, gerarMinuta, validarQuadro, type DadosQuadro, type TipoContrato } from "@/lib/contrato";
 import { convidarUsuario } from "@/lib/convite";
+import { gerarSenha } from "@/lib/senha";
+import { CredenciaisCriadas } from "@/components/usuarios/SenhaProvisoria";
 import { cn } from "@/lib/utils";
 
 // Aba "Negociação e contrato" da ficha (História 4): funil, aprovação do Diretor, Quadro de
@@ -419,6 +421,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
     comEmail.find((c) => (c.papeis ?? []).includes("responsavel_parceria"))?.contato?.id ?? comEmail[0]?.contato?.id ?? "",
   );
   const [convidando, setConvidando] = useState(false);
+  const [acessoCriado, setAcessoCriado] = useState<{ email: string; senha: string } | null>(null);
 
   async function anexar() {
     if (!arquivo) return toast.error("Escolha o PDF assinado no Autentique.");
@@ -462,8 +465,11 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
     if (!c) return toast.error("Cadastre um contato com e-mail na aba Contatos.");
     setConvidando(true);
     try {
-      await convidarUsuario({ email: c.email, nome: c.nome, papel: "parceiro", parceiro_id: parceiro.id, is_responsavel_parceiro: true });
-      toast.success(`Convite de acesso enviado para ${c.email}`);
+      const senha = gerarSenha();
+      const email = c.email.trim().toLowerCase();
+      await convidarUsuario({ email, nome: c.nome, papel: "parceiro", parceiro_id: parceiro.id, is_responsavel_parceiro: true, senha });
+      toast.success(`Acesso criado para ${email}`);
+      setAcessoCriado({ email, senha });
     } catch (e) {
       toastErro(e);
     } finally {
@@ -511,7 +517,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
 
       {podeEditar && parceiro.etapa === "onboarding" && (
         <div className="mt-4 space-y-2 border-t border-white/10 pt-4">
-          <p className="text-sm font-semibold">Convite de acesso ao portal do parceiro</p>
+          <p className="text-sm font-semibold">Acesso ao portal do parceiro</p>
           {comEmail.length === 0 ? (
             <p className="text-sm text-muted-foreground">Cadastre o responsável do parceiro, com e-mail, na aba Contatos.</p>
           ) : (
@@ -523,8 +529,13 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
                 </SelectContent>
               </Select>
               <Button variant="secondary" onClick={convidar} disabled={convidando}>
-                {convidando ? <Loader2 className="animate-spin" /> : <Mail />} Enviar convite
+                {convidando ? <Loader2 className="animate-spin" /> : <Mail />} Criar acesso
               </Button>
+            </div>
+          )}
+          {acessoCriado && (
+            <div className="max-w-md pt-2">
+              <CredenciaisCriadas email={acessoCriado.email} senha={acessoCriado.senha} />
             </div>
           )}
         </div>

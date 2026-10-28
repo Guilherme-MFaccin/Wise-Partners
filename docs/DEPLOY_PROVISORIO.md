@@ -14,7 +14,8 @@ Banco, autenticação e Edge Functions num projeto Supabase novo; o site estáti
   * usuário `guilherme@wisemakers.com.br` criado, perfil admin;
   * testes de acesso: sem login, todas as tabelas e funções recusam; logado, o painel responde;
   * carga real: 32 parceiros, 44 contatos, 33 interações, 81 h (R$ 1.656,82).
-* **Pendente:** e-mail do Igor; SMTP do Resend (e-mails em português e convites para quem não é da equipe da Supabase); chave de IA.
+* **Acesso por e-mail e senha (28/10/2026):** migração `20261028000021` aplicada e registrada; funções `convidar-usuario` (cria a conta com senha provisória) e `redefinir-senha` publicadas. Contas de administrador: `guilherme@wisemakers.com.br`, `igormakoto97@gmail.com` (Diretor) e `makerswise@gmail.com`, todas com senha provisória e a faixa pedindo a troca.
+* **Pendente:** SMTP do Resend (e-mails em português e "Esqueci minha senha" para quem não é da equipe da Supabase); chave de IA; registro da aprovação do Igor para a alteração 2.1.0 da constituição.
 
 ## Parte 1. O que o Guilherme faz (cerca de 15 minutos)
 

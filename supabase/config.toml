@@ -40,3 +40,6 @@ verify_jwt = true
 
 [functions.convidar-usuario]
 verify_jwt = true
+
+[functions.redefinir-senha]
+verify_jwt = true

@@ -8,6 +8,7 @@ import { AppLayout } from "@/components/layout/AppLayout";
 import { ParceiroLayout } from "@/components/layout/ParceiroLayout";
 import { Carregando } from "@/components/comum/Estados";
 import Entrar from "@/pages/Entrar";
+import RedefinirSenha from "@/pages/RedefinirSenha";
 import SemAcesso from "@/pages/SemAcesso";
 import NaoEncontrada from "@/pages/NaoEncontrada";
 
@@ -89,6 +90,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Inicio />} />
                 <Route path="/entrar" element={<Entrar />} />
+                <Route path="/redefinir-senha" element={<RedefinirSenha />} />
                 <Route path="/r/:token" element={<PaginaRfp />} />
                 <Route path="/i/:token" element={<IndicacaoLink />} />
                 <Route path="/app" element={<Protegida publico="interno"><AppLayout /></Protegida>}>
@@ -138,6 +140,7 @@ export default function App() {
                   <Route path="materiais" element={<PMateriais />} />
                   <Route path="usuarios" element={<PUsuarios />} />
                   <Route path="notificacoes" element={<Notificacoes />} />
+                  <Route path="conta" element={<Conta />} />
                 </Route>
                 <Route path="*" element={<NaoEncontrada />} />
               </Routes>
