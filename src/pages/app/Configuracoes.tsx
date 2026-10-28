@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Info } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Vazio } from "@/components/comum/Estados";
+import { NavegacaoSecoes, type Secao } from "@/components/comum/NavegacaoSecoes";
 import {
   SecaoContrapartidas, SecaoEmpresas, SecaoEtapas, SecaoFeriados, SecaoIcp, SecaoNiveis, SecaoPacotes, SecaoTextosEmail, SecaoTiposAtividade,
 } from "@/components/config/Secoes";
@@ -16,8 +17,8 @@ import { ModelosContrato } from "@/components/config/ModelosContrato";
 import { Parametros } from "@/components/config/Parametros";
 import { Backup } from "@/components/config/Backup";
 
-// `admin`: aba só aparece para administradores (custos e remunerações)
-const ABAS: { id: string; rotulo: string; admin?: boolean }[] = [
+// Ordem alfabética na navegação (NavegacaoSecoes). `admin`: aba só aparece para administradores (custos e remunerações)
+const ABAS: (Secao & { admin?: boolean })[] = [
   { id: "empresas", rotulo: "Empresas e comissões" },
   { id: "categorias", rotulo: "Categorias e campos" },
   { id: "niveis", rotulo: "Níveis e prazos" },
@@ -54,6 +55,32 @@ export default function Configuracoes() {
   const abas = ABAS.filter((a) => !a.admin || isAdmin);
   const abaParam = params.get("aba");
   const aba = abas.some((a) => a.id === abaParam) ? abaParam! : "empresas";
+  const conteudo: Record<string, ReactNode> = {
+    empresas: <SecaoEmpresas somenteLeitura={leitura} />,
+    categorias: <CategoriasCampos somenteLeitura={leitura} />,
+    niveis: <SecaoNiveis somenteLeitura={leitura} />,
+    requisitos: <SecaoRequisitos somenteLeitura={leitura} />,
+    scorecard: <SecaoScorecard somenteLeitura={leitura} />,
+    pacotes: <SecaoPacotes somenteLeitura={leitura} />,
+    contrapartidas: <SecaoContrapartidas somenteLeitura={leitura} />,
+    acoes: <SecaoAcoesWise somenteLeitura={leitura} />,
+    regua: <SecaoRegua somenteLeitura={leitura} />,
+    sla: <SecaoSla somenteLeitura={leitura} />,
+    pontos: <SecaoPontos somenteLeitura={leitura} />,
+    atividades: <SecaoTiposAtividade somenteLeitura={leitura} />,
+    custos: isAdmin ? <SecaoCustos /> : null,
+    indicadores: <SecaoIndicadores somenteLeitura={leitura} />,
+    fase: <SecaoFase podeDefinir={isAdmin} />,
+    regras: <SecaoRegras podePublicar={isAdmin} somenteLeitura={leitura} />,
+    etapas: <SecaoEtapas somenteLeitura={leitura} />,
+    icp: <SecaoIcp somenteLeitura={leitura} />,
+    cruzamento: <SecaoCruzamento somenteLeitura={leitura} />,
+    modelos: <ModelosContrato somenteLeitura={leitura} />,
+    parametros: <Parametros somenteLeitura={leitura} excluir={CHAVES_AGRUPADAS} />,
+    feriados: <SecaoFeriados somenteLeitura={leitura} />,
+    emails: <SecaoTextosEmail somenteLeitura={leitura} />,
+    backup: <Backup podeExportar={isAdmin} />,
+  };
 
   return (
     <div>
@@ -62,35 +89,9 @@ export default function Configuracoes() {
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
         Mudanças de regra valem só para registros novos; os registros existentes mantêm os valores da época.
       </p>
-      <Tabs value={aba} onValueChange={(v) => setParams(v === "empresas" ? {} : { aba: v }, { replace: true })}>
-        <TabsList className="mb-4 h-auto w-full flex-wrap justify-start gap-1">
-          {abas.map((a) => <TabsTrigger key={a.id} value={a.id}>{a.rotulo}</TabsTrigger>)}
-        </TabsList>
-        <TabsContent value="empresas"><SecaoEmpresas somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="categorias"><CategoriasCampos somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="niveis"><SecaoNiveis somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="requisitos"><SecaoRequisitos somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="scorecard"><SecaoScorecard somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="pacotes"><SecaoPacotes somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="contrapartidas"><SecaoContrapartidas somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="acoes"><SecaoAcoesWise somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="regua"><SecaoRegua somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="sla"><SecaoSla somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="pontos"><SecaoPontos somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="atividades"><SecaoTiposAtividade somenteLeitura={leitura} /></TabsContent>
-        {isAdmin && <TabsContent value="custos"><SecaoCustos /></TabsContent>}
-        <TabsContent value="indicadores"><SecaoIndicadores somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="fase"><SecaoFase podeDefinir={isAdmin} /></TabsContent>
-        <TabsContent value="regras"><SecaoRegras podePublicar={isAdmin} somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="etapas"><SecaoEtapas somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="icp"><SecaoIcp somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="cruzamento"><SecaoCruzamento somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="modelos"><ModelosContrato somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="parametros"><Parametros somenteLeitura={leitura} excluir={CHAVES_AGRUPADAS} /></TabsContent>
-        <TabsContent value="feriados"><SecaoFeriados somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="emails"><SecaoTextosEmail somenteLeitura={leitura} /></TabsContent>
-        <TabsContent value="backup"><Backup podeExportar={isAdmin} /></TabsContent>
-      </Tabs>
+      <NavegacaoSecoes secoes={abas} ativa={aba} onChange={(v) => setParams(v === "empresas" ? {} : { aba: v }, { replace: true })}>
+        <div key={aba}>{conteudo[aba]}</div>
+      </NavegacaoSecoes>
     </div>
   );
 }
