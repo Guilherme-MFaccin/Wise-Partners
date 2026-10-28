@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
@@ -17,14 +17,17 @@ import { ETAPAS, ETAPAS_FUNIL, ETAPAS_PAUSA, ETAPAS_PERDA, rotulo } from "@/lib/
 import { cn } from "@/lib/utils";
 import { invalidarParceiro, useConfigValor } from "./dados";
 
+export type ParceiroEtapa = { id: string; etapa: string; nome_fantasia: string; motivo_perda?: string | null };
+
 // Troca de etapa do funil. As regras (scorecard antes da proposta, aprovação do Diretor para fechamento,
 // contrato assinado para onboarding, data de retomada na nutrição) ficam no banco; aqui só pedimos os dados.
-export function SeletorEtapa({
-  parceiro, className,
-}: { parceiro: { id: string; etapa: string; nome_fantasia: string; motivo_perda?: string | null }; className?: string }) {
+// Usado pelo seletor de etapa e pelo arrastar e soltar do quadro do funil. `aoMudar` recebe a etapa nova antes
+// de gravar (para o quadro mover o cartão na hora) e `null` se o banco recusar (o cartão volta).
+export function useTrocaEtapa(aoMudar?: (id: string, etapa: string | null) => void) {
   const qc = useQueryClient();
   const navigate = useNavigate();
   const { data: cadenciaPadrao } = useConfigValor<number>("nutricao_cadencia_dias");
+  const [alvo, setAlvo] = useState<ParceiroEtapa | null>(null);
   const [perda, setPerda] = useState<string | null>(null);
   const [detalhe, setDetalhe] = useState("");
   const [nutricao, setNutricao] = useState(false);
@@ -33,38 +36,45 @@ export function SeletorEtapa({
   const [bloqueio, setBloqueio] = useState<string | null>(null);
   const [salvando, setSalvando] = useState(false);
 
-  async function salvar(etapa: string, extras: Record<string, any> = {}) {
+  async function salvar(parceiro: ParceiroEtapa, etapa: string, extras: Record<string, unknown> = {}) {
     setSalvando(true);
+    aoMudar?.(parceiro.id, etapa);
     const { error } = await supabase.from("parceiros").update({ etapa, ...extras }).eq("id", parceiro.id);
     setSalvando(false);
     if (error) {
+      aoMudar?.(parceiro.id, null);
       // Regra da proposta com o decisor (scorecard completo e elegibilidade): explica e leva ao scorecard
-      if (etapa === "proposta_decisor" && /scorecard/i.test(error.message ?? "")) setBloqueio(mensagemErro(error));
-      else toastErro(error);
+      if (etapa === "proposta_decisor" && /scorecard/i.test(error.message ?? "")) {
+        setAlvo(parceiro);
+        setBloqueio(mensagemErro(error));
+      } else toastErro(error);
       return false;
     }
-    toast.success(`${parceiro.nome_fantasia}: etapa atualizada.`);
+    toast.success(`${parceiro.nome_fantasia}: ${rotulo(ETAPAS, etapa)}.`);
     invalidarParceiro(qc, parceiro.id);
     return true;
   }
 
-  function escolher(etapa: string) {
+  function escolher(parceiro: ParceiroEtapa, etapa: string) {
     if (etapa === parceiro.etapa) return;
     if (ETAPAS_PERDA.includes(etapa)) {
+      setAlvo(parceiro);
       setDetalhe(parceiro.motivo_perda ?? "");
       setPerda(etapa);
       return;
     }
     if (etapa === "nutricao") {
+      setAlvo(parceiro);
       setRetomada("");
       setCadencia(cadenciaPadrao != null ? String(cadenciaPadrao) : "30");
       setNutricao(true);
       return;
     }
-    salvar(etapa);
+    salvar(parceiro, etapa);
   }
 
   async function confirmarNutricao() {
+    if (!alvo) return;
     if (!retomada || retomada < hojeISO()) {
       toast.error("Informe a data de retomada, a partir de hoje.");
       return;
@@ -74,49 +84,34 @@ export function SeletorEtapa({
       toast.error("A cadência de contato precisa ser um número inteiro de dias.");
       return;
     }
-    if (await salvar("nutricao", { nutricao_ate: retomada, nutricao_cadencia_dias: dias })) setNutricao(false);
+    if (await salvar(alvo, "nutricao", { nutricao_ate: retomada, nutricao_cadencia_dias: dias })) setNutricao(false);
   }
 
-  // Etapa atual fora das listas (cadastro antigo) continua visível no seletor
-  const conhecidas = [...ETAPAS_FUNIL, ...ETAPAS_PAUSA, ...ETAPAS_PERDA];
-
-  return (
+  const dialogos: ReactNode = (
     <>
-      <Select value={parceiro.etapa} onValueChange={escolher} disabled={salvando}>
-        <SelectTrigger className={cn("h-9 rounded-full", className)} aria-label="Etapa do funil">
-          <SelectValue>{rotulo(ETAPAS, parceiro.etapa)}</SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>Funil</SelectLabel>
-            {ETAPAS_FUNIL.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
-            {!conhecidas.includes(parceiro.etapa) && <SelectItem value={parceiro.etapa}>{rotulo(ETAPAS, parceiro.etapa)}</SelectItem>}
-          </SelectGroup>
-          <SelectSeparator />
-          <SelectGroup>
-            <SelectLabel>Pausa</SelectLabel>
-            {ETAPAS_PAUSA.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
-          </SelectGroup>
-          <SelectSeparator />
-          <SelectGroup>
-            <SelectLabel>Perdas</SelectLabel>
-            {ETAPAS_PERDA.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
-          </SelectGroup>
-        </SelectContent>
-      </Select>
-
       <AlertDialog open={!!perda} onOpenChange={(v) => !v && setPerda(null)}>
         <AlertDialogContent className="max-w-md">
           <AlertDialogHeader>
-            <AlertDialogTitle>Registrar perda: {rotulo(ETAPAS, perda)}</AlertDialogTitle>
+            <AlertDialogTitle>Registrar perda</AlertDialogTitle>
             <AlertDialogDescription>
-              {parceiro.nome_fantasia} sai do funil ativo. O registro fica no histórico e pode ser revertido depois.
+              {alvo?.nome_fantasia} sai do funil ativo. O registro fica no histórico e pode ser revertido depois.
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <div className="space-y-1.5">
-            <Label htmlFor="detalhe-perda" className="text-xs">Detalhe (opcional)</Label>
-            <Textarea id="detalhe-perda" rows={3} value={detalhe} onChange={(e) => setDetalhe(e.target.value)}
-              placeholder="Ex.: decidiu seguir só com o programa próprio" />
+          <div className="space-y-3">
+            <div className="space-y-1.5">
+              <Label htmlFor="tipo-perda" className="text-xs">Tipo de perda</Label>
+              <Select value={perda ?? undefined} onValueChange={setPerda}>
+                <SelectTrigger id="tipo-perda"><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  {ETAPAS_PERDA.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-1.5">
+              <Label htmlFor="detalhe-perda" className="text-xs">Detalhe (opcional)</Label>
+              <Textarea id="detalhe-perda" rows={3} value={detalhe} onChange={(e) => setDetalhe(e.target.value)}
+                placeholder="Ex.: decidiu seguir só com o programa próprio" />
+            </div>
           </div>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancelar</AlertDialogCancel>
@@ -124,7 +119,7 @@ export function SeletorEtapa({
               disabled={salvando}
               onClick={async (ev) => {
                 ev.preventDefault();
-                if (perda && (await salvar(perda, { motivo_perda: detalhe.trim() || null }))) setPerda(null);
+                if (alvo && perda && (await salvar(alvo, perda, { motivo_perda: detalhe.trim() || null }))) setPerda(null);
               }}
             >
               Confirmar perda
@@ -138,7 +133,7 @@ export function SeletorEtapa({
           <AlertDialogHeader>
             <AlertDialogTitle>Mover para nutrição</AlertDialogTitle>
             <AlertDialogDescription>
-              Ainda não é a hora de {parceiro.nome_fantasia}. Sai do quadro ativo, não fica morno nem dormente e ganha um próximo passo
+              Ainda não é a hora de {alvo?.nome_fantasia}. Sai do quadro ativo, não fica morno nem dormente e ganha um próximo passo
               de contato na cadência. Na data de retomada, volta para a etapa atual.
             </AlertDialogDescription>
           </AlertDialogHeader>
@@ -169,10 +164,46 @@ export function SeletorEtapa({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Fechar</AlertDialogCancel>
-            <AlertDialogAction onClick={() => navigate(`/app/parceiros/${parceiro.id}?aba=scorecard`)}>Abrir scorecard</AlertDialogAction>
+            <AlertDialogAction onClick={() => alvo && navigate(`/app/parceiros/${alvo.id}?aba=scorecard`)}>Abrir scorecard</AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+    </>
+  );
+
+  return { escolher, salvando, dialogos };
+}
+
+export function SeletorEtapa({ parceiro, className }: { parceiro: ParceiroEtapa; className?: string }) {
+  const troca = useTrocaEtapa();
+  // Etapa atual fora das listas (cadastro antigo) continua visível no seletor
+  const conhecidas = [...ETAPAS_FUNIL, ...ETAPAS_PAUSA, ...ETAPAS_PERDA];
+
+  return (
+    <>
+      <Select value={parceiro.etapa} onValueChange={(e) => troca.escolher(parceiro, e)} disabled={troca.salvando}>
+        <SelectTrigger className={cn("h-9 rounded-full", className)} aria-label="Etapa do funil">
+          <SelectValue>{rotulo(ETAPAS, parceiro.etapa)}</SelectValue>
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>Funil</SelectLabel>
+            {ETAPAS_FUNIL.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
+            {!conhecidas.includes(parceiro.etapa) && <SelectItem value={parceiro.etapa}>{rotulo(ETAPAS, parceiro.etapa)}</SelectItem>}
+          </SelectGroup>
+          <SelectSeparator />
+          <SelectGroup>
+            <SelectLabel>Pausa</SelectLabel>
+            {ETAPAS_PAUSA.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
+          </SelectGroup>
+          <SelectSeparator />
+          <SelectGroup>
+            <SelectLabel>Perdas</SelectLabel>
+            {ETAPAS_PERDA.map((e) => <SelectItem key={e} value={e}>{ETAPAS[e]}</SelectItem>)}
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+      {troca.dialogos}
     </>
   );
 }
