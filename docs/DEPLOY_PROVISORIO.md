@@ -5,9 +5,9 @@ Banco, autenticação e Edge Functions num projeto Supabase novo; o site estáti
 ## Estado em 28/10/2026: deploy provisório concluído
 
 * **GitHub:** `Guilherme-MFaccin/wise-partners`, branches `main` e `ux-fundacao`.
-* **Netlify:** https://portal-wise-partners.netlify.app (proteção de visitantes da Netlify ligada: Site configuration, Access & security, Visitor access).
+* **Netlify:** https://portal-wise-partners.netlify.app (site público).
 * **Supabase** (`eiozuvnzvqlqslihyooz`, região us-east-1):
-  * 20 migrações aplicadas pela API de gestão e registradas em `supabase_migrations.schema_migrations` (um `db push` futuro não as reaplica);
+  * 22 migrações aplicadas pela API de gestão e registradas em `supabase_migrations.schema_migrations` (um `db push` futuro não as reaplica); a 22 (metas em cascata) em 28/10/2026, sem metas cadastradas: elas entram por Configurações, Metas;
   * Vault com `project_url` e `cron_secret`; 6 agendamentos no pg_cron;
   * 10 Edge Functions publicadas, segredos `APP_URL` e `CRON_SECRET`; sem `RESEND_API_KEY`, `EMAIL_FROM` e `AI_API_KEY` (e-mails próprios e IA desligados);
   * autenticação: Site URL e Redirect URLs do portal, cadastro aberto desligado; modelos de e-mail no padrão da Supabase (o plano gratuito só permite mudar com SMTP próprio);
