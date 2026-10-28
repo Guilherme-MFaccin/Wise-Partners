@@ -1,7 +1,7 @@
 import { useParams, useSearchParams } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { ETAPAS_PERDA } from "@/lib/rotulos";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { NavegacaoSecoes } from "@/components/comum/NavegacaoSecoes";
 import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
 import { AbaContrato } from "@/components/contrato/AbaContrato";
 import { leInterno, useParceiro } from "@/components/parceiros/dados";
@@ -26,15 +26,15 @@ import { AbaMaturidade } from "@/components/parceiros/ficha/AbaMaturidade";
 import { AbaDesligamento, useFluxosDesligamento } from "@/components/parceiros/ficha/AbaDesligamento";
 import { PAPEIS_V2 } from "@/components/parceiros/ficha/v2";
 
-type Aba = { valor: string; rotulo: string; papeis?: string[]; mostrar?: boolean };
+type Aba = { valor: string; rotulo: string; fixa?: boolean; papeis?: string[]; mostrar?: boolean };
 
-// Abas por papel: a RLS devolve vazio para o que o papel não lê; aqui só evitamos abas vazias.
+// Abas por papel, em ordem alfabética na navegação (Visão geral fixa no topo): a RLS devolve vazio para o que o papel não lê; aqui só evitamos abas vazias.
 // v2: a matriz de acesso (briefing técnico, seção 5) está em PAPEIS_V2; "mostrar" depende do parceiro.
 function abasDoParceiro(p: { tipo_parceria: string; data_assinatura: string | null; etapa: string }, temFluxo: boolean, isAdmin: boolean): Aba[] {
   const comercial = p.tipo_parceria === "comercial";
   const assinado = !!p.data_assinatura && !ETAPAS_PERDA.includes(p.etapa);
   return [
-    { valor: "visao", rotulo: "Visão geral" },
+    { valor: "visao", rotulo: "Visão geral", fixa: true },
     { valor: "perfil", rotulo: "Perfil e categoria", papeis: ["admin", "parcerias", "consultor", "comercial"] },
     { valor: "nossa-parceria", rotulo: "Nossa parceria", papeis: PAPEIS_V2.nossaParceria },
     { valor: "ficha", rotulo: "Ficha de apresentação", papeis: ["admin", "parcerias", "consultor", "comercial"] },
@@ -76,42 +76,41 @@ export default function FichaParceiro() {
   return (
     <div className="min-w-0">
       <CabecalhoFicha parceiro={p} estrategico={!!interno.data?.estrategico} />
-      <Tabs value={aba} onValueChange={(v) => setParams({ aba: v }, { replace: true })}>
-        <TabsList className="mb-4 h-auto w-full flex-wrap justify-start gap-1">
-          {abas.map((a) => <TabsTrigger key={a.valor} value={a.valor}>{a.rotulo}</TabsTrigger>)}
-        </TabsList>
-
-        <TabsContent value="visao" className="space-y-4">
-          <div className="grid gap-4 xl:grid-cols-2">
-            <div className="min-w-0 space-y-4">
-              <DadosEmpresa parceiro={p} />
-              <CategoriasParceiro parceiro={p} />
+      <NavegacaoSecoes rotulo="abas" secoes={abas.map((a) => ({ id: a.valor, rotulo: a.rotulo, fixa: a.fixa }))} ativa={aba}
+        onChange={(v) => setParams({ aba: v }, { replace: true })}>
+        {aba === "visao" && (
+          <div className="space-y-4">
+            <div className="grid gap-4 2xl:grid-cols-2">
+              <div className="min-w-0 space-y-4">
+                <DadosEmpresa parceiro={p} />
+                <CategoriasParceiro parceiro={p} />
+              </div>
+              <div className="min-w-0 space-y-4">
+                <Classificacao parceiro={p} />
+                <StatusAtividade parceiro={p} />
+                {leInterno(papel) && <ResumoAtividades parceiroId={p.id} />}
+              </div>
             </div>
-            <div className="min-w-0 space-y-4">
-              <Classificacao parceiro={p} />
-              <StatusAtividade parceiro={p} />
-              {leInterno(papel) && <ResumoAtividades parceiroId={p.id} />}
-            </div>
+            {leInterno(papel) && <DadosInternos parceiroId={p.id} />}
+            {veComissao && <InstrumentoParceiro parceiroId={p.id} />}
           </div>
-          {leInterno(papel) && <DadosInternos parceiroId={p.id} />}
-          {veComissao && <InstrumentoParceiro parceiroId={p.id} />}
-        </TabsContent>
-        <TabsContent value="perfil"><AbaPerfil parceiro={p} /></TabsContent>
-        <TabsContent value="ficha"><AbaFichaApresentacao parceiro={p} /></TabsContent>
-        <TabsContent value="contatos"><AbaContatos parceiroId={p.id} /></TabsContent>
-        <TabsContent value="linha-do-tempo"><AbaLinhaTempo parceiro={p} /></TabsContent>
-        <TabsContent value="contrato"><AbaContrato parceiroId={p.id} /></TabsContent>
-        <TabsContent value="contrapartidas"><AbaContrapartidas parceiroId={p.id} /></TabsContent>
-        <TabsContent value="indicacoes"><AbaIndicacoes parceiroId={p.id} /></TabsContent>
-        <TabsContent value="documentos"><AbaDocumentos parceiro={p} /></TabsContent>
-        <TabsContent value="nossa-parceria"><AbaNossaParceria parceiro={p} /></TabsContent>
-        <TabsContent value="scorecard"><AbaScorecard parceiro={p} /></TabsContent>
-        <TabsContent value="nivel"><AbaNivel parceiro={p} /></TabsContent>
-        <TabsContent value="onboarding"><AbaOnboarding parceiro={p} /></TabsContent>
-        <TabsContent value="acoes"><AbaAcoesConjuntas parceiroId={p.id} /></TabsContent>
-        <TabsContent value="maturidade"><AbaMaturidade parceiroId={p.id} /></TabsContent>
-        <TabsContent value="desligamento"><AbaDesligamento parceiro={p} /></TabsContent>
-      </Tabs>
+        )}
+        {aba === "perfil" && <AbaPerfil parceiro={p} />}
+        {aba === "ficha" && <AbaFichaApresentacao parceiro={p} />}
+        {aba === "contatos" && <AbaContatos parceiroId={p.id} />}
+        {aba === "linha-do-tempo" && <AbaLinhaTempo parceiro={p} />}
+        {aba === "contrato" && <AbaContrato parceiroId={p.id} />}
+        {aba === "contrapartidas" && <AbaContrapartidas parceiroId={p.id} />}
+        {aba === "indicacoes" && <AbaIndicacoes parceiroId={p.id} />}
+        {aba === "documentos" && <AbaDocumentos parceiro={p} />}
+        {aba === "nossa-parceria" && <AbaNossaParceria parceiro={p} />}
+        {aba === "scorecard" && <AbaScorecard parceiro={p} />}
+        {aba === "nivel" && <AbaNivel parceiro={p} />}
+        {aba === "onboarding" && <AbaOnboarding parceiro={p} />}
+        {aba === "acoes" && <AbaAcoesConjuntas parceiroId={p.id} />}
+        {aba === "maturidade" && <AbaMaturidade parceiroId={p.id} />}
+        {aba === "desligamento" && <AbaDesligamento parceiro={p} />}
+      </NavegacaoSecoes>
     </div>
   );
 }
