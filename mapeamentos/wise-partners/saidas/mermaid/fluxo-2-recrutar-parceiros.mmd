@@ -1,0 +1,37 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Empresa mapeada"]):::declarado
+      n_s1[["Qualificar empresa mapeada"]]:::declarado
+      n_g1{"Empresa atende ao IPP?"}:::declarado
+      n_s2[["Abordar prospect"]]:::declarado
+      n_e1>"Resposta do prospect"]:::declarado
+      n_s3[["Apresentar o programa em reunião"]]:::declarado
+      n_g2{"Prospect quer seguir?"}:::hipotese
+      n_s4[["Nutrir prospect"]]:::declarado
+      n_s5[["Formalizar a parceria"]]:::declarado
+      n_f1(["Empresa não elegível"]):::declarado
+      n_f2(["Prospect sem interesse"]):::declarado
+      n_f3(["Termo assinado"]):::declarado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+    end
+    ext_X1[/"Empresa prospectada"/]
+    n_i1 --> n_s1
+    n_s1 --> n_g1
+    n_g1 -->|Sim| n_s2
+    n_g1 -->|Não| n_f1
+    n_s2 --> n_e1
+    n_e1 --> n_s3
+    n_s3 --> n_g2
+    n_g2 -->|Sim| n_s5
+    n_g2 -->|Não| n_f2
+    n_g2 -->|Agora não| n_s4
+    n_s4 --> n_s3
+    n_s5 --> n_f3
+    n_s2 -.->|Abordagem| ext_X1
+    ext_X1 -.->|Resposta| n_e1
+    n_s5 -.->|Minuta do termo| ext_X1

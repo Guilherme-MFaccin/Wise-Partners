@@ -1,0 +1,212 @@
+{
+  "schema": "mapa-processos/1.0",
+  "organizacao": {
+    "nome": "Grafite Embalagens (exemplo fictício)",
+    "slug": "grafite-embalagens",
+    "descricao": "Fabricante fictícia de caixas de papelão sob medida, usada só para demonstrar as saídas da skill.",
+    "setor": "Indústria de embalagens",
+    "objetivo_do_mapeamento": "Documentar como a empresa funciona hoje para preparar a implantação de um CRM.",
+    "escopo": {"inclui": ["Toda a operação da fábrica de Maringá"], "exclui": ["Projetos de engenharia de novos produtos"]},
+    "patrocinador": "PE-01",
+    "consultor": "Consultor Wise Makers",
+    "niveis": ["Organização", "Macroprocesso", "Processo", "Subprocesso", "Atividade", "Tarefa"],
+    "criado_em": "2026-10-01",
+    "atualizado_em": "2026-10-28"
+  },
+  "configuracao": {},
+  "modelo_operacional": {
+    "integracao": "alta",
+    "padronizacao": "baixa",
+    "tipo": "coordenacao",
+    "justificativa": "Uma única fábrica; Comercial e Produção dependem dos mesmos dados de pedido (EV-0002), mas cada área decide seu jeito de trabalhar (EV-0005).",
+    "status": "declarado",
+    "evidencias": ["EV-0002", "EV-0005"]
+  },
+  "fatos": [
+    {"id": "F-001", "tema": "oferta", "texto": "Vende caixas de papelão ondulado sob medida e uma linha de caixas padrão de prateleira.", "status": "confirmado", "evidencias": ["EV-0001", "EV-0002"]},
+    {"id": "F-002", "tema": "cliente", "texto": "Clientes são indústrias de alimentos e e-commerces da região Sul, com pedidos mínimos de 500 unidades.", "status": "declarado", "evidencias": ["EV-0002"]},
+    {"id": "F-003", "tema": "proposta_de_valor", "texto": "Prazo de entrega de 10 dias úteis para caixa sob medida, metade do prazo dos concorrentes.", "status": "declarado", "evidencias": ["EV-0002"]},
+    {"id": "F-004", "tema": "canal", "texto": "Pedidos chegam por WhatsApp e e-mail do vendedor interno; não há representantes.", "status": "confirmado", "evidencias": ["EV-0002", "EV-0006"]},
+    {"id": "F-005", "tema": "receita", "texto": "Receita por pedido, faturado na expedição, com boleto de 28 dias.", "status": "declarado", "evidencias": ["EV-0009"]},
+    {"id": "F-006", "tema": "regulacao", "texto": "Embalagens para alimentos exigem laudo de conformidade do papel.", "status": "hipotese", "evidencias": []}
+  ],
+  "ofertas": [
+    {"id": "OF-01", "nome": "Caixas sob medida", "tipo": "produto", "clientes": ["Indústrias de alimentos", "E-commerces"], "canais": ["WhatsApp", "E-mail"], "status": "confirmado", "evidencias": ["EV-0001", "EV-0002"]},
+    {"id": "OF-02", "nome": "Caixas padrão de prateleira", "tipo": "produto", "clientes": ["E-commerces"], "canais": ["E-mail"], "status": "declarado", "evidencias": ["EV-0001"]}
+  ],
+  "cadeias_de_valor": [
+    {"id": "CV-01", "nome": "Do pedido de orçamento à caixa entregue", "gatilho": "Cliente pede orçamento", "valor": "Caixa sob medida entregue no prazo", "stakeholder": "Cliente industrial", "ofertas": ["OF-01"],
+     "etapas": [
+       {"nome": "Orçar", "processos": ["P-05"]},
+       {"nome": "Fechar pedido", "processos": ["P-06"]},
+       {"nome": "Programar e fabricar", "processos": ["P-07", "P-08"]},
+       {"nome": "Entregar e faturar", "processos": ["P-04"]}
+     ],
+     "status": "declarado", "evidencias": ["EV-0002"]}
+  ],
+  "areas": [
+    {"id": "AR-01", "nome": "Diretoria", "status": "confirmado", "evidencias": ["EV-0001", "EV-0002"]},
+    {"id": "AR-02", "nome": "Comercial", "status": "confirmado", "evidencias": ["EV-0001", "EV-0006"]},
+    {"id": "AR-03", "nome": "Produção", "status": "declarado", "evidencias": ["EV-0001"]},
+    {"id": "AR-04", "nome": "Financeiro", "status": "declarado", "evidencias": ["EV-0009"]}
+  ],
+  "papeis": [
+    {"id": "PA-01", "nome": "Diretora geral", "area": "AR-01", "status": "confirmado", "evidencias": ["EV-0001", "EV-0002"]},
+    {"id": "PA-02", "nome": "Vendedor interno", "area": "AR-02", "status": "confirmado", "evidencias": ["EV-0002", "EV-0006"]},
+    {"id": "PA-03", "nome": "Orçamentista", "area": "AR-02", "status": "declarado", "evidencias": ["EV-0006"]},
+    {"id": "PA-04", "nome": "Programador de produção (PCP)", "area": "AR-03", "status": "declarado", "evidencias": ["EV-0001"]},
+    {"id": "PA-05", "nome": "Analista financeiro", "area": "AR-04", "status": "declarado", "evidencias": ["EV-0009"]}
+  ],
+  "pessoas": [
+    {"id": "PE-01", "nome": "Marta Ribeiro", "cargo": "Diretora geral", "papeis": ["PA-01"], "perfil": "lideranca", "contato": "", "sabe_sobre": ["P-01", "P-02"]},
+    {"id": "PE-02", "nome": "Rafael Souza", "cargo": "Vendedor interno", "papeis": ["PA-02"], "perfil": "operacao", "contato": "", "sabe_sobre": ["P-05", "P-06"], "indicado_por": "PE-01"},
+    {"id": "PE-03", "nome": "Lia Matos", "cargo": "Orçamentista", "papeis": ["PA-03"], "perfil": "operacao", "contato": "", "sabe_sobre": ["P-05"], "indicado_por": "PE-02"},
+    {"id": "PE-04", "nome": "Sônia Alves", "cargo": "Analista financeira", "papeis": ["PA-05"], "perfil": "operacao", "contato": "", "sabe_sobre": ["P-09", "P-10"], "indicado_por": "PE-01"}
+  ],
+  "sistemas": [
+    {"id": "SI-01", "nome": "ERP Bling", "tipo": "ERP", "status": "declarado", "evidencias": ["EV-0009"]},
+    {"id": "SI-02", "nome": "Planilha de orçamentos", "tipo": "Planilha", "status": "confirmado", "evidencias": ["EV-0006", "EV-0007"]},
+    {"id": "SI-03", "nome": "WhatsApp Business", "tipo": "Mensagens", "status": "confirmado", "evidencias": ["EV-0002", "EV-0006"]}
+  ],
+  "objetos": [
+    {"id": "OB-01", "nome": "Orçamento", "ciclo": {"cria": "P-05", "usa": ["P-06"], "encerra": "P-06"}, "status": "declarado", "evidencias": ["EV-0006"]},
+    {"id": "OB-02", "nome": "Pedido", "ciclo": {"cria": "P-06", "usa": ["P-07", "P-08", "P-04"], "encerra": null}, "status": "declarado", "evidencias": ["EV-0002"]}
+  ],
+  "processos": [
+    {"id": "P-01", "nome": "Planejar a estratégia anual", "nivel": 1, "pai": null, "tipo": "gestao", "ordem": 1,
+     "descricao": "Definir metas de vendas e investimentos do ano.", "dono": "PA-01", "status": "declarado", "evidencias": ["EV-0002"]},
+    {"id": "P-02", "nome": "Vender embalagens sob medida", "nivel": 1, "pai": null, "tipo": "finalistico", "ordem": 1,
+     "descricao": "Transformar pedidos de orçamento em pedidos fechados.", "dono": "PA-02", "status": "confirmado", "evidencias": ["EV-0002", "EV-0006"]},
+    {"id": "P-03", "nome": "Produzir pedidos", "nivel": 1, "pai": null, "tipo": "finalistico", "ordem": 2,
+     "descricao": "Fabricar as caixas dos pedidos fechados.", "dono": "PA-04", "status": "declarado", "evidencias": ["EV-0001"]},
+    {"id": "P-04", "nome": "Entregar e faturar pedidos", "nivel": 1, "pai": null, "tipo": "finalistico", "ordem": 3,
+     "descricao": "Expedir as caixas e emitir a nota fiscal.", "dono": null, "status": "declarado", "evidencias": ["EV-0002"]},
+    {"id": "P-05", "nome": "Atender solicitação de orçamento", "nivel": 2, "pai": "P-02", "ordem": 1,
+     "descricao": "Receber o pedido de orçamento do cliente e devolver o preço e o prazo.", "dono": "PA-02", "participantes": ["PA-03"],
+     "gatilho": "Cliente pede orçamento por WhatsApp ou e-mail", "entradas": [{"nome": "Pedido de orçamento", "de": "EXT:Cliente"}],
+     "saidas": [{"nome": "Orçamento enviado", "para": "P-06"}], "cliente": "Cliente que pediu o orçamento",
+     "sistemas": ["SI-02", "SI-03"], "frequencia": "Cerca de 40 por semana", "dores": ["Medidas chegam incompletas em metade dos casos"],
+     "indicadores": [{"nome": "Tempo de resposta do orçamento", "meta": "até 24 h"}],
+     "status": "declarado", "evidencias": ["EV-0006", "EV-0007"],
+     "fluxo": {
+       "status": "declarado", "evidencias": ["EV-0006", "EV-0007"],
+       "raias": ["PA-02", "PA-03"],
+       "externos": [{"id": "X1", "nome": "Cliente"}],
+       "nos": [
+         {"id": "i1", "tipo": "inicio", "nome": "Pedido de orçamento recebido", "raia": "PA-02", "gatilho": "mensagem"},
+         {"id": "t1", "tipo": "tarefa", "nome": "Registrar solicitação", "raia": "PA-02", "sistema": "SI-03", "modo": "sistema"},
+         {"id": "g1", "tipo": "decisao", "nome": "Medidas completas?", "raia": "PA-02"},
+         {"id": "t2", "tipo": "tarefa", "nome": "Pedir medidas ao cliente", "raia": "PA-02"},
+         {"id": "e1", "tipo": "espera", "nome": "Medidas recebidas", "raia": "PA-02", "evento": "mensagem"},
+         {"id": "t3", "tipo": "tarefa", "nome": "Calcular orçamento", "raia": "PA-03", "sistema": "SI-02", "modo": "sistema"},
+         {"id": "t4", "tipo": "tarefa", "nome": "Enviar orçamento", "raia": "PA-02"},
+         {"id": "f1", "tipo": "fim", "nome": "Orçamento enviado", "raia": "PA-02", "gatilho": "mensagem"}
+       ],
+       "ligacoes": [
+         {"de": "i1", "para": "t1"},
+         {"de": "t1", "para": "g1"},
+         {"de": "g1", "para": "t3", "rotulo": "Sim"},
+         {"de": "g1", "para": "t2", "rotulo": "Não"},
+         {"de": "t2", "para": "e1"},
+         {"de": "e1", "para": "t3"},
+         {"de": "t3", "para": "t4"},
+         {"de": "t4", "para": "f1"}
+       ],
+       "mensagens": [
+         {"de": "X1", "para": "i1", "rotulo": "Pedido de orçamento"},
+         {"de": "t2", "para": "X1", "rotulo": "Pedido de medidas"},
+         {"de": "X1", "para": "e1", "rotulo": "Medidas"},
+         {"de": "t4", "para": "X1", "rotulo": "Orçamento"}
+       ]
+     }},
+    {"id": "P-06", "nome": "Negociar e fechar pedido", "nivel": 2, "pai": "P-02", "ordem": 2,
+     "descricao": "Acompanhar o orçamento enviado até o cliente aprovar ou desistir.", "dono": "PA-02",
+     "gatilho": "Orçamento enviado", "entradas": [{"nome": "Orçamento enviado", "de": "P-05"}],
+     "saidas": [{"nome": "Pedido fechado", "para": "P-07"}], "cliente": "Produção",
+     "status": "declarado", "hipoteses": ["cliente"], "evidencias": ["EV-0006"]},
+    {"id": "P-07", "nome": "Programar a produção", "nivel": 2, "pai": "P-03", "ordem": 1,
+     "descricao": "", "dono": "PA-04", "status": "hipotese", "evidencias": []},
+    {"id": "P-08", "nome": "Fabricar caixas", "nivel": 2, "pai": "P-03", "ordem": 2,
+     "descricao": "Cortar, vincar, imprimir e colar as caixas da ordem de produção.", "dono": "PA-04",
+     "gatilho": "Ordem de produção liberada", "saidas": [{"nome": "Caixas prontas", "para": "P-04"}], "cliente": "Expedição",
+     "fluxo_dispensado": "DE-01: nesta fase, passo a passo só do comercial e da cobrança",
+     "status": "declarado", "evidencias": ["EV-0001"]},
+    {"id": "P-09", "nome": "Gerir finanças", "nivel": 1, "pai": null, "tipo": "suporte", "ordem": 1,
+     "descricao": "Cuidar de contas a receber, contas a pagar e caixa.", "dono": "PA-05", "status": "declarado", "evidencias": ["EV-0009"]},
+    {"id": "P-10", "nome": "Cobrar clientes", "nivel": 2, "pai": "P-09", "ordem": 1,
+     "descricao": "Garantir que os boletos vencidos sejam pagos.", "dono": "PA-05",
+     "gatilho": "Boleto vence sem pagamento", "saidas": [{"nome": "Título quitado ou em negociação", "para": "EXT:Diretoria"}], "cliente": "Diretoria",
+     "status": "declarado", "evidencias": ["EV-0009"],
+     "fluxo": {
+       "status": "hipotese", "evidencias": [],
+       "raias": ["PA-05"],
+       "nos": [
+         {"id": "i1", "tipo": "inicio", "nome": "Boleto vencido", "raia": "PA-05", "gatilho": "tempo"},
+         {"id": "t1", "tipo": "tarefa", "nome": "Conferir pagamentos no ERP", "raia": "PA-05", "sistema": "SI-01", "modo": "sistema"},
+         {"id": "g1", "tipo": "decisao", "nome": "Foi pago?", "raia": "PA-05"},
+         {"id": "t2", "tipo": "tarefa", "nome": "Enviar lembrete de cobrança", "raia": "PA-05"},
+         {"id": "e1", "tipo": "espera", "nome": "5 dias", "raia": "PA-05", "evento": "tempo"},
+         {"id": "g2", "tipo": "decisao", "nome": "Pago depois do lembrete?", "raia": "PA-05"},
+         {"id": "t3", "tipo": "tarefa", "nome": "Encaminhar para negociação", "raia": "PA-05"},
+         {"id": "f1", "tipo": "fim", "nome": "Título quitado", "raia": "PA-05"},
+         {"id": "f2", "tipo": "fim", "nome": "Cobrança em negociação", "raia": "PA-05"}
+       ],
+       "ligacoes": [
+         {"de": "i1", "para": "t1"},
+         {"de": "t1", "para": "g1"},
+         {"de": "g1", "para": "f1", "rotulo": "Sim"},
+         {"de": "g1", "para": "t2", "rotulo": "Não"},
+         {"de": "t2", "para": "e1"},
+         {"de": "e1", "para": "g2"},
+         {"de": "g2", "para": "f1", "rotulo": "Sim"},
+         {"de": "g2", "para": "t2", "rotulo": "Não, menos de 3 lembretes"},
+         {"de": "g2", "para": "t3", "rotulo": "Não, 3 lembretes"},
+         {"de": "t3", "para": "f2"}
+       ]
+     }},
+    {"id": "P-11", "nome": "Comprar insumos", "nivel": 1, "pai": null, "tipo": "suporte", "ordem": 2,
+     "descricao": "", "dono": null, "status": "hipotese", "evidencias": []},
+    {"id": "P-12", "nome": "Gerir pessoas", "nivel": 1, "pai": null, "tipo": "suporte", "ordem": 3,
+     "descricao": "Contratar, pagar e desligar funcionários.", "dono": null, "status": "contestado", "evidencias": ["EV-0010", "EV-0011"]}
+  ],
+  "evidencias": [
+    {"id": "EV-0001", "tipo": "documento", "fonte": "Organograma 2026.pdf", "pessoa": null, "data": "2026-10-02", "trecho": "Diretoria; Comercial (vendas e orçamentos); Produção (PCP e fábrica); Financeiro", "local": "página 1"},
+    {"id": "EV-0002", "tipo": "formulario", "fonte": "FO-01: Rodada 1, modelo de negócio", "pessoa": "PE-01", "data": "2026-10-06", "trecho": "Vendemos caixa sob medida para indústria de alimento e e-commerce do Sul. O cliente manda as medidas no WhatsApp do Rafael, a Lia calcula e a gente entrega em 10 dias úteis.", "local": "FO-01/Q-0001"},
+    {"id": "EV-0005", "tipo": "formulario", "fonte": "FO-01: Rodada 1, modelo de negócio", "pessoa": "PE-01", "data": "2026-10-06", "trecho": "Cada área tem seu jeito; a produção usa a planilha dela e o comercial a dele.", "local": "FO-01/Q-0004"},
+    {"id": "EV-0006", "tipo": "formulario", "fonte": "FO-02: Rodada 2, Comercial", "pessoa": "PE-02", "data": "2026-10-14", "trecho": "Recebo o pedido no WhatsApp, anoto e vejo se tem todas as medidas. Se faltar, peço ao cliente. Com as medidas, passo para a Lia, que calcula na planilha. Eu envio o orçamento e depois fico acompanhando até o cliente responder.", "local": "FO-02/Q-0010"},
+    {"id": "EV-0007", "tipo": "formulario", "fonte": "FO-02: Rodada 2, Comercial", "pessoa": "PE-03", "data": "2026-10-15", "trecho": "Recebo as medidas do Rafael e calculo o preço na planilha de orçamentos. Devolvo para ele enviar.", "local": "FO-02/Q-0010"},
+    {"id": "EV-0008", "tipo": "validacao", "fonte": "FO-03: Validação do orçamento", "pessoa": "PE-03", "data": "2026-10-22", "trecho": "Sim, está correto: a Lia calcula o orçamento na planilha.", "local": "FO-03/Q-0020"},
+    {"id": "EV-0009", "tipo": "entrevista", "fonte": "Conversa com o financeiro", "pessoa": "PE-04", "data": "2026-10-20", "trecho": "Faturamos na expedição pelo Bling, boleto de 28 dias. Quando vence, eu cobro.", "local": "anotações da conversa"},
+    {"id": "EV-0010", "tipo": "formulario", "fonte": "FO-02: Rodada 2, Financeiro", "pessoa": "PE-04", "data": "2026-10-16", "trecho": "Quem contrata e demite é a Marta, eu só faço a folha.", "local": "FO-02/Q-0013"},
+    {"id": "EV-0011", "tipo": "formulario", "fonte": "FO-01: Rodada 1, modelo de negócio", "pessoa": "PE-01", "data": "2026-10-06", "trecho": "A parte de pessoal fica toda com o financeiro.", "local": "FO-01/Q-0005"}
+  ],
+  "perguntas": [
+    {"id": "Q-0001", "texto": "O que a empresa vende e para quem? Conte com suas palavras.", "tipo": "aberta", "alvo": ["NEGOCIO.oferta", "NEGOCIO.cliente"], "para": ["PE-01"], "rodada": 1, "formulario": "FO-01", "status": "respondida", "respostas": ["EV-0002"]},
+    {"id": "Q-0030", "texto": "Como o pedido é passado para a produção depois que o cliente aprova o orçamento? Quem recebe e onde fica registrado?", "tipo": "aberta", "alvo": ["P-07", "P-07.descricao", "P-06.cliente"], "para": ["PE-02"], "rodada": 3, "formulario": "FO-04", "status": "em_formulario"},
+    {"id": "Q-0031", "texto": "Quem compra papel, cola e tinta para a fábrica? Com que frequência?", "tipo": "aberta", "alvo": ["P-11", "P-11.dono"], "para": ["PE-01"], "rodada": 3, "formulario": "FO-04", "status": "em_formulario"},
+    {"id": "Q-0032", "texto": "Quando um boleto vence sem pagamento, o que você faz primeiro? E se o cliente continuar sem pagar?", "tipo": "aberta", "alvo": ["P-10.fluxo"], "para": ["PE-04"], "rodada": 3, "formulario": "FO-04", "status": "em_formulario", "bloco": "Cobrança"},
+    {"id": "Q-0033", "texto": "Quem decide e conduz as contratações e os desligamentos de funcionários?", "tipo": "escolha", "opcoes": ["A diretora geral", "O financeiro", "Os dois, cada um com uma parte"], "alvo": ["CT-01", "P-12.dono"], "para": ["PE-01", "PE-04"], "rodada": 3, "formulario": "FO-04", "status": "em_formulario", "bloco": "Pessoas"},
+    {"id": "Q-0034", "texto": "Embalagens para alimentos exigem algum laudo ou certificação do papel?", "tipo": "escolha", "opcoes": ["Sim, sempre", "Só para alguns clientes", "Não"], "alvo": ["F-006"], "para": ["PE-01"], "rodada": 3, "formulario": "FO-04", "status": "em_formulario"}
+  ],
+  "formularios": [
+    {"id": "FO-01", "titulo": "Rodada 1: como a Grafite funciona", "rodada": 1, "para": ["PE-01"], "canal": "google_forms", "perguntas": ["Q-0001"], "status": "respondido", "enviado_em": "2026-10-03"},
+    {"id": "FO-04", "titulo": "Rodada 3: pontos que faltam", "rodada": 3, "para": ["PE-01", "PE-02", "PE-04"], "canal": "google_forms", "perguntas": ["Q-0030", "Q-0031", "Q-0032", "Q-0033", "Q-0034"], "status": "rascunho",
+     "introducao": "Faltam poucos pontos para fechar o mapa da Grafite. Responda só o que for do seu dia a dia; o resto pode deixar em branco."}
+  ],
+  "contradicoes": [
+    {"id": "CT-01", "descricao": "Quem cuida de contratação e desligamento: a diretora diz que é o financeiro (EV-0011), o financeiro diz que é a diretora (EV-0010).", "elemento": "P-12", "evidencias": ["EV-0010", "EV-0011"], "status": "aberta", "pergunta": "Q-0033"}
+  ],
+  "decisoes": [
+    {"id": "DE-01", "data": "2026-10-02", "texto": "Mapear até o nível 2 em toda a empresa e detalhar o passo a passo só do comercial e da cobrança nesta fase.", "por": "PE-01"}
+  ],
+  "glossario": [
+    {"id": "GL-01", "termo": "OP", "definicao": "Ordem de produção: o documento que libera a fabricação de um pedido.", "sinonimos": ["ordem"]}
+  ],
+  "ideias": [
+    {"id": "ID-01", "texto": "Formulário padrão de medidas para o cliente preencher antes do orçamento.", "processo": "P-05", "evidencias": ["EV-0006"]}
+  ],
+  "historico": [
+    {"data": "2026-10-01", "evento": "Mapeamento iniciado"},
+    {"data": "2026-10-06", "evento": "Rodada 1 respondida pela diretora"}
+  ]
+}

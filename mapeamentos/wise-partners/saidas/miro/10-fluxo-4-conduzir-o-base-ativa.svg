@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_15" transform="translate(3248,5932)" data-frame="4 Conduzir o Base Ativa">
+<rect data-type="frame" x="0" y="0" width="3908" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">4 Conduzir o Base Ativa</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="4 Conduzir o Base Ativa">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Parceiro de pacote A assinado"]):::declarado
+      n_g1{"Há horas disponíveis?"}:::declarado
+      n_t1["Colocar o parceiro na fila com a data prevista"]:::declarado
+      n_e1&gt;"Vez do parceiro na fila"]:::declarado
+      n_t2["Diagnosticar a base do parceiro"]:::declarado
+      n_t4["Definir estrutura e anúncio da comunidade"]:::declarado
+      n_t5["Definir oferta e nutrição"]:::declarado
+      n_t6["Planejar formação e evento"]:::declarado
+      n_t7["Preparar roteiro, divulgação e logística do evento"]:::declarado
+      n_t9["Emitir o certificado metodológico"]:::declarado
+      n_f1(["Comunidade validada"]):::declarado
+    end
+    subgraph raia_PA_06 ["Responsável nomeado no parceiro"]
+      n_t3["Categorizar a carteira"]:::declarado
+      n_t8["Promover o evento da comunidade"]:::declarado
+    end
+    n_i1 --&gt; n_g1
+    n_g1 --&gt;|Sim| n_t2
+    n_g1 --&gt;|Não| n_t1
+    n_t1 --&gt; n_e1
+    n_e1 --&gt; n_t2
+    n_t2 --&gt; n_t3
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_t5
+    n_t5 --&gt; n_t6
+    n_t6 --&gt; n_t7
+    n_t7 --&gt; n_t8
+    n_t8 --&gt; n_t9
+    n_t9 --&gt; n_f1
+
+</foreignObject>
+</g></svg>

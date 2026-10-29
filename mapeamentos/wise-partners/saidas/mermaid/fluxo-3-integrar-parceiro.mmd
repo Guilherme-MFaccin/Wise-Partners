@@ -1,0 +1,31 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Termo assinado"]):::contestado
+      n_t1["Mover a negociação para Onboarding"]:::contestado
+      n_t2["Criar o grupo de WhatsApp"]:::contestado
+      n_t3["Solicitar logo, cores e dados cadastrais"]:::contestado
+      n_s1[["Entregar o primeiro valor do pacote"]]:::contestado
+      n_s2[["Conduzir o plano de 90 dias"]]:::contestado
+      n_g1{"Parceiro ativado em 90 dias?"}:::contestado
+      n_t4["Estender o plano até 120 dias"]:::contestado
+      n_g2{"Parceiro ativado em 120 dias?"}:::contestado
+      n_f1(["Parceiro ativado"]):::contestado
+      n_f2(["Parceiro não ativado"]):::contestado
+    end
+    ext_X1[/"Empresa parceira"/]
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_s1
+    n_s1 --> n_s2
+    n_s2 --> n_g1
+    n_g1 -->|Sim| n_f1
+    n_g1 -->|Não| n_t4
+    n_t4 --> n_g2
+    n_g2 -->|Sim| n_f1
+    n_g2 -->|Não| n_f2
+    n_t3 -.->|Pedido de logo, cores e dados| ext_X1

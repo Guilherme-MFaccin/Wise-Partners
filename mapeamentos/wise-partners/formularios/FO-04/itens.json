@@ -1,0 +1,163 @@
+[
+  {
+    "id": "_nome",
+    "titulo": "Seu nome",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_funcao",
+    "titulo": "Sua função ou cargo",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_area",
+    "titulo": "Área ou equipe em que você trabalha",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_email",
+    "titulo": "Seu e-mail (opcional, só para tirarmos dúvidas)",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "Q-0024",
+    "titulo": "Vocês já pagaram alguma comissão a um parceiro do Wise Partners?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Sim",
+      "Não",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0025",
+    "titulo": "Conte o último pagamento de comissão por indicação (a um parceiro ou a outro fornecedor): quem pediu, o que foi conferido antes e como foi pago.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0026",
+    "titulo": "Como vocês ficam sabendo que o primeiro pagamento do cliente indicado foi compensado?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Pelo extrato ou pelo sistema financeiro",
+      "O comercial avisa",
+      "O Guilherme avisa",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0027",
+    "titulo": "O que precisa estar em mãos antes de pagar a comissão?",
+    "tipo": "multipla",
+    "opcoes": [
+      "Nota fiscal do parceiro",
+      "Contrato assinado com o parceiro",
+      "Aprovação do diretor",
+      "Aprovação do Guilherme",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0028",
+    "titulo": "Depois de receber a nota fiscal, em quantos dias o pagamento costuma sair?",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0029",
+    "titulo": "Em qual sistema o pagamento é registrado?",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Comissão ao parceiro"
+  },
+  {
+    "id": "Q-0011",
+    "titulo": "Quem responde pelo pagamento da comissão ao parceiro?",
+    "tipo": "escolha",
+    "opcoes": [
+      "O financeiro da Wise Makers",
+      "O financeiro da empresa que fechou o cliente (Wise, Tríade ou Swallow)",
+      "O Guilherme",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Indicações e comissão"
+  },
+  {
+    "id": "Q-0023",
+    "titulo": "Quando um cliente indicado fecha e paga a primeira mensalidade, como o financeiro fica sabendo que há comissão a pagar ao parceiro?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Eu aviso",
+      "O Guilherme avisa",
+      "O financeiro vê no sistema",
+      "Ainda não aconteceu",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Registro e retorno"
+  },
+  {
+    "id": "_indicacoes",
+    "titulo": "Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_documentos",
+    "titulo": "Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_comentarios",
+    "titulo": "Algo importante que não perguntamos?",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  }
+]

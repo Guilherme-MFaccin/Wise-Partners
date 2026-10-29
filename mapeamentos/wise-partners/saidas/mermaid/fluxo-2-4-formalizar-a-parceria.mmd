@@ -1,0 +1,27 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Próximo passo combinado na reunião"]):::declarado
+      n_t1["Enviar a minuta do termo"]:::declarado
+      n_t3["Registrar o ok na negociação"]:::declarado
+      n_t4["Coletar a assinatura digital"]:::declarado
+      n_f1(["Termo assinado"]):::declarado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t2["Aprovar a assinatura"]:::declarado
+      n_g1{"Assinatura aprovada?"}:::declarado
+      n_f2(["Assinatura não aprovada"]):::hipotese
+    end
+    ext_X1[/"Empresa prospectada"/]
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_g1
+    n_g1 -->|Sim| n_t3
+    n_g1 -->|Não| n_f2
+    n_t3 --> n_t4
+    n_t4 --> n_f1
+    n_t1 -.->|Minuta do termo| ext_X1
+    n_t4 -.->|Termo para assinatura| ext_X1

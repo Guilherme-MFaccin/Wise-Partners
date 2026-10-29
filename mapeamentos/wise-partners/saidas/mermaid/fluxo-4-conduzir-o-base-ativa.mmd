@@ -1,0 +1,35 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Parceiro de pacote A assinado"]):::declarado
+      n_g1{"Há horas disponíveis?"}:::declarado
+      n_t1["Colocar o parceiro na fila com a data prevista"]:::declarado
+      n_e1>"Vez do parceiro na fila"]:::declarado
+      n_t2["Diagnosticar a base do parceiro"]:::declarado
+      n_t4["Definir estrutura e anúncio da comunidade"]:::declarado
+      n_t5["Definir oferta e nutrição"]:::declarado
+      n_t6["Planejar formação e evento"]:::declarado
+      n_t7["Preparar roteiro, divulgação e logística do evento"]:::declarado
+      n_t9["Emitir o certificado metodológico"]:::declarado
+      n_f1(["Comunidade validada"]):::declarado
+    end
+    subgraph raia_PA_06 ["Responsável nomeado no parceiro"]
+      n_t3["Categorizar a carteira"]:::declarado
+      n_t8["Promover o evento da comunidade"]:::declarado
+    end
+    n_i1 --> n_g1
+    n_g1 -->|Sim| n_t2
+    n_g1 -->|Não| n_t1
+    n_t1 --> n_e1
+    n_e1 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_t4
+    n_t4 --> n_t5
+    n_t5 --> n_t6
+    n_t6 --> n_t7
+    n_t7 --> n_t8
+    n_t8 --> n_t9
+    n_t9 --> n_f1

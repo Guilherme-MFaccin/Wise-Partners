@@ -1,0 +1,29 @@
+flowchart TB
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph cat_gestao ["Gestão"]
+    direction LR
+      P_01["1 Gerir o programa Wise Partners"]:::declarado
+    end
+    subgraph cat_finalistico ["Finalísticos"]
+    direction LR
+      P_06["2 Recrutar parceiros"]:::declarado
+      P_12["3 Integrar parceiro"]:::contestado
+      P_15["4 Conduzir o Base Ativa"]:::declarado
+      P_16["5 Manter o relacionamento com parceiros"]:::declarado
+      P_24["6 Gerir indicações"]:::declarado
+      P_30["7 Capacitar parceiros"]:::declarado
+      P_06 --> P_12
+      P_12 --> P_15
+      P_15 --> P_16
+      P_16 --> P_24
+      P_24 --> P_30
+    end
+    subgraph cat_suporte ["Suporte"]
+    direction LR
+      P_33["8 Manter a prateleira de RFP"]:::declarado
+    end
+    cat_gestao ~~~ cat_finalistico
+    cat_finalistico ~~~ cat_suporte

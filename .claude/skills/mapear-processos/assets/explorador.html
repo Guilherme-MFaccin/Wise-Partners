@@ -1,0 +1,787 @@
+<title>__TITULO__</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: cabeçalho com medidores, abas de visão, área principal e painel de detalhe à direita (vira folha inferior no celular). */
+:root {
+  --paper: #F3F5F7;
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFB;
+  --ink: #15202B;
+  --muted: #586472;
+  --line: #D8DEE5;
+  --accent: #1D5C8F;
+  --accent-soft: #E2EDF7;
+  --ok: #2F8F4E; --ok-bg: #DDF3E4;
+  --decl: #96690A; --decl-bg: #FFF1C2;
+  --hip: #727B86; --hip-bg: #FFFFFF;
+  --cont: #C0392B; --cont-bg: #FCE3E1;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0E141A; --surface: #161F28; --surface-2: #1B2530; --ink: #E5EAF0; --muted: #9AA6B3; --line: #2B3744;
+    --accent: #84B6E6; --accent-soft: #1A2B3B;
+    --ok: #63C584; --ok-bg: #15301F; --decl: #E3BA4F; --decl-bg: #33290E; --hip: #A0A9B3; --hip-bg: #161F28; --cont: #F08A7E; --cont-bg: #3A1A17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0E141A; --surface: #161F28; --surface-2: #1B2530; --ink: #E5EAF0; --muted: #9AA6B3; --line: #2B3744;
+  --accent: #84B6E6; --accent-soft: #1A2B3B;
+  --ok: #63C584; --ok-bg: #15301F; --decl: #E3BA4F; --decl-bg: #33290E; --hip: #A0A9B3; --hip-bg: #161F28; --cont: #F08A7E; --cont-bg: #3A1A17;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 40px; max-width: 1480px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; }
+h2 { font-size: 1.25rem; font-weight: 800; }
+h3 { font-size: 1rem; font-weight: 600; }
+.mono { font-family: var(--f-mono); font-size: 0.85em; }
+.muted { color: var(--muted); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Cabeçalho */
+header.topo { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: end; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; color: var(--muted); font-weight: 700; }
+.medidores { display: flex; gap: 18px; flex-wrap: wrap; }
+.medidor { min-width: 170px; }
+.medidor .rot { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); }
+.medidor .num { font-family: var(--f-display); font-weight: 800; font-size: 1.6rem; font-variant-numeric: tabular-nums; color: var(--ink); }
+.barra { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.barra > i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.barra.ok > i { background: var(--ok); }
+.contagens { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 99px; background: var(--surface); border: 1px solid var(--line); font-size: 0.8rem; white-space: nowrap; }
+.chip b { font-variant-numeric: tabular-nums; }
+
+/* Legenda e abas */
+.barra-nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin: 14px 0 16px; }
+nav.abas { display: flex; gap: 4px; flex-wrap: wrap; }
+nav.abas a { text-decoration: none; color: var(--muted); padding: 7px 12px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; }
+nav.abas a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+nav.abas a:hover:not([aria-current="page"]) { background: var(--accent-soft); color: var(--ink); }
+.legenda { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 0.78rem; color: var(--muted); }
+
+/* Selos de status */
+.selo { display: inline-flex; align-items: center; gap: 5px; padding: 1px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; border: 1.5px solid; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.04em; }
+.selo.confirmado { color: var(--ok); background: var(--ok-bg); border-color: var(--ok); }
+.selo.declarado { color: var(--decl); background: var(--decl-bg); border-color: var(--decl); }
+.selo.hipotese { color: var(--hip); background: var(--hip-bg); border-color: var(--hip); border-style: dashed; }
+.selo.contestado { color: var(--cont); background: var(--cont-bg); border-color: var(--cont); }
+.ponto { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; border: 1.5px solid; }
+.ponto.confirmado { background: var(--ok); border-color: var(--ok); }
+.ponto.declarado { background: var(--decl); border-color: var(--decl); }
+.ponto.hipotese { background: transparent; border-color: var(--hip); border-style: dashed; }
+.ponto.contestado { background: var(--cont); border-color: var(--cont); }
+
+/* Grade principal com painel */
+.grade { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start; }
+.grade.sem-painel { grid-template-columns: minmax(0, 1fr); }
+main { min-width: 0; }
+.cartao { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.secao + .secao { margin-top: 18px; }
+.titulo-secao { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+
+/* Cadeia de valor */
+.banda { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 14px; align-items: center; }
+.banda + .banda { margin-top: 10px; }
+.banda .nome-banda { font-family: var(--f-display); font-weight: 800; font-size: 1.05rem; }
+.banda .nome-banda small { display: block; font-family: var(--f-body); font-weight: 400; font-size: 0.75rem; color: var(--muted); }
+.fileira { display: flex; gap: 8px; flex-wrap: wrap; }
+.macro { text-align: left; cursor: pointer; background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 8px; padding: 10px 12px; min-width: 170px; flex: 1 1 170px; max-width: 280px; display: grid; gap: 6px; }
+.macro:hover { border-color: var(--accent); }
+.macro.sel { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-soft); }
+.macro .cab { display: flex; justify-content: space-between; gap: 6px; align-items: start; }
+.macro .nome { font-weight: 700; line-height: 1.25; }
+.macro .rodape { display: flex; justify-content: space-between; gap: 6px; font-size: 0.75rem; color: var(--muted); }
+.macro.confirmado { border-color: var(--ok); background: var(--ok-bg); }
+.macro.declarado { border-color: var(--decl); background: var(--decl-bg); }
+.macro.hipotese { border-style: dashed; border-color: var(--hip); background: var(--hip-bg); }
+.macro.contestado { border-color: var(--cont); background: var(--cont-bg); }
+.macro.chevron { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 12px 50%); padding-left: 24px; padding-right: 26px; border: none; }
+.macro.chevron.hipotese { background: repeating-linear-gradient(135deg, var(--hip-bg) 0 10px, var(--surface-2) 10px 20px); }
+.macro.chevron.sel, .macro.chevron:hover { filter: brightness(0.96); box-shadow: none; outline: 2px solid var(--accent); outline-offset: -2px; }
+.tag.papel { color: var(--decl); border-color: var(--decl); border-style: dashed; }
+.macro.chevron:first-child { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%); padding-left: 14px; }
+.cv { margin-top: 18px; }
+.cv-etapas { display: flex; gap: 0; overflow-x: auto; padding-bottom: 4px; }
+.cv-etapa { flex: 1 0 150px; padding: 10px 12px; border-top: 3px solid var(--accent); background: var(--surface-2); margin-right: 4px; }
+.cv-etapa .n { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); }
+.lnk { background: none; border: none; padding: 0; color: var(--accent); cursor: pointer; text-align: left; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Hierarquia */
+.ferramentas { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+.ferramentas input[type="search"] { flex: 1 1 220px; min-width: 0; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.btn { padding: 7px 12px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 700; }
+.btn:hover { border-color: var(--accent); }
+.btn.prim { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+a.btn { text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; }
+.filtro { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; padding: 4px 8px; border: 1px solid var(--line); border-radius: 99px; cursor: pointer; background: var(--surface); }
+.filtro input { margin: 0; }
+.arvore { list-style: none; margin: 0; padding: 0; }
+.arvore ul { list-style: none; margin: 0; padding-left: 22px; border-left: 1px dashed var(--line); margin-left: 9px; }
+.no { display: grid; grid-template-columns: 20px auto minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.no:hover { background: var(--accent-soft); }
+.no.sel { background: var(--accent-soft); outline: 1.5px solid var(--accent); }
+.no .seta { width: 20px; height: 20px; border: none; background: none; cursor: pointer; color: var(--muted); padding: 0; }
+.no .cod { font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted); }
+.no .nm { font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
+.no .nm small { font-weight: 400; color: var(--muted); }
+.no .tags { display: flex; gap: 4px; align-items: center; }
+.tag { font-size: 0.7rem; padding: 1px 6px; border-radius: 4px; background: var(--surface-2); border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.tag.falta { color: var(--cont); border-color: color-mix(in srgb, var(--cont) 40%, transparent); }
+.grupo-tipo { margin: 14px 0 4px; }
+
+/* Fluxos */
+.fluxos { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 14px; }
+.lista-fluxos { display: grid; gap: 6px; align-content: start; }
+.lista-fluxos button { text-align: left; padding: 8px 10px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; cursor: pointer; display: grid; gap: 2px; }
+.lista-fluxos button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.tela-bpmn { height: 460px; background: #FFFFFF; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; position: relative; }
+.tela-bpmn .aviso { position: absolute; inset: 0; display: grid; place-items: center; color: #586472; padding: 20px; text-align: center; }
+.frases { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 6px; }
+.frases li { padding: 8px 10px; background: var(--surface-2); border-radius: 8px; border-left: 3px solid var(--line); }
+.frases li.ini, .frases li.fim { border-left-color: var(--accent); }
+.acoes { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+
+/* Tabelas */
+.tabela-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+td.c { text-align: center; }
+.matriz th.rot { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap; height: 190px; text-transform: none; letter-spacing: 0; font-size: 0.78rem; }
+
+/* Negócio */
+.canvas { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.bloco { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; display: grid; gap: 8px; align-content: start; }
+.bloco.vazio { border-style: dashed; }
+.fato { display: grid; gap: 4px; font-size: 0.88rem; }
+.quadrante { display: grid; grid-template-columns: 22px repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, 96px) 24px; gap: 4px; max-width: 480px; font-size: 0.8rem; }
+.quadrante .q { background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; display: grid; align-content: space-between; }
+.quadrante .q.atual { background: var(--accent-soft); border: 2px solid var(--accent); }
+.quadrante .eixo { color: var(--muted); font-size: 0.72rem; display: grid; place-items: center; }
+.quadrante .eixo.v { writing-mode: vertical-rl; transform: rotate(180deg); grid-row: 1 / span 2; white-space: nowrap; }
+
+/* Painel de detalhe */
+aside.painel { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); max-height: calc(100vh - 24px); overflow: auto; }
+.painel .fechar { float: right; }
+.campo { display: grid; gap: 2px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.campo:last-child { border-bottom: none; }
+.campo .k { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; display: flex; gap: 6px; align-items: center; }
+.campo .v { overflow-wrap: anywhere; }
+.campo.falta .v { color: var(--cont); font-style: italic; }
+.campo.hip .v { color: var(--hip); font-style: italic; }
+.ev { border-left: 3px solid var(--line); padding: 6px 10px; margin: 6px 0; background: var(--surface-2); border-radius: 0 6px 6px 0; font-size: 0.86rem; }
+.ev q { quotes: "\201C" "\201D"; }
+.ev .fonte { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+.vazio-msg { color: var(--muted); font-style: italic; }
+.rodape-pag { margin-top: 28px; font-size: 0.78rem; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+@media (max-width: 1080px) {
+  .grade { grid-template-columns: minmax(0, 1fr); }
+  aside.painel { position: fixed; left: 0; right: 0; bottom: 0; top: auto; max-height: 70vh; border-radius: 14px 14px 0 0; z-index: 20; box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.18); padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+}
+@media (max-width: 720px) {
+  header.topo { grid-template-columns: minmax(0, 1fr); }
+  .banda { grid-template-columns: minmax(0, 1fr); }
+  .fluxos { grid-template-columns: minmax(0, 1fr); }
+  .macro { max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+/*__BPMN_CSS__*/
+</style>
+
+<div class="wrap">
+  <header class="topo">
+    <div>
+      <div class="eyebrow">Arquitetura de processos</div>
+      <h1 id="org-nome">Mapa de processos</h1>
+      <div class="contagens" id="contagens"></div>
+    </div>
+    <div class="medidores" id="medidores"></div>
+  </header>
+
+  <div class="barra-nav">
+    <nav class="abas" id="abas" aria-label="Visões do mapa">
+      <a href="#cadeia" data-aba="cadeia">Cadeia de valor</a>
+      <a href="#hierarquia" data-aba="hierarquia">Hierarquia</a>
+      <a href="#fluxos" data-aba="fluxos">Fluxos</a>
+      <a href="#lacunas" data-aba="lacunas">Lacunas</a>
+      <a href="#negocio" data-aba="negocio">Negócio</a>
+      <a href="#pessoas" data-aba="pessoas">Pessoas e sistemas</a>
+    </nav>
+    <div class="legenda" id="legenda"></div>
+  </div>
+
+  <div class="grade sem-painel" id="grade">
+    <main id="principal"></main>
+    <aside class="painel cartao" id="painel" hidden></aside>
+  </div>
+
+  <div class="rodape-pag">
+    <span id="rodape-esq"></span>
+    <span>Cada afirmação deste mapa aponta para a evidência de onde veio. O que não tem evidência aparece como hipótese.</span>
+  </div>
+</div>
+
+<script id="dados" type="application/json">__DADOS__</script>
+<script src="https://cdn.jsdelivr.net/npm/bpmn-js@18.27.1/dist/bpmn-navigated-viewer.production.min.js"></script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("dados").textContent);
+  var M = D.mapa;
+  var COD = D.codigos || {};
+  var NIV = D.niveis || {};
+  var TIPO = D.tipos || {};
+  var STATUS = { confirmado: "Confirmado", declarado: "Declarado", hipotese: "Hipótese", contestado: "Contestado" };
+  var STATUS_EXPL = {
+    confirmado: "validado pelo responsável ou por duas fontes independentes",
+    declarado: "alguém da empresa ou um documento afirmou",
+    hipotese: "suposição ainda não confirmada",
+    contestado: "fontes discordam"
+  };
+  var TIPOS = { gestao: "Gestão", finalistico: "Finalísticos", suporte: "Suporte" };
+  var TIPO_EXPL = { gestao: "direcionam e controlam", finalistico: "entregam valor ao cliente", suporte: "dão recursos aos demais" };
+  var NIVEIS = (M.organizacao && M.organizacao.niveis) || ["Organização", "Macroprocesso", "Processo", "Subprocesso", "Atividade", "Tarefa"];
+  var CAMPOS = [
+    ["descricao", "Propósito"], ["dono", "Dono"], ["participantes", "Participam"], ["gatilho", "Começa quando"],
+    ["entradas", "Recebe"], ["saidas", "Entrega"], ["cliente", "Cliente do processo"], ["sistemas", "Sistemas"],
+    ["frequencia", "Frequência"], ["volume", "Volume"], ["duracao", "Duração"], ["indicadores", "Indicadores"],
+    ["regras", "Regras"], ["dores", "Dores relatadas"]
+  ];
+  var OBRIG = { 1: ["tipo", "descricao", "dono"], 2: ["descricao", "dono", "gatilho", "saidas", "cliente"], 3: ["descricao", "dono", "gatilho", "entradas", "saidas", "cliente", "participantes"] };
+  var TEMAS = [
+    ["oferta", "O que vende"], ["cliente", "Para quem"], ["proposta_de_valor", "Por que compram"], ["canal", "Como chega ao cliente"],
+    ["receita", "Como ganha dinheiro"], ["parceiro", "Parceiros"], ["recurso", "Recursos-chave"], ["custo", "Custos"],
+    ["regulacao", "Regras e leis"], ["estrategia", "Estratégia e metas"], ["outro", "Outros"]
+  ];
+
+  var idx = {};
+  ["fatos", "ofertas", "cadeias_de_valor", "areas", "papeis", "pessoas", "sistemas", "objetos", "processos", "evidencias", "perguntas", "formularios", "contradicoes", "decisoes", "glossario", "ideias"].forEach(function (c) {
+    (M[c] || []).forEach(function (o) { if (o && o.id) idx[o.id] = o; });
+  });
+  var procs = M.processos || [];
+  var filhos = {};
+  procs.forEach(function (p) { var k = p.pai || "_raiz"; (filhos[k] = filhos[k] || []).push(p); });
+  Object.keys(filhos).forEach(function (k) {
+    filhos[k].sort(function (a, b) { return cmpCod(COD[a.id], COD[b.id]); });
+  });
+  var lacPor = {};
+  (D.lacunas || []).forEach(function (l) { (lacPor[l.elemento] = lacPor[l.elemento] || []).push(l); });
+
+  var estado = { aba: "cadeia", sel: null, abertos: {}, busca: "", filtro: { confirmado: true, declarado: true, hipotese: true, contestado: true }, fluxo: null, soSemPergunta: false };
+
+  function cmpCod(a, b) {
+    var x = String(a || "").split("."), y = String(b || "").split(".");
+    for (var i = 0; i < Math.max(x.length, y.length); i++) {
+      var d = (parseInt(x[i] || 0, 10) || 0) - (parseInt(y[i] || 0, 10) || 0);
+      if (d) return d;
+    }
+    return 0;
+  }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function vazio(v) { return v == null || (typeof v === "string" && !v.trim()) || (Array.isArray(v) && !v.length) || (typeof v === "object" && !Array.isArray(v) && !Object.keys(v).length); }
+  function nome(id) { var o = idx[id]; return o ? (o.nome || o.texto || id) : (id || ""); }
+  function selo(st) { st = st || "hipotese"; return '<span class="selo ' + st + '" title="' + esc(STATUS_EXPL[st]) + '">' + STATUS[st] + "</span>"; }
+  function ponto(st) { st = st || "hipotese"; return '<span class="ponto ' + st + '" title="' + STATUS[st] + '"></span>'; }
+  function nivelNome(n) { return NIVEIS[n] || ("Nível " + n); }
+  function refTexto(r) {
+    if (!r) return "";
+    if (typeof r === "string") { if (r.indexOf("EXT:") === 0) return r.slice(4) + " (externo)"; return idx[r] ? (COD[r] ? COD[r] + " " : "") + nome(r) : r; }
+    if (typeof r === "object") {
+      var t = r.nome || "";
+      var de = r.de ? " ← " + refTexto(r.de) : "";
+      var para = r.para ? " → " + refTexto(r.para) : "";
+      var meta = r.meta ? " (meta: " + r.meta + ")" : "";
+      return t + de + para + meta;
+    }
+    return String(r);
+  }
+  function valorCampo(p, k) {
+    var v = p[k];
+    if (vazio(v)) return null;
+    if (k === "dono") return esc(nome(v));
+    if (k === "participantes" || k === "sistemas") return v.map(function (x) { return esc(nome(x)); }).join(", ");
+    if (Array.isArray(v)) return v.map(function (x) { return esc(refTexto(x)); }).join("<br>");
+    return esc(v);
+  }
+  var SITUACAO = { no_papel: "só no papel", em_implantacao: "em implantação" };
+  function situacaoTag(p) { return SITUACAO[p.situacao] ? '<span class="tag papel" title="Desenhado, mas ainda não roda (ou roda parcialmente)">' + SITUACAO[p.situacao] + "</span>" : ""; }
+  function porcent(n) { return (Math.round(n * 10) / 10).toLocaleString("pt-BR") + "%"; }
+
+  // ------------------------------------------------------------ cabeçalho
+  function cabecalho() {
+    var org = M.organizacao || {};
+    document.getElementById("org-nome").textContent = org.nome || "Mapa de processos";
+    var c = D.cobertura || {};
+    document.getElementById("medidores").innerHTML =
+      medidor("Informação levantada", c.completude || 0, "", "campos mínimos, fluxos e temas do negócio") +
+      medidor("Validado", c.validacao || 0, "ok", (c.confirmados || 0) + " de " + (c.elementos || 0) + " elementos confirmados");
+    var porNivel = c.por_nivel || {};
+    var chips = Object.keys(porNivel).map(function (n) { return '<span class="chip"><b>' + porNivel[n].total + "</b> " + esc(nivelNome(+n).toLowerCase()) + (porNivel[n].total === 1 ? "" : "s") + "</span>"; });
+    chips.push('<span class="chip"><b>' + (c.hipoteses || 0) + "</b> hipóteses</span>");
+    chips.push('<span class="chip"><b>' + (c.perguntas_pendentes || 0) + "</b> perguntas pendentes</span>");
+    chips.push('<span class="chip"><b>' + (c.contradicoes_abertas || 0) + "</b> contradições abertas</span>");
+    document.getElementById("contagens").innerHTML = chips.join("");
+    document.getElementById("legenda").innerHTML = ["confirmado", "declarado", "hipotese", "contestado"].map(function (s) { return selo(s); }).join("");
+    document.getElementById("rodape-esq").textContent = "Atualizado em " + (org.atualizado_em || D.gerado_em || "") + (org.consultor ? " · " + org.consultor : "");
+  }
+  function medidor(rot, v, cls, dica) {
+    return '<div class="medidor" title="' + esc(dica) + '"><div class="rot"><span>' + esc(rot) + '</span></div><div class="num">' + porcent(v) +
+      '</div><div class="barra ' + cls + '"><i style="width:' + Math.max(0, Math.min(100, v)) + '%"></i></div></div>';
+  }
+
+  // ------------------------------------------------------------ cadeia de valor
+  function vistaCadeia() {
+    var raizes = filhos._raiz || [];
+    var h = '<section class="secao"><div class="titulo-secao"><h2>Cadeia de valor</h2><span class="muted">Clique em um macroprocesso para ver o detalhe.</span></div>';
+    var ordem = ["gestao", "finalistico", "suporte", null];
+    var algum = false;
+    ordem.forEach(function (t) {
+      var grupo = raizes.filter(function (r) { return (r.tipo || null) === t; });
+      if (!grupo.length) return;
+      algum = true;
+      h += '<div class="banda"><div class="nome-banda">' + (t ? TIPOS[t] : "Sem classificação") + "<small>" + (t ? TIPO_EXPL[t] : "tipo ainda não definido") + '</small></div><div class="fileira">';
+      grupo.forEach(function (r) {
+        var nf = (filhos[r.id] || []).length;
+        var nl = (lacPor[r.id] || []).length;
+        h += '<button class="macro ' + (t === "finalistico" ? "chevron " : "") + (r.status || "hipotese") + (estado.sel === r.id ? " sel" : "") + '" data-sel="' + esc(r.id) + '">' +
+          '<span class="cab"><span class="mono muted">' + esc(COD[r.id]) + "</span>" + selo(r.status) + "</span>" +
+          '<span class="nome">' + esc(r.nome) + "</span>" +
+          '<span class="rodape"><span>' + (r.dono ? esc(nome(r.dono)) : "dono a definir") + "</span><span>" + (nf ? nf + " sub" : "") + (nl ? " · " + nl + " lac." : "") + "</span></span>" + situacaoTag(r) + "</button>";
+      });
+      h += "</div></div>";
+    });
+    if (!algum) h += '<div class="cartao vazio-msg">Ainda não há macroprocessos declarados. Eles aparecem aqui assim que a primeira rodada de formulários for respondida.</div>';
+    h += "</section>";
+    var cvs = M.cadeias_de_valor || [];
+    if (cvs.length) {
+      h += '<section class="secao cv"><div class="titulo-secao"><h2>Do pedido à entrega</h2><span class="muted">Caminhos ponta a ponta que atravessam os macroprocessos.</span></div>';
+      cvs.forEach(function (cv) {
+        h += '<div class="cartao" style="margin-bottom:10px"><div class="titulo-secao"><h3>' + esc(cv.nome) + "</h3>" + selo(cv.status) + "</div>" +
+          '<p class="muted" style="margin:0 0 10px">Começa quando: ' + esc(cv.gatilho || "?") + " · Valor entregue: " + esc(cv.valor || "?") + (cv.stakeholder ? " · Para: " + esc(cv.stakeholder) : "") + "</p>" +
+          '<div class="cv-etapas">' + (cv.etapas || []).map(function (et, i) {
+            return '<div class="cv-etapa"><div class="n">Etapa ' + (i + 1) + "</div><div><b>" + esc(et.nome) + "</b></div>" +
+              (et.processos || []).map(function (pid) { return '<div><button class="lnk" data-sel="' + esc(pid) + '">' + esc((COD[pid] || "") + " " + nome(pid)) + "</button></div>"; }).join("") + "</div>";
+          }).join("") + "</div></div>";
+      });
+      h += "</section>";
+    }
+    return h;
+  }
+
+  // ------------------------------------------------------------ hierarquia
+  function passaFiltro(p) {
+    if (!estado.filtro[p.status || "hipotese"]) return false;
+    if (!estado.busca) return true;
+    var b = estado.busca.toLowerCase();
+    return ((COD[p.id] || "") + " " + (p.nome || "") + " " + (p.descricao || "") + " " + nome(p.dono)).toLowerCase().indexOf(b) >= 0;
+  }
+  function visivel(p) {
+    if (passaFiltro(p)) return true;
+    return (filhos[p.id] || []).some(visivel);
+  }
+  function vistaHierarquia() {
+    var h = '<section class="secao"><div class="titulo-secao"><h2>Hierarquia de processos</h2><span class="muted">' + procs.length + " processos</span></div>";
+    h += '<div class="ferramentas"><input type="search" id="busca" placeholder="Buscar por nome, código ou dono" value="' + esc(estado.busca) + '" aria-label="Buscar processo">' +
+      '<button class="btn" id="abrir-tudo">Abrir tudo</button><button class="btn" id="fechar-tudo">Fechar tudo</button></div>';
+    h += '<div class="ferramentas">' + ["confirmado", "declarado", "hipotese", "contestado"].map(function (s) {
+      return '<label class="filtro"><input type="checkbox" data-filtro="' + s + '"' + (estado.filtro[s] ? " checked" : "") + ">" + ponto(s) + STATUS[s] + "</label>";
+    }).join("") + "</div>";
+    var raizes = (filhos._raiz || []).filter(visivel);
+    if (!raizes.length) h += '<div class="cartao vazio-msg">Nenhum processo com esses filtros.</div>';
+    var ultimo = "_";
+    h += '<div class="cartao">';
+    raizes.forEach(function (r) {
+      if ((r.tipo || null) !== ultimo) { ultimo = r.tipo || null; h += '<div class="grupo-tipo eyebrow">' + (ultimo ? TIPOS[ultimo] : "Sem classificação") + "</div>"; }
+      h += '<ul class="arvore">' + noArvore(r) + "</ul>";
+    });
+    h += "</div></section>";
+    return h;
+  }
+  function noArvore(p) {
+    var kids = (filhos[p.id] || []).filter(visivel);
+    var aberto = estado.abertos[p.id] || !!estado.busca;
+    var nl = (lacPor[p.id] || []).length;
+    var h = '<li><div class="no' + (estado.sel === p.id ? " sel" : "") + '" data-sel="' + esc(p.id) + '">' +
+      (kids.length ? '<button class="seta" data-alterna="' + esc(p.id) + '" aria-expanded="' + aberto + '" aria-label="' + (aberto ? "Fechar" : "Abrir") + '">' + (aberto ? "▾" : "▸") + "</button>" : "<span></span>") +
+      '<span class="cod">' + esc(COD[p.id]) + "</span>" +
+      '<span class="nm">' + esc(p.nome) + " <small>· " + (p.dono ? esc(nome(p.dono)) : "dono a definir") + "</small></span>" +
+      '<span class="tags">' + situacaoTag(p) + (p.fluxo ? '<span class="tag">fluxo</span>' : "") + (nl ? '<span class="tag falta">' + nl + " lacuna" + (nl > 1 ? "s" : "") + "</span>" : "") + ponto(p.status) + "</span></div>";
+    if (kids.length && aberto) h += "<ul>" + kids.map(noArvore).join("") + "</ul>";
+    return h + "</li>";
+  }
+
+  // ------------------------------------------------------------ fluxos
+  function comFluxo() { return procs.filter(function (p) { return p.fluxo && (p.fluxo.nos || []).length; }).sort(function (a, b) { return cmpCod(COD[a.id], COD[b.id]); }); }
+  function vistaFluxos() {
+    var lst = comFluxo();
+    if (!lst.length) return '<section class="secao"><h2>Fluxos</h2><div class="cartao vazio-msg" style="margin-top:10px">Nenhum passo a passo foi levantado ainda. Os fluxos aparecem depois das rodadas com quem executa o trabalho.</div></section>';
+    if (!estado.fluxo || !lst.some(function (p) { return p.id === estado.fluxo; })) estado.fluxo = lst[0].id;
+    var p = idx[estado.fluxo];
+    var h = '<section class="secao"><div class="titulo-secao"><h2>Fluxos</h2><span class="muted">Diagrama em BPMN e a mesma lógica escrita em frases, para validar com quem executa.</span></div><div class="fluxos">';
+    h += '<div class="lista-fluxos">' + lst.map(function (q) {
+      return '<button data-fluxo="' + esc(q.id) + '" aria-pressed="' + (q.id === estado.fluxo) + '"><span class="mono muted">' + esc(COD[q.id]) + "</span><b>" + esc(q.nome) + "</b><span>" + selo(q.fluxo.status) + "</span></button>";
+    }).join("") + "</div>";
+    h += '<div style="min-width:0"><div class="titulo-secao"><h3>' + esc(COD[p.id] + " " + p.nome) + "</h3>" + selo(p.fluxo.status) + "</div>";
+    h += '<div class="tela-bpmn" id="tela-bpmn"><div class="aviso">Carregando o diagrama…</div></div>';
+    h += '<div class="acoes"><button class="btn" data-acao="copiar-bpmn">Copiar BPMN</button><button class="btn" data-acao="baixar-pacote">Baixar arquivos editáveis (.zip)</button>' +
+      '<a class="btn" href="https://demo.bpmn.io/new" target="_blank" rel="noopener">Abrir o editor bpmn.io</a><button class="btn" data-sel="' + esc(p.id) + '">Ver ficha do processo</button></div>';
+    h += '<p class="muted" id="msg-acao" role="status" style="margin:0 0 8px"></p>';
+    h += '<div class="cartao"><h3 style="margin-bottom:8px">Leitura em frases</h3><ol class="frases">' + frasesFluxo(p).map(function (f) {
+      return '<li class="' + f.cls + '">' + f.html + "</li>";
+    }).join("") + "</ol></div></div></div></section>";
+    return h;
+  }
+  function frasesFluxo(p) {
+    var fl = p.fluxo || {}, nos = {}, out = {}, ext = {}, mIn = {}, mOut = {};
+    (fl.nos || []).forEach(function (n) { nos[n.id] = n; });
+    (fl.ligacoes || []).forEach(function (l) { (out[l.de] = out[l.de] || []).push(l); });
+    (fl.externos || []).forEach(function (x) { ext[x.id] = x.nome; });
+    (fl.mensagens || []).forEach(function (m) {
+      if (ext[m.de]) (mIn[m.para] = mIn[m.para] || []).push(m);
+      if (ext[m.para]) (mOut[m.de] = mOut[m.de] || []).push(m);
+    });
+    // Ordem de leitura: caminho principal primeiro (busca em profundidade), desvios depois, fins no final.
+    var ordem = [], visto = {}, fins = [];
+    function dfs(k) {
+      if (visto[k] || !nos[k]) return;
+      visto[k] = 1;
+      if (nos[k].tipo === "fim") fins.push(k); else ordem.push(k);
+      (out[k] || []).forEach(function (l) { dfs(l.para); });
+    }
+    (fl.nos || []).filter(function (n) { return n.tipo === "inicio"; }).forEach(function (n) { dfs(n.id); });
+    (fl.nos || []).forEach(function (n) { dfs(n.id); });
+    ordem = ordem.concat(fins);
+    var num = {}, i = 0;
+    ordem.forEach(function (k) { if (["tarefa", "subprocesso", "decisao", "espera"].indexOf(nos[k].tipo) >= 0) num[k] = ++i; });
+    function ref(k) { var n = nos[k]; if (!n) return k; if (num[k]) return "passo " + num[k] + " (" + esc(n.nome || "") + ")"; if (n.tipo === "fim") return "o fim “" + esc(n.nome || "") + "”"; return esc(n.nome || "próximo passo"); }
+    function papel(n) { return n.raia ? "<b>" + esc(nome(n.raia)) + "</b>" : "<b>Alguém (papel a definir)</b>"; }
+    function msgs(k) {
+      var s = "";
+      (mIn[k] || []).forEach(function (m) { s += " Recebe de " + esc(ext[m.de]) + ": " + esc(m.rotulo || "mensagem") + "."; });
+      (mOut[k] || []).forEach(function (m) { s += " Envia para " + esc(ext[m.para]) + ": " + esc(m.rotulo || "mensagem") + "."; });
+      return s;
+    }
+    function seguinte(k, pos) {
+      var o = out[k] || [];
+      if (o.length !== 1) return "";
+      var alvo = o[0].para, prox = ordem[pos + 1];
+      if (alvo === prox) return "";
+      return " Depois segue para " + ref(alvo) + ".";
+    }
+    var frases = [];
+    ordem.forEach(function (k, pos) {
+      var n = nos[k], t = n.tipo, txt = "", cls = "";
+      if (t === "inicio") { cls = "ini"; txt = "O processo começa quando: <b>" + esc(n.nome || "?") + "</b>." + msgs(k); }
+      else if (t === "fim") { cls = "fim"; txt = "Termina em: <b>" + esc(n.nome || "fim") + "</b>." + msgs(k); }
+      else if (t === "tarefa") { txt = num[k] + ". " + papel(n) + ": " + esc(n.nome || "") + (n.sistema ? " (usa " + esc(nome(n.sistema)) + ")" : "") + "." + msgs(k) + seguinte(k, pos); }
+      else if (t === "subprocesso") { txt = num[k] + ". " + papel(n) + ": " + esc(n.nome || "") + (n.processo ? " (detalhado em " + esc(COD[n.processo] || "") + ")" : "") + "." + msgs(k) + seguinte(k, pos); }
+      else if (t === "espera") { txt = num[k] + ". Aguarda: " + esc(n.nome || "") + "." + msgs(k) + seguinte(k, pos); }
+      else if (t === "decisao" || t === "inclusivo") {
+        txt = num[k] + ". " + papel(n) + " confere: " + esc(n.nome || "?") + " " + (out[k] || []).map(function (l) { return "Se “" + esc(l.rotulo || "?") + "”, segue para " + ref(l.para) + "."; }).join(" ");
+      } else if (t === "paralelo") {
+        var o = out[k] || [];
+        if (o.length > 1) txt = "A partir daqui acontecem ao mesmo tempo: " + o.map(function (l) { return ref(l.para); }).join("; ") + ".";
+        else txt = "Os caminhos em paralelo se juntam e seguem para " + (o[0] ? ref(o[0].para) : "o próximo passo") + ".";
+      }
+      if (txt) frases.push({ html: txt, cls: cls });
+    });
+    return frases;
+  }
+  var viewer = null;
+  function montarBpmn() {
+    var tela = document.getElementById("tela-bpmn");
+    if (!tela) return;
+    var xml = (D.bpmn || {})[estado.fluxo];
+    if (!xml) { tela.innerHTML = '<div class="aviso">Sem diagrama para este processo.</div>'; return; }
+    if (typeof window.BpmnJS !== "function") {
+      tela.innerHTML = '<div class="aviso">O visualizador BPMN não carregou (sem internet ou bloqueado). A leitura em frases abaixo traz a mesma lógica, e o botão de baixar entrega o arquivo .bpmn.</div>';
+      return;
+    }
+    tela.innerHTML = "";
+    try {
+      if (viewer) { try { viewer.destroy(); } catch (e) {} }
+      viewer = new window.BpmnJS({ container: tela });
+      viewer.importXML(xml).then(function () { viewer.get("canvas").zoom("fit-viewport", "auto"); }).catch(function (e) {
+        tela.innerHTML = '<div class="aviso">Não foi possível desenhar: ' + esc(e.message) + "</div>";
+      });
+    } catch (e) {
+      tela.innerHTML = '<div class="aviso">Não foi possível desenhar: ' + esc(e.message) + "</div>";
+    }
+  }
+
+  // ------------------------------------------------------------ lacunas
+  function vistaLacunas() {
+    var lac = (D.lacunas || []).filter(function (l) { return !estado.soSemPergunta || !l.pergunta; });
+    var grupos = {}, ordem = [];
+    lac.forEach(function (l) {
+      var k = (l.sugerido_para || []).map(nome).join(", ") || "Responsável ainda não identificado";
+      if (!grupos[k]) { grupos[k] = []; ordem.push(k); }
+      grupos[k].push(l);
+    });
+    var TIPOL = { campo: "informação", hipotese: "hipótese", fluxo: "passo a passo", decomposicao: "detalhar", validacao: "validar", contradicao: "contradição", negocio: "negócio", estrutura: "estrutura", cadeia_de_valor: "cadeia" };
+    var h = '<section class="secao"><div class="titulo-secao"><h2>O que falta saber</h2><span class="muted">' + (D.lacunas || []).length + " lacunas, agrupadas por quem deveria responder.</span></div>";
+    h += '<div class="ferramentas"><label class="filtro"><input type="checkbox" id="so-sem"' + (estado.soSemPergunta ? " checked" : "") + "> Só as que ainda não têm pergunta enviada</label></div>";
+    if (!lac.length) h += '<div class="cartao vazio-msg">Nenhuma lacuna. O mapa atende aos critérios mínimos de completude.</div>';
+    ordem.forEach(function (k) {
+      h += '<div class="cartao" style="margin-bottom:10px"><h3 style="margin-bottom:8px">' + esc(k) + ' <span class="muted" style="font-weight:400">· ' + grupos[k].length + '</span></h3><div class="tabela-wrap"><table><thead><tr><th>Tipo</th><th>O que falta</th><th>Pergunta</th></tr></thead><tbody>';
+      grupos[k].forEach(function (l) {
+        var alvo = idx[l.elemento] && idx[l.elemento].nome !== undefined && COD[l.elemento] ? ' <button class="lnk" data-sel="' + esc(l.elemento) + '">abrir</button>' : "";
+        h += "<tr><td><span class=\"tag\">" + esc(TIPOL[l.tipo] || l.tipo) + "</span></td><td>" + esc(l.mensagem) + alvo + "</td><td class=\"mono\">" + (l.pergunta ? esc(l.pergunta) : '<span class="muted">nenhuma</span>') + "</td></tr>";
+      });
+      h += "</tbody></table></div></div>";
+    });
+    var cts = (M.contradicoes || []).filter(function (c) { return (c.status || "aberta") === "aberta"; });
+    if (cts.length) {
+      h += '<div class="cartao" style="margin-top:14px"><h3 style="margin-bottom:8px">Contradições abertas</h3>' + cts.map(function (c) {
+        return '<div class="campo"><div class="k">' + esc(c.id) + (c.elemento ? ' · <button class="lnk" data-sel="' + esc(c.elemento) + '">' + esc((COD[c.elemento] || "") + " " + nome(c.elemento)) + "</button>" : "") + '</div><div class="v">' + esc(c.descricao) + "</div>" + evidencias(c.evidencias) + "</div>";
+      }).join("") + "</div>";
+    }
+    var probs = D.problemas || [];
+    if (probs.length) {
+      h += '<div class="cartao" style="margin-top:14px"><h3 style="margin-bottom:8px">Conferência lógica</h3><div class="tabela-wrap"><table><thead><tr><th>Nível</th><th>Onde</th><th>O que foi encontrado</th></tr></thead><tbody>' +
+        probs.map(function (p) { return "<tr><td>" + (p.nivel === "erro" ? '<span class="selo contestado">erro</span>' : '<span class="tag">alerta</span>') + '</td><td class="mono">' + esc(p.elemento) + "</td><td>" + esc(p.mensagem) + "</td></tr>"; }).join("") +
+        "</tbody></table></div></div>";
+    }
+    return h + "</section>";
+  }
+
+  // ------------------------------------------------------------ negócio
+  function vistaNegocio() {
+    var fatos = M.fatos || [];
+    var h = '<section class="secao"><div class="titulo-secao"><h2>Modelo de negócio</h2><span class="muted">O contexto que explica por que os processos existem.</span></div><div class="canvas">';
+    TEMAS.forEach(function (t) {
+      var fs = fatos.filter(function (f) { return f.tema === t[0]; });
+      if (!fs.length && ["parceiro", "recurso", "custo", "regulacao", "estrategia", "outro"].indexOf(t[0]) >= 0) return;
+      h += '<div class="bloco' + (fs.length ? "" : " vazio") + '"><h3>' + esc(t[1]) + "</h3>" + (fs.length ? fs.map(function (f) {
+        return '<div class="fato"><div>' + esc(f.texto) + "</div><div>" + selo(f.status) + " " + (f.evidencias || []).map(function (e) { return '<span class="mono muted">' + esc(e) + "</span>"; }).join(" ") + "</div></div>";
+      }).join("") : '<div class="vazio-msg">Ainda sem informação.</div>') + "</div>";
+    });
+    h += "</div></section>";
+    var mo = M.modelo_operacional || {};
+    var tipos = { diversificacao: [0, 0], coordenacao: [1, 0], replicacao: [0, 1], unificacao: [1, 1] };
+    var pos = tipos[mo.tipo];
+    function q(nm, desc, i, p) { return '<div class="q' + (pos && pos[0] === i && pos[1] === p ? " atual" : "") + '"><b>' + nm + '</b><span class="muted">' + desc + "</span></div>"; }
+    h += '<section class="secao"><div class="titulo-secao"><h2>Modelo operacional</h2>' + selo(mo.status) + "</div><div class=\"cartao\">" +
+      '<div class="quadrante"><div class="eixo v">Integração de dados →</div>' +
+      q("Coordenação", "áreas dependem dos mesmos dados, cada uma com seu jeito", 1, 0) + q("Unificação", "mesmos dados e mesmo jeito de trabalhar", 1, 1) +
+      q("Diversificação", "unidades independentes", 0, 0) + q("Replicação", "mesmo jeito, dados locais (ex.: franquias)", 0, 1) +
+      '<div></div><div class="eixo" style="grid-column: span 2">Padronização do jeito de trabalhar →</div></div>' +
+      '<p style="margin:10px 0 0">' + (mo.tipo ? "<b>" + esc({ diversificacao: "Diversificação", coordenacao: "Coordenação", replicacao: "Replicação", unificacao: "Unificação" }[mo.tipo]) + ".</b> " : "Ainda não classificado. ") + esc(mo.justificativa || "") + "</p>" + evidencias(mo.evidencias) + "</div></section>";
+    var ofs = M.ofertas || [];
+    if (ofs.length) {
+      h += '<section class="secao"><h2 style="margin-bottom:10px">Ofertas</h2><div class="cartao tabela-wrap"><table><thead><tr><th>Oferta</th><th>Tipo</th><th>Clientes</th><th>Canais</th><th>Status</th></tr></thead><tbody>' +
+        ofs.map(function (o) { return "<tr><td><b>" + esc(o.nome) + "</b></td><td>" + esc(o.tipo || "") + "</td><td>" + esc((o.clientes || []).join(", ")) + "</td><td>" + esc((o.canais || []).join(", ")) + "</td><td>" + selo(o.status) + "</td></tr>"; }).join("") + "</tbody></table></div></section>";
+    }
+    var gl = M.glossario || [];
+    if (gl.length) {
+      h += '<section class="secao"><h2 style="margin-bottom:10px">Glossário da empresa</h2><div class="cartao">' + gl.map(function (g) {
+        return '<div class="campo"><div class="k">' + esc(g.termo) + (g.sinonimos && g.sinonimos.length ? " · também: " + esc(g.sinonimos.join(", ")) : "") + '</div><div class="v">' + esc(g.definicao) + "</div></div>";
+      }).join("") + "</div></section>";
+    }
+    return h;
+  }
+
+  // ------------------------------------------------------------ pessoas e sistemas
+  function vistaPessoas() {
+    var papeis = M.papeis || [], areas = M.areas || [];
+    var h = '<section class="secao"><div class="titulo-secao"><h2>Quem faz o quê</h2><span class="muted">D = dono do processo · P = participa</span></div>';
+    var folhas = procs.filter(function (p) { return !(filhos[p.id] || []).length || NIV[p.id] === 1; }).sort(function (a, b) { return cmpCod(COD[a.id], COD[b.id]); });
+    if (papeis.length && folhas.length) {
+      h += '<div class="cartao tabela-wrap"><table class="matriz"><thead><tr><th>Processo</th>' + papeis.map(function (pa) { return '<th class="rot">' + esc(pa.nome) + "</th>"; }).join("") + "</tr></thead><tbody>";
+      folhas.forEach(function (p) {
+        var nosFl = (p.fluxo && p.fluxo.nos) || [];
+        h += '<tr><td><button class="lnk" data-sel="' + esc(p.id) + '">' + esc(COD[p.id] + " " + p.nome) + "</button></td>" + papeis.map(function (pa) {
+          var d = p.dono === pa.id, part = (p.participantes || []).indexOf(pa.id) >= 0 || nosFl.some(function (n) { return n.raia === pa.id; });
+          return '<td class="c">' + (d ? "<b>D</b>" : part ? "P" : "") + "</td>";
+        }).join("") + "</tr>";
+      });
+      h += "</tbody></table></div>";
+    } else h += '<div class="cartao vazio-msg">Os papéis e processos ainda não foram levantados.</div>';
+    h += "</section>";
+    h += '<section class="secao"><h2 style="margin-bottom:10px">Áreas, papéis e pessoas</h2><div class="canvas">';
+    var semArea = papeis.filter(function (pa) { return !pa.area; });
+    areas.concat(semArea.length ? [{ id: "_sem", nome: "Sem área definida" }] : []).forEach(function (ar) {
+      var pas = papeis.filter(function (pa) { return (pa.area || "_sem") === ar.id; });
+      h += '<div class="bloco"><div class="titulo-secao" style="margin:0"><h3>' + esc(ar.nome) + "</h3>" + (ar.status ? ponto(ar.status) : "") + "</div>" + (pas.length ? pas.map(function (pa) {
+        var pes = (M.pessoas || []).filter(function (pe) { return (pe.papeis || []).indexOf(pa.id) >= 0; });
+        return '<div class="fato"><div><b>' + esc(pa.nome) + "</b> " + ponto(pa.status) + '</div><div class="muted">' + (pes.length ? pes.map(function (pe) { return esc(pe.nome); }).join(", ") : "ninguém identificado") + "</div></div>";
+      }).join("") : '<div class="vazio-msg">Sem papéis registrados.</div>') + "</div>";
+    });
+    h += "</div></section>";
+    var sis = M.sistemas || [];
+    if (sis.length) {
+      h += '<section class="secao"><h2 style="margin-bottom:10px">Sistemas</h2><div class="cartao tabela-wrap"><table><thead><tr><th>Sistema</th><th>Tipo</th><th>Usado em</th><th>Status</th></tr></thead><tbody>' +
+        sis.map(function (s) {
+          var usos = procs.filter(function (p) { return (p.sistemas || []).indexOf(s.id) >= 0 || ((p.fluxo && p.fluxo.nos) || []).some(function (n) { return n.sistema === s.id; }); });
+          return "<tr><td><b>" + esc(s.nome) + "</b></td><td>" + esc(s.tipo || "") + "</td><td>" + (usos.map(function (p) { return '<button class="lnk" data-sel="' + esc(p.id) + '">' + esc(COD[p.id] + " " + p.nome) + "</button>"; }).join("<br>") || '<span class="muted">nenhum processo ligado</span>') + "</td><td>" + selo(s.status) + "</td></tr>";
+        }).join("") + "</tbody></table></div></section>";
+    }
+    var pes = M.pessoas || [];
+    if (pes.length) {
+      h += '<section class="secao"><h2 style="margin-bottom:10px">Pessoas ouvidas</h2><div class="cartao tabela-wrap"><table><thead><tr><th>Nome</th><th>Cargo</th><th>Indicado por</th><th>Evidências</th></tr></thead><tbody>' +
+        pes.map(function (pe) {
+          var n = (M.evidencias || []).filter(function (e) { return e.pessoa === pe.id; }).length;
+          return "<tr><td><b>" + esc(pe.nome) + "</b></td><td>" + esc(pe.cargo || "") + "</td><td>" + esc(pe.indicado_por ? nome(pe.indicado_por) : "") + '</td><td class="mono">' + n + "</td></tr>";
+        }).join("") + "</tbody></table></div></section>";
+    }
+    return h;
+  }
+
+  // ------------------------------------------------------------ painel de detalhe
+  function evidencias(ids) {
+    ids = ids || [];
+    if (!ids.length) return "";
+    return ids.map(function (e) {
+      var ev = idx[e];
+      if (!ev) return '<div class="ev"><span class="mono">' + esc(e) + "</span></div>";
+      var quem = ev.pessoa ? nome(ev.pessoa) : "";
+      return '<div class="ev"><q>' + esc(ev.trecho || "(sem trecho)") + '</q><span class="fonte"><span class="mono">' + esc(ev.id) + "</span> · " + esc(ev.tipo) + " · " + esc(ev.fonte || "") + (quem ? " · " + esc(quem) : "") + (ev.data ? " · " + esc(ev.data) : "") + "</span></div>";
+    }).join("");
+  }
+  function painel() {
+    var el = document.getElementById("painel"), grade = document.getElementById("grade");
+    var p = estado.sel && idx[estado.sel];
+    if (!p) { el.hidden = true; grade.classList.add("sem-painel"); return; }
+    el.hidden = false; grade.classList.remove("sem-painel");
+    var nv = NIV[p.id] || 1;
+    var obrig = OBRIG[Math.min(nv, 3)];
+    var hip = p.hipoteses || [];
+    var h = '<button class="btn fechar" id="fechar-painel" aria-label="Fechar detalhe">Fechar</button>';
+    h += '<div class="eyebrow">' + esc(nivelNome(nv)) + (TIPO[p.id] ? " · " + esc(TIPOS[TIPO[p.id]]) : "") + '</div><h2 style="margin:4px 0 6px"><span class="mono muted">' + esc(COD[p.id]) + "</span> " + esc(p.nome) + "</h2>" + selo(p.status) + " " + situacaoTag(p);
+    if (p.pai) h += '<p style="margin:8px 0 0" class="muted">Faz parte de <button class="lnk" data-sel="' + esc(p.pai) + '">' + esc(COD[p.pai] + " " + nome(p.pai)) + "</button></p>";
+    h += '<div style="margin-top:10px">';
+    CAMPOS.forEach(function (c) {
+      var k = c[0], v = valorCampo(p, k), ob = obrig.indexOf(k) >= 0;
+      if (v == null && !ob) return;
+      var cls = v == null ? "falta" : hip.indexOf(k) >= 0 ? "hip" : "";
+      h += '<div class="campo ' + cls + '"><div class="k">' + esc(c[1]) + (cls === "hip" ? ' <span class="selo hipotese">hipótese</span>' : "") + '</div><div class="v">' + (v == null ? "falta levantar" : v) + "</div></div>";
+    });
+    h += "</div>";
+    var kids = filhos[p.id] || [];
+    if (kids.length) h += '<div class="campo"><div class="k">Se divide em</div><div class="v">' + kids.map(function (k) { return '<div>' + ponto(k.status) + ' <button class="lnk" data-sel="' + esc(k.id) + '">' + esc(COD[k.id] + " " + k.nome) + "</button></div>"; }).join("") + "</div></div>";
+    if (p.fluxo) h += '<div class="campo"><div class="k">Passo a passo</div><div class="v">' + selo(p.fluxo.status) + ' <button class="lnk" data-ver-fluxo="' + esc(p.id) + '">ver fluxo</button></div></div>';
+    var lac = lacPor[p.id] || [];
+    if (lac.length) h += '<div class="campo"><div class="k">Lacunas</div><div class="v">' + lac.map(function (l) { return "<div>• " + esc(l.mensagem.replace((COD[p.id] || "") + " " + p.nome + ": ", "")) + (l.pergunta ? ' <span class="mono muted">' + esc(l.pergunta) + "</span>" : "") + "</div>"; }).join("") + "</div></div>";
+    var perg = (M.perguntas || []).filter(function (q) { return (q.alvo || []).some(function (a) { return a === p.id || a.indexOf(p.id + ".") === 0; }) && (q.status === "aberta" || q.status === "em_formulario"); });
+    if (perg.length) h += '<div class="campo"><div class="k">Perguntas pendentes</div><div class="v">' + perg.map(function (q) { return '<div><span class="mono muted">' + esc(q.id) + "</span> " + esc(q.texto) + "</div>"; }).join("") + "</div></div>";
+    var cts = (M.contradicoes || []).filter(function (c) { return c.elemento === p.id && (c.status || "aberta") === "aberta"; });
+    if (cts.length) h += '<div class="campo"><div class="k">Contradição</div><div class="v">' + cts.map(function (c) { return esc(c.descricao); }).join("<br>") + "</div></div>";
+    var ide = (M.ideias || []).filter(function (i) { return i.processo === p.id; });
+    if (ide.length) h += '<div class="campo"><div class="k">Ideias de melhoria anotadas</div><div class="v">' + ide.map(function (i) { return "• " + esc(i.texto); }).join("<br>") + "</div></div>";
+    h += '<div class="campo"><div class="k">De onde veio</div><div class="v">' + (evidencias(p.evidencias) || '<span class="vazio-msg">Nenhuma evidência: é uma hipótese a confirmar.</span>') + "</div></div>";
+    el.innerHTML = h;
+  }
+
+  // ------------------------------------------------------------ arquivos para baixar
+  var CRC = (function () { var t = [], c; for (var n = 0; n < 256; n++) { c = n; for (var k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(b) { var c = 0xFFFFFFFF; for (var i = 0; i < b.length; i++) c = CRC[(c ^ b[i]) & 0xFF] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+  function zip(arquivos) {
+    var enc = new TextEncoder(), partes = [], central = [], off = 0;
+    arquivos.forEach(function (a) {
+      var nomeB = enc.encode(a.nome), dados = enc.encode(a.texto), crc = crc32(dados);
+      var h = new DataView(new ArrayBuffer(30));
+      h.setUint32(0, 0x04034b50, true); h.setUint16(4, 20, true); h.setUint16(6, 0x0800, true); h.setUint16(8, 0, true);
+      h.setUint16(10, 0, true); h.setUint16(12, 0x21, true); h.setUint32(14, crc, true); h.setUint32(18, dados.length, true);
+      h.setUint32(22, dados.length, true); h.setUint16(26, nomeB.length, true); h.setUint16(28, 0, true);
+      partes.push(new Uint8Array(h.buffer), nomeB, dados);
+      var c = new DataView(new ArrayBuffer(46));
+      c.setUint32(0, 0x02014b50, true); c.setUint16(4, 20, true); c.setUint16(6, 20, true); c.setUint16(8, 0x0800, true); c.setUint16(10, 0, true);
+      c.setUint16(12, 0, true); c.setUint16(14, 0x21, true); c.setUint32(16, crc, true); c.setUint32(20, dados.length, true); c.setUint32(24, dados.length, true);
+      c.setUint16(28, nomeB.length, true); c.setUint32(42, off, true);
+      central.push(new Uint8Array(c.buffer), nomeB);
+      off += 30 + nomeB.length + dados.length;
+    });
+    var tam = central.reduce(function (s, x) { return s + x.length; }, 0);
+    var fim = new DataView(new ArrayBuffer(22));
+    fim.setUint32(0, 0x06054b50, true); fim.setUint16(8, arquivos.length, true); fim.setUint16(10, arquivos.length, true);
+    fim.setUint32(12, tam, true); fim.setUint32(16, off, true);
+    return new Blob(partes.concat(central, [new Uint8Array(fim.buffer)]), { type: "application/zip" });
+  }
+  function slug(s) { return String(s || "").normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48) || "item"; }
+  function aviso(t) { var m = document.getElementById("msg-acao"); if (m) m.textContent = t; }
+  function salvar(blob, nomeArq) {
+    var w = window.claude;
+    var p = w && typeof w.use === "function" ? w.use("downloads") : Promise.resolve(null);
+    return Promise.resolve(p).then(function (dl) {
+      if (dl) return dl.save({ filename: nomeArq, data: blob }).then(function () { aviso("Arquivo pronto: " + nomeArq); }, function (e) { aviso(e && e.code === "declined" ? "Download cancelado." : "Não foi possível baixar aqui: " + ((e && e.message) || "")); });
+      var url = URL.createObjectURL(blob), a = document.createElement("a");
+      a.href = url; a.download = nomeArq; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+      aviso("Arquivo pronto: " + nomeArq);
+    });
+  }
+  function pacote() {
+    var arqs = [];
+    Object.keys(D.bpmn || {}).forEach(function (pid) { arqs.push({ nome: "bpmn/" + slug(COD[pid]) + "-" + slug(nome(pid)) + ".bpmn", texto: D.bpmn[pid] }); });
+    if (D.drawio) arqs.push({ nome: "mapa.drawio", texto: D.drawio });
+    Object.keys(D.mermaid || {}).forEach(function (k) { arqs.push({ nome: "mermaid/" + k, texto: D.mermaid[k] }); });
+    arqs.push({ nome: "mapa.json", texto: JSON.stringify(M, null, 2) });
+    arqs.push({ nome: "LEIA-ME.txt", texto: "Arquivos editáveis do mapa de processos.\n\n.bpmn: abra em https://demo.bpmn.io, Camunda Modeler ou Bizagi Modeler.\nmapa.drawio: abra em https://app.diagrams.net (uma página por visão).\nmermaid/*.mmd: cole em https://mermaid.live, Notion, GitHub ou Obsidian.\nmapa.json: a fonte de verdade do mapeamento.\n" });
+    return salvar(zip(arqs), "mapa-de-processos-" + slug((M.organizacao || {}).nome) + ".zip");
+  }
+
+  // ------------------------------------------------------------ navegação
+  var ABAS = { cadeia: vistaCadeia, hierarquia: vistaHierarquia, fluxos: vistaFluxos, lacunas: vistaLacunas, negocio: vistaNegocio, pessoas: vistaPessoas };
+  function render() {
+    document.querySelectorAll("#abas a").forEach(function (a) { if (a.dataset.aba === estado.aba) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+    document.getElementById("principal").innerHTML = ABAS[estado.aba]();
+    painel();
+    if (estado.aba === "fluxos") montarBpmn();
+  }
+  function lerHash() { var h = (location.hash || "").replace("#", ""); estado.aba = ABAS[h] ? h : "cadeia"; render(); }
+  window.addEventListener("hashchange", lerHash);
+
+  document.addEventListener("click", function (ev) {
+    var t = ev.target.closest("[data-alterna],[data-sel],[data-fluxo],[data-acao],[data-ver-fluxo],#abrir-tudo,#fechar-tudo,#fechar-painel");
+    if (!t) return;
+    if (t.dataset.alterna) { ev.stopPropagation(); estado.abertos[t.dataset.alterna] = !estado.abertos[t.dataset.alterna]; render(); return; }
+    if (t.id === "abrir-tudo") { procs.forEach(function (p) { estado.abertos[p.id] = true; }); render(); return; }
+    if (t.id === "fechar-tudo") { estado.abertos = {}; render(); return; }
+    if (t.id === "fechar-painel") { estado.sel = null; render(); return; }
+    if (t.dataset.fluxo) { estado.fluxo = t.dataset.fluxo; render(); return; }
+    if (t.dataset.verFluxo) { estado.fluxo = t.dataset.verFluxo; if (location.hash !== "#fluxos") location.hash = "fluxos"; else render(); return; }
+    if (t.dataset.acao === "copiar-bpmn") {
+      var xml = (D.bpmn || {})[estado.fluxo] || "";
+      try { navigator.clipboard.writeText(xml).then(function () { aviso("BPMN copiado. No bpmn.io, use 'Open' e cole ou arraste o arquivo baixado."); }, function () { aviso("Não consegui copiar aqui; use o botão de baixar."); }); }
+      catch (e) { aviso("Não consegui copiar aqui; use o botão de baixar."); }
+      return;
+    }
+    if (t.dataset.acao === "baixar-pacote") { pacote(); return; }
+    if (t.dataset.sel) {
+      estado.sel = t.dataset.sel;
+      var p = idx[estado.sel], a = p;
+      while (a && a.pai) { estado.abertos[a.pai] = true; a = idx[a.pai]; }
+      render();
+    }
+  });
+  document.addEventListener("input", function (ev) {
+    if (ev.target.id === "busca") {
+      estado.busca = ev.target.value;
+      var pos = ev.target.selectionStart;
+      render();
+      var b = document.getElementById("busca"); if (b) { b.focus(); try { b.setSelectionRange(pos, pos); } catch (e) {} }
+    }
+  });
+  document.addEventListener("change", function (ev) {
+    if (ev.target.dataset && ev.target.dataset.filtro) { estado.filtro[ev.target.dataset.filtro] = ev.target.checked; render(); }
+    if (ev.target.id === "so-sem") { estado.soSemPergunta = ev.target.checked; render(); }
+  });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && estado.sel) { estado.sel = null; render(); } });
+
+  cabecalho();
+  lerHash();
+})();
+</script>

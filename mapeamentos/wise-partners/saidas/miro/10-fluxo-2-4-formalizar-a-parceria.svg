@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_10" transform="translate(3188,4354)" data-frame="2.4 Formalizar a parceria">
+<rect data-type="frame" x="0" y="0" width="2348" height="1058" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">2.4 Formalizar a parceria</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="2.4 Formalizar a parceria">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Próximo passo combinado na reunião"]):::declarado
+      n_t1["Enviar a minuta do termo"]:::declarado
+      n_t3["Registrar o ok na negociação"]:::declarado
+      n_t4["Coletar a assinatura digital"]:::declarado
+      n_f1(["Termo assinado"]):::declarado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t2["Aprovar a assinatura"]:::declarado
+      n_g1{"Assinatura aprovada?"}:::declarado
+      n_f2(["Assinatura não aprovada"]):::hipotese
+    end
+    ext_X1[/"Empresa prospectada"/]
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_g1
+    n_g1 --&gt;|Sim| n_t3
+    n_g1 --&gt;|Não| n_f2
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_f1
+    n_t1 -.-&gt;|Minuta do termo| ext_X1
+    n_t4 -.-&gt;|Termo para assinatura| ext_X1
+
+</foreignObject>
+</g></svg>

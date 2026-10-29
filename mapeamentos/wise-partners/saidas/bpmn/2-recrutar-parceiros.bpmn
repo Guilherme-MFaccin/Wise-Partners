@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-06" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-06">
+    <bpmn:participant id="Participant_P-06" name="2 Recrutar parceiros" processRef="Process_P-06" />
+    <bpmn:participant id="Ext_P-06_X1" name="Empresa prospectada" />
+    <bpmn:messageFlow id="P-06_M1" name="Abordagem" sourceRef="P-06_s2" targetRef="Ext_P-06_X1" />
+    <bpmn:messageFlow id="P-06_M2" name="Resposta" sourceRef="Ext_P-06_X1" targetRef="P-06_e1" />
+    <bpmn:messageFlow id="P-06_M3" name="Minuta do termo" sourceRef="P-06_s5" targetRef="Ext_P-06_X1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-06" name="2 Recrutar parceiros" isExecutable="false">
+    <bpmn:documentation>Levar uma empresa que atende ao IPP do primeiro contato ao termo assinado. [status do fluxo: Declarado; evidências: EV-0038, EV-0055, EV-0090, EV-0091, EV-0074]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-06">
+      <bpmn:lane id="Lane_P-06_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-06_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_s1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_s2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_e1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_s3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_g2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_s4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_s5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_f1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_f2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-06_f3</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-06_PA-02" name="Diretor">
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-06_i1" name="Empresa mapeada"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:outgoing>P-06_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:subProcess id="P-06_s1" name="Qualificar empresa mapeada"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F1</bpmn:incoming><bpmn:outgoing>P-06_F2</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:exclusiveGateway id="P-06_g1" name="Empresa atende ao IPP?"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F2</bpmn:incoming><bpmn:outgoing>P-06_F3</bpmn:outgoing><bpmn:outgoing>P-06_F4</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:subProcess id="P-06_s2" name="Abordar prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F3</bpmn:incoming><bpmn:outgoing>P-06_F5</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:intermediateCatchEvent id="P-06_e1" name="Resposta do prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F5</bpmn:incoming><bpmn:outgoing>P-06_F6</bpmn:outgoing><bpmn:messageEventDefinition id="P-06_e1_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:subProcess id="P-06_s3" name="Apresentar o programa em reunião"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F6</bpmn:incoming><bpmn:incoming>P-06_F11</bpmn:incoming><bpmn:outgoing>P-06_F7</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:exclusiveGateway id="P-06_g2" name="Prospect quer seguir?"><bpmn:documentation>Os jeitos de terminar vêm do Playbook (perdas: não elegível, sem interesse); a pausa em nutrição vem da especificação 002. A ordem exata é dedução e está em pergunta.; status: Hipótese</bpmn:documentation><bpmn:incoming>P-06_F7</bpmn:incoming><bpmn:outgoing>P-06_F8</bpmn:outgoing><bpmn:outgoing>P-06_F9</bpmn:outgoing><bpmn:outgoing>P-06_F10</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:subProcess id="P-06_s4" name="Nutrir prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F10</bpmn:incoming><bpmn:outgoing>P-06_F11</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:subProcess id="P-06_s5" name="Formalizar a parceria"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F8</bpmn:incoming><bpmn:outgoing>P-06_F12</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:endEvent id="P-06_f1" name="Empresa não elegível"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F4</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-06_f2" name="Prospect sem interesse"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F9</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-06_f3" name="Termo assinado"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F12</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-06_F1" name="" sourceRef="P-06_i1" targetRef="P-06_s1" />
+    <bpmn:sequenceFlow id="P-06_F2" name="" sourceRef="P-06_s1" targetRef="P-06_g1" />
+    <bpmn:sequenceFlow id="P-06_F3" name="Sim" sourceRef="P-06_g1" targetRef="P-06_s2" />
+    <bpmn:sequenceFlow id="P-06_F4" name="Não" sourceRef="P-06_g1" targetRef="P-06_f1" />
+    <bpmn:sequenceFlow id="P-06_F5" name="" sourceRef="P-06_s2" targetRef="P-06_e1" />
+    <bpmn:sequenceFlow id="P-06_F6" name="" sourceRef="P-06_e1" targetRef="P-06_s3" />
+    <bpmn:sequenceFlow id="P-06_F7" name="" sourceRef="P-06_s3" targetRef="P-06_g2" />
+    <bpmn:sequenceFlow id="P-06_F8" name="Sim" sourceRef="P-06_g2" targetRef="P-06_s5" />
+    <bpmn:sequenceFlow id="P-06_F9" name="Não" sourceRef="P-06_g2" targetRef="P-06_f2" />
+    <bpmn:sequenceFlow id="P-06_F10" name="Agora não" sourceRef="P-06_g2" targetRef="P-06_s4" />
+    <bpmn:sequenceFlow id="P-06_F11" name="" sourceRef="P-06_s4" targetRef="P-06_s3" />
+    <bpmn:sequenceFlow id="P-06_F12" name="" sourceRef="P-06_s5" targetRef="P-06_f3" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-06">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-06" bpmnElement="Collaboration_P-06">
+      <bpmndi:BPMNShape id="Participant_P-06_di" bpmnElement="Participant_P-06" isHorizontal="true"><dc:Bounds x="0" y="100" width="1704" height="504" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-06_PA-01_di" bpmnElement="Lane_P-06_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="1674" height="356" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-06_PA-02_di" bpmnElement="Lane_P-06_PA-02" isHorizontal="true"><dc:Bounds x="30" y="456" width="1674" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-06_X1_di" bpmnElement="Ext_P-06_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="1704" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_i1_di" bpmnElement="P-06_i1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="160" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_s1_di" bpmnElement="P-06_s1" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="290" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_g1_di" bpmnElement="P-06_g1" isMarkerVisible="true" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="505" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="115" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_s2_di" bpmnElement="P-06_s2" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="642" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_e1_di" bpmnElement="P-06_e1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="864" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_s3_di" bpmnElement="P-06_s3" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="994" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_g2_di" bpmnElement="P-06_g2" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1209" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="115" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_s4_di" bpmnElement="P-06_s4" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1346" y="346" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_s5_di" bpmnElement="P-06_s5" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1346" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_f1_di" bpmnElement="P-06_f1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="688" y="260" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="302" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_f2_di" bpmnElement="P-06_f2" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1392" y="260" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="302" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_f3_di" bpmnElement="P-06_f3" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1568" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1531" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-06_F1_di" bpmnElement="P-06_F1"><di:waypoint x="196" y="174" /><di:waypoint x="290" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F2_di" bpmnElement="P-06_F2"><di:waypoint x="418" y="174" /><di:waypoint x="505" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F3_di" bpmnElement="P-06_F3"><di:waypoint x="555" y="174" /><di:waypoint x="642" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="561" y="154" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F4_di" bpmnElement="P-06_F4"><di:waypoint x="530" y="199" /><di:waypoint x="530" y="278" /><di:waypoint x="688" y="278" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="258" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F5_di" bpmnElement="P-06_F5"><di:waypoint x="770" y="174" /><di:waypoint x="864" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F6_di" bpmnElement="P-06_F6"><di:waypoint x="900" y="174" /><di:waypoint x="994" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F7_di" bpmnElement="P-06_F7"><di:waypoint x="1122" y="174" /><di:waypoint x="1209" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F8_di" bpmnElement="P-06_F8"><di:waypoint x="1259" y="174" /><di:waypoint x="1346" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="1265" y="154" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F9_di" bpmnElement="P-06_F9"><di:waypoint x="1234" y="199" /><di:waypoint x="1234" y="278" /><di:waypoint x="1392" y="278" /><bpmndi:BPMNLabel><dc:Bounds x="1242" y="258" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F10_di" bpmnElement="P-06_F10"><di:waypoint x="1234" y="199" /><di:waypoint x="1234" y="382" /><di:waypoint x="1346" y="382" /><bpmndi:BPMNLabel><dc:Bounds x="1242" y="362" width="63" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F11_di" bpmnElement="P-06_F11"><di:waypoint x="1410" y="418" /><di:waypoint x="1410" y="434" /><di:waypoint x="1058" y="434" /><di:waypoint x="1058" y="210" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_F12_di" bpmnElement="P-06_F12"><di:waypoint x="1474" y="174" /><di:waypoint x="1568" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_M1_di" bpmnElement="P-06_M1"><di:waypoint x="706" y="138" /><di:waypoint x="706" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="712" y="73" width="63" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_M2_di" bpmnElement="P-06_M2"><di:waypoint x="882" y="60" /><di:waypoint x="882" y="156" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="73" width="56" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-06_M3_di" bpmnElement="P-06_M3"><di:waypoint x="1410" y="138" /><di:waypoint x="1410" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="1416" y="73" width="105" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

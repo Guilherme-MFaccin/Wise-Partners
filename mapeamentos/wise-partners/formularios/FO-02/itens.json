@@ -1,0 +1,163 @@
+[
+  {
+    "id": "_nome",
+    "titulo": "Seu nome",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_funcao",
+    "titulo": "Sua função ou cargo",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_area",
+    "titulo": "Área ou equipe em que você trabalha",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_email",
+    "titulo": "Seu e-mail (opcional, só para tirarmos dúvidas)",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "Q-0013",
+    "titulo": "Pense na última vez que você mostrou a um cliente a prateleira de fornecedores (empresas parceiras que atendem uma necessidade dele). O que aconteceu: como surgiu, o que você mostrou e o que veio depois?",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Prateleira de fornecedores"
+  },
+  {
+    "id": "Q-0014",
+    "titulo": "Com que frequência isso acontece?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Toda semana",
+      "Uma ou duas vezes por mês",
+      "Raramente",
+      "Nunca aconteceu",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Prateleira de fornecedores"
+  },
+  {
+    "id": "Q-0015",
+    "titulo": "Quando o cliente se interessa por um parceiro da prateleira, quem apresenta um ao outro?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Eu mesmo",
+      "O Guilherme",
+      "O cliente procura o parceiro sozinho",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Prateleira de fornecedores"
+  },
+  {
+    "id": "Q-0016",
+    "titulo": "Onde fica registrado que você apresentou um parceiro a um cliente?",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Prateleira de fornecedores"
+  },
+  {
+    "id": "Q-0017",
+    "titulo": "Você já atendeu algum cliente que chegou por indicação de um parceiro do Wise Partners?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Sim",
+      "Não",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Clientes indicados por parceiros"
+  },
+  {
+    "id": "Q-0018",
+    "titulo": "Se sim, conte o último: como você soube da indicação, o que fez primeiro, em quanto tempo e quando o parceiro que indicou teve retorno.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Clientes indicados por parceiros"
+  },
+  {
+    "id": "Q-0012",
+    "titulo": "Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?",
+    "tipo": "escolha",
+    "opcoes": [
+      "O Guilherme",
+      "O comercial da empresa que vai atender (Wise, Tríade ou Swallow)",
+      "Um consultor da Wise",
+      "Depende do caso",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Indicações e comissão"
+  },
+  {
+    "id": "Q-0019",
+    "titulo": "Depois que um cliente indicado fecha, quem fala com ele para saber se continua ativo e satisfeito?",
+    "tipo": "escolha",
+    "opcoes": [
+      "O consultor que atende o cliente",
+      "O Guilherme",
+      "Ninguém faz isso hoje",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Clientes indicados por parceiros"
+  },
+  {
+    "id": "_indicacoes",
+    "titulo": "Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_documentos",
+    "titulo": "Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_comentarios",
+    "titulo": "Algo importante que não perguntamos?",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  }
+]

@@ -1,0 +1,72 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    ORG["Programa Wise Partners"]
+    P_01["1 Gerir o programa Wise Partners"]:::declarado
+    P_02["1.1 Revisar o programa semanalmente"]:::declarado
+    P_03["1.2 Definir metas e fase do programa"]:::declarado
+    P_04["1.3 Revisar o nível dos parceiros"]:::contestado
+    P_05["1.4 Publicar regras e comunicados"]:::declarado
+    P_06["2 Recrutar parceiros"]:::declarado
+    P_07["2.1 Qualificar empresa mapeada"]:::declarado
+    P_08["2.2 Abordar prospect"]:::declarado
+    P_09["2.3 Apresentar o programa em reunião"]:::declarado
+    P_10["2.4 Formalizar a parceria"]:::declarado
+    P_11["2.5 Nutrir prospect"]:::declarado
+    P_12["3 Integrar parceiro"]:::contestado
+    P_13["3.1 Entregar o primeiro valor do pacote"]:::declarado
+    P_14["3.2 Conduzir o plano de 90 dias"]:::declarado
+    P_15["4 Conduzir o Base Ativa"]:::declarado
+    P_16["5 Manter o relacionamento com parceiros"]:::declarado
+    P_17["5.1 Fazer o check-in de manutenção com o parceiro"]:::declarado
+    P_18["5.2 Resgatar parceiro inativo"]:::declarado
+    P_19["5.3 Mudar o pacote do parceiro"]:::declarado
+    P_20["5.4 Executar ação conjunta com o parceiro"]:::declarado
+    P_21["5.5 Executar a cooperação institucional"]:::declarado
+    P_22["5.6 Conceder palco em evento"]:::declarado
+    P_23["5.7 Encerrar parceria"]:::declarado
+    P_24["6 Gerir indicações"]:::declarado
+    P_25["6.1 Receber indicação de parceiro"]:::declarado
+    P_26["6.2 Apresentar a prateleira ao cliente"]:::declarado
+    P_27["6.3 Checar cliente indicado aos 6 e 12 meses"]:::declarado
+    P_28["6.4 Pagar comissão ao parceiro"]:::declarado
+    P_29["6.5 Cruzar carteiras com o parceiro"]:::declarado
+    P_30["7 Capacitar parceiros"]:::declarado
+    P_31["7.1 Abrir a mentoria mensal à carteira do parceiro"]:::declarado
+    P_32["7.2 Certificar pessoas do parceiro"]:::declarado
+    P_33["8 Manter a prateleira de RFP"]:::declarado
+    ORG --> P_01
+    P_01 --> P_02
+    P_01 --> P_03
+    P_01 --> P_04
+    P_01 --> P_05
+    ORG --> P_06
+    P_06 --> P_07
+    P_06 --> P_08
+    P_06 --> P_09
+    P_06 --> P_10
+    P_06 --> P_11
+    ORG --> P_12
+    P_12 --> P_13
+    P_12 --> P_14
+    ORG --> P_15
+    ORG --> P_16
+    P_16 --> P_17
+    P_16 --> P_18
+    P_16 --> P_19
+    P_16 --> P_20
+    P_16 --> P_21
+    P_16 --> P_22
+    P_16 --> P_23
+    ORG --> P_24
+    P_24 --> P_25
+    P_24 --> P_26
+    P_24 --> P_27
+    P_24 --> P_28
+    P_24 --> P_29
+    ORG --> P_30
+    P_30 --> P_31
+    P_30 --> P_32
+    ORG --> P_33

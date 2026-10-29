@@ -1,0 +1,154 @@
+[
+  {
+    "id": "_nome",
+    "titulo": "Seu nome",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_funcao",
+    "titulo": "Sua função ou cargo",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": true,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_area",
+    "titulo": "Área ou equipe em que você trabalha",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "_email",
+    "titulo": "Seu e-mail (opcional, só para tirarmos dúvidas)",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Sobre você"
+  },
+  {
+    "id": "Q-0017",
+    "titulo": "Você já atendeu algum cliente que chegou por indicação de um parceiro do Wise Partners?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Sim",
+      "Não",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Clientes indicados por parceiros"
+  },
+  {
+    "id": "Q-0018",
+    "titulo": "Se sim, conte o último: como você soube da indicação, o que fez primeiro, em quanto tempo e quando o parceiro que indicou teve retorno.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Clientes indicados por parceiros"
+  },
+  {
+    "id": "Q-0012",
+    "titulo": "Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?",
+    "tipo": "escolha",
+    "opcoes": [
+      "O Guilherme",
+      "O comercial da empresa que vai atender (Wise, Tríade ou Swallow)",
+      "Um consultor da Wise",
+      "Depende do caso",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Indicações e comissão"
+  },
+  {
+    "id": "Q-0020",
+    "titulo": "Quando chega um cliente indicado por parceiro, vocês registram de qual parceiro ele veio?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Sim, num campo do CRM",
+      "Sim, numa anotação",
+      "Não",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Registro e retorno"
+  },
+  {
+    "id": "Q-0021",
+    "titulo": "Em qual sistema vocês registram as oportunidades de venda?",
+    "tipo": "curta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Registro e retorno"
+  },
+  {
+    "id": "Q-0022",
+    "titulo": "Quem avisa o parceiro sobre o andamento da indicação (primeiro contato, proposta, fechamento)?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Eu",
+      "O Guilherme",
+      "Ninguém avisa hoje",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Registro e retorno"
+  },
+  {
+    "id": "Q-0023",
+    "titulo": "Quando um cliente indicado fecha e paga a primeira mensalidade, como o financeiro fica sabendo que há comissão a pagar ao parceiro?",
+    "tipo": "escolha",
+    "opcoes": [
+      "Eu aviso",
+      "O Guilherme avisa",
+      "O financeiro vê no sistema",
+      "Ainda não aconteceu",
+      "Não sei / não é comigo"
+    ],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Registro e retorno"
+  },
+  {
+    "id": "_indicacoes",
+    "titulo": "Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_documentos",
+    "titulo": "Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  },
+  {
+    "id": "_comentarios",
+    "titulo": "Algo importante que não perguntamos?",
+    "tipo": "aberta",
+    "opcoes": [],
+    "ajuda": "",
+    "obrigatorio": false,
+    "bloco": "Para fechar"
+  }
+]

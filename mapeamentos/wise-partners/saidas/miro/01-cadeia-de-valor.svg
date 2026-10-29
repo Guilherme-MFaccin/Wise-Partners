@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_cadeia" transform="translate(0,0)" data-frame="Cadeia de valor">
+<rect data-type="frame" x="0" y="0" width="2308" height="844" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">Programa Wise Partners: cadeia de valor</text>
+<rect x="64" y="194" width="2180" height="174" fill="#f7f7f7" stroke="none" data-content="&lt;b&gt;Gestão&lt;/b&gt;" data-text-align="left" data-text-align-vertical="middle" data-font-size="33" data-font-family="noto_sans" data-text-color="#1a1a1a" />
+<rect x="64" y="400" width="2180" height="174" fill="#f7f7f7" stroke="none" data-content="&lt;b&gt;Finalísticos&lt;/b&gt;" data-text-align="left" data-text-align-vertical="middle" data-font-size="33" data-font-family="noto_sans" data-text-color="#1a1a1a" />
+<rect x="64" y="606" width="2180" height="174" fill="#f7f7f7" stroke="none" data-content="&lt;b&gt;Suporte&lt;/b&gt;" data-text-align="left" data-text-align-vertical="middle" data-font-size="33" data-font-family="noto_sans" data-text-color="#1a1a1a" />
+<line x1="584" y1="487" x2="616" y2="487" stroke="#313131" stroke-width="2" data-arrow="end" data-shape="straight" data-start="c_P_06" data-end="c_P_12" data-start-side="right" data-end-side="left" />
+<line x1="916" y1="487" x2="948" y2="487" stroke="#313131" stroke-width="2" data-arrow="end" data-shape="straight" data-start="c_P_12" data-end="c_P_15" data-start-side="right" data-end-side="left" />
+<line x1="1248" y1="487" x2="1280" y2="487" stroke="#313131" stroke-width="2" data-arrow="end" data-shape="straight" data-start="c_P_15" data-end="c_P_16" data-start-side="right" data-end-side="left" />
+<line x1="1580" y1="487" x2="1612" y2="487" stroke="#313131" stroke-width="2" data-arrow="end" data-shape="straight" data-start="c_P_16" data-end="c_P_24" data-start-side="right" data-end-side="left" />
+<line x1="1912" y1="487" x2="1944" y2="487" stroke="#313131" stroke-width="2" data-arrow="end" data-shape="straight" data-start="c_P_24" data-end="c_P_30" data-start-side="right" data-end-side="left" />
+<rect id="c_P_01" x="284" y="226" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;1 Gerir o programa Wise Partners&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_06" x="284" y="432" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;2 Recrutar parceiros&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_12" x="616" y="432" width="300" height="110" rx="12" fill="#ffc6c6" stroke="#bd0a0a" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;3 Integrar parceiro&lt;/b&gt;&lt;br&gt;Contestado" data-font-size="22" />
+<rect id="c_P_15" x="948" y="432" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;4 Conduzir o Base Ativa&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_16" x="1280" y="432" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;5 Manter o relacionamento com parceiros&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_24" x="1612" y="432" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;6 Gerir indicações&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_30" x="1944" y="432" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;7 Capacitar parceiros&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+<rect id="c_P_33" x="284" y="638" width="300" height="110" rx="12" fill="#fff6b6" stroke="#af7e04" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;8 Manter a prateleira de RFP&lt;/b&gt;&lt;br&gt;Declarado" data-font-size="22" />
+</g></svg>

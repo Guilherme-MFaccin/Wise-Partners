@@ -1,0 +1,171 @@
+<title>Formulário de mapeamento</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap">
+<style>
+/* Layout: uma coluna de leitura confortável; blocos de perguntas como fichas; barra de envio ao final. */
+:root {
+  --paper: #F3F5F7; --surface: #FFFFFF; --ink: #15202B; --muted: #586472; --line: #D8DEE5;
+  --accent: #1D5C8F; --accent-soft: #E2EDF7; --ok: #2F8F4E; --erro: #C0392B;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --paper: #0E141A; --surface: #161F28; --ink: #E5EAF0; --muted: #9AA6B3; --line: #2B3744; --accent: #84B6E6; --accent-soft: #1A2B3B; --ok: #63C584; --erro: #F08A7E; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --paper: #0E141A; --surface: #161F28; --ink: #E5EAF0; --muted: #9AA6B3; --line: #2B3744; --accent: #84B6E6; --accent-soft: #1A2B3B; --ok: #63C584; --erro: #F08A7E; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.55; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 28px 60px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; }
+h2 { font-size: 1.1rem; font-weight: 700; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; color: var(--muted); font-weight: 700; }
+.intro { color: var(--muted); margin: 10px 0 0; }
+.bloco { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-top: 16px; display: grid; gap: 18px; }
+.item { display: grid; gap: 6px; }
+.item label.tit, .item legend { font-weight: 700; padding: 0; }
+.item .ajuda { font-size: 0.86rem; color: var(--muted); }
+.obr { color: var(--erro); }
+input[type="text"], input[type="email"], textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font: inherit; }
+textarea { min-height: 96px; resize: vertical; }
+fieldset { border: none; margin: 0; padding: 0; display: grid; gap: 6px; min-width: 0; }
+.opcao { display: flex; gap: 8px; align-items: flex-start; padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+.opcao:hover { background: var(--accent-soft); }
+.opcao input { margin-top: 4px; }
+.escala { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 0.85rem; color: var(--muted); }
+.escala label { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; color: var(--ink); font-weight: 700; }
+.escala input { position: absolute; opacity: 0; pointer-events: none; }
+.escala input:checked + span { color: var(--accent); }
+.escala label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.envio { margin-top: 18px; display: grid; gap: 10px; }
+.btn { padding: 12px 18px; border-radius: 10px; border: 1px solid var(--accent); background: var(--accent); color: var(--surface); font: inherit; font-weight: 700; cursor: pointer; justify-self: start; }
+.btn.sec { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.status { font-size: 0.92rem; }
+.status.ok { color: var(--ok); }
+.status.erro { color: var(--erro); }
+pre { white-space: pre-wrap; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px; font-size: 0.8rem; max-height: 260px; overflow: auto; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow" id="org"></div>
+  <h1 id="titulo">Formulário</h1>
+  <p class="intro" id="intro"></p>
+  <form id="form" novalidate></form>
+  <div class="envio">
+    <button class="btn" id="enviar" type="button">Enviar respostas</button>
+    <p class="status" id="status" role="status"></p>
+    <div id="alternativa" hidden>
+      <p class="status">Não foi possível gravar direto por aqui. Copie o texto abaixo e envie para quem pediu o formulário.</p>
+      <button class="btn sec" id="copiar" type="button">Copiar respostas</button>
+      <pre id="texto"></pre>
+    </div>
+  </div>
+</div>
+
+<script id="dados" type="application/json">{"formulario": "FO-03", "titulo": "Rodada 1: clientes indicados por parceiros (comercial)", "organizacao": "Programa Wise Partners", "introducao": "Estamos desenhando o mapa de como o trabalho do Programa Wise Partners acontece, para organizar os funis e as tarefas do portal. Não tem resposta certa ou errada e ninguém será avaliado pelas respostas: vale como funciona hoje, na prática. Leva cerca de 10 minutos.", "itens": [{"id": "_nome", "titulo": "Seu nome", "tipo": "curta", "opcoes": [], "ajuda": "", "obrigatorio": true, "bloco": "Sobre você"}, {"id": "_funcao", "titulo": "Sua função ou cargo", "tipo": "curta", "opcoes": [], "ajuda": "", "obrigatorio": true, "bloco": "Sobre você"}, {"id": "_area", "titulo": "Área ou equipe em que você trabalha", "tipo": "curta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Sobre você"}, {"id": "_email", "titulo": "Seu e-mail (opcional, só para tirarmos dúvidas)", "tipo": "curta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Sobre você"}, {"id": "Q-0017", "titulo": "Você já atendeu algum cliente que chegou por indicação de um parceiro do Wise Partners?", "tipo": "escolha", "opcoes": ["Sim", "Não", "Não sei / não é comigo"], "ajuda": "", "obrigatorio": false, "bloco": "Clientes indicados por parceiros"}, {"id": "Q-0018", "titulo": "Se sim, conte o último: como você soube da indicação, o que fez primeiro, em quanto tempo e quando o parceiro que indicou teve retorno.", "tipo": "aberta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Clientes indicados por parceiros"}, {"id": "Q-0012", "titulo": "Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?", "tipo": "escolha", "opcoes": ["O Guilherme", "O comercial da empresa que vai atender (Wise, Tríade ou Swallow)", "Um consultor da Wise", "Depende do caso", "Não sei / não é comigo"], "ajuda": "", "obrigatorio": false, "bloco": "Indicações e comissão"}, {"id": "Q-0020", "titulo": "Quando chega um cliente indicado por parceiro, vocês registram de qual parceiro ele veio?", "tipo": "escolha", "opcoes": ["Sim, num campo do CRM", "Sim, numa anotação", "Não", "Não sei / não é comigo"], "ajuda": "", "obrigatorio": false, "bloco": "Registro e retorno"}, {"id": "Q-0021", "titulo": "Em qual sistema vocês registram as oportunidades de venda?", "tipo": "curta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Registro e retorno"}, {"id": "Q-0022", "titulo": "Quem avisa o parceiro sobre o andamento da indicação (primeiro contato, proposta, fechamento)?", "tipo": "escolha", "opcoes": ["Eu", "O Guilherme", "Ninguém avisa hoje", "Não sei / não é comigo"], "ajuda": "", "obrigatorio": false, "bloco": "Registro e retorno"}, {"id": "Q-0023", "titulo": "Quando um cliente indicado fecha e paga a primeira mensalidade, como o financeiro fica sabendo que há comissão a pagar ao parceiro?", "tipo": "escolha", "opcoes": ["Eu aviso", "O Guilherme avisa", "O financeiro vê no sistema", "Ainda não aconteceu", "Não sei / não é comigo"], "ajuda": "", "obrigatorio": false, "bloco": "Registro e retorno"}, {"id": "_indicacoes", "titulo": "Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.", "tipo": "aberta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Para fechar"}, {"id": "_documentos", "titulo": "Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.", "tipo": "aberta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Para fechar"}, {"id": "_comentarios", "titulo": "Algo importante que não perguntamos?", "tipo": "aberta", "opcoes": [], "ajuda": "", "obrigatorio": false, "bloco": "Para fechar"}], "nao_sei": "Não sei / não é comigo"}</script>
+<script>
+(function () {
+  "use strict";
+  var F = JSON.parse(document.getElementById("dados").textContent);
+  var CHAVE = "rascunho-" + F.formulario;
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function fid(id) { return "q-" + id.replace(/[^A-Za-z0-9_-]/g, "_"); }
+
+  document.getElementById("org").textContent = F.organizacao ? "Mapeamento de processos · " + F.organizacao : "Mapeamento de processos";
+  document.getElementById("titulo").textContent = F.titulo;
+  document.getElementById("intro").textContent = F.introducao || "Descreva como funciona hoje, na prática, mesmo que seja diferente do ideal. Se algo não for do seu dia a dia, deixe em branco ou marque que não sabe.";
+
+  var blocos = [], atual = null;
+  F.itens.forEach(function (it) {
+    if (!atual || (it.bloco || "") !== atual.nome) { atual = { nome: it.bloco || "", itens: [] }; blocos.push(atual); }
+    atual.itens.push(it);
+  });
+  var html = "";
+  blocos.forEach(function (b) {
+    html += '<section class="bloco">' + (b.nome ? "<h2>" + esc(b.nome) + "</h2>" : "");
+    b.itens.forEach(function (it) {
+      var id = fid(it.id), req = it.obrigatorio ? ' <span class="obr" aria-hidden="true">*</span>' : "";
+      var ajuda = it.ajuda ? '<div class="ajuda" id="' + id + '-a">' + esc(it.ajuda) + "</div>" : "";
+      var desc = it.ajuda ? ' aria-describedby="' + id + '-a"' : "";
+      if (it.tipo === "escolha" || it.tipo === "multipla") {
+        var tipo = it.tipo === "escolha" ? "radio" : "checkbox";
+        html += '<fieldset class="item"><legend>' + esc(it.titulo) + req + "</legend>" + ajuda +
+          it.opcoes.map(function (o, i) { return '<label class="opcao"><input type="' + tipo + '" name="' + id + '" id="' + id + "-" + i + '" value="' + esc(o) + '"><span>' + esc(o) + "</span></label>"; }).join("") + "</fieldset>";
+      } else if (it.tipo === "escala") {
+        html += '<fieldset class="item"><legend>' + esc(it.titulo) + req + "</legend>" + ajuda + '<div class="escala"><span>Muito baixo</span>' +
+          [1, 2, 3, 4, 5].map(function (n) { return '<label><input type="radio" name="' + id + '" id="' + id + "-" + n + '" value="' + n + '"><span>' + n + "</span></label>"; }).join("") + "<span>Muito alto</span></div></fieldset>";
+      } else if (it.tipo === "curta") {
+        html += '<div class="item"><label class="tit" for="' + id + '">' + esc(it.titulo) + req + "</label>" + ajuda + '<input type="' + (it.id === "_email" ? "email" : "text") + '" id="' + id + '" name="' + id + '"' + desc + (it.obrigatorio ? " required" : "") + "></div>";
+      } else {
+        html += '<div class="item"><label class="tit" for="' + id + '">' + esc(it.titulo) + req + "</label>" + ajuda + '<textarea id="' + id + '" name="' + id + '"' + desc + "></textarea></div>";
+      }
+    });
+    html += "</section>";
+  });
+  var form = document.getElementById("form");
+  form.innerHTML = html;
+
+  function coletar() {
+    var out = { formulario: F.formulario, respostas: {}, enviado_em: new Date().toISOString() };
+    F.itens.forEach(function (it) {
+      var id = fid(it.id), v;
+      if (it.tipo === "escolha" || it.tipo === "escala") { var c = form.querySelector('input[name="' + id + '"]:checked'); v = c ? c.value : ""; }
+      else if (it.tipo === "multipla") { v = Array.prototype.map.call(form.querySelectorAll('input[name="' + id + '"]:checked'), function (x) { return x.value; }).join("; "); }
+      else { var el = document.getElementById(id); v = el ? el.value.trim() : ""; }
+      if (it.id.charAt(0) === "_") out[it.id.slice(1)] = v; else if (v) out.respostas[it.id] = v;
+    });
+    return out;
+  }
+  function preencher(d) {
+    if (!d) return;
+    F.itens.forEach(function (it) {
+      var id = fid(it.id), v = it.id.charAt(0) === "_" ? d[it.id.slice(1)] : (d.respostas || {})[it.id];
+      if (v == null || v === "") return;
+      if (it.tipo === "escolha" || it.tipo === "escala") { var r = form.querySelector('input[name="' + id + '"][value="' + String(v).replace(/"/g, '\\"') + '"]'); if (r) r.checked = true; }
+      else if (it.tipo === "multipla") { String(v).split("; ").forEach(function (x) { var c = form.querySelector('input[name="' + id + '"][value="' + x.replace(/"/g, '\\"') + '"]'); if (c) c.checked = true; }); }
+      else { var el = document.getElementById(id); if (el) el.value = v; }
+    });
+  }
+  try { preencher(JSON.parse(localStorage.getItem(CHAVE) || "null")); } catch (e) {}
+  form.addEventListener("input", function () { try { localStorage.setItem(CHAVE, JSON.stringify(coletar())); } catch (e) {} });
+
+  var st = document.getElementById("status");
+  function msg(t, cls) { st.textContent = t; st.className = "status " + (cls || ""); }
+
+  var dbP = null, refP = null;
+  if (window.claude && typeof window.claude.use === "function") {
+    dbP = Promise.all([window.claude.use("db"), window.claude.use("user")]).then(function (r) {
+      var db = r[0], user = r[1];
+      if (!db || !user) return null;
+      return user.id().then(function (uid) {
+        if (!uid) return null;
+        var ref = db.doc("respostas/" + uid);
+        return ref.get().then(function (snap) { if (snap.exists) { preencher(snap.data()); msg("Você já respondeu. Pode ajustar e enviar de novo.", "ok"); } return ref; }, function () { return ref; });
+      });
+    }).catch(function () { return null; });
+  }
+
+  document.getElementById("enviar").addEventListener("click", function () {
+    var d = coletar();
+    var faltando = F.itens.filter(function (it) { return it.obrigatorio && !(it.id.charAt(0) === "_" ? d[it.id.slice(1)] : d.respostas[it.id]); });
+    if (faltando.length) { msg("Preencha: " + faltando.map(function (it) { return it.titulo; }).join(", ") + ".", "erro"); var p = document.getElementById(fid(faltando[0].id)); if (p) p.focus(); return; }
+    msg("Enviando…");
+    Promise.resolve(dbP).then(function (ref) {
+      if (!ref) throw new Error("sem banco");
+      return ref.set(d).then(function () { msg("Respostas enviadas. Obrigado!", "ok"); try { localStorage.removeItem(CHAVE); } catch (e) {} });
+    }).catch(function () {
+      msg("");
+      document.getElementById("alternativa").hidden = false;
+      document.getElementById("texto").textContent = JSON.stringify(d, null, 2);
+    });
+  });
+  document.getElementById("copiar").addEventListener("click", function () {
+    var t = document.getElementById("texto").textContent;
+    try { navigator.clipboard.writeText(t).then(function () { msg("Copiado.", "ok"); }, function () { msg("Selecione o texto e copie manualmente.", "erro"); }); }
+    catch (e) { msg("Selecione o texto e copie manualmente.", "erro"); }
+  });
+})();
+</script>
