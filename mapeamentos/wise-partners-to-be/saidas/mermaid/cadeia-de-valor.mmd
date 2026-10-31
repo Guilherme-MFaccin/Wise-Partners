@@ -1,0 +1,29 @@
+flowchart TB
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph cat_gestao ["Gestão"]
+    direction LR
+      P_01["1 Governar o programa de parceiros"]:::declarado
+    end
+    subgraph cat_finalistico ["Finalísticos"]
+    direction LR
+      P_10["2 Captar parceiros"]:::declarado
+      P_17["3 Integrar parceiro"]:::confirmado
+      P_22["4 Gerar negócios com o parceiro"]:::declarado
+      P_29["5 Desenvolver o parceiro"]:::declarado
+      P_36["6 Reter ou encerrar a parceria"]:::declarado
+      P_10 --> P_17
+      P_17 --> P_22
+      P_22 --> P_29
+      P_29 --> P_36
+    end
+    subgraph cat_suporte ["Suporte"]
+    direction LR
+      P_39["7 Manter a prateleira de fornecedores"]:::declarado
+      P_40["8 Manter conteúdos, trilhas e modelos"]:::declarado
+      P_41["9 Administrar o portal e os dados"]:::declarado
+    end
+    cat_gestao ~~~ cat_finalistico
+    cat_finalistico ~~~ cat_suporte

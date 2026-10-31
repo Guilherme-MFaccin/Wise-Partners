@@ -2,16 +2,26 @@
   "schema": "mapa-processos/1.0",
   "organizacao": {
     "nome": "Programa Wise Partners (to-be)",
-    "slug": "programa-wise-partners-to-be",
-    "descricao": "",
-    "setor": "",
-    "objetivo_do_mapeamento": "",
+    "slug": "x",
+    "descricao": "Desenho alvo do programa de parcerias da Wise Makers, operado pelo Portal Wise Partners: parceiros que vendem para a indústria indicam clientes às empresas do grupo e recebem demanda, comunidade e reconhecimento em troca.",
+    "setor": "Consultoria de gestão para indústrias (programa de parcerias)",
+    "objetivo_do_mapeamento": "Definir a arquitetura de processos to-be que o Portal Wise Partners vai operar, incluindo os funis (kanbans) e as regras de tarefas, e o modelo de negócio do programa.",
     "escopo": {
-      "inclui": [],
-      "exclui": []
+      "inclui": [
+        "Gestão do programa",
+        "Captação de parceiros",
+        "Integração (onboarding até a ativação)",
+        "Geração de negócios com o parceiro (indicações, prateleira, comissão)",
+        "Desenvolvimento do parceiro (Base Ativa, ações conjuntas, régua, níveis)",
+        "Retenção e encerramento",
+        "Suporte: prateleira, conteúdos, portal e dados"
+      ],
+      "exclui": [
+        "Vender e entregar a consultoria ao cliente indicado (processo comercial e de entrega das empresas do grupo)"
+      ]
     },
-    "patrocinador": null,
-    "consultor": "Claude, com Guilherme Faccin",
+    "patrocinador": "PE-01",
+    "consultor": "",
     "niveis": [
       "Organização",
       "Macroprocesso",
@@ -25,33 +35,5687 @@
   },
   "configuracao": {},
   "modelo_operacional": {
-    "integracao": null,
-    "padronizacao": null,
-    "tipo": null,
-    "justificativa": "",
+    "integracao": "alta",
+    "padronizacao": "alta",
+    "tipo": "unificacao",
+    "justificativa": "Proposta: as três empresas do grupo tratam a indicação do mesmo jeito (registro, SLA e retorno ao parceiro), mesmo vendendo cada uma a sua oferta.",
     "status": "hipotese",
-    "evidencias": []
+    "evidencias": [
+      "EV-0049"
+    ]
   },
-  "fatos": [],
-  "ofertas": [],
-  "cadeias_de_valor": [],
-  "areas": [],
-  "papeis": [],
-  "pessoas": [],
-  "sistemas": [],
-  "objetos": [],
-  "processos": [],
-  "evidencias": [],
-  "perguntas": [],
-  "formularios": [],
+  "fatos": [
+    {
+      "id": "F-001",
+      "tema": "estrategia",
+      "texto": "Papel da Wise no ecossistema: orquestradora de um sub-ecossistema pequeno de parceiros que vendem para a indústria e participante nos ecossistemas dos parceiros maiores (ERPs com programa de canais próprio), sempre controlando a relação com o cliente industrial e a qualidade da indicação.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0019",
+        "EV-0020",
+        "EV-0021"
+      ]
+    },
+    {
+      "id": "F-002",
+      "tema": "cliente",
+      "texto": "O programa tem dois clientes: o parceiro, que é cliente do programa e precisa receber valor antes de indicar, e a indústria, consumidora final do valor criado pelos dois.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0022",
+        "EV-0023"
+      ]
+    },
+    {
+      "id": "F-003",
+      "tema": "proposta_de_valor",
+      "texto": "Arquitetura de valor ao parceiro: demanda de volta pela Prateleira de RFP, carteira ativa com o Base Ativa e o evento, credibilidade com trilha, certificado e selo, proteção da indicação por 180 dias com SLA, e comissão por resultado.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0024",
+        "EV-0025",
+        "EV-0026",
+        "EV-0027"
+      ]
+    },
+    {
+      "id": "F-004",
+      "tema": "canal",
+      "texto": "Toda indicação entra por um único registro central: o link exclusivo do parceiro ou o registro no portal; o grupo de WhatsApp é o canal de conversa e a mensagem nele também vale como registro de origem.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0028",
+        "EV-0029"
+      ]
+    },
+    {
+      "id": "F-005",
+      "tema": "receita",
+      "texto": "Como o programa gera valor: a Wise ganha clientes novos no ICP; paga ao parceiro 40% da primeira mensalidade (Wise Makers e Tríade) ou 6% do projeto (Swallow), e 10% ao responsável da parceria.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0030",
+        "EV-0031"
+      ]
+    },
+    {
+      "id": "F-006",
+      "tema": "receita",
+      "texto": "Regra de captura de valor: nada é cobrado do parceiro para entrar ou aparecer na prateleira; a Wise só paga quando a indicação vira resultado, e o valor pode ser calibrado pela qualidade da indicação.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0032",
+        "EV-0033",
+        "EV-0034"
+      ]
+    },
+    {
+      "id": "F-007",
+      "tema": "estrategia",
+      "texto": "Sequência de lançamento: primeiro a Prateleira de RFP com 3 a 5 parceiros âncora e as indicações por link; o Base Ativa abre só quando os gatilhos ficarem verdes, depois de um ciclo rodado na base da própria Wise.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0035",
+        "EV-0036",
+        "EV-0037"
+      ]
+    },
+    {
+      "id": "F-008",
+      "tema": "estrategia",
+      "texto": "O que conta é parceiro ativo, não parceiro assinado: a meta de assinaturas vem acompanhada de uma meta de ativação (primeira indicação no ICP que virou reunião).",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0038",
+        "EV-0039"
+      ]
+    },
+    {
+      "id": "F-009",
+      "tema": "recurso",
+      "texto": "Capacidade: o Gerente de Parcerias tem 12 horas por mês para o programa; o tempo humano vai para os parceiros destaque e potencial, e a cauda longa é atendida pelo portal (régua automática, comunicados, trilhas).",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0040",
+        "EV-0041",
+        "EV-0042"
+      ]
+    },
+    {
+      "id": "F-010",
+      "tema": "parceiro",
+      "texto": "Tipos de parceiro e papel de cada um: softwares e serviços para a indústria recomendam, validam e indicam; associações e feiras abrem acesso à audiência; nenhum parceiro vende ou entrega a consultoria da Wise.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0043",
+        "EV-0044",
+        "EV-0045"
+      ]
+    },
+    {
+      "id": "F-011",
+      "tema": "oferta",
+      "texto": "O programa oferece duas parcerias: a Comercial, com três pacotes por nível (C Prateleira, B Formação e A Base Ativa) e contrapartidas, e a Institucional, para entidades.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0046",
+        "EV-0017"
+      ]
+    },
+    {
+      "id": "F-012",
+      "tema": "cliente",
+      "texto": "Quem recebe o resultado: as empresas parceiras, organizadas por categoria de prateleira, e os clientes industriais do grupo, que recebem fornecedores verificados.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0047",
+        "EV-0048"
+      ]
+    }
+  ],
+  "ofertas": [
+    {
+      "id": "OF-01",
+      "nome": "Parceria Comercial",
+      "tipo": "servico",
+      "clientes": [
+        "Empresas que vendem para a mesma indústria que a Wise atende (softwares e serviços)"
+      ],
+      "canais": [
+        "Link exclusivo de indicação",
+        "Portal do parceiro",
+        "Grupo de WhatsApp"
+      ],
+      "status": "declarado",
+      "evidencias": [
+        "EV-0017"
+      ]
+    },
+    {
+      "id": "OF-02",
+      "nome": "Parceria Institucional",
+      "tipo": "servico",
+      "clientes": [
+        "Associações, feiras e entidades que reúnem indústrias"
+      ],
+      "canais": [
+        "Mentoria e palestra no calendário da entidade"
+      ],
+      "status": "declarado",
+      "evidencias": [
+        "EV-0018"
+      ]
+    }
+  ],
+  "cadeias_de_valor": [
+    {
+      "id": "CV-01",
+      "nome": "Do candidato ao parceiro produtivo",
+      "gatilho": "Empresa candidata entra na lista",
+      "valor": "Parceiro ativo, indicando clientes no ICP e recebendo valor do programa",
+      "stakeholder": "Empresa parceira",
+      "ofertas": [
+        "OF-01",
+        "OF-02"
+      ],
+      "etapas": [
+        {
+          "nome": "Captar",
+          "processos": [
+            "P-10"
+          ]
+        },
+        {
+          "nome": "Integrar",
+          "processos": [
+            "P-17"
+          ]
+        },
+        {
+          "nome": "Gerar negócios",
+          "processos": [
+            "P-23",
+            "P-25"
+          ]
+        },
+        {
+          "nome": "Desenvolver",
+          "processos": [
+            "P-30",
+            "P-31",
+            "P-32"
+          ]
+        },
+        {
+          "nome": "Reter ou encerrar",
+          "processos": [
+            "P-36"
+          ]
+        }
+      ],
+      "status": "declarado",
+      "evidencias": [
+        "EV-0050"
+      ]
+    },
+    {
+      "id": "CV-02",
+      "nome": "Da indicação ao cliente fechado e à comissão paga",
+      "gatilho": "Parceiro indica um cliente",
+      "valor": "Cliente novo no ICP para o grupo e comissão paga ao parceiro",
+      "stakeholder": "Parceiro que indicou",
+      "ofertas": [
+        "OF-01"
+      ],
+      "etapas": [
+        {
+          "nome": "Tratar indicação",
+          "processos": [
+            "P-23"
+          ]
+        },
+        {
+          "nome": "Vender ao indicado (fora do escopo)",
+          "processos": []
+        },
+        {
+          "nome": "Pagar comissão",
+          "processos": [
+            "P-27"
+          ]
+        },
+        {
+          "nome": "Checar o cliente",
+          "processos": [
+            "P-28"
+          ]
+        }
+      ],
+      "status": "declarado",
+      "evidencias": [
+        "EV-0155"
+      ]
+    },
+    {
+      "id": "CV-03",
+      "nome": "Da necessidade do cliente industrial ao fornecedor parceiro",
+      "gatilho": "Cliente do grupo precisa de fornecedor fora do escopo da Wise",
+      "valor": "Cliente atendido por fornecedor verificado e demanda de volta para o parceiro",
+      "stakeholder": "Cliente industrial",
+      "ofertas": [
+        "OF-01"
+      ],
+      "etapas": [
+        {
+          "nome": "Atender o pedido",
+          "processos": [
+            "P-25"
+          ]
+        },
+        {
+          "nome": "Manter a prateleira",
+          "processos": [
+            "P-39"
+          ]
+        }
+      ],
+      "status": "declarado",
+      "evidencias": [
+        "EV-0048"
+      ]
+    }
+  ],
+  "areas": [
+    {
+      "id": "AR-01",
+      "nome": "Parcerias",
+      "pai": null,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0002"
+      ]
+    },
+    {
+      "id": "AR-02",
+      "nome": "Diretoria",
+      "pai": null,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0003"
+      ]
+    },
+    {
+      "id": "AR-03",
+      "nome": "Consultoria e comercial do grupo",
+      "pai": null,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0004"
+      ]
+    },
+    {
+      "id": "AR-04",
+      "nome": "Financeiro",
+      "pai": null,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0005"
+      ]
+    }
+  ],
+  "papeis": [
+    {
+      "id": "PA-01",
+      "nome": "Gerente de Parcerias",
+      "area": "AR-01",
+      "externo": false,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0002"
+      ]
+    },
+    {
+      "id": "PA-02",
+      "nome": "Diretor",
+      "area": "AR-02",
+      "externo": false,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0003",
+        "EV-0006"
+      ]
+    },
+    {
+      "id": "PA-03",
+      "nome": "Consultor ou gerente de conta do grupo",
+      "area": "AR-03",
+      "externo": false,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0004"
+      ]
+    },
+    {
+      "id": "PA-04",
+      "nome": "Financeiro",
+      "area": "AR-04",
+      "externo": false,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0005"
+      ]
+    },
+    {
+      "id": "PA-05",
+      "nome": "Responsável nomeado no parceiro",
+      "area": null,
+      "externo": true,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0007"
+      ]
+    }
+  ],
+  "pessoas": [
+    {
+      "id": "PE-01",
+      "nome": "Guilherme Faccin",
+      "cargo": "Consultor Wise Makers e Gerente de Parcerias",
+      "papeis": [
+        "PA-01"
+      ],
+      "perfil": "lideranca",
+      "contato": "guilherme@wisemakers.com.br",
+      "sabe_sobre": [],
+      "indicado_por": null,
+      "origem": "patrocinador"
+    },
+    {
+      "id": "PE-02",
+      "nome": "Igor Makoto",
+      "cargo": "Diretor",
+      "papeis": [
+        "PA-02"
+      ],
+      "perfil": "lideranca",
+      "contato": "",
+      "sabe_sobre": [],
+      "indicado_por": "PE-01",
+      "origem": "mapa as-is"
+    }
+  ],
+  "sistemas": [
+    {
+      "id": "SI-01",
+      "nome": "Portal Wise Partners",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0008"
+      ]
+    },
+    {
+      "id": "SI-02",
+      "nome": "Autentique",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0009"
+      ]
+    },
+    {
+      "id": "SI-03",
+      "nome": "WhatsApp",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0010"
+      ]
+    },
+    {
+      "id": "SI-04",
+      "nome": "Wise Hub",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0011"
+      ]
+    }
+  ],
+  "objetos": [
+    {
+      "id": "OB-01",
+      "nome": "Parceiro",
+      "ciclo": {
+        "cria": "P-10",
+        "usa": [
+          "P-17",
+          "P-22",
+          "P-29"
+        ],
+        "encerra": "P-36"
+      },
+      "status": "declarado",
+      "evidencias": [
+        "EV-0153"
+      ]
+    },
+    {
+      "id": "OB-02",
+      "nome": "Indicação",
+      "ciclo": {
+        "cria": "P-23",
+        "usa": [
+          "P-27",
+          "P-28"
+        ],
+        "encerra": "P-23"
+      },
+      "status": "declarado",
+      "evidencias": [
+        "EV-0154"
+      ]
+    },
+    {
+      "id": "OB-03",
+      "nome": "Pedido da prateleira",
+      "ciclo": {
+        "cria": "P-25",
+        "usa": [
+          "P-39"
+        ],
+        "encerra": "P-25"
+      },
+      "status": "declarado",
+      "evidencias": [
+        "EV-0048"
+      ]
+    },
+    {
+      "id": "OB-04",
+      "nome": "Ciclo do Base Ativa",
+      "ciclo": {
+        "cria": "P-30",
+        "usa": [],
+        "encerra": "P-30"
+      },
+      "status": "declarado",
+      "evidencias": [
+        "EV-0096"
+      ]
+    }
+  ],
+  "processos": [
+    {
+      "id": "P-01",
+      "nome": "Governar o programa de parceiros",
+      "pai": null,
+      "ordem": 1,
+      "descricao": "Dar direção, metas, regras e medida ao programa.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Diretoria da Wise Makers",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0050"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "gestao"
+    },
+    {
+      "id": "P-02",
+      "nome": "Definir o perfil de parceiro ideal e a proposta de valor",
+      "pai": "P-01",
+      "ordem": 1,
+      "descricao": "Escrever quem é o parceiro ideal, o modelo de atuação de cada tipo e a proposta de valor em quatro pontos, e revisar com dados.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Início de cada ano ou mudança de fase do programa",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Perfil de parceiro ideal e proposta de valor publicados",
+          "para": "EXT:Time de parcerias"
+        }
+      ],
+      "cliente": "Time de parcerias e Diretor",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Anual, com revisão por fase",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0051",
+        "EV-0052",
+        "EV-0053"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-03",
+      "nome": "Planejar metas e fase do programa",
+      "pai": "P-01",
+      "ordem": 2,
+      "descricao": "Definir metas trimestrais do programa e de cada pessoa, e registrar quando os critérios da próxima fase são atingidos.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Início de cada trimestre",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Metas do trimestre e fase registradas no portal",
+          "para": "EXT:Time de parcerias"
+        }
+      ],
+      "cliente": "Diretor e time de parcerias",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0054",
+        "EV-0055"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-04",
+      "nome": "Revisar o programa semanalmente",
+      "pai": "P-01",
+      "ordem": 3,
+      "descricao": "Pautar a reunião semanal pelo painel: distância até a meta, funil, follow-ups vencidos, parceiros esfriando, indicações e comissões.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Toda terça-feira",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Pendências priorizadas da semana",
+          "para": "EXT:Time de parcerias"
+        }
+      ],
+      "cliente": "Diretor",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Semanal",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0056"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-05",
+      "nome": "Revisar o nível dos parceiros",
+      "pai": "P-01",
+      "ordem": 4,
+      "descricao": "Apurar os requisitos de nível de cada parceiro no início do trimestre, colocar em observação ou propor descida, e classificar as faixas de desempenho.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Primeiro dia útil de janeiro, abril, julho e outubro",
+      "entradas": [
+        {
+          "nome": "Pessoas certificadas",
+          "de": "P-20"
+        },
+        {
+          "nome": "Checagem registrada",
+          "de": "P-28"
+        },
+        {
+          "nome": "Ação comprovada com resultado",
+          "de": "P-31"
+        },
+        {
+          "nome": "Acompanhamento registrado",
+          "de": "P-32"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Nível e faixa de cada parceiro revistos",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiro",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral",
+      "dores": [],
+      "regras": [
+        "O nível de entrada vem da carteira no ICP; depois da entrada, acompanha o resultado",
+        "Subida na hora em que os requisitos forem cumpridos; descida só depois de um trimestre em observação, decidida por uma pessoa com motivo"
+      ],
+      "status": "confirmado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0057",
+        "EV-0012"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "funil": "Revisão de nível (lista)",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0057",
+          "EV-0133",
+          "EV-0134",
+          "EV-0012"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Parceiro"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Primeiro dia útil do trimestre",
+            "raia": "PA-01",
+            "gatilho": "tempo"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Apurar os requisitos de cada parceiro",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "g0",
+            "tipo": "decisao",
+            "nome": "Parceiro isento?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Cumpre o nível atual?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "Já estava em observação?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Colocar em observação e avisar o que falta",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Propor a descida de nível",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Decidir a descida com motivo",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g3",
+            "tipo": "decisao",
+            "nome": "Descer de nível?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f0",
+            "tipo": "fim",
+            "nome": "Parceiro isento",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Nível mantido",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Parceiro em observação",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f3",
+            "tipo": "fim",
+            "nome": "Nível rebaixado",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "g0"
+          },
+          {
+            "de": "g0",
+            "para": "f0",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g0",
+            "para": "g1",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "g2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g2",
+            "para": "t2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t2",
+            "para": "f2"
+          },
+          {
+            "de": "g2",
+            "para": "t3",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "g3"
+          },
+          {
+            "de": "g3",
+            "para": "f3",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g3",
+            "para": "f1",
+            "rotulo": "Não"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "t2",
+            "para": "X1",
+            "rotulo": "Aviso do que falta"
+          },
+          {
+            "de": "t4",
+            "para": "X1",
+            "rotulo": "Aviso de nível"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-06",
+      "nome": "Publicar regras e comunicados",
+      "pai": "P-01",
+      "ordem": 5,
+      "descricao": "Manter as regras do programa no portal com vigência mínima de 30 dias para mudanças e enviar comunicados por recorte.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Mudança de regra, evento ou material novo",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Comunicado enviado e lido",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0058",
+        "EV-0059"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-07",
+      "nome": "Apurar o resultado e o ROI do canal",
+      "pai": "P-01",
+      "ordem": 6,
+      "descricao": "Calcular clientes fechados via parceiros, receita atribuída, custo do canal (comissões, horas e custos diretos), ROI e custo por cliente.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Fechamento de cada mês",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Resultado do canal no período",
+          "para": "EXT:Diretoria"
+        }
+      ],
+      "cliente": "Diretor",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Mensal",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0060"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-08",
+      "nome": "Ouvir a satisfação dos parceiros",
+      "pai": "P-01",
+      "ordem": 7,
+      "descricao": "Enviar a pesquisa trimestral de satisfação a cada pessoa dos parceiros e tratar os comentários.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Uma vez por trimestre",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Notas e comentários tratados",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0061"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-09",
+      "nome": "Apurar o ranking e premiar parceiros",
+      "pai": "P-01",
+      "ordem": 8,
+      "descricao": "Calcular o ranking do trimestre e do ano e registrar a premiação anual com selo.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Fim de cada trimestre e do ano",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Ranking publicado e prêmio anual",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral e anual",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0062",
+        "EV-0063"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-10",
+      "nome": "Captar parceiros",
+      "pai": null,
+      "ordem": 2,
+      "descricao": "Do candidato mapeado ao termo assinado.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Empresa candidata entra na lista",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Termo assinado",
+          "para": "P-17"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0064"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "finalistico",
+      "funil": "Recrutamento",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0064",
+          "EV-0116",
+          "EV-0010"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Empresa candidata"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Revisão mensal da lista",
+            "raia": "PA-01",
+            "gatilho": "tempo"
+          },
+          {
+            "id": "s0",
+            "tipo": "subprocesso",
+            "nome": "Montar a lista de candidatos",
+            "raia": "PA-01",
+            "processo": "P-11",
+            "status": "hipotese"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Abordar candidato",
+            "raia": "PA-01",
+            "processo": "P-12"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Resposta do candidato",
+            "raia": "PA-01",
+            "evento": "mensagem"
+          },
+          {
+            "id": "s2",
+            "tipo": "subprocesso",
+            "nome": "Apresentar o programa e mapear interesses",
+            "raia": "PA-01",
+            "processo": "P-13"
+          },
+          {
+            "id": "s3",
+            "tipo": "subprocesso",
+            "nome": "Qualificar candidato no scorecard",
+            "raia": "PA-01",
+            "processo": "P-14"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Candidato elegível?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "Candidato quer seguir agora?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "s4",
+            "tipo": "subprocesso",
+            "nome": "Nutrir candidato",
+            "raia": "PA-01",
+            "processo": "P-16"
+          },
+          {
+            "id": "s5",
+            "tipo": "subprocesso",
+            "nome": "Negociar e formalizar o termo",
+            "raia": "PA-01",
+            "processo": "P-15"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Candidato não elegível",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Candidato sem interesse",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f3",
+            "tipo": "fim",
+            "nome": "Termo assinado",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "s0"
+          },
+          {
+            "de": "s0",
+            "para": "s1"
+          },
+          {
+            "de": "s1",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "s2"
+          },
+          {
+            "de": "s2",
+            "para": "s3"
+          },
+          {
+            "de": "s3",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "g2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g2",
+            "para": "s5",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g2",
+            "para": "s4",
+            "rotulo": "Agora não"
+          },
+          {
+            "de": "g2",
+            "para": "f2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "s4",
+            "para": "s2"
+          },
+          {
+            "de": "s5",
+            "para": "f3"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "s1",
+            "para": "X1",
+            "rotulo": "Abordagem"
+          },
+          {
+            "de": "X1",
+            "para": "e1",
+            "rotulo": "Resposta"
+          },
+          {
+            "de": "s5",
+            "para": "X1",
+            "rotulo": "Minuta do termo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-11",
+      "nome": "Montar a lista de candidatos",
+      "pai": "P-10",
+      "ordem": 1,
+      "descricao": "Montar uma lista nominal e longa de candidatos a partir dos fornecedores que os clientes do grupo já usam, das categorias pedidas sem fornecedor e de eventos.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-03"
+      ],
+      "gatilho": "Revisão mensal da lista ou categoria sem fornecedor",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Candidatos na etapa Sem contato",
+          "para": "P-12"
+        }
+      ],
+      "cliente": "Gerente de Parcerias",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Mensal",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0065",
+        "EV-0066",
+        "EV-0067",
+        "EV-0068"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-12",
+      "nome": "Abordar candidato",
+      "pai": "P-10",
+      "ordem": 2,
+      "descricao": "Fazer o primeiro contato com o candidato e agendar a reunião de apresentação.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Candidato na etapa Sem contato",
+      "entradas": [
+        {
+          "nome": "Candidatos na etapa Sem contato",
+          "de": "P-11"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Reunião agendada",
+          "para": "P-13"
+        }
+      ],
+      "cliente": "Candidato",
+      "sistemas": [
+        "SI-01",
+        "SI-03"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0069"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-13",
+      "nome": "Apresentar o programa e mapear interesses",
+      "pai": "P-10",
+      "ordem": 3,
+      "descricao": "Conduzir a reunião de 45 minutos começando pelo problema e pelos interesses do candidato, e registrar interesses, decisores e a decisão que a Wise está pedindo.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Reunião agendada",
+      "entradas": [
+        {
+          "nome": "Reunião agendada",
+          "de": "P-12"
+        },
+        {
+          "nome": "Candidato retomado na negociação",
+          "de": "P-16"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Reunião realizada com interesses registrados",
+          "para": "P-14"
+        }
+      ],
+      "cliente": "Candidato",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0051",
+        "EV-0070",
+        "EV-0071"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-14",
+      "nome": "Qualificar candidato no scorecard",
+      "pai": "P-10",
+      "ordem": 4,
+      "descricao": "Pontuar os sete critérios do scorecard, calcular o nível de entrada e sinalizar não elegível.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Reunião realizada",
+      "entradas": [
+        {
+          "nome": "Reunião realizada com interesses registrados",
+          "de": "P-13"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Nível de entrada sugerido ou não elegível",
+          "para": "P-15"
+        }
+      ],
+      "cliente": "Diretor",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0072"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-15",
+      "nome": "Negociar e formalizar o termo",
+      "pai": "P-10",
+      "ordem": 5,
+      "descricao": "Gerar a minuta pelo portal a partir do quadro de identificação, colher críticas, obter a aprovação do Diretor e a assinatura digital.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Candidato qualificado quer seguir",
+      "entradas": [
+        {
+          "nome": "Nível de entrada sugerido ou não elegível",
+          "de": "P-14"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Termo assinado",
+          "para": "P-17"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01",
+        "SI-02",
+        "SI-03"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0073",
+        "EV-0074",
+        "EV-0010"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0073",
+          "EV-0009",
+          "EV-0010",
+          "EV-0074",
+          "EV-0117",
+          "EV-0118"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-02"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Empresa candidata"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Candidato qualificado quer seguir",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Criar o grupo de WhatsApp da parceria",
+            "raia": "PA-01",
+            "sistema": "SI-03",
+            "modo": "sistema"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Registrar interesses, decisores e alternativas",
+            "raia": "PA-01",
+            "descricao": "Interesses dos dois lados, quem decide no candidato, a melhor alternativa de cada lado e o pacote gatilho que exige o Diretor.",
+            "status": "hipotese",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Preencher o quadro de identificação",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Gerar a minuta do termo",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Colher as críticas do candidato à minuta",
+            "raia": "PA-01",
+            "descricao": "A minuta circula como texto único: pede-se crítica, não concessão.",
+            "status": "hipotese"
+          },
+          {
+            "id": "g0",
+            "tipo": "decisao",
+            "nome": "Candidato aceita os termos?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Aprovar a assinatura",
+            "raia": "PA-02",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Assinatura aprovada?",
+            "raia": "PA-02"
+          },
+          {
+            "id": "t7",
+            "tipo": "tarefa",
+            "nome": "Ajustar a minuta",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t8",
+            "tipo": "tarefa",
+            "nome": "Enviar o termo para assinatura",
+            "raia": "PA-01",
+            "sistema": "SI-02",
+            "modo": "sistema"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Termo assinado pelo candidato",
+            "raia": "PA-01",
+            "evento": "mensagem"
+          },
+          {
+            "id": "t9",
+            "tipo": "tarefa",
+            "nome": "Anexar o termo assinado",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Termo assinado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Negociação perdida",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "g0"
+          },
+          {
+            "de": "g0",
+            "para": "t6",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g0",
+            "para": "f2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t6",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t8",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t7",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t7",
+            "para": "t6"
+          },
+          {
+            "de": "t8",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "t9"
+          },
+          {
+            "de": "t9",
+            "para": "f1"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "t1",
+            "para": "X1",
+            "rotulo": "Convite para o grupo"
+          },
+          {
+            "de": "t5",
+            "para": "X1",
+            "rotulo": "Minuta para críticas"
+          },
+          {
+            "de": "t8",
+            "para": "X1",
+            "rotulo": "Termo para assinatura"
+          },
+          {
+            "de": "X1",
+            "para": "e1",
+            "rotulo": "Termo assinado"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-16",
+      "nome": "Nutrir candidato",
+      "pai": "P-10",
+      "ordem": 6,
+      "descricao": "Manter o candidato que ainda não é a hora em pausa, com data de retomada e cadência de contato, oferecendo valor sem pedir nada.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Candidato pede para retomar depois",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Candidato retomado na negociação",
+          "para": "P-13"
+        }
+      ],
+      "cliente": "Candidato",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0075",
+        "EV-0076",
+        "EV-0077"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-17",
+      "nome": "Integrar parceiro",
+      "pai": null,
+      "ordem": 3,
+      "descricao": "Do termo assinado à ativação: primeira indicação com ICP confirmado que virou reunião.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Termo assinado",
+      "entradas": [
+        {
+          "nome": "Termo assinado",
+          "de": "P-10"
+        },
+        {
+          "nome": "Termo assinado",
+          "de": "P-15"
+        },
+        {
+          "nome": "Marcos cumpridos",
+          "de": "P-19"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Parceiro ativado",
+          "para": "P-29"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "confirmado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0078",
+        "EV-0013"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "finalistico",
+      "funil": "Onboarding",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0080",
+          "EV-0119",
+          "EV-0013"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-05"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Termo assinado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Entregar os itens de entrada do pacote",
+            "raia": "PA-01",
+            "processo": "P-18"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Conduzir o encontro de alinhamento",
+            "raia": "PA-01",
+            "descricao": "Até 7 dias: objetivos, proposta de valor, régua, metas dos 90 dias, link de indicação e convite para a trilha."
+          },
+          {
+            "id": "s2",
+            "tipo": "subprocesso",
+            "nome": "Cruzar carteiras com o parceiro",
+            "raia": "PA-01",
+            "processo": "P-21",
+            "status": "hipotese"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Conduzir o encontro de vendas",
+            "raia": "PA-01",
+            "descricao": "Até 30 dias."
+          },
+          {
+            "id": "s3",
+            "tipo": "subprocesso",
+            "nome": "Capacitar e certificar pessoas do parceiro",
+            "raia": "PA-05",
+            "processo": "P-20"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Conduzir o encontro de produto",
+            "raia": "PA-01",
+            "descricao": "Até 60 dias."
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Conduzir o encontro de pós-venda",
+            "raia": "PA-01",
+            "descricao": "Até 90 dias."
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Parceiro ativado em 90 dias?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Estender o plano até 120 dias",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "Parceiro ativado em 120 dias?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Parceiro ativado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Parceiro não ativado",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "s1"
+          },
+          {
+            "de": "s1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "s2"
+          },
+          {
+            "de": "s2",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "s3"
+          },
+          {
+            "de": "s3",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t5",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t5",
+            "para": "g2"
+          },
+          {
+            "de": "g2",
+            "para": "f1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g2",
+            "para": "f2",
+            "rotulo": "Não"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-18",
+      "nome": "Entregar os itens de entrada do pacote",
+      "pai": "P-17",
+      "ordem": 1,
+      "descricao": "Fazer em até 2 dias úteis as entregas de entrada do pacote: prateleira, grupo, dados, Hub, certificado e selo.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Termo assinado",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Entregas do pacote feitas",
+          "para": "P-19"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01",
+        "SI-04",
+        "SI-03"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0079"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-19",
+      "nome": "Conduzir os encontros do plano de 90 dias",
+      "pai": "P-17",
+      "ordem": 2,
+      "descricao": "Fazer os quatro encontros (alinhamento, vendas, produto e pós-venda) e acompanhar os marcos de 30, 60 e 90 dias.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Entregas do pacote feitas",
+      "entradas": [
+        {
+          "nome": "Entregas do pacote feitas",
+          "de": "P-18"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Marcos cumpridos",
+          "para": "P-17"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0080"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-20",
+      "nome": "Capacitar e certificar pessoas do parceiro",
+      "pai": "P-17",
+      "ordem": 3,
+      "descricao": "Cada pessoa do parceiro faz a trilha no portal e, ao passar no teste, recebe o certificado e o selo.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Convite das pessoas para a trilha no encontro 1",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Pessoas certificadas",
+          "para": "P-05"
+        }
+      ],
+      "cliente": "Pessoas do parceiro",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0081"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-21",
+      "nome": "Cruzar carteiras com o parceiro",
+      "pai": "P-17",
+      "ordem": 4,
+      "descricao": "Comparar a carteira do parceiro com a base da Wise revelando só as coincidências, e transformar coincidências em indicação ou ação conjunta.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Parceiro aceita o termo do cruzamento",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Coincidências avaliadas",
+          "para": "P-23"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [
+        "gatilho"
+      ],
+      "evidencias": [
+        "EV-0082",
+        "EV-0083",
+        "EV-0084"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-22",
+      "nome": "Gerar negócios com o parceiro",
+      "pai": null,
+      "ordem": 4,
+      "descricao": "Transformar a relação em clientes: indicações nos dois sentidos, prateleira, apoio do parceiro nas vendas da Wise e comissão.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-03",
+        "PA-04"
+      ],
+      "gatilho": "",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Clientes fechados e comissão paga",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiro e empresas do grupo",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0085"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "finalistico"
+    },
+    {
+      "id": "P-23",
+      "nome": "Tratar indicação do parceiro",
+      "pai": "P-22",
+      "ordem": 1,
+      "descricao": "Registrar, confirmar, validar duplicidade e ICP, fazer o primeiro contato, dar retorno ao parceiro e acompanhar até o fechamento.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-03"
+      ],
+      "gatilho": "Parceiro indica um cliente pelo link exclusivo, pelo portal ou pelo grupo",
+      "entradas": [
+        {
+          "nome": "Coincidências avaliadas",
+          "de": "P-21"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Indicação fechada, perdida ou recusada",
+          "para": "P-27"
+        }
+      ],
+      "cliente": "Parceiro que indicou",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0086",
+        "EV-0087"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "funil": "Indicações",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0120",
+          "EV-0087",
+          "EV-0121",
+          "EV-0122"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-03"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Parceiro"
+          },
+          {
+            "id": "X2",
+            "nome": "Cliente indicado"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Indicação recebida",
+            "raia": "PA-01",
+            "gatilho": "mensagem"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Confirmar o recebimento ao parceiro",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Validar duplicidade e ICP",
+            "raia": "PA-01",
+            "descricao": "Até 2 dias úteis.",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Indicação válida?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Informar o motivo da recusa ao parceiro",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Contatar o cliente indicado",
+            "raia": "PA-03",
+            "descricao": "Até 2 dias úteis do registro. Quem faz este contato ainda é decisão em aberto.",
+            "status": "hipotese"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Retornar ao parceiro sobre o primeiro contato",
+            "raia": "PA-01",
+            "descricao": "Até 5 dias úteis do registro."
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Atualizar a indicação a cada etapa da venda",
+            "raia": "PA-03",
+            "descricao": "No mínimo a cada 15 dias corridos.",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "Cliente fechou?",
+            "raia": "PA-03"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Pagar comissão ao parceiro",
+            "raia": "PA-01",
+            "processo": "P-27"
+          },
+          {
+            "id": "t7",
+            "tipo": "tarefa",
+            "nome": "Informar a perda ao parceiro",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Indicação recusada",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Cliente fechado e comissão paga",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f3",
+            "tipo": "fim",
+            "nome": "Indicação perdida",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t4",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "f1"
+          },
+          {
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "g2"
+          },
+          {
+            "de": "g2",
+            "para": "s1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g2",
+            "para": "t7",
+            "rotulo": "Não"
+          },
+          {
+            "de": "s1",
+            "para": "f2"
+          },
+          {
+            "de": "t7",
+            "para": "f3"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "X1",
+            "para": "i1",
+            "rotulo": "Indicação"
+          },
+          {
+            "de": "t1",
+            "para": "X1",
+            "rotulo": "Confirmação de recebimento"
+          },
+          {
+            "de": "t3",
+            "para": "X1",
+            "rotulo": "Motivo da recusa"
+          },
+          {
+            "de": "t4",
+            "para": "X2",
+            "rotulo": "Primeiro contato"
+          },
+          {
+            "de": "t5",
+            "para": "X1",
+            "rotulo": "Retorno sobre o primeiro contato"
+          },
+          {
+            "de": "t7",
+            "para": "X1",
+            "rotulo": "Motivo da perda"
+          },
+          {
+            "de": "s1",
+            "para": "X1",
+            "rotulo": "Comissão"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-24",
+      "nome": "Indicar cliente do grupo ao parceiro",
+      "pai": "P-22",
+      "ordem": 2,
+      "descricao": "Registrar a indicação de um cliente da Wise, da Tríade ou da Swallow ao parceiro e acompanhar o resultado.",
+      "dono": "PA-03",
+      "participantes": [
+        "PA-01"
+      ],
+      "gatilho": "Cliente do grupo precisa de uma solução do parceiro",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Indicação com resultado registrado",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiro",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0088"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-25",
+      "nome": "Atender pedido de fornecedor pela prateleira",
+      "pai": "P-22",
+      "ordem": 3,
+      "descricao": "Registrar a necessidade do cliente, recomendar parceiros com apoio da IA, publicar a página do cliente e acompanhar o contato.",
+      "dono": "PA-03",
+      "participantes": [
+        "PA-01"
+      ],
+      "gatilho": "Cliente do grupo precisa de um fornecedor fora do escopo da Wise",
+      "entradas": [
+        {
+          "nome": "Prateleira com fichas verificadas",
+          "de": "P-39"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Página do cliente publicada e indicações criadas",
+          "para": "EXT:Cliente industrial"
+        }
+      ],
+      "cliente": "Cliente industrial",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0089"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "funil": "Pedidos da prateleira",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0089",
+          "EV-0123",
+          "EV-0068"
+        ],
+        "raias": [
+          "PA-03"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Cliente industrial"
+          },
+          {
+            "id": "X2",
+            "nome": "Parceiro"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Cliente pede um fornecedor",
+            "raia": "PA-03",
+            "gatilho": "mensagem"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Registrar o pedido do cliente",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Recomendar parceiros por categoria",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Há parceiros assinados na categoria?",
+            "raia": "PA-03"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Registrar a categoria a prospectar",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Ajustar a seleção de parceiros",
+            "raia": "PA-03",
+            "descricao": "No mínimo 3 por categoria sempre que houver 3 ou mais assinados.",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Montar a página do cliente",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Revisar e publicar a página",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Cliente escolhe falar com um parceiro",
+            "raia": "PA-03",
+            "evento": "mensagem"
+          },
+          {
+            "id": "t7",
+            "tipo": "tarefa",
+            "nome": "Avisar o consultor e o parceiro",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Categoria sem fornecedor",
+            "raia": "PA-03"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Cliente em contato com o parceiro",
+            "raia": "PA-03"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t4",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "f1"
+          },
+          {
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "t7"
+          },
+          {
+            "de": "t7",
+            "para": "f2"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "X1",
+            "para": "i1",
+            "rotulo": "Necessidade"
+          },
+          {
+            "de": "t6",
+            "para": "X1",
+            "rotulo": "Link da página"
+          },
+          {
+            "de": "X1",
+            "para": "e1",
+            "rotulo": "Clique em falar com o parceiro"
+          },
+          {
+            "de": "t7",
+            "para": "X2",
+            "rotulo": "Aviso de contato"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-26",
+      "nome": "Pedir apoio do parceiro numa venda da Wise",
+      "pai": "P-22",
+      "ordem": 4,
+      "descricao": "Quando um prospect ou cliente da Wise usa a solução de um parceiro, pedir a ele informação sobre a conta, uma recomendação ao decisor ou uma apresentação, com a mensagem pronta.",
+      "dono": "PA-03",
+      "participantes": [
+        "PA-01"
+      ],
+      "gatilho": "Oportunidade da Wise em conta que é cliente de um parceiro",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Apoio do parceiro registrado na oportunidade",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Consultor que vende",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0090",
+        "EV-0091",
+        "EV-0092"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-27",
+      "nome": "Pagar comissão ao parceiro",
+      "pai": "P-22",
+      "ordem": 5,
+      "descricao": "Calcular a comissão quando o cliente indicado fecha, aguardar a compensação do primeiro pagamento, receber a nota fiscal e pagar.",
+      "dono": "PA-04",
+      "participantes": [
+        "PA-01"
+      ],
+      "gatilho": "Primeiro pagamento do cliente indicado compensado",
+      "entradas": [
+        {
+          "nome": "Indicação fechada, perdida ou recusada",
+          "de": "P-23"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Comissão paga",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiro que indicou",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0093"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-28",
+      "nome": "Checar cliente indicado aos 6 e 12 meses",
+      "pai": "P-22",
+      "ordem": 6,
+      "descricao": "Registrar se o cliente indicado segue ativo e a satisfação dele, aos 6 e aos 12 meses do fechamento.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-03"
+      ],
+      "gatilho": "6 e 12 meses do fechamento",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Checagem registrada",
+          "para": "P-05"
+        }
+      ],
+      "cliente": "Parceiro que indicou",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [
+        "dono"
+      ],
+      "evidencias": [
+        "EV-0094"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-29",
+      "nome": "Desenvolver o parceiro",
+      "pai": null,
+      "ordem": 5,
+      "descricao": "Aumentar o valor da parceria depois da ativação: Base Ativa, ações conjuntas, régua de atendimento, revisão conjunta, maturidade e pacote.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Parceiro ativado",
+      "entradas": [
+        {
+          "nome": "Parceiro ativado",
+          "de": "P-17"
+        }
+      ],
+      "saidas": [],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0095"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "finalistico"
+    },
+    {
+      "id": "P-30",
+      "nome": "Conduzir o ciclo do Base Ativa",
+      "pai": "P-29",
+      "ordem": 1,
+      "descricao": "Para parceiros do pacote A: fila por horas disponíveis, ciclo de 12 semanas com 6 encontros e evento final da comunidade.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Parceiro de pacote A com horas disponíveis",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Comunidade validada e certificado metodológico",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0096"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "funil": "Base Ativa",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0096",
+          "EV-0124",
+          "EV-0125",
+          "EV-0126",
+          "EV-0127",
+          "EV-0128",
+          "EV-0129",
+          "EV-0130",
+          "EV-0131",
+          "EV-0132"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-05"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Parceiro de pacote A assinado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Há horas disponíveis?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Colocar o parceiro na fila com a data prevista",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Vez do parceiro na fila",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Diagnosticar a base do parceiro",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Categorizar a carteira",
+            "raia": "PA-05"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Definir estrutura e anúncio da comunidade",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Definir oferta e nutrição",
+            "raia": "PA-01",
+            "sistema": "SI-04",
+            "modo": "sistema"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Planejar formação e evento",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t7",
+            "tipo": "tarefa",
+            "nome": "Preparar roteiro, divulgação e logística do evento",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t8",
+            "tipo": "tarefa",
+            "nome": "Promover o evento da comunidade",
+            "raia": "PA-05"
+          },
+          {
+            "id": "t9",
+            "tipo": "tarefa",
+            "nome": "Emitir o certificado metodológico",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Comunidade validada",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t1",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t1",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "t7"
+          },
+          {
+            "de": "t7",
+            "para": "t8"
+          },
+          {
+            "de": "t8",
+            "para": "t9"
+          },
+          {
+            "de": "t9",
+            "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-31",
+      "nome": "Executar ação conjunta do plano",
+      "pai": "P-29",
+      "ordem": 2,
+      "descricao": "Cada ação do plano (do parceiro ou da Wise) com data, responsável, comprovação, resultado e custo direto.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Data prevista da ação no plano",
+      "entradas": [
+        {
+          "nome": "Plano do próximo período combinado",
+          "de": "P-33"
+        },
+        {
+          "nome": "Categoria de maturidade e plano",
+          "de": "P-34"
+        },
+        {
+          "nome": "Pacote novo com contrapartidas carregadas",
+          "de": "P-35"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Ação comprovada com resultado",
+          "para": "P-05"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0097"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-32",
+      "nome": "Conduzir a reunião de acompanhamento da régua",
+      "pai": "P-29",
+      "ordem": 3,
+      "descricao": "Fazer cada reunião de acompanhamento na cadência do pacote e da faixa, com alerta quando a régua atrasa.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Data da próxima reunião pela régua",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Acompanhamento registrado",
+          "para": "P-05"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0098"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-33",
+      "nome": "Revisar a parceria com o parceiro",
+      "pai": "P-29",
+      "ordem": 4,
+      "descricao": "Revisão conjunta com pauta fixa: metas do período, indicações em andamento, previsão, problemas, planos e três perguntas de saúde da parceria.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02",
+        "PA-05"
+      ],
+      "gatilho": "Uma vez por trimestre (mensal para destaques)",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Plano do próximo período combinado",
+          "para": "P-31"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0099",
+        "EV-0100",
+        "EV-0101"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-34",
+      "nome": "Avaliar a maturidade do parceiro",
+      "pai": "P-29",
+      "ordem": 5,
+      "descricao": "Avaliar o parceiro nos 8 eixos de 1 a 5, a partir das notas sugeridas pelo portal, e montar o plano de evolução.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Quando o time decidir (sem rotina obrigatória)",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Categoria de maturidade e plano",
+          "para": "P-31"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0102"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-35",
+      "nome": "Mudar o pacote do parceiro",
+      "pai": "P-29",
+      "ordem": 6,
+      "descricao": "Registrar a subida ou descida de pacote quando o parceiro passa a entregar a contrapartida do pacote de cima ou quando o nível desce.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Subida de nível ou pedido do parceiro",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Pacote novo com contrapartidas carregadas",
+          "para": "P-31"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0103"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-36",
+      "nome": "Reter ou encerrar a parceria",
+      "pai": null,
+      "ordem": 6,
+      "descricao": "Tratar parceiros em risco com tentativas de retomada e, sem resposta, desligar de forma formal e amigável.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Parceiro cumpre os critérios de risco",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Parceiro retomado ou parceria encerrada",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0104"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "tipo": "finalistico",
+      "funil": "Parceiros em risco",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0105",
+          "EV-0135",
+          "EV-0136",
+          "EV-0107"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-02"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Parceiro"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Parceiro em risco",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Propor reunião de retomada",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "15 dias",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Registrar a segunda tentativa de retomada",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "e2",
+            "tipo": "espera",
+            "nome": "30 dias",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Parceiro voltou a ter atividade?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Sugerir o desligamento",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Aprovar o desligamento",
+            "raia": "PA-02",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "Desligamento aprovado?",
+            "raia": "PA-02"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Enviar o aviso formal",
+            "raia": "PA-01"
+          },
+          {
+            "id": "e3",
+            "tipo": "espera",
+            "nome": "30 dias de aviso",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Encerrar a parceria e revogar acessos",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Parceiro retomado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Parceiro mantido",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f3",
+            "tipo": "fim",
+            "nome": "Parceria encerrada",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "e2"
+          },
+          {
+            "de": "e2",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "g2"
+          },
+          {
+            "de": "g2",
+            "para": "f2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g2",
+            "para": "t5",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t5",
+            "para": "e3"
+          },
+          {
+            "de": "e3",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "f3"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "t1",
+            "para": "X1",
+            "rotulo": "Convite para reunião"
+          },
+          {
+            "de": "t2",
+            "para": "X1",
+            "rotulo": "Segunda tentativa"
+          },
+          {
+            "de": "t5",
+            "para": "X1",
+            "rotulo": "Aviso formal"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P-37",
+      "nome": "Retomar parceiro em risco",
+      "pai": "P-36",
+      "ordem": 1,
+      "descricao": "Duas tentativas de retomada com 15 dias de intervalo, focadas numa oportunidade concreta, antes de qualquer sugestão de desligamento.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Parceiro entra em risco",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Parceiro retomado ou sugestão de desligamento",
+          "para": "P-38"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0105",
+        "EV-0106"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-38",
+      "nome": "Desligar parceiro",
+      "pai": "P-36",
+      "ordem": 2,
+      "descricao": "Aprovação do Diretor, aviso formal de 30 dias e encerramento com acessos revogados, preservando comissões e indicações abertas.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-02"
+      ],
+      "gatilho": "Sugestão de desligamento ou pedido de saída",
+      "entradas": [
+        {
+          "nome": "Parceiro retomado ou sugestão de desligamento",
+          "de": "P-37"
+        }
+      ],
+      "saidas": [
+        {
+          "nome": "Parceria encerrada",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0107",
+        "EV-0108"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas"
+    },
+    {
+      "id": "P-39",
+      "nome": "Manter a prateleira de fornecedores",
+      "pai": null,
+      "ordem": 7,
+      "descricao": "Manter categorias, fichas e no mínimo 3 parceiros por categoria, com critérios de entrada e permanência iguais para todos.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Parceiro assinado ou categoria sem 3 opções",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Prateleira com fichas verificadas",
+          "para": "P-25"
+        }
+      ],
+      "cliente": "Consultores do grupo e clientes industriais",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [
+        "regras"
+      ],
+      "evidencias": [
+        "EV-0109",
+        "EV-0110",
+        "EV-0111"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas",
+      "tipo": "suporte"
+    },
+    {
+      "id": "P-40",
+      "nome": "Manter conteúdos, trilhas e modelos",
+      "pai": null,
+      "ordem": 8,
+      "descricao": "Manter trilhas, materiais, modelos de contrato e textos de e-mail atualizados no portal.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Material novo ou mudança de regra",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Conteúdo publicado",
+          "para": "EXT:Parceiro"
+        }
+      ],
+      "cliente": "Parceiros e time",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0112"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas",
+      "tipo": "suporte"
+    },
+    {
+      "id": "P-41",
+      "nome": "Administrar o portal e os dados",
+      "pai": null,
+      "ordem": 9,
+      "descricao": "Manter usuários, acessos, configurações, importações e a política de dados do programa (o que se compartilha, com quem e para quê).",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Pessoa nova, mudança de configuração ou pedido de dados",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Acessos e dados em ordem",
+          "para": "EXT:Time de parcerias"
+        }
+      ],
+      "cliente": "Time de parcerias e parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [
+        "regras"
+      ],
+      "evidencias": [
+        "EV-0113",
+        "EV-0114",
+        "EV-0115"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-04: não vira funil; fica no nível de dono, gatilho e entregas",
+      "tipo": "suporte"
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "EV-0001",
+      "tipo": "entrevista",
+      "fonte": "Conversa com Guilherme Faccin (escopo do mapeamento)",
+      "pessoa": "PE-01",
+      "data": "2026-10-29",
+      "trecho": "Eu, Guilherme: Você conduz o programa e decide; o Igor entra como fonte de diretoria.",
+      "local": "Fase 0, patrocinador (mapa as-is, EV-0002)"
+    },
+    {
+      "id": "EV-0002",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Hoje só o Gerente de Parcerias está no time; a estrutura já serve para quando houver mais pessoas.",
+      "local": "User Story 15"
+    },
+    {
+      "id": "EV-0003",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Igor aprova no portal.",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0004",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "ele fala com o consultor ou o gerente de conta, que registra o pedido",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0005",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "avisa o financeiro por e-mail quando há comissão a pagar",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0006",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Aprovação do Diretor no portal.",
+      "local": "Apêndice D"
+    },
+    {
+      "id": "EV-0007",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Responsável nomeado com 2 horas ou mais por semana no primeiro mês",
+      "local": "Apêndice A"
+    },
+    {
+      "id": "EV-0008",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A versão 1 do portal está construída e testada com dados fictícios.",
+      "local": "Contexto"
+    },
+    {
+      "id": "EV-0009",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O contrato é enviado para assinatura no Autentique fora do portal, e o PDF assinado é anexado.",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0010",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Segue para minuta e assinatura. Segue para a assinatura, a pesar de nenhum possível parceiro chegou a assinar nenhum contrato. Além disso, criamos o grupo de whatsapp da parceria em conjunto para trocarmos figurinhas sobre o processo de assinatura do termo, tira-dúvidas, etc.",
+      "local": "conversa/Q-0037 (mapa as-is, EV-0106)"
+    },
+    {
+      "id": "EV-0011",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "As trilhas ficam só no portal, nunca no Wise Hub, porque o Hub é aberto à carteira do parceiro.",
+      "local": "User Story 10"
+    },
+    {
+      "id": "EV-0012",
+      "tipo": "validacao",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "As duas: entra pela carteira e depois acompanha o resultado. Acabei de identificar que precisaremos atualizar o playbook com as novas direções que viemos a fazer no web app. O playbook está desatualizado e não segue o que o webapp possibilita",
+      "local": "FO-01/Q-0004 (mapa as-is, EV-0109)"
+    },
+    {
+      "id": "EV-0013",
+      "tipo": "validacao",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Vale a especificação: na ativação. Isso foi atualizado com o web app, mas o playbook acabou não acompanhando",
+      "local": "FO-01/Q-0005 (mapa as-is, EV-0110)"
+    },
+    {
+      "id": "EV-0014",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Responda de alguma forma: você vai fazer o mapeamento do as-is e, com isso, projetar o to-be? Preciso do to-be perfeito com o web app",
+      "local": "FO-06/Q-0031 (mapa as-is, EV-0111)"
+    },
+    {
+      "id": "EV-0015",
+      "tipo": "formulario",
+      "fonte": "Formulário de revisão de tarefas (artifact), comentário da pergunta sobre o kanban",
+      "pessoa": "PE-01",
+      "data": "2026-10-29",
+      "trecho": "considero o kanban na sua função conceitual: simplificar em etapas um processo repetitivo. Sendo assim, temos que conceitualizar quais são os processos repetitivos que o Wise Partners tem e dividi-los em diferentes funis. Por exemplo: terão tarefas relacionadas a onboarding: elas farão parte do funil de onboarding e o kanban terá as etapas deste processo.\nExiste também um processo para o base ativa, então o kanban será para o base ativa.\nProvavelmente ainda existam outros processos, então preciso que você conceitualize todos os processos em absoluto antes de seguirmos com a elaboração dos funis e da área de tarefas.",
+      "local": "Formulário de tarefas, pergunta 'Como o kanban se organiza?' (mapa as-is, EV-0009)"
+    },
+    {
+      "id": "EV-0016",
+      "tipo": "entrevista",
+      "fonte": "Conversa com Guilherme Faccin (escopo do mapeamento)",
+      "pessoa": "PE-01",
+      "data": "2026-10-29",
+      "trecho": "Hierarquia + fluxos dos kanbans: Todos os macroprocessos e processos com dono, gatilho e entregas; passo a passo validado só dos processos que viram funil (recrutamento, onboarding, Base Ativa, indicações e os que surgirem).",
+      "local": "Fase 0, profundidade (mapa as-is, EV-0004)"
+    },
+    {
+      "id": "EV-0017",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "o portal gera a minuta do contrato (Parceria Comercial ou Parceria Institucional) em PDF e em Word",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0018",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Parceria institucional não usa scorecard nem nível por resultado nesta versão.",
+      "local": "Apêndice A"
+    },
+    {
+      "id": "EV-0019",
+      "tipo": "documento",
+      "fonte": "The Ecosystem Economy (Venkat Atluri, Miklós Dietz)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Generally speaking, though, these roles fall into two main categories: orchestrators and participants.",
+      "local": "p. 138"
+    },
+    {
+      "id": "EV-0020",
+      "tipo": "documento",
+      "fonte": "The Ecosystem Economy (Venkat Atluri, Miklós Dietz)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "You could also find yourself in a hybrid role, exercising a great degree of control over one aspect of the ecosystem relationship and less over another",
+      "local": "p. 144"
+    },
+    {
+      "id": "EV-0021",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "better than simply walking away when you cannot lead is finding a way to fit your offer within someone else’s vision",
+      "local": "p. 157"
+    },
+    {
+      "id": "EV-0022",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "it views its partners not just as partners but as customers",
+      "local": "p. 129"
+    },
+    {
+      "id": "EV-0023",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A value proposition is defined by the benefit that the end consumer is supposed to receive from your efforts.",
+      "local": "p. 23"
+    },
+    {
+      "id": "EV-0024",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A indicação fica protegida por 180 dias desde a última interação",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0025",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "ao passar no teste, recebe o próprio certificado em PDF e o selo de capacitação",
+      "local": "User Story 10"
+    },
+    {
+      "id": "EV-0026",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "The value architecture is not a business model. Where a business model is focused on how you operate to get paid by a customer, a value architecture is focused on how you construct the value",
+      "local": "p. 28"
+    },
+    {
+      "id": "EV-0027",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "modelos de parceria que são baseados apenas em comissionamento podem ser limitantes",
+      "local": "p. 128"
+    },
+    {
+      "id": "EV-0028",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Cada parceiro comercial assinado recebe um link exclusivo de indicação (e um QR Code) para usar com os próprios clientes.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0029",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "a lead-generating partner channel should report all leads to a central management system for routing to an appropriate sales resource",
+      "local": "p. 115"
+    },
+    {
+      "id": "EV-0030",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "o sistema calcula 40% da primeira mensalidade para o parceiro e 10% para o responsável pela parceria",
+      "local": "User Story 6, cenário 1"
+    },
+    {
+      "id": "EV-0031",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "para a Swallow, 6% do valor do projeto para o parceiro e 2% para o responsável",
+      "local": "User Story 6, cenário 2"
+    },
+    {
+      "id": "EV-0032",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "You never take first money.",
+      "local": "p. 121"
+    },
+    {
+      "id": "EV-0033",
+      "tipo": "documento",
+      "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "But the salesman wasn’t irrational. He understood all too well what determined his bonus.",
+      "local": "p. 69"
+    },
+    {
+      "id": "EV-0034",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "The company pays a sales commission of five to fifteen per cent to anyone whose routes a customer from their own web site to www.amazon.com for a book or compact disk purchase.",
+      "local": "p. 113"
+    },
+    {
+      "id": "EV-0035",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Staged expansion is the logic for why Partner B is added second rather than third",
+      "local": "p. 84"
+    },
+    {
+      "id": "EV-0036",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "if you want to take your partners to the place you want them to go, you have to have been there yourself.",
+      "local": "p. 156"
+    },
+    {
+      "id": "EV-0037",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "o programa mínimo viável para você começar a testar essa estratégia",
+      "local": "p. 132"
+    },
+    {
+      "id": "EV-0038",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "não recomendamos dar esse passo antes que o time e as trocas com os parceiros tenham alcançado um determinado nível de entrega",
+      "local": "p. 208"
+    },
+    {
+      "id": "EV-0039",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "500 available partners is not the same thing as 500 committed partners.",
+      "local": "p. 76"
+    },
+    {
+      "id": "EV-0040",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Destaque | 5% do topo, no mínimo 1 |",
+      "local": "Apêndice C"
+    },
+    {
+      "id": "EV-0041",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "partner professionals are able to meaningfully automate the assessment, onboarding, and management of their long-tail partners.",
+      "local": "secao 19"
+    },
+    {
+      "id": "EV-0042",
+      "tipo": "documento",
+      "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "I classify partners as Stars (5%), Growth Potential (15%) and The Rest (80%) and discuss how we should manage each group.",
+      "local": "p. 30"
+    },
+    {
+      "id": "EV-0043",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A ficha ganha o modelo de atuação do parceiro (um ou mais: indicador, co-venda, implementador ou parceiro técnico, tecnologia ou integração, institucional ou comunidade)",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0044",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "First is the influencer channel. Rather than reselling, these partners advocate early in the buyer journey to build brand awareness and preference. They provide recommendations, validation, and sometimes referrals.",
+      "local": "p. 24"
+    },
+    {
+      "id": "EV-0045",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Perfil do parceiro: tem acesso à audiência que você busca impactar, seja por influência direta ou por estar conectado a uma rede de relacionamento",
+      "local": "p. 53"
+    },
+    {
+      "id": "EV-0046",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O usuário escolhe o pacote disponível para o nível, e o sistema carrega as contrapartidas do pacote, com periodicidade e forma de comprovação.",
+      "local": "User Story 5"
+    },
+    {
+      "id": "EV-0047",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O Gerente de Parcerias abre o portal e vê os parceiros agrupados por categoria de prateleira.",
+      "local": "User Story 1"
+    },
+    {
+      "id": "EV-0048",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O cliente nunca faz o pedido sozinho.",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0049",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Innovating successfully in an internal ecosystem follows the same approach that we take in an external ecosystem: What is our MVE?",
+      "local": "p. 184"
+    },
+    {
+      "id": "EV-0050",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O painel semanal passa a ser organizado pelas quatro etapas da jornada do parceiro (captação, onboarding, relacionamento e produção)",
+      "local": "User Story 7"
+    },
+    {
+      "id": "EV-0051",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "a proposta de valor da parceria em quatro pontos: o que o parceiro quer ganhar, o que a Wise oferece, como esse valor é entregue e o valor criado para cada lado e para o cliente",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0052",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Se o parceiro não estiver diretamente interessado no mesmo público que sua empresa, as prioridades vão se desalinhar em algum momento",
+      "local": "p. 76"
+    },
+    {
+      "id": "EV-0053",
+      "tipo": "documento",
+      "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "In the channel partner recruitment context the job description is called the ideal partner profile and the opportunities and benefits we offer are called the channel partner program.",
+      "local": "p. 78"
+    },
+    {
+      "id": "EV-0054",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A fase do programa fica registrada e o portal mostra quando os critérios da próxima fase foram atingidos.",
+      "local": "User Story 7"
+    },
+    {
+      "id": "EV-0055",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "tem a própria carteira (parceiros dos quais é responsável) e metas trimestrais",
+      "local": "User Story 15"
+    },
+    {
+      "id": "EV-0056",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Na reunião semanal, o Gerente de Parcerias e o Diretor pautam a conversa pelo painel",
+      "local": "User Story 3"
+    },
+    {
+      "id": "EV-0057",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Revisão: primeiro dia útil de janeiro, abril, julho e outubro. Quem não cumpre o nível atual fica em observação por um trimestre.",
+      "local": "Apêndice B"
+    },
+    {
+      "id": "EV-0058",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Mudança de regra que afeta parceiros tem data de vigência de no mínimo 30 dias e gera um comunicado.",
+      "local": "User Story 13"
+    },
+    {
+      "id": "EV-0059",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Governance is the set of rules concerning who gets to participate in an ecosystem, how to divide the value, and how to resolve conflicts.",
+      "local": "p. 150"
+    },
+    {
+      "id": "EV-0060",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "clientes fechados no ICP via parceiros, receita atribuída ao canal, custo total do canal separado em comissões, horas da equipe e custos diretos, ROI",
+      "local": "User Story 1"
+    },
+    {
+      "id": "EV-0061",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Uma pesquisa trimestral de satisfação dos parceiros (nota de 0 a 10 e comentário) é enviada a cada pessoa do parceiro pelo portal e por e-mail.",
+      "local": "User Story 7"
+    },
+    {
+      "id": "EV-0062",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A premiação anual é registrada no portal e gera selo para o vencedor.",
+      "local": "User Story 13"
+    },
+    {
+      "id": "EV-0063",
+      "tipo": "documento",
+      "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Say thank you in kind, not cash.",
+      "local": "p. 140"
+    },
+    {
+      "id": "EV-0064",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O funil ganha a etapa \"qualificação\" (scorecard), entre \"reunião realizada\" e \"proposta com o decisor\", e o estado \"nutrição\" para quem ainda não é a hora",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0065",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Your IPP is not a theoretical list of firmographics and qualifiers that make up an ideal partner universe. Instead, IPP is an enumerated list of actual partner accounts.",
+      "local": "p. 159"
+    },
+    {
+      "id": "EV-0066",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Partners who were onboarded into Ecosystem 1 can be carried over to help jump-start the MVE for Ecosystem 2.",
+      "local": "p. 84"
+    },
+    {
+      "id": "EV-0067",
+      "tipo": "documento",
+      "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "The long-list should have at least ten times the number of candidates that we plan on recruiting in any given time frame in the area in question.",
+      "local": "p. 83"
+    },
+    {
+      "id": "EV-0068",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Given um pedido sem fornecedor em alguma categoria, When registrado, Then a necessidade entra no relatório de categorias a prospectar.",
+      "local": "User Story 9, cenário 8"
+    },
+    {
+      "id": "EV-0069",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O parceiro percorre as etapas do funil.",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0070",
+      "tipo": "documento",
+      "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "If you want someone to listen and understand your reasoning, give your interests and reasoning first and your conclusions or proposals later.",
+      "local": "p. 67"
+    },
+    {
+      "id": "EV-0071",
+      "tipo": "documento",
+      "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Your position is something you have decided upon. Your interests are what caused you to so decide.",
+      "local": "p. 58"
+    },
+    {
+      "id": "EV-0072",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Antes da proposta, o time de parcerias preenche o scorecard do parceiro: sete critérios (Apêndice A), cada um com nota 0, 0,5 ou 1 por uma régua descrita na tela.",
+      "local": "User Story 3"
+    },
+    {
+      "id": "EV-0073",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Na negociação, o usuário preenche o Quadro de Identificação e o portal gera a minuta do contrato",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0074",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Volta para ajuste da minuta e nova aprovação",
+      "local": "FO-01/Q-0006 (mapa as-is, EV-0107)"
+    },
+    {
+      "id": "EV-0075",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "o estado \"nutrição\" para quem ainda não é a hora, com data de retomada e cadência de contato",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0076",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "As duas coisas",
+      "local": "FO-05/Q-0033 (mapa as-is, EV-0108)"
+    },
+    {
+      "id": "EV-0077",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Start by subtly engaging the partner through social media shoutouts, sharing their content, and inviting them onto your podcast.",
+      "local": "p. 85"
+    },
+    {
+      "id": "EV-0078",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O onboarding termina na ativação: a primeira indicação do parceiro com ICP confirmado pela Wise que virou reunião.",
+      "local": "User Story 5"
+    },
+    {
+      "id": "EV-0079",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "| Até 2 dias úteis | Tarefas do pacote (v1) | Prateleira, grupo, dados, Hub, certificado e selo conforme o pacote |",
+      "local": "Apêndice F"
+    },
+    {
+      "id": "EV-0080",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "o portal cria o plano de 90 dias com quatro encontros (alinhamento, vendas, produto e pós-venda) e os marcos de 30, 60 e 90 dias (Apêndice F)",
+      "local": "User Story 5"
+    },
+    {
+      "id": "EV-0081",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Cada pessoa do parceiro faz a trilha com o próprio login e, ao passar no teste, recebe o próprio certificado em PDF e o selo de capacitação.",
+      "local": "User Story 10"
+    },
+    {
+      "id": "EV-0082",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O servidor compara com a base da Wise, descarta a lista do parceiro no mesmo processamento e guarda só as coincidências por 180 dias.",
+      "local": "User Story 14"
+    },
+    {
+      "id": "EV-0083",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Use Reveal or other account mapping tools to see the customers of yours who are prospects of theirs and get them in a room together.",
+      "local": "p. 176"
+    },
+    {
+      "id": "EV-0084",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Share overlapping records: The most common match condition, this causes information to be shared only for the specific records in your population that also exist in the population of your partner.",
+      "local": "secao 20"
+    },
+    {
+      "id": "EV-0085",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Um usuário interno ou o parceiro registra uma indicação: do parceiro para a Wise Makers, a Tríade ou a Swallow, ou de uma dessas empresas para o parceiro.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0086",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Toda indicação ganha uma nota de qualidade (Apêndice E) e passa por validação da Wise, que confirma a aderência ao ICP.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0087",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "| Parceiro para o grupo | Validação (duplicidade e ICP) e primeiro contato com o cliente | 2 dias úteis |",
+      "local": "Apêndice E"
+    },
+    {
+      "id": "EV-0088",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Quando a indicação vai da Wise para o parceiro, qualquer um dos dois pode atualizar o resultado, mas a responsabilidade de manter o registro é da Wise.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0089",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O cliente nunca faz o pedido sozinho. Quando precisa de um fornecedor fora do escopo da Wise, ele fala com o consultor ou o gerente de conta, que registra o pedido",
+      "local": "User Story 9"
+    },
+    {
+      "id": "EV-0090",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Goal: Master the 3 I's of nearbound sales (Intel, Influence, and Intros) to accelerate your pipeline by leveraging your partners' trust and access.",
+      "local": "p. 111"
+    },
+    {
+      "id": "EV-0091",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Never, ever, ever ask for an intro where you have not already written an example intro for the person you are asking for an intro from.",
+      "local": "p. 119"
+    },
+    {
+      "id": "EV-0092",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Brodigan created a #partnership-requests Slack channel so that reps have a single place to go to get assistance on deals.",
+      "local": "secao 26"
+    },
+    {
+      "id": "EV-0093",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O sistema calcula a comissão devida ao parceiro e a do responsável pela parceria conforme a regra de cada empresa, avisa o financeiro por e-mail quando há comissão a pagar",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0094",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Indicações fechadas geram checagens aos 6 e 12 meses para registrar se o cliente segue ativo e a satisfação dele.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0095",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "As contrapartidas da v1 passam a fazer parte de um plano de ações conjuntas por parceiro, com ações dos dois lados",
+      "local": "User Story 11"
+    },
+    {
+      "id": "EV-0096",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Para parceiros do pacote A, o portal controla a fila do Base Ativa e o ciclo de 12 semanas, com 6 encontros e o evento final.",
+      "local": "User Story 7"
+    },
+    {
+      "id": "EV-0097",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Cada ação tem lado, tipo, data prevista, responsável, estado, comprovação, resultado (alcance, inscritos, indicações geradas) e custo direto, quando houver.",
+      "local": "User Story 11"
+    },
+    {
+      "id": "EV-0098",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Cada pacote e cada faixa têm uma régua de atendimento (Apêndice C) com a cadência mínima de acompanhamento e o tipo de suporte; o portal alerta quando a régua atrasa.",
+      "local": "User Story 12"
+    },
+    {
+      "id": "EV-0099",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "| Destaque | 5% do topo, no mínimo 1 | Reunião mensal com plano de negócios conjunto, revisão trimestral com o Diretor",
+      "local": "Apêndice C"
+    },
+    {
+      "id": "EV-0100",
+      "tipo": "documento",
+      "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Every important relationship should invest in a regular (probably monthly) operational review meeting",
+      "local": "p. 100"
+    },
+    {
+      "id": "EV-0101",
+      "tipo": "documento",
+      "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "our partner would provide us with a positive and ﬂattering reference to a key customer or buyer.",
+      "local": "p. 218"
+    },
+    {
+      "id": "EV-0102",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O time de parcerias avalia cada parceiro nos 8 eixos da matriz de maturidade (Apêndice J), com nota de 1 a 5 por eixo.",
+      "local": "User Story 8"
+    },
+    {
+      "id": "EV-0103",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Pacote após descida: o maior pacote permitido no nível novo, ao fim do ciclo do Base Ativa em curso ou 30 dias após a confirmação, o que vier depois.",
+      "local": "Apêndice B"
+    },
+    {
+      "id": "EV-0104",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Parceiros que cumprem os critérios de risco (Apêndice D) entram no fluxo de desligamento",
+      "local": "User Story 12"
+    },
+    {
+      "id": "EV-0105",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Primeira tentativa de retomada: próximo passo criado na hora, com mensagem sugerida que propõe uma reunião.",
+      "local": "Apêndice D"
+    },
+    {
+      "id": "EV-0106",
+      "tipo": "documento",
+      "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Thus by concentrating the Cherry Picker on a single activity, a single customer or single process, it can be possible to raise its expectation level",
+      "local": "p. 229"
+    },
+    {
+      "id": "EV-0107",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Aviso formal: texto gerado pelo portal, enviado pelo responsável, com encerramento em 30 dias (cláusula 13.4 do contrato).",
+      "local": "Apêndice D"
+    },
+    {
+      "id": "EV-0108",
+      "tipo": "documento",
+      "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "efficiently discover that the best way to advance your respective interests is for each of you to look elsewhere and not to try further to reach agreement.",
+      "local": "p. 113"
+    },
+    {
+      "id": "EV-0109",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Em cada categoria, vê quantos parceiros existem, em que etapa estão, quantos estão assinados e se a categoria tem as 3 opções que o programa exige.",
+      "local": "User Story 1"
+    },
+    {
+      "id": "EV-0110",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Screening decides who to let in, while feedback encourages desirable behavior on the part of those who have been granted entry.",
+      "local": "p. 144"
+    },
+    {
+      "id": "EV-0111",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "But when the list of suppliers grows too great, it becomes more difficult for appropriate providers and customers to find one another.",
+      "local": "p. 37"
+    },
+    {
+      "id": "EV-0112",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O portal do parceiro ganha a área de capacitação, com trilhas criadas pela Wise.",
+      "local": "User Story 10"
+    },
+    {
+      "id": "EV-0113",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Antes do uso, o administrador importa os parceiros atuais (planilha), os documentos já produzidos",
+      "local": "User Story 10"
+    },
+    {
+      "id": "EV-0114",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "We don’t compete with our customers. We use customer data only to improve our products",
+      "local": "p. 66"
+    },
+    {
+      "id": "EV-0115",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Only company-level information is shared, such as business name, funnel stage, or firmographic data. No information is shared about the contacts you have at any company.",
+      "local": "secao 20"
+    },
+    {
+      "id": "EV-0116",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Perdas são registradas com motivo.",
+      "local": "User Story 4"
+    },
+    {
+      "id": "EV-0117",
+      "tipo": "documento",
+      "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "It is hard to make concessions, but it is easy to criticize.",
+      "local": "p. 120"
+    },
+    {
+      "id": "EV-0118",
+      "tipo": "documento",
+      "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "The reason you negotiate is to produce something better than the results you can obtain without negotiating.",
+      "local": "p. 108"
+    },
+    {
+      "id": "EV-0119",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Sem ativação em 90 dias, o responsável recebe alerta e o plano ganha uma extensão até 120 dias; sem ativação em 120 dias, o parceiro fica marcado como \"não ativado\".",
+      "local": "User Story 5"
+    },
+    {
+      "id": "EV-0120",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "| Parceiro para o grupo | Confirmação de recebimento ao parceiro | Imediata, automática |",
+      "local": "Apêndice E"
+    },
+    {
+      "id": "EV-0121",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "| Parceiro para o grupo | Retorno ao parceiro sobre o primeiro contato | 5 dias úteis do registro |",
+      "local": "Apêndice E"
+    },
+    {
+      "id": "EV-0122",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Close the loop before closing the laptop",
+      "local": "p. 208"
+    },
+    {
+      "id": "EV-0123",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Given a página publicada, When salva, Then o sistema cria uma indicação da empresa do consultor para cada parceiro apresentado, com origem \"pedido de RFP\"",
+      "local": "User Story 9, cenário 6"
+    },
+    {
+      "id": "EV-0124",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Quando não há horas, o parceiro de pacote A entra na fila, com a data prevista informada.",
+      "local": "Seção 10.10 (mapa as-is, EV-0050)"
+    },
+    {
+      "id": "EV-0125",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Diagnóstico da base. Tamanho, canais, histórico, o que já foi tentado",
+      "local": "Seção 10.3, encontro 1 (mapa as-is, EV-0092)"
+    },
+    {
+      "id": "EV-0126",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Categorização. O parceiro aplica os critérios",
+      "local": "Seção 10.3, encontro 2 (mapa as-is, EV-0093)"
+    },
+    {
+      "id": "EV-0127",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Estrutura e anúncio. Canal, nome, formato e mensagem de abertura",
+      "local": "Seção 10.3, encontro 3 (mapa as-is, EV-0094)"
+    },
+    {
+      "id": "EV-0128",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Oferta e nutrição. O que a comunidade recebe e com que frequência. Ativação do Hub",
+      "local": "Seção 10.3, encontro 4 (mapa as-is, EV-0095)"
+    },
+    {
+      "id": "EV-0129",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Formação e evento. Pauta, formato e mobilização",
+      "local": "Seção 10.3, encontro 5 (mapa as-is, EV-0096)"
+    },
+    {
+      "id": "EV-0130",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Preparação final. Roteiro, divulgação e logística",
+      "local": "Seção 10.3, encontro 6 (mapa as-is, EV-0097)"
+    },
+    {
+      "id": "EV-0131",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Evento da comunidade | Comunidade validada",
+      "local": "Seção 10.3, semana 12 (mapa as-is, EV-0098)"
+    },
+    {
+      "id": "EV-0132",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Manutenção mensal de 45 minutos Revisão do ciclo a cada 6 meses Certificado metodológico ao responsável pela comunidade",
+      "local": "Seção 10.8 (mapa as-is, EV-0051)"
+    },
+    {
+      "id": "EV-0133",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Na revisão seguinte, se ainda não cumprir, o portal propõe descer um nível; a decisão é de uma pessoa, com motivo.",
+      "local": "Apêndice B"
+    },
+    {
+      "id": "EV-0134",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Isentos: assinados há menos de 180 dias e pausados.",
+      "local": "Apêndice B"
+    },
+    {
+      "id": "EV-0135",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Segunda tentativa: no mínimo 15 dias depois da primeira, registrada como ponto de contato.",
+      "local": "Apêndice D"
+    },
+    {
+      "id": "EV-0136",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Sugestão de desligamento: 30 dias depois da segunda tentativa sem resposta ou sem nova atividade do parceiro.",
+      "local": "Apêndice D"
+    },
+    {
+      "id": "EV-0137",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "An EQL is a lead that is more likely to become a paying customer due to behaviors it is exhibiting in your partner ecosystem.",
+      "local": "secao 25"
+    },
+    {
+      "id": "EV-0138",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "As soon as an opportunity in Salesforce hits the “Solution Review” sales stage, the partner manager will get an alert in a Slack channel called #no-partner-attached.",
+      "local": "secao 26"
+    },
+    {
+      "id": "EV-0139",
+      "tipo": "documento",
+      "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "it's the overlap between your data and that of your partner, resulting in nine distinct intersections of data that each can carry a way for you to exchange and create value together.",
+      "local": "secao 21"
+    },
+    {
+      "id": "EV-0140",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Pair every ask for a nearbound “I” of intel, influence, or intro with a give of the same.",
+      "local": "p. 179"
+    },
+    {
+      "id": "EV-0141",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "One of the best qualitative reporting mechanisms is a free text box where prospects can provide an open-ended answer about how they heard about you.",
+      "local": "p. 89"
+    },
+    {
+      "id": "EV-0142",
+      "tipo": "documento",
+      "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Aligning on a 3x5 strategy should be reserved for top current partners or top potential partners you, as a business, are fully committed to further activating.",
+      "local": "p. 120"
+    },
+    {
+      "id": "EV-0143",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Are there any particular deals that we could help you close today?",
+      "local": "p. 127"
+    },
+    {
+      "id": "EV-0144",
+      "tipo": "documento",
+      "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Are prices for the same products the same across different channels? If not, customers will migrate to whichever channels offer more competitive prices.",
+      "local": "p. 180"
+    },
+    {
+      "id": "EV-0145",
+      "tipo": "documento",
+      "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Customers, suppliers, and competitors. And one more category: people who provide complements.",
+      "local": "p. 29"
+    },
+    {
+      "id": "EV-0146",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "In general, there are four main causes of market failures: information asymmetry, externalities, monopoly power, and risk.",
+      "local": "p. 154"
+    },
+    {
+      "id": "EV-0147",
+      "tipo": "documento",
+      "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "As you expand the value proposition, will your new partners find your leadership claim to be at least as convincing as your current partners find it to be?",
+      "local": "p. 149"
+    },
+    {
+      "id": "EV-0148",
+      "tipo": "documento",
+      "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "sugerimos que inicie as projeções do seu modelo operacional de canais em uma página em branco, independente.",
+      "local": "p. 170"
+    },
+    {
+      "id": "EV-0149",
+      "tipo": "documento",
+      "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "By locating close together, antique stores, though competitors in dividing up the market, become complementors in creating the market",
+      "local": "p. 45"
+    },
+    {
+      "id": "EV-0150",
+      "tipo": "documento",
+      "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Deserters slip into the background, making fewer and fewer calls to the other ﬁrm and distancing themselves from meetings, conferences or other social activities",
+      "local": "p. 211"
+    },
+    {
+      "id": "EV-0151",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Qualificada: todos os critérios do ICP confirmados pela Wise, com CNPJ e necessidade informados.",
+      "local": "Apêndice E"
+    },
+    {
+      "id": "EV-0152",
+      "tipo": "documento",
+      "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "destaque (5% do topo, no mínimo 1), potencial (15% seguintes, no mínimo 1) e base (os demais)",
+      "local": "User Story 12"
+    },
+    {
+      "id": "EV-0153",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "Abre a ficha de qualquer parceiro e encontra em um só lugar",
+      "local": "User Story 1"
+    },
+    {
+      "id": "EV-0154",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "A indicação guarda cliente, origem, aderência ao ICP, etapa, valores e comissões.",
+      "local": "User Story 6"
+    },
+    {
+      "id": "EV-0155",
+      "tipo": "documento",
+      "fonte": "Especificação 001: Portal Wise Partners",
+      "pessoa": null,
+      "data": "2026-10-31",
+      "trecho": "O sistema calcula a comissão devida ao parceiro e a do responsável pela parceria conforme a regra de cada empresa",
+      "local": "User Story 6"
+    }
+  ],
+  "perguntas": [
+    {
+      "id": "Q-0001",
+      "texto": "Você aprova este desenho do modelo de negócio? A Wise orquestra um ecossistema pequeno e controla a relação com a indústria; o parceiro é cliente do programa e recebe valor antes de indicar; nada é cobrado do parceiro; o que conta é parceiro ativo, não assinado.",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "F-001",
+        "F-002",
+        "F-006",
+        "F-008",
+        "NEGOCIO.cliente"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "canvas"
+    },
+    {
+      "id": "Q-0002",
+      "texto": "Em que ordem os pilares entram no ar?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Prateleira e indicações já; Base Ativa só depois de gatilhos e de um ciclo rodado na base da Wise (recomendado pelos livros)",
+        "Os três pilares desde o primeiro parceiro",
+        "Outra ordem (comente)"
+      ],
+      "alvo": [
+        "F-007"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "sequencia"
+    },
+    {
+      "id": "Q-0003",
+      "texto": "Como fica a meta de dezembro?",
+      "tipo": "escolha",
+      "opcoes": [
+        "10 assinados e também uma meta de ativados (recomendado)",
+        "Só os 10 assinados",
+        "Trocar a meta para parceiros ativados"
+      ],
+      "alvo": [
+        "F-008"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "meta_ativos"
+    },
+    {
+      "id": "Q-0004",
+      "texto": "Como dividir as 12 horas mensais?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Tempo humano nos parceiros destaque e potencial; o restante atendido pelo portal (recomendado)",
+        "Atenção próxima a todos enquanto forem poucos, e dividir depois",
+        "Outra regra (comente)"
+      ],
+      "alvo": [
+        "F-009"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "cauda"
+    },
+    {
+      "id": "Q-0005",
+      "texto": "As três empresas do grupo tratam a indicação do mesmo jeito (mesmo registro, mesmo SLA, mesmo retorno ao parceiro)?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, igual nas três; a venda é livre (recomendado)",
+        "Só a Wise Makers segue o processo por enquanto",
+        "Não sei: perguntar ao Igor"
+      ],
+      "alvo": [
+        "NEGOCIO.modelo_operacional"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "tres_empresas"
+    },
+    {
+      "id": "Q-0006",
+      "texto": "Os livros apontam 5 a 15% para quem só indica e 30 a 40% para quem revende; a Wise paga 40% da primeira mensalidade, uma vez. Como fica?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Manter 40% da primeira mensalidade, como no contrato",
+        "Manter 40%, mas só para indicação qualificada pela nota de qualidade",
+        "Revisar o percentual (comente)"
+      ],
+      "alvo": [
+        "F-005",
+        "NOVO.comissao"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Modelo de negócio",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "comissao"
+    },
+    {
+      "id": "Q-0007",
+      "texto": "Estes são os funis (kanbans) do portal, e as tarefas nascem das etapas deles. Quais você confirma?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Recrutamento (captar parceiros)",
+        "Onboarding (até a ativação)",
+        "Indicações",
+        "Pedidos da prateleira",
+        "Base Ativa",
+        "Parceiros em risco (retomada e desligamento)",
+        "Revisão de nível (lista trimestral, não kanban)",
+        "Ações conjuntas (calendário, não kanban)"
+      ],
+      "alvo": [
+        "P-10.fluxo",
+        "P-17.fluxo",
+        "P-23.fluxo",
+        "P-25.fluxo",
+        "P-30.fluxo",
+        "P-36.fluxo",
+        "P-05.fluxo"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Funis e tarefas",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "funis"
+    },
+    {
+      "id": "Q-0008",
+      "texto": "Como a lista de candidatos é montada?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Perguntando aos clientes do grupo quais sistemas e fornecedores usam e confiam (pergunta fixa no diagnóstico dos consultores)",
+        "Fornecedores que já aparecem nas indústrias atendidas pelo grupo",
+        "Categorias pedidas na prateleira sem fornecedor",
+        "Eventos e Expo+Indústria",
+        "Prospecção ativa por perfil"
+      ],
+      "alvo": [
+        "P-11"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Captar parceiros",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "lista"
+    },
+    {
+      "id": "Q-0009",
+      "texto": "Na negociação, o que o portal deve apoiar? (os livros recomendam os quatro)",
+      "tipo": "multipla",
+      "opcoes": [
+        "Registrar interesses e quem decide no candidato",
+        "Registrar a melhor alternativa de cada lado e um pacote gatilho que exige o Diretor",
+        "Circular a minuta como texto único, pedindo críticas e não concessões",
+        "Workshop curto de alinhamento com a diretoria do candidato antes de assinar"
+      ],
+      "alvo": [
+        "P-15.fluxo"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Captar parceiros",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "negociacao"
+    },
+    {
+      "id": "Q-0010",
+      "texto": "Os primeiros parceiros (âncoras) recebem condições de fundador com prazo, para atrair os seguintes?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, com prazo definido (comente qual)",
+        "Não, as mesmas regras para todos desde o início"
+      ],
+      "alvo": [
+        "NOVO.parceiros_ancora"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Captar parceiros",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "ancoras"
+    },
+    {
+      "id": "Q-0011",
+      "texto": "Quando o cruzamento de carteiras acontece?",
+      "tipo": "escolha",
+      "opcoes": [
+        "No encontro de alinhamento do onboarding, para dar ao parceiro uma primeira vitória cedo (recomendado)",
+        "Já na qualificação, antes de assinar, para medir o potencial",
+        "Só quando o parceiro pedir (como está na especificação)"
+      ],
+      "alvo": [
+        "P-21.gatilho"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Integrar parceiro",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "cruzamento"
+    },
+    {
+      "id": "Q-0012",
+      "texto": "Vale criar o processo em que consultores e comercial pedem pelo portal o apoio de um parceiro (informação sobre a conta, recomendação ao decisor ou apresentação), com a mensagem pronta e prazo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, e registrar a participação do parceiro como 'influenciou', separada de 'indicou' (recomendado)",
+        "Sim, mas sem registrar influência",
+        "Não agora"
+      ],
+      "alvo": [
+        "P-26",
+        "NOVO.atribuicao_influencia"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gerar negócios",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "apoio"
+    },
+    {
+      "id": "Q-0013",
+      "texto": "Quem faz a checagem do cliente indicado aos 6 e 12 meses?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O consultor que atende o cliente, com tarefa gerada pelo portal (recomendado)",
+        "O Gerente de Parcerias",
+        "O comercial da empresa que atende"
+      ],
+      "alvo": [
+        "P-28.dono"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gerar negócios",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "checagem"
+    },
+    {
+      "id": "Q-0014",
+      "texto": "Quem faz o primeiro contato com o cliente indicado (até 2 dias úteis)?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O consultor ou comercial da empresa que vai atender (recomendado: quem fecha é dono da conta)",
+        "O Gerente de Parcerias, que depois passa ao consultor",
+        "Depende da empresa do grupo"
+      ],
+      "alvo": [
+        "P-23.fluxo"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gerar negócios",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "primeiro_contato"
+    },
+    {
+      "id": "Q-0015",
+      "texto": "Quem fecha um negócio indicado por parceiro recebe crédito integral na própria meta, mesmo com a comissão paga ao parceiro?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim (recomendado: ninguém perde por trabalhar com parceiro)",
+        "Não",
+        "Não sei: perguntar ao Igor"
+      ],
+      "alvo": [
+        "NOVO.credito_meta"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gerar negócios",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "credito"
+    },
+    {
+      "id": "Q-0016",
+      "texto": "Quem é o dono do cliente indicado?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Quem fecha é dono durante a venda; depois, a equipe que entrega. O Gerente de Parcerias é dono da relação com o parceiro (recomendado)",
+        "O Gerente de Parcerias até o fechamento",
+        "Outro (comente)"
+      ],
+      "alvo": [
+        "NOVO.dono_da_conta"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gerar negócios",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "dono_conta"
+    },
+    {
+      "id": "Q-0017",
+      "texto": "A revisão conjunta com pauta fixa e três perguntas de saúde (o parceiro nos recomendaria? a parceria melhorou a satisfação dos clientes? houve ganho real?) vale para quem?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Todos os parceiros ativos, trimestral; mensal para os destaques (recomendado)",
+        "Só os destaques, como na especificação",
+        "Não agora"
+      ],
+      "alvo": [
+        "P-33"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Desenvolver o parceiro",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "revisao"
+    },
+    {
+      "id": "Q-0018",
+      "texto": "O Igor será patrocinador executivo de 3 a 5 parceiros principais, presente na revisão trimestral deles?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim",
+        "Só dos parceiros Elite",
+        "Não",
+        "Não sei: perguntar ao Igor"
+      ],
+      "alvo": [
+        "P-33.participantes"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Desenvolver o parceiro",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "patrocinio"
+    },
+    {
+      "id": "Q-0019",
+      "texto": "Como a prateleira é curada?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Limite de 3 a 5 fornecedores por categoria",
+        "Permanência depende da nota de qualidade e do retorno dos clientes",
+        "A Wise cadastra e verifica as primeiras fichas antes de abrir aos parceiros",
+        "Sem limite por categoria"
+      ],
+      "alvo": [
+        "P-39.regras"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Suporte e dados",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "prateleira"
+    },
+    {
+      "id": "Q-0020",
+      "texto": "Publicar uma política de dados do programa: a Wise não usa a carteira do parceiro para outros fins nem aborda os clientes dele por fora; só se compartilham dados de empresa, nunca de pessoas, e o cruzamento só com consentimento.",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como está",
+        "Sim, com ajustes (comente)",
+        "Não agora"
+      ],
+      "alvo": [
+        "P-41.regras"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Suporte e dados",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "dados"
+    },
+    {
+      "id": "Q-0021",
+      "texto": "Quem define as metas do programa e a fase?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O Igor",
+        "Eu",
+        "Nós dois juntos",
+        "Os sócios"
+      ],
+      "alvo": [
+        "P-03.dono"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gestão do programa",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "metas_dono"
+    },
+    {
+      "id": "Q-0022",
+      "texto": "Quem decide e publica as regras do programa e os comunicados aos parceiros?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Eu",
+        "O Igor",
+        "Eu, com aprovação do Igor"
+      ],
+      "alvo": [
+        "P-06.dono"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 1,
+      "bloco": "Gestão do programa",
+      "status": "em_formulario",
+      "formulario": "FO-01",
+      "respostas": [],
+      "chave": "comunicados"
+    }
+  ],
+  "formularios": [
+    {
+      "id": "FO-01",
+      "titulo": "To-be: decisões do patrocinador",
+      "rodada": 1,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0001",
+        "Q-0002",
+        "Q-0003",
+        "Q-0004",
+        "Q-0005",
+        "Q-0006",
+        "Q-0007",
+        "Q-0008",
+        "Q-0009",
+        "Q-0010",
+        "Q-0011",
+        "Q-0012",
+        "Q-0013",
+        "Q-0014",
+        "Q-0015",
+        "Q-0016",
+        "Q-0017",
+        "Q-0018",
+        "Q-0019",
+        "Q-0020",
+        "Q-0021",
+        "Q-0022"
+      ],
+      "introducao": "Decisões de desenho que só o patrocinador pode tomar.",
+      "link": "https://claude.ai/artifact/ErCdBFw4dwso4pcz9RbUEw",
+      "status": "enviado",
+      "enviado_em": "2026-10-31",
+      "prazo": "",
+      "identificacao": false
+    }
+  ],
   "contradicoes": [],
-  "decisoes": [],
-  "glossario": [],
-  "ideias": [],
+  "decisoes": [
+    {
+      "id": "DE-01",
+      "data": "2026-10-31",
+      "texto": "A especificação 002 e o web app prevalecem sobre o Playbook v3.1, que está desatualizado.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0012",
+        "EV-0013"
+      ]
+    },
+    {
+      "id": "DE-02",
+      "data": "2026-10-31",
+      "texto": "Este mapa é o to-be: o desenho que o Portal vai operar. O que vem das especificações é desenho aprovado; o que vem dos livros é proposta até o patrocinador decidir.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0014"
+      ]
+    },
+    {
+      "id": "DE-03",
+      "data": "2026-10-31",
+      "texto": "Cada processo repetitivo vira um funil (kanban) próprio, com as etapas do processo; as tarefas pertencem ao funil de onde nascem.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0015"
+      ]
+    },
+    {
+      "id": "DE-04",
+      "data": "2026-10-31",
+      "texto": "Passo a passo detalhado só para os processos que viram funil; os demais ficam no nível de dono, gatilho e entregas.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0016"
+      ]
+    }
+  ],
+  "glossario": [
+    {
+      "id": "GL-01",
+      "termo": "Parceiro ativo",
+      "definicao": "Parceiro que já teve a primeira indicação com ICP confirmado que virou reunião.",
+      "sinonimos": [],
+      "evidencias": [
+        "EV-0078"
+      ]
+    },
+    {
+      "id": "GL-02",
+      "termo": "Indicação qualificada",
+      "definicao": "Indicação com todos os critérios do ICP confirmados pela Wise, com CNPJ e necessidade informados.",
+      "sinonimos": [],
+      "evidencias": [
+        "EV-0151"
+      ]
+    },
+    {
+      "id": "GL-03",
+      "termo": "Funil",
+      "definicao": "Kanban de um processo repetitivo, com as etapas do processo como colunas; as tarefas nascem das etapas.",
+      "sinonimos": [],
+      "evidencias": [
+        "EV-0015"
+      ]
+    },
+    {
+      "id": "GL-04",
+      "termo": "Faixa de desempenho",
+      "definicao": "Destaque (5% do topo), potencial (15% seguintes) e base, pela pontuação do ranking.",
+      "sinonimos": [],
+      "evidencias": [
+        "EV-0152"
+      ]
+    }
+  ],
+  "ideias": [
+    {
+      "id": "ID-01",
+      "texto": "Marcar como lead do ecossistema a indicação de empresa que também está na carteira de outro parceiro e comparar a conversão.",
+      "processo": null,
+      "evidencias": [
+        "EV-0137"
+      ]
+    },
+    {
+      "id": "ID-02",
+      "texto": "Alertar quando uma oportunidade da Wise avança sem parceiro anexado e existe parceiro com aquela conta na carteira.",
+      "processo": null,
+      "evidencias": [
+        "EV-0138"
+      ]
+    },
+    {
+      "id": "ID-03",
+      "texto": "Estruturar o cruzamento na matriz 3x3 (prospects, oportunidades e clientes de cada lado), com uma jogada por célula.",
+      "processo": null,
+      "evidencias": [
+        "EV-0139"
+      ]
+    },
+    {
+      "id": "ID-04",
+      "texto": "Registrar o saldo de ajuda dada e recebida com cada parceiro e devolver algo a cada pedido.",
+      "processo": null,
+      "evidencias": [
+        "EV-0140"
+      ]
+    },
+    {
+      "id": "ID-05",
+      "texto": "Perguntar ao cliente, em campo aberto, quem o indicou ou influenciou, e cruzar com o registro do portal.",
+      "processo": null,
+      "evidencias": [
+        "EV-0141"
+      ]
+    },
+    {
+      "id": "ID-06",
+      "texto": "Plano de contas conjuntas (5 clientes de cada lado e 5 novos logos em comum) só para parceiros Elite.",
+      "processo": null,
+      "evidencias": [
+        "EV-0142"
+      ]
+    },
+    {
+      "id": "ID-07",
+      "texto": "Entrevista estruturada anual com cada parceiro, perguntando que negócio a Wise pode ajudar a fechar hoje.",
+      "processo": null,
+      "evidencias": [
+        "EV-0143"
+      ]
+    },
+    {
+      "id": "ID-08",
+      "texto": "Mesmo preço da consultoria para cliente indicado e cliente direto, para não criar conflito de canal.",
+      "processo": null,
+      "evidencias": [
+        "EV-0144"
+      ]
+    },
+    {
+      "id": "ID-09",
+      "texto": "Mapear a rede de valor (clientes, fornecedores, complementadores e concorrentes) de cada candidato antes da primeira reunião.",
+      "processo": null,
+      "evidencias": [
+        "EV-0145"
+      ]
+    },
+    {
+      "id": "ID-10",
+      "texto": "Auditar a prateleira a cada trimestre pelas quatro causas de falha de mercado.",
+      "processo": null,
+      "evidencias": [
+        "EV-0146"
+      ]
+    },
+    {
+      "id": "ID-11",
+      "texto": "Antes de abrir nova categoria de parceiro, testar se a nova categoria aceita a liderança da Wise e se os atuais continuam aceitando o próprio papel.",
+      "processo": null,
+      "evidencias": [
+        "EV-0147"
+      ]
+    },
+    {
+      "id": "ID-12",
+      "texto": "Montar a planilha do programa como negócio à parte (receita, comissão, custo do time) e ler o resultado por fase.",
+      "processo": null,
+      "evidencias": [
+        "EV-0148"
+      ]
+    },
+    {
+      "id": "ID-13",
+      "texto": "Reunir parceiros que competem entre si no mesmo evento ou comunidade, porque a presença conjunta cria o mercado para todos.",
+      "processo": null,
+      "evidencias": [
+        "EV-0149"
+      ]
+    },
+    {
+      "id": "ID-14",
+      "texto": "Monitorar sinais de abandono (menos contatos, ausência em reuniões e eventos) e acionar a revisão antes que o parceiro suma.",
+      "processo": null,
+      "evidencias": [
+        "EV-0150"
+      ]
+    }
+  ],
   "historico": [
     {
       "data": "2026-10-31",
       "evento": "Mapeamento iniciado"
+    },
+    {
+      "data": "2026-10-31",
+      "evento": "To-be montado a partir das especificações 001 e 002 e de 11 livros; formulário de decisões ao patrocinador"
     }
   ]
 }

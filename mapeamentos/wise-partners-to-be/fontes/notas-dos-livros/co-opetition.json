@@ -1,0 +1,608 @@
+{
+ "livro": "Co-opetition",
+ "autores": "Adam M. Brandenburger e Barry J. Nalebuff",
+ "slug": "co-opetition",
+ "tese": "O livro propõe que negócio é cooperação para criar o bolo e competição para dividi-lo, e dá dois instrumentos para ver o jogo: a Value Net, com clientes, fornecedores, concorrentes e complementadores, e o PARTS (Players, Added values, Rules, Tactics, Scope). O mesmo jogador costuma ocupar vários papéis ao mesmo tempo, e o poder de cada um vem do seu valor adicionado, isto é, o que o bolo perde sem ele. Para o Wise Partners, a lição central é tratar parceiros que são concorrentes parciais como complementadores com regras de escopo, e cobrar contrapartida pela competição e pelo acesso que a Wise cria.",
+ "recomendacoes": [
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Desenhar o programa como um jogo de dupla natureza: cooperar para criar o bolo (Prateleira de RFP, comunidade, evento) e competir para dividi-lo (carteira, comissão, proteção de 180 dias), com regras escritas separadas para cada lado.",
+   "processo": "Separar regras de cooperação e de competição no contrato de parceria",
+   "citacao": "Business is cooperation when it comes to creating a pie and competition when it comes to dividing it up.",
+   "aplicabilidade": "alta",
+   "porque": "É exatamente a tensão do Wise Partners: o parceiro coopera para trazer clientes e disputa com a Wise a relação com a carteira.",
+   "pagina": "p. 18"
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Mapear a Value Net da Wise e de cada candidato com os quatro papéis (clientes, fornecedores, complementadores, competidores) antes da primeira reunião de recrutamento.",
+   "processo": "Mapear a Value Net do candidato a parceiro e da Wise",
+   "citacao": "Customers, suppliers, and competitors. And one more category: people who provide complements.",
+   "aplicabilidade": "alta",
+   "porque": "Dá ao Gerente de Parcerias um mapa único para posicionar ERP, CRM, MES, associações e feiras em relação às indústrias atendidas.",
+   "pagina": "p. 29"
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Classificar como complementador quem, ao ser comprado pela indústria, torna o serviço da Wise mais valioso (e vice-versa), usando o teste feito do ponto de vista do cliente e não do setor do parceiro.",
+   "processo": "Classificar o papel do parceiro pelo teste do cliente",
+   "citacao": "The way to identify complementors is to put yourself in your customers’ shoes",
+   "aplicabilidade": "alta",
+   "porque": "Softwares ERP, MES e SST valorizam a consultoria de gestão e vice-versa, o que justifica o argumento de que a carteira dele é valiosa para a Wise.",
+   "pagina": "p. 31"
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Aplicar o mesmo teste ao contrário para achar concorrência: se o cliente valoriza menos a Wise por ter o produto do parceiro, ele é concorrente naquele escopo; fronteiras de setor não definem isso.",
+   "processo": "Classificar o papel do parceiro pelo teste do cliente",
+   "citacao": "A player is your competitor if customers value your product less when they have the other player’s product than when they have your product alone.",
+   "aplicabilidade": "alta",
+   "porque": "Permite tratar o parceiro que oferece consultoria ou implantação como concorrente parcial só no escopo em que há substituição.",
+   "pagina": "p. 31"
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Registrar no cadastro do parceiro vários papéis simultâneos (complementador, concorrente parcial, cliente, fornecedor) em vez de uma etiqueta única, e definir regras por papel.",
+   "processo": "Registrar os papéis múltiplos do parceiro na ficha do funil",
+   "citacao": "It’s counterproductive to typecast someone as just a customer or just a supplier or just a competitor or just a complementor.",
+   "aplicabilidade": "alta",
+   "porque": "O parceiro ERP que também vende consultoria é o caso típico: tratar só como concorrente destrói o canal, tratar só como aliado expõe a carteira da Wise.",
+   "pagina": "p. 41"
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Não eliminar do funil o prospect que sobrepõe parte do portfólio da Wise: registrar a sobreposição, avaliar o efeito complementar e decidir com regras de escopo.",
+   "processo": "Avaliar sobreposição e complementaridade do prospect no funil",
+   "citacao": "There’s a bias toward seeing every new player as a competitive threat.",
+   "aplicabilidade": "alta",
+   "porque": "Com 21 prospects e meta de 10 assinaturas, descartar por medo de concorrência parcial reduz o universo de parceiros viáveis.",
+   "pagina": "p. 44"
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Reunir parceiros que competem entre si no mesmo evento ou comunidade do Base Ativa, porque a presença conjunta cria o mercado para todos antes de dividir a demanda.",
+   "processo": "Montar o evento do Base Ativa com parceiros complementares e concorrentes entre si",
+   "citacao": "By locating close together, antique stores, though competitors in dividing up the market, become complementors in creating the market",
+   "aplicabilidade": "alta",
+   "porque": "A Expo+Indústria e os eventos da carteira funcionam como a rua de antiquários: mais fornecedores juntos atraem mais indústrias.",
+   "pagina": "p. 45"
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Construir a proposta de valor a partir de quanto a Wise adiciona ao jogo do parceiro (Base Ativa, indicações qualificadas, certificação) e não do que o parceiro dá à Wise.",
+   "processo": "Redigir a proposta de valor da Wise a partir do valor adicionado ao parceiro",
+   "citacao": "To calculate your added value, ask: if I enter this game, what do I add?",
+   "aplicabilidade": "alta",
+   "porque": "Evita o erro de olhar só o próprio ponto de vista e dá argumento para o parceiro aceitar contrapartidas e o ciclo de 12 semanas.",
+   "pagina": "p. 56"
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Posicionar a Prateleira de RFP como serviço de compra em nome da indústria: a Wise reúne fornecedores que oferecem condições melhores e dá a eles espaço de destaque sob a sua marca.",
+   "processo": "Formar a Prateleira de RFP como coalizão de compra em nome do cliente",
+   "citacao": "And the MacBains have prenegotiated very favorable rates for their readers by giving the providers a prominent listing in the magazine and use of the La Centrale brand name.",
+   "aplicabilidade": "alta",
+   "porque": "É o modelo da La Centrale: quem tem a audiência (aqui, a carteira da Wise) negocia condições com complementadores em troca de visibilidade.",
+   "pagina": "p. 27"
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Manter vários fornecedores por categoria na Prateleira, pois com muitos concorrentes nenhum tem valor adicionado alto e a indústria obtém melhores condições, o que fortalece a Wise como curadora.",
+   "processo": "Formar a Prateleira de RFP como coalizão de compra em nome do cliente",
+   "citacao": "As a result, no individual bidder has much added value, and that puts the coalition in an extremely powerful position.",
+   "aplicabilidade": "alta",
+   "porque": "Dá base para exigir contrapartidas e padrão de resposta dos fornecedores parceiros, mesmo com a Wise ainda pequena.",
+   "pagina": "p. 103"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Garantir ao menos duas ou três alternativas por categoria na Prateleira, porque o cliente industrial pode se recusar a avançar com uma única opção.",
+   "processo": "Formar a Prateleira de RFP como coalizão de compra em nome do cliente",
+   "citacao": "Sometimes they won’t be willing to do business with you unless you have a competitor, in which case you’d better bring one in.",
+   "aplicabilidade": "alta",
+   "porque": "Parceiros do mesmo segmento (dois ERPs, dois MES) são mais úteis juntos na Prateleira do que um parceiro exclusivo.",
+   "pagina": "p. 110"
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Não oferecer de graça a competição que a Wise cria: ao colocar um fornecedor na Prateleira ou em um RFP, pedir contrapartida em troca.",
+   "processo": "Negociar contrapartidas de entrada com o fornecedor parceiro",
+   "citacao": "Competition is valuable. Don’t give it away. Get paid to play.",
+   "aplicabilidade": "alta",
+   "porque": "Os pacotes com contrapartidas do programa são a forma institucional de fazer o fornecedor pagar para jogar.",
+   "pagina": "p. 91"
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Antes de aprovar um parceiro, perguntar quem ganha com a entrada dele (indústria, Wise, entidade, concorrente do parceiro) e se esse beneficiário pagaria para ele jogar.",
+   "processo": "Aplicar o checklist PARTS ao candidato antes da aprovação",
+   "citacao": "A prospective player should always ask Cicero’s question: Cui bono? Who stands to gain?",
+   "aplicabilidade": "media",
+   "porque": "Ajuda a fundamentar a decisão do Diretor sobre quais assinaturas valem as horas do Gerente.",
+   "pagina": "p. 90"
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Tratar os primeiros parceiros como âncoras com incentivo extra e prazo definido, porque sem massa crítica a comunidade não anda; depois dela, os demais entram sem subsídio.",
+   "processo": "Recrutar parceiros âncora com condições de fundador datadas",
+   "citacao": "The good news is that they don’t have to pay everyone to play; once there’s a critical mass of customers, others will follow of their own accord.",
+   "aplicabilidade": "alta",
+   "porque": "Com nenhum parceiro assinado e meta de 10 até 31/12/2026, o problema de ovo e galinha é real.",
+   "pagina": "p. 100"
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Exigir do candidato demonstração custosa de compromisso (primeira indicação como piloto, participação em evento, comissão por resultado) antes de dar nível e contrapartidas.",
+   "processo": "Exigir prova de compromisso do candidato antes da assinatura",
+   "citacao": "Ask other people to demonstrate their credibility to you",
+   "aplicabilidade": "alta",
+   "porque": "Separa quem assina por entusiasmo de quem tem carteira e disposição, o que protege as 12 horas mensais.",
+   "pagina": "p. 206"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Escrever no plano de ações conjuntas o objetivo próprio de cada parte e como ele se encaixa no da outra, em vez de uma lista genérica de atividades.",
+   "processo": "Definir objetivos complementares no plano de ações conjuntas",
+   "citacao": "Intel wants to increase the demand for processing capability; phone companies want to increase the demand for data transmission",
+   "aplicabilidade": "alta",
+   "porque": "Torna explícito por que o parceiro age: o interesse dele (vender mais software, manter a base) vira alavanca do plano.",
+   "pagina": "p. 29"
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Escolher o momento do primeiro reconhecimento ou benefício: nem antes de a relação existir nem tarde demais, alinhando-o à ativação na primeira indicação que virou reunião.",
+   "processo": "Agradecer a lealdade do parceiro em espécie no marco de ativação",
+   "citacao": "Don’t say thank you too quickly, or too slowly.",
+   "aplicabilidade": "alta",
+   "porque": "O onboarding de 30, 60 e 90 dias precisa de marcos de reconhecimento que reforcem a ativação sem virar desconto antecipado.",
+   "pagina": "p. 142"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Desenhar comissão e ranking sabendo que o parceiro responde racionalmente ao que é pago: se só o volume conta, haverá indicações ruins; amarrar a remuneração à nota de qualidade.",
+   "processo": "Calibrar incentivos do parceiro à qualidade da indicação",
+   "citacao": "But the salesman wasn’t irrational. He understood all too well what determined his bonus.",
+   "aplicabilidade": "alta",
+   "porque": "Os 40% da primeira mensalidade, sozinhos, premiam quantidade de indicações; a nota de qualidade corrige o incentivo.",
+   "pagina": "p. 69"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Limitar o que o parceiro captura ao que ele de fato adiciona: medir quantas indicações não existiriam sem ele, e usar isso para decidir nível e pagamento extra.",
+   "processo": "Calcular o valor adicionado do parceiro",
+   "citacao": "It’s hard to get more from a game than your added value.",
+   "aplicabilidade": "media",
+   "porque": "O livro dá o princípio, não o método de atribuição; a proteção de 180 dias e o link exclusivo precisam registrar a origem da indicação.",
+   "pagina": "p. 55"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Recompensar a lealdade em espécie (palco no evento, mentoria, certificação, selo, prioridade na Prateleira), que custa pouco à Wise e vale mais ao parceiro do que o mesmo valor em dinheiro.",
+   "processo": "Agradecer a lealdade do parceiro em espécie no marco de ativação",
+   "citacao": "Say thank you in kind, not cash.",
+   "aplicabilidade": "alta",
+   "porque": "Mentoria e certificação já fazem parte do programa e têm custo marginal baixo com 12 horas mensais de Gerente.",
+   "pagina": "p. 140"
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Definir o nível A, B ou C pelo valor adicionado individual da carteira do parceiro para a Wise e não pelo tamanho da categoria dele no mercado.",
+   "processo": "Calcular o valor adicionado do parceiro",
+   "citacao": "Don’t confuse the added value of Sony with the much larger added value of televisions",
+   "aplicabilidade": "alta",
+   "porque": "Um ERP grande mas substituível, e com carteira fora do ICP, tem valor adicional menor do que o setor dele sugere.",
+   "pagina": "p. 120"
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Rever o nível a cada trimestre porque o valor adicionado muda: quem passa a trazer mais deve ser remunerado em linha com o novo valor, e quem perde força deve subir ou descer.",
+   "processo": "Revisar o papel e o valor adicionado do parceiro a cada trimestre",
+   "citacao": "they have to be paid in line with their newfound added value",
+   "aplicabilidade": "alta",
+   "porque": "Sustenta a regra de níveis híbridos com revisão trimestral e o desligamento formal.",
+   "pagina": "p. 58"
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Dar ao nível Elite privilégios recorrentes que valem por 12 meses enquanto o status for mantido, em vez de recompensa pontual, para o parceiro concentrar a lealdade na Wise.",
+   "processo": "Agradecer a lealdade do parceiro em espécie no marco de ativação",
+   "citacao": "It’s not a onetime reward",
+   "aplicabilidade": "media",
+   "porque": "O exemplo é de companhias aéreas com clientes finais; adaptar a parceiros B2B exige limiar de nível alto o bastante para ser raro estar em dois programas rivais.",
+   "pagina": "p. 138"
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Manter tabela única de comissão e contrapartidas por nível, divulgada de antemão, e recusar exceções caso a caso: ficar com as mãos atadas dá mais força nas negociações.",
+   "processo": "Publicar as regras de cada nível e recusar exceções individuais",
+   "citacao": "Sometimes you have more power when your hands are tied.",
+   "aplicabilidade": "alta",
+   "porque": "Com um Gerente e 12 horas por mês, padronizar reduz negociação e impede que a concessão ao primeiro parceiro vire referência para todos.",
+   "pagina": "p. 165"
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Escrever na assinatura a regra de saída: como cada lado encerra, o que acontece com indicações em andamento e com a proteção de 180 dias, antes de qualquer conflito.",
+   "processo": "Definir a regra de saída no contrato de parceria",
+   "citacao": "When two partners set up a business or joint venture, they often include a rule specifying what to do if one of the partners wants to end the relationship.",
+   "aplicabilidade": "media",
+   "porque": "O livro trata de sócios de empresa; o princípio de combinar a saída no começo se aplica ao desligamento formal do portal.",
+   "pagina": "p. 62"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Reavaliar o papel de cada parceiro na Value Net a cada trimestre, porque um complementador pode virar concorrente com o tempo.",
+   "processo": "Revisar o papel e o valor adicionado do parceiro a cada trimestre",
+   "citacao": "Of course, a player can start out as Dr. Jekyll and turn into Mr. Hyde.",
+   "aplicabilidade": "alta",
+   "porque": "Um parceiro de software pode passar a vender consultoria; a revisão trimestral do portal é o ponto natural para detectar isso.",
+   "pagina": "p. 43"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Submeter ao jurídico as cláusulas de exclusividade, proteção de carteira e preço único antes de assinar, pois leis e interpretações mudam por país.",
+   "processo": "Validar cláusulas com o jurídico antes da assinatura",
+   "citacao": "But the laws change and interpretations vary, and we recommend that you consult with legal counsel to better understand which contracts to use and which to avoid.",
+   "aplicabilidade": "media",
+   "porque": "O livro fala de antitruste dos Estados Unidos; a recomendação de consultar o jurídico vale, mas as regras brasileiras são outras.",
+   "pagina": "p. 189"
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Cruzar a carteira da Wise com a do parceiro por meio de um intermediário neutro (o portal) que revela apenas os clientes em comum, sem expor as listas completas.",
+   "processo": "Cruzar carteiras por intermediário neutro que só revela coincidências",
+   "citacao": "Settlement escrows allow people to negotiate from behind a veil.",
+   "aplicabilidade": "media",
+   "porque": "É analogia: o livro descreve o mecanismo para negociar preço e não para dados de clientes.",
+   "pagina": "p. 211"
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Pedir à Wise e ao parceiro que avaliem a relevância de cada indicação e devolver esse retorno ao parceiro, o que melhora a qualidade das próximas e cria um ativo que o concorrente não copia.",
+   "processo": "Coletar feedback de relevância sobre cada indicação",
+   "citacao": "It regularly asks clients to evaluate each story they’re sent on a “not relevant” to “somewhat relevant” to “very relevant” scale.",
+   "aplicabilidade": "alta",
+   "porque": "Dá forma de ciclo de aprendizado à nota de qualidade das indicações.",
+   "pagina": "p. 149"
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Usar a Value Net e o PARTS como linguagem comum entre o Gerente de Parcerias e o Diretor que aprova assinaturas, com ficha padrão por candidato.",
+   "processo": "Aplicar o checklist PARTS ao candidato antes da aprovação",
+   "citacao": "It gives you and your colleagues a common language for discussing alternatives.",
+   "aplicabilidade": "alta",
+   "porque": "Com uma pessoa em 12 horas por mês, uma ficha curta e padronizada acelera a decisão do Diretor.",
+   "pagina": "p. 20"
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Mapear a Value Net do candidato a parceiro e da Wise",
+   "descricao": "Desenhar o mapa com clientes e fornecedores na vertical e concorrentes e complementadores na horizontal, partindo da posição da empresa e depois das posições do cliente e do complementador.",
+   "gatilho": "Novo prospect entra no funil de recrutamento",
+   "etapas": [
+    "Listar clientes (indústrias em comum) e fornecedores do candidato",
+    "Listar concorrentes e complementadores usando o teste do cliente",
+    "Marcar onde o candidato tem papéis múltiplos",
+    "Repetir a partir da posição da indústria e do candidato",
+    "Registrar onde há cooperação e onde há disputa"
+   ],
+   "resultados": [
+    "Candidato classificado como complementador, concorrente parcial ou ambos",
+    "Regras de escopo propostas",
+    "Descarte justificado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor (aprova)"
+   ],
+   "metricas": [
+    "Prospects com Value Net preenchida",
+    "Papéis múltiplos registrados"
+   ],
+   "citacao": "To understand the game you’re in, start by going around your Value Net.",
+   "pagina": "p. 35"
+  },
+  {
+   "nome": "Classificar o papel do parceiro pelo teste do cliente",
+   "descricao": "Perguntar, na posição do cliente, se o produto do outro torna o seu mais ou menos valioso, e repetir pelo lado do fornecedor.",
+   "gatilho": "Prospect com ofertas que podem se sobrepor às da Wise",
+   "etapas": [
+    "Escrever o problema do cliente que a Wise e o parceiro resolvem",
+    "Perguntar o que mais o cliente compraria que valorize o produto",
+    "Perguntar o que o cliente compraria que o desvalorize",
+    "Registrar o resultado por escopo, não por empresa"
+   ],
+   "resultados": [
+    "Complementador",
+    "Concorrente parcial",
+    "Ambos, com regras por escopo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Prospects classificados por escopo"
+   ],
+   "citacao": "Customers care about the end result, not about whether the company that gives them what they want happens to belong to one industry or another.",
+   "pagina": "p. 31"
+  },
+  {
+   "nome": "Calcular o valor adicionado do parceiro",
+   "descricao": "Comparar o tamanho do bolo com o parceiro no jogo e sem ele, olhando também o quanto os outros perdem sem o parceiro e não só o que ele perde sem eles.",
+   "gatilho": "Definição de nível e revisão trimestral",
+   "etapas": [
+    "Estimar a receita de indicações com o parceiro",
+    "Estimar o que a Wise e os demais parceiros fariam sem ele",
+    "Calcular a diferença",
+    "Checar se o parceiro está sendo confundido com a categoria dele",
+    "Definir nível e contrapartidas"
+   ],
+   "resultados": [
+    "Nível A, B ou C",
+    "Contrapartidas proporcionais",
+    "Sem proposta, se o valor adicionado for nulo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Valor adicionado do parceiro"
+   ],
+   "citacao": "Take the size of the pie when you and everyone else are in the game; then see how big a pie the other players can create without you.",
+   "pagina": "p. 55"
+  },
+  {
+   "nome": "Negociar contrapartidas de entrada com o fornecedor parceiro",
+   "descricao": "Pedir algo em troca de dar competição ou acesso: contribuição para custos, contrato garantido, última oferta, acesso a informação, interlocutor adequado e outros negócios.",
+   "gatilho": "Fornecedor parceiro pede entrada na Prateleira de RFP",
+   "etapas": [
+    "Identificar quem ganha com a entrada do fornecedor",
+    "Listar contrapartidas possíveis além de dinheiro",
+    "Propor pacote conforme o nível",
+    "Registrar o combinado no contrato",
+    "Revisar no trimestre"
+   ],
+   "resultados": [
+    "Pacote de contrapartidas assinado",
+    "Entrada recusada se ninguém pagar"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Contrapartidas entregues por parceiro"
+   ],
+   "citacao": "Competition is valuable. Don’t give it away. Get paid to play.",
+   "pagina": "p. 91"
+  },
+  {
+   "nome": "Formar a Prateleira de RFP como coalizão de compra em nome do cliente",
+   "descricao": "Atrair muitos fornecedores para disputar a carteira organizada pela Wise, reduzir o valor adicionado de cada um e dar a eles espaço em troca de condições melhores para a indústria.",
+   "gatilho": "Indústria da carteira Wise com demanda de software ou serviço",
+   "etapas": [
+    "Definir categoria e requisitos com a indústria",
+    "Convidar fornecedores parceiros, no mínimo dois por categoria",
+    "Comparar propostas sob padrão único",
+    "Negociar condições em nome da indústria",
+    "Retornar nota de qualidade ao fornecedor"
+   ],
+   "resultados": [
+    "Indústria escolhe fornecedor com melhores condições",
+    "Fornecedor entra com contrapartida"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Consultor Wise do cliente"
+   ],
+   "metricas": [
+    "Fornecedores por categoria",
+    "Propostas recebidas por RFP"
+   ],
+   "citacao": "Form a buying coalition on behalf of your customers.",
+   "pagina": "p. 109"
+  },
+  {
+   "nome": "Agradecer a lealdade do parceiro em espécie no marco de ativação",
+   "descricao": "Reconhecer o parceiro com bens que a Wise tem de sobra e que ele valoriza, avisando antes como será o reconhecimento e dando mais ao melhor parceiro.",
+   "gatilho": "Parceiro cumpre o marco de ativação do onboarding",
+   "etapas": [
+    "Publicar a escada de reconhecimento por nível",
+    "Registrar o marco cumprido",
+    "Entregar reconhecimento em espécie",
+    "Reservar o melhor benefício ao parceiro de maior valor",
+    "Reavaliar no trimestre"
+   ],
+   "resultados": [
+    "Parceiro reconhecido",
+    "Benefício recorrente para o nível Elite"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Custo em espécie dividido pelo valor percebido"
+   ],
+   "citacao": "Save the best thank-you for your best customers.",
+   "pagina": "p. 141"
+  },
+  {
+   "nome": "Revisar o papel e o valor adicionado do parceiro a cada trimestre",
+   "descricao": "Reexaminar cada parceiro com a Value Net e o valor adicionado, porque os papéis e o poder mudam ao longo do tempo.",
+   "gatilho": "Fim de trimestre",
+   "etapas": [
+    "Atualizar a Value Net do parceiro",
+    "Recalcular valor adicionado",
+    "Checar se virou concorrente em algum escopo",
+    "Subir, manter ou rebaixar o nível",
+    "Se necessário, iniciar desligamento formal"
+   ],
+   "resultados": [
+    "Nível confirmado, alterado ou desligamento"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Parceiros com revisão em dia"
+   ],
+   "citacao": "Of course, a player can start out as Dr. Jekyll and turn into Mr. Hyde.",
+   "pagina": "p. 43"
+  },
+  {
+   "nome": "Aplicar o checklist PARTS ao candidato antes da aprovação",
+   "descricao": "Responder, em ficha curta, às perguntas de Jogadores, Valores adicionados, Regras, Táticas e Escopo para cada candidato, antes de o Diretor aprovar a assinatura.",
+   "gatilho": "Candidato chega à etapa de proposta",
+   "etapas": [
+    "Jogadores: Value Net e quem ganha com a entrada",
+    "Valores adicionados: o dele e o da Wise",
+    "Regras: o que protege cada lado",
+    "Táticas: como o parceiro percebe o programa",
+    "Escopo: com que outros jogos o parceiro se liga (carteiras em comum)"
+   ],
+   "resultados": [
+    "Ficha aprovada ou devolvida"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Candidatos com ficha PARTS completa"
+   ],
+   "citacao": "Have you written out the Value Net for your organization, taking care to make the list of players as complete as possible?",
+   "pagina": "p. 253"
+  },
+  {
+   "nome": "Coletar feedback de relevância sobre cada indicação",
+   "descricao": "Pedir uma nota de relevância a cada item entregue e usá-la para melhorar as próximas entregas, criando uma vantagem que o concorrente não tem como copiar.",
+   "gatilho": "Indicação do parceiro chega à Wise",
+   "etapas": [
+    "Registrar a indicação com origem pelo link exclusivo",
+    "Atribuir nota de qualidade após a reunião",
+    "Devolver a nota ao parceiro com explicação",
+    "Ajustar critério de indicação com o parceiro"
+   ],
+   "resultados": [
+    "Parceiro indica melhor",
+    "Base de feedback exclusiva da Wise"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Consultor Wise"
+   ],
+   "metricas": [
+    "Taxa de indicações bem avaliadas"
+   ],
+   "citacao": "Collect customer feedback to customize your product",
+   "pagina": "p. 152"
+  },
+  {
+   "nome": "Definir objetivos complementares no plano de ações conjuntas",
+   "descricao": "Escrever o que cada parte quer do jogo e como os objetivos se encontram, como Intel, telefônicas e Compaq no caso do ProShare.",
+   "gatilho": "Parceiro assinado entra em onboarding",
+   "etapas": [
+    "Escrever o objetivo da Wise",
+    "Escrever o objetivo do parceiro",
+    "Achar o ponto em que se reforçam",
+    "Transformar em ações com prazo",
+    "Revisar a cada 30, 60 e 90 dias"
+   ],
+   "resultados": [
+    "Plano de ações conjuntas acordado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Ações do plano concluídas no prazo"
+   ],
+   "citacao": "Intel wants to increase the demand for processing capability; phone companies want to increase the demand for data transmission",
+   "pagina": "p. 29"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Valor adicionado do parceiro",
+   "definicao": "Tamanho do bolo com o parceiro menos o tamanho do bolo sem ele, medido em receita de clientes e indicações que não existiriam sem ele.",
+   "citacao": "Take the size of the pie when you and everyone else are in the game; then see how big a pie the other players can create without you.",
+   "pagina": "p. 55"
+  },
+  {
+   "nome": "Fornecedores concorrentes por categoria",
+   "definicao": "Número de fornecedores parceiros disputando cada categoria da Prateleira; quanto maior, menor o valor adicionado de cada um.",
+   "citacao": "As a result, no individual bidder has much added value, and that puts the coalition in an extremely powerful position.",
+   "pagina": "p. 103"
+  },
+  {
+   "nome": "Custo da recompensa sobre valor percebido",
+   "definicao": "Custo para a Wise de um reconhecimento em espécie dividido pelo valor que o parceiro atribui a ele.",
+   "citacao": "Then American bought $500 of loyalty at a cost of $20.",
+   "pagina": "p. 135"
+  },
+  {
+   "nome": "Relevância das indicações",
+   "definicao": "Parcela das indicações que a Wise avalia como muito relevantes, acompanhada ao longo do tempo para cada parceiro.",
+   "citacao": "A typical client might start by evaluating 50 percent of the stories as very relevant. Individual, Inc. can get the score up to 90 percent within a month.",
+   "pagina": "p. 149"
+  },
+  {
+   "nome": "Tamanho do bolo criado e fatia capturada",
+   "definicao": "Receita total gerada pelo programa e parcela que fica com a Wise e com o parceiro.",
+   "citacao": "Looking for ways to expand the pie, while keeping an eye on capturing the pie, helps promote a benevolent attitude toward other players",
+   "pagina": "p. 254"
+  },
+  {
+   "nome": "Jogadores em comum entre carteiras",
+   "definicao": "Quantidade de clientes que aparecem na carteira da Wise e na do parceiro, que indicam jogos ligados.",
+   "citacao": "Anytime there’s a player in your game who’s also a player in another game, the two games are potentially linked.",
+   "pagina": "p. 228"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Recusar parceiro que também ajuda um concorrente da Wise pode custar mais à própria rede do que o risco evitado, como o Citibank que ficou fora da rede de caixas eletrônicos.",
+   "citacao": "It didn’t want to help Dr. Jekyll if that also meant helping Mr. Hyde.",
+   "pagina": "p. 43"
+  },
+  {
+   "alerta": "Cooperar sem proteger o próprio interesse cria um bolo que a Wise não captura: o programa precisa de regras de atribuição e proteção.",
+   "citacao": "you can cooperate without having to ignore your self-interest.",
+   "pagina": "p. 18"
+  },
+  {
+   "alerta": "Compartilhar conhecimento que o parceiro leva ao concorrente: a Wise pode ensinar o Base Ativa e ver o parceiro usar o método com outra consultoria.",
+   "citacao": "He made a larger pie that others could eat.",
+   "pagina": "p. 154"
+  },
+  {
+   "alerta": "Depender de quem não compartilha seus incentivos: a Wise não deve contar só com o parceiro para criar o complemento crítico, como a comunidade ativa.",
+   "citacao": "relying too much on other players who didn’t share 3DO’s incentives.",
+   "pagina": "p. 108"
+  },
+  {
+   "alerta": "Abrir o programa e terceirizar ao mesmo tempo o relacionamento com a indústria pode fazer a Wise perder o controle da carteira, como aconteceu com a IBM.",
+   "citacao": "But outsourcing together with opening the architecture was a mistake.",
+   "pagina": "p. 156"
+  },
+  {
+   "alerta": "A concessão dada ao primeiro parceiro vira referência para os demais: datar condições de fundador e não prometer exceções.",
+   "citacao": "Competitors will also use the low price you helped create as a benchmark.",
+   "pagina": "p. 96"
+  },
+  {
+   "alerta": "Tornar explícita uma ameaça muda a percepção e a relação não volta ao que era: comunicar desligamento por critérios publicados, não por ameaças.",
+   "citacao": "Even if a threat is already implicit, making it explicit changes perceptions.",
+   "pagina": "p. 215"
+  },
+  {
+   "alerta": "As regras do programa podem ser contornadas por parceiros com mais poder: não assumir que a proteção de 180 dias será obedecida sozinha.",
+   "citacao": "don’t assume your rules will rule",
+   "pagina": "p. 191"
+  }
+ ]
+}

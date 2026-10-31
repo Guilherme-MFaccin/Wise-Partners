@@ -1,0 +1,637 @@
+{
+ "livro": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You",
+ "autores": "Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary",
+ "slug": "platform-revolution",
+ "tese": "Plataformas criam valor ao orquestrar interações entre produtores e consumidores externos, e o valor vem dos efeitos de rede, não de ativos próprios. O desenho começa por uma única interação central, escalada com curadoria que contém os efeitos de rede negativos, lançada por estratégias que resolvem o ovo e a galinha, monetizada sem atritar a rede e sustentada por governança justa e métricas de interação bem-sucedida, não de cadastro.",
+ "recomendacoes": [
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Definir a interação central do portal em uma frase: o cliente industrial encontra o fornecedor parceiro certo e a Wise registra o resultado. Funcionalidade que não sustenta essa interação espera.",
+   "processo": "Definir interação central do portal",
+   "citacao": "successful platforms begin with a single core interaction that consistently generates high value for users.",
+   "pagina": "p. 48",
+   "aplicabilidade": "alta",
+   "porque": "O portal já reúne funil, indicações, comissões, ranking e tarefas; sem uma interação central ele vira um conjunto de módulos sem rede."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Especificar a unidade de valor da Prateleira de RFP (ficha verificada do fornecedor, com casos em indústrias parecidas) e o que separa uma ficha boa de uma fraca, antes de abrir o cadastro.",
+   "processo": "Definir unidade de valor da prateleira",
+   "citacao": "what differentiates a high-quality unit from a low-quality one are all critical issues",
+   "pagina": "p. 49",
+   "aplicabilidade": "alta",
+   "porque": "Quem produz a ficha é o parceiro, não a Wise; sem padrão de qualidade explícito a prateleira enche de fichas que o cliente não usa."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Tratar o cruzamento entre demanda do cliente e fornecedor como o filtro do portal: a Wise decide quem aparece para quem, com critério de aderência escrito e revisável.",
+   "processo": "Filtrar fornecedores por aderência à demanda do cliente",
+   "citacao": "A well-designed filter ensures that platform users receive only value units that are relevant and valuable to them",
+   "pagina": "p. 47",
+   "aplicabilidade": "alta",
+   "porque": "Com poucos parceiros no início o filtro pode ser manual e feito pela Gerente de Parcerias, mas o critério precisa existir desde já para virar regra no portal depois."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Lançar em um micromercado: um segmento industrial ou uma região onde já exista um parceiro com comunidade, em vez de recrutar 10 parceiros dispersos que nunca vão interagir entre si.",
+   "processo": "Lançar o programa em um micromercado",
+   "citacao": "Focusing on a micromarket reduces the critical mass required to start interactions and makes matchmaking much easier.",
+   "pagina": "p. 99",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês e nenhum parceiro assinado, concentrar esforço em um recorte pequeno é o único modo de chegar a interação real antes de 31/12/2026."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Recrutar parceiros que tragam a própria carteira: o parceiro é o produtor que puxa o consumidor para a rede, e o Base Ativa deve servir primeiro a ele (comunidade e evento da carteira dele).",
+   "processo": "Recrutar parceiro com carteira ativa",
+   "citacao": "Design your platform to attract producers, who can induce their customers to become users of the platform.",
+   "pagina": "p. 96",
+   "aplicabilidade": "alta",
+   "porque": "É exatamente a lógica do programa (o parceiro não é ICP, a carteira dele é) e o livro a nomeia como estratégia de lançamento para quem tem uma ferramenta que atende o produtor."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Dar ao parceiro prioridade e proteção sobre os clientes que ele próprio indica, e só sobre eles; a proteção de 180 dias é o incentivo para convidar cedo.",
+   "processo": "Registrar proteção do cliente indicado",
+   "citacao": "Bring us your customers, and you will have the last word in any bidding competition",
+   "pagina": "p. 97",
+   "aplicabilidade": "alta",
+   "porque": "O caso Mercateo é uma plataforma B2B de suprimentos industriais que usa vantagem limitada ao cliente trazido, o mesmo desenho da proteção de 180 dias."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Entregar ao parceiro uma ferramenta útil sozinha, antes de existir rede (o ciclo de 12 semanas do Base Ativa com evento), e só então conectar a carteira dele à prateleira e aos clientes da Wise.",
+   "processo": "Entregar ferramenta de valor individual ao parceiro",
+   "citacao": "OpenTable solved the problem by first distributing booking management software that restaurants could use to manage their seating inventory.",
+   "pagina": "p. 96",
+   "aplicabilidade": "alta",
+   "porque": "O Base Ativa tem valor mesmo com zero rede, o que resolve o problema do ovo e da galinha do portal sem depender de volume."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "A Wise age como primeira produtora: cadastrar e verificar ela mesma as primeiras fichas de fornecedores e casos, fixando o padrão de qualidade antes de abrir o portal aos parceiros.",
+   "processo": "Semear a prateleira com fichas curadas pela Wise",
+   "citacao": "In many cases, the platform company takes the task of value creation upon itself by acting as the first producer.",
+   "pagina": "p. 93",
+   "aplicabilidade": "alta",
+   "porque": "Zero parceiros assinados significa que a prateleira não se alimenta sozinha; semear com poucas fichas boas define a cultura de qualidade."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Usar o primeiro cliente fechado por indicação como caso demonstrativo para atrair os parceiros seguintes, em vez de vender a visão de plataforma antes de existir prova.",
+   "processo": "Documentar caso demonstrativo de indicação fechada",
+   "citacao": "Use a non-platform demonstration project to model success, thereby attracting both users and producers to a new platform erected on your project’s proven infrastructure.",
+   "pagina": "p. 91",
+   "aplicabilidade": "alta",
+   "porque": "A meta de pelo menos 1 cliente fechado vindo de indicação é o coelho a ser seguido; a consultoria da Wise já é o pipeline que sustenta o caso."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Reservar condições especiais a poucos parceiros âncora (Elite), escolhidos pelo potencial da carteira, porque a presença deles decide se o programa atrai os demais.",
+   "processo": "Selecionar parceiros âncora para o nível Elite",
+   "citacao": "In many cases, there’s a single group of users who are so important that their participation can make or break the success of the platform.",
+   "pagina": "p. 94",
+   "aplicabilidade": "alta",
+   "porque": "Os níveis A/B/C por potencial de carteira já seguem essa lógica; o livro justifica tratar diferente quem puxa os outros."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Medir adesão por comprometimento e uso, não por assinatura: o parceiro só conta como ativo na primeira indicação no ICP que virou reunião.",
+   "processo": "Ativar parceiro na primeira indicação",
+   "citacao": "user commitment was more important than user acquisition.",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "Confirma o critério de ativação do onboarding de 30, 60 e 90 dias e a ideia de que contrato assinado não é sucesso."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Adotar liquidez, qualidade do matching e confiança como as três métricas de saúde do portal na fase de lançamento, em vez de receita ou número de cadastros.",
+   "processo": "Medir saúde do portal no lançamento",
+   "citacao": "there are three main metrics: liquidity, matching quality, and trust.",
+   "pagina": "p. 177",
+   "aplicabilidade": "alta",
+   "porque": "São poucas, aplicáveis a uma prateleira pequena e mensuráveis pelo próprio portal (ver bloco de métricas)."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Limitar o painel a poucas métricas acionáveis; uma pessoa com 12 horas por mês não sustenta dezenas de indicadores.",
+   "processo": "Definir painel mínimo de métricas do programa",
+   "citacao": "understand that the more you measure, the less prioritized you’ll be.",
+   "pagina": "p. 187",
+   "aplicabilidade": "alta",
+   "porque": "Casa com a capacidade da equipe e com as regras do portal de painéis que respondem a uma pergunta por tela."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Equilibrar entrada fácil com curadoria: critérios explícitos para entrar e para permanecer na prateleira, aplicados a todos do mesmo modo.",
+   "processo": "Definir critérios de entrada e permanência na prateleira",
+   "citacao": "frictionless entry must be balanced through effective curation.",
+   "pagina": "p. 34",
+   "aplicabilidade": "alta",
+   "porque": "A Wise recomenda fornecedores a clientes dela; ficha ruim queima a reputação da consultoria, então a entrada deve ser filtrada."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Limitar o número de fornecedores por categoria (ERP, CRM, MES, SST e outras) para o cliente encontrar o certo; excesso de fornecedores reduz o valor da prateleira.",
+   "processo": "Limitar fornecedores por categoria da prateleira",
+   "citacao": "But when the list of suppliers grows too great, it becomes more difficult for appropriate providers and customers to find one another.",
+   "pagina": "p. 37",
+   "aplicabilidade": "alta",
+   "porque": "O exemplo do livro (Covisint) é B2B de tecnologia com fornecedores concorrentes, parecido com a prateleira de softwares para indústria."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Curar em duas pontas: triagem de quem entra e retorno contínuo a quem já está dentro, usando reputação (nota de qualidade das indicações) como fator de permanência.",
+   "processo": "Curar entrada e desempenho do fornecedor parceiro",
+   "citacao": "Screening decides who to let in, while feedback encourages desirable behavior on the part of those who have been granted entry.",
+   "pagina": "p. 144",
+   "aplicabilidade": "alta",
+   "porque": "A nota de qualidade da indicação e a revisão trimestral de níveis já são o mecanismo de feedback; falta a triagem de entrada."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Publicar os critérios dos níveis A/B/C e da revisão trimestral: benefício diferenciado é aceito quando todos sabem como se qualificar.",
+   "processo": "Publicar critérios de nível e revisão trimestral",
+   "citacao": "It’s okay to offer differential benefits to partners with differentiated assets. Just make sure everyone understands how to qualify.",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "Valida níveis por potencial de carteira e evita a percepção de favorecimento que corrói a confiança do parceiro menor."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Escrever o regulamento do programa em três partes: quem participa, como se divide o valor (comissão, proteção, contrapartidas) e como se resolvem conflitos de atribuição de indicação.",
+   "processo": "Escrever regulamento do programa",
+   "citacao": "Governance is the set of rules concerning who gets to participate in an ecosystem, how to divide the value, and how to resolve conflicts.",
+   "pagina": "p. 150",
+   "aplicabilidade": "alta",
+   "porque": "Dá a estrutura do contrato e do regulamento que o Diretor aprova, e deixa explícito o rito de disputa que o portal precisa suportar."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Comunicar toda mudança de regra (nível, comissão, ranking) com aviso prévio, sem prometer que nada muda.",
+   "processo": "Comunicar mudança de regra com aviso prévio",
+   "citacao": "Do not promise to not change the platform. Do promise early notice.",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "O portal tem comunicados e revisão trimestral; o aviso prévio vira etapa obrigatória antes de qualquer mudança de regra."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Prever sanções graduadas (aviso, rebaixamento de nível, desligamento formal) com canal simples de contestação, e não só o desligamento.",
+   "processo": "Aplicar sanção graduada e desligamento formal",
+   "citacao": "Graduated sanctions apply to those who violate community rules.",
+   "pagina": "p. 160",
+   "aplicabilidade": "alta",
+   "porque": "O portal já prevê desligamento formal; o livro (via Ostrom) pede degraus antes dele e disputa de baixo custo."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Auditar a prateleira a cada trimestre pelas quatro causas de falha de mercado: assimetria de informação, externalidades, poder de monopólio e risco.",
+   "processo": "Auditar falhas de mercado da prateleira por trimestre",
+   "citacao": "In general, there are four main causes of market failures: information asymmetry, externalities, monopoly power, and risk.",
+   "pagina": "p. 154",
+   "aplicabilidade": "alta",
+   "porque": "Dá um roteiro simples para a revisão trimestral (por exemplo, um fornecedor dominante em uma categoria, ou cliente sem informação para comparar)."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Não cobrar parceiros por entrada nem por listagem no lançamento; capturar valor só depois de a indicação ou a RFP gerar resultado satisfatório para os dois lados.",
+   "processo": "Definir regra de captura de valor do programa",
+   "citacao": "You never take first money.",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "A receita da Wise vem da consultoria vendida ao cliente indicado, não de taxa de parceiro; cobrar entrada atrasaria a rede."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Combinar comissão (fortuna) com ranking e reconhecimento (fama) e eventos da comunidade (diversão), em vez de depender só dos 40% da primeira mensalidade.",
+   "processo": "Desenhar incentivos não monetários do programa",
+   "citacao": "the trifecta of human motivations that may be summarized as fun, fame, and fortune.",
+   "pagina": "p. 163",
+   "aplicabilidade": "alta",
+   "porque": "Ranking, níveis e Base Ativa já existem no portal; o livro os trata como moeda social que sustenta a participação."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Desenhar o portal desde o início para controlar a fonte de receita: toda indicação passa pelo link exclusivo e pelo registro, porque a Wise só captura valor onde enxerga a interação.",
+   "processo": "Garantir registro de toda indicação no portal",
+   "citacao": "From the time of launch, a platform should be architected in a manner that affords it control over possible sources of monetization.",
+   "pagina": "p. 122",
+   "aplicabilidade": "alta",
+   "porque": "Comissão e proteção de 180 dias dependem de registro prévio; indicação feita por fora gera disputa e perda de dado."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Capturar no portal toda interação entre parceiro e cliente indicado (registro, reunião, proposta), pois o incentivo natural é combinar fora da plataforma.",
+   "processo": "Capturar interações de indicação no portal",
+   "citacao": "A more serious and persistent challenge is to capture on the platform itself all the interactions facilitated by the platform.",
+   "pagina": "p. 113",
+   "aplicabilidade": "media",
+   "porque": "O livro trata de taxa de transação; no caso Wise o vazamento é a indicação fechada sem registro, risco menor mas real."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Manter o núcleo do portal pequeno (funil, indicação, prateleira, comissão) e empurrar o que serve a poucos, como a área de tarefas estilo CRM, para a borda, adiando até haver uso real.",
+   "processo": "Priorizar funcionalidades do núcleo do portal",
+   "citacao": "Only the highest-volume, highest-value features that cut across apps should become part of the core platform.",
+   "pagina": "p. 58",
+   "aplicabilidade": "alta",
+   "porque": "A área de tarefas ainda está em desenho e a equipe é de uma pessoa; o princípio ponta a ponta evita inchar o núcleo antes de ter parceiros."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Incluir barra de completude do perfil do parceiro e da carteira no onboarding de 30, 60 e 90 dias, porque cruzamento de carteiras e matching dependem de dado preenchido.",
+   "processo": "Medir completude de perfil e carteira no onboarding",
+   "citacao": "LinkedIn famously used a progress bar to encourage users to progressively submit more information about themselves, thereby completing their personal data profiles.",
+   "pagina": "p. 53",
+   "aplicabilidade": "alta",
+   "porque": "O cruzamento de carteiras só funciona com dados de qualidade; o livro pede uma estratégia explícita de aquisição de dados."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Usar a demanda de clientes sem fornecedor na prateleira como sinal de recrutamento: categoria pedida e sem cobertura vira lista de parceiros a prospectar.",
+   "processo": "Recrutar fornecedor a partir de demanda sem resposta",
+   "citacao": "solution providers can find clients by identifying unsuccessful user searches, reflecting the existence of potential clients in need of business solutions",
+   "pagina": "p. 202",
+   "aplicabilidade": "alta",
+   "porque": "Liga o funil de recrutamento à demanda real dos clientes industriais e dá motivo concreto para a abordagem de cada prospect."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Manter com a Wise a relação e os dados do cliente industrial; o parceiro é extensão da prateleira, não dono da conta.",
+   "processo": "Reter relação com cliente indicado",
+   "citacao": "This is an instance in which the platform manager (SAP) is in danger of losing control of the customer connection to an extension developer (ADP).",
+   "pagina": "p. 148",
+   "aplicabilidade": "alta",
+   "porque": "Um parceiro forte pode assumir a relação com o cliente que a Wise abriu; o caso SAP e ADP mostra o risco quando o parceiro tem carteira própria."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Definir interação central do portal",
+   "descricao": "O livro manda começar o desenho pela interação central: participantes, unidade de valor e filtro. Outras interações entram depois, em camadas.",
+   "gatilho": "Antes de desenhar ou priorizar telas do portal",
+   "etapas": [
+    "Nomear os dois papéis (parceiro fornecedor e cliente industrial) e quem pode trocar de lado",
+    "Definir a unidade de valor (ficha do fornecedor e demanda do cliente)",
+    "Definir o filtro que decide quem vê quem",
+    "Escrever a interação central em uma frase e testar com um caso real",
+    "Listar interações secundárias e adiá-las"
+   ],
+   "resultados": [
+    "Interação central aprovada",
+    "Lista de funcionalidades fora do núcleo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Liquidez",
+    "Qualidade do matching"
+   ],
+   "citacao": "The core interaction involves three key components: the participants, the value unit, and the filter.",
+   "pagina": "p. 45"
+  },
+  {
+   "nome": "Lançar o programa em um micromercado",
+   "descricao": "Resolve o problema do ovo e da galinha combinando micromercado, semeadura e evangelização pelo produtor, em vez de abrir aos dois lados ao mesmo tempo.",
+   "gatilho": "Início da fase de recrutamento",
+   "etapas": [
+    "Escolher um recorte (segmento industrial ou região) onde já exista interação",
+    "Semear a prateleira com fichas curadas pela Wise",
+    "Recrutar o primeiro parceiro com carteira e rodar o Base Ativa com ele",
+    "Registrar o primeiro cliente fechado como caso demonstrativo",
+    "Conectar o segundo recorte ao primeiro, sem recomeçar do zero"
+   ],
+   "resultados": [
+    "Primeira rede ativa",
+    "Caso demonstrativo documentado",
+    "Expansão para novo recorte"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro âncora"
+   ],
+   "metricas": [
+    "Liquidez",
+    "Parceiros ativos",
+    "Razão entre parceiros e clientes ativos"
+   ],
+   "citacao": "These three techniques can be used individually or together, and a variety of combinations can work effectively under the right circumstances.",
+   "pagina": "p. 92"
+  },
+  {
+   "nome": "Curar entrada e desempenho do fornecedor parceiro",
+   "descricao": "Curadoria é triagem na entrada mais retorno contínuo a quem entrou; reputação dá base para ambos, e o trabalho manual é trocado aos poucos por sinais automáticos.",
+   "gatilho": "Candidato a fornecedor da prateleira ou fim de trimestre",
+   "etapas": [
+    "Aplicar critérios de entrada iguais para todos",
+    "Verificar a ficha do fornecedor",
+    "Registrar nota de qualidade após cada indicação ou RFP",
+    "Dar retorno ao fornecedor sobre desempenho",
+    "Rebaixar ou desligar de modo graduado quando a nota cair",
+    "Automatizar a regra quando houver volume"
+   ],
+   "resultados": [
+    "Fornecedor admitido",
+    "Fornecedor mantido, rebaixado ou desligado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Confiança",
+    "Nota de qualidade",
+    "Falha de interação"
+   ],
+   "citacao": "Curation usually takes the form of screening and feedback at critical points of access to the platform.",
+   "pagina": "p. 144"
+  },
+  {
+   "nome": "Ativar parceiro até a primeira interação bem-sucedida",
+   "descricao": "Adesão se mede por comprometimento e uso; o esforço de marketing da plataforma vai de recrutar para ajudar o novo membro a formar as primeiras conexões.",
+   "gatilho": "Parceiro assina e entra no onboarding",
+   "etapas": [
+    "Pedir dado de perfil e de carteira de modo progressivo",
+    "Ajudar o parceiro a fazer a primeira indicação válida",
+    "Acompanhar a ativação até a reunião",
+    "Dar retorno rápido sobre o resultado",
+    "Registrar quem não ativou e o motivo"
+   ],
+   "resultados": [
+    "Parceiro ativo",
+    "Parceiro em risco de inatividade"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Taxa de ativação",
+    "Tempo até a primeira indicação"
+   ],
+   "citacao": "for a platform business, user commitment and active usage, not sign-ups or acquisitions, are the true indicators of customer adoption.",
+   "pagina": "p. 87"
+  },
+  {
+   "nome": "Definir regra de captura de valor do programa",
+   "descricao": "Antes de cobrar ou pagar, o livro pede mapear o excesso de valor criado, decidir quem paga, evitar cobrar o que era gratuito e ligar o valor ao resultado.",
+   "gatilho": "Antes de fixar pacotes, contrapartidas e comissões",
+   "etapas": [
+    "Mapear as quatro formas de valor que o portal cria",
+    "Decidir quem paga e quem é subsidiado",
+    "Evitar cobrar por algo que já era gratuito",
+    "Vincular pagamento a resultado concluído",
+    "Sinalizar posição paga na prateleira",
+    "Revisar a regra com dado de uso"
+   ],
+   "resultados": [
+    "Regra de comissão e pacotes aprovada",
+    "Posições pagas sinalizadas"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Captura de interação",
+    "Participação recorrente"
+   ],
+   "citacao": "How can we generate revenues without reducing our positive network effects?",
+   "pagina": "p. 113"
+  },
+  {
+   "nome": "Medir saúde do portal por estágio",
+   "descricao": "As métricas mudam com o ciclo de vida: lançamento (liquidez, matching, confiança), crescimento (retenção, conversão, equilíbrio entre lados) e maturidade (inovação e ameaças).",
+   "gatilho": "Revisão mensal do programa e mudança de estágio",
+   "etapas": [
+    "Escolher uma ou duas métricas centrais para o estágio atual",
+    "Definir cada métrica de forma operacional e auditável",
+    "Calibrar limiares correlacionando uso inicial com permanência",
+    "Rever métricas ao mudar de estágio",
+    "Descartar indicadores de vaidade"
+   ],
+   "resultados": [
+    "Painel mínimo do programa",
+    "Decisão de mudar de estágio"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Liquidez",
+    "Qualidade do matching",
+    "Confiança"
+   ],
+   "citacao": "Once the platform has reached critical mass and users are gaining significant value from the platform, the focus of metrics can shift to customer retention and the conversion of active users to paying customers.",
+   "pagina": "p. 175"
+  },
+  {
+   "nome": "Revisar governança por trimestre",
+   "descricao": "Governança não é estática: sinais de mudança devem circular e provocar revisão das regras, ouvindo parceiros e checando as quatro causas de falha de mercado.",
+   "gatilho": "Fim de cada trimestre ou conflito relevante",
+   "etapas": [
+    "Auditar assimetria de informação, externalidades, poder de monopólio e risco",
+    "Rever regras de nível e de atribuição",
+    "Ouvir parceiros antes de decidir",
+    "Comunicar mudanças com aviso prévio",
+    "Registrar a decisão e a data de vigência"
+   ],
+   "resultados": [
+    "Regras mantidas ou ajustadas",
+    "Comunicado de mudança"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias",
+    "Parceiros"
+   ],
+   "metricas": [
+    "Interações perdidas",
+    "Conflitos de atribuição"
+   ],
+   "citacao": "Governance should not be static.",
+   "pagina": "p. 170"
+  },
+  {
+   "nome": "Decidir o que a Wise mantém e o que cede ao parceiro",
+   "descricao": "A plataforma deve controlar as fontes principais de valor e ceder as de nicho; o parceiro que ganha poder sobre a relação com o cliente precisa ser tratado antes que desloque a plataforma.",
+   "gatilho": "Parceiro oferece serviço próximo ao da Wise ou ganha relação direta com o cliente",
+   "etapas": [
+    "Identificar o que gera maior parte do valor para o cliente",
+    "Reter o que for central (relação com o cliente, dados da RFP)",
+    "Ceder o que for de nicho",
+    "Avisar com antecedência onde a Wise pode entrar",
+    "Revisar a decisão a cada trimestre"
+   ],
+   "resultados": [
+    "Mapa de o que a Wise retém e o que cede",
+    "Aviso aos parceiros"
+   ],
+   "papeis": [
+    "Diretor"
+   ],
+   "metricas": [
+    "Concentração de indicações por parceiro"
+   ],
+   "citacao": "you don’t want to let an outside firm control a primary source of user value on your platform.",
+   "pagina": "p. 140"
+  },
+  {
+   "nome": "Recrutar fornecedor a partir de demanda sem resposta",
+   "descricao": "Buscas sem resultado na plataforma indicam clientes com necessidade e sem fornecedor; esse sinal serve de argumento para atrair prestadores.",
+   "gatilho": "Cliente pede categoria sem fornecedor na prateleira",
+   "etapas": [
+    "Registrar a demanda sem cobertura",
+    "Somar demandas por categoria",
+    "Priorizar categorias com mais pedidos",
+    "Abordar fornecedores com a demanda concreta",
+    "Acompanhar a cobertura após a entrada"
+   ],
+   "resultados": [
+    "Lista de prospects por categoria",
+    "Cobertura da prateleira ampliada"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Demandas sem cobertura",
+    "Liquidez"
+   ],
+   "citacao": "We also noted that solution providers can find clients by identifying unsuccessful user searches, reflecting the existence of potential clients in need of business solutions.",
+   "pagina": "p. 202"
+  },
+  {
+   "nome": "Adicionar interação em camadas ao portal",
+   "descricao": "Plataformas bem-sucedidas crescem acrescentando interações sobre a central, de quatro modos, sem inchar o núcleo.",
+   "gatilho": "Interação central estável e uso recorrente comprovado",
+   "etapas": [
+    "Confirmar que a interação central está líquida",
+    "Escolher um dos quatro modos de camada",
+    "Testar na borda",
+    "Medir uso real",
+    "Promover ao núcleo só o que for de alto volume e valor"
+   ],
+   "resultados": [
+    "Nova interação lançada",
+    "Interação descartada por falta de uso"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Participação recorrente"
+   ],
+   "citacao": "But over time, successful platforms tend to scale by layering new interactions on top of the core interaction.",
+   "pagina": "p. 54"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Liquidez da prateleira",
+   "definicao": "Percentual de fichas ou demandas que viram interação (reunião, RFP respondida) em um prazo definido, com mínimo de produtores e consumidores.",
+   "citacao": "One reasonable way to measure liquidity is by tracking the percentage of listings that lead to interactions within a given time period.",
+   "pagina": "p. 177"
+  },
+  {
+   "nome": "Qualidade do matching",
+   "definicao": "Percentual de buscas ou demandas que resultam em interação; calibrar o limiar correlacionando o primeiro uso com a permanência.",
+   "citacao": "One way to measure the efficiency of the platform in successfully matching producers to consumers is by tracking the sales conversion rate, which can be expressed as the percentage of searches that lead to interactions.",
+   "pagina": "p. 178"
+  },
+  {
+   "nome": "Confiança",
+   "definicao": "Grau em que os usuários se sentem confortáveis com o risco de interagir; medir por avaliações e verificação das fichas.",
+   "citacao": "Trust refers to the degree to which users of a platform feel comfortable with the level of risk associated with engaging in interactions on the platform.",
+   "pagina": "p. 179"
+  },
+  {
+   "nome": "Falha de interação",
+   "definicao": "Percentual de interações iniciadas que não se concretizam, com motivo registrado.",
+   "citacao": "the percentage of cases in which interactions, such as sales, are initiated but fall through for some reason.",
+   "pagina": "p. 182"
+  },
+  {
+   "nome": "Razão entre produtores e consumidores ativos",
+   "definicao": "Relação entre parceiros ativos e clientes ativos, contando apenas quem interagiu com frequência mínima.",
+   "citacao": "This balance can be monitored by calculating the producer-to-consumer ratio, with an adjustment to include only active platform users",
+   "pagina": "p. 182"
+  },
+  {
+   "nome": "Taxa de troca de lado",
+   "definicao": "Taxa em que usuários passam de um tipo a outro, por exemplo cliente que vira indicador.",
+   "citacao": "the rate at which people convert from one type of user to another",
+   "pagina": "p. 184"
+  },
+  {
+   "nome": "Captura de interação",
+   "definicao": "Valor das interações que acontecem dentro da plataforma, indicador de quanto do valor gerado é visível e capturável.",
+   "citacao": "may choose to measure interaction capture, which will reflect the value of interactions that occur on the platform.",
+   "pagina": "p. 180"
+  },
+  {
+   "nome": "Participação recorrente",
+   "definicao": "Grau em que produtores e consumidores voltam a participar e ampliam a participação ao longo do tempo.",
+   "citacao": "It’s crucial to measure and track the degree to which both producers and consumers are repeatedly participating in the platform and increasing their participation over time.",
+   "pagina": "p. 176"
+  },
+  {
+   "nome": "Resultado de qualidade da interação",
+   "definicao": "Medir o desfecho (o que acontece depois do match), não só o volume; no exemplo do livro, a inadimplência em vez do valor emprestado.",
+   "citacao": "Wouldn’t your loan default rate be a more significant measure of success?",
+   "pagina": "p. 161"
+  },
+  {
+   "nome": "Clientes satisfeitos e recorrentes",
+   "definicao": "Número de participantes em cada lado que voltam e participam mais em interações positivas.",
+   "citacao": "the number of happy customers on every side of the network who are repeatedly and increasingly engaged in positive, value-creating interactions",
+   "pagina": "p. 187"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Contar cadastros em vez de atividade: o BranchOut chegou a 33 milhões de membros e quebrou. No programa, parceiro assinado sem indicação é lista de nomes.",
+   "citacao": "Having a person’s name and email address on a membership list doesn’t promise success for a platform.",
+   "pagina": "p. 173"
+  },
+  {
+   "alerta": "Efeito de preço some quando o desconto acaba: incentivo financeiro sozinho não cria rede duradoura.",
+   "citacao": "The problem is that price effects are evanescent. They disappear the moment the discounts end or another firm offers a better price.",
+   "pagina": "p. 31"
+  },
+  {
+   "alerta": "Curadoria fraca gera ruído que faz a plataforma desmoronar: prateleira cheia de fichas irrelevantes afasta o cliente industrial.",
+   "citacao": "By contrast, poor curation leads to greater noise, which makes the platform less useful and may even cause it to unravel.",
+   "pagina": "p. 36"
+  },
+  {
+   "alerta": "Mudar as regras a favor da plataforma e tomar mais que a parte justa destrói a comunidade, como no caso Keurig. Vale para comissão, níveis e proteção.",
+   "citacao": "By attempting to grab an even bigger share of the profits from its coffee-making platform, Green Mountain had angered its community and forfeited profits.",
+   "pagina": "p. 150"
+  },
+  {
+   "alerta": "Monetizar cedo demais derruba plataformas promissoras: cobrar parceiro antes de haver resultado travaria a rede.",
+   "citacao": "A number of highly promising platforms have foundered because they ignored this rule and instead rushed to monetize their offerings prematurely.",
+   "pagina": "p. 121"
+  },
+  {
+   "alerta": "A plataforma que compete com os próprios parceiros enfraquece o ecossistema: se a Wise vender serviço que o parceiro também vende, a confiança cai.",
+   "citacao": "This is a delicate and dangerous move. It can strengthen the platform, but at the expense of weakening partners",
+   "pagina": "p. 195"
+  },
+  {
+   "alerta": "Vazamento para fora da plataforma: as partes têm incentivo a fechar por fora para evitar a taxa, o que enfraquece a captura de valor e o dado.",
+   "citacao": "These direct interactions weaken the platform’s ability to capture value by creating an opportunity for the parties to make a deal off-platform.",
+   "pagina": "p. 114"
+  },
+  {
+   "alerta": "Crescimento viral não funciona com conteúdo confidencial: em B2B a RFP e a carteira não se espalham sozinhas, então o crescimento exige recrutamento ativo e eventos.",
+   "citacao": "Platforms that don’t lend themselves to the creation of spreadable value units are unlikely to go viral.",
+   "pagina": "p. 102"
+  }
+ ]
+}

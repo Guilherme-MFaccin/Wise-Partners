@@ -1,0 +1,878 @@
+{
+ "livro": "Ecossistema de Parceiros: Método Octo",
+ "autores": "Juliana Tubino e Nara Vaz Guimarães",
+ "slug": "ecossistema-de-parceiros",
+ "tese": "O livro propõe o Método Octo, que organiza a construção de um ecossistema de parceiros em oito eixos (Visão e Estratégia, Design e Modelos, Atração e Recrutamento, Capacitação, Co-GTM, Programa de Parceiros, Time de Parceiros e Gestão do Ecossistema), cada um avaliado em cinco níveis de maturidade e agrupados em três movimentos: Arquitetura, Jornada do Parceiro e Gestão e Escala. A ideia central é que o parceiro tem uma jornada própria, análoga à do cliente (aquisição, decisão de ingresso, onboarding, impacto e crescimento), e que o programa só escala depois de provar valor em pequena escala, com perfil de parceiro ideal, critérios objetivos, níveis simples e poucas métricas bem escolhidas. Parceria de verdade exige ganha-ganha, ativação do parceiro nos primeiros 90 dias e processo antes de ferramenta.",
+ "recomendacoes": [
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Só estruturar o programa de parceiros depois de ter produto e mercado validados com venda direta; a Wise já vende gestão a indústrias, então a tese está validada, mas o programa em si ainda não.",
+   "processo": "Validar prontidão da operação primária antes de recrutar parceiros",
+   "citacao": "ter a execução fundamentada em terceiros já na largada pode até fazer uma tese bacana dar com os burros na água.",
+   "pagina": "p. 26",
+   "aplicabilidade": "alta",
+   "porque": "A Wise tem oferta e ICP validados nas indústrias, o que cumpre o pré-requisito, mas precisa tratar o programa como experimento."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Documentar por inteiro a jornada de venda da Wise (etapas, duração do ciclo, gatilhos, partes interessadas) antes de pedir que parceiros indiquem ou apresentem a empresa.",
+   "processo": "Documentar a jornada de venda e o ICP da Wise para uso dos parceiros",
+   "citacao": "Afinal, quem não sabe fazer, não poderá ensinar os outros a fazerem.",
+   "pagina": "p. 47",
+   "aplicabilidade": "alta",
+   "porque": "Sem a jornada e o ICP escritos, o parceiro não consegue qualificar a indicação e o SLA do portal fica sem base."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Projetar o programa de parcerias como um negócio à parte, com planilha própria (receita, comissão, custo do time), em vez de diluir os números no resultado da Wise.",
+   "processo": "Projetar o resultado financeiro do programa de parcerias separado do core",
+   "citacao": "sugerimos que inicie as projeções do seu modelo operacional de canais em uma página em branco, independente.",
+   "pagina": "p. 170",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês de gerente e comissão de 40%, só uma conta isolada mostra se o programa se sustenta e quando."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Não escalar o número de parceiros antes de o time e as trocas com parceiros entregarem resultado previsível; a meta de 10 assinaturas deve vir acompanhada de ativação, não só de contrato.",
+   "processo": "Decidir a passagem de experimentação para escala com base em previsibilidade",
+   "citacao": "não recomendamos dar esse passo antes que o time e as trocas com os parceiros tenham alcançado um determinado nível de entrega",
+   "pagina": "p. 208",
+   "aplicabilidade": "alta",
+   "porque": "Com um gerente a 12 horas por mês, escalar antes de ter processo estável gera parceiros assinados e inativos."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Tratar a indicação (afiliado ou finder) como o modelo de entrada: é o mais simples, exige menos treinamento e processo, em troca de previsibilidade menor.",
+   "processo": "Registrar indicação de parceiro afiliado e pagar comissão ao fechar",
+   "citacao": "O modelo de afiliados é mais simples de implementar por ser uma relação transacional: indicou, fechou, recebeu remuneração.",
+   "pagina": "p. 63",
+   "aplicabilidade": "alta",
+   "porque": "A comissão de 40% da primeira mensalidade é exatamente um modelo de indicação, adequado a uma equipe de uma pessoa."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Desenhar uma trilha de evolução do parceiro, começando em modelos simples (indicação) e ampliando a atuação (prateleira de RFP, evento da base ativa, oferta conjunta) conforme ele ganha maturidade.",
+   "processo": "Definir a trilha de evolução do parceiro entre modelos de parceria",
+   "citacao": "permite construir uma trilha de evolução para o parceiro, que pode iniciar em modelos mais simples e ir ampliando a sua atuação com o tempo.",
+   "pagina": "p. 64",
+   "aplicabilidade": "alta",
+   "porque": "Casa com os dois pilares da Wise (Prateleira de RFP e Base Ativa) como degraus depois da primeira indicação."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Enquadrar associações, feiras e entidades como parceiros de acesso à audiência (influência ou rede de relacionamento), e softwares ERP, CRM e MES como parceiros que já atendem a mesma indústria, com critérios e jornadas diferentes.",
+   "processo": "Classificar o candidato por tipo de parceria no cadastro do funil",
+   "citacao": "Perfil do parceiro: tem acesso à audiência que você busca impactar, seja por influência direta ou por estar conectado a uma rede de relacionamento",
+   "pagina": "p. 53",
+   "aplicabilidade": "media",
+   "porque": "O livro descreve o perfil de quem tem audiência, o que cobre entidades e feiras como a Expo+Indústria, mas não trata de associações como categoria."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Apresentar o programa como venda de uma estratégia de negócio para o parceiro (receita nova, diferencial, apoio, certificação), não como uma lista de funcionalidades ou só como comissão.",
+   "processo": "Construir o pitch de valor do programa por tipo de parceiro",
+   "citacao": "o programa de parcerias deve ser pensado como a venda de uma estratégia de negócios.",
+   "pagina": "p. 81",
+   "aplicabilidade": "alta",
+   "porque": "A Wise vende gestão e carteira ativa para o parceiro; o argumento precisa ir além dos 40% da primeira mensalidade."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Não apoiar a proposta apenas em comissão: quando o ticket ou o percentual não bastam, o parceiro precisa de outros benefícios tangíveis (mentoria, evento, certificação, acesso a clientes).",
+   "processo": "Compor o pacote de benefícios do parceiro além da comissão",
+   "citacao": "modelos de parceria que são baseados apenas em comissionamento podem ser limitantes",
+   "pagina": "p. 128",
+   "aplicabilidade": "alta",
+   "porque": "A comissão paga uma única vez sobre a primeira mensalidade é um incentivo fraco sozinho; os pacotes com contrapartidas e o Base Ativa são o complemento."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Quando o parceiro é pequeno, oferecer o know-how técnico e gerencial da empresa líder (processos de venda, atendimento, gestão) como benefício central do programa.",
+   "processo": "Entregar mentoria de gestão como benefício do programa",
+   "citacao": "Especialmente quando seu perfil de parceiro ideal é um negócio pequeno, que não possui tanta infraestrutura, experiência de mercado ou expertise quanto sua empresa, um dos maiores benefícios que você pode oferecer é seu know-how técnico e gerencial.",
+   "pagina": "p. 131",
+   "aplicabilidade": "alta",
+   "porque": "A Wise é consultoria de gestão: mentoria e o ciclo de 12 semanas do Base Ativa são o ativo mais difícil de copiar."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Lançar um programa mínimo viável (MVCP) com os itens mais baratos e rápidos que provam valor, em vez de montar universidade, portal completo e benefícios todos de uma vez; o onboarding é o item crítico.",
+   "processo": "Definir o programa mínimo viável (MVCP) e o que fica para depois",
+   "citacao": "o programa mínimo viável para você começar a testar essa estratégia",
+   "pagina": "p. 132",
+   "aplicabilidade": "alta",
+   "porque": "Com zero parceiros assinados e 12 horas por mês, o escopo inicial do portal e do programa precisa ser o mínimo que prova valor."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Definir o perfil de parceiro ideal a partir do ICP: o candidato só serve se atende ao mesmo público que a Wise quer alcançar (indústrias), caso contrário as prioridades se desalinham.",
+   "processo": "Definir o perfil de parceiro ideal (IPP) a partir do ICP",
+   "citacao": "Se o parceiro não estiver diretamente interessado no mesmo público que sua empresa, as prioridades vão se desalinhar em algum momento",
+   "pagina": "p. 76",
+   "aplicabilidade": "alta",
+   "porque": "A lógica de que o parceiro não é ICP da Wise, mas a carteira dele é, é exatamente o primeiro critério do IPP do livro."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Escrever critérios de entrada objetivos e mensuráveis (essenciais e desejáveis), em vez de definir o parceiro pelo segmento, para poder usar formulário e filtro no funil.",
+   "processo": "Definir critérios objetivos de entrada no programa",
+   "citacao": "Quanto mais objetivos forem os critérios dessa relação, mais fácil será o alinhamento entre os parceiros em potencial, os processos e as pessoas envolvidas",
+   "pagina": "p. 77",
+   "aplicabilidade": "alta",
+   "porque": "Critérios claros permitem que o funil de recrutamento do portal qualifique prospects sem depender de julgamento caso a caso do gerente."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Usar um scorecard de fit com notas simples por critério (0, 0,5 ou 1) somadas em uma nota final, para priorizar o atendimento dos prospects e segmentar a comunicação.",
+   "processo": "Pontuar o fit do candidato a parceiro no scorecard de entrada",
+   "citacao": "atribuir uma pontuação para identificar quais potenciais parceiros estão mais preparados para entrar e performar no programa e priorizar o atendimento de forma automática ou manual.",
+   "pagina": "p. 78",
+   "aplicabilidade": "alta",
+   "porque": "Com cerca de 21 prospects em conversa e pouca hora de gerente, o scorecard decide quem recebe o tempo limitado."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Organizar o recrutamento como um funil dedicado de pesquisa e conexão, qualificação, diagnóstico e solução, fechamento e nutrição, podendo começar no CRM já existente.",
+   "processo": "Conduzir o funil de recrutamento de parceiros",
+   "citacao": "Inicialmente, você pode usar o CRM que já faz parte da rotina com um funil dedicado para recrutamento de parceiros.",
+   "pagina": "p. 82",
+   "aplicabilidade": "alta",
+   "porque": "É a mesma sequência do kanban de recrutamento do portal, inclusive com a etapa de nutrição depois do fechamento."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Alinhar expectativas de dedicação e metas já na entrada, por exemplo declarando as horas por semana esperadas no primeiro mês, para o parceiro avaliar a prioridade antes de assinar.",
+   "processo": "Alinhar compromissos de tempo, metas e investimento na entrada",
+   "citacao": "esperamos dos nossos parceiros uma média de 8 horas por semana no primeiro mês para treinamentos e certificações.",
+   "pagina": "p. 82",
+   "aplicabilidade": "alta",
+   "porque": "Evita contrato assinado sem ativação, que é o risco principal para a meta de 10 parcerias com ao menos um cliente fechado."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Estruturar o onboarding com marcos em 30, 60, 90 e 120 dias, cada marco ligado a domínio da solução e a resultado esperado, em vez de uma única reunião de treinamento.",
+   "processo": "Conduzir o onboarding do parceiro em marcos de 30, 60, 90 e 120 dias",
+   "citacao": "que você trace um processo que cubra ao menos os primeiros 30, 60, 90 e 120 dias",
+   "pagina": "p. 90",
+   "aplicabilidade": "alta",
+   "porque": "O onboarding de 30, 60 e 90 dias do portal segue essa lógica; o livro sugere acrescentar um marco de 120 dias."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Definir como foco do início fazer o parceiro ganhar dinheiro nos primeiros 90 dias; parceiro que não vê resultado cedo desanima.",
+   "processo": "Priorizar a primeira indicação dentro dos primeiros 90 dias",
+   "citacao": "certifique-se de que seu foco inicial seja garantir que eles ganhem dinheiro nos primeiros 90 dias.",
+   "pagina": "p. 91",
+   "aplicabilidade": "alta",
+   "porque": "Para a Wise, resultado do parceiro é a primeira indicação no ICP que vira reunião, e a comissão só vem depois do fechamento do cliente."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Considerar o onboarding concluído apenas quando o parceiro ativa o primeiro cliente, e não quando consome um volume de treinamento.",
+   "processo": "Marcar o parceiro como ativado na primeira indicação que virou reunião",
+   "citacao": "o onboarding deve ser considerado finalizado depois da ativação do primeiro cliente e não apenas após o consumo de determinado volume de treinamentos",
+   "pagina": "p. 46",
+   "aplicabilidade": "alta",
+   "porque": "Sustenta diretamente a regra do portal de ativar o parceiro na primeira indicação no ICP que virou reunião."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Desenhar a certificação de trás para frente: definir o nível de domínio que se quer medir e a partir dele calibrar o conteúdo, sem exigir prova formal pesada de parceiros pequenos.",
+   "processo": "Definir a certificação do parceiro a partir do domínio desejado",
+   "citacao": "Essa engenharia reversa permite que você saiba calibrar com mais efetividade o conteúdo que precisa desenvolver e compartilhar com os parceiros",
+   "pagina": "p. 99",
+   "aplicabilidade": "media",
+   "porque": "A certificação está no pacote da Wise, mas o livro alerta que provas formais são difíceis de emplacar; começar simples."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Promover trocas entre parceiros (comunidade, eventos, grupo), porque muitos parceiros declaram que o maior benefício do programa é a troca com os demais.",
+   "processo": "Promover encontros e trocas entre parceiros da comunidade",
+   "citacao": "sim a oportunidade de troca e evolução com os demais parceiros do ecossistema!",
+   "pagina": "p. 95",
+   "aplicabilidade": "alta",
+   "porque": "É a tese do Base Ativa: transformar a carteira em comunidade com evento, o que também fortalece o vínculo com a Wise."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Fixar um SLA escrito para o repasse de leads (perfil, quantidade, periodicidade) e para a resposta ao parceiro, para alinhar expectativa e evitar indicação que esfria.",
+   "processo": "Definir e monitorar o SLA de tratamento da indicação",
+   "citacao": "construa um SLA (Service Level Agreement, em português, Acordo de Nível de Serviço) para alinhar expectativas em relação ao perfil, quantidade e periodicidade de repasse de leads.",
+   "pagina": "p. 112",
+   "aplicabilidade": "alta",
+   "porque": "O portal já prevê SLA nas indicações; o livro justifica fixar prazos e perfil aceito para a Wise cumprir também o seu lado."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Registrar toda indicação no CRM com origem do parceiro, para evitar a disputa entre parceiro e vendedor interno sobre quem trouxe o cliente.",
+   "processo": "Registrar a indicação com origem e dono no CRM",
+   "citacao": "Empresas que não têm um processo de vendas documentado ou uma ferramenta de CRM sofrem mais com esse tipo de situação, pois não terão um processo de registro desses leads",
+   "pagina": "p. 112",
+   "aplicabilidade": "alta",
+   "porque": "Fundamenta o link exclusivo e a proteção de 180 dias do portal; o prazo de 180 dias em si não vem do livro."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Montar uma matriz de mapeamento de contas e uma segmentação que diga onde a Wise opera direto e onde o parceiro atua, antes de abrir a co-venda.",
+   "processo": "Cruzar a carteira da Wise com a do parceiro e mapear contas",
+   "citacao": "Uma ferramenta importante para os passos iniciais é definir uma matriz de mapeamento de contas",
+   "pagina": "p. 114",
+   "aplicabilidade": "alta",
+   "porque": "Corresponde ao cruzamento de carteiras do portal, que também serve para evitar conflito de conta com a Tríade e a Swallow."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Gerar demanda de volta para o parceiro: apresentar o parceiro aos clientes da base da Wise quando ele resolve uma dor do cliente.",
+   "processo": "Indicar fornecedores parceiros a clientes da Wise na Prateleira de RFP",
+   "citacao": "além dos parceiros gerarem demanda para seu negócio, você pode gerar demanda de volta para eles.",
+   "pagina": "p. 131",
+   "aplicabilidade": "alta",
+   "porque": "É o desenho da Prateleira de RFP: a Wise apresenta fornecedores parceiros aos clientes dela, o que cria reciprocidade."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Rastrear a origem de cada novo cliente com link parametrizado, para reconhecer o parceiro pela indicação sem depender de declaração manual.",
+   "processo": "Gerar link exclusivo de indicação por parceiro",
+   "citacao": "O Link parametrizado é uma ferramenta que nos permite rastrear qual foi o caminho que um novo cliente Creditas percorreu e identificar se ele teve um determinado parceiro como canal de origem.",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "Equivale ao link exclusivo do portal; o livro traz a Creditas como exemplo de uso para atribuir comissão."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Manter a regra de comissão transparente e escrita, e avaliar se o pagamento deve ser único (upfront) ou recorrente enquanto o cliente estiver ativo, conforme o modelo de preço.",
+   "processo": "Definir e publicar a regra de comissão do parceiro",
+   "citacao": "E o pagamento pode ser recorrente (fee mensal enquanto o cliente estiver ativo) ou pode ser feito upfront (pagamento único após a venda).",
+   "pagina": "p. 130",
+   "aplicabilidade": "alta",
+   "porque": "A Wise paga 40% da primeira mensalidade, um pagamento único; o livro apresenta a variante recorrente como alternativa a testar."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Calibrar a comissão ao trabalho que fica com a Wise: se o parceiro só indica e a Wise qualifica e vende, a comissão não deve ser alta e pode considerar a qualidade do lead.",
+   "processo": "Ajustar a comissão pela qualidade da indicação",
+   "citacao": "essa comissão não deve ser tão alta e pode levar em consideração critérios de qualidade do lead",
+   "pagina": "p. 172",
+   "aplicabilidade": "alta",
+   "porque": "A Wise faz todo o processo comercial e os 40% são um custo fixo por cliente; a nota de qualidade da indicação do portal pode modular bônus."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Usar poucos níveis (três é o mais simples), com o nível mais baixo para quem entrou e precisa de assistência e o mais alto para quem tem maior desempenho e mais independência.",
+   "processo": "Estruturar os níveis do programa em três degraus",
+   "citacao": "uma forma simples e eficiente de operar essa estratégia é utilizar três níveis - quanto mais simples, melhor!",
+   "pagina": "p. 134",
+   "aplicabilidade": "alta",
+   "porque": "Os níveis A, B e C (Elite, Premium, Select) já são três; o livro orienta o critério por desempenho, enquanto a Wise parte do potencial da carteira."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Usar para subir de nível os mesmos critérios do recrutamento, ligados às métricas-chave do negócio, e transferir ao parceiro as métricas que importam para a Wise.",
+   "processo": "Definir critérios de subida de nível iguais aos de entrada",
+   "citacao": "os critérios para subir de nível são os mesmos usados para recrutar novos parceiros.",
+   "pagina": "p. 135",
+   "aplicabilidade": "alta",
+   "porque": "Dá coerência ao nível híbrido do portal: o potencial da carteira entra no recrutamento e o desempenho na revisão trimestral."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Evitar o sobe e desce de nível: ativar o benefício logo que o critério é atingido e dar um prazo de recuperação antes de rebaixar; revisar critérios a cada trimestre.",
+   "processo": "Revisar níveis a cada trimestre com prazo de recuperação",
+   "citacao": "em vez de você regredir na hora, o ideal é dar um tempo para ele se recuperar.",
+   "pagina": "p. 137",
+   "aplicabilidade": "alta",
+   "porque": "Casa com a revisão trimestral e o desligamento formal do portal, tornando o rebaixamento previsível para o parceiro."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Tratar a primeira versão do programa como MVP: um teste controlado com poucos participantes para aprender e dimensionar a infraestrutura interna.",
+   "processo": "Rodar o piloto controlado com poucos parceiros",
+   "citacao": "a primeira versão do programa será o seu MVP e deve ser um teste controlado, com um número reduzido de participantes",
+   "pagina": "p. 127",
+   "aplicabilidade": "alta",
+   "porque": "A Wise está em experimentação e sem parceiro assinado; o piloto com poucos parceiros é o formato indicado."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Formalizar no processo e no contrato os critérios de desligamento (perfil inadequado ou inatividade), para que sair do programa seja algo normal e previsto.",
+   "processo": "Formalizar critérios de desligamento no contrato de parceria",
+   "citacao": "é importante que, em algum momento, você formalize esses critérios no seu processo e no contrato de parceria",
+   "pagina": "p. 184",
+   "aplicabilidade": "alta",
+   "porque": "O portal prevê desligamento formal; o contrato de parceria da Wise precisa trazer os critérios antes da primeira assinatura."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Construir um fluxo de finalização do contrato com passagem sem fricção do cliente do parceiro para o atendimento direto da Wise.",
+   "processo": "Encerrar a parceria e transferir o cliente para o atendimento direto",
+   "citacao": "um processo consistente de finalização do contrato de parceria e um fluxo de passagem sem fricção de seu cliente do canal de parceiro para seu canal de atendimento direto",
+   "pagina": "p. 184",
+   "aplicabilidade": "media",
+   "porque": "Como a Wise atende o cliente diretamente, a transferência é simples, mas a proteção de 180 dias precisa dizer o que acontece no desligamento."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Definir bem o que conta como parceiro: apenas quem já realizou a primeira venda ou implementação entra na contagem de novos parceiros, para não inflar a base com intenção.",
+   "processo": "Classificar o parceiro como ativo só após o primeiro resultado",
+   "citacao": "apenas parceiros que já tenham realizado uma venda ou uma implementação possam ser considerados como um novo parceiro",
+   "pagina": "p. 184",
+   "aplicabilidade": "alta",
+   "porque": "Separa parceria assinada de parceiro ativo na meta de 10 parcerias até 31/12/2026."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Acompanhar poucos indicadores por fase da jornada do parceiro (a Caju reduziu mais de 60 para 6 por fase) e revisar esse painel todo trimestre.",
+   "processo": "Manter um painel enxuto de seis indicadores por fase da jornada",
+   "citacao": "o time elencou uma versão resumida com os 6 principais indicadores de cada fase da jornada do parceiro",
+   "pagina": "p. 191",
+   "aplicabilidade": "alta",
+   "porque": "Um gerente com 12 horas por mês não consegue olhar dezenas de indicadores; o painel do portal precisa ser curto."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Definir primeiro o processo e o programa e só depois escolher ou construir a ferramenta, porque sistemas genéricos ou robustos demais engessam o programa.",
+   "processo": "Mapear o processo do programa antes de configurar o portal",
+   "citacao": "O mais importante aqui é definir primeiro processo e programa, para depois tentar encontrar a ferramenta que mais se adapta a ele",
+   "pagina": "p. 186",
+   "aplicabilidade": "alta",
+   "porque": "O Portal Wise Partners está sendo construído antes de parceiros assinados; o livro recomenda crescer o sistema de forma incremental."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Tratar dados de carteira e de participação do parceiro como sensíveis: coletar de forma qualitativa ou com consentimento, não por extração automática.",
+   "processo": "Coletar dados de carteira do parceiro com consentimento",
+   "citacao": "O mais comum de obter essa informação é de forma qualitativa, dado o nível de sensibilidade dessa informação para os parceiros.",
+   "pagina": "p. 183",
+   "aplicabilidade": "alta",
+   "porque": "O cruzamento de carteiras do portal depende de o parceiro aceitar compartilhar a lista de clientes, o que exige regra clara de uso."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Começar o time com poucas pessoas que fazem recrutamento (hunter) e relacionamento (farmer) ao mesmo tempo, para encurtar o ciclo de feedback e filtrar melhor quem entra.",
+   "processo": "Acumular as funções de hunter e farmer no Gerente de Parcerias",
+   "citacao": "Por isso, as primeiras funções que você deve mirar são as de hunter e farmer.",
+   "pagina": "p. 157",
+   "aplicabilidade": "alta",
+   "porque": "Descreve o desenho atual da Wise (um Gerente de Parcerias) e o limite dele: sem especialização, o gerente fica sobrecarregado ao crescer."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Formalizar acordos de horas e atividades com as áreas de apoio (marketing, CS, finanças, diretoria) em vez de esperar uma equipe dedicada.",
+   "processo": "Formalizar acordo de horas com áreas de apoio do grupo",
+   "citacao": "um pacote de horas e atividades pré-combinadas aproveitando uma estrutura existente no início",
+   "pagina": "p. 149",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês, o marketing da Wise e das empresas do grupo e a aprovação do Diretor precisam de horas combinadas."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Conduzir a jornada do parceiro",
+   "descricao": "O livro espelha a jornada do cliente em uma jornada do parceiro com dois blocos, Aquisição e Expansão, separados pela decisão de ingresso no programa. Cada ponto de contato da empresa com o parceiro, da primeira conversa ao relacionamento contínuo, deve ser mapeado. A jornada acontece em looping: novas dores geram novas ofertas.",
+   "gatilho": "O parceiro identifica uma necessidade de negócio (receita, produtividade, experiência do cliente, portfólio ou troca com pares) e começa a buscar solução.",
+   "etapas": [
+    "Consciência: ajudar o parceiro a descobrir como aumentar receita ou gerar recorrência, ganhar produtividade, melhorar a experiência do cliente final, ampliar portfólio e trocar mais com pares",
+    "Educação: o parceiro já sabe do problema e busca aprofundamento; participar de um programa de parcerias é uma das soluções possíveis",
+    "Seleção: o parceiro compara programas, avalia a dedicação exigida (tempo, investimento) e escolhe",
+    "Decisão de ingresso: ponto central da jornada, marca a transição do relacionamento",
+    "Onboarding: primeiro ciclo completo do que se espera do parceiro, com marcos de sucesso; para um VAR, concluído na ativação do primeiro cliente",
+    "Impacto: o parceiro vê os primeiros resultados e a geração conjunta de negócios passa a ser recorrente",
+    "Crescimento: a participação no ecossistema vira parte da estratégia do parceiro, com novas ofertas conjuntas, outros modelos de parceria e incentivos diferenciados"
+   ],
+   "resultados": [
+    "Parceiro ativado e recorrente",
+    "Parceiro estagnado, que volta à nutrição ou a níveis de menor atendimento",
+    "Parceiro desligado por inatividade ou perfil inadequado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias (hunter e farmer)",
+    "Marketing do programa (consciência e educação)",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Conversão entre etapas da jornada",
+    "Tempo até a primeira indicação",
+    "Parceiros ativos por nível"
+   ],
+   "citacao": "Análoga à jornada do cliente, a jornada do parceiro é a evolução da empresa ao longo da parceria.",
+   "pagina": "p. 45"
+  },
+  {
+   "nome": "Definir o perfil de parceiro ideal (IPP)",
+   "descricao": "O IPP espelha o ICP e é construído em três etapas. Serve para saber a quem dizer não, personalizar a oferta e construir os incentivos corretos.",
+   "gatilho": "Antes de abrir o recrutamento, e a cada revisão do programa quando os dados mostrarem quais perfis performam.",
+   "etapas": [
+    "Partir do ICP: investigar como o cliente compra e usa o produto e quais lacunas da jornada um parceiro pode preencher",
+    "Definir critérios objetivos e mensuráveis, separados em essenciais para entrada e desejáveis, e como serão validados ao longo da jornada",
+    "Verificar alinhamento de valores e sinergia real de negócios, incluindo ética e disposição de compartilhar informação",
+    "Revisar o IPP com dados de desempenho, observando comportamentos e resultados comuns aos melhores parceiros"
+   ],
+   "resultados": [
+    "IPP por modelo de parceria",
+    "Critérios que alimentam o scorecard",
+    "Lista do que está fora da estratégia"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor (validação estratégica)",
+    "Time comercial da Wise (conhecimento do cliente)"
+   ],
+   "metricas": [
+    "Parceiros ativos por perfil",
+    "Valor médio de vendas iniciais de quem vira top performer"
+   ],
+   "citacao": "Nós acreditamos que um bom processo para a construção do IPP passa por três etapas:",
+   "pagina": "p. 76"
+  },
+  {
+   "nome": "Pontuar o fit do candidato no scorecard",
+   "descricao": "Atribuir pontuação por critério (0 ruim, 0,5 intermediário, 1 bom) e somar, para ver de forma rápida e objetiva quem está mais preparado, priorizar atendimento e segmentar comunicações.",
+   "gatilho": "Entrada de um candidato no funil de recrutamento, na etapa de qualificação.",
+   "etapas": [
+    "Escolher critérios e pesos (expertise da indústria, capacidade de prospecção e vendas, capacidade de atendimento, presença geográfica, plano de negócios)",
+    "Pontuar o candidato com 0, 0,5 ou 1 em cada critério",
+    "Somar a nota e classificar o candidato",
+    "Priorizar atendimento e escolher a comunicação conforme a nota, de forma automática ou manual"
+   ],
+   "resultados": [
+    "Prioridade alta, média ou baixa de atendimento",
+    "Candidato descartado",
+    "Candidato encaminhado à nutrição"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "SDR ou hunter, quando existir"
+   ],
+   "metricas": [
+    "Nota média dos candidatos",
+    "Conversão de nota alta em parceiro ativo"
+   ],
+   "citacao": "atribuir uma pontuação para identificar quais potenciais parceiros estão mais preparados para entrar e performar no programa e priorizar o atendimento de forma automática ou manual.",
+   "pagina": "p. 78"
+  },
+  {
+   "nome": "Recrutar parceiros no funil dedicado",
+   "descricao": "Pipeline simples, que pode começar no CRM existente, com funil dedicado a parceiros. Recrutamento é atividade recorrente e exige quem a execute continuamente. Inclui o alinhamento de expectativas na entrada.",
+   "gatilho": "Prospect do IPP identificado por inbound, prospecção ativa ou indicação do próprio ecossistema.",
+   "etapas": [
+    "Pesquisa e Conexão: agendar a explicação do programa, com número definido de tentativas de contato",
+    "Qualificação: entender perfil e fit com os critérios essenciais",
+    "Diagnóstico e Solução: conhecer o modelo de negócios do parceiro, ligar as dores dele à proposta do programa, detalhar compromissos de entrada (metas, investimento, horas) e visão de evolução",
+    "Fechamento: envio e assinatura da documentação",
+    "Nutrição: etapas após o fechamento para preparar o parceiro, passando ao onboarding e ao treinamento"
+   ],
+   "resultados": [
+    "Parceria assinada",
+    "Perdido por falta de fit",
+    "Perdido por prioridade do parceiro",
+    "Em nutrição para retomar depois"
+   ],
+   "papeis": [
+    "Hunter (Gerente de Parcerias)",
+    "Diretor (aprova assinatura)",
+    "Channel marketing (campanhas de atração)"
+   ],
+   "metricas": [
+    "Leads qualificados e parceiros cadastrados",
+    "Tempo médio de qualificação",
+    "Reuniões agendadas",
+    "Contratos assinados",
+    "Negócios perdidos"
+   ],
+   "citacao": "Pesquisa e Conexão: agendamento da explicação do programa com quantidade de tentativas de contato definidas",
+   "pagina": "p. 82"
+  },
+  {
+   "nome": "Conduzir o onboarding do parceiro em marcos",
+   "descricao": "Processo estruturado de pelo menos 30, 60, 90 e 120 dias, ligando cada marco a domínio da solução e a resultado. O foco é o parceiro ganhar dinheiro nos primeiros 90 dias. Atalhos no onboarding são falsa economia.",
+   "gatilho": "Assinatura do contrato de parceria.",
+   "etapas": [
+    "Primeira interação, alinhamento: conhecer o negócio do parceiro, alinhar expectativas, configurar ferramentas, definir pontos de contato e criar plano de trabalho",
+    "Segunda interação, vendas: mapear oportunidades, fazer bom diagnóstico do cliente final, estruturar proposta",
+    "Terceira interação, produto: funcionalidades, planos e preços, concorrentes e cases",
+    "Quarta interação, pós-vendas: etapas de implantação do cliente, métricas de sucesso e boas práticas de atendimento",
+    "Acompanhar os marcos de 30, 60, 90 e 120 dias com resultados esperados",
+    "Passar o parceiro ao acompanhamento contínuo após a ativação do primeiro cliente"
+   ],
+   "resultados": [
+    "Parceiro ativado",
+    "Parceiro em risco, com plano de recuperação",
+    "Parceiro que não ativa e é revisto ou desligado"
+   ],
+   "papeis": [
+    "Partner enablement",
+    "Farmer (Gerente de Parcerias)",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Conclusão da trilha de onboarding",
+    "Tempo médio de cada trilha",
+    "Tempo médio para geração do primeiro negócio",
+    "Parceiros ativos"
+   ],
+   "citacao": "que você trace um processo que cubra ao menos os primeiros 30, 60, 90 e 120 dias",
+   "pagina": "p. 90"
+  },
+  {
+   "nome": "Capacitar o parceiro de forma contínua",
+   "descricao": "Plano de capacitação com cinco componentes, combinando teoria e prática e validando a aprendizagem. A capacitação é melhoria contínua e funciona melhor com um tópico por período do que com muitas pílulas soltas.",
+   "gatilho": "Fim do onboarding e a cada mudança de oferta, regra ou nível.",
+   "etapas": [
+    "Conhecimento sobre a empresa: visão, missão, cultura, times e processos",
+    "Conhecimento técnico adequado ao modelo de parceria, com teoria e prática (calls conjuntas, role-play)",
+    "Validações da aprendizagem: provas, testes, certificações ou selos, desenhados a partir do domínio que se quer medir",
+    "Métricas e sistemas para relacionar investimento em capacitação e resultado",
+    "Recursos disponíveis em repositório organizado e comunicação periódica (newsletter ou ambiente restrito)"
+   ],
+   "resultados": [
+    "Parceiro certificado",
+    "Parceiro com lacuna de conhecimento e trilha complementar"
+   ],
+   "papeis": [
+    "Partner enablement",
+    "Farmer",
+    "Partner support"
+   ],
+   "metricas": [
+    "Engajamento com materiais (visualizações, certificações)",
+    "Correlação dos treinamentos com resultados do programa"
+   ],
+   "citacao": "Aqui, vamos entrar nos 5 componentes para que essa parceria comece do jeito certo",
+   "pagina": "p. 96"
+  },
+  {
+   "nome": "Executar a co-venda de indicações",
+   "descricao": "Conjunto de práticas para a força comercial conjunta: pipeline combinado, SLA de repasse, apresentação mútua entre parceiros e clientes, reuniões conjuntas e rodízio de relacionamento. Exige mapeamento de contas para evitar conflito.",
+   "gatilho": "Parceiro envia uma indicação ou a Wise identifica um cliente com dor atendida por um parceiro.",
+   "etapas": [
+    "Registrar a indicação no CRM com origem do parceiro",
+    "Compartilhar o contexto do pipeline com o parceiro e manter visibilidade do fluxo",
+    "Aplicar o SLA acordado de perfil, quantidade e periodicidade de leads",
+    "Apresentar parceiros aos clientes da base e clientes da base aos parceiros",
+    "Realizar reuniões ou esforços conjuntos de venda quando o parceiro agrega credibilidade",
+    "Girar a introdução de parceiros ao time interno para que o acesso a negócios não dependa de amizade"
+   ],
+   "resultados": [
+    "Cliente fechado via parceiro",
+    "Indicação desqualificada com devolutiva",
+    "Indicação em conflito de conta e resolvida pela matriz"
+   ],
+   "papeis": [
+    "Farmer (Gerente de Parcerias)",
+    "Time comercial da Wise",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Volume de SAL por parceiro",
+    "Taxa de conversão de SAL em venda",
+    "Ciclo de vendas via parceiro",
+    "Representatividade de clientes originados por parceiros"
+   ],
+   "citacao": "Para a força comercial conjunta, damos o nome de estratégia co-sell",
+   "pagina": "p. 112"
+  },
+  {
+   "nome": "Planejar ações de co-marketing e evento",
+   "descricao": "Plano de co-marketing com responsabilidades, atividades e investimentos conjuntos. Começar por ações de ROI já comprovado. Investimento proporcional à distribuição do resultado, sem delegar tudo ao parceiro.",
+   "gatilho": "Plano anual ou ciclo de ação conjunta com o parceiro; evento da base ativa.",
+   "etapas": [
+    "Construir estratégia e plano de marketing incluindo atividades e recursos de co-marketing",
+    "Comunicar o plano de forma clara a todos os elos",
+    "Compartilhar materiais e recursos em repositório acessível",
+    "Treinar os parceiros periodicamente sobre recursos disponíveis e como usá-los",
+    "Facilitar lista de profissionais ou agências que apoiem o plano do parceiro"
+   ],
+   "resultados": [
+    "Evento realizado com leads qualificados pelo ecossistema",
+    "Ação cancelada por falta de ROI esperado"
+   ],
+   "papeis": [
+    "Channel marketing (marketing da Wise)",
+    "Gerente de Parcerias",
+    "Parceiro (protagonista ou apoiador)"
+   ],
+   "metricas": [
+    "Leads qualificados pelo ecossistema (EQL)",
+    "Audiência em eventos",
+    "Engajamento com campanhas"
+   ],
+   "citacao": "Construir estratégia e plano de marketing incluindo atividades e recursos de co-marketing",
+   "pagina": "p. 110"
+  },
+  {
+   "nome": "Remunerar a indicação do parceiro",
+   "descricao": "Escolher o modelo de comissão (por receita, por margem ou escalonada), a forma de pagamento (única ou recorrente) e calibrar ao que o parceiro assume do processo. A comissão é o maior custo variável do programa e deve estar no plano financeiro.",
+   "gatilho": "Cliente indicado assina contrato e paga a primeira mensalidade.",
+   "etapas": [
+    "Escolher o modelo de comissão conforme o modelo de parceria e o preço",
+    "Definir pagamento único ou recorrente",
+    "Ajustar o percentual ao esforço assumido pelo parceiro e à qualidade do lead",
+    "Registrar o parceiro como entidade no sistema de receita para processar a comissão",
+    "Revisar o impacto da comissão na margem do programa"
+   ],
+   "resultados": [
+    "Comissão paga",
+    "Comissão contestada por atribuição e resolvida pelo registro da indicação"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Financeiro",
+    "Diretor (aprova regras)"
+   ],
+   "metricas": [
+    "Comissão paga sobre receita gerada",
+    "Margem do programa"
+   ],
+   "citacao": "Existem diferentes tipos de comissão:",
+   "pagina": "p. 113"
+  },
+  {
+   "nome": "Gerir os níveis do programa",
+   "descricao": "Níveis como gamificação e como ferramenta de segmentação do esforço. Regras simples, critérios de desempenho, técnicos e jurídicos, atingíveis e revisados a cada trimestre, com benefícios que mantenham o retorno positivo em cada nível.",
+   "gatilho": "Fechamento do trimestre ou parceiro atingindo critério de subida.",
+   "etapas": [
+    "Definir três níveis com benefícios proporcionais ao retorno",
+    "Aplicar critérios de qualificação de desempenho, técnico e jurídico (este binário: cumpre ou não)",
+    "Ativar benefícios logo que o critério é atingido",
+    "Dar prazo de recuperação antes de rebaixar",
+    "Revisar critérios a cada trimestre e checar o ROI de cada nível",
+    "Concentrar atendimento individual nos parceiros de maior potencial e atender a base por recursos online e comunidade"
+   ],
+   "resultados": [
+    "Parceiro sobe de nível",
+    "Parceiro mantido",
+    "Parceiro rebaixado após prazo",
+    "Parceiro encaminhado a desligamento"
+   ],
+   "papeis": [
+    "Farmer",
+    "Channel operations",
+    "Diretor"
+   ],
+   "metricas": [
+    "Volume de parceiros por nível",
+    "Tempo em cada nível",
+    "Percentual de negócios gerados por nível",
+    "Evolução dos canais dentro dos níveis"
+   ],
+   "citacao": "Toda vez que um parceiro atingir certos resultados ou atender certos requisitos, ele sobe de nível e recebe recursos melhores para gerar mais resultados.",
+   "pagina": "p. 134"
+  },
+  {
+   "nome": "Desligar parceiro e transferir o cliente",
+   "descricao": "Desligar parceiros inadequados ou inativos é necessário para evitar custo de gestão, mas é último recurso, depois de tentativas sistemáticas de recuperar o desempenho. Os critérios devem estar no contrato e o cliente deve passar sem atrito ao atendimento direto.",
+   "gatilho": "Parceiro com perfil inadequado ou inatividade além do prazo de recuperação.",
+   "etapas": [
+    "Tentar capacitar e mudar a performance de forma sistemática",
+    "Aplicar os critérios de desligamento previstos no contrato",
+    "Comunicar e documentar a decisão",
+    "Finalizar o contrato de parceria",
+    "Passar o cliente do canal do parceiro ao atendimento direto sem fricção"
+   ],
+   "resultados": [
+    "Desligado por perfil",
+    "Desligado por inatividade",
+    "Recuperado e mantido"
+   ],
+   "papeis": [
+    "Farmer",
+    "Diretor (aprova)",
+    "CS ou atendimento direto"
+   ],
+   "metricas": [
+    "Churn de parceiros",
+    "Parceiros inativos por trimestre"
+   ],
+   "citacao": "Churn de parceiros: em alguns momentos, vai ser importante desligar alguns parceiros de seu programa.",
+   "pagina": "p. 184"
+  },
+  {
+   "nome": "Projetar o resultado financeiro do programa",
+   "descricao": "Plano financeiro separado do core, com receita, custos fixos e variáveis, comissão, custo do time e DRE do canal, observando o fator tempo: nas fases iniciais o EBITDA tende a ser negativo e o objetivo é validar a tese.",
+   "gatilho": "Desenho inicial do programa e revisão a cada mudança de fase ou de regra de comissão.",
+   "etapas": [
+    "Projetar receita por modelo de parceria (parceiros esperados e resultado por parceiro)",
+    "Separar custos fixos (time) e variáveis (comissão, campanhas)",
+    "Apropriar custo do time de parcerias separado das demais estruturas",
+    "Montar DRE do canal com receita líquida, COGS, margem bruta, OPEX e EBITDA",
+    "Ler o resultado por fase (experimentação, tração, crescimento acelerado, otimização)"
+   ],
+   "resultados": [
+    "Programa que se sustenta no horizonte projetado",
+    "Ajuste de comissão ou escopo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Financeiro",
+    "Diretor"
+   ],
+   "metricas": [
+    "Receita via parceiros",
+    "Custo de aquisição via parceiro",
+    "EBITDA do canal",
+    "Payback"
+   ],
+   "citacao": "o seu plano financeiro pode ser tão simples quanto uma planilha com essas três linhas em um horizonte de tempo",
+   "pagina": "p. 170"
+  },
+  {
+   "nome": "Medir o ecossistema em painel enxuto",
+   "descricao": "Painel com poucos indicadores por fase da jornada do parceiro, mais KPIs da base de parceiros (funil de aquisição, churn, segmentação por ciclo de vida e desempenho), revisado a cada trimestre e visível tanto ao time interno quanto aos parceiros.",
+   "gatilho": "Rotina mensal de acompanhamento e revisão trimestral do painel.",
+   "etapas": [
+    "Escolher KPIs com meta e indicadores complementares por fase (aquisição, onboarding, ongoing, produção)",
+    "Coletar os dados nos sistemas existentes, com campos de parceiro no CRM",
+    "Segmentar a base de parceiros por ciclo de vida e desempenho",
+    "Dar visibilidade em tempo real ao time e ao parceiro",
+    "Revisar o painel a cada trimestre e ajustar indicadores"
+   ],
+   "resultados": [
+    "Decisão sobre níveis, comissão e investimento",
+    "Parceiro ou perfil em alerta"
+   ],
+   "papeis": [
+    "Channel operations (Portal)",
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Parceiros ativos",
+    "Parceiros produtivos",
+    "Clientes ativos via parceiro",
+    "Churn de parceiros"
+   ],
+   "citacao": "Crie uma estrutura de métricas sólida, mas não sobrecarregue a equipe com um grande número delas.",
+   "pagina": "p. 192"
+  },
+  {
+   "nome": "Avaliar a maturidade nos oito eixos do Octo",
+   "descricao": "Autoavaliação de 1 (baixa) a 5 (alta) em cada eixo, consolidada em um octógono; o objetivo é equilibrar os eixos, começando por fazer o básico bem-feito nos de menor maturidade. Os oito eixos são: Visão e Estratégia, Design e Modelos, Atração e Recrutamento, Capacitação, Co-GTM, Programa de Parceiros, Time de Parceiros e Gestão do Ecossistema, nos movimentos Arquitetura, Jornada do Parceiro e Gestão e Escala.",
+   "gatilho": "Início do programa e reavaliação periódica para acompanhar a evolução.",
+   "etapas": [
+    "Responder o prognóstico de maturidade de cada um dos oito eixos",
+    "Registrar a média de cada eixo no octógono",
+    "Identificar eixos com maturidade baixa e eixos que já geram resultado",
+    "Montar plano de ação para aproximar os níveis",
+    "Reavaliar depois de aplicar o plano"
+   ],
+   "resultados": [
+    "Plano de melhoria por eixo",
+    "Decisão de escalar ou de consolidar fundamentos"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Nível de maturidade por eixo (1 a 5)",
+    "Dispersão entre eixos"
+   ],
+   "citacao": "Indique na figura a seguir qual o nível de maturidade médio de sua organização em cada um dos eixos",
+   "pagina": "p. 196"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Parceiros ativos",
+   "definicao": "O que se relaciona à receita é o volume de canais ativos e com boa performance, não os cadastrados; um parceiro novo só conta depois da primeira venda ou implementação.",
+   "citacao": "O que está diretamente relacionado à receita é o volume de canais ativos e com boa performance.",
+   "pagina": "p. 74"
+  },
+  {
+   "nome": "Funil de aquisição de parceiros",
+   "definicao": "Volume de leads, taxas de conversão do funil e contabilização de novos parceiros, com o mesmo rigor do funil de clientes.",
+   "citacao": "todos os KPIs de avaliação do processo de aquisição de parceiros",
+   "pagina": "p. 184"
+  },
+  {
+   "nome": "Tempo médio para geração do primeiro negócio",
+   "definicao": "Prazo entre a entrada do parceiro e o primeiro negócio gerado, usado no onboarding (exemplo da Caju).",
+   "citacao": "tempo médio para geração do primeiro negócio",
+   "pagina": "p. 192"
+  },
+  {
+   "nome": "Volume de SAL por parceiro",
+   "definicao": "Quantidade de leads qualificados pelas vendas por parceiro, resultado do volume de leads e da conversão em SAL; considera segmento, porte e outros atributos do lead.",
+   "citacao": "Volume de SAL por parceiro: esse é o resultado das duas métricas anteriores",
+   "pagina": "p. 180"
+  },
+  {
+   "nome": "Taxa de conversão de SAL em venda",
+   "definicao": "Principal medida de eficiência do processo comercial; cada ponto percentual muda a necessidade de estrutura comercial. Referência: a conversão dos canais diretos.",
+   "citacao": "Taxa de conversão de SAL em vendas: essa será a medida principal de eficiência do seu processo comercial",
+   "pagina": "p. 181"
+  },
+  {
+   "nome": "Ciclo de vendas via parceiro",
+   "definicao": "Tempo até o fechamento quando há parceiro no processo; mostra ajustes necessários entre o processo da empresa e o do parceiro.",
+   "citacao": "Ciclo de vendas via parceiro: esse indicador terá impacto direto na sua taxa de conversão e tamanho do time comercial.",
+   "pagina": "p. 181"
+  },
+  {
+   "nome": "Eficiência de vendas de parceiro",
+   "definicao": "Vendas realizadas no mês divididas pela base total de parceiros, em geral em percentual; serve para calibrar a expectativa por nível.",
+   "citacao": "esse é um indicador mais finalístico que divide a quantidade de vendas realizadas no mês pela base total de parceiros",
+   "pagina": "p. 181"
+  },
+  {
+   "nome": "Churn de parceiros",
+   "definicao": "Desligamentos por perfil inadequado ou inatividade; deve ser formalizado no contrato como critério de sobrevivência do ecossistema.",
+   "citacao": "Churn de parceiros: em alguns momentos, vai ser importante desligar alguns parceiros de seu programa.",
+   "pagina": "p. 184"
+  },
+  {
+   "nome": "Satisfação do parceiro (NPS)",
+   "definicao": "Índice de satisfação do parceiro, por NPS ou por entrevista direta, usado desde a fase de experimentação; o livro recomenda também medir a satisfação do cliente indicado.",
+   "citacao": "Nível de satisfação do parceiro: também podemos usar aqui o NPS, especialmente se tivermos já uma base relevante de parceiros.",
+   "pagina": "p. 179"
+  },
+  {
+   "nome": "Representatividade de clientes originados por parceiros",
+   "definicao": "Participação dos clientes trazidos por parceiros frente à base de clientes diretos, indicador de ongoing usado pela Caju.",
+   "citacao": "representatividade de clientes originados por parceiros X a base de clientes diretos",
+   "pagina": "p. 192"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Cadastrar muitos parceiros sem medir quem realmente gera resultado distorce a análise: parece que canal não funciona ou que é caro demais.",
+   "citacao": "temos 10 cadastrados, mas só 1 trouxe cliente",
+   "pagina": "p. 74"
+  },
+  {
+   "alerta": "Impor um modelo de trabalho ao parceiro para que ele se adapte invariavelmente falha; o certo é recrutar quem já se adequa ao modelo.",
+   "citacao": "insistindo em impor um modelo de trabalho ao potencial parceiro de forma que ele se adeque ao modelo da parceria; isso invariavelmente falha",
+   "pagina": "p. 48"
+  },
+  {
+   "alerta": "Delegar ao parceiro todo o investimento e o esforço de gerar demanda tende ao fracasso, porque ele não financia mercado com uma fatia de receita futura.",
+   "citacao": "Delegar totalmente o investimento e a tarefa de gerar demanda e construir mercado para os parceiros (como um distribuidor ou representante) está, em sua maioria, fadado ao fracasso.",
+   "pagina": "p. 110"
+  },
+  {
+   "alerta": "Prometer fluxo recorrente de leads ao parceiro (por exemplo, pela Prateleira de RFP) pode acomodar o parceiro ou ser impossível de sustentar ao crescer.",
+   "citacao": "pode gerar parceiros mais acomodados ou simplesmente não ser possível seguir gerando volume ao expandir seu ecossistema.",
+   "pagina": "p. 112"
+  },
+  {
+   "alerta": "Comissão mal definida vira custo que pressiona a operação e pode inviabilizar o crescimento; modelos de indicação, em que a empresa ainda faz todo o processo comercial, pedem comissão menor.",
+   "citacao": "o comissionamento pode facilmente se tornar um custo que pressione muito sua operação por eficiência caso seja mal definido",
+   "pagina": "p. 171"
+  },
+  {
+   "alerta": "Na fase de experimentação, perseguir eficiência financeira como objetivo principal atrapalha o foco, que é validar as teses; custo alto e EBITDA negativo são esperados.",
+   "citacao": "eficiência financeira nesse período como objetivo principal pode atrapalhar o foco da fase: validar suas teses",
+   "pagina": "p. 176"
+  },
+  {
+   "alerta": "Comissão sobre indicação pode criar conflito de interesses percebido, sobretudo quando o parceiro é um profissional de confiança do cliente (caso dos contadores da Omie).",
+   "citacao": "alguns contadores se sentiam numa situação desconfortável porque a comissão os colocava com potencial de conflito de interesses com clientes.",
+   "pagina": "p. 86"
+  },
+  {
+   "alerta": "Modelo de afiliado não serve quando já existe excedente de demanda para o time comercial, pois gera ruptura no atendimento ao cliente.",
+   "citacao": "Não fazer quando: já existe excedente de demanda para o seu time comercial, pois isso gerará ruptura no atendimento ao cliente.",
+   "pagina": "p. 52"
+  }
+ ]
+}

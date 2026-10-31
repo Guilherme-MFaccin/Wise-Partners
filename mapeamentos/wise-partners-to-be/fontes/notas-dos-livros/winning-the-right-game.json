@@ -1,0 +1,583 @@
+{
+ "livro": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World",
+ "autores": "Ron Adner",
+ "slug": "winning-the-right-game",
+ "tese": "Em ecossistemas, o problema central é o alinhamento de parceiros em torno de uma arquitetura de valor, e não a tecnologia ou a execução isolada. Ecossistemas se constroem em etapas, a partir de um ecossistema mínimo viável e do aproveitamento de relações já existentes (carryover), e liderar é um papel que só vale se os parceiros aceitarem seguir. Quem alinha vence, e falhar no alinhamento significa perder, não ficar em segundo lugar.",
+ "recomendacoes": [
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Definir o MVE do programa como a menor configuração que gere evidência de valor para atrair o próximo parceiro: poucos parceiros de uma mesma categoria, a Prateleira de RFP com clientes reais da Wise e uma indicação no ICP que virou reunião.",
+   "processo": "Definir o MVE do programa",
+   "citacao": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
+   "pagina": "p. 83",
+   "aplicabilidade": "alta",
+   "porque": "Com zero parceiros assinados e 12 horas por mês, o programa precisa de uma versão mínima que prove valor, em vez de lançar tudo para todos."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Tratar os primeiros clientes indicados como evidência para recrutar o parceiro seguinte, não como receita: a meta de 1 cliente fechado vindo de indicação deve virar caso de prova usado no recrutamento.",
+   "processo": "Transformar a primeira indicação fechada em caso de prova",
+   "citacao": "because the purpose of the MVE is to attract partners, the key contribution of customers in the MVE stage is not to drive profit, but rather to create evidence to drive partner commitment.",
+   "pagina": "p. 83",
+   "aplicabilidade": "alta",
+   "porque": "A meta de 10 parcerias até 31/12/2026 depende de prova social, e o 40% da primeira mensalidade é pequeno diante do valor de um caso citável."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Fixar por escrito a ordem de lançamento dos pilares, com a regra de que cada etapa deve construir o programa e facilitar a etapa seguinte. Aplicação ao caso: 1) Prateleira de RFP com 3 a 5 parceiros âncora, 2) indicações com link exclusivo, SLA e comissão, 3) Base Ativa em turma pequena, só depois que os gatilhos da etapa anterior forem atingidos.",
+   "processo": "Sequenciar o lançamento dos pilares por etapas",
+   "citacao": "Staged expansion is the logic for why Partner B is added second rather than third",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "O livro não trata dos pilares da Wise. A ordem proposta é inferência: a Prateleira exige pouco do parceiro e usa a demanda que a Wise já tem; o Base Ativa exige mais do parceiro (12 semanas, carteira, evento) e mais horas da Wise, então depende de evidência prévia."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Escolher os primeiros parceiros pelo poder de atrair os seguintes (referência na categoria, entidade com carteira ou evento de peso), não pelo volume imediato de indicações.",
+   "processo": "Selecionar parceiros âncora",
+   "citacao": "The role of early partners is not to drive profits, but to attract subsequent partners and create the evidence required for their confident participation.",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "Com 21 prospects em conversa e capacidade de fechar poucos, a seleção deve priorizar quem destrava os próximos, por exemplo uma associação ou um ERP conhecido nas indústrias-alvo."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Usar o carryover: recrutar primeiro entre fornecedores que já aparecem nas indústrias atendidas por Wise Makers, Tríade e Swallow, porque a relação existente reduz o custo de alinhamento.",
+   "processo": "Mapear fornecedores já presentes na carteira do grupo",
+   "citacao": "Partners who were onboarded into Ecosystem 1 can be carried over to help jump-start the MVE for Ecosystem 2.",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "O grupo já tem relações com indústrias e com seus fornecedores de ERP, MES e CRM; é o ativo que um programa novo não consegue comprar."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Começar com um subconjunto pequeno de parceiros dispostos a investir mais e dar a eles status certificado e prioridade em leads em troca do investimento, em vez de abrir os níveis para todos.",
+   "processo": "Certificar parceiros iniciais em troca de leads",
+   "citacao": "In exchange for certified status and the promise of business leads, these locksmiths would invest in developing the new skill set required.",
+   "pagina": "p. 104",
+   "aplicabilidade": "media",
+   "porque": "Espelha a troca certificação por leads do caso ASSA ABLOY e sustenta a lógica de Elite, Premium e Select, mas o livro não discute níveis formais nem revisão trimestral."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Não vender o programa como co-criação aberta: a Wise define o desenho (níveis, 40% da primeira mensalidade, proteção de 180 dias, desligamento formal) e o parceiro adere. Co-criar cada contrato dá ao parceiro a mesma pretensão de liderar.",
+   "processo": "Padronizar o contrato de adesão do programa",
+   "citacao": "If your process is co-creation, do not be surprised when partners feel they have as natural a claim on leadership as you do.",
+   "pagina": "p. 94",
+   "aplicabilidade": "alta",
+   "porque": "Uma pessoa com 12 horas por mês não consegue negociar 10 contratos diferentes, e termos sob medida enfraquecem a posição de líder do programa."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Só tratar como parceria o que tiver papel, termos e contrapartidas assinados. Conversa e piloto sem papéis definidos não justificam alocar horas do Gerente de Parcerias.",
+   "processo": "Exigir papéis e termos assinados antes de alocar esforço",
+   "citacao": "Pilots can thrive under ambiguity, but until roles are resolved, it is impossible to allocate the resources required for success at a commercial scale.",
+   "pagina": "p. 153",
+   "aplicabilidade": "alta",
+   "porque": "Há cerca de 21 prospects em conversa e nenhum assinado; o risco descrito no livro é exatamente ficar em piloto sem escala."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Fixar as regras de governança do programa nos primeiros contratos, enquanto ainda são maleáveis: proteção de 180 dias, nota de qualidade, revisão trimestral e desligamento formal.",
+   "processo": "Incluir regras de governança nos contratos fundadores",
+   "citacao": "They shaped the long term-governance of the ecosystem when the rules were still malleable.",
+   "pagina": "p. 160",
+   "aplicabilidade": "media",
+   "porque": "No livro quem moldou as regras foram os seguidores espertos no início; para a Wise, os primeiros 10 contratos criam o precedente que será difícil mudar depois."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Escrever a proposta de valor pelo benefício que o consumidor final recebe e escolher o consumidor final de propósito. No programa o consumidor final é a indústria cliente, e o parceiro é co-criador do valor, não o beneficiário final.",
+   "processo": "Definir a proposta de valor e o consumidor final do programa",
+   "citacao": "A value proposition is defined by the benefit that the end consumer is supposed to receive from your efforts.",
+   "pagina": "p. 23",
+   "aplicabilidade": "alta",
+   "porque": "Evita que o programa seja descrito só como comissão para o parceiro; a lógica é que a carteira do parceiro recebe algo que a indústria quer."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Montar a arquitetura de valor do programa em elementos (por exemplo acesso a demanda qualificada, credibilidade por certificação, comunidade ativa com evento, proteção da indicação) separada do modelo de negócio e dos 40%.",
+   "processo": "Mapear a arquitetura de valor do programa",
+   "citacao": "The value architecture is not a business model. Where a business model is focused on how you operate to get paid by a customer, a value architecture is focused on how you construct the value",
+   "pagina": "p. 28",
+   "aplicabilidade": "alta",
+   "porque": "O livro chama de arquitetura de valor o que o briefing descreve como estrutura de valor; ela mostra quais elementos cada pilar entrega e quais parceiros os sustentam."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Responder por escrito à pergunta sobre a base de liderança da Wise: a demanda das indústrias da carteira do grupo, que parceiros querem acessar. O MVE deve tornar essa base visível ao parceiro.",
+   "processo": "Documentar a base de liderança da Wise",
+   "citacao": "the question ‘What is your MVE?’ is the response to ‘What is your basis for leadership?’",
+   "pagina": "p. 148",
+   "aplicabilidade": "alta",
+   "porque": "A Wise não é ICP do parceiro, mas lidera porque controla acesso a indústrias; sem essa base, os parceiros contestam o papel."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Definir o papel de cada tipo de parceiro (software, entidade, feira) no programa e verificar se cada um aceita ocupar esse papel, em vez de somar nomes à lista.",
+   "processo": "Definir o papel de cada tipo de parceiro",
+   "citacao": "The heart of ecosystem strategy is finding a way to align partners into the structural arrangement (i) that you want them in; and (ii) that they are willing to occupy.",
+   "pagina": "p. 25",
+   "aplicabilidade": "alta",
+   "porque": "O programa mistura fornecedores de software e entidades com motivações diferentes; o livro pede papel claro e aceito, não só adesão."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Em categorias em que o parceiro já tem seu próprio programa de canais (grandes ERPs), a Wise deve assumir o papel de seguidora: entender a arquitetura do parceiro e encaixar sua oferta nela, em vez de tentar liderar.",
+   "processo": "Encaixar a oferta da Wise em programas de grandes parceiros",
+   "citacao": "better than simply walking away when you cannot lead is finding a way to fit your offer within someone else’s vision",
+   "pagina": "p. 157",
+   "aplicabilidade": "media",
+   "porque": "Grandes fornecedores tendem a não aceitar seguir a Wise; o livro trata seguir como papel estratégico, mas não cobre contratos de canal."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Explicitar que a Wise exerce o papel de líder do programa (estrutura, regras e ritmo) e que seu desempenho é medido pela capacidade de alinhar parceiros, não pelo volume que a Wise fatura sozinha.",
+   "processo": "Definir o papel de líder do programa e os papéis dos seguidores",
+   "citacao": "leadership is not an outcome but a role. It is measured in terms of your ability to align others around a value architecture that delivers the value proposition.",
+   "pagina": "p. 142",
+   "aplicabilidade": "alta",
+   "porque": "Orienta o desenho de papéis: Gerente de Parcerias opera o alinhamento e o Diretor aprova as assinaturas como decisão de entrada no ecossistema."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Tratar Wise Makers, Tríade e Swallow como um ecossistema interno: combinar com o comercial e a entrega do grupo o tratamento e o SLA das indicações antes de lançar o link exclusivo, para que o fluxo seja rotina e não esforço individual.",
+   "processo": "Alinhar o ecossistema interno do grupo para tratar indicações",
+   "citacao": "Innovating successfully in an internal ecosystem follows the same approach that we take in an external ecosystem: What is our MVE?",
+   "pagina": "p. 184",
+   "aplicabilidade": "alta",
+   "porque": "Uma indicação que ninguém atende no prazo destrói a evidência que o MVE precisa produzir."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Antes de abrir uma nova categoria de parceiro ou um novo pilar, aplicar as duas perguntas de legitimidade: a nova categoria acha a liderança da Wise convincente, e os parceiros atuais continuam aceitando seu papel.",
+   "processo": "Testar a legitimidade de liderança antes de expandir",
+   "citacao": "As you expand the value proposition, will your new partners find your leadership claim to be at least as convincing as your current partners find it to be?",
+   "pagina": "p. 149",
+   "aplicabilidade": "alta",
+   "porque": "O caminho de fornecedores de software para entidades e feiras muda o tipo de parceiro; o teste evita assumir que o papel de líder se transfere."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Revisar cada expansão do programa pelo teste da reação do parceiro: se o parceiro ouvisse a ideia, diria que é ótima ou que o incomoda. Evitar oferecer serviços que invadam o negócio central dele.",
+   "processo": "Avaliar a reação do parceiro a mudanças no programa",
+   "citacao": "Response A signals that you are embarking on a relationship-enhancing trajectory. Response B is a relationship-degrading trajectory.",
+   "pagina": "p. 76",
+   "aplicabilidade": "alta",
+   "porque": "Cruzamento de carteiras, comunicados e ranking podem ser lidos pelo parceiro como invasão; o livro mostra que ninguém na sala de planejamento defende o ponto de vista de quem é externo."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Para cada pilar ainda não lançado, listar os indicadores que precisam ficar verdes antes do lançamento e esperar com clareza, em vez de lançar cedo e esgotar as 12 horas mensais numa operação sem massa crítica.",
+   "processo": "Definir gatilhos de liberação de cada pilar",
+   "citacao": "Slowing down to allow emergence challenges to resolve can be a wiser course than burning resources and then starting a long wait.",
+   "pagina": "p. 133",
+   "aplicabilidade": "alta",
+   "porque": "O Base Ativa depende de parceiros assinados e de prova de indicação; lançá-lo antes disso consome a capacidade escassa sem retorno."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Desenhar o link exclusivo e a rotina de indicação para encaixar nos fluxos que o parceiro já usa, sem exigir mudança de sistema ou processo dele. Soluções elegantes que exigem que o parceiro abandone o que já funciona falham.",
+   "processo": "Simplificar o fluxo de indicação para encaixar no parceiro",
+   "citacao": "it was designed to be easy to integrate with the system integrators’ existing protocols.",
+   "pagina": "p. 106",
+   "aplicabilidade": "alta",
+   "porque": "O caso ASSA ABLOY compara uma solução aberta que falhou com uma mais modesta que encaixou nos protocolos existentes; serve de critério para o formulário e o link do portal."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Antes de ativar um parceiro, mapear o que ele precisa ter pronto para indicar (lista da carteira, clareza do ICP, alguém que conduza, material) e quem decide adotar do lado dele.",
+   "processo": "Mapear pré-requisitos do parceiro para indicar",
+   "citacao": "What else needs to be created to support our target value proposition? Who will be creating it?",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "A ativação na primeira indicação no ICP que virou reunião só ocorre se o parceiro tiver esses pré-requisitos; o onboarding de 30, 60 e 90 dias pode checá-los."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Testar o desenho de incentivos pelas duas perguntas: o parceiro ganha quando a Wise ganha, e a Wise ganha quando o parceiro ganha. Resposta negativa em qualquer uma indica conflito na regra de comissão ou de atribuição.",
+   "processo": "Validar o alinhamento de ganhos na regra de comissão",
+   "citacao": "Do they win when you win? Do you win when they win? The answers should be “yes,” and “yes.”",
+   "pagina": "p. 158",
+   "aplicabilidade": "alta",
+   "porque": "Aplica-se à comissão de 40% da primeira mensalidade, à proteção de 180 dias e à nota de qualidade da indicação."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Mapear de onde cada tipo de parceiro tira seu lucro (licença, implantação, mensalidade, evento, filiação) antes de propor a parceria, para saber se indicar a Wise soma ao lucro dele ou o ameaça.",
+   "processo": "Mapear o foco de lucro de cada parceiro",
+   "citacao": "What the publishers missed, of course, is that the driver of Apple’s profits was selling hardware",
+   "pagina": "p. 158",
+   "aplicabilidade": "media",
+   "porque": "O livro mostra o erro de ler mal o motivo do outro lado; vale para entidades e feiras, cujo lucro vem de filiação e patrocínio, diferente do de um ERP."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Publicar uma política de dados do programa: a Wise não usa a carteira nem os dados do parceiro para fins alternativos nem para abordar os clientes dele por fora, e o cruzamento de carteiras só ocorre com consentimento e finalidade declarada.",
+   "processo": "Definir a política de uso dos dados da carteira do parceiro",
+   "citacao": "We don’t compete with our customers. We use customer data only to improve our products",
+   "pagina": "p. 66",
+   "aplicabilidade": "alta",
+   "porque": "A confiança do parceiro depende de saber que a Wise não é concorrente pela carteira; é o argumento que TomTom usou para ser escolhida em vez do Google."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Investir em capacitar o parceiro nas práticas que determinam a qualidade das indicações (mentoria, certificação), porque o desempenho do programa depende da capacidade dele e não só da Wise.",
+   "processo": "Capacitar parceiros nas práticas que sustentam a indicação",
+   "citacao": "In 2010, the company built a dedicated team of consultants to help these partners become more efficient, identifying problems at their warehouses and educating them on best practices.",
+   "pagina": "p. 55",
+   "aplicabilidade": "media",
+   "porque": "Wayfair elevou a operação dos fornecedores para melhorar o resultado; com 12 horas por mês, a capacitação precisa ser em formato padronizado."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Comunicar o programa de modo que o parceiro seja o protagonista: no Base Ativa a comunidade, o evento e a relação com a carteira são dele, e a Wise aparece como quem viabiliza.",
+   "processo": "Comunicar o ganho e o protagonismo do parceiro",
+   "citacao": "Establishing leadership means guiding independent partners toward your chosen goal, while allowing them to maintain their sense that they remain the heroes of their own story.",
+   "pagina": "p. 166",
+   "aplicabilidade": "alta",
+   "porque": "Alinha o texto de comunicados, convites e pitch de recrutamento com a lógica de diplomacia, não de autoridade."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Começar cedo a construir confiança com entidades e parceiros âncora, antes de precisar pedir algo a eles, e manter contato regular na etapa de nutrição do funil.",
+   "processo": "Nutrir a confiança com parceiros e entidades antes do pedido",
+   "citacao": "If you only start building trust when you need to call on that trust, you have started too late.",
+   "pagina": "p. 80",
+   "aplicabilidade": "media",
+   "porque": "Justifica a etapa de nutrição no funil de recrutamento e o contato com feiras como a Expo+Indústria muito antes da assinatura."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Definir critérios explícitos para parar de investir numa categoria de parceiro ou num pilar e mudar de papel, em vez de continuar até esgotar as horas do Gerente de Parcerias.",
+   "processo": "Definir critérios de parada por categoria de parceiro",
+   "citacao": "The only hard stop to firms throwing good money after bad is the limit of their bank account, or the patience of their investors.",
+   "pagina": "p. 156",
+   "aplicabilidade": "baixa",
+   "porque": "O livro fala de abandono de liderança, não de desligamento formal de parceiros; serve só como alerta para fixar o limite antes de começar."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Construir os módulos do Portal na ordem das etapas do programa (funil, onboarding, indicações e comissões primeiro; ranking, comunicados e cruzamento de carteiras depois), porque plataforma vem depois de o alinhamento estar estabelecido.",
+   "processo": "Sequenciar os módulos do portal pelas etapas de expansão",
+   "citacao": "This is why, in general, platforms are built only after ecosystem foundations have been established.",
+   "pagina": "p. 47",
+   "aplicabilidade": "alta",
+   "porque": "Evita investir em recursos de rede (ranking, comunidade) antes de existirem parceiros alinhados; é uma nota de rodapé do autor, mas é direta."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Na etapa inicial medir uso e evidência (indicações recebidas, reuniões geradas, parceiros ativados), não receita, e usar esses números como gatilho para a etapa seguinte.",
+   "processo": "Medir uso e evidência na etapa inicial",
+   "citacao": "The focus was not revenue or marketing buzz, but usage",
+   "pagina": "p. 88",
+   "aplicabilidade": "alta",
+   "porque": "A Alexa lançou o primeiro estágio medindo uso; para a Wise, a ativação na primeira indicação no ICP que virou reunião é o equivalente."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Definir o MVE do programa",
+   "descricao": "O MVE é a menor configuração de atividades que cria evidência suficiente de valor para atrair parceiros; serve para alinhar parceiros, não para testar demanda do cliente, e é escolha estratégica, não determinística.",
+   "gatilho": "Decisão de lançar o programa ou um novo pilar",
+   "etapas": [
+    "Escrever a proposta de valor e o consumidor final",
+    "Listar os elementos da arquitetura de valor",
+    "Escolher a menor configuração que gere evidência",
+    "Escolher os parceiros que a viabilizam",
+    "Definir a evidência que será gerada e o critério para passar à etapa seguinte"
+   ],
+   "resultados": [
+    "MVE aprovado e em operação",
+    "MVE redesenhado por falta de parceiro viável",
+    "Adiar até resolver pré-requisitos"
+   ],
+   "papeis": [
+    "Diretor (aprova)",
+    "Gerente de Parcerias (opera)",
+    "Parceiros âncora"
+   ],
+   "metricas": [
+    "Evidência gerada por parceiro",
+    "Parceiros âncora ativados"
+   ],
+   "citacao": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
+   "pagina": "p. 83"
+  },
+  {
+   "nome": "Sequenciar a expansão por etapas",
+   "descricao": "Depois do MVE, cada parceiro ou atividade entra numa ordem explícita: o parceiro B vem antes do C porque facilita trazer o C. Cada entrada constrói a arquitetura e abre caminho ao próximo; no caso Alexa foram cinco estágios e no ASSA ABLOY a ordem das etapas multiplicou as chances da seguinte.",
+   "gatilho": "Gatilho de etapa atingido",
+   "etapas": [
+    "Listar partes e pilares por ordem de dependência",
+    "Justificar por que cada um vem antes do próximo",
+    "Definir o gatilho de cada passagem",
+    "Executar a etapa",
+    "Revisar o plano com o que a etapa gerou"
+   ],
+   "resultados": [
+    "Passar à etapa seguinte",
+    "Manter a etapa e reforçar a evidência",
+    "Reordenar o plano"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Gatilhos atingidos por etapa"
+   ],
+   "citacao": "the order of staged expansion matters.",
+   "pagina": "p. 107"
+  },
+  {
+   "nome": "Mapear a arquitetura de valor do programa",
+   "descricao": "A arquitetura de valor é o conjunto de elementos que, juntos, criam a proposta de valor; parte da intuição do cliente, define a proposta e a decompõe em elementos, antes de descer a atividades, parceiros e tecnologias.",
+   "gatilho": "Início do desenho ou revisão anual do programa",
+   "etapas": [
+    "Partir da percepção do cliente industrial",
+    "Articular a proposta de valor",
+    "Decompor em elementos de valor",
+    "Ligar cada elemento a parceiros e atividades",
+    "Perguntar o que muda se um parceiro ficar dez vezes melhor e mais barato"
+   ],
+   "resultados": [
+    "Arquitetura publicada e compartilhada",
+    "Elementos fracos identificados"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [],
+   "citacao": "A value architecture is defined by the elements that are brought together to create the value proposition.",
+   "pagina": "p. 26"
+  },
+  {
+   "nome": "Selecionar parceiros por carryover",
+   "descricao": "Parceiros e relações construídos num ecossistema são levados para acelerar o MVE de outro; é o ativo central de incumbentes e a forma de alinhar parceiros conservadores.",
+   "gatilho": "Abertura de nova categoria de parceiro",
+   "etapas": [
+    "Listar relações já existentes no grupo",
+    "Identificar quais elementos da arquitetura cada uma pode preencher",
+    "Convidar um subconjunto disposto a investir",
+    "Dar status certificado e leads em troca",
+    "Medir a evidência gerada"
+   ],
+   "resultados": [
+    "Parceiros âncora confirmados",
+    "Categoria adiada por falta de relação prévia"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Parceiros vindos de relações existentes"
+   ],
+   "citacao": "Partners who were onboarded into Ecosystem 1 can be carried over to help jump-start the MVE for Ecosystem 2.",
+   "pagina": "p. 84"
+  },
+  {
+   "nome": "Testar a legitimidade de liderança",
+   "descricao": "Duas perguntas aplicadas por tipo de parceiro e a cada expansão: os novos parceiros acham a liderança convincente e os atuais aceitam continuar no papel. Um não a qualquer uma indica que o papel será contestado.",
+   "gatilho": "Expansão da proposta de valor ou entrada de nova categoria de parceiro",
+   "etapas": [
+    "Listar parceiros novos e atuais afetados",
+    "Perguntar se a liderança é convincente para cada tipo",
+    "Perguntar se cada parceiro atual aceita seu papel",
+    "Decidir entre estender o ecossistema atual ou construir um novo",
+    "Ajustar o MVE e o papel"
+   ],
+   "resultados": [
+    "Expandir dentro da estrutura atual",
+    "Reconquistar a liderança com novo MVE",
+    "Assumir papel de seguidor"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Parceiros que aceitam o papel"
+   ],
+   "citacao": "As you expand the value proposition, will your existing partners continue to accept their current role?",
+   "pagina": "p. 150"
+  },
+  {
+   "nome": "Avaliar a reação do parceiro a mudanças",
+   "descricao": "Teste para qualquer mudança de arquitetura que toque o território de um parceiro: a reação provável seria entusiasmo ou desconforto. Desconforto degrada o relacionamento, e quanto mais crítico o parceiro, mais cuidado.",
+   "gatilho": "Proposta de novo serviço, recurso ou regra que afete parceiros",
+   "etapas": [
+    "Descrever a mudança na perspectiva do parceiro",
+    "Prever a reação como A (ótima ideia) ou B (desconforto)",
+    "Se B, decidir se o relacionamento pode absorver",
+    "Se crítico, ajustar a mudança ou direcioná-la a outro domínio"
+   ],
+   "resultados": [
+    "Mudança aprovada",
+    "Mudança ajustada",
+    "Mudança redirecionada"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Reações A e B por mudança"
+   ],
+   "citacao": "Response A signals that you are embarking on a relationship-enhancing trajectory. Response B is a relationship-degrading trajectory.",
+   "pagina": "p. 76"
+  },
+  {
+   "nome": "Decidir entre agir, esperar, mudar o alvo ou moldar o contexto",
+   "descricao": "Quatro opções diante de um pilar cujos pré-requisitos não estão prontos: agir, esperar com clareza do que se espera, mudar para um alvo mais fácil ou moldar o contexto com pré-posicionamento.",
+   "gatilho": "Revisão de prontidão antes de lançar um pilar",
+   "etapas": [
+    "Listar desafios de emergência e de adoção",
+    "Avaliar se cada um se resolve e quando",
+    "Escolher agir, esperar, mudar o alvo ou moldar",
+    "Definir o que será monitorado",
+    "Reavaliar ao ritmo do programa"
+   ],
+   "resultados": [
+    "Lançar",
+    "Esperar com indicadores definidos",
+    "Começar por categoria mais fácil",
+    "Pré-posicionar com ação de baixo custo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Indicadores de prontidão"
+   ],
+   "citacao": "If your choice is to wait, the key is to be clear and articulate about what it is that you are waiting for",
+   "pagina": "p. 133"
+  },
+  {
+   "nome": "Exercer o papel de seguidor inteligente",
+   "descricao": "Quando não se pode liderar, escolher o líder certo: entender a arquitetura dele, aplicar o teste de legitimidade e verificar se os ganhos estão alinhados; e moldar as regras para os outros seguidores enquanto a janela está aberta.",
+   "gatilho": "Parceiro grande com programa de canais próprio",
+   "etapas": [
+    "Entender como o líder define valor e o papel proposto",
+    "Aplicar o teste de legitimidade ao líder",
+    "Confirmar o alinhamento de ganhos",
+    "Negociar regras do conjunto de seguidores enquanto são maleáveis"
+   ],
+   "resultados": [
+    "Entrar como seguidor",
+    "Declinar e seguir sem esse parceiro"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [],
+   "citacao": "insist on understanding the value architecture that the leader seeks to construct.",
+   "pagina": "p. 158"
+  },
+  {
+   "nome": "Alinhar o ecossistema interno",
+   "descricao": "Iniciativas que cruzam áreas exigem as mesmas ferramentas do alinhamento externo: MVE, expansão em etapas e carryover; pilotos que dependem de esforço individual desaparecem ao fim.",
+   "gatilho": "Lançamento de fluxo que depende de outras áreas, como tratar indicações",
+   "etapas": [
+    "Mapear áreas envolvidas",
+    "Definir o MVE interno",
+    "Acordar rotinas, prazos e orçamento entre áreas",
+    "Escalar por etapas",
+    "Verificar se virou rotina"
+   ],
+   "resultados": [
+    "Fluxo operando como rotina",
+    "Piloto encerrado sem escala"
+   ],
+   "papeis": [
+    "Diretor",
+    "Comercial do grupo",
+    "Entrega do grupo",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Indicações tratadas no SLA"
+   ],
+   "citacao": "because the ecosystem was “bent” to make them work; it was not realigned to make them routine.",
+   "pagina": "p. 184"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Evidência de valor gerada por parceiro",
+   "definicao": "Quantidade e qualidade da prova produzida pelo parceiro (indicação no ICP que virou reunião, cliente fechado) capaz de atrair o parceiro seguinte; o livro não dá fórmula, apenas o critério.",
+   "citacao": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
+   "pagina": "p. 83"
+  },
+  {
+   "nome": "Uso ativo na etapa inicial",
+   "definicao": "Uso real do mecanismo (por exemplo indicações enviadas por parceiro ativado) priorizado sobre receita e divulgação no estágio 1.",
+   "citacao": "The focus was not revenue or marketing buzz, but usage",
+   "pagina": "p. 88"
+  },
+  {
+   "nome": "Indicadores de prontidão por etapa",
+   "definicao": "Lista de condições que precisam ficar verdes antes de lançar o próximo pilar ou categoria, definidas de antemão.",
+   "citacao": "laying out the critical indicators that need to turn green before real action can begin.",
+   "pagina": "p. 133"
+  },
+  {
+   "nome": "Aceitação do papel pelos parceiros atuais",
+   "definicao": "Proporção de parceiros que respondem sim à pergunta se continuarão no papel atual quando o programa se expandir; indicador qualitativo derivado do teste de legitimidade.",
+   "citacao": "will your existing partners continue to accept their current role?",
+   "pagina": "p. 150"
+  },
+  {
+   "nome": "Reação do parceiro à mudança (A ou B)",
+   "definicao": "Registro por mudança proposta se a reação prevista do parceiro seria entusiasmo ou desconforto, com acompanhamento dos casos B.",
+   "citacao": "Response A signals that you are embarking on a relationship-enhancing trajectory.",
+   "pagina": "p. 76"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Armadilha do ego-sistema: presumir que o programa é o centro e que os parceiros aceitarão seguir. Se todos acham que lideram, ninguém lidera e a coordenação quebra.",
+   "citacao": "if everyone believes that they are the leader, then no one is the leader, and coordination and effectiveness break down.",
+   "pagina": "p. 142"
+  },
+  {
+   "alerta": "Presumir liderança cria a ilusão de seguidores; seguimento não pode ser assumido, nem entre parceiros que já estão no programa.",
+   "citacao": "Presuming leadership creates the illusion of followership.",
+   "pagina": "p. 146"
+  },
+  {
+   "alerta": "Pilotos e conversas sem papéis definidos: parcerias que começam e não vão a lugar nenhum, consumindo horas sem escala.",
+   "citacao": "it is getting started and then going nowhere: zombie initiatives stuck in pilot hell.",
+   "pagina": "p. 153"
+  },
+  {
+   "alerta": "Lançar todos os pilares de uma vez, ou pular uma etapa, faz o programa engasgar: a segunda mordida antes da primeira.",
+   "citacao": "How do you choke on an elephant? Take the second bite before the first.",
+   "pagina": "p. 81"
+  },
+  {
+   "alerta": "Usar um protótipo cru para engajar parceiros até permite co-criar, mas não alinha, e o programa perde o direito de definir as regras.",
+   "citacao": "Although you can engage partners with a crude prototype, you cannot align them.",
+   "pagina": "p. 94"
+  },
+  {
+   "alerta": "Expandir para o território do próprio parceiro é a tentação mais próxima e a que mais corrói a coalizão; avaliar antes de mexer em serviços que o parceiro vende.",
+   "citacao": "often the most tempting adjacencies are the ones closest to your partners’ interests.",
+   "pagina": "p. 75"
+  },
+  {
+   "alerta": "Chegar cedo demais esgota recursos antes de o ecossistema estar pronto; com 12 horas mensais, o risco é maior ainda.",
+   "citacao": "being too early and exhausting their resources before the revolution actually begins.",
+   "pagina": "p. 114"
+  },
+  {
+   "alerta": "Tratar o cliente interno como sinal de demanda de mercado: demanda dos clientes da própria Wise pode mascarar a necessidade de alinhar parceiros e a rotina interna.",
+   "citacao": "that the internal customer is taken as an unbiased signal of market demand",
+   "pagina": "p. 156"
+  }
+ ]
+}

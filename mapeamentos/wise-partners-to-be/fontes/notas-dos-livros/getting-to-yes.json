@@ -1,0 +1,658 @@
+{
+ "livro": "Getting to Yes: Negotiating Agreement Without Giving In",
+ "autores": "Roger Fisher, William Ury e Bruce Patton",
+ "slug": "getting-to-yes",
+ "tese": "Negociar sobre mérito, e não sobre posições, produz acordos mais sábios, rápidos e preservam a relação. O método tem quatro pontos: separar pessoas do problema, focar interesses, inventar opções de ganho mútuo e insistir em critérios objetivos, tendo sempre claro a melhor alternativa a um acordo (BATNA) como medida do que aceitar ou recusar.",
+ "recomendacoes": [
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Negociar interesses e não posições: para cada prospect, registrar o interesse por trás de cada exigência (percentual, nível, contrapartida) antes de qualquer contraproposta, e manter no app uma lista escrita e ordenada de interesses dos dois lados.",
+   "processo": "Registrar interesses do parceiro e da Wise",
+   "citacao": "Your position is something you have decided upon. Your interests are what caused you to so decide.",
+   "pagina": "p. 58",
+   "aplicabilidade": "alta",
+   "porque": "Pedidos como mais comissão ou nível Elite são posições; por trás pode haver receita previsível, status ou proteção da carteira, e o app pode guardar essa leitura por prospect."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Para cada prospect, registrar qual decisão a Wise está pedindo (assinar o termo, abrir a carteira, aceitar o evento) e por que ele ainda não a tomou, em vez de supor interesse.",
+   "processo": "Mapear a decisão percebida pelo prospect",
+   "citacao": "One of the most useful ways to uncover interests is first to identify the basic decision that those on the other side probably see you asking them for",
+   "pagina": "p. 61",
+   "aplicabilidade": "alta",
+   "porque": "Com cerca de 21 prospects em conversa e nenhum assinado, entender o que trava a decisão de cada um vale mais que insistir no mesmo argumento."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Modelar cada parceiro como organização com vários decisores e interesses (comercial, sucesso do cliente, diretoria; no caso de associação, diretoria e associados), com contato principal e a decisão de cada pessoa.",
+   "processo": "Mapear decisores e interesses do prospect",
+   "citacao": "Thinking of negotiation as a two-person, two-sided affair can be illuminating, but it should not blind you to the usual presence of other persons, other sides, and other influences.",
+   "pagina": "p. 64",
+   "aplicabilidade": "alta",
+   "porque": "Fornecedores de ERP, CRM ou MES e entidades como a Expo+Indústria decidem em comitê ou diretoria, e quem conversa com a Wise raramente é quem assina."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Formular cada proposta como uma proposição que o parceiro possa aceitar com um simples sim, realista e operacional, e testá-la contra a objeção mais forte que ele ouviria internamente antes de enviar.",
+   "processo": "Redigir proposta aceitável com um sim",
+   "citacao": "Try to draft a proposal to which their responding with the single word “yes” would be sufficient, realistic, and operational.",
+   "pagina": "p. 91",
+   "aplicabilidade": "alta",
+   "porque": "Reduz a fricção entre a reunião e a assinatura e obriga o Gerente de Parcerias a olhar a proposta pelo lado de quem decide."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Na reunião de apresentação, abrir pelo problema e pelos interesses (carteira que não vira comunidade, indicação que vira reunião) e só depois mostrar pacote, comissão e contrapartidas.",
+   "processo": "Conduzir a reunião de apresentação do programa",
+   "citacao": "If you want someone to listen and understand your reasoning, give your interests and reasoning first and your conclusions or proposals later.",
+   "pagina": "p. 67",
+   "aplicabilidade": "alta",
+   "porque": "Quem ouve primeiro o percentual de 40% e o pacote tende a preparar objeções e a não ouvir o raciocínio por trás do programa."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Levar duas ou três variantes de pacote igualmente aceitáveis para a Wise e perguntar qual o parceiro prefere, refinando a escolhida, em vez de propor um pacote único.",
+   "processo": "Oferecer opções de pacote e perguntar preferência",
+   "citacao": "One way to dovetail interests is to invent several options all equally acceptable to you and ask the other side which one they prefer.",
+   "pagina": "p. 88",
+   "aplicabilidade": "alta",
+   "porque": "Os pacotes com contrapartidas e os níveis A, B e C permitem combinações; perguntar a preferência revela prioridades sem que ninguém precise ceder em público."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Mapear trocas de baixo custo para um lado e alto valor para o outro: o que custa pouco da agenda de 12 horas mensais da Wise (destaque no evento, selo, apresentação a clientes) em troca do que custa pouco ao parceiro (indicações qualificadas, abertura da carteira).",
+   "processo": "Mapear trocas de baixo custo e alto valor",
+   "citacao": "Look for items that are of low cost to you and high benefit to them, and vice versa.",
+   "pagina": "p. 88",
+   "aplicabilidade": "alta",
+   "porque": "A equipe é de uma pessoa com 12 horas por mês; contrapartidas de reconhecimento e visibilidade cabem na capacidade, e o app pode listar o custo em horas de cada item."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Oferecer acordos de força diferente como porta de entrada (provisório, parcial, contingente): por exemplo um piloto do ciclo Base Ativa de 12 semanas com revisão antes do termo pleno.",
+   "processo": "Propor acordo provisório ou parcial",
+   "citacao": "Similarly, where a permanent agreement is not possible, perhaps a provisional agreement is.",
+   "pagina": "p. 82",
+   "aplicabilidade": "media",
+   "porque": "Ajuda prospects que hesitam em assinar o termo completo; exige que o Diretor aceite termos de entrada com menor contrapartida."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Fixar antes de negociar critérios objetivos e publicados para elegibilidade aos níveis A, B e C (potencial da carteira) e para o percentual e as contrapartidas de cada pacote, independentes da vontade de cada lado.",
+   "processo": "Definir critérios objetivos de níveis e pacotes",
+   "citacao": "At a minimum, objective criteria need to be independent of each side’s will.",
+   "pagina": "p. 96",
+   "aplicabilidade": "alta",
+   "porque": "Níveis por potencial da carteira só resistem a pressão se o critério de medida for externo e conhecido; o app pode guardar o critério e a evidência de cada parceiro."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Testar cada critério de nível e de pacote pela reciprocidade: a regra que a Wise aplica ao parceiro (SLA da indicação, qualidade, prazo) deve valer também para ela (prazo de resposta, pagamento da comissão).",
+   "processo": "Testar reciprocidade dos critérios",
+   "citacao": "Objective criteria should apply, at least in theory, to both sides.",
+   "pagina": "p. 96",
+   "aplicabilidade": "alta",
+   "porque": "Dá legitimidade ao SLA, à nota de qualidade e à proteção de 180 dias, que hoje oneram só o parceiro se não houver contrapartida da Wise."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Sustentar os 40% da primeira mensalidade com um padrão externo (prática de mercado de comissão por indicação e custo de aquisição evitado) e responder a pedidos de mais com a pergunta sobre a teoria por trás do número.",
+   "processo": "Documentar benchmark de comissão por indicação",
+   "citacao": "Why not insist that a negotiated price, for example, be based on some standard such as market value, replacement cost, depreciated book value, or competitive prices, instead of whatever the seller demands?",
+   "pagina": "p. 93",
+   "aplicabilidade": "media",
+   "porque": "O livro dá o método, mas o benchmark de comissão não está nele; a Wise precisa coletar o padrão de mercado para usá-lo."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Não ceder à pressão, só ao princípio: qualquer concessão em percentual, nível ou contrapartida exige critério ou troca registrados no app.",
+   "processo": "Registrar concessões com critério",
+   "citacao": "Never yield to pressure, only to principle.",
+   "pagina": "p. 98",
+   "aplicabilidade": "alta",
+   "porque": "Com a meta de 10 parcerias até 31/12/2026, a tentação de ceder para fechar é alta; o registro obriga a justificar cada exceção e cria precedente consciente."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Manter no app um termo-quadro de parceria, com cláusulas e campos em branco por nível, usado como pauta da reunião e ponto de partida da minuta.",
+   "processo": "Montar termo-quadro de parceria",
+   "citacao": "Such a “framework agreement” is a document in the form of an agreement, but with blank spaces for each term to be resolved by negotiation.",
+   "pagina": "p. 170",
+   "aplicabilidade": "alta",
+   "porque": "Garante que nenhum tema (comissão, SLA, proteção, contrapartidas, desligamento) seja esquecido e dá ao Gerente de Parcerias uma pauta pronta, economizando horas."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Conduzir a minuta do termo como texto único: a Wise envia um rascunho e pede críticas, não concessões, e revisa a versão até não conseguir melhorar, quando recomenda aceitar ou recusar.",
+   "processo": "Conduzir minuta única do termo",
+   "citacao": "It is hard to make concessions, but it is easy to criticize.",
+   "pagina": "p. 120",
+   "aplicabilidade": "alta",
+   "porque": "Reduz o número de decisões do parceiro a um sim ou não final e encaixa no fluxo de versões e aprovação do Diretor."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Registrar quem decide em cada lado e dizer logo no início que a assinatura da Wise depende da aprovação do Diretor, para que a aprovação não pareça uma segunda rodada de negociação.",
+   "processo": "Confirmar autoridade de decisão das duas partes",
+   "citacao": "Before starting on any give-and-take, find out about the authority on the other side.",
+   "pagina": "p. 137",
+   "aplicabilidade": "alta",
+   "porque": "O Gerente de Parcerias não assina sozinho; declarar isso cedo evita a tática de autoridade ambígua e protege a confiança."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Enviar a proposta formal só depois de explorar interesses, opções e critérios, de modo que ela seja consequência da conversa e não surpresa.",
+   "processo": "Enviar proposta formal do termo",
+   "citacao": "Usually an offer should not come as a surprise. It should be a natural outgrowth of the discussion so far.",
+   "pagina": "p. 172",
+   "aplicabilidade": "alta",
+   "porque": "Define uma etapa clara no kanban entre a reunião de apresentação e o envio do termo, com pré-requisitos registrados."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Preparar junto com a minuta a justificativa que o contato do parceiro levará aos sócios ou à diretoria, usando critérios que eles considerem legítimos.",
+   "processo": "Preparar justificativa interna do parceiro",
+   "citacao": "Ask yourself how the other side might successfully explain and justify an agreement to their constituents.",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "O contato que conversa com a Wise precisa vender internamente; um resumo de uma página aumenta a taxa de assinatura."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Registrar, para cada negociação, a melhor alternativa da Wise e a do parceiro, e usá-las no lugar de um limite fixo para aceitar ou recusar termos.",
+   "processo": "Definir BATNA da negociação",
+   "citacao": "The reason you negotiate is to produce something better than the results you can obtain without negotiating.",
+   "pagina": "p. 108",
+   "aplicabilidade": "alta",
+   "porque": "A alternativa da Wise é gastar as 12 horas mensais com outro prospect do funil; a do parceiro é indicar sem termo ou não fazer nada."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Definir um pacote gatilho por nível: antes de aceitar qualquer termo pior que ele, pausar e levar ao Diretor.",
+   "processo": "Configurar gatilho de revisão de concessões",
+   "citacao": "Before accepting any agreement worse than this trip-wire package, you should take a break and reexamine the situation.",
+   "pagina": "p. 109",
+   "aplicabilidade": "alta",
+   "porque": "Funciona como regra de alçada no app, protege contra fechar parcerias ruins sob pressão de prazo e limita a autoridade do Gerente."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Tratar a etapa de nutrição como construção de relação antes da negociação, registrando contatos informais, interesses pessoais e profissionais e próximos pontos de contato.",
+   "processo": "Nutrir relação com o prospect antes da negociação",
+   "citacao": "The time to develop such a relationship is before the negotiation begins.",
+   "pagina": "p. 54",
+   "aplicabilidade": "alta",
+   "porque": "O funil já tem etapa de nutrição; o livro dá o propósito dela: reduzir a distância entre estranhos antes da proposta."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Resumir em voz alta o que o parceiro disse e confirmar a leitura antes de responder, e registrar no app o resumo validado por ele.",
+   "processo": "Reformular e confirmar interesses do parceiro",
+   "citacao": "cheapest concession you can make to the other side is to let them know they have been heard",
+   "pagina": "p. 52",
+   "aplicabilidade": "alta",
+   "porque": "Custa zero em tempo de equipe e aumenta a chance de o parceiro ouvir a posição da Wise, inclusive em conversas difíceis."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Para mudança de pacote, resgate e desligamento, usar chamada de vídeo ou reunião presencial, e não e-mail ou mensagem, e tratar a mensagem escrita só como confirmação.",
+   "processo": "Escolher canal da conversa difícil",
+   "citacao": "difficult conversations involving emotions or relationship issues are best pursued face-to-face, if at all possible, and definitely not by email or text.",
+   "pagina": "p. 166",
+   "aplicabilidade": "alta",
+   "porque": "O web app pode sugerir o canal por tipo de conversa e agendar a chamada, deixando o comunicado como registro posterior."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Descrever o problema por seu impacto e por fatos observáveis (indicações no período, SLA, nota de qualidade), sem atribuir culpa ou intenção ao parceiro; oferecer modelos de roteiro no app.",
+   "processo": "Redigir roteiro de conversa difícil",
+   "citacao": "It is more persuasive, however, to describe a problem in terms of its impact on you than in terms of what they did or why",
+   "pagina": "p. 53",
+   "aplicabilidade": "alta",
+   "porque": "Facilita rebaixamento, resgate e desligamento sem romper a relação, porque os fatos vêm do banco e não da opinião do Gerente."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Na mudança de nível ou no desligamento, oferecer uma saída que o parceiro consiga justificar a si e à sua organização (pausa, migração para outro nível, comunicado combinado).",
+   "processo": "Oferecer saída honrosa ao parceiro",
+   "citacao": "Face-saving reflects people’s need to reconcile the stand taken in a negotiation or an agreement with their existing principles and with their past words and deeds.",
+   "pagina": "p. 46",
+   "aplicabilidade": "alta",
+   "porque": "Parceiros são empresas que vendem para as mesmas indústrias; uma saída hostil prejudica a reputação da Wise na comunidade."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Separar a conversa sobre a relação da conversa sobre os termos: não compensar um problema de relação com concessão de substância, nem usar a relação como ameaça.",
+   "processo": "Separar relação e substância na conversa difícil",
+   "citacao": "Deal with people problems by changing how you treat people; don’t try to solve them with substantive concessions.",
+   "pagina": "p. 40",
+   "aplicabilidade": "alta",
+   "porque": "Evita ceder no percentual ou no nível para acalmar um parceiro insatisfeito e evita ameaçar desligamento como alavanca."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Aceitar como resultado válido que Wise e parceiro concluam que o melhor é cada um seguir sozinho, e registrar essa saída como encerramento amigável, não como fracasso.",
+   "processo": "Encerrar parceria de forma amigável",
+   "citacao": "efficiently discover that the best way to advance your respective interests is for each of you to look elsewhere and not to try further to reach agreement.",
+   "pagina": "p. 113",
+   "aplicabilidade": "alta",
+   "porque": "Com horas limitadas, sair cedo de parcerias sem encaixe libera capacidade para os demais; o desligamento formal ganha legitimidade quando a conclusão é conjunta."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Construir o plano de resgate de parceiro estagnado voltado ao futuro, perguntando quem faz o quê amanhã, em vez de pedir justificativas do passado, com ações conjuntas, dono e data.",
+   "processo": "Montar plano de resgate de parceiro inativo",
+   "citacao": "Instead of asking them to justify what they did yesterday, ask, “Who should do what tomorrow?”",
+   "pagina": "p. 68",
+   "aplicabilidade": "alta",
+   "porque": "Encaixa no plano de ações conjuntas e nos marcos de 30, 60 e 90 dias, sem transformar o resgate em cobrança."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Embutir no termo consequências acordadas de antemão (marcos de 30, 60 e 90 dias, revisão trimestral, rebaixamento, desligamento formal) como cláusulas contingentes, para que não surjam como punição.",
+   "processo": "Incluir cláusulas contingentes de revisão e saída",
+   "citacao": "Where the issue is one of possible misrepresentation of their intention to comply with the agreement, it is often possible to build compliance features into the agreement itself.",
+   "pagina": "p. 137",
+   "aplicabilidade": "alta",
+   "porque": "Dá base contratual ao desligamento formal e ao rebaixamento de nível, aceitos antes da assinatura quando o clima ainda é de aliança."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Acordar no próprio termo os critérios da revisão trimestral antes de discutir qualquer nível, de modo que subir ou descer seja aplicar um critério já aceito e não vontade da Wise.",
+   "processo": "Acordar critérios da revisão trimestral no termo",
+   "citacao": "Before even considering possible terms, you may want to agree on the standard or standards to apply.",
+   "pagina": "p. 98",
+   "aplicabilidade": "alta",
+   "porque": "Os níveis híbridos com revisão trimestral só funcionam se a regra de medida for combinada de antemão; o app mostra a evidência no dia da revisão."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Posicionar o Gerente de Parcerias como mediador da minuta entre o parceiro e o Diretor: ele leva a minuta, colhe críticas dos dois lados e recomenda, em vez de defender uma posição de cada vez.",
+   "processo": "Mediar a minuta entre parceiro e Diretor",
+   "citacao": "Your commission depends more on effecting an agreement between your customer and your production people than on affecting the terms.",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "O Gerente tem interesse maior em fechar um bom acordo do que em um valor específico; o papel combina com o fluxo em que o Diretor aprova a assinatura."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Preparar a reunião de apresentação do programa",
+   "descricao": "O livro trata a preparação como a etapa de análise e planejamento: diagnosticar pessoas, interesses, opções e critérios, e definir o que se quer levar da reunião. A estratégia deriva da preparação.",
+   "gatilho": "Prospect aceita a reunião de apresentação e o card avança no kanban de recrutamento.",
+   "etapas": [
+    "Revisar o histórico de nutrição e anotar contato principal, decisores e quem aprova.",
+    "Listar os interesses prováveis do parceiro e perguntar por que cada posição provável existe.",
+    "Registrar a decisão que a Wise vai pedir e o que a torna difícil para ele.",
+    "Listar os interesses da Wise em ordem de importância.",
+    "Inventar duas ou três variantes de pacote e de nível aceitáveis para a Wise.",
+    "Levantar critérios objetivos que o parceiro considerará legítimos para percentual, nível e contrapartidas.",
+    "Registrar a melhor alternativa da Wise e a do parceiro, o pacote gatilho e o resultado mínimo da reunião (frase de saída).",
+    "Escolher formato e participantes e rascunhar o termo-quadro como pauta."
+   ],
+   "resultados": [
+    "Reunião com roteiro e pauta prontos",
+    "Prospect devolvido à nutrição por falta de preparo ou de encaixe"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor (revisa o pacote gatilho)"
+   ],
+   "metricas": [
+    "Percentual de reuniões com interesses, BATNA e critérios registrados antes de acontecer"
+   ],
+   "citacao": "Whatever method of negotiation you use, you will do better if you prepare in advance.",
+   "pagina": "p. 95"
+  },
+  {
+   "nome": "Registrar interesses do parceiro e da Wise",
+   "descricao": "Lista escrita e atualizada dos interesses de cada lado, com a ordem estimada de importância, que também inspira ideias de como atendê-los.",
+   "gatilho": "Primeiro contato com o prospect e depois de cada reunião ou troca relevante.",
+   "etapas": [
+    "Anotar a posição declarada (o que ele pede ou recusa).",
+    "Perguntar por que e por que não para chegar ao interesse por trás da posição.",
+    "Classificar o interesse: econômico, segurança, pertencimento, reconhecimento, controle.",
+    "Separar interesses compartilhados, interesses diferentes e complementares e interesses opostos.",
+    "Registrar os constituintes do contato (sócios, diretoria, associados) e seus interesses.",
+    "Ordenar por importância estimada e marcar o que ainda é suposição.",
+    "Reler antes de cada nova proposta e corrigir com o que foi aprendido."
+   ],
+   "resultados": [
+    "Mapa de interesses por prospect que alimenta opções de pacote",
+    "Lista de suposições a validar na próxima conversa"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Número de interesses do parceiro mapeados antes da proposta"
+   ],
+   "citacao": "Make a list. To sort out the various interests of each side, it helps to write them down as they occur to you.",
+   "pagina": "p. 65"
+  },
+  {
+   "nome": "Conduzir a reunião de apresentação do programa",
+   "descricao": "Discussão em que as partes tratam os mesmos quatro elementos: pessoas, interesses, opções e critérios, lado a lado e olhando para o problema comum.",
+   "gatilho": "Reunião de apresentação marcada.",
+   "etapas": [
+    "Abrir com conversa pessoal curta e propósito da reunião, deixando claro que não é reunião de fechamento.",
+    "Perguntar sobre a carteira e as prioridades do parceiro e resumir o que ouviu pedindo correção.",
+    "Apresentar o problema e os interesses da Wise antes de qualquer pacote ou percentual.",
+    "Mostrar duas ou três opções como possibilidades e perguntar qual faz mais sentido e o que falta.",
+    "Convidar a crítica e perguntar o que a proposta não considera.",
+    "Discutir critérios (potencial da carteira, tamanho, mercado) como busca conjunta, não como imposição.",
+    "Combinar próximos passos tentativos e usar a frase de saída se a reunião ficar inconclusiva.",
+    "Registrar o resumo no app em até 24 horas e enviar ao parceiro para confirmar."
+   ],
+   "resultados": [
+    "Avança para minuta do termo",
+    "Volta para nutrição com pendências claras",
+    "Descarte amigável por falta de encaixe"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro (contato principal)"
+   ],
+   "metricas": [
+    "Tempo entre a reunião e o envio da proposta",
+    "Percentual de reuniões com resumo validado pelo parceiro"
+   ],
+   "citacao": "Put the problem before your answer.",
+   "pagina": "p. 67"
+  },
+  {
+   "nome": "Definir critérios objetivos de níveis e pacotes",
+   "descricao": "Escolher padrões independentes da vontade de cada lado para decidir questões em que os interesses conflitam, testá-los pela reciprocidade e usá-los como lógica de discussão.",
+   "gatilho": "Antes de abrir recrutamento para um novo nível ou pacote, e a cada ajuste de regra aprovado pelo Diretor.",
+   "etapas": [
+    "Listar as decisões que dependem de critério: elegibilidade A, B e C, percentual, contrapartidas por pacote, rebaixamento, desligamento.",
+    "Para cada decisão, levantar dois a quatro padrões possíveis (mercado, precedente, igualdade de tratamento, desempenho medido, custo).",
+    "Testar a reciprocidade: a regra vale também para a Wise?",
+    "Escolher o padrão mais legítimo e prático e registrar por que os outros foram descartados.",
+    "Publicar o critério em linguagem simples no termo e na vitrine para o parceiro.",
+    "Registrar exceções com justificativa e tratá-las como precedente.",
+    "Revisar a cada trimestre com dados do banco."
+   ],
+   "resultados": [
+    "Tabela versionada de critérios aprovada pelo Diretor",
+    "Lista de exceções com precedentes"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Percentual de itens do termo com critério objetivo vinculado"
+   ],
+   "citacao": "At a minimum, objective criteria need to be independent of each side’s will.",
+   "pagina": "p. 96"
+  },
+  {
+   "nome": "Construir a minuta do termo de parceria",
+   "descricao": "Procedimento de texto único: um rascunho sem compromisso é circulado, recebe críticas dos dois lados e é revisado até o ponto em que o redator recomenda aceitar ou recusar.",
+   "gatilho": "Parceiro confirma interesse após a reunião de apresentação.",
+   "etapas": [
+    "Preencher o termo-quadro com o que já foi acordado como tentativo.",
+    "Marcar a versão como rascunho sem compromisso até a versão final.",
+    "Enviar ao parceiro pedindo crítica e perguntando o que falta para atender seus interesses, não concessões.",
+    "Registrar cada mudança, quem a sugeriu e o interesse que ela atende, dando crédito ao parceiro.",
+    "Revisar e reenviar quantas vezes forem necessárias, estreitando as opções.",
+    "Em pontos que não fecham, acordar onde se discorda e usar critério ou procedimento justo para decidir.",
+    "Declarar que nada está acordado até que tudo esteja acordado.",
+    "Quando a minuta não melhorar mais, enviar a versão final com recomendação."
+   ],
+   "resultados": [
+    "Minuta final pronta para aprovação do Diretor",
+    "Pausa documentada para pontos sem acordo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias (redator)",
+    "Parceiro (crítico)",
+    "Diretor (aprovador)"
+   ],
+   "metricas": [
+    "Número de versões da minuta",
+    "Itens reabertos após acordo"
+   ],
+   "citacao": "Simply prepare a draft and ask for criticism.",
+   "pagina": "p. 123"
+  },
+  {
+   "nome": "Preparar a melhor alternativa e o gatilho de revisão",
+   "descricao": "Antes de negociar, saber o que a Wise fará se não houver acordo e qual o pior pacote aceitável sem pausa, em vez de fixar um limite rígido.",
+   "gatilho": "Antes de enviar a minuta e a cada mudança relevante no funil ou na capacidade.",
+   "etapas": [
+    "Listar ações possíveis sem acordo (priorizar outro prospect, manter em nutrição, parceria pontual por evento).",
+    "Melhorar as mais promissoras e escolher a melhor, avaliando custo em horas.",
+    "Estimar a melhor alternativa do parceiro e se ele a superestima.",
+    "Definir o pacote gatilho abaixo do qual é obrigatório pausar e levar ao Diretor.",
+    "Decidir o que divulgar sobre a própria alternativa.",
+    "Definir o resultado mínimo e a frase de saída de cada reunião."
+   ],
+   "resultados": [
+    "BATNA registrado por negociação",
+    "Regra de alçada ativa no app"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Percentual de negociações ativas com BATNA da Wise e do parceiro registrados"
+   ],
+   "citacao": "Generating possible BATNAs requires three distinct operations: (1) inventing a list of actions you might conceivably take if no agreement is reached;",
+   "pagina": "p. 111"
+  },
+  {
+   "nome": "Fechar o termo de parceria",
+   "descricao": "Passagem de opções e critérios a uma oferta completa, com verificação de que o acordo é sábio, e fechamento com um gesto final de baixo custo.",
+   "gatilho": "Minuta final aceita pelo contato do parceiro.",
+   "etapas": [
+    "Verificar se o acordo atende interesses legítimos dos dois lados, resolve conflitos de forma justa e é durável.",
+    "Conferir o pacote gatilho e levar exceções ao Diretor.",
+    "Confirmar quem assina em cada lado e a justificativa interna do parceiro.",
+    "Enviar a oferta completa em forma de proposição que se aceita com um sim.",
+    "Se faltar fechar, oferecer um gesto final de valor para ele e baixo custo para a Wise, declarado como final.",
+    "Obter aprovação do Diretor e coletar a assinatura.",
+    "Disparar o onboarding de 30, 60 e 90 dias e registrar a retrospectiva da negociação."
+   ],
+   "resultados": [
+    "Termo assinado",
+    "Pausa em nutrição",
+    "Encerramento amigável"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor",
+    "Parceiro (assinante)"
+   ],
+   "metricas": [
+    "Dias entre a primeira reunião e a assinatura",
+    "Taxa de assinatura por reunião de apresentação"
+   ],
+   "citacao": "At some point clarifying interests, inventing options, and analyzing standards produce diminishing returns.",
+   "pagina": "p. 171"
+  },
+  {
+   "nome": "Conduzir conversa difícil de mudança de pacote ou nível",
+   "descricao": "Conversa sobre ajuste de nível ou pacote tratada como busca conjunta de solução sobre critérios já acordados, com atenção às pessoas e voltada ao futuro.",
+   "gatilho": "Revisão trimestral indica mudança de nível, parceiro pede mudança de pacote, ou meta de carteira muda.",
+   "etapas": [
+    "Preparar os dados do banco e o critério acordado no termo.",
+    "Registrar interesses e emoções prováveis do parceiro e a decisão que a Wise está pedindo.",
+    "Marcar chamada ou reunião e abrir pedindo correção dos fatos.",
+    "Descrever o impacto e os números, sem culpa, e ouvir até o fim, resumindo.",
+    "Apresentar opções: manter, subir, descer, pacote híbrido, pausa, com o critério ao lado.",
+    "Decidir pelo critério e oferecer saída que preserve a imagem do parceiro.",
+    "Registrar a decisão, o prazo e o resumo validado, e agendar acompanhamento."
+   ],
+   "resultados": [
+    "Nível mantido",
+    "Nível alterado com novo plano",
+    "Pausa combinada",
+    "Início do desligamento formal"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor (decisões fora do critério)",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Percentual de mudanças com critério e evidência registrados",
+    "Percentual de mudanças em que o parceiro permaneceu ativo"
+   ],
+   "citacao": "You will satisfy your interests better if you talk about where you would like to go rather than about where you have come from.",
+   "pagina": "p. 68"
+  },
+  {
+   "nome": "Montar plano de resgate de parceiro inativo",
+   "descricao": "Diálogo para descobrir por que o parceiro não age e criar juntos ações pequenas, com dono e data, olhando para o futuro.",
+   "gatilho": "Parceiro sem indicação no ICP até o marco de 60 dias ou sem resposta ao contato recorrente.",
+   "etapas": [
+    "Agendar chamada ou reunião, e não e-mail.",
+    "Perguntar o que impede a decisão de indicar (por que não) e ouvir sem defender o programa.",
+    "Resumir interesses atuais do parceiro e o que mudou desde a assinatura.",
+    "Fazer sessão curta de ideias com o parceiro, separada de qualquer negociação formal.",
+    "Escolher duas ações pequenas com dono e data, como acordo provisório.",
+    "Revisar em até 14 dias e registrar o resultado.",
+    "Se não houver avanço, abrir conversa de mudança de nível ou de desligamento formal."
+   ],
+   "resultados": [
+    "Parceiro retomado",
+    "Escopo reduzido",
+    "Pausa combinada",
+    "Desligamento formal"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Percentual de resgates que geram indicação em 30 dias"
+   ],
+   "citacao": "Instead of asking them to justify what they did yesterday, ask, “Who should do what tomorrow?”",
+   "pagina": "p. 68"
+  },
+  {
+   "nome": "Conduzir desligamento formal de parceiro",
+   "descricao": "Encerramento tratado como negociação sobre a saída, com critérios claros, atenção a pessoas e identidade, e acordo sobre pendências, sem humilhar nem ameaçar.",
+   "gatilho": "Critério de desligamento atingido na revisão trimestral ou falha do plano de resgate.",
+   "etapas": [
+    "Reunir os fatos e o critério do termo e obter aprovação do Diretor.",
+    "Marcar conversa individual por vídeo ou presencial.",
+    "Falar do impacto e dos fatos, sem culpa, e ouvir a perspectiva do parceiro.",
+    "Reconhecer o que o parceiro contribuiu e o que foi aprendido.",
+    "Perguntar o que ele precisa para sair bem e combinar comunicado, indicações em andamento, comissões devidas e prazos.",
+    "Registrar acordo de saída e pontos em discordância.",
+    "Deixar a porta aberta com data de reavaliação e fazer retrospectiva interna."
+   ],
+   "resultados": [
+    "Saída amigável",
+    "Migração para nutrição",
+    "Pausa com data de reavaliação",
+    "Rompimento formal registrado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Percentual de saídas com acordo de pendências registrado"
+   ],
+   "citacao": "efficiently discover that the best way to advance your respective interests is for each of you to look elsewhere and not to try further to reach agreement.",
+   "pagina": "p. 113"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Qualidade da negociação em três critérios",
+   "definicao": "Para cada termo assinado ou perdido, avaliar se produziu acordo sábio, se foi eficiente (dias e rodadas) e se manteve ou melhorou a relação.",
+   "citacao": "It should produce a wise agreement if agreement is possible. It should be efficient. And it should improve or at least not damage the relationship between the parties.",
+   "pagina": "p. 24"
+  },
+  {
+   "nome": "Interesses do parceiro mapeados antes da proposta",
+   "definicao": "Número de interesses do parceiro registrados e validados por ele antes do envio da minuta.",
+   "citacao": "figuring out their interests will be at least as important as figuring out yours",
+   "pagina": "p. 60"
+  },
+  {
+   "nome": "Cobertura de BATNA",
+   "definicao": "Percentual de negociações ativas com a melhor alternativa da Wise e a do parceiro registradas.",
+   "citacao": "If you have not thought carefully about what you will do if you fail to reach an agreement, you are negotiating with your eyes closed.",
+   "pagina": "p. 108"
+  },
+  {
+   "nome": "Itens do termo com critério objetivo",
+   "definicao": "Percentual de cláusulas e valores do termo (percentual, nível, contrapartida) com critério externo citado.",
+   "citacao": "You will usually find more than one objective criterion available as a basis for agreement.",
+   "pagina": "p. 95"
+  },
+  {
+   "nome": "Rodadas da minuta e itens reabertos",
+   "definicao": "Número de versões da minuta até a assinatura e de itens reabertos depois de acordados.",
+   "citacao": "Approaching agreement through discussion of objective criteria also reduces the number of commitments that each side must make and then unmake as they move toward agreement.",
+   "pagina": "p. 94"
+  },
+  {
+   "nome": "Saldo de concessões",
+   "definicao": "Razão entre concessões feitas pela Wise e pelo parceiro em cada negociação, com justificativa.",
+   "citacao": "If only you have authority to make concessions, only you will make concessions.",
+   "pagina": "p. 137"
+  },
+  {
+   "nome": "Estado da relação de trabalho",
+   "definicao": "Avaliação periódica de facilidade de comunicação, confiança e confiabilidade, aceitação e entendimento mútuo, registrada após cada reunião relevante.",
+   "citacao": "Ease of communication Degree of trust and reliability Attitude of acceptance (or rejection)",
+   "pagina": "p. 156"
+  },
+  {
+   "nome": "Retrospectivas realizadas",
+   "definicao": "Percentual de negociações encerradas (assinadas, perdidas ou desligadas) com retrospectiva registrada.",
+   "citacao": "Schedule time to think about how you did after each significant negotiation.",
+   "pagina": "p. 173"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Negociar percentual, nível ou pacote como posição: quanto mais cada lado defende sua posição, mais difícil recuar, e o acordo vira divisão mecânica da diferença.",
+   "citacao": "The more you clarify your position and defend it against attack, the more committed you become to it.",
+   "pagina": "p. 25"
+  },
+  {
+   "alerta": "Ceder para agradar o parceiro, por exemplo no percentual ou no nível, tende a premiar a insistência e a gerar ressentimento.",
+   "citacao": "Making concessions “for the relationship” is equally problematic, because it can actually encourage and reward stubbornness",
+   "pagina": "p. 31"
+  },
+  {
+   "alerta": "A meta de 10 parcerias até 31/12/2026 pode virar a pressa de fechar a qualquer custo e levar a termos que deveriam ser recusados.",
+   "citacao": "The siren song of “Let’s all agree and put an end to this” becomes persuasive.",
+   "pagina": "p. 106"
+  },
+  {
+   "alerta": "Fixar um limite mínimo rígido (por exemplo percentual ou contrapartida mínima) impede aprender durante a conversa e inventar soluções melhores; usar BATNA e gatilho.",
+   "citacao": "In short, while adopting a bottom line may protect you from accepting a very bad agreement, it may keep you both from inventing and from agreeing to a solution it would be wise to accept.",
+   "pagina": "p. 107"
+  },
+  {
+   "alerta": "Somar mentalmente os 21 prospects como alternativa: só dá para tocar um número limitado com 12 horas mensais, então a alternativa real é uma escolha, não a soma.",
+   "citacao": "One frequent mistake is psychologically to see your alternatives in the aggregate.",
+   "pagina": "p. 108"
+  },
+  {
+   "alerta": "Tratar como secundário o que importa ao parceiro (reconhecimento, selo, destaque no evento, forma de comunicar) desperdiça uma troca de baixo custo.",
+   "citacao": "In one sense it was unimportant to them, but it was a great mistake for them to treat the subject as unimportant.",
+   "pagina": "p. 44"
+  },
+  {
+   "alerta": "Levar o termo pronto para o parceiro sem envolvê-lo na construção reduz a chance de aprovação, mesmo com boas condições.",
+   "citacao": "If they are not involved in the process, they are unlikely to approve the product.",
+   "pagina": "p. 45"
+  },
+  {
+   "alerta": "Supor que o interlocutor decide: sem confirmar a autoridade dos dois lados, a aprovação interna reabre o que parecia fechado e só uma das partes concede.",
+   "citacao": "Do not assume that the other side has full authority just because they are there negotiating with you.",
+   "pagina": "p. 137"
+  }
+ ]
+}

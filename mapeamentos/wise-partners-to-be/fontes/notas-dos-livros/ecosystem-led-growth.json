@@ -1,0 +1,647 @@
+{
+ "livro": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships",
+ "autores": "Bob Moore",
+ "slug": "ecosystem-led-growth",
+ "tese": "Ecosystem-led growth é um modelo de ir ao mercado em que o ecossistema de parceiros é o principal caminho para atrair, converter e expandir clientes. O livro sustenta que o gargalo histórico das parcerias é a falta de dado compartilhado e atribuição, resolvido por cruzamento de carteiras com controle de privacidade, e que os resultados devem ser medidos nos mesmos indicadores do comercial. Por consequência, o tempo humano vai para poucos parceiros prioritários, e o restante opera por dados, automação e demanda puxada pelo time de vendas.",
+ "recomendacoes": [
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Cruzar a carteira do parceiro com a base e os leads da Wise revelando apenas as contas que aparecem nas duas listas, nunca a lista completa de nenhum dos lados.",
+   "processo": "Cruzar carteiras com o parceiro",
+   "citacao": "Share overlapping records: The most common match condition, this causes information to be shared only for the specific records in your population that also exist in the population of your partner.",
+   "pagina": "secao 20",
+   "aplicabilidade": "alta",
+   "porque": "É exatamente o cruzamento de carteiras do portal e resolve o dilema de quem expõe a lista primeiro, que trava o recrutamento de parceiros."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Estruturar o cruzamento na matriz 3x3 de populações (prospects, oportunidades e clientes de cada lado) e tratar cada célula como uma jogada específica do programa.",
+   "processo": "Montar a matriz de cruzamento por parceiro",
+   "citacao": "it's the overlap between your data and that of your partner, resulting in nine distinct intersections of data that each can carry a way for you to exchange and create value together.",
+   "pagina": "secao 21",
+   "aplicabilidade": "alta",
+   "porque": "Dá ao portal um modelo de dados simples e uma tela padrão por parceiro, com ação associada a cada célula."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Escalonar o acesso a dados pelo nível do parceiro: só contagem de sobreposição nos níveis menores e campos específicos apenas nos níveis altos.",
+   "processo": "Definir regras de compartilhamento por nível",
+   "citacao": "As partnerships grow and prove to be more valuable, so too do the number of go-to-market plays that get unlocked.",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Casa com os níveis Elite, Premium e Select e com a revisão trimestral: subir de nível destrava mais dados e mais ações."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Compartilhar apenas dados de empresa (razão social, etapa do funil, porte) e excluir contatos pessoais por padrão, em conformidade com a LGPD.",
+   "processo": "Definir regras de compartilhamento de dados",
+   "citacao": "Only company-level information is shared, such as business name, funnel stage, or firmographic data. No information is shared about the contacts you have at any company.",
+   "pagina": "secao 20",
+   "aplicabilidade": "alta",
+   "porque": "O cruzamento funciona sem dados pessoais e reduz o risco jurídico de um programa que ainda não tem parceiro assinado."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Exigir aprovação explícita das duas partes antes de abrir a parceria no portal e manter os dados protegidos até que o parceiro receba regras de compartilhamento.",
+   "processo": "Ativar parceria com aceite duplo",
+   "citacao": "In order for a partnership to be established, a user with appropriate permissions from each party must explicitly approve the creation of the partnership.",
+   "pagina": "secao 20",
+   "aplicabilidade": "alta",
+   "porque": "Casa com a assinatura aprovada pelo Diretor e dá trilha de consentimento antes de qualquer cruzamento."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Permitir compartilhamento em um só sentido: o parceiro mostra a carteira dele, a Wise não precisa mostrar de volta a base de clientes dela.",
+   "processo": "Definir regras de compartilhamento por nível",
+   "citacao": "Those partners may be willing to share leads with a vendor, but the vendor needs to maintain secrecy around what is already in their CRM.",
+   "pagina": "secao 20",
+   "aplicabilidade": "alta",
+   "porque": "Protege a base de clientes da Wise, Tríade e Swallow e atende parceiros que só querem indicar."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Manter registro de auditoria de quem viu, alterou ou exportou dados de cada parceiro e dar visibilidade das regras vigentes aos responsáveis.",
+   "processo": "Auditar acessos e regras de compartilhamento",
+   "citacao": "Crossbeam's Audit Log feature provides detailed logs of your users' activity in the Crossbeam platform.",
+   "pagina": "secao 20",
+   "aplicabilidade": "media",
+   "porque": "Cria a confiança necessária para o Diretor e o jurídico aprovarem o uso do portal, ainda que a Wise não precise dos mesmos controles de uma plataforma multiempresa."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Normalizar nomes de empresas antes de cruzar (usar identificador único de empresa e tratar grupos e filiais), para não gerar falsos negativos e falsos positivos.",
+   "processo": "Normalizar identificadores de empresa",
+   "citacao": "Without standardization across your account lists and your partner's, there's an insurmountable amount of room for error.",
+   "pagina": "secao 21",
+   "aplicabilidade": "media",
+   "porque": "O livro não cita CNPJ, mas o problema de nomes divergentes é o mesmo na carteira industrial brasileira; usar CNPJ raiz é adaptação nossa."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Atualizar o contrato de parceria com cláusulas de confidencialidade e privacidade que cubram os dados usados no cruzamento de carteiras.",
+   "processo": "Assinar contrato de parceria com cláusula de dados",
+   "citacao": "Partnership agreements typically contain provisions binding the partner to certain confidentiality and privacy requirements as it relates to data shared in executing the partnership.",
+   "pagina": "secao 20",
+   "aplicabilidade": "alta",
+   "porque": "O aceite do cruzamento deve estar amparado no contrato que o Diretor aprova, e o texto precisa passar pelo jurídico."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Separar indicação originada pelo parceiro (sourced) de indicação influenciada, e registrar essa marca em cada oportunidade para calcular a comissão e o resultado do programa.",
+   "processo": "Registrar atribuição de parceiro na oportunidade",
+   "citacao": "In cases where an entire revenue outcome would not have existed at all if not for the ELG effort, we use the term sourced outcomes",
+   "pagina": "secao 19",
+   "aplicabilidade": "alta",
+   "porque": "A comissão de 40% da primeira mensalidade depende de dizer com clareza quando o cliente veio do parceiro; a influência serve para nível, ranking e revisão."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Exigir trilha de evidência em cada atribuição de influência (interação registrada, data, quem participou), em vez de autodeclaração do parceiro.",
+   "processo": "Registrar atribuição de parceiro na oportunidade",
+   "citacao": "The influence in question is determined by a partner team's self-reported interaction or involvement in a deal, which sellers or other influencers don't always interpret or remember in the same way.",
+   "pagina": "secao 19",
+   "aplicabilidade": "alta",
+   "porque": "A proteção de 180 dias e a nota de qualidade só são defensáveis se o registro tiver evidência que a equipe comercial reconheça."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Medir o programa com os mesmos indicadores do comercial da Wise (pipeline, taxa de fechamento, ciclo, ticket), e não com métricas próprias de parceria.",
+   "processo": "Reportar resultados do programa nos KPIs do comercial",
+   "citacao": "If you adopt ELG, you must also measure your success using the same KPIs that your go-to-market teams and company are using.",
+   "pagina": "secao 19",
+   "aplicabilidade": "alta",
+   "porque": "A meta de 10 parcerias e 1 cliente de indicação só ganha apoio do Diretor se os painéis falarem a língua da receita."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Marcar como lead qualificado pelo ecossistema (EQL) toda indicação cuja empresa também está na carteira ou no pipeline de um parceiro, e acompanhar a conversão separada das outras origens.",
+   "processo": "Qualificar indicação como lead do ecossistema",
+   "citacao": "An EQL is a lead that is more likely to become a paying customer due to behaviors it is exhibiting in your partner ecosystem.",
+   "pagina": "secao 25",
+   "aplicabilidade": "alta",
+   "porque": "A nota de qualidade da indicação pode usar o EQL como sinal, e o conceito justifica a lógica de que a carteira do parceiro é o ativo."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Seguir quatro passos em cada conta compartilhada: achar quem é o dono em cada lado, abrir um canal, combinar a próxima ação alinhada aos incentivos e medir a atribuição.",
+   "processo": "Co-vender uma conta compartilhada",
+   "citacao": "Establish and take a next best action that aligns with everyone's incentives.",
+   "pagina": "secao 26",
+   "aplicabilidade": "alta",
+   "porque": "Serve de roteiro para a Prateleira de RFP e para o plano de ações conjuntas, com tarefas e responsáveis."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Criar um ponto único de pedido de apresentação de parceiro para os consultores da Wise, com formulário, SLA e registro, para que o uso do parceiro seja puxado pela equipe e não empurrado pela Gerente de Parcerias.",
+   "processo": "Atender pedido de apresentação de parceiro",
+   "citacao": "Brodigan created a #partnership-requests Slack channel so that reps have a single place to go to get assistance on deals.",
+   "pagina": "secao 26",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês, a Gerente de Parcerias não pode procurar oportunidades conta a conta; a Prateleira de RFP precisa ser acionada por quem atende o cliente."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Gerar alerta para a Gerente de Parcerias quando uma oportunidade avança de etapa sem parceiro anexado e houver parceiro na carteira cruzada.",
+   "processo": "Alertar oportunidade sem parceiro anexado",
+   "citacao": "As soon as an opportunity in Salesforce hits the “Solution Review” sales stage, the partner manager will get an alert in a Slack channel called #no-partner-attached.",
+   "pagina": "secao 26",
+   "aplicabilidade": "media",
+   "porque": "Automatiza a atenção da equipe de 12 horas mensais, desde que a Wise registre as oportunidades no CRM do portal."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Só recrutar parceiro cuja solução tenha uma história conjunta real com os serviços da Wise para o mesmo cliente industrial; sem isso não há motivação intrínseca para indicar.",
+   "processo": "Qualificar parceiro pela história de valor conjunta",
+   "citacao": "As long as there is a fundamental truth around customers being more successful when your products or services are combined, there is an intrinsic motivation for co-selling to take place.",
+   "pagina": "secao 26",
+   "aplicabilidade": "alta",
+   "porque": "Evita recrutar parceiros apenas pelo tamanho da marca e justifica a conversa de pitch com ERP, MES, SST e demais."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Priorizar prospects de parceiro pelo volume real de sobreposição com a carteira e o ICP da Wise, deixando marca e relacionamento como critério de desempate.",
+   "processo": "Priorizar parceiros por sobreposição de carteira",
+   "citacao": "hard data is table stakes, and those other factors simply add texture.",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Com cerca de 21 prospects e uma pessoa com 12 horas por mês, o funil de recrutamento precisa ordenar quem vale o esforço."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Medir a sobreposição já na triagem e na assinatura do parceiro, como linha de base para estimar o mercado realmente alcançável da parceria.",
+   "processo": "Medir sobreposição na triagem do parceiro",
+   "citacao": "standard partner onboarding includes a baseline analysis of how much their current and target customer bases overlap",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Dá uma etapa objetiva ao kanban de recrutamento e alimenta a proposta de nível A, B ou C."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Posicionar cada parceiro em uma matriz de mercado alcançável versus valor gerado ao cliente compartilhado, e definir a próxima melhor ação para cada quadrante.",
+   "processo": "Revisar posição do parceiro na matriz de prioridade",
+   "citacao": "Plot each partner of yours as a dot on this matrix, and you'll end up with a rich scatterplot through which you can better understand your ecosystem, relatively prioritize partners, and establish a next best action for each one.",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Sustenta a revisão trimestral dos níveis híbridos com critério de dados, não de relacionamento."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Definir requisitos de entrada por nível, com o nível mais alto apenas por convite, e amarrar a profundidade da colaboração e do dado a cada nível.",
+   "processo": "Definir requisitos de entrada por nível",
+   "citacao": "These tiers make it easier for Intercom to determine which partners they should map accounts with and how they should go to market with them.",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Mostra como justificar Elite, Premium e Select por potencial de carteira e não por pacote vendido."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Automatizar a avaliação, o onboarding e a gestão dos parceiros de cauda longa e reservar o tempo humano para poucos parceiros de maior alavanca.",
+   "processo": "Gerir parceiros de cauda longa sem acompanhamento individual",
+   "citacao": "partner professionals are able to meaningfully automate the assessment, onboarding, and management of their long-tail partners.",
+   "pagina": "secao 19",
+   "aplicabilidade": "alta",
+   "porque": "É a regra de sobrevivência de uma equipe de 1 pessoa e 12 horas por mês: a maioria dos parceiros Select deve operar por rotina do portal."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Acompanhar reciprocidade: sinalizar parceiros que recebem muitas indicações ou apresentações da Wise e não devolvem, e tratar o caso na revisão do parceiro.",
+   "processo": "Revisar parceiros por reciprocidade e resultado",
+   "citacao": "Procore can see when they've sent partners a lot of leads and it isn't being reciprocated.",
+   "pagina": "secao 26",
+   "aplicabilidade": "media",
+   "porque": "Dá critério objetivo para a revisão trimestral e para o desligamento formal, ainda que a Wise envie poucas indicações no início."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Esperar retorno em curva J: o investimento inicial em cada parceria é negativo e o retorno vem depois, então o programa deve escolher melhor os parceiros e encurtar a fase de queda.",
+   "processo": "Acompanhar maturidade do parceiro por fase",
+   "citacao": "the up-front investment in new partnerships creates negative relationship value until returns gradually pull you out of the hole",
+   "pagina": "secao 24",
+   "aplicabilidade": "media",
+   "porque": "Ajuda a calibrar a expectativa do Diretor sobre prazo até a primeira indicação, dado que a meta é de 31/12/2026."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Centralizar a comunicação com o parceiro em um canal compartilhado e rastreável, ligado ao registro da indicação, para não perder a atribuição em e-mails dispersos.",
+   "processo": "Abrir canal de comunicação com o parceiro",
+   "citacao": "the haphazard nature of these kinds of communications can be troublesome.",
+   "pagina": "secao 26",
+   "aplicabilidade": "media",
+   "porque": "O portal pode concentrar mensagens e comunicados por parceiro; a escolha de Slack ou WhatsApp é decisão de design da Wise."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "No evento do Base Ativa e na Expo+Indústria, cruzar a lista de inscritos com as carteiras de parceiros e patrocinadores e pedir opt-in do participante antes de qualquer apresentação.",
+   "processo": "Curar convidados de evento por cruzamento de carteiras",
+   "citacao": "Gainsight can then efficiently reach out to those attendees to ensure their opt-in to an intro (or collect a more general opt-in at registration)",
+   "pagina": "secao 25",
+   "aplicabilidade": "alta",
+   "porque": "Resolve a tensão entre dar valor ao patrocinador e proteger a lista de participantes, e usa o evento como entrega do Base Ativa."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Limitar o escopo do portal ao núcleo (cruzamento, indicação, atribuição, níveis) e adiar funções periféricas, porque pacotes que tentam fazer tudo falham.",
+   "processo": "Definir escopo mínimo do portal",
+   "citacao": "Your typical PRM system is not so much a unified platform as an amalgam of features that check as many boxes as possible for your typical partner team.",
+   "pagina": "secao 13",
+   "aplicabilidade": "alta",
+   "porque": "A área de tarefas estilo CRM ainda em desenho deve nascer pequena e ligada ao cruzamento e à indicação."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Classificar os alvos em três grupos (tecnologia, canal e estratégico) e tratar associações e feiras como alianças setoriais, com ofertas e dados distintos por tipo.",
+   "processo": "Classificar tipo de parceiro",
+   "citacao": "We'll classify the universe of partnerships into three mega-buckets and drill in from there. Those are tech partnerships, channel partnerships, and strategic partnerships.",
+   "pagina": "secao 13",
+   "aplicabilidade": "media",
+   "porque": "Os ERP, CRM, MES e SST da Wise são parceiros de tecnologia, enquanto associações e a Expo+Indústria são alianças setoriais; o livro é centrado em software."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Manter parceiros sem potencial atual em estado de observação, sem investimento ativo, e rever os dados de mercado e aderência ao longo do tempo.",
+   "processo": "Mover parceiro para nutrição",
+   "citacao": "Watch and wait, but don't invest today.",
+   "pagina": "secao 24",
+   "aplicabilidade": "alta",
+   "porque": "Casa com a etapa de nutrição do kanban de recrutamento e com o desligamento formal só quando a revisão confirmar a falta de potencial."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Ancorar o programa em um valor conjunto claro, o da Prateleira de RFP, porque ecossistema sem proposta de valor que dependa de parceiros tende a forçar a adesão.",
+   "processo": "Definir proposta de valor do ecossistema",
+   "citacao": "The juice may not be worth the squeeze unless you expand your value proposition or achieve meaningful scale.",
+   "pagina": "secao 18",
+   "aplicabilidade": "baixa",
+   "porque": "A Wise é consultoria de valor em boa parte independente e de pequena escala, então o livro sugere cautela antes de investir pesado."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Cruzar carteiras com o parceiro",
+   "descricao": "Comparar listas de prospects, oportunidades e clientes de dois parceiros para achar relacionamentos em comum, com regras de compartilhamento que só revelam sobreposições.",
+   "gatilho": "Parceria ativada com aceite duplo e populações definidas",
+   "etapas": [
+    "Escolher as populações de cada lado (prospects, oportunidades, clientes)",
+    "Definir regras de compartilhamento e campos permitidos",
+    "Casar registros com identificador único",
+    "Mostrar apenas sobreposições e contagens",
+    "Agir sobre cada célula da matriz",
+    "Reexecutar de forma contínua"
+   ],
+   "resultados": [
+    "Lista de contas em comum com contexto",
+    "Apenas contagem de sobreposição",
+    "Nenhuma sobreposição relevante, parceiro vai para observação"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro",
+    "Diretor (aprova regras)"
+   ],
+   "metricas": [
+    "Contas em comum por parceiro",
+    "Sobreposição como percentual da carteira do parceiro"
+   ],
+   "citacao": "The process by which two or more partners compare lists of prospects, opportunities, or customers to identify overlapping relationships.",
+   "pagina": "secao 29"
+  },
+  {
+   "nome": "Priorizar parceiros por sobreposição",
+   "descricao": "Usar a sobreposição real de clientes e pipeline, cruzada com o valor gerado a clientes compartilhados, para decidir onde investir tempo humano.",
+   "gatilho": "Novo prospect de parceiro ou revisão periódica",
+   "etapas": [
+    "Medir a sobreposição de linha de base",
+    "Estimar o mercado realmente alcançável",
+    "Medir o valor gerado a clientes compartilhados",
+    "Posicionar o parceiro na matriz 2x2",
+    "Definir a próxima melhor ação do quadrante",
+    "Reavaliar periodicamente"
+   ],
+   "resultados": [
+    "Prioridade alta: atenção humana e revisão regular",
+    "Próxima melhor escolha",
+    "Co-marketing apenas",
+    "Observar e esperar"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Mercado alcançável da parceria",
+    "Lift de clientes compartilhados"
+   ],
+   "citacao": "Plot each partner of yours as a dot on this matrix, and you'll end up with a rich scatterplot through which you can better understand your ecosystem, relatively prioritize partners, and establish a next best action for each one.",
+   "pagina": "secao 24"
+  },
+  {
+   "nome": "Co-vender uma conta compartilhada",
+   "descricao": "Quando a oportunidade de um lado cruza com cliente ou oportunidade do outro, os dois times alinham uma ação conjunta e medem o resultado.",
+   "gatilho": "Sobreposição detectada em oportunidade ou cliente",
+   "etapas": [
+    "Descobrir quem é o dono da conta em cada lado",
+    "Abrir um canal de comunicação entre essas pessoas",
+    "Combinar a próxima melhor ação alinhada aos incentivos",
+    "Medir e atribuir os resultados"
+   ],
+   "resultados": [
+    "Apresentação ao decisor",
+    "Informação sobre processo de compra",
+    "Referência de bastidor",
+    "Nenhuma ação, parceiro sem interesse"
+   ],
+   "papeis": [
+    "Consultor da Wise",
+    "Contato comercial do parceiro",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Taxa de fechamento com parceiro",
+    "Dias para fechar",
+    "Ticket médio"
+   ],
+   "citacao": "In order to co-sell, you and your partner have to achieve alignment and take action.",
+   "pagina": "secao 26"
+  },
+  {
+   "nome": "Qualificar indicação como lead do ecossistema",
+   "descricao": "Marcar leads que ganham qualidade por comportamento no ecossistema do parceiro e comparar sua conversão com outras origens.",
+   "gatilho": "Indicação ou lead que cruza com carteira de parceiro",
+   "etapas": [
+    "Casar o lead com populações dos parceiros",
+    "Registrar o contexto do parceiro (relação, dono, etapa)",
+    "Marcar o lead como EQL",
+    "Encaminhar com dossiê de contexto",
+    "Medir conversão e valor por parceiro"
+   ],
+   "resultados": [
+    "EQL aceito como oportunidade",
+    "Lead devolvido ao parceiro",
+    "Lead em nutrição"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Comercial Wise"
+   ],
+   "metricas": [
+    "Conversão de EQL em oportunidade",
+    "Valor médio e velocidade de EQL"
+   ],
+   "citacao": "An EQL is a lead that is more likely to become a paying customer due to behaviors it is exhibiting in your partner ecosystem.",
+   "pagina": "secao 25"
+  },
+  {
+   "nome": "Registrar atribuição de parceiro na oportunidade",
+   "descricao": "Marcar cada cliente ou oportunidade como originado ou influenciado por parceiro, com histórico de interações, e sincronizar com o sistema de registro.",
+   "gatilho": "Oportunidade criada ou interação com parceiro registrada",
+   "etapas": [
+    "Tagear o parceiro na conta ou oportunidade",
+    "Classificar como originado ou influenciado",
+    "Anexar a evidência da interação",
+    "Sincronizar com o CRM",
+    "Calcular métricas brutas e comparativas por parceiro"
+   ],
+   "resultados": [
+    "Originado pelo parceiro",
+    "Influenciado pelo parceiro",
+    "Sem parceiro"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Comercial Wise",
+    "Diretor"
+   ],
+   "metricas": [
+    "Receita originada e influenciada",
+    "Comparativos de fechamento, ciclo e ticket"
+   ],
+   "citacao": "Critically, that attribution history can then be automatically synced back to a CRM system such as Salesforce",
+   "pagina": "secao 19"
+  },
+  {
+   "nome": "Definir regras de compartilhamento de dados",
+   "descricao": "Escolher a postura de compartilhamento adequada ao risco da empresa e aplicar regras por parceiro, por população e por campo.",
+   "gatilho": "Ativação de parceria ou mudança de nível",
+   "etapas": [
+    "Escolher a postura (somente entrada, só contagens, aberta)",
+    "Excluir dados pessoais e contas protegidas",
+    "Definir populações amplas se não quiser revelar o tipo de relação",
+    "Registrar regras e permitir revisão e auditoria",
+    "Alinhar texto jurídico e convite"
+   ],
+   "resultados": [
+    "Compartilhar sobreposições",
+    "Compartilhar só contagens",
+    "Não compartilhar"
+   ],
+   "papeis": [
+    "Diretor",
+    "Jurídico",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Regras ativas por parceiro",
+    "Eventos de auditoria"
+   ],
+   "citacao": "Data-sharing rules: These rules determine which data partners can see.",
+   "pagina": "secao 20"
+  },
+  {
+   "nome": "Atender pedido de apresentação de parceiro",
+   "descricao": "Pull: o consultor pede ajuda em uma conta; a Gerente de Parcerias avalia e apresenta o parceiro em um canal compartilhado, com alerta de oportunidades sem parceiro como push.",
+   "gatilho": "Pedido do consultor ou alerta de oportunidade sem parceiro",
+   "etapas": [
+    "Receber o pedido com conta, tipo de parceiro e forma de trabalho",
+    "Revisar sobreposições da conta",
+    "Apresentar o parceiro e abrir canal compartilhado",
+    "Combinar próximos passos",
+    "Registrar atribuição"
+   ],
+   "resultados": [
+    "Apresentação feita",
+    "Pedido recusado com motivo",
+    "Sem parceiro adequado"
+   ],
+   "papeis": [
+    "Consultor da Wise",
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Tempo até a apresentação",
+    "Taxa de oportunidades com parceiro anexado"
+   ],
+   "citacao": "The partner manager will review each request as it comes in and then intro the rep to the partner in a Slack Connect channel with the partner.",
+   "pagina": "secao 26"
+  },
+  {
+   "nome": "Curar convidados de evento por cruzamento de carteiras",
+   "descricao": "Cruzar inscritos com carteiras de parceiros e patrocinadores para formar uma lista curada, com opt-in do participante.",
+   "gatilho": "Abertura de inscrições de evento ou jantar",
+   "etapas": [
+    "Cruzar inscritos com as populações dos parceiros",
+    "Montar lista curada de apresentações de alto valor",
+    "Colher opt-in do participante",
+    "Definir a composição da sala",
+    "Fazer as apresentações no evento"
+   ],
+   "resultados": [
+    "Apresentação consentida",
+    "Participante sem opt-in permanece anônimo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro anfitrião"
+   ],
+   "metricas": [
+    "Apresentações consentidas por evento"
+   ],
+   "citacao": "Using Crossbeam, Gainsight is able to match up the list of attending companies at Pulse with the target prospects, opportunities, and customers of all its partners and sponsors",
+   "pagina": "secao 25"
+  },
+  {
+   "nome": "Revisar parceiros por reciprocidade e resultado",
+   "descricao": "Reavaliar de forma contínua a posição dos parceiros, a reciprocidade e o resultado atribuído, para decidir investimento, nutrição ou saída.",
+   "gatilho": "Ciclo de revisão periódica",
+   "etapas": [
+    "Atualizar sobreposição e valor gerado",
+    "Verificar reciprocidade de indicações",
+    "Ver receita originada por parceiro",
+    "Reposicionar na matriz",
+    "Decidir investir, manter ou observar"
+   ],
+   "resultados": [
+    "Subir de nível",
+    "Manter",
+    "Observação",
+    "Saída formal"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Reciprocidade de indicações",
+    "Receita originada por parceiro"
+   ],
+   "citacao": "By continuously reevaluating your most promising and investable partners, you can ensure that you're skating where the puck is going when it comes to ecosystem potential.",
+   "pagina": "secao 24"
+  },
+  {
+   "nome": "Gerir parceiros de cauda longa sem acompanhamento individual",
+   "descricao": "Um conjunto estreito de jogadas de alto impacto e baixa manutenção, acionadas por dados e automações, em vez de reuniões individuais.",
+   "gatilho": "Parceiro de baixa prioridade ativado",
+   "etapas": [
+    "Aplicar onboarding automatizado",
+    "Compartilhar só contagens ou regras básicas",
+    "Disparar alertas de oportunidade",
+    "Revisar por exceção"
+   ],
+   "resultados": [
+    "Parceiro gera valor sem gestão dedicada",
+    "Parceiro inativo vai para observação"
+   ],
+   "papeis": [
+    "Portal",
+    "Gerente de Parcerias (por exceção)"
+   ],
+   "metricas": [
+    "Indicações por parceiro de cauda longa"
+   ],
+   "citacao": "this large pool of unmanaged partners can be very material",
+   "pagina": "secao 19"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Mercado alcançável da parceria (SOM)",
+   "definicao": "Universo de relacionamentos compartilhados conhecidos entre os dois lados, baseado em dado real e acionável, que mede o potencial de um parceiro melhor que o tamanho da marca.",
+   "citacao": "it uses ELG data from Crossbeam to inform a universe of known, serviceable shared relationships based on real data that can be acted upon.",
+   "pagina": "secao 24"
+  },
+  {
+   "nome": "Lift de valor em clientes compartilhados",
+   "definicao": "Diferença de velocidade de fechamento, valor de contrato, retenção e NPS entre clientes compartilhados com o parceiro e o restante da base.",
+   "citacao": "it's possible to quantify the “lift” that shared customers with this partner experience relative to the rest of your customer list.",
+   "pagina": "secao 24"
+  },
+  {
+   "nome": "Receita originada e influenciada por parceiro",
+   "definicao": "Total de clientes e receita originados e influenciados pelos movimentos de ecossistema.",
+   "citacao": "The total customer count and revenue dollars sourced and influenced by your ELG motions",
+   "pagina": "secao 19"
+  },
+  {
+   "nome": "Conversão de EQL em oportunidade",
+   "definicao": "Taxa de conversão dos leads qualificados pelo ecossistema em oportunidades, comparada às outras origens, com detalhamento por parceiro.",
+   "citacao": "Compare the rate at which EQLs convert to qualified opportunities when compared to other sources of leads.",
+   "pagina": "secao 25"
+  },
+  {
+   "nome": "Taxa de parceiro anexado",
+   "definicao": "Percentual de oportunidades com parceiro registrado, medido junto com a taxa de fechamento das oportunidades influenciadas.",
+   "citacao": "win rates on partner-influenced deals and partner attach rate",
+   "pagina": "secao 26"
+  },
+  {
+   "nome": "Velocidade de venda com parceiro",
+   "definicao": "Dias para fechar, ticket médio e taxa de fechamento das vendas com parceiro comparadas às sem parceiro.",
+   "citacao": "Lengieza uses Crossbeam and Salesforce data in Tableau to measure three metrics:",
+   "pagina": "secao 26"
+  },
+  {
+   "nome": "Taxa de adoção sobre a sobreposição",
+   "definicao": "Número de clientes que usam a integração dividido pelos clientes em comum; adaptável à fração da carteira do parceiro que vira participante ou lead.",
+   "citacao": "Divide the number of customers actually using your integration with a partner by that overlapping customer count, and you'll know the precise market penetration of your integration",
+   "pagina": "secao 27"
+  },
+  {
+   "nome": "Reciprocidade de indicações",
+   "definicao": "Equilíbrio entre indicações enviadas ao parceiro e recebidas dele.",
+   "citacao": "Procore can see when they've sent partners a lot of leads and it isn't being reciprocated.",
+   "pagina": "secao 26"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Influência declarada pelo parceiro sem evidência gera disputa e descrédito, e o programa volta a ser visto como custo.",
+   "citacao": "The influence in question is determined by a partner team's self-reported interaction or involvement in a deal, which sellers or other influencers don't always interpret or remember in the same way.",
+   "pagina": "secao 19"
+  },
+  {
+   "alerta": "Cruzamento feito com planilha trocada por e-mail fica desatualizado, exige que um lado exponha a lista primeiro e escapa do controle jurídico e de segurança.",
+   "citacao": "It's instantly out of date. The moment the spreadsheet is exported, it's frozen in time.",
+   "pagina": "secao 21"
+  },
+  {
+   "alerta": "Parceria nunca é gratuita: o custo de treinar, incentivar e gerir relacionamento pode ser esmagador antes de qualquer retorno.",
+   "citacao": "In the world of service partners, the overhead of training, incentives, and relationship management can be overwhelming.",
+   "pagina": "secao 24"
+  },
+  {
+   "alerta": "Parceiro grande pode ter pouca sobreposição com o ICP; priorizar por marca ou por relacionamento pessoal desperdiça horas escassas.",
+   "citacao": "Their company TAM may be huge, but the TAM of your partnership is actually not as significant as some other players' because only a miniscule fraction of their customer base and target market overlaps with yours.",
+   "pagina": "secao 24"
+  },
+  {
+   "alerta": "Aliança chamada de estratégica pode servir só de manchete, muito antes de existir trabalho que gere valor. Cuidado com parcerias assinadas sem plano de ação.",
+   "citacao": "can also be a clever way to grab headlines or send a message to the market long before actually doing any of the work that makes it valuable.",
+   "pagina": "secao 13"
+  },
+  {
+   "alerta": "A sobreposição revela indiretamente o tipo de relação (cliente, prospect) por causa da população em que a conta está; para não vazar, usar populações amplas.",
+   "citacao": "One piece of metadata that gets revealed by overlap comparisons is which population(s) a matching company is part of.",
+   "pagina": "secao 20"
+  },
+  {
+   "alerta": "Não decidir compartilhamento de dados com terceiros sem apoio de privacidade, segurança e conformidade; o próprio autor ressalva que o livro não é aconselhamento jurídico.",
+   "citacao": "You should never make decisions about sharing data externally without the consent and support of your company's privacy, security, and compliance stakeholders.",
+   "pagina": "secao 6"
+  },
+  {
+   "alerta": "Indicadores de parceria desconectados dos objetivos do negócio não são levados a sério, mesmo quando o time entrega resultado.",
+   "citacao": "Metrics that are dissociated from core business goals aren't taken seriously, even when the team is delivering outcomes that actually are improving go-to-market KPIs.",
+   "pagina": "secao 19"
+  }
+ ]
+}

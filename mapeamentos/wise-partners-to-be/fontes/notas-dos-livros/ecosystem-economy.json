@@ -1,0 +1,599 @@
+{
+ "livro": "The Ecosystem Economy",
+ "autores": "Venkat Atluri, Miklós Dietz",
+ "slug": "ecosystem-economy",
+ "tese": "O livro argumenta que as fronteiras entre setores estão se dissolvendo e que a vantagem passa para quem organiza comunidades de empresas em torno de necessidades do cliente, ganhando como orquestrador de uma plataforma ou como participante de ecossistema alheio. O jogo é escolher onde jogar, que papel assumir com realismo, que capacidades construir, comprar ou obter por parceria, e como governar e dividir o valor criado em conjunto. Parceria de verdade exige criação conjunta de valor e relação que se aprofunda, não só relação de fornecedor e cliente.",
+ "recomendacoes": [
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Declarar por escrito qual papel a Wise exerce: orquestradora do sub-ecossistema de parceiros que vendem para indústrias e participante nos ecossistemas dos parceiros (ERP, MES, feiras).",
+   "processo": "Definir o papel da Wise no ecossistema",
+   "citacao": "Generally speaking, though, these roles fall into two main categories: orchestrators and participants.",
+   "pagina": "p. 138",
+   "aplicabilidade": "alta",
+   "porque": "A Wise recruta empresas de software e entidades e ao mesmo tempo entra nas comunidades delas, então ocupa os dois papéis e precisa deixar claro onde manda e onde segue regras alheias."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Escolher o papel com realismo: orquestrar só o que a capacidade atual (1 gerente, 12 horas por mês) sustenta, e deixar a orquestração ampla para quando houver recursos.",
+   "processo": "Escolher o papel no ecossistema",
+   "citacao": "The reality is that many companies simply cannot be ecosystem orchestrators.",
+   "pagina": "p. 200",
+   "aplicabilidade": "alta",
+   "porque": "Com um programa sem parceiro assinado e 12 horas mensais, tentar orquestrar um ecossistema amplo seria gastar energia onde ela rende menos."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Adotar um papel híbrido: a Wise controla a relação com o cliente industrial e a qualidade da indicação, enquanto o parceiro controla a ferramenta e o canal dele.",
+   "processo": "Definir o papel da Wise no ecossistema",
+   "citacao": "You could also find yourself in a hybrid role, exercising a great degree of control over one aspect of the ecosystem relationship and less over another",
+   "pagina": "p. 144",
+   "aplicabilidade": "alta",
+   "porque": "O desenho do programa já divide o controle: a Wise fica com o cliente e o método, o parceiro com a carteira e o software, e o livro valida essa posição intermediária no espectro."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Partir do que a Wise já faz bem (relação com indústrias e método de gestão) como base de orquestração e recrutar parceiros para suprir o que falta.",
+   "processo": "Mapear necessidades de capacidades",
+   "citacao": "Orchestrators typically begin from a strong position in at least a few of these key capabilities",
+   "pagina": "p. 147",
+   "aplicabilidade": "alta",
+   "porque": "A consultoria tem relacionamento e credibilidade com indústrias, que é o ativo que os parceiros de software e as entidades não têm."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Posicionar o programa dentro do grupo Wise, Tríade e Swallow nem tão colado ao core que o gerente de 12 horas vire prioridade secundária, nem tão solto que perca sinergia com as vendas do grupo.",
+   "processo": "Posicionar o programa na organização",
+   "citacao": "If you keep them too close to the core organization, their innovative, entrepreneurial spirit will be stifled. But keep them too far away, and they will struggle to scale up and benefit from synergies.",
+   "pagina": "p. 169",
+   "aplicabilidade": "media",
+   "porque": "O programa vive dentro de uma consultoria com equipe pequena, então a zona certa de distância do core define se ele ganha tempo e acesso aos clientes do grupo."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Montar a matriz de necessidades de capacidades do programa nas quatro categorias do livro: plataforma (Portal), oferta (Prateleira de RFP e Base Ativa), go-to-market (parceiros) e cliente (pós-venda).",
+   "processo": "Mapear necessidades de capacidades",
+   "citacao": "The assets and capabilities that are most frequently needed for ecosystem propositions generally fall into a few categories: platform or backbone capabilities, product/offer capabilities, go-to-market capabilities, and customer capabilities.",
+   "pagina": "p. 145",
+   "aplicabilidade": "alta",
+   "porque": "A matriz mostra o que a Wise já tem hoje, o que o concorrente tem e o que falta, e ancora a escolha do papel em fatos e não em ambição."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Para cada capacidade necessária (evento, integração com ERP, conteúdo técnico, atendimento), decidir se a Wise constrói, compra ou faz parceria, e usar parceria só para o que é difícil de desenvolver e de manter.",
+   "processo": "Decidir construir, adquirir ou fazer parceria",
+   "citacao": "difficult both to develop and to maintain, the best route is likely an ecosystem partnership.",
+   "pagina": "p. 150",
+   "aplicabilidade": "alta",
+   "porque": "Com equipe mínima, o critério de dificuldade de desenvolver e de manter evita que a Wise assuma sozinha tarefas como infraestrutura de eventos ou integrações."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Desenhar o programa como efeito de rede de dois lados: cada cliente industrial da Wise torna o programa mais atraente ao parceiro, e cada parceiro com carteira ativa torna a Wise mais atraente ao cliente.",
+   "processo": "Ativar efeito de rede do programa",
+   "citacao": "As more and more customers join, the ecosystem becomes more and more attractive to participants. And likewise, as more and more participants join, the ecosystem becomes increasingly attractive to customers.",
+   "pagina": "p. 139",
+   "aplicabilidade": "alta",
+   "porque": "É a lógica da frase de que o parceiro não é ICP, mas a carteira dele é: a rede só cresce se os dois lados recebem valor."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Usar a Base Ativa como o laço de engajamento recorrente do programa, com comunidade, evento e serviços que prendem o parceiro e a carteira dele, e medir esse laço.",
+   "processo": "Executar ciclo Base Ativa de 12 semanas",
+   "citacao": "bringing together large groups of participants with elements like a marketplace, social connections, and sticky services like loyalty programs",
+   "pagina": "p. 135",
+   "aplicabilidade": "alta",
+   "porque": "O livro cita mercado, conexões sociais e serviços que fidelizam como motores de rede, o que corresponde a Prateleira de RFP, comunidade e evento da Base Ativa."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Pontuar cada prospect em duas dimensões: atratividade para a Wise (carteira, dados, alcance, capacidades) e viabilidade (interesse real dele, tempo, conflitos), e usar a pontuação no kanban de recrutamento.",
+   "processo": "Pontuar prospect por atratividade e viabilidade",
+   "citacao": "how attractive they are to you, and the feasibility of the overall collaboration",
+   "pagina": "p. 154",
+   "aplicabilidade": "alta",
+   "porque": "Com cerca de 21 prospects em conversa e 12 horas por mês, o gerente precisa priorizar quem abordar primeiro e o portal pode guardar a pontuação."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Avaliar no recrutamento se a carteira do prospect complementa a base da Wise em alvos e segmentos, e fazer o cruzamento de carteiras antes de investir tempo.",
+   "processo": "Cruzar carteira do parceiro com a base da Wise",
+   "citacao": "Will their customer base complement your existing customer base in terms of specific targets and segments?",
+   "pagina": "p. 154",
+   "aplicabilidade": "alta",
+   "porque": "Resolve o ponto de que o parceiro não é ICP mas a carteira dele é: só vale recrutar quando a carteira traz indústrias que a Wise ainda não atende."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Focar em um segmento de parceiro por vez (por exemplo ERP e MES para indústrias) e entregar melhora forte de experiência a poucos, em vez de oferta rasa para todos os tipos.",
+   "processo": "Priorizar segmento de parceiro",
+   "citacao": "It is much better to achieve a significant improvement of experience for a portion of your customers than a marginal improvement of experience for a large portion of your customers.",
+   "pagina": "p. 135",
+   "aplicabilidade": "alta",
+   "porque": "O programa lista ERP, CRM, MES, SST, ESG, BPM, automação e entidades, mas 12 horas por mês só sustentam um ou dois segmentos bem atendidos."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Tornar a experiência do parceiro muito melhor que a de uma indicação comum: link exclusivo, status em tempo real, relatório de resultado e ranking, não apenas uma promessa de comissão.",
+   "processo": "Dar visibilidade de resultados ao parceiro",
+   "citacao": "in the ecosystem context, make sure you focus on significantly improving the experience for your partners, too.",
+   "pagina": "p. 134",
+   "aplicabilidade": "alta",
+   "porque": "O livro trata o parceiro como cliente do ecossistema, e o Portal é o lugar onde essa experiência é entregue."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Escolher conscientemente o modelo de receita do programa entre os quatro do livro (partilha de resultado, taxa fixa de adesão, equity, aberto) e combinar partilha de resultado com taxa por pacote de nível.",
+   "processo": "Definir modelo de receita por nível",
+   "citacao": "models in which orchestrators share the upside with participants, models in which participants pay a flat fee to join the ecosystem",
+   "pagina": "p. 139",
+   "aplicabilidade": "alta",
+   "porque": "Hoje a Wise só paga 40% da primeira mensalidade; os pacotes com contrapartidas dos níveis Elite, Premium e Select permitem testar uma taxa fixa de adesão. Atenção: no livro quem paga a fatia é o participante ao orquestrador, aqui o fluxo da indicação é inverso."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Exigir criação conjunta de valor para chamar alguém de parceiro: a comissão por indicação sozinha é transação, e o plano de ações conjuntas e a Base Ativa são o que cria parceria de fato.",
+   "processo": "Elaborar plano de ações conjuntas",
+   "citacao": "One of the fundamental qualities that characterizes this distinction is the presence of collective value creation.",
+   "pagina": "p. 151",
+   "aplicabilidade": "alta",
+   "porque": "A distinção entre fornecedor e parceiro do livro justifica que o plano de ações conjuntas seja obrigatório no onboarding, e não opcional."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Tratar a comissão como partilha do valor criado em conjunto e não como pagamento por lead, e documentar para o parceiro como o valor é dividido.",
+   "processo": "Calcular comissão do parceiro",
+   "citacao": "More sophisticated ecosystems often use a business model in which the participants and orchestrators share the value they are creating together",
+   "pagina": "p. 142",
+   "aplicabilidade": "alta",
+   "porque": "Os 40% da primeira mensalidade são uma regra simples de partilha; o livro sugere que sofisticar a regra depois, quando houver histórico, aumenta o alinhamento."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Prever que as condições da parceria mudam e se aprofundam com o tempo, e deixar os níveis híbridos com revisão trimestral movimentarem o parceiro para cima conforme ele entrega.",
+   "processo": "Revisar nível do parceiro a cada trimestre",
+   "citacao": "Real ecosystem relationships are vastly more complicated and constantly evolving",
+   "pagina": "p. 164",
+   "aplicabilidade": "media",
+   "porque": "O livro opõe termos estáticos de fornecedor a relações dinâmicas de parceria, o que apoia a revisão trimestral já prevista."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Atuar como organizador de comunidade: recrutar, coordenar e reter parceiros, aplicar padrões da comunidade e coletar feedback para melhorar o programa e o Portal.",
+   "processo": "Aplicar padrões da comunidade de parceiros",
+   "citacao": "They enforce community standards and seek feedback to better themselves and their platforms.",
+   "pagina": "p. 138",
+   "aplicabilidade": "alta",
+   "porque": "Comunicados, ranking e nota de qualidade do Portal são os instrumentos para aplicar padrão e ouvir o parceiro."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Tratar a governança do programa como risco principal: decidir onde o programa fica na Wise e como o ecossistema é governado (quem recebe o quê, segurança, conduta) antes de recrutar em volume.",
+   "processo": "Governar o ecossistema de parceiros",
+   "citacao": "Our research shows that the vast majority of unsuccessful ecosystem builds can trace their failure back to a flawed approach to governance.",
+   "pagina": "p. 168",
+   "aplicabilidade": "alta",
+   "porque": "Com zero parceiros assinados é o momento barato de fixar regras de proteção de 180 dias, SLA e comissão, antes de haver disputas."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Escrever poucos princípios de governança, torná-los transparentes para todos os parceiros no Portal e revisá-los para manter posição equitativa.",
+   "processo": "Publicar regras do programa de parceiros",
+   "citacao": "being thoughtful and purposeful in deciding on a set of guiding principles",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "Regras públicas reduzem a carga do Diretor e do Gerente em discussões caso a caso sobre indicação, proteção e nível."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Definir de antemão como será policiado o comportamento dos parceiros e o que leva ao desligamento formal, para proteger os demais e os clientes das indústrias.",
+   "processo": "Desligar parceiro formalmente",
+   "citacao": "How will you police your ecosystem to make sure partners and participants are not taking advantage of the ecosystem and doing things that would harm others?",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "Parceiro que abusa do link exclusivo ou prejudica um cliente industrial compromete a marca da Wise, então o critério de saída precisa existir antes do primeiro caso."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Industrializar o jurídico: contrato padrão modular por nível, com anexos, para que cada nova parceria não exija revisão sob medida.",
+   "processo": "Assinar parceria com contrato padrão",
+   "citacao": "you will need to radically rethink the scalability of your legal process.",
+   "pagina": "p. 191",
+   "aplicabilidade": "alta",
+   "porque": "A meta de 10 parcerias até 31/12/2026 com um gerente e um Diretor aprovador só fecha se a assinatura for repetível."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Entregar ao parceiro um conjunto de recursos para ele montar sua proposta e se encaixar no programa: kit de indicação, mentoria, certificação e feedback do cliente.",
+   "processo": "Executar onboarding de 30, 60 e 90 dias",
+   "citacao": "Orchestrators typically provide a set of resources to help participants build propositions and ultimately fit into their ecosystem.",
+   "pagina": "p. 139",
+   "aplicabilidade": "alta",
+   "porque": "O livro descreve o papel do orquestrador como fornecedor de recursos, e mentoria e certificação cumprem isso no programa."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Fazer a entrada do parceiro o mais simples e rápida possível: poucos passos, sem comitês, para a primeira indicação acontecer logo.",
+   "processo": "Ativar parceiro na primeira indicação",
+   "citacao": "your goal should be to make it as easy as possible for other players to connect in.",
+   "pagina": "p. 190",
+   "aplicabilidade": "alta",
+   "porque": "A ativação do onboarding é a primeira indicação que virou reunião, então todo atrito antes disso reduz a conversão."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Projetar o Portal para controlar como os dados fluem e como os parceiros os compartilham e usam em conjunto, e evitar que o dado da indicação fique preso em uma planilha ou em uma pessoa.",
+   "processo": "Compartilhar dados da carteira entre Wise e parceiro",
+   "citacao": "you need an infrastructure that effectively manages how the different participants in your ecosystem are able to share and collaboratively use those data.",
+   "pagina": "p. 190",
+   "aplicabilidade": "alta",
+   "porque": "O cruzamento de carteiras só funciona com regra explícita do que cada lado vê; o livro não trata de LGPD, então esse ponto jurídico precisa de análise própria."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Identificar os pontos de controle do programa (relação com o cliente industrial e dados de qualidade da indicação) e não delegá-los ao parceiro.",
+   "processo": "Definir pontos de controle do programa",
+   "citacao": "identify the key steps in the customer journey that, if you control them, will allow you to gain an advantage over your competitors",
+   "pagina": "p. 201",
+   "aplicabilidade": "media",
+   "porque": "Se o parceiro de software ficar com o relacionamento e o dado, a Wise vira fornecedor substituível dentro do ecossistema dele."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Definir metas por estágio do programa: agora o que importa é operar de fato e alcançar clientes; depois receita e escala; só por último lucro.",
+   "processo": "Definir metas por estágio do programa",
+   "citacao": "At the very beginning, the only OKR that really matters is your effectiveness in delivering basic services and in reaching customers.",
+   "pagina": "p. 183",
+   "aplicabilidade": "alta",
+   "porque": "O programa está em experimentação, sem parceiro assinado, e cobrar margem cheia agora levaria a concluir erradamente que ele é inviável."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Incluir entre as metas de topo uma medida de valor criado para todos os lados, com receita do parceiro e experiência do cliente industrial, além da receita da Wise.",
+   "processo": "Medir valor criado no ecossistema",
+   "citacao": "the single most important OKR is the degree to which the ecosystem is creating value.",
+   "pagina": "p. 183",
+   "aplicabilidade": "alta",
+   "porque": "O ranking e a nota de qualidade do Portal podem expressar valor para o parceiro e não só volume de indicações."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Reavaliar a posição e o desenho do programa em ritmo trimestral: nem a cada mês, nem a cada dois ou três anos.",
+   "processo": "Revisar o programa a cada trimestre",
+   "citacao": "If it is every two to three years, that is likely too infrequent. If it is every month, that is likely too often.",
+   "pagina": "p. 204",
+   "aplicabilidade": "alta",
+   "porque": "A revisão trimestral já prevista para os níveis serve também ao modelo de receita e ao recrutamento, e cabe nas 12 horas mensais."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Tratar o experimento de 2026 como iniciativa com marcos e KPIs: quem não entrega os indicadores combinados é encerrado ou reformulado, em vez de ser mantido por orgulho.",
+   "processo": "Encerrar iniciativa que não entrega KPIs",
+   "citacao": "each of these businesses would need to deliver on their key performance indicators (KPIs) or face closure, in the spirit of failing fast.",
+   "pagina": "p. 170",
+   "aplicabilidade": "media",
+   "porque": "A meta de 10 parcerias e ao menos 1 cliente de indicação até 31/12/2026 é um marco natural de decisão sobre continuar, ajustar ou parar."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Escolher o papel no ecossistema",
+   "descricao": "Processo iterativo para decidir onde ficar entre orquestrador e participante, ligando ambição, histórico e capacidades necessárias.",
+   "gatilho": "Decisão de criar ou entrar em um ecossistema",
+   "etapas": [
+    "Declarar a ambição de orquestrar e testar se é prático nesse espaço",
+    "Avaliar histórico, relações e capacidades já desenvolvidas",
+    "Fazer a análise de necessidades de capacidades",
+    "Classificar cada capacidade em construir, adquirir ou fazer parceria",
+    "Posicionar-se no espectro de participante a orquestrador",
+    "Repetir o ciclo até chegar a uma lista curta de parceiros"
+   ],
+   "resultados": [
+    "Orquestrador de ecossistema amplo",
+    "Orquestrador de sub-ecossistema",
+    "Papel híbrido",
+    "Participante em um ou vários ecossistemas"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Número de capacidades críticas obtidas por parceria"
+   ],
+   "citacao": "Above all, you need to ask yourself: Is it practical to try to orchestrate a new ecosystem in this space?",
+   "pagina": "p. 144"
+  },
+  {
+   "nome": "Mapear necessidades de capacidades",
+   "descricao": "Listar ativos e capacidades exigidos pela proposta de valor, em quatro categorias, e registrar quem os tem hoje e no futuro.",
+   "gatilho": "Proposta de valor definida",
+   "etapas": [
+    "Listar know-how, tecnologia, base de clientes, relações com fornecedores, dados e infraestrutura de go-to-market",
+    "Agrupar em plataforma, oferta, go-to-market e cliente",
+    "Preencher a matriz com a posição da Wise e a do concorrente, hoje e no futuro",
+    "Marcar o que é desafio de papel e planejar a preparação"
+   ],
+   "resultados": [
+    "Matriz de necessidades preenchida",
+    "Lista de lacunas para fechar"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Percentual de capacidades já controladas pela Wise"
+   ],
+   "citacao": "make a list of the assets and capabilities you will need to execute it",
+   "pagina": "p. 145"
+  },
+  {
+   "nome": "Decidir construir, adquirir ou fazer parceria",
+   "descricao": "Grade de duas dimensões, dificuldade de desenvolver e dificuldade de manter, que indica a via para cada capacidade.",
+   "gatilho": "Capacidade faltante identificada na matriz",
+   "etapas": [
+    "Avaliar tempo, recursos e atenção para desenvolver",
+    "Avaliar recursos e atenção para manter ao longo do tempo",
+    "Posicionar na grade de quatro quadrantes",
+    "Construir se for fácil, adquirir se for difícil de desenvolver e fácil de manter, fazer parceria se for difícil nas duas"
+   ],
+   "resultados": [
+    "Construir internamente",
+    "Adquirir empresa",
+    "Parceria de ecossistema"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Dificuldade de desenvolver",
+    "Dificuldade de manter"
+   ],
+   "citacao": "you must judge the assets and capabilities by two criteria: how difficult they would be to develop on your own, and how difficult they would be to maintain thereafter.",
+   "pagina": "p. 149"
+  },
+  {
+   "nome": "Selecionar parceiros por atratividade e viabilidade",
+   "descricao": "Matriz de parceiros por capacidade, com triagem em duas perguntas: queremos fazer parceria com eles e eles querem com a gente.",
+   "gatilho": "Capacidade classificada como parceria",
+   "etapas": [
+    "Listar para cada capacidade os players que a têm hoje e continuarão a ter",
+    "Avaliar atratividade: base de clientes, dados, alcance e capacidades que aceleram outras parcerias",
+    "Avaliar viabilidade: parceiros atuais, interesse, horizonte de colaboração e velocidade de implementação",
+    "Reduzir a lista curta e priorizar quem abordar primeiro",
+    "Repetir o ciclo"
+   ],
+   "resultados": [
+    "Lista priorizada de parceiros a abordar",
+    "Descarte de prospects de baixa viabilidade"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Nota de atratividade",
+    "Nota de viabilidade"
+   ],
+   "citacao": "do we want to partner with them?",
+   "pagina": "p. 154"
+  },
+  {
+   "nome": "Reavaliar posição do programa e repetir o ciclo",
+   "descricao": "Ciclo de quatro passos (básico, avaliação de ecossistema, avaliação competitiva, repetir) refeito a cada poucos trimestres.",
+   "gatilho": "Passagem de trimestre ou mudança do cenário competitivo",
+   "etapas": [
+    "Reavaliar necessidades e base de clientes",
+    "Reavaliar ecossistemas existentes e lacunas",
+    "Reavaliar concorrentes tradicionais e novos",
+    "Ajustar a proposta e o papel",
+    "Registrar o que mudou e decidir"
+   ],
+   "resultados": [
+    "Manter o rumo",
+    "Ajustar proposta",
+    "Mudar de papel",
+    "Encerrar iniciativa"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Intervalo entre revisões"
+   ],
+   "citacao": "come back and revisit these steps every few quarters to ensure that your answer still makes sense as the landscape shifts.",
+   "pagina": "p. 108"
+  },
+  {
+   "nome": "Governar o ecossistema de parceiros",
+   "descricao": "Duas camadas de governança: onde o ecossistema fica na organização e como as regras do ecossistema são definidas, transparentes e revisadas.",
+   "gatilho": "Antes de recrutar em volume",
+   "etapas": [
+    "Decidir onde o programa fica em relação ao core",
+    "Definir quem recebe o quê e como contribuições são compensadas",
+    "Definir segurança e desenvolvimento do Portal",
+    "Definir como policiar abuso e prejuízo a terceiros",
+    "Escrever e publicar princípios e revisá-los"
+   ],
+   "resultados": [
+    "Regras públicas do programa",
+    "Critérios de desligamento"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Ocorrências de conflito entre parceiros",
+    "Tempo para resolver disputas"
+   ],
+   "citacao": "how do you determine who gets what?",
+   "pagina": "p. 169"
+  },
+  {
+   "nome": "Estruturar relação e modelo de receita com participantes",
+   "descricao": "O orquestrador escolhe um modelo para estruturar a relação: partilha de resultado, taxa fixa, equity ou aberto, e monta um arcabouço para gerir o relacionamento.",
+   "gatilho": "Início de uma nova relação com participante",
+   "etapas": [
+    "Escolher o modelo de receita por tipo de participante",
+    "Definir o arcabouço de regras e deveres do participante",
+    "Registrar a relação em acordo",
+    "Oferecer recursos e ferramentas ao participante",
+    "Revisar o modelo conforme a relação amadurece"
+   ],
+   "resultados": [
+    "Partilha de resultado",
+    "Taxa fixa de adesão",
+    "Compartilhamento de equity",
+    "Plataforma aberta e gratuita"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Receita do orquestrador por participante",
+    "Receita do participante"
+   ],
+   "citacao": "orchestrators also typically set up a framework to manage the relationship.",
+   "pagina": "p. 139"
+  },
+  {
+   "nome": "Medir desempenho do ecossistema por estágio",
+   "descricao": "Metas e resultados-chave mudam conforme o estágio: operar, gerar efeito indireto, gerar receita e escalar, gerar lucro, sempre com valor criado como meta principal.",
+   "gatilho": "Início de cada estágio do programa",
+   "etapas": [
+    "Estágio inicial: efetividade em entregar serviços e alcançar clientes",
+    "Estágio seguinte: efeito indireto sobre o negócio principal",
+    "Estágio de escala: receita e crescimento",
+    "Estágio final: lucro",
+    "Em todos: valor criado para parceiros, clientes e comunidade"
+   ],
+   "resultados": [
+    "Meta do estágio atingida",
+    "Mudança para o próximo estágio"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Valor criado no ecossistema",
+    "Receita gerada pelos serviços do ecossistema"
+   ],
+   "citacao": "you will want to start looking at whether your ecosystem services are generating revenue, and whether they are starting to scale up.",
+   "pagina": "p. 183"
+  },
+  {
+   "nome": "Encerrar ou graduar iniciativa conforme KPIs",
+   "descricao": "Ciclo de vida de nova ideia de ecossistema: equipes adaptáveis constroem e testam protótipos, e a iniciativa que decola ganha independência, enquanto a que não entrega fecha.",
+   "gatilho": "Marco de decisão do experimento",
+   "etapas": [
+    "Construir e testar protótipos sob supervisão de portfólio",
+    "Comparar com os KPIs combinados",
+    "Graduar a iniciativa se decolou",
+    "Encerrar se não entregou, sem manter por orgulho"
+   ],
+   "resultados": [
+    "Graduar para operação independente",
+    "Reformular",
+    "Encerrar"
+   ],
+   "papeis": [
+    "Diretor"
+   ],
+   "metricas": [
+    "KPIs combinados do experimento"
+   ],
+   "citacao": "In the event that an ecosystem business takes off, there needs to be a path for these ideas to graduate to a more independent status",
+   "pagina": "p. 170"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Valor criado no ecossistema",
+   "definicao": "Valor total gerado para clientes, parceiros e comunidade, e não só receita da Wise; é a meta mais importante em todos os estágios.",
+   "citacao": "the single most important OKR is the degree to which the ecosystem is creating value.",
+   "pagina": "p. 183"
+  },
+  {
+   "nome": "Efetividade operacional no estágio inicial",
+   "definicao": "Capacidade de entregar o serviço básico do programa e de alcançar clientes, usada como única meta relevante no começo.",
+   "citacao": "At the very beginning, the only OKR that really matters is your effectiveness in delivering basic services and in reaching customers.",
+   "pagina": "p. 183"
+  },
+  {
+   "nome": "Receita e escala dos serviços do ecossistema",
+   "definicao": "Se os serviços do ecossistema geram receita e começam a escalar, usado depois que a operação está estável.",
+   "citacao": "you will want to start looking at whether your ecosystem services are generating revenue, and whether they are starting to scale up.",
+   "pagina": "p. 183"
+  },
+  {
+   "nome": "Participação de relacionamento",
+   "definicao": "Share of relationship: fatia de relações ativas com clientes e parceiros no lugar de participação de mercado; na Wise, proporção da carteira dos parceiros em que há relação ativa.",
+   "citacao": "Rather than market share, look at relationship market share.",
+   "pagina": "p. 122"
+  },
+  {
+   "nome": "Profundidade das parcerias",
+   "definicao": "Quanto cada relação conta além da transação: número de parceiros e peso de cada relação, por exemplo parceiros com ações conjuntas ativas.",
+   "citacao": "you will need to drastically expand the number of partners you are working with, but you will also need to make those relationships count for more.",
+   "pagina": "p. 151"
+  },
+  {
+   "nome": "Crescimento do ecossistema e atendimento aos interesses de todos",
+   "definicao": "Perguntas de controle: o ecossistema cresce e as partes interessadas (parceiros, clientes, equipe, comunidade) estão bem servidas.",
+   "citacao": "Are we growing the ecosystem? And are we serving the best interests of all key constituents",
+   "pagina": "p. 183"
+  },
+  {
+   "nome": "Ciclo de engajamento recorrente",
+   "definicao": "Laço em que engajamento, dados e vínculo emocional aprofundam o envolvimento do cliente no ecossistema.",
+   "citacao": "each creates a cycle in which engagement, data, and emotional connection help to get customers more deeply involved in the ecosystem",
+   "pagina": "p. 135"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Chamar de parceria uma relação de fornecedor e cliente. A Prateleira de RFP sozinha, em que a Wise apresenta fornecedores a clientes, é uma relação de compra e venda; sem criação conjunta de valor, como na Base Ativa, não é parceria no sentido do livro.",
+   "citacao": "If you typically are dealing with your partners within an RFP-based approach, more than likely, they are not true ecosystem partners",
+   "pagina": "p. 202"
+  },
+  {
+   "alerta": "Superestimar a capacidade de orquestrar. O viés de superioridade ilusória leva a gastar tempo em iniciativas que nunca se concretizam; para a Wise, vale testar cada premissa de capacidade com dado.",
+   "citacao": "If you overestimate your ability to orchestrate, this can cause you not only to miss out on the benefits that proper attention to the ecosystem economy could bring",
+   "pagina": "p. 165"
+  },
+  {
+   "alerta": "Incrementalismo: montar poucas parcerias sem comprometer os recursos para construir o programa. Meta de 10 parcerias com 12 horas mensais é o risco exato descrito e precisa de decisão consciente de recurso ou de escopo menor.",
+   "citacao": "Many business leaders will try to execute ecosystem plays in a very incremental manner",
+   "pagina": "p. 203"
+  },
+  {
+   "alerta": "Engessar a entrada de novos parceiros em comitês, reuniões e revisões jurídicas. Processo lento desmotiva o parceiro e reduz a percepção de acordo justo.",
+   "citacao": "you want to avoid having to go through numerous committees, meetings, legal reviews, and other steps.",
+   "pagina": "p. 165"
+  },
+  {
+   "alerta": "Dar ao parceiro de tecnologia a chance de intermediar o cliente da Wise. Um fornecedor de software que entra como parceiro pode assumir a relação, então proteção de indicação e controle do relacionamento são parte do desenho.",
+   "citacao": "partnering with an online player carries a risk of putting that player in a position to disintermediate you",
+   "pagina": "p. 159"
+  },
+  {
+   "alerta": "Escolher métricas moles, como alcance, ou exigir margem de negócio maduro cedo demais. Contar prospects em conversa não prova valor, e cobrar margem cheia no experimento leva a concluir que ele é inviável.",
+   "citacao": "they only need to pursue very soft targets: metrics like access, reach, and eyeballs",
+   "pagina": "p. 183"
+  },
+  {
+   "alerta": "Falhar devagar: declarar sucesso em iniciativa que claramente não funciona e manter recursos nela. Para a Wise, definir critérios de corte do experimento e do parceiro inativo.",
+   "citacao": "Most traditional businesses have a culture of not accepting failure, which sometimes leads them to declare new business projects successful even when they plainly are not.",
+   "pagina": "p. 193"
+  },
+  {
+   "alerta": "Deixar o lucro guiar a decisão no lugar da criação de valor. Se a regra de comissão ou o recrutamento são desenhados só para a margem da Wise, o parceiro percebe e o laço de engajamento se quebra.",
+   "citacao": "they allow profits to guide their decision about where to play, instead of letting value creation guide that decision.",
+   "pagina": "p. 136"
+  }
+ ]
+}

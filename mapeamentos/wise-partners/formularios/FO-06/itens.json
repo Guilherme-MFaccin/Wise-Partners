@@ -1,282 +1,268 @@
 [
  {
-  "id": "Q-0036",
-  "bloco": "Como o programa está hoje",
-  "texto": "Até hoje, quantos parceiros assinaram o termo?",
+  "id": "T-Q-0001",
+  "bloco": "Modelo de negócio",
+  "texto": "Você aprova este desenho do modelo de negócio? A Wise orquestra um ecossistema pequeno e controla a relação com a indústria; o parceiro é cliente do programa e recebe valor antes de indicar; nada é cobrado do parceiro; o que conta é parceiro ativo, não assinado.",
   "tipo": "escolha",
   "opcoes": [
-   "Nenhum ainda",
-   "1",
-   "2 ou 3",
-   "4 ou mais"
-  ]
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "fonte": "Base nos livros: The Ecosystem Economy (p. 138); The Ecosystem Economy (p. 144); Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (p. 157)"
  },
  {
-  "id": "Q-0031",
-  "bloco": "Como o programa está hoje",
-  "texto": "Onde a negociação com cada prospect fica registrada hoje, no dia a dia?",
+  "id": "T-Q-0002",
+  "bloco": "Modelo de negócio",
+  "texto": "Em que ordem os pilares entram no ar?",
   "tipo": "escolha",
   "opcoes": [
-   "No RD Station",
-   "No portal",
-   "Nos dois, em paralelo",
-   "Está migrando do RD para o portal"
-  ]
+   "Prateleira e indicações já; Base Ativa só depois de gatilhos e de um ciclo rodado na base da Wise (recomendado pelos livros)",
+   "Os três pilares desde o primeiro parceiro",
+   "Outra ordem (comente)"
+  ],
+  "fonte": "Base nos livros: Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (p. 84); Nearbound and the Rise of the Who Economy (p. 156); Ecossistema de Parceiros: Método Octo (p. 132)"
  },
  {
-  "id": "Q-0001",
-  "bloco": "Como o programa está hoje",
-  "texto": "Pense no último prospect com quem você avançou mais. Conte o caminho dele: como chegou, quem falou com ele, o que foi combinado e em que ponto está.",
-  "tipo": "aberta",
-  "opcoes": []
+  "id": "T-Q-0003",
+  "bloco": "Modelo de negócio",
+  "texto": "Como fica a meta de dezembro?",
+  "tipo": "escolha",
+  "opcoes": [
+   "10 assinados e também uma meta de ativados (recomendado)",
+   "Só os 10 assinados",
+   "Trocar a meta para parceiros ativados"
+  ],
+  "fonte": "Base nos livros: Ecossistema de Parceiros: Método Octo (p. 208); The Channel Advantage (p. 76)"
  },
  {
-  "id": "Q-0037",
-  "bloco": "Como o programa está hoje",
-  "texto": "Depois da reunião de apresentação, que caminhos uma negociação já tomou (ou pode tomar)?",
+  "id": "T-Q-0004",
+  "bloco": "Modelo de negócio",
+  "texto": "Como dividir as 12 horas mensais?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Tempo humano nos parceiros destaque e potencial; o restante atendido pelo portal (recomendado)",
+   "Atenção próxima a todos enquanto forem poucos, e dividir depois",
+   "Outra regra (comente)"
+  ],
+  "fonte": "Base nos livros: Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (secao 19); Building Successful Partner Channels in the software industry (p. 30)"
+ },
+ {
+  "id": "T-Q-0005",
+  "bloco": "Modelo de negócio",
+  "texto": "As três empresas do grupo tratam a indicação do mesmo jeito (mesmo registro, mesmo SLA, mesmo retorno ao parceiro)?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, igual nas três; a venda é livre (recomendado)",
+   "Só a Wise Makers segue o processo por enquanto",
+   "Não sei: perguntar ao Igor"
+  ],
+  "fonte": "Base nos livros: Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (p. 184)"
+ },
+ {
+  "id": "T-Q-0006",
+  "bloco": "Modelo de negócio",
+  "texto": "Os livros apontam 5 a 15% para quem só indica e 30 a 40% para quem revende; a Wise paga 40% da primeira mensalidade, uma vez. Como fica?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter 40% da primeira mensalidade, como no contrato",
+   "Manter 40%, mas só para indicação qualificada pela nota de qualidade",
+   "Revisar o percentual (comente)"
+  ],
+  "fonte": "Base nos livros: The Channel Advantage (p. 113); Co-Opetition (p. 69)"
+ },
+ {
+  "id": "T-Q-0007",
+  "bloco": "Funis e tarefas",
+  "texto": "Estes são os funis (kanbans) do portal, e as tarefas nascem das etapas deles. Quais você confirma?",
   "tipo": "multipla",
   "opcoes": [
-   "Segue para minuta e assinatura",
-   "Pausa em nutrição, com data para retomar",
-   "Perdida por falta de interesse",
-   "Nova reunião, com o decisor",
-   "Fica parada sem próximo passo"
-  ]
- },
- {
-  "id": "Q-0006",
-  "bloco": "Como o programa está hoje",
-  "texto": "Quando o Igor não aprova a assinatura de um termo, o que acontece com a negociação?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Volta para ajuste da minuta e nova aprovação",
-   "A negociação é perdida",
-   "Fica parada até uma nova conversa",
-   "Nunca aconteceu",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0033",
-  "bloco": "Como o programa está hoje",
-  "texto": "Quando um prospect vai para nutrição, o que faz ele voltar para a negociação?",
-  "tipo": "escolha",
-  "opcoes": [
-   "A data de retomada marcada",
-   "Um sinal do prospect (resposta, evento, pedido)",
-   "As duas coisas"
-  ]
- },
- {
-  "id": "Q-0004",
-  "bloco": "Duas regras que não batem",
-  "texto": "Quando o nível de um parceiro muda? O Playbook diz: só quando a carteira dele muda de tamanho, ou quando uma informação nova corrige a estimativa. A especificação 002 diz: depois da entrada, o nível acompanha o resultado, com revisão a cada trimestre.",
-  "tipo": "escolha",
-  "opcoes": [
-   "Vale o Playbook: só pela carteira",
-   "Vale a especificação: pelo resultado, na revisão trimestral",
-   "As duas: entra pela carteira e depois acompanha o resultado",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0005",
-  "bloco": "Duas regras que não batem",
-  "texto": "Quando termina o onboarding? O Playbook diz: quando a primeira entrega do pacote é concluída. A especificação 002 diz: na ativação, quando a primeira indicação com ICP confirmado vira reunião.",
-  "tipo": "escolha",
-  "opcoes": [
-   "Vale o Playbook: na primeira entrega concluída",
-   "Vale a especificação: na ativação",
-   "As duas: a primeira entrega fecha a negociação e a ativação fecha o onboarding",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0030",
-  "bloco": "Funis do portal",
-  "texto": "Quais destes trabalhos repetitivos devem virar funil (kanban próprio) no portal?",
-  "tipo": "multipla",
-  "opcoes": [
-   "Recrutamento",
-   "Onboarding (integração e plano de 90 dias)",
-   "Base Ativa",
+   "Recrutamento (captar parceiros)",
+   "Onboarding (até a ativação)",
    "Indicações",
-   "Resgate de parceiro inativo",
-   "Encerramento de parceria",
-   "Ações conjuntas e contrapartidas"
-  ]
+   "Pedidos da prateleira",
+   "Base Ativa",
+   "Parceiros em risco (retomada e desligamento)",
+   "Revisão de nível (lista trimestral, não kanban)",
+   "Ações conjuntas (calendário, não kanban)"
+  ],
+  "fonte": "Base: sua resposta no formulário de tarefas (um funil por processo repetitivo)"
  },
  {
-  "id": "Q-0032",
-  "bloco": "Funis do portal",
-  "texto": "A Prateleira de RFP funciona por caso (cada necessidade de cliente atendida com um parceiro) ou como manutenção do catálogo?",
-  "tipo": "escolha",
+  "id": "T-Q-0008",
+  "bloco": "Captar parceiros",
+  "texto": "Como a lista de candidatos é montada?",
+  "tipo": "multipla",
   "opcoes": [
-   "Por caso: cada necessidade é um atendimento com começo e fim",
-   "Manutenção contínua do catálogo",
-   "As duas coisas"
-  ]
+   "Perguntando aos clientes do grupo quais sistemas e fornecedores usam e confiam (pergunta fixa no diagnóstico dos consultores)",
+   "Fornecedores que já aparecem nas indústrias atendidas pelo grupo",
+   "Categorias pedidas na prateleira sem fornecedor",
+   "Eventos e Expo+Indústria",
+   "Prospecção ativa por perfil"
+  ],
+  "fonte": "Base nos livros: Nearbound and the Rise of the Who Economy (p. 159); Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (p. 84); Building Successful Partner Channels in the software industry (p. 83)"
  },
  {
-  "id": "Q-0038",
-  "bloco": "Funis do portal",
-  "texto": "Os consultores já apresentam a prateleira de fornecedores aos clientes hoje?",
-  "tipo": "escolha",
+  "id": "T-Q-0009",
+  "bloco": "Captar parceiros",
+  "texto": "Na negociação, o que o portal deve apoiar? (os livros recomendam os quatro)",
+  "tipo": "multipla",
   "opcoes": [
-   "Sim, com frequência",
-   "Às vezes",
-   "Ainda não: está só no papel",
-   "Não sei: perguntar a um consultor"
-  ]
+   "Registrar interesses e quem decide no candidato",
+   "Registrar a melhor alternativa de cada lado e um pacote gatilho que exige o Diretor",
+   "Circular a minuta como texto único, pedindo críticas e não concessões",
+   "Workshop curto de alinhamento com a diretoria do candidato antes de assinar"
+  ],
+  "fonte": "Base nos livros: Getting to Yes: Negotiating Agreement Without Giving In (p. 120); Getting to Yes: Negotiating Agreement Without Giving In (p. 108)"
  },
  {
-  "id": "Q-0012",
-  "bloco": "Indicações e comissão",
-  "texto": "Quando um parceiro indicar um cliente, quem faz o primeiro contato com esse cliente?",
+  "id": "T-Q-0010",
+  "bloco": "Captar parceiros",
+  "texto": "Os primeiros parceiros (âncoras) recebem condições de fundador com prazo, para atrair os seguintes?",
   "tipo": "escolha",
   "opcoes": [
-   "Eu",
-   "O comercial da empresa que vai atender (Wise, Tríade ou Swallow)",
-   "Um consultor da Wise",
-   "Depende da empresa que vai atender",
+   "Sim, com prazo definido (comente qual)",
+   "Não, as mesmas regras para todos desde o início"
+  ],
+  "fonte": "Base nos livros: Co-Opetition (p. 100); Platform Revolution (p. 94)"
+ },
+ {
+  "id": "T-Q-0011",
+  "bloco": "Integrar parceiro",
+  "texto": "Quando o cruzamento de carteiras acontece?",
+  "tipo": "escolha",
+  "opcoes": [
+   "No encontro de alinhamento do onboarding, para dar ao parceiro uma primeira vitória cedo (recomendado)",
+   "Já na qualificação, antes de assinar, para medir o potencial",
+   "Só quando o parceiro pedir (como está na especificação)"
+  ],
+  "fonte": "Base nos livros: Nearbound and the Rise of the Who Economy (p. 176); Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (secao 20)"
+ },
+ {
+  "id": "T-Q-0012",
+  "bloco": "Gerar negócios",
+  "texto": "Vale criar o processo em que consultores e comercial pedem pelo portal o apoio de um parceiro (informação sobre a conta, recomendação ao decisor ou apresentação), com a mensagem pronta e prazo?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, e registrar a participação do parceiro como 'influenciou', separada de 'indicou' (recomendado)",
+   "Sim, mas sem registrar influência",
+   "Não agora"
+  ],
+  "fonte": "Base nos livros: Nearbound and the Rise of the Who Economy (p. 111); Nearbound and the Rise of the Who Economy (p. 119); Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (secao 26)"
+ },
+ {
+  "id": "T-Q-0013",
+  "bloco": "Gerar negócios",
+  "texto": "Quem faz a checagem do cliente indicado aos 6 e 12 meses?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O consultor que atende o cliente, com tarefa gerada pelo portal (recomendado)",
+   "O Gerente de Parcerias",
+   "O comercial da empresa que atende"
+  ],
+  "fonte": "Base: especificação do web app"
+ },
+ {
+  "id": "T-Q-0014",
+  "bloco": "Gerar negócios",
+  "texto": "Quem faz o primeiro contato com o cliente indicado (até 2 dias úteis)?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O consultor ou comercial da empresa que vai atender (recomendado: quem fecha é dono da conta)",
+   "O Gerente de Parcerias, que depois passa ao consultor",
+   "Depende da empresa do grupo"
+  ],
+  "fonte": "Base nos livros: Nearbound and the Rise of the Who Economy (p. 208)"
+ },
+ {
+  "id": "T-Q-0015",
+  "bloco": "Gerar negócios",
+  "texto": "Quem fecha um negócio indicado por parceiro recebe crédito integral na própria meta, mesmo com a comissão paga ao parceiro?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim (recomendado: ninguém perde por trabalhar com parceiro)",
+   "Não",
    "Não sei: perguntar ao Igor"
-  ]
+  ],
+  "fonte": "Base nos livros: Nearbound and the Rise of the Who Economy (p. 189); The Channel Advantage (p. 101)"
  },
  {
-  "id": "Q-0020",
-  "bloco": "Indicações e comissão",
-  "texto": "Onde fica registrado de qual parceiro veio um cliente indicado?",
+  "id": "T-Q-0016",
+  "bloco": "Gerar negócios",
+  "texto": "Quem é o dono do cliente indicado?",
   "tipo": "escolha",
   "opcoes": [
-   "No campo \"Parceiro de origem\" do RD",
-   "No portal",
-   "Nos dois",
-   "Não sei: perguntar ao comercial"
-  ]
+   "Quem fecha é dono durante a venda; depois, a equipe que entrega. O Gerente de Parcerias é dono da relação com o parceiro (recomendado)",
+   "O Gerente de Parcerias até o fechamento",
+   "Outro (comente)"
+  ],
+  "fonte": "Base nos livros: The Channel Advantage (p. 188)"
  },
  {
-  "id": "Q-0022",
-  "bloco": "Indicações e comissão",
-  "texto": "Quem avisa o parceiro sobre o andamento da indicação (primeiro contato, proposta, fechamento)?",
+  "id": "T-Q-0017",
+  "bloco": "Desenvolver o parceiro",
+  "texto": "A revisão conjunta com pauta fixa e três perguntas de saúde (o parceiro nos recomendaria? a parceria melhorou a satisfação dos clientes? houve ganho real?) vale para quem?",
   "tipo": "escolha",
   "opcoes": [
-   "Eu",
-   "O comercial que atende o cliente",
-   "O portal, automaticamente",
-   "Não sei: perguntar ao comercial"
-  ]
+   "Todos os parceiros ativos, trimestral; mensal para os destaques (recomendado)",
+   "Só os destaques, como na especificação",
+   "Não agora"
+  ],
+  "fonte": "Base nos livros: Strategic Alliances and Marketing Partnerships (p. 100); Strategic Alliances and Marketing Partnerships (p. 218)"
  },
  {
-  "id": "Q-0023",
-  "bloco": "Indicações e comissão",
-  "texto": "Quando um cliente indicado pagar a primeira mensalidade, como o financeiro vai saber que há comissão a pagar?",
+  "id": "T-Q-0018",
+  "bloco": "Desenvolver o parceiro",
+  "texto": "O Igor será patrocinador executivo de 3 a 5 parceiros principais, presente na revisão trimestral deles?",
   "tipo": "escolha",
   "opcoes": [
-   "Eu aviso",
-   "O comercial avisa",
-   "O financeiro vê no sistema",
-   "O portal avisa",
-   "Não sei: perguntar ao financeiro"
-  ]
- },
- {
-  "id": "Q-0011",
-  "bloco": "Indicações e comissão",
-  "texto": "Quem responde pelo pagamento da comissão ao parceiro?",
-  "tipo": "escolha",
-  "opcoes": [
-   "O financeiro da Wise Makers",
-   "O financeiro da empresa que fechou o cliente (Wise, Tríade ou Swallow)",
-   "Eu",
-   "Não sei: perguntar ao financeiro"
-  ]
- },
- {
-  "id": "Q-0027",
-  "bloco": "Indicações e comissão",
-  "texto": "Além do CNPJ, do contrato e da nota fiscal do parceiro (que estão no Playbook), o pagamento precisa de alguma aprovação?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Não, basta a documentação",
-   "Sim, do Igor",
-   "Sim, minha",
-   "Não sei: perguntar ao financeiro"
-  ]
- },
- {
-  "id": "Q-0028",
-  "bloco": "Indicações e comissão",
-  "texto": "Depois que a nota fiscal do parceiro chega, em quantos dias o pagamento costuma sair?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Até 5 dias",
-   "De 6 a 15 dias",
-   "Mais de 15 dias",
-   "Não sei: perguntar ao financeiro"
-  ]
- },
- {
-  "id": "Q-0019",
-  "bloco": "Indicações e comissão",
-  "texto": "Quem vai falar com o cliente indicado aos 6 e aos 12 meses para saber se continua ativo e satisfeito?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Eu",
-   "O consultor que atende o cliente",
-   "O comercial da empresa que atende",
+   "Sim",
+   "Só dos parceiros Elite",
+   "Não",
    "Não sei: perguntar ao Igor"
-  ]
+  ],
+  "fonte": "Base nos livros: Strategic Alliances and Marketing Partnerships (p. 100); Strategic Alliances and Marketing Partnerships (p. 218)"
  },
  {
-  "id": "Q-0002",
-  "bloco": "Indicações e comissão",
-  "texto": "Para uma indicação virar cliente, o quanto a Wise, a Tríade e a Swallow dependem de informações umas das outras?",
+  "id": "T-Q-0019",
+  "bloco": "Suporte e dados",
+  "texto": "Como a prateleira é curada?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Limite de 3 a 5 fornecedores por categoria",
+   "Permanência depende da nota de qualidade e do retorno dos clientes",
+   "A Wise cadastra e verifica as primeiras fichas antes de abrir aos parceiros",
+   "Sem limite por categoria"
+  ],
+  "fonte": "Base nos livros: Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (p. 144); Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (p. 37)"
+ },
+ {
+  "id": "T-Q-0020",
+  "bloco": "Suporte e dados",
+  "texto": "Publicar uma política de dados do programa: a Wise não usa a carteira do parceiro para outros fins nem aborda os clientes dele por fora; só se compartilham dados de empresa, nunca de pessoas, e o cruzamento só com consentimento.",
   "tipo": "escolha",
   "opcoes": [
-   "Muito: cada indicação passa por mais de uma empresa",
-   "Em parte: só em alguns casos",
-   "Pouco: cada empresa trata as próprias indicações sozinha",
-   "Não sei: perguntar ao Igor"
-  ]
+   "Sim, como está",
+   "Sim, com ajustes (comente)",
+   "Não agora"
+  ],
+  "fonte": "Base nos livros: Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (p. 66); Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (secao 20)"
  },
  {
-  "id": "Q-0003",
-  "bloco": "Indicações e comissão",
-  "texto": "As três empresas devem tratar a indicação do mesmo jeito (mesmo prazo, mesmo registro, mesmo retorno ao parceiro)?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Sim, igual nas três",
-   "Igual no registro e no retorno ao parceiro, livre na venda",
-   "Cada empresa do seu jeito",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0008",
+  "id": "T-Q-0021",
   "bloco": "Gestão do programa",
-  "texto": "Quem define as metas do programa e a fase (experimentação, tração, crescimento)?",
+  "texto": "Quem define as metas do programa e a fase?",
   "tipo": "escolha",
   "opcoes": [
    "O Igor",
    "Eu",
    "Nós dois juntos",
    "Os sócios"
-  ]
+  ],
+  "fonte": ""
  },
  {
-  "id": "Q-0009",
-  "bloco": "Gestão do programa",
-  "texto": "Quando as metas do programa são revisadas?",
-  "tipo": "escolha",
-  "opcoes": [
-   "Na revisão semanal das terças",
-   "Uma vez por trimestre",
-   "Quando alguém pede",
-   "Ainda não há revisão definida"
-  ]
- },
- {
-  "id": "Q-0034",
+  "id": "T-Q-0022",
   "bloco": "Gestão do programa",
   "texto": "Quem decide e publica as regras do programa e os comunicados aos parceiros?",
   "tipo": "escolha",
@@ -284,37 +270,15 @@
    "Eu",
    "O Igor",
    "Eu, com aprovação do Igor"
-  ]
+  ],
+  "fonte": ""
  },
  {
-  "id": "Q-0010",
-  "bloco": "Gestão do programa",
-  "texto": "Quem decide se um parceiro ganha palco num evento da Wise (palestra, painel, estande)?",
-  "tipo": "escolha",
-  "opcoes": [
-   "O Igor",
-   "Os sócios",
-   "Eu, com aprovação dos sócios",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0007",
-  "bloco": "Gestão do programa",
-  "texto": "Do lado da Wise, quem decide encerrar uma parceria?",
-  "tipo": "escolha",
-  "opcoes": [
-   "O Igor, a partir de uma sugestão minha",
-   "Eu",
-   "O Igor sozinho",
-   "Não sei: perguntar ao Igor"
-  ]
- },
- {
-  "id": "Q-0035",
-  "bloco": "Gestão do programa",
+  "id": "A-Q-0035",
+  "bloco": "Pessoas",
   "texto": "Se já souber: nome e contato de trabalho do consultor, do comercial da Tríade ou da Swallow e do financeiro, para o caso de sobrar pergunta para eles.",
   "tipo": "aberta",
-  "opcoes": []
+  "opcoes": [],
+  "fonte": ""
  }
 ]

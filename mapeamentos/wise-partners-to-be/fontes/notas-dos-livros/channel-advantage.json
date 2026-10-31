@@ -1,0 +1,647 @@
+{
+ "livro": "The Channel Advantage",
+ "autores": "Lawrence G. Friedman e Timothy R. Furey",
+ "slug": "channel-advantage",
+ "tese": "O livro defende que a vantagem competitiva durável vem de como se vai ao mercado, e não só do que se vende: combinando canais, cada um responsável pela tarefa em que é melhor e mais barato, com regras claras de passagem de bastão, dono da conta e remuneração alinhada. Parceiros indiretos ampliam alcance, mas exigem escopo, políticas, recrutamento seletivo, apoio, medição e feedback.",
+ "recomendacoes": [
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Dividir o processo de venda por tarefa e atribuir cada uma ao agente mais barato que a faz bem: o parceiro gera e apresenta o lead, o Gerente de Parcerias qualifica, o Diretor conduz a reunião e fecha, e a Wise atende depois da assinatura.",
+   "processo": "Dividir tarefas do processo de venda entre parceiro e Wise",
+   "citacao": "a sales process consists of a number of different tasks, each of which can potentially be assigned to a different channel based on what that channel is capable of doing best",
+   "aplicabilidade": "alta",
+   "porque": "É a base do desenho to-be: com 12 horas por mês, o tempo do Gerente e do Diretor só pode ir para as tarefas de maior valor.",
+   "pagina": "p. 182"
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Declarar, para cada tipo de parceiro (software, entidade, feira), qual dos três papéis ele cumpre: gerar lead, vender ou apoiar o pós-venda. No programa atual o papel padrão é gerar lead (indicar), nunca vender a consultoria da Wise.",
+   "processo": "Definir papel do parceiro no processo de venda",
+   "citacao": "There are basically three choices, though they are not mutually exclusive: lead generation, selling, and support/service.",
+   "aplicabilidade": "alta",
+   "porque": "O parceiro Wise Partners indica e não vende; deixar isso escrito evita expectativa de venda e disputa por comissão.",
+   "pagina": "p. 113"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Registrar toda indicação em um único sistema central (o Portal, com link exclusivo) e rotear a partir dele, nunca do parceiro direto para quem fecha.",
+   "processo": "Registrar e rotear indicações do parceiro de forma centralizada",
+   "citacao": "a lead-generating partner channel should report all leads to a central management system for routing to an appropriate sales resource",
+   "aplicabilidade": "alta",
+   "porque": "Encaixa com o link exclusivo, o SLA e a proteção de 180 dias: sem registro central não há como provar a origem nem cobrar o prazo.",
+   "pagina": "p. 115"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Tirar de quem fecha a decisão de descartar ou aceitar a indicação: a avaliação (nota de qualidade) é feita pelo Gerente de Parcerias com critério escrito, e o motivo do descarte volta ao parceiro.",
+   "processo": "Avaliar indicação recebida e dar retorno ao parceiro",
+   "citacao": "by people whose responsibilities should not include lead adjudication",
+   "aplicabilidade": "alta",
+   "porque": "Evita que a indicação suma por julgamento informal de quem tem pressa em vender e protege a confiança do parceiro.",
+   "pagina": "p. 113"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Definir por escrito o que é uma indicação qualificada (no ICP, com contato decisor, necessidade e prazo) e só passar adiante o que cumprir o critério; a ativação do parceiro usa o mesmo critério.",
+   "processo": "Qualificar indicação com critério explícito",
+   "citacao": "and managers should ensure that all leads given to the sales force meet these criteria",
+   "aplicabilidade": "alta",
+   "porque": "O programa já mede ativação pela primeira indicação no ICP que virou reunião; o livro dá a lógica de por que o critério precisa ser único e explícito.",
+   "pagina": "p. 91"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Documentar cada passagem de bastão (parceiro para Gerente, Gerente para Diretor, Diretor para entrega) com responsável, prazo e registro no Portal; as passagens são o ponto mais frágil do processo.",
+   "processo": "Executar passagem de bastão entre parceiro, Gerente e Diretor",
+   "citacao": "Documented, specific hand-off procedures are a must in an integrated channel system.",
+   "aplicabilidade": "alta",
+   "porque": "Com equipe mínima e vários papéis em poucas mãos, cada passagem sem dono vira indicação perdida; o SLA do Portal operacionaliza isso.",
+   "pagina": "p. 187"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Dar a cada etapa do kanban de indicação um critério de conclusão objetivo (por exemplo, o que significa reunião realizada ou proposta enviada), para que cada papel saiba o que precisa entregar antes de mover o card.",
+   "processo": "Definir critério de conclusão de cada etapa da indicação",
+   "citacao": "Each task in the sales process must be defined clearly so each channel understands what it is supposed to complete before it moves a sale down the pipeline.",
+   "aplicabilidade": "alta",
+   "porque": "Traduz direto em regras de transição de etapa no web app e evita o debate sobre se a indicação já valeu como reunião.",
+   "pagina": "p. 187"
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Nomear um único dono de cada indicação ou conta durante o processo; para começar, o dono é quem fecha (Diretor ou o consultor responsável), com o Gerente de Parcerias dono da relação com o parceiro.",
+   "processo": "Atribuir dono da conta em cada indicação",
+   "citacao": "companies just getting started in channel integration could do far worse than simply to assign account ownership to whichever channel is responsible for closing deals",
+   "aplicabilidade": "alta",
+   "porque": "Programa em estreia com poucas pessoas deve usar a regra mais simples; evita indicação sem responsável.",
+   "pagina": "p. 188"
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Decidir quem atende o cliente depois da assinatura: como a consultoria da Wise tem entrega longa, a dona da relação após o fechamento passa a ser a equipe que entrega, enquanto o parceiro mantém a relação sobre a sua própria solução.",
+   "processo": "Transferir a conta para quem atende após o fechamento",
+   "citacao": "In short, in complex, lengthy sales, a post-sales support channel can be a better choice for account ownership than the deal-closing channel.",
+   "aplicabilidade": "media",
+   "porque": "A consultoria tem ciclo longo e muito contato após a venda; a aplicação é direta, mas o parceiro não é canal de atendimento da Wise.",
+   "pagina": "p. 188"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Dar crédito de meta também a quem, dentro da Wise, atende a indicação do parceiro (metas por pessoa no Portal), para que ninguém na equipe tenha motivo para ignorar a indicação ou abordar o cliente por fora.",
+   "processo": "Atribuir crédito de receita em dobro para indicação de parceiro",
+   "citacao": "Dual revenue credit, in most circumstances, is a smarter way to pay channels than a system in which channels compete for the same commissions.",
+   "aplicabilidade": "media",
+   "porque": "O conflito mais provável é interno (Diretor, consultores, Tríade, Swallow versus parceiro); crédito duplo reduz a disputa, desde que a receita total cresça.",
+   "pagina": "p. 101"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Calibrar os 40% da primeira mensalidade contra as referências do livro (5 a 15% para quem só gera lead, 11% para parceiro que vende, mais apoio e marketing) e ligar o valor ao papel: a comissão paga indicar, não vender nem atender.",
+   "processo": "Calibrar comissão do parceiro pelo papel que ele cumpre",
+   "citacao": "The company pays a sales commission of five to fifteen per cent to anyone whose routes a customer from their own web site to www.amazon.com for a book or compact disk purchase.",
+   "aplicabilidade": "media",
+   "porque": "O percentual é alto, mas incide só sobre a primeira mensalidade; o benchmark serve para decidir se há margem para escalonar por nível A, B e C.",
+   "pagina": "p. 113"
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Escrever, para cada parceiro, a recompensa por atingir meta e a sanção por não atingir (perda de leads da Prateleira de RFP, rebaixamento de nível, desligamento), ligando a revisão trimestral a esse quadro.",
+   "processo": "Aplicar recompensa e sanção na revisão trimestral",
+   "citacao": "What is the sanction for failing to achieve target levels of performance? Will they lose money? New leads? Membership in the channel?",
+   "aplicabilidade": "alta",
+   "porque": "Dá corpo às regras de níveis híbridos com revisão trimestral e ao desligamento formal.",
+   "pagina": "p. 123"
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Fechar uma política escrita do parceiro (termos e condições) cobrindo exclusividade, território ou carteira, proteção da indicação, prazo de pagamento, uso de marca, dados e saída, antes de assinar o primeiro parceiro.",
+   "processo": "Redigir política e contrato do parceiro",
+   "citacao": "A partner channel must have a set of robust policies, or as they are commonly known, terms and conditions.",
+   "aplicabilidade": "alta",
+   "porque": "Regras de engajamento claras são a principal defesa contra conflito de canal; o Diretor aprova a assinatura sobre um texto padrão.",
+   "pagina": "p. 116"
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Definir formalmente onde termina a venda e começa o pós-venda, e quem faz o quê de cada lado (a implantação do software é do parceiro, a entrega da consultoria é da Wise), comunicando isso ao parceiro.",
+   "processo": "Definir ponto de transição entre fechamento e pós-venda",
+   "citacao": "This transition point should be clearly defined, documented, and communicated to the partner channel.",
+   "aplicabilidade": "media",
+   "porque": "Vale para a fronteira entre a solução do parceiro e a consultoria da Wise no mesmo cliente.",
+   "pagina": "p. 115"
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Combinar por escrito, no contrato, quais dados o parceiro entrega (indicações, andamento, resultado) e quais a Wise devolve, antes de cobrar qualquer indicador.",
+   "processo": "Acordar dados de desempenho por escrito com o parceiro",
+   "citacao": "data is going to be needed from business partners should to be agreed to in writing",
+   "aplicabilidade": "alta",
+   "porque": "Sem acordo, o pedido de dados do parceiro é recusado; a nota de qualidade e o ranking dependem desse combinado.",
+   "pagina": "p. 123"
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Escrever um perfil de parceiro ideal de uma página (porte da carteira, aderência ao ICP, tipo de solução, capacidade de realizar evento) e usá-lo como filtro do kanban de recrutamento.",
+   "processo": "Definir perfil de parceiro ideal",
+   "citacao": "The first step in partner recruitment is to develop an Ideal Partner Profile.",
+   "aplicabilidade": "alta",
+   "porque": "Os 21 prospects em conversa precisam de um filtro único; também sustenta a classificação em níveis por potencial da carteira.",
+   "pagina": "p. 118"
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Criar uma entrada de baixo compromisso (nível de experiência ou etapa de nutrição) em que o parceiro e a Wise veem o resultado antes de assumir contrapartidas maiores.",
+   "processo": "Admitir parceiro em nível probatório",
+   "citacao": "you get to see what develops before making a real commitment",
+   "aplicabilidade": "alta",
+   "porque": "Combina com nutrição e onboarding de 30, 60 e 90 dias: o investimento de horas só sobe depois da primeira indicação válida.",
+   "pagina": "p. 119"
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Revisar a cada ano os parceiros de menor resultado e, antes de desligar, rebaixar de nível com menos benefícios; a regra do livro é podar de 5 a 10% ao ano.",
+   "processo": "Rebaixar ou desligar parceiro de baixo desempenho",
+   "citacao": "A good rule of thumb is to prune the five to ten per cent of channel partners each year who are generating the lowest sales.",
+   "aplicabilidade": "media",
+   "porque": "Com zero parceiros hoje a poda vem depois, mas a regra precisa constar no contrato desde a assinatura.",
+   "pagina": "p. 120"
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Submeter qualquer desligamento a revisão jurídica, a menos que as condições de saída estejam descritas no contrato; por isso o desligamento formal deve nascer previsto no termo de parceria.",
+   "processo": "Desligar parceiro com revisão jurídica",
+   "citacao": "Legal counsel is mandatory when terminating a channel partner, unless the specific conditions of termination are described in a contract.",
+   "aplicabilidade": "alta",
+   "porque": "Dá fundamento ao desligamento formal do Portal e à cláusula de saída.",
+   "pagina": "p. 130"
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Medir a taxa de parceiros ativos, e não o número de assinados: o que importa é quantos geram indicação válida, usando a ativação na primeira indicação no ICP que virou reunião.",
+   "processo": "Acompanhar taxa de parceiros ativos",
+   "citacao": "500 available partners is not the same thing as 500 committed partners.",
+   "aplicabilidade": "alta",
+   "porque": "A meta de 10 parcerias assinadas pode esconder zero parceiros ativos; o livro mostra o funil de adesão que encolhe.",
+   "pagina": "p. 76"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Fixar expectativas realistas: canais de parceiros levam de 18 a 30 meses para atingir a meta, e os custos iniciais são maiores que os de regime. A meta de dezembro de 2026 deve ser lida como marco de arranque.",
+   "processo": "Definir marcos de maturação do programa",
+   "citacao": "Most partner channels take eighteen to thirty months to achieve target levels of sales and profitability.",
+   "aplicabilidade": "alta",
+   "porque": "Protege a meta de 10 parcerias e de 1 cliente fechado contra leitura de fracasso precoce.",
+   "pagina": "p. 122"
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Dimensionar o programa com a fórmula receita do canal igual a número de recursos vezes contribuição por recurso, aplicada às 12 horas mensais do Gerente: quantos parceiros ativos cabem e quantas indicações o Diretor consegue atender.",
+   "processo": "Dimensionar capacidade do programa pelas horas disponíveis",
+   "citacao": "Channel revenue = Number of resources x Contribution per resource",
+   "aplicabilidade": "alta",
+   "porque": "Mostra o teto de parceiros que 12 horas por mês sustentam e antecipa o gargalo no recrutamento.",
+   "pagina": "p. 202"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Na Prateleira de RFP, não prometer ao fornecedor parceiro um volume de leads sem ter capacidade de gerá-los e qualificá-los; calcular a promessa multiplicando parceiros por leads prometidos.",
+   "processo": "Dimensionar leads prometidos aos fornecedores da Prateleira",
+   "citacao": "if you have 100 partners, and each has been promised five good leads per month, you have to put in place the call centre personnel to come up with 500 good leads per month",
+   "aplicabilidade": "alta",
+   "porque": "A Wise é a fonte de leads para os fornecedores da Prateleira; sem capacidade, o parceiro se afasta.",
+   "pagina": "p. 147"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Manter o mesmo preço da consultoria para cliente indicado e cliente direto; preços diferentes por canal levam o cliente ao canal mais barato e criam conflito com o parceiro.",
+   "processo": "Padronizar preço entre canais de origem",
+   "citacao": "Are prices for the same products the same across different channels? If not, customers will migrate to whichever channels offer more competitive prices.",
+   "aplicabilidade": "media",
+   "porque": "A comissão de 40% já é o incentivo do parceiro; desconto por origem enfraqueceria a regra de proteção.",
+   "pagina": "p. 180"
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Tratar o controle da conta como bem a proteger: o cliente da Wise apresentado a fornecedores da Prateleira precisa ter registro e acompanhamento da Wise, para o parceiro não assumir a relação e a decisão.",
+   "processo": "Acompanhar cliente apresentado ao fornecedor parceiro",
+   "citacao": "sometimes control over accounts is more important than expanded coverage through distributors",
+   "aplicabilidade": "media",
+   "porque": "O caso do livro envolve distribuidores com lealdade a concorrentes; a analogia é parcial, mas o risco de perder o cliente para a recomendação do parceiro é real.",
+   "pagina": "p. 86"
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Evitar excesso de parceiros competindo pelo mesmo mercado: limitar quantos parceiros da mesma categoria (ERP, CRM, MES e assim por diante) a Wise ativa para a mesma indústria ou carteira.",
+   "processo": "Limitar parceiros por categoria e carteira",
+   "citacao": "Too many partners for a given market size can result in bone-crunching channel conflict, lower sales volume, and a damaged brand.",
+   "aplicabilidade": "media",
+   "porque": "Aplica-se à Prateleira de RFP, onde fornecedores da mesma categoria disputam os mesmos clientes da Wise.",
+   "pagina": "p. 110"
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Manter o contato humano da Wise em toda a venda de consultoria: o parceiro faz a introdução e a Wise conduz, porque serviço profissional não se vende por canal de baixo toque como e-mail em massa ou portal de autoatendimento.",
+   "processo": "Conduzir reunião de qualificação com contato humano da Wise",
+   "citacao": "A low-definition offering, usually a professional service, is not recognizable without explanation, requires that the customer learn about its usage, and also cannot be sold without an explanation of its benefits.",
+   "aplicabilidade": "alta",
+   "porque": "Justifica que o Portal registre e roteie, mas a venda continue em reunião conduzida pelo Diretor.",
+   "pagina": "p. 52"
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Tratar o parceiro como cliente do programa: o valor para ele (comunidade ativa na carteira, evento, ranking) precisa ser entregue antes de se pedir indicação.",
+   "processo": "Entregar valor ao parceiro antes de pedir indicação",
+   "citacao": "it views its partners not just as partners but as customers",
+   "aplicabilidade": "alta",
+   "porque": "É a lógica do Base Ativa: a Wise ajuda o parceiro a ativar a carteira e ganha indicação como consequência.",
+   "pagina": "p. 129"
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Não liberar o parceiro para indicar antes de ele conhecer a oferta da Wise e o critério de indicação qualificada; incluir um treinamento curto sobre necessidades do cliente.",
+   "processo": "Treinar parceiro antes da primeira indicação",
+   "citacao": "They should not be put (or allowed) into a selling environment until they have thorough familiarity with the product line.",
+   "aplicabilidade": "alta",
+   "porque": "Encaixa no onboarding de 30, 60 e 90 dias e na certificação; indicação mal feita gasta horas escassas do Gerente.",
+   "pagina": "p. 121"
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Fazer ao menos uma entrevista estruturada por parceiro por ano e levar a pergunta sobre negócios que a Wise possa ajudar a fechar hoje, usando a revisão trimestral como ocasião.",
+   "processo": "Entrevistar parceiros de forma estruturada",
+   "citacao": "Are there any particular deals that we could help you close today?",
+   "aplicabilidade": "media",
+   "porque": "Dá pauta à revisão e gera oportunidades; com poucos parceiros a entrevista individual é viável.",
+   "pagina": "p. 127"
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Dividir tarefas do processo de venda entre parceiro e Wise",
+   "descricao": "O livro propõe que a venda seja decomposta em tarefas (gerar e qualificar lead no início, vender face a face e fechar no meio, atender depois) e que cada uma seja atribuída ao canal mais barato que ainda a executa bem. A etapa cara fica restrita ao meio.",
+   "gatilho": "Desenho ou revisão do modelo de atuação do programa",
+   "etapas": [
+    "Listar as tarefas: gerar lead, qualificar, vender face a face, fechar, atender pós-venda",
+    "Dar a cada tarefa o canal de menor custo com bom desempenho",
+    "Reservar o agente caro (Diretor) para reunião e fechamento",
+    "Testar a divisão em um segmento de baixo risco antes de ampliar",
+    "Revisar a divisão conforme os resultados"
+   ],
+   "resultados": [
+    "Divisão aprovada por tipo de oportunidade",
+    "Ajuste da divisão após piloto"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias",
+    "Parceiro",
+    "Equipe de entrega"
+   ],
+   "metricas": [
+    "Custo por transação por canal",
+    "Taxa de conversão de lead em fechamento"
+   ],
+   "citacao": "you would push each selling task down to the lowest-cost channel in which the channel still earns high grades for performance",
+   "pagina": "p. 186"
+  },
+  {
+   "nome": "Rotear indicação do parceiro de forma centralizada",
+   "descricao": "Leads de parceiros devem entrar em um sistema central que os encaminha ao recurso de venda adequado, em vez de ir direto a quem fecha, onde se perdem.",
+   "gatilho": "Parceiro envia uma indicação",
+   "etapas": [
+    "Registrar a indicação no sistema central",
+    "Avaliar contra o critério de qualificação",
+    "Encaminhar ao recurso de venda apropriado",
+    "Dar retorno ao parceiro sobre a decisão",
+    "Acompanhar até o fim da venda"
+   ],
+   "resultados": [
+    "Aceita e roteada",
+    "Devolvida ao parceiro com motivo",
+    "Descartada com registro"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro",
+    "Diretor"
+   ],
+   "metricas": [
+    "Tempo de resposta à indicação",
+    "Percentual de indicações aceitas"
+   ],
+   "citacao": "a lead-generating partner channel should report all leads to a central management system for routing to an appropriate sales resource",
+   "pagina": "p. 115"
+  },
+  {
+   "nome": "Executar passagem de bastão entre canais",
+   "descricao": "As passagens entre canais são o principal ponto de falha de um processo integrado; o livro pede definição precisa do que significa concluir cada tarefa e procedimento documentado para passar o caso adiante.",
+   "gatilho": "Uma tarefa do processo é concluída por um canal",
+   "etapas": [
+    "Verificar se a tarefa atende ao critério de conclusão",
+    "Registrar a passagem no sistema",
+    "Notificar o próximo responsável com prazo",
+    "Confirmar o recebimento",
+    "Medir a conversão após a passagem"
+   ],
+   "resultados": [
+    "Passagem confirmada",
+    "Retorno ao canal anterior por critério não cumprido"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Taxa de lead em fechamento por canal de origem"
+   ],
+   "citacao": "Hand-offs are the critical risk areas in channel integration.",
+   "pagina": "p. 187"
+  },
+  {
+   "nome": "Atribuir dono da conta em cada indicação",
+   "descricao": "Em vendas com mais de um canal, uma pessoa ou canal precisa ser dono da relação do início ao fim; começar pelo responsável pelo fechamento é a regra mais simples, podendo migrar para o pós-venda em vendas longas.",
+   "gatilho": "Indicação aceita",
+   "etapas": [
+    "Escolher o dono pelo tipo de venda",
+    "Registrar o dono no Portal",
+    "Dono garante o cumprimento de cada etapa",
+    "Dono resolve falhas de passagem",
+    "Dono busca novas oportunidades na conta"
+   ],
+   "resultados": [
+    "Conta com dono definido",
+    "Transferência de dono após o fechamento"
+   ],
+   "papeis": [
+    "Diretor",
+    "Consultor responsável",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Indicações sem dono",
+    "Tempo parado por etapa"
+   ],
+   "citacao": "Solving any problems, such as poor hand-offs between channels, that could threaten the sale or the account relationship.",
+   "pagina": "p. 188"
+  },
+  {
+   "nome": "Redigir política e contrato do parceiro",
+   "descricao": "O livro recomenda uma lista completa de questões de política (vinte e duas), registradas em um memorando ou contrato padrão e aceitáveis para o parceiro.",
+   "gatilho": "Parceiro aprovado no recrutamento",
+   "etapas": [
+    "Levantar as questões de política relevantes",
+    "Consultar parceiros sobre aceitação",
+    "Documentar em memorando ou contrato padrão",
+    "Aprovação do Diretor",
+    "Assinatura"
+   ],
+   "resultados": [
+    "Contrato assinado",
+    "Cláusula revista após consulta"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Tempo entre aprovação e assinatura"
+   ],
+   "citacao": "The relevant ones (for a particular channel) should be analysed, documented, and baked into a standard channel policy memorandum or contract.",
+   "pagina": "p. 117"
+  },
+  {
+   "nome": "Avaliar candidato a parceiro com checklist",
+   "descricao": "A seleção usa perfil de parceiro ideal e checklist de avaliação com critérios ponderados, e admite parceiros marginais em nível de entrada.",
+   "gatilho": "Prospect chega à etapa de avaliação do funil",
+   "etapas": [
+    "Aplicar o perfil de parceiro ideal",
+    "Preencher o checklist de avaliação",
+    "Ponderar os critérios que realmente contam",
+    "Decidir entre aprovar, nutrir ou recusar",
+    "Admitir em nível de entrada quando marginal"
+   ],
+   "resultados": [
+    "Aprovado",
+    "Em nutrição",
+    "Recusado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Taxa de aprovação dos prospects"
+   ],
+   "citacao": "A more rigorous and systematic way to control the recruitment process is to develop a partner evaluation checklist.",
+   "pagina": "p. 118"
+  },
+  {
+   "nome": "Rebaixar ou desligar parceiro de baixo desempenho",
+   "descricao": "Revisão periódica dos menores produtores, com versão suave de rebaixamento de nível e, quando necessário, saída com apoio jurídico.",
+   "gatilho": "Revisão periódica de desempenho",
+   "etapas": [
+    "Classificar parceiros por resultado",
+    "Identificar o grupo de menor desempenho",
+    "Rebaixar de nível com menos benefícios",
+    "Desligar se não houver reação, com revisão jurídica"
+   ],
+   "resultados": [
+    "Mantido",
+    "Rebaixado",
+    "Desligado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor",
+    "Jurídico"
+   ],
+   "metricas": [
+    "Percentual de parceiros ativos"
+   ],
+   "citacao": "If this sounds too unpleasant, a softer version is to drop these partners into a lower tier of channel membership with fewer benefits.",
+   "pagina": "p. 120"
+  },
+  {
+   "nome": "Medir desempenho do parceiro",
+   "descricao": "Metas e indicadores devem ser acordados, comunicados, aplicados de forma consistente e ligados a recompensa e sanção, e adequados ao papel do parceiro (indicar, não vender).",
+   "gatilho": "Início do ciclo de revisão",
+   "etapas": [
+    "Acordar os dados por escrito",
+    "Comunicar os indicadores ao parceiro",
+    "Coletar de forma consistente",
+    "Ligar o resultado a recompensa e sanção",
+    "Rever em ciclo regular"
+   ],
+   "resultados": [
+    "Parceiro dentro da meta",
+    "Plano de ação com o parceiro"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Taxa de lead em fechamento",
+    "Indicações qualificadas por parceiro"
+   ],
+   "citacao": "Partners cannot and will not comply with performance measures that they have not been told about or for which they are not collecting the right data.",
+   "pagina": "p. 123"
+  },
+  {
+   "nome": "Dimensionar o tamanho do canal de parceiros",
+   "descricao": "Dimensionar em três passos: medir a oportunidade de receita, definir a produtividade realista por parceiro e calcular quantos parceiros são necessários, começando pela produtividade.",
+   "gatilho": "Definição de metas do programa",
+   "etapas": [
+    "Medir a oportunidade de receita",
+    "Definir produtividade realista por parceiro",
+    "Calcular o número de parceiros necessários",
+    "Confrontar com a capacidade de apoio da equipe"
+   ],
+   "resultados": [
+    "Meta de parceiros ativos",
+    "Ajuste do teto de recrutamento"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Receita por parceiro ativo"
+   ],
+   "citacao": "Size the markets in which partners will participate: what is the total revenue opportunity?",
+   "pagina": "p. 110"
+  },
+  {
+   "nome": "Coletar retorno dos parceiros",
+   "descricao": "Pesquisas, entrevistas estruturadas e conselho de parceiros para captar informação de mercado e queixas, com ao menos uma rodada por ano.",
+   "gatilho": "Ciclo anual ou revisão trimestral",
+   "etapas": [
+    "Aplicar pesquisa a uma amostra",
+    "Fazer entrevistas estruturadas",
+    "Reunir um conselho com decisores da Wise presentes",
+    "Tratar as queixas levantadas",
+    "Devolver as decisões aos parceiros"
+   ],
+   "resultados": [
+    "Plano de melhoria do programa",
+    "Novas oportunidades de negócio"
+   ],
+   "papeis": [
+    "Diretor",
+    "Gerente de Parcerias",
+    "Parceiros"
+   ],
+   "metricas": [
+    "Satisfação do parceiro com o programa"
+   ],
+   "citacao": "It is wise to think in terms of conducting both surveys and structured partner interviews at least once a year.",
+   "pagina": "p. 127"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Taxa de parceiros ativos",
+   "definicao": "Parceiros que aderiram formalmente e de fato geram vendas ou indicações válidas, sobre o total de aderidos.",
+   "citacao": "500 available partners is not the same thing as 500 committed partners.",
+   "pagina": "p. 76"
+  },
+  {
+   "nome": "Taxa de lead em fechamento",
+   "definicao": "Percentual de indicações recebidas que viram vendas fechadas.",
+   "citacao": "The percentage of new leads that are successfully converted into closed sales. If a partner is given ten leads and converts two of them into sales, the lead-to-close ratio is 20 per cent.",
+   "pagina": "p. 130"
+  },
+  {
+   "nome": "Razão despesa sobre receita do canal (E/R)",
+   "definicao": "Custo médio por transação do canal dividido pelo valor médio do pedido; quanto menor, mais lucro por venda.",
+   "citacao": "The important point is that a lower E/R indicates that less money is being spent on selling costs for every dollar of revenue.",
+   "pagina": "p. 71"
+  },
+  {
+   "nome": "Custo por transação do canal",
+   "definicao": "Despesa total de venda do canal dividida pelo número de transações de que participa.",
+   "citacao": "its total selling expense divided by the number of transactions in which it participates",
+   "pagina": "p. 72"
+  },
+  {
+   "nome": "Produtividade por parceiro",
+   "definicao": "Receita média esperada (ou apoio) por parceiro, usada como referência para dimensionar o canal.",
+   "citacao": "a benchmark of partner productivity, a gauge of the average expected revenue (or support) contribution per partner",
+   "pagina": "p. 111"
+  },
+  {
+   "nome": "Deslocamento versus ganho de canal",
+   "definicao": "Separa a venda realmente nova (ganho) da venda que apenas mudou de canal (deslocamento); deslocamento deixa receita igual com custo maior.",
+   "citacao": "Channel shift yields lower overall profitability: flat sales, at higher selling costs.",
+   "pagina": "p. 177"
+  },
+  {
+   "nome": "Taxa de reativação",
+   "definicao": "Parcela de clientes dormentes (sem compra há dois anos ou mais) que volta a comprar após contato de baixo custo.",
+   "citacao": "initiate low-cost customer contact, and realize upwards of twenty per cent reactivation rates",
+   "pagina": "p. 25"
+  },
+  {
+   "nome": "Satisfação do cliente atendido por parceiro",
+   "definicao": "Acompanhamento junto ao cliente para confirmar que recebe o atendimento devido do parceiro.",
+   "citacao": "it is essential to follow up with customers to ensure that they are getting the care and feeding they require",
+   "pagina": "p. 116"
+  },
+  {
+   "nome": "Indicações geradas pelo parceiro",
+   "definicao": "Atividade de geração de lead do parceiro, reportada como indicador-chave de desempenho de venda.",
+   "citacao": "data on their lead generation activity must be reported back as a key indicator of their selling performance",
+   "pagina": "p. 115"
+  },
+  {
+   "nome": "Custo do canal nos primeiros dois anos",
+   "definicao": "Custo do canal por real de receita, que no arranque supera o de regime.",
+   "citacao": "A partner channel that might eventually consume only 12 cents of every revenue dollar will generally eat up at least 18 cents, and as much as 30 cents, during the first two years of operation.",
+   "pagina": "p. 122"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Poucos parceiros assinados geram receita: o livro cita tecnologia com menos de 10% dos parceiros produzindo resultado relevante.",
+   "citacao": "Many technology companies fare far worse, with less than ten per cent of their partners generating any significant revenue.",
+   "pagina": "p. 81"
+  },
+  {
+   "alerta": "Passar toda indicação adiante sem triagem derruba a conversão e esgota quem fecha; o exemplo teve menos de 4% de fechamento.",
+   "citacao": "out of the 300 leads generated by its telemarketing reps and given to its sales force in March of 1996, only eleven had resulted in sales",
+   "pagina": "p. 187"
+  },
+  {
+   "alerta": "O conflito entre canais é inevitável e não se elimina; o desenho deve levar a evitação à ponta, com regras de crédito claras.",
+   "citacao": "Conflict between a field sales force and other channels is inevitable in a multiple-channel system; it cannot be prevented or entirely eliminated.",
+   "pagina": "p. 100"
+  },
+  {
+   "alerta": "Pagar dois canais pela mesma venda só funciona se o volume subir de forma relevante; senão aumenta o custo e cai o lucro.",
+   "citacao": "If you dual-pay channels, sales volume has to go up substantially for the system to work; otherwise you end up with higher transaction costs and lower profits.",
+   "pagina": "p. 101"
+  },
+  {
+   "alerta": "Parceiros demais na mesma base disputam receita, derrubam preço e margem e provocam saída dos melhores.",
+   "citacao": "leading to a downward spiraling of prices and partner margins",
+   "pagina": "p. 110"
+  },
+  {
+   "alerta": "Quando canais disputam o crédito da venda, cada um evita envolver os outros no processo.",
+   "citacao": "The behavior that comes out of this inter-channel competition is, predictably, a refusal to involve other channels in the sales process.",
+   "pagina": "p. 101"
+  },
+  {
+   "alerta": "Quem fornece lead e não entrega volume qualificado perde o parceiro, que passa a olhar para concorrentes.",
+   "citacao": "Partners quickly sour on lead generation programs that fail to deliver a reasonable number of qualified leads",
+   "pagina": "p. 147"
+  },
+  {
+   "alerta": "Exigir de um canal novo o desempenho de canais maduros é irreal; calibrar a meta de dezembro de 2026 a esse ponto de partida.",
+   "citacao": "asking a nascent partner channel to deliver levels of sales and profitability comparable to established industry benchmarks is like telling a four-year-old child to read and summarize a college physics textbook",
+   "pagina": "p. 122"
+  }
+ ]
+}

@@ -15,7 +15,7 @@ flowchart LR
       n_s2[["Abordar prospect"]]:::declarado
       n_e1&gt;"Resposta do prospect"]:::declarado
       n_s3[["Apresentar o programa em reunião"]]:::declarado
-      n_g2{"Prospect quer seguir?"}:::hipotese
+      n_g2{"Prospect quer seguir?"}:::declarado
       n_s4[["Nutrir prospect"]]:::declarado
       n_s5[["Formalizar a parceria"]]:::declarado
       n_f1(["Empresa não elegível"]):::declarado

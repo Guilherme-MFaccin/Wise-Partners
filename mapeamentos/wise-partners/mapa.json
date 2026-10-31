@@ -3372,9 +3372,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0003",
@@ -3394,9 +3395,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0004",
@@ -3506,9 +3508,10 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0008",
@@ -3528,9 +3531,10 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0009",
@@ -3551,9 +3555,10 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0010",
@@ -3577,9 +3582,10 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0011",
@@ -3600,9 +3606,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0012",
@@ -3625,9 +3632,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0013",
@@ -3768,9 +3776,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-02",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0020",
@@ -3791,9 +3800,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-03",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0021",
@@ -3832,9 +3842,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-03",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0023",
@@ -3856,9 +3867,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-03",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0024",
@@ -3938,9 +3950,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-04",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0028",
@@ -3960,9 +3973,10 @@
       ],
       "rodada": 1,
       "bloco": "Indicações e comissão",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-04",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0029",
@@ -4008,9 +4022,10 @@
       ],
       "rodada": 1,
       "bloco": "Funis do portal",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-05",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0031",
@@ -4059,9 +4074,10 @@
       ],
       "rodada": 1,
       "bloco": "Funis do portal",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-05",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0033",
@@ -4108,9 +4124,10 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "cancelada",
       "formulario": "FO-05",
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     },
     {
       "id": "Q-0035",
@@ -4209,9 +4226,10 @@
       ],
       "rodada": 1,
       "bloco": "Funis do portal",
-      "status": "aberta",
+      "status": "cancelada",
       "formulario": null,
-      "respostas": []
+      "respostas": [],
+      "nota": "Virou decisão de desenho no mapa to-be (formulário de decisões, mesmo link)."
     }
   ],
   "formularios": [
@@ -4347,7 +4365,7 @@
     },
     {
       "id": "FO-06",
-      "titulo": "Rodada 1: o que o patrocinador já sabe",
+      "titulo": "Rodada 1: o que o patrocinador já sabe (as-is) e decisões do to-be",
       "rodada": 1,
       "para": [
         "PE-01"
@@ -4362,24 +4380,6 @@
         "Q-0033",
         "Q-0004",
         "Q-0005",
-        "Q-0030",
-        "Q-0032",
-        "Q-0038",
-        "Q-0012",
-        "Q-0020",
-        "Q-0022",
-        "Q-0023",
-        "Q-0011",
-        "Q-0027",
-        "Q-0028",
-        "Q-0019",
-        "Q-0002",
-        "Q-0003",
-        "Q-0008",
-        "Q-0009",
-        "Q-0034",
-        "Q-0010",
-        "Q-0007",
         "Q-0035"
       ],
       "introducao": "Antes de perguntar aos colegas: o que você responde, sai da lista deles.",
@@ -4568,6 +4568,10 @@
     {
       "data": "2026-10-31",
       "evento": "8 respostas do FO-06 registradas; CT-01 e CT-02 resolvidas pelo patrocinador"
+    },
+    {
+      "data": "2026-10-31",
+      "evento": "18 perguntas do FO-06 viraram decisões do to-be (mapeamentos/wise-partners-to-be)"
     }
   ]
 }

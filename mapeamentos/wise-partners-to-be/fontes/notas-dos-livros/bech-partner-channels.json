@@ -1,0 +1,650 @@
+{
+ "livro": "Building Successful Partner Channels in the software industry",
+ "autores": "Hans Peter Bech",
+ "slug": "bech-partner-channels",
+ "tese": "Canal de parceiros independentes é um modelo de negócio de terceiros dentro do modelo da fornecedora: o parceiro não compra o produto, compra uma oportunidade de construir seu próprio negócio, e a fornecedora precisa recrutar, capacitar e gerir com processos, programa e portal próprios. O canal passa por fases (inicial, crescimento, maduro) com perfis de gerente, critérios de recrutamento e níveis de atenção diferentes, e a maior parte dos parceiros (cerca de 80%) nunca cresce, então o tempo de gestão deve ir para os poucos com potencial.",
+ "recomendacoes": [
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Tratar o canal como investimento de tempo e planejar a meta de parcerias com ciclo realista, não como atalho de receita.",
+   "processo": "Planejar ritmo de recrutamento do programa",
+   "citacao": "the indirect channel approach is NOT a fast route to market, but if we have the patience, then it can work wonders for us.",
+   "pagina": "p. 43",
+   "aplicabilidade": "alta",
+   "porque": "A meta de 10 parcerias assinadas até 31/12/2026 com um gerente de 12 horas por mês colide com o aviso do autor de que canal é jogo de paciência."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Aceitar que a comissão sobre a primeira mensalidade tende a virar apenas uma taxa de indicação e dar ao parceiro receita própria além dela, como novos clientes vindos da Prateleira de RFP.",
+   "processo": "Desenhar fontes de receita do parceiro além da comissão",
+   "citacao": "I expect that the traditional margins as we know them today will disappear completely and be replaced by a finders fee",
+   "pagina": "p. 118",
+   "aplicabilidade": "alta",
+   "porque": "O modelo Wise já é uma taxa de indicação; o livro indica que o parceiro só se sustenta se tiver valor próprio e demanda adicional."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Definir no programa que o parceiro apresenta e promove a marca Wise ao cliente, pois sem isso ele é só um intermediário e a relação não é de canal.",
+   "processo": "Classificar tipo de parceiro e papel perante o cliente",
+   "citacao": "In order to comply with the business model definition the channel must promote our brand to the customers.",
+   "pagina": "p. 122",
+   "aplicabilidade": "media",
+   "porque": "O livro trata revenda, mas o critério de marca visível ajuda a separar parceiro indicador (link exclusivo, comunicação conjunta) de simples contato de rede."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Tratar a existência de vários fornecedores por categoria na Prateleira de RFP como vantagem, porque o cliente exige comparar propostas.",
+   "processo": "Compor Prateleira de RFP com mais de um fornecedor por categoria",
+   "citacao": "it is one of the major benefits of operating a partner channel that customers have a choice of suppliers for the same product.",
+   "pagina": "p. 104",
+   "aplicabilidade": "alta",
+   "porque": "Valida a Prateleira de RFP: sobreposição entre parceiros não é conflito de canal e atende compras que exigem cotações."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Escrever uma proposta de valor do parceiro separada da proposta ao cliente, focada em como o parceiro constrói negócio com a Wise e não nas virtudes do serviço.",
+   "processo": "Escrever proposta de valor do parceiro",
+   "citacao": "They are motivated by the opportunity to build a profitable business with and around our products.",
+   "pagina": "p. 136",
+   "aplicabilidade": "alta",
+   "porque": "Os 21 prospects em conversa precisam ouvir o que ganham (receita, demanda, comunidade) e não só o que a Wise vende."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Registrar e usar cedo os primeiros casos de sucesso de parceiro como argumento de recrutamento, porque a resistência cai quando há prova.",
+   "processo": "Documentar caso de sucesso de parceiro",
+   "citacao": "as we make partners successful the resistance will wear off and our promises for the future become more trustworthy.",
+   "pagina": "p. 54",
+   "aplicabilidade": "alta",
+   "porque": "Sem nenhum parceiro assinado, a primeira indicação virada em reunião é o ativo de venda mais importante do programa."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Qualificar candidato pela carteira instalada dele: se não vende primeiro para a base que já tem, o caso de negócio recebe sinal vermelho.",
+   "processo": "Qualificar carteira do candidato a parceiro",
+   "citacao": "the channel partner will benefit dramatically from selling to her installed base of customers first.",
+   "pagina": "p. 196",
+   "aplicabilidade": "alta",
+   "porque": "É a lógica central da Wise (o parceiro não é ICP, mas a carteira dele é) e o Base Ativa trabalha exatamente a base instalada."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Escrever o perfil de parceiro ideal como uma descrição de vaga, com características demográficas, sociográficas e psicográficas, e só então sair para recrutar.",
+   "processo": "Definir perfil de parceiro ideal",
+   "citacao": "In the channel partner recruitment context the job description is called the ideal partner profile and the opportunities and benefits we offer are called the channel partner program.",
+   "pagina": "p. 78",
+   "aplicabilidade": "alta",
+   "porque": "O funil kanban precisa de critérios de entrada explícitos para os tipos ERP, CRM, MES, SST, ESG, BPM, automação e entidades."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Manter lista longa com pelo menos dez vezes o número de parceiros que se quer assinar e qualificar por contato direto com o dono ou executivo.",
+   "processo": "Montar lista longa de candidatos a parceiro",
+   "citacao": "The long-list should have at least ten times the number of candidates that we plan on recruiting in any given time frame in the area in question.",
+   "pagina": "p. 83",
+   "aplicabilidade": "alta",
+   "porque": "Para 10 assinaturas seriam cerca de 100 nomes em alguma etapa do funil; hoje há 21 em conversa."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Avaliar a ambição, a persistência e a capacidade de superar obstáculos da liderança do candidato, porque o desempenho depende das qualidades pessoais e não do currículo da empresa.",
+   "processo": "Avaliar liderança do candidato a parceiro",
+   "citacao": "ultimately it will be the personal qualifications of the management team that will determine performance.",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "Com poucas horas por mês, a entrevista com o decisor é o filtro mais barato contra parceiro que assina e não indica."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Fazer um workshop curto de alinhamento estratégico com a diretoria do candidato antes de assinar, para definir objetivos, plano e poucos indicadores.",
+   "processo": "Realizar workshop de alinhamento antes da assinatura",
+   "citacao": "It is recommended that this workshop be run before signing the channel partner agreement.",
+   "pagina": "p. 55",
+   "aplicabilidade": "media",
+   "porque": "O livro propõe 1 a 3 dias; com 12 horas por mês, a Wise precisa de uma versão de duas a três horas que gere o plano de ações conjuntas."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Tratar parceiros estratégicos grandes (ERPs conhecidos, entidades como a Expo+Indústria) como processo executivo, com o Diretor envolvido e prazo longo.",
+   "processo": "Conduzir recrutamento estratégico com o Diretor",
+   "citacao": "The motivation to go with us is as strategic for them as it is for us and such decisions take a long time to prepare.",
+   "pagina": "p. 89",
+   "aplicabilidade": "alta",
+   "porque": "Parceiros desse porte decidem no nível executivo; o Gerente de Parcerias sozinho não destrava a decisão."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Exigir compromissos claros em troca do apoio da Wise e deixar escrito quem traz o quê e como o custo é dividido, para não assumir sozinho o risco.",
+   "processo": "Definir plano de ações conjuntas com divisão de custos",
+   "citacao": "The ramp-up elements of the channel partner program must clearly spell out what each party must bring to the partnership and also how the bill is split.",
+   "pagina": "p. 54",
+   "aplicabilidade": "alta",
+   "porque": "O plano de ações conjuntas e as contrapartidas dos pacotes devem nascer deste acordo explícito."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Não conceder exclusividade formal; usar proteção informal com prazo e condição de retirada, como a proteção de 180 dias da indicação.",
+   "processo": "Conceder proteção temporária ao parceiro",
+   "citacao": "give the channel partner a more informal and often short-term protection that expires on a certain day, that we can withdraw if the business doesn’t develop as we expected",
+   "pagina": "p. 207",
+   "aplicabilidade": "alta",
+   "porque": "O livro valida proteção com data de vencimento e sem compromisso firme; a proteção da indicação é análoga, embora proteja a atribuição e não o território."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Acompanhar de perto as primeiras indicações de cada parceiro, com as ferramentas de venda prontas, porque ninguém tem prática com a proposta no mundo real.",
+   "processo": "Acompanhar primeiras indicações do parceiro",
+   "citacao": "we should make resources available in coaching and supporting the channel partners through the first couple of deals applying the sales tools we have available.",
+   "pagina": "p. 64",
+   "aplicabilidade": "alta",
+   "porque": "Combina com a ativação do onboarding na primeira indicação no ICP que virou reunião."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Documentar o processo de aquisição de cliente que a Wise recomenda ao parceiro antes de montar o programa, e fazer cada item do programa apoiar uma etapa dele.",
+   "processo": "Documentar processo recomendado de indicação",
+   "citacao": "I strongly recommend that we develop our own “best practice customer acquisition process” before we design our channel partner program as each element of the program should support a step in this process.",
+   "pagina": "p. 53",
+   "aplicabilidade": "alta",
+   "porque": "Evita onboarding de 30, 60 e 90 dias construído sem um processo de indicação definido que o sustente."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "No começo, a Wise deve gerar fluxo de oportunidades para os parceiros em vez de transferir a eles a construção da marca e da demanda.",
+   "processo": "Gerar demanda para parceiros com Prateleira de RFP e eventos",
+   "citacao": "In the early days of market penetration where we enjoy little brand recognition in the market and have to push hard to generate a flow of opportunities we must take charge and stimulate the lead generation activities",
+   "pagina": "p. 63",
+   "aplicabilidade": "alta",
+   "porque": "A marca Wise Partners é nova; o fluxo de volta (Prateleira de RFP, evento do Base Ativa) é a moeda que motiva o parceiro a indicar."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Manter o cliente indicado como cliente da Wise, com relacionamento direto e registro próprio, mesmo quando o parceiro conduz a conversa.",
+   "processo": "Registrar cliente indicado e manter relacionamento direto",
+   "citacao": "we should still consider the customers our customers.",
+   "pagina": "p. 144",
+   "aplicabilidade": "alta",
+   "porque": "Protege a Wise se o parceiro sair e sustenta a nota de qualidade e a proteção de 180 dias."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Manter a regra de comissão simples e estável, e premiar também as pessoas do parceiro que indicam, não só a empresa.",
+   "processo": "Manter regra de comissão estável e simples",
+   "citacao": "Keep it simple and don’t change it too frequently.",
+   "pagina": "p. 71",
+   "aplicabilidade": "alta",
+   "porque": "Os 40% da primeira mensalidade já são simples; o risco é mudar regras ao longo do programa e consumir as 12 horas mensais em administração."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Não tentar competir por parceiros só com percentual de comissão, que funciona como fator de higiene; motivar com demanda, apoio e comunidade.",
+   "processo": "Equilibrar comissão com incentivos não monetários",
+   "citacao": "Margins are like staff salaries; a hygiene factor that may cause dissatisfaction, but on the other hand does not generate changes in behavior.",
+   "pagina": "p. 146",
+   "aplicabilidade": "alta",
+   "porque": "O livro cita descontos típicos de 30 a 40% para revenda; os 40% da Wise estão no topo dessa faixa, mas pagos uma vez, então o restante precisa vir de outros incentivos."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Não abrir com níveis A/B/C preenchidos por promessa; começar com estrutura simples e diferenciar conforme o desempenho real.",
+   "processo": "Classificar parceiros por desempenho real",
+   "citacao": "Start with a simple channel partner structure and then differentiate later as the partners actually prove to perform very differently.",
+   "pagina": "p. 73",
+   "aplicabilidade": "alta",
+   "porque": "Níveis por potencial de carteira devem ser tratados como hipótese inicial e confirmados na revisão trimestral por resultado."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Segmentar a base de parceiros em estrelas, potencial de crescimento e demais, e dar a cada grupo tratamento diferente.",
+   "processo": "Segmentar parceiros em estrelas, potencial e demais",
+   "citacao": "I classify partners as Stars (5%), Growth Potential (15%) and The Rest (80%) and discuss how we should manage each group.",
+   "pagina": "p. 30",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês, a lógica 5/15/80 decide onde gastar o tempo do Gerente; as proporções vêm de software e podem diferir no caso Wise."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Gerir por fase do canal: na fase inicial todos os parceiros recebem atenção próxima e flexibilidade, e conforme a performance aparece o apoio é graduado.",
+   "processo": "Evoluir a fase de gestão do canal",
+   "citacao": "When we are in the early mode channel development stage all channel partners will receive close attention. As we learn which partners perform well and which do not",
+   "pagina": "p. 70",
+   "aplicabilidade": "alta",
+   "porque": "O programa está na fase inicial com zero parceiros; o desenho do portal deve prever a passagem para modo de crescimento e maduro."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Fixar cadência de acompanhamento por segmento: estrelas com revisão estratégica anual e contato mensal ou trimestral, potencial de crescimento com contato semanal e revisão mensal.",
+   "processo": "Definir cadência de acompanhamento por segmento",
+   "citacao": "There is most likely daily communication and activities between the Partner Account Manager and her Stars and there will be at least an annual strategy review and planning workshop and monthly or quarterly follow up meetings.",
+   "pagina": "p. 92",
+   "aplicabilidade": "media",
+   "porque": "Os ritmos do livro supõem tempo integral; na Wise precisam ser reduzidos para caber em 12 horas por mês."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Definir poucos indicadores por parceiro no plano conjunto, para discutir desvios com fatos e não com opiniões.",
+   "processo": "Definir indicadores do plano conjunto do parceiro",
+   "citacao": "Without the KPIs we will not be able to identify what is deviating from our assumptions",
+   "pagina": "p. 196",
+   "aplicabilidade": "alta",
+   "porque": "As metas por pessoa e o plano de ações conjuntas do portal precisam de indicadores acordados na assinatura."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Desenhar primeiro os processos de relacionamento com o parceiro e só então configurar o portal; indicações, comissões e contrapartidas devem passar só por ele.",
+   "processo": "Gerir incentivos e indicações pelo portal",
+   "citacao": "The PRM supports the channel partner relationship management processes, thus we must define these first and then implement the system afterwards.",
+   "pagina": "p. 94",
+   "aplicabilidade": "alta",
+   "porque": "É a ordem correta para o Portal Wise Partners e para a área de tarefas estilo CRM ainda em desenho."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Orquestrar troca de práticas e aproximação entre parceiros, que pesa mais que margem e fundos de marketing, e reunir os parceiros presencialmente com reconhecimento aos melhores.",
+   "processo": "Realizar evento de parceiros",
+   "citacao": "Exchanging best business practices, ideas for new approaches, products and services and bringing channel partners together who can benefit from cooperating often plays a much more important role than margin, MDF and SPIF.",
+   "pagina": "p. 73",
+   "aplicabilidade": "alta",
+   "porque": "Sustenta o cruzamento de carteiras, o ranking e o evento do Base Ativa como motivadores centrais."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Publicar critérios de nível e de desligamento com prazo de aviso e revisão em data fixa, e prever a devolução do cadastro de clientes na saída.",
+   "processo": "Desligar parceiro de forma formal",
+   "citacao": "The Business Partner’s classification will be reviewed annually in [month] and appropriate up- or downgrading for the coming year will become effective as of 1 [month] the same year.",
+   "pagina": "p. 172",
+   "aplicabilidade": "media",
+   "porque": "O livro usa revisão anual; a Wise adota trimestral, mas o princípio de regra pública com data de efeito vale."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Contratar ou calibrar o Gerente de Parcerias para a fase inicial: perfil empreendedor, vendedor, que reinventa o programa em campo, e não administrador de regras.",
+   "processo": "Definir perfil do Gerente de Parcerias por fase",
+   "citacao": "The stages of starting, growing and managing a partner channel require completely different skill sets.",
+   "pagina": "p. 94",
+   "aplicabilidade": "alta",
+   "porque": "Na fase de começo o papel é de linha de frente; o livro prevê migração para papéis de coordenação quando o canal crescer."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Não presumir que quem sabe vender consultoria sabe recrutar e crescer parceiros: são competências diferentes e exigem tempo próprio.",
+   "processo": "Separar competências de venda e de gestão de parceiros",
+   "citacao": "I cannot emphasize enough the fact that the skill sets required to find, win, make, keep and grow happy customers are not the same skill sets required to find, win, make and keep productive independent channel partners.",
+   "pagina": "p. 149",
+   "aplicabilidade": "alta",
+   "porque": "O Gerente de Parcerias tem 12 horas por mês; usar consultores comerciais da Wise sem preparo para a função de parceiros tende a falhar."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Definir perfil de parceiro ideal",
+   "descricao": "O livro compara o perfil de parceiro ideal a uma descrição de vaga e o organiza em três categorias: demográficas (consultáveis em bases públicas), sociográficas (exigem entrevistar pessoas-chave: proposta de valor, base instalada, estratégia) e psicográficas (exigem várias entrevistas: experiência, ambição, cultura). Alerta que o perfil pode atrair parceiros de concorrentes, ser inexistente no mercado ou deixar de fora outliers com potencial de liderança.",
+   "gatilho": "Antes de iniciar a prospecção ativa de parceiros",
+   "etapas": [
+    "Descrever as responsabilidades do parceiro no programa",
+    "Listar propriedades demográficas consultáveis",
+    "Listar propriedades sociográficas a levantar em conversa",
+    "Definir sinais psicográficos de ambição e persistência",
+    "Aceitar flexibilidade quando há poucos parceiros e dar o benefício da dúvida a outliers que se apresentarem"
+   ],
+   "resultados": [
+    "Perfil documentado",
+    "Critérios de entrada no funil de recrutamento"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Aderência da lista longa ao perfil"
+   ],
+   "citacao": "In the channel partner recruitment context the job description is called the ideal partner profile and the opportunities and benefits we offer are called the channel partner program.",
+   "pagina": "p. 78"
+  },
+  {
+   "nome": "Recrutar parceiro do primeiro contato à assinatura",
+   "descricao": "Processo de seis passos para mercados conhecidos, semelhante a headhunting de vendedores: perfil, lista longa, contato com o dono ou executivo, reunião introdutória presencial, visitas à short-list, assessment com 3 a 4 candidatos, carta de intenção, workshop executivo e assinatura. É contínuo, exige recursos próprios e leva 6 a 9 meses no modo inicial.",
+   "gatilho": "Perfil de parceiro ideal aprovado e proposta de programa pronta",
+   "etapas": [
+    "Montar lista longa com dez vezes a meta",
+    "Ligar para o executivo do candidato e enviar pacote de informação",
+    "Realizar reunião introdutória presencial",
+    "Visitar uma ou duas vezes a short-list longa (cerca de metade da lista)",
+    "Reunir 3 a 4 candidatos em assessment de meio dia",
+    "Assinar carta de intenção e marcar o workshop executivo",
+    "Assinar o acordo de parceria após o workshop"
+   ],
+   "resultados": [
+    "Assinatura do acordo",
+    "Desistência de uma das partes após reunião introdutória ou assessment",
+    "Carta de intenção sem workshop concluído"
+   ],
+   "papeis": [
+    "Recrutador de canal com recursos próprios",
+    "Executivo ou dono do candidato",
+    "Diretor (decisão de assinatura)"
+   ],
+   "metricas": [
+    "Razão lista longa por meta (10 para 1)",
+    "Conversão da lista longa para short-list longa (cerca de 50%)",
+    "Duração do ciclo de recrutamento (6 a 9 meses)"
+   ],
+   "citacao": "With a long list of potential candidates we undertake interviews to shortlist the most appropriate, which we then invite to the final selection event.",
+   "pagina": "p. 76"
+  },
+  {
+   "nome": "Realizar workshop de alinhamento estratégico com o parceiro",
+   "descricao": "Antes de assinar, a gerência do candidato participa de 1 a 3 dias de workshop perto da sede dele, com formato e facilitação da fornecedora e um cenário de parceiro bem-sucedido como referência. Define objetivos, plano, poucos indicadores e o P&L. Na fase inicial a fornecedora arca com o próprio custo; o parceiro cede o local e as pessoas.",
+   "gatilho": "Carta de intenção assinada",
+   "etapas": [
+    "Apresentar proposta de valor, perfil de cliente ideal e processo de aquisição",
+    "Treinamento inicial condensado",
+    "Mapear o modelo de negócio do parceiro com o canvas",
+    "Definir objetivos e plano de ação",
+    "Construir o P&L do parceiro",
+    "Fixar poucos indicadores",
+    "Parceiro documenta conclusões"
+   ],
+   "resultados": [
+    "Acordo estratégico seguido de assinatura",
+    "Divergência fundamental que encerra a conversa"
+   ],
+   "papeis": [
+    "Facilitador da fornecedora",
+    "Equipe de gestão do parceiro",
+    "Representante do parceiro que documenta"
+   ],
+   "metricas": [
+    "Tempo até a primeira receita",
+    "Tempo até o lucro",
+    "Investimento inicial acordado"
+   ],
+   "citacao": "We should offer the format for and facilitate the workshop, including providing a successful partner benchmark scenario to which we can refer,",
+   "pagina": "p. 55"
+  },
+  {
+   "nome": "Construir o P&L do parceiro",
+   "descricao": "O P&L do parceiro é o resultado quantitativo do modelo de negócio e leva em conta que toda parceria exige investimento inicial e curva de aprendizado. O autor sugere partir de um modelo ideal com organização mínima e atividades conhecidas, ajustá-lo com o parceiro e usar a venda à base instalada primeiro. Ciclos de venda assumidos caem de 8 para 6 e depois 5 meses ao longo de três anos.",
+   "gatilho": "Workshop de alinhamento estratégico",
+   "etapas": [
+    "Partir de modelo ideal de parceiro com modelo de negócio padrão",
+    "Percorrer a sequência proposta de valor, segmentos, atividades, recursos, despesas, receita, custo e resultado",
+    "Estimar potencial em 3 a 5 anos",
+    "Estimar tempo até a primeira receita e até o lucro",
+    "Estimar investimento inicial e caixa necessário",
+    "Ajustar com a gerência até ela assumir a propriedade do plano"
+   ],
+   "resultados": [
+    "Plano de ação e orçamento do parceiro",
+    "Sinal vermelho se a venda à base instalada não for possível"
+   ],
+   "papeis": [
+    "Gerente de parcerias",
+    "Gestão do parceiro"
+   ],
+   "metricas": [
+    "Tempo até a primeira receita",
+    "Tempo até o lucro",
+    "Caixa necessário",
+    "Ciclo de venda por ano de operação"
+   ],
+   "citacao": "Value Proposition -> Customer Segments -> Activities -> Resources -> OpEx and CapEx -> Revenue -> CoGS -> P&L",
+   "pagina": "p. 189"
+  },
+  {
+   "nome": "Apoiar o parceiro nas etapas encontrar, ganhar, fazer, manter e crescer",
+   "descricao": "O programa deve apoiar exatamente as atividades que se pede ao parceiro. Encontrar: a fornecedora lidera geração de demanda no início. Ganhar: coaching nos primeiros negócios e ferramentas de venda padronizadas. Fazer: garantir que o parceiro entregue com recursos certificados. Manter: criar ecossistema. Crescer: oferecer certificação e plataformas de promoção.",
+   "gatilho": "Parceiro assinado",
+   "etapas": [
+    "Gerar fluxo de oportunidades com e para o parceiro",
+    "Acompanhar os primeiros negócios com ferramentas de venda",
+    "Garantir capacidade de entrega do parceiro",
+    "Facilitar troca entre parceiros e clientes",
+    "Apoiar crescimento de valor por cliente"
+   ],
+   "resultados": [
+    "Primeiros negócios entregues a clientes satisfeitos",
+    "Parceiro autônomo",
+    "Parceiro que não decola"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Tempo até o primeiro negócio",
+    "Satisfação do cliente por parceiro"
+   ],
+   "citacao": "Fundamentally the partner program must be designed to support precisely those activities that we ask our channel partners to assume responsibility for.",
+   "pagina": "p. 52"
+  },
+  {
+   "nome": "Segmentar e gerir parceiros por potencial",
+   "descricao": "Três grupos: Estrelas (cerca de 5%, crescem sozinhos e pedem relação executiva), Potencial de Crescimento (cerca de 15%, ambiciosos com pouca gestão, tratados como alunos de um programa de desenvolvimento aberto, com critério de admissão e preço) e Demais (80%, geridos pelo portal). Todos começam pequenos e devem ser reclassificados quando mostrarem resultado.",
+   "gatilho": "Primeiros resultados de desempenho dos parceiros",
+   "etapas": [
+    "Classificar cada parceiro nos três grupos",
+    "Aplicar cadência e apoio do grupo",
+    "Oferecer programa de desenvolvimento geral com critério de admissão e preço ao grupo de potencial",
+    "Gerir os demais por portal, chat e e-mail",
+    "Reclassificar conforme o progresso"
+   ],
+   "resultados": [
+    "Promoção a estrela",
+    "Entrada no programa de desenvolvimento",
+    "Permanência no autosserviço"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Executivos da fornecedora"
+   ],
+   "metricas": [
+    "Distribuição de parceiros por grupo",
+    "Receita por grupo"
+   ],
+   "citacao": "Approximately 5% of our channel partners will possess the ability to grow their businesses faster than the market without our support.",
+   "pagina": "p. 92"
+  },
+  {
+   "nome": "Conceder proteção temporária ao parceiro",
+   "descricao": "Em vez de exclusividade formal, a fornecedora assina um acordo padrão não exclusivo e dá proteção informal e de curto prazo, com data de vencimento, retirável se o negócio não se desenvolver. Promessas orais valem tanto quanto as escritas. A abordagem de não planejar recrutar concorrentes enquanto o território não está saturado dá vantagem sem compromisso firme.",
+   "gatilho": "Pedido de exclusividade ou de proteção do investimento do parceiro",
+   "etapas": [
+    "Assinar acordo padrão não exclusivo",
+    "Definir prazo e abrangência da proteção",
+    "Registrar a condição de retirada",
+    "Honrar o combinado exatamente como se fosse escrito",
+    "Rever ao fim do prazo conforme o resultado"
+   ],
+   "resultados": [
+    "Proteção expirada sem renovação",
+    "Proteção prorrogada por desempenho",
+    "Proteção retirada antes do prazo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Resultado do parceiro dentro do prazo de proteção"
+   ],
+   "citacao": "Oral agreements should obviously be honored exactly as written agreements",
+   "pagina": "p. 208"
+  },
+  {
+   "nome": "Gerir incentivos e indicações pelo portal",
+   "descricao": "Incentivos devem ser simples, estáveis e dirigidos a pessoas. Fundos de marketing conjunto costumam ser divididos 50/50 em atividades recomendadas, e parceiros tentam usá-los para cobrir despesas que já teriam. Leads, propostas especiais, fundos e eventos devem passar apenas pelo sistema de gestão de parceiros.",
+   "gatilho": "Parceiro assinado e plano conjunto aprovado",
+   "etapas": [
+    "Definir regras simples de incentivo",
+    "Alocar fundo conjunto apenas contra atividade recomendada",
+    "Registrar leads e aprovações no portal",
+    "Revisar regras com baixa frequência de mudança"
+   ],
+   "resultados": [
+    "Incentivo liberado",
+    "Incentivo negado por falta de atividade comprovada"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Uso do portal pelos parceiros",
+    "Atividade gerada por real de fundo conjunto"
+   ],
+   "citacao": "should obviously only take place through the PRM, ensuring that our channel partners become familiar with using the platform.",
+   "pagina": "p. 94"
+  },
+  {
+   "nome": "Realizar evento de parceiros",
+   "descricao": "Reunir presencialmente os parceiros em intervalos regulares gera relacionamento, energia, sensação de pertencimento e redes de negócio entre eles. Enquanto houver menos de cem parceiros, um evento anual único basta; depois divide-se por região e função. Inclui inspiração, prêmios e networking.",
+   "gatilho": "Calendário anual do programa",
+   "etapas": [
+    "Começar por executivos e vendedores dos parceiros",
+    "Inspirar a comunidade",
+    "Reconhecer e premiar os melhores",
+    "Facilitar encontros de negócio entre parceiros"
+   ],
+   "resultados": [
+    "Novas relações entre parceiros",
+    "Prêmios usados na promoção própria dos parceiros"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Executivos da fornecedora"
+   ],
+   "metricas": [
+    "Presença de parceiros",
+    "Negócios entre parceiros originados no evento"
+   ],
+   "citacao": "Introducing and giving awards for outstanding and remarkable performance has a tremendous impact on channel partner motivation",
+   "pagina": "p. 75"
+  },
+  {
+   "nome": "Evoluir a fase de desenvolvimento do canal",
+   "descricao": "O texto distingue modo inicial, de crescimento e maduro, ligados a níveis de maturidade. No inicial, a fornecedora não tem poder de barganha, recruta à mão, dá atenção próxima, reinventa o programa e usa perfis de linha de frente. No crescimento, assina quem cumpre critérios sem processo elaborado, vê quem performa e concentra recursos neles. No maduro, usa fábrica de gestão para os pequenos, consultores para potencial de crescimento e executivos para estrelas. A tabela das sete características que define os níveis é imagem e não consta do texto extraído.",
+   "gatilho": "Aumento de parceiros e do volume de contatos espontâneos",
+   "etapas": [
+    "Modo inicial: recrutar à mão, atender todos de perto, reinventar o programa",
+    "Modo de crescimento: fixar critérios de entrada, assinar sem processo longo, observar desempenho",
+    "Modo maduro: autosserviço para os pequenos, consultoria para potencial, executivos para estrelas",
+    "Recrutamento em massa por portal e recrutadores sêniores para estratégicos"
+   ],
+   "resultados": [
+    "Passagem de fase",
+    "Permanência no modo atual"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Número de parceiros",
+    "Contatos espontâneos de parceiros",
+    "Parte da receita vinda de parceiros existentes"
+   ],
+   "citacao": "As we move into the growth mode of the channel development stage, we can change our objectives and simplify the recruitment process considerably.",
+   "pagina": "p. 85"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Custo de aquisição de cliente (CAC)",
+   "definicao": "Custo total de marketing, vendas e pré-vendas para ganhar um novo cliente; comparar canal de parceiros e venda direta.",
+   "citacao": "Customer Acquisition Cost (CAC) is the total cost (marketing, sales and pre-sales) of acquiring a new customer.",
+   "pagina": "p. 23"
+  },
+  {
+   "nome": "Valor do tempo de vida do cliente (CLV)",
+   "definicao": "Margem bruta esperada de um cliente durante a relação; base para decidir quanto repassar ao parceiro.",
+   "citacao": "Customer Lifetime Value (CLV) is the gross margin we can expect from a customer over the lifetime of our relationship.",
+   "pagina": "p. 24"
+  },
+  {
+   "nome": "Tempo até a primeira receita e tempo até o lucro do parceiro",
+   "definicao": "Perguntas do P&L do parceiro: quando entra a primeira receita e quando a parceria se paga, junto com investimento e caixa necessários.",
+   "citacao": "What is the “time to first revenue?”",
+   "pagina": "p. 58"
+  },
+  {
+   "nome": "Satisfação do cliente por parceiro",
+   "definicao": "Nível de satisfação dos clientes atendidos por cada parceiro, usado para classificar o parceiro.",
+   "citacao": "Many software companies keep track of the level of customer satisfaction and use this metric to rate the status of their independent channel partners and this certainly makes sense.",
+   "pagina": "p. 144"
+  },
+  {
+   "nome": "Curva de aprendizado do ciclo de venda",
+   "definicao": "Ciclo de venda do parceiro novo tende a ser maior no primeiro ano e a convergir para a média dos experientes (modelo de 8, 6 e 5 meses).",
+   "citacao": "in general there is always a learning curve that we have to overcome before a new channel partner can produce the same productivity as our more experienced channel partners.",
+   "pagina": "p. 196"
+  },
+  {
+   "nome": "Distribuição de parceiros por grupo (estrelas, potencial, demais)",
+   "definicao": "Participação de parceiros em cada grupo, com referência de 5%, 15% e 80%.",
+   "citacao": "I classify partners as Stars (5%), Growth Potential (15%) and The Rest (80%) and discuss how we should manage each group.",
+   "pagina": "p. 30"
+  },
+  {
+   "nome": "Razão da lista longa e conversão para short-list",
+   "definicao": "Lista longa com pelo menos dez vezes a meta de recrutamento, dos quais cerca de metade passa para a short-list longa.",
+   "citacao": "We should expect that about half of the candidates from the long-list will qualify for the “long” short-list",
+   "pagina": "p. 83"
+  },
+  {
+   "nome": "Duração do ciclo de recrutamento",
+   "definicao": "Tempo do contato à assinatura; no modo inicial costuma ser projeto de 6 a 9 meses.",
+   "citacao": "In the early mode channel development stage the average recruitment effort takes much longer compared to later stages and is often a 6-9 month project.",
+   "pagina": "p. 87"
+  },
+  {
+   "nome": "Margem repassada ao parceiro",
+   "definicao": "Desconto sobre a lista pago ao parceiro; o livro cita faixa típica e mostra como ela reduz a parcela que fica com a fornecedora.",
+   "citacao": "The discount is typically between 30 and 40 per cent and the discount will grow with the increase in sales of the software.",
+   "pagina": "p. 124"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Assinar muitos acordos não é critério de sucesso; no início, o esforço deve ir para parceiros que produzem resultado.",
+   "citacao": "simply signing numerous channel partner agreements isn’t a success criteria in itself.",
+   "pagina": "p. 77"
+  },
+  {
+   "alerta": "Executivos subestimam o esforço de recrutar, capacitar e gerir parceiros e os tratam como força de vendas barata e flexível.",
+   "citacao": "Many software executives consider the independent channel partners as a readily available, flexible and inexpensive sales resource and nothing could be further from the truth.",
+   "pagina": "p. 25"
+  },
+  {
+   "alerta": "Com poucos parceiros todos querem o nível mais alto; o resultado é um canal só de parceiros top e a necessidade de rebaixar depois.",
+   "citacao": "leaves us with the challenge of downgrading the channel partners as they fail to deliver to the thresholds.",
+   "pagina": "p. 73"
+  },
+  {
+   "alerta": "Exclusividade pode ter o efeito oposto ao desejado: o parceiro relaxa e só atende contatos que chegam sozinhos.",
+   "citacao": "exclusivity often has the exact opposite effect making the channel partner lean back, do nothing or very little",
+   "pagina": "p. 206"
+  },
+  {
+   "alerta": "Organização grande sem um executivo comprometido consome o tempo escasso do gerente de parceiros e entrega pouco; vale para ERPs grandes e entidades.",
+   "citacao": "the sheer inertia of large organizations is more likely to consume our scarce partner account management resources than generate any significant business for us.",
+   "pagina": "p. 147"
+  },
+  {
+   "alerta": "Parceiro que posiciona mal o serviço pode ser devastador para fornecedor pequeno, o que exige precisão sobre o cliente ideal.",
+   "citacao": "for the start-up and smaller software company it can be downright devastating.",
+   "pagina": "p. 138"
+  },
+  {
+   "alerta": "Programas para liberar o crescimento de parceiros são caros, longos e de impacto limitado sem motivação do parceiro; um ciclo curto de 12 semanas pode ser insuficiente sozinho.",
+   "citacao": "Frameworks for releasing growth potential are expensive; each program must run for several years and they will have limited impact unless the channel partners are highly motivated to join,",
+   "pagina": "p. 93"
+  },
+  {
+   "alerta": "Tratar parceiros como se fossem propriedade da fornecedora é uma das causas raiz de falha em canais indiretos.",
+   "citacao": "Many software companies behave as if they “own” their independent resellers and can command the ways they should operate.",
+   "pagina": "p. 141"
+  }
+ ]
+}

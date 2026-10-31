@@ -8,7 +8,7 @@
     <bpmn:messageFlow id="P-06_M3" name="Minuta do termo" sourceRef="P-06_s5" targetRef="Ext_P-06_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-06" name="2 Recrutar parceiros" isExecutable="false">
-    <bpmn:documentation>Levar uma empresa que atende ao IPP do primeiro contato ao termo assinado. [status do fluxo: Declarado; evidências: EV-0038, EV-0055, EV-0090, EV-0091, EV-0074]</bpmn:documentation>
+    <bpmn:documentation>Levar uma empresa que atende ao IPP do primeiro contato ao termo assinado. [status do fluxo: Declarado; evidências: EV-0038, EV-0055, EV-0090, EV-0091, EV-0074, EV-0106, EV-0108]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-06">
       <bpmn:lane id="Lane_P-06_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-06_i1</bpmn:flowNodeRef>
@@ -33,7 +33,7 @@
     <bpmn:subProcess id="P-06_s2" name="Abordar prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F3</bpmn:incoming><bpmn:outgoing>P-06_F5</bpmn:outgoing></bpmn:subProcess>
     <bpmn:intermediateCatchEvent id="P-06_e1" name="Resposta do prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F5</bpmn:incoming><bpmn:outgoing>P-06_F6</bpmn:outgoing><bpmn:messageEventDefinition id="P-06_e1_def" /></bpmn:intermediateCatchEvent>
     <bpmn:subProcess id="P-06_s3" name="Apresentar o programa em reunião"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F6</bpmn:incoming><bpmn:incoming>P-06_F11</bpmn:incoming><bpmn:outgoing>P-06_F7</bpmn:outgoing></bpmn:subProcess>
-    <bpmn:exclusiveGateway id="P-06_g2" name="Prospect quer seguir?"><bpmn:documentation>Os jeitos de terminar vêm do Playbook (perdas: não elegível, sem interesse); a pausa em nutrição vem da especificação 002. A ordem exata é dedução e está em pergunta.; status: Hipótese</bpmn:documentation><bpmn:incoming>P-06_F7</bpmn:incoming><bpmn:outgoing>P-06_F8</bpmn:outgoing><bpmn:outgoing>P-06_F9</bpmn:outgoing><bpmn:outgoing>P-06_F10</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="P-06_g2" name="Prospect quer seguir?"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F7</bpmn:incoming><bpmn:outgoing>P-06_F8</bpmn:outgoing><bpmn:outgoing>P-06_F9</bpmn:outgoing><bpmn:outgoing>P-06_F10</bpmn:outgoing></bpmn:exclusiveGateway>
     <bpmn:subProcess id="P-06_s4" name="Nutrir prospect"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F10</bpmn:incoming><bpmn:outgoing>P-06_F11</bpmn:outgoing></bpmn:subProcess>
     <bpmn:subProcess id="P-06_s5" name="Formalizar a parceria"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F8</bpmn:incoming><bpmn:outgoing>P-06_F12</bpmn:outgoing></bpmn:subProcess>
     <bpmn:endEvent id="P-06_f1" name="Empresa não elegível"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-06_F4</bpmn:incoming></bpmn:endEvent>
@@ -64,7 +64,7 @@
       <bpmndi:BPMNShape id="P-06_s2_di" bpmnElement="P-06_s2" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="642" y="138" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-06_e1_di" bpmnElement="P-06_e1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="864" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-06_s3_di" bpmnElement="P-06_s3" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="994" y="138" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-06_g2_di" bpmnElement="P-06_g2" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1209" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="115" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-06_g2_di" bpmnElement="P-06_g2" isMarkerVisible="true" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1209" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="115" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-06_s4_di" bpmnElement="P-06_s4" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1346" y="346" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-06_s5_di" bpmnElement="P-06_s5" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1346" y="138" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-06_f1_di" bpmnElement="P-06_f1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="688" y="260" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="302" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>

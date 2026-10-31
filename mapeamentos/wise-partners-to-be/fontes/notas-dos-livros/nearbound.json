@@ -1,0 +1,646 @@
+{
+ "livro": "Nearbound and the Rise of the Who Economy",
+ "autores": "Jared Fuller, Jill Rowley",
+ "slug": "nearbound",
+ "tese": "O comprador de hoje confia nas pessoas e empresas ao redor dele mais do que em dados e anúncios, então vender passa a ser cercar o cliente com parceiros em quem ele já confia. Parceria deixa de ser departamento isolado e vira estratégia sobreposta a marketing, vendas, sucesso e operações, medida por attach de parceiro e sustentada por ritmo operacional e reciprocidade. O livro vem de um autor ligado a uma plataforma do tema e de contexto SaaS, então os números servem como hipótese.",
+ "recomendacoes": [
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Tratar o pagamento de 40% da primeira mensalidade como remuneração por influência e introdução, não por revenda: a transação e o contrato continuam com a Wise e o parceiro é pago por abrir a porta.",
+   "processo": "Definir o papel do parceiro como influência e introdução, sem revenda",
+   "citacao": "The channel world owns the point of transaction, while the emerging partner world seems to own the points of influence and retention.",
+   "pagina": "p. 24",
+   "aplicabilidade": "alta",
+   "porque": "Casa com o desenho da Wise, em que o parceiro não é ICP mas a carteira dele é; deixa claro o que se espera dele e o que se paga."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Classificar cada parceiro pelo papel que realmente exerce (recomendar, validar, indicar) e não exigir dele vender ou implementar; ERP e software recomendam e validam, entidade e feira abrem acesso e reúnem a comunidade.",
+   "processo": "Classificar parceiro por papel de influência",
+   "citacao": "First is the influencer channel. Rather than reselling, these partners advocate early in the buyer journey to build brand awareness and preference. They provide recommendations, validation, and sometimes referrals.",
+   "pagina": "p. 24",
+   "aplicabilidade": "alta",
+   "porque": "É exatamente o papel esperado de fornecedores de ERP, CRM, MES e entidades no Programa Wise Partners."
+  },
+  {
+   "tema": "proposta_de_valor",
+   "recomendacao": "Desenhar a proposta de valor para o parceiro além da comissão: o que a Wise faz pelo negócio dele (carteira ativa, evento, visibilidade) vem antes de pedir indicação.",
+   "processo": "Definir proposta de valor ao parceiro por tipo",
+   "citacao": "Customer value is the bare minimum; partner value raises the stakes and turns out to be both the most important and hardest part to nail.",
+   "pagina": "p. 156",
+   "aplicabilidade": "alta",
+   "porque": "O Base Ativa de 12 semanas já é valor entregue ao parceiro; precisa estar escrito como oferta central e não como contrapartida."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Usar o evento do Base Ativa como data-limite pública que força parceiro e Wise a entregar valor; estruturar o evento em torno de valores compartilhados e não de lançamento de produto.",
+   "processo": "Realizar evento de comunidade com o parceiro no fim do ciclo",
+   "citacao": "First, events create a forcing function that drives commitment from both your company and partners to show up and deliver value on a specific day.",
+   "pagina": "p. 138",
+   "aplicabilidade": "alta",
+   "porque": "Dá ao ciclo de 12 semanas um marco inegociável e uma saída mensurável (participantes, reuniões, negócios influenciados)."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Montar a lista de parceiros-alvo de forma nominal, entrevistando os melhores clientes da Wise (e de Tríade e Swallow) sobre quais sistemas, consultorias e entidades eles usam e em quem confiam, em vez de um perfil teórico.",
+   "processo": "Montar lista nominal de parceiros-alvo a partir de clientes",
+   "citacao": "Your IPP is not a theoretical list of firmographics and qualifiers that make up an ideal partner universe. Instead, IPP is an enumerated list of actual partner accounts.",
+   "pagina": "p. 159",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês e cerca de 21 prospects, uma lista nominal ancorada em clientes reais é mais barata e mais confiável que prospecção fria."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Incluir em toda reunião e diagnóstico da Wise a pergunta fixa sobre fornecedores e sistemas que o cliente usa, e registrar a resposta no portal para alimentar funil de recrutamento e cruzamento de carteiras.",
+   "processo": "Perguntar parceiros e tecnologias do cliente em toda reunião",
+   "citacao": "Get commitment from your sales and CS teams to ask simple questions.",
+   "pagina": "p. 173",
+   "aplicabilidade": "alta",
+   "porque": "Transforma consultores e diretor em fonte contínua de candidatos sem consumir as 12 horas do Gerente de Parcerias."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Qualificar e desqualificar candidatos no kanban com os 4 Cs: carteira relevante e acessível, credibilidade, capacidade de executar e comprometimento.",
+   "processo": "Qualificar candidato a parceiro pelos 4 Cs",
+   "citacao": "Customer base: Does your potential partner have a relevant and accessible customer base that matches your company’s ICP?",
+   "pagina": "p. 174",
+   "aplicabilidade": "alta",
+   "porque": "Dá critério objetivo para entrar na etapa de nutrição ou ser descartado, e alimenta a definição do nível A, B ou C."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Na etapa de nutrição, fazer pequenos gestos sem pedido (compartilhar conteúdo do candidato, convidá-lo para evento ou conversa) e observar se ele retribui antes de propor assinatura.",
+   "processo": "Nutrir candidato com ações sem pedido",
+   "citacao": "Start by subtly engaging the partner through social media shoutouts, sharing their content, and inviting them onto your podcast.",
+   "pagina": "p. 85",
+   "aplicabilidade": "alta",
+   "porque": "Usa a reciprocidade como teste de compromisso antes de gastar horas escassas em contrato e onboarding."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Estimar o potencial de cada candidato pela sobreposição de clientes e prospects com a Wise e pelo alinhamento de narrativa, e usar isso para propor o nível A, B ou C.",
+   "processo": "Estimar potencial do parceiro pela sobreposição de carteiras",
+   "citacao": "look at the audience and account overlap. Who shares the highest percentage of customers and prospects with you?",
+   "pagina": "p. 83",
+   "aplicabilidade": "alta",
+   "porque": "O programa já define níveis pelo potencial da carteira; o livro oferece o critério de sobreposição como medida."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Reservar o plano de contas conjuntas (5 clientes do parceiro que a Wise quer, 5 clientes da Wise que o parceiro quer, 5 novos logos em comum) para poucos parceiros Elite com os quais a Wise se compromete.",
+   "processo": "Combinar plano de contas conjuntas 3x5 com parceiro Elite",
+   "citacao": "Aligning on a 3x5 strategy should be reserved for top current partners or top potential partners you, as a business, are fully committed to further activating.",
+   "pagina": "p. 120",
+   "aplicabilidade": "media",
+   "porque": "Útil para os primeiros parceiros Elite, mas é jogada de alto esforço e não cabe em todos os parceiros com 12 horas por mês."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Antes de pedir indicação, cruzar carteiras e juntar um cliente da Wise que é prospect do parceiro (e o inverso) para o parceiro ganhar uma primeira vitória cedo; medir o onboarding por tempo até esse primeiro valor.",
+   "processo": "Cruzar carteiras e promover primeira vitória do parceiro",
+   "citacao": "Use Reveal or other account mapping tools to see the customers of yours who are prospects of theirs and get them in a room together.",
+   "pagina": "p. 176",
+   "aplicabilidade": "alta",
+   "porque": "Alinha o onboarding de 30, 60 e 90 dias à ativação e dá ao parceiro motivo concreto para devolver indicações."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Só vender ao parceiro o ciclo e o método que a Wise já executou: rodar o Base Ativa na própria base da Wise (com evento) e documentar o caminho antes de pedir que parceiros o repliquem.",
+   "processo": "Documentar o método do Base Ativa em execução própria antes de replicar",
+   "citacao": "if you want to take your partners to the place you want them to go, you have to have been there yourself.",
+   "pagina": "p. 156",
+   "aplicabilidade": "alta",
+   "porque": "Com zero parceiros assinados, o risco é prometer um ciclo nunca testado; a execução própria vira prova e material de treinamento."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Modelar a participação do parceiro na venda em três jogadas registráveis no portal: intel, influência e introdução; cada indicação registra qual ajuda o parceiro deu.",
+   "processo": "Registrar participação do parceiro na venda (intel, influência, intro)",
+   "citacao": "Goal: Master the 3 I's of nearbound sales (Intel, Influence, and Intros) to accelerate your pipeline by leveraging your partners' trust and access.",
+   "pagina": "p. 111",
+   "aplicabilidade": "alta",
+   "porque": "Dá vocabulário e campos para medir influência além da simples indicação com link exclusivo."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Antes de reunião com cliente indicado ou com prospect que usa o sistema de um parceiro, pedir ao parceiro um briefing curto: contato certo, tecnologia em uso, dor e iniciativa em curso.",
+   "processo": "Pedir intel ao parceiro antes da reunião",
+   "citacao": "The best point of contact in your prospect’s company, including champions, decision-makers, and even blockers.",
+   "pagina": "p. 112",
+   "aplicabilidade": "alta",
+   "porque": "É o pedido de menor custo ao parceiro e melhora a primeira reunião do Diretor ou do consultor."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Pedir ao parceiro uma palavra de recomendação ao decisor, entregando a mensagem pronta para encaminhar, no momento em que há reunião marcada com a conta.",
+   "processo": "Redigir mensagem de influência para o parceiro encaminhar",
+   "citacao": "Partners have already established trusted bonds with buyers. Their influence flows naturally, without raising the buyer’s sales radar.",
+   "pagina": "p. 115",
+   "aplicabilidade": "alta",
+   "porque": "Cabe ao ritmo do programa: a Wise escreve, o parceiro só envia, o esforço dele é de minutos."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Nunca pedir introdução sem entregar ao parceiro o rascunho da mensagem; o portal pode gerar o texto com o contexto da conta e a hipótese de valor da Wise.",
+   "processo": "Preparar rascunho de introdução para o parceiro enviar",
+   "citacao": "Never, ever, ever ask for an intro where you have not already written an example intro for the person you are asking for an intro from.",
+   "pagina": "p. 119",
+   "aplicabilidade": "alta",
+   "porque": "Reduz o atrito do parceiro e protege a relação; o web app pode gerar o modelo a partir dos dados da indicação."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Exigir contexto na indicação (problema do cliente, quem decide, por que a Wise) e não só nome e telefone; usar a presença desse contexto na nota de qualidade da indicação.",
+   "processo": "Exigir contexto na indicação e pontuar a qualidade",
+   "citacao": "Referrals often involve asking contacts to mention your name, without providing the key context.",
+   "pagina": "p. 117",
+   "aplicabilidade": "alta",
+   "porque": "A nota de qualidade e o SLA do portal ganham critério concreto, e a indicação vira introdução de fato."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Para cada pedido feito ao parceiro, devolver algo equivalente (intel sobre conta da carteira dele que a Wise atende, avisos de movimento, divulgação), registrando o saldo de ajuda dado e recebido.",
+   "processo": "Devolver ajuda ao parceiro a cada pedido",
+   "citacao": "Pair every ask for a nearbound “I” of intel, influence, or intro with a give of the same.",
+   "pagina": "p. 179",
+   "aplicabilidade": "alta",
+   "porque": "O programa depende de reciprocidade de longo prazo; um registro de ajuda dada evita pedir mais do que se entregou."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Creditar integralmente na meta de quem fecha na Wise o negócio indicado, mesmo com os 40% pagos ao parceiro, para que ninguém seja penalizado por trabalhar com parceiro.",
+   "processo": "Creditar meta integral ao vendedor em negócio com parceiro",
+   "citacao": "Even if partners receive commissions for their contribution, credit salespeople with the full deal value towards their annual sales quota.",
+   "pagina": "p. 189",
+   "aplicabilidade": "alta",
+   "porque": "Evita conflito entre Diretor, consultores e parceiros nas metas por pessoa do portal."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Manter duas marcas separadas no portal, indicado pelo parceiro (base da comissão e da proteção de 180 dias) e influenciado pelo parceiro (medida de valor), e reconhecer publicamente quem abre pipeline.",
+   "processo": "Separar origem (indicado) de influência na atribuição",
+   "citacao": "probably isn’t going away for some time. Make sure you reward those partners in front of the sales and account management teams every week.",
+   "pagina": "p. 200",
+   "aplicabilidade": "alta",
+   "porque": "A Wise paga por indicação, então precisa de regra de origem clara, mas o livro alerta que origem sozinha é métrica pobre."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Contar influência do parceiro só com critério explícito (jogada de intel, influência ou intro, ou integração que mudou o andamento), validado pelo responsável da venda, e comparar negócios com e sem parceiro.",
+   "processo": "Validar influência do parceiro por critério explícito",
+   "citacao": "The litmus test is, “Did this partner’s involvement substantially improve our chances of winning the deal?”",
+   "pagina": "p. 186",
+   "aplicabilidade": "alta",
+   "porque": "Evita inflar a influência e dá base para decidir rebaixamento ou subida de nível na revisão trimestral."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Perguntar ao cliente em campo aberto quem o indicou ou influenciou, registrar o nome do parceiro e cruzar com os registros do portal.",
+   "processo": "Registrar atribuição autodeclarada pelo cliente",
+   "citacao": "One of the best qualitative reporting mechanisms is a free text box where prospects can provide an open-ended answer about how they heard about you.",
+   "pagina": "p. 89",
+   "aplicabilidade": "alta",
+   "porque": "Mede influência que o link exclusivo não captura, e é barato de operar por uma pessoa."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Combinar com cada parceiro um plano de ações conjuntas com cadência: quem faz o quê e até quando, rotina semanal, mensal e trimestral, e dia de balanço.",
+   "processo": "Combinar plano de ações conjuntas com cadência",
+   "citacao": "You should establish a rhythm for how you work together. Who does what, by when?",
+   "pagina": "p. 86",
+   "aplicabilidade": "alta",
+   "porque": "Corresponde ao plano de ações conjuntas do portal e dá regra de acompanhamento sem reunião demais."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Dimensionar o ritmo ao tempo disponível: revisão semanal de sobreposições e pendências, reunião mensal com os 20% de parceiros mais ativos e revisão trimestral com os parceiros principais, com o fechamento das indicações paradas.",
+   "processo": "Executar rotina semanal, mensal e trimestral de parcerias",
+   "citacao": "Meetings with the top 20% of partners on:",
+   "pagina": "p. 205",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês, o livro oferece uma hierarquia de frequência que concentra tempo nos parceiros de maior retorno."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Separar quem constrói a confiança com o parceiro (Gerente de Parcerias) de quem a usa nas vendas (Diretor, consultores), de modo que o pedido de intel, influência ou intro parta de quem vende e seja encaminhado pelo Gerente.",
+   "processo": "Separar construção e uso da confiança entre parcerias e vendas",
+   "citacao": "While Partner teams should be focused on creating and building trustworthy partner relationships and reciprocity, sellers should be the ones capitalizing on that trust.",
+   "pagina": "p. 118",
+   "aplicabilidade": "alta",
+   "porque": "Define papéis claros num time de uma pessoa com 12 horas e protege o Gerente de virar executor de toda venda."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Indicar o Diretor como patrocinador executivo de 3 a 5 parceiros principais, com presença na revisão trimestral e alinhamento direto com a liderança do parceiro.",
+   "processo": "Designar patrocinador executivo para parceiros principais",
+   "citacao": "Appoint each executive on your team 3-5 partners where they play executive sponsor for the year and get their commitment to joining each quarterly QBR.",
+   "pagina": "p. 204",
+   "aplicabilidade": "alta",
+   "porque": "Conecta a aprovação de assinaturas pelo Diretor a um papel contínuo de relacionamento com os parceiros A."
+  },
+  {
+   "tema": "plataforma_ecossistema",
+   "recomendacao": "Na área de tarefas estilo CRM, gerar tarefas automáticas por sinal: quando prospect da Wise é cliente de um parceiro, ou quando indicação estaciona, criar tarefa para o responsável pedir intel ou intro.",
+   "processo": "Gerar tarefa automática por sinal de sobreposição",
+   "citacao": "When an open deal is an open deal of your partner(s), you can create a task for an AE to reach out to the partners to strategize a co-selling opportunity.",
+   "pagina": "p. 110",
+   "aplicabilidade": "alta",
+   "porque": "É a regra de automação mais acionável para o módulo de tarefas ainda em desenho."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Fechar o ciclo com o parceiro a cada indicação (aceita, em andamento, perdida, ganha) com motivo e próximo passo, em prazo definido, preferindo mensagem direta a depender de ele entrar no portal.",
+   "processo": "Dar retorno ao parceiro a cada indicação",
+   "citacao": "Close the loop before closing the laptop",
+   "pagina": "p. 208",
+   "aplicabilidade": "alta",
+   "porque": "Sustenta o SLA e a confiança do parceiro; o livro avisa que o parceiro não entra no portal como se espera."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Ativar poucos parceiros por vez e só ampliar depois de ter casos de sucesso documentados, para não sobrecarregar a capacidade de 12 horas nem decepcionar os primeiros.",
+   "processo": "Limitar ativação simultânea de parceiros à capacidade do time",
+   "citacao": "Resist the temptation to activate all potential evangelists at once. This can strain resources and disappoint early partners.",
+   "pagina": "p. 90",
+   "aplicabilidade": "alta",
+   "porque": "Adequa a meta de 10 parcerias assinadas a uma equipe de uma pessoa e dá regra de ritmo ao kanban."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Medir a sobreposição de contas com cada candidato antes de investir tempo, usando ferramenta de mapeamento de contas ou planilha de cruzamento mantida no portal.",
+   "processo": "Cruzar carteiras com candidato antes de investir",
+   "citacao": "Use a Nearbound Revenue Platform (like Reveal!) to analyze overlaps with prospective partners and understand joint customer and prospect opportunities.",
+   "pagina": "p. 55",
+   "aplicabilidade": "media",
+   "porque": "A ferramenta citada é do próprio autor e de contexto SaaS; o princípio vale, mas a Wise precisa definir como e com que consentimento cruzar carteiras."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Executar jogada de intel, influência e intro com o parceiro",
+   "descricao": "Para uma conta com sinal de parceiro, o vendedor escolhe a jogada, escreve a mensagem e o gerente de parcerias a entrega ao contato certo do parceiro, que a envia ou responde.",
+   "gatilho": "Conta com sobreposição de parceiro, ou parceiro que fechou, renovou ou abriu oportunidade na conta",
+   "etapas": [
+    "Priorizar a conta com maior sobreposição de parceiros",
+    "Identificar sinal do parceiro e persona envolvida",
+    "Escolher a jogada: intel, influência ou intro",
+    "Redigir a mensagem para o parceiro encaminhar, com a hipótese de valor",
+    "Gerente de parcerias entrega ao contato certo do parceiro",
+    "Vendedor segue a conversa com o contato da conta",
+    "Registrar a disposição da jogada",
+    "Devolver ajuda ou resultado ao parceiro",
+    "Revisar o que funcionou e o que faltou de confiança"
+   ],
+   "resultados": [
+    "Intel obtido",
+    "Influência exercida",
+    "Introdução feita",
+    "Sem resposta do parceiro",
+    "Introdução recusada"
+   ],
+   "papeis": [
+    "Vendedor ou consultor responsável",
+    "Gerente de Parcerias",
+    "Contato do parceiro",
+    "Gerente de vendas"
+   ],
+   "metricas": [
+    "Taxa de attach de parceiro",
+    "Taxa de ganho com e sem parceiro",
+    "Tempo de ciclo com e sem parceiro"
+   ],
+   "citacao": "The partner manager is responsible for delivering the message to the appropriate person on the partner’s team, whether it be a fellow AE or someone from the customer success department.",
+   "pagina": "p. 113"
+  },
+  {
+   "nome": "Montar lista de contas-alvo com sobreposição de parceiros",
+   "descricao": "Em reunião periódica entre vendedor, gerente de vendas e gerente de parcerias, as contas são ordenadas pela sobreposição de parceiros, sinais e relações relevantes, e as escolhidas viram a lista de contas de co-venda.",
+   "gatilho": "Início do trimestre ou da atribuição de contas, e sinal novo de parceiro na conta",
+   "etapas": [
+    "Reunir vendedor, gerente de vendas e gerente de parcerias",
+    "Ordenar contas por sobreposição de parceiros",
+    "Identificar parceiros com sinais mais relevantes",
+    "Identificar personas e quem tem relação com os decisores",
+    "Definir a jogada e o responsável por conta",
+    "Revisar mensalmente ou trimestralmente"
+   ],
+   "resultados": [
+    "Lista de contas de co-venda aprovada",
+    "Contas sem parceiro relevante seguem como outbound ou inbound"
+   ],
+   "papeis": [
+    "Vendedor",
+    "Gerente de vendas",
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Percentual de contas com parceiro atribuído",
+    "Percentual de oportunidades abertas com parceiro"
+   ],
+   "citacao": "We recommend doing this monthly or quarterly, depending on how often account books refresh and how frequently partner relationships change.",
+   "pagina": "p. 109"
+  },
+  {
+   "nome": "Recrutar e qualificar parceiro a partir da carteira de clientes",
+   "descricao": "A lista de candidatos nasce de conversas com clientes e de menções em reuniões; o candidato é qualificado pelos 4 Cs e abordado citando clientes em comum, não por abordagem fria.",
+   "gatilho": "Cliente ou prospect cita fornecedor, sistema ou entidade em reunião ou diagnóstico",
+   "etapas": [
+    "Entrevistar melhores clientes sobre quem eles usam e em quem confiam",
+    "Registrar menções de fornecedores e sistemas em reuniões",
+    "Listar contas candidatas nominalmente",
+    "Medir sobreposição de carteiras",
+    "Qualificar pelos 4 Cs: carteira, credibilidade, capacidade, comprometimento",
+    "Abordar citando clientes em comum",
+    "Nutrir com gestos sem pedido",
+    "Propor parceria e nível"
+   ],
+   "resultados": [
+    "Candidato avança para proposta",
+    "Candidato fica em nutrição",
+    "Candidato descartado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Consultores e diretor como fonte de menções",
+    "Candidato a parceiro"
+   ],
+   "metricas": [
+    "Candidatos nomeados a partir de clientes",
+    "Taxa de avanço no funil por etapa"
+   ],
+   "citacao": "Surround the partners you want with the customers, prospects, and other partners to show them you know them and demonstrate maximum relevance.",
+   "pagina": "p. 174"
+  },
+  {
+   "nome": "Ativar parceiro novo com primeira vitória",
+   "descricao": "Nas primeiras semanas, a prioridade é ajudar o parceiro a ganhar algo concreto com carteiras já existentes, treinando-o e oferecendo incentivos, antes de gastar a confiança dele com pedidos.",
+   "gatilho": "Assinatura da parceria",
+   "etapas": [
+    "Treinar e habilitar o time do parceiro",
+    "Cruzar carteiras: clientes da Wise que são prospects do parceiro e o inverso",
+    "Juntar os envolvidos para fechar uma primeira oportunidade do parceiro",
+    "Definir incentivos de ativação",
+    "Combinar plano de ações conjuntas",
+    "Só então fazer o primeiro pedido de intel, influência ou intro"
+   ],
+   "resultados": [
+    "Primeira vitória do parceiro registrada",
+    "Parceiro inativo e sem vitória após o prazo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Consultor da Wise",
+    "Contato do parceiro"
+   ],
+   "metricas": [
+    "Tempo até a primeira vitória do parceiro",
+    "Ativação na primeira indicação válida"
+   ],
+   "citacao": "Help them close a deal before they even step foot in your customer arena.",
+   "pagina": "p. 176"
+  },
+  {
+   "nome": "Executar rotina semanal, mensal e trimestral de parcerias",
+   "descricao": "O livro lista a rotina do papel de parcerias: diária para contato com parceiros top, semanal para revisão de sobreposições e pendências, mensal com os 20% principais, trimestral com revisão formal dos 3 a 10 parceiros principais, e anual para o plano.",
+   "gatilho": "Calendário recorrente",
+   "etapas": [
+    "Semanal: revisar sobreposições novas, negócios parados e ações envelhecendo",
+    "Semanal: escrever mensagens para vendedores e parceiros enviarem",
+    "Semanal: registrar jogadas e dispositivos, confirmar attach com o responsável",
+    "Mensal: reunião com os 20% de parceiros principais, revisão de contas e sobreposições novas",
+    "Trimestral: revisão formal com 3 a 10 parceiros principais, com vitórias, perdas e metas",
+    "Anual: plano com cada parceiro principal e orçamento"
+   ],
+   "resultados": [
+    "Ações pendentes zeradas ou escaladas",
+    "Parceiros principais alinhados ao plano",
+    "Parceiro mantido, rebaixado ou desligado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Executivo patrocinador",
+    "Contato do parceiro"
+   ],
+   "metricas": [
+    "Ações paradas por responsável",
+    "Parceiros ativos",
+    "Taxa de attach"
+   ],
+   "citacao": "What accounts are waiting on a next step and from what partner? Create action lists for aging activities and accounts.",
+   "pagina": "p. 206"
+  },
+  {
+   "nome": "Medir influência do parceiro por attach e coorte",
+   "descricao": "Registra-se se houve parceiro na conta ou no negócio e compara-se o desempenho de negócios com e sem parceiro, com critério explícito de contribuição e complemento qualitativo.",
+   "gatilho": "Fechamento mensal e revisão trimestral",
+   "etapas": [
+    "Registrar attach sim ou não por negócio",
+    "Validar contribuição por critério explícito com o responsável da venda",
+    "Capturar atribuição autodeclarada pelo cliente",
+    "Tirar foto mensal do estágio das contas com parceiro",
+    "Comparar taxa de ganho, tamanho de negócio, retenção e expansão entre coortes",
+    "Reportar por parceiro e por campanha"
+   ],
+   "resultados": [
+    "Parceiros a ampliar",
+    "Parceiros a rever",
+    "Evidência de valor para investir mais"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Operações ou responsável pelos dados",
+    "Responsável da venda"
+   ],
+   "metricas": [
+    "Taxa de attach",
+    "Win rate por coorte",
+    "Ticket por coorte",
+    "Retenção por coorte"
+   ],
+   "citacao": "By segmenting performance metrics by these two cohorts",
+   "pagina": "p. 186"
+  },
+  {
+   "nome": "Co-criar ações com o parceiro em cadência",
+   "descricao": "Depois de alinhar expectativas e incentivos, define-se ritmo de trabalho com responsáveis e datas, facilitando o que o parceiro precisa entregar e distribuindo com ele, não através dele.",
+   "gatilho": "Parceiro ativado ou ação conjunta aprovada",
+   "etapas": [
+    "Alinhar expectativas e incentivos",
+    "Combinar quem faz o quê e quando",
+    "Preparar material que o parceiro só precise compartilhar",
+    "Executar a ação e dar destaque ao parceiro",
+    "Medir resultados quantitativos e qualitativos",
+    "Refletir e planejar a próxima ação"
+   ],
+   "resultados": [
+    "Ação concluída com retorno",
+    "Parceiro reengajado",
+    "Ação encerrada sem retorno"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Contato do parceiro"
+   ],
+   "metricas": [
+    "Ações conjuntas concluídas no prazo"
+   ],
+   "citacao": "Once expectations are aligned, kick off a cadence of co-creation.",
+   "pagina": "p. 86"
+  },
+  {
+   "nome": "Realizar evento com parceiros para ativar a comunidade",
+   "descricao": "O evento é estruturado em torno do público e da narrativa, com papéis claros para o parceiro, e pode escalar de um encontro pequeno de alto contato para um regional e depois um anual.",
+   "gatilho": "Fim do ciclo do Base Ativa",
+   "etapas": [
+    "Definir o público e a narrativa",
+    "Combinar papéis e metas com o parceiro",
+    "Desenhar o programa com enquetes que abrem conversa",
+    "Executar o evento com foco na facilitação",
+    "Retomar conversas após o evento em até 30 dias",
+    "Medir alcance, conversas e negócios influenciados"
+   ],
+   "resultados": [
+    "Reuniões agendadas com a base do parceiro",
+    "Negócios influenciados",
+    "Comunidade engajada para o próximo ciclo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Parceiro anfitrião da base",
+    "Consultores da Wise"
+   ],
+   "metricas": [
+    "Participantes",
+    "Reuniões geradas",
+    "Negócios influenciados"
+   ],
+   "citacao": "a small local user group event allows more high-touch conversations to identify promising leads.",
+   "pagina": "p. 140"
+  },
+  {
+   "nome": "Certificar parceiro por entregas acompanhadas",
+   "descricao": "No Drift, o parceiro era certificado após treinamento on-line e de 3 a 5 entregas junto da equipe, com a participação do parceiro crescendo de entrega em entrega até conduzir sozinho.",
+   "gatilho": "Parceiro assinou e pronto para entregar o serviço",
+   "etapas": [
+    "Treinamento on-line",
+    "Primeira entrega conduzida integralmente pela empresa",
+    "Entregas seguintes com participação crescente do parceiro",
+    "Última entrega conduzida pelo parceiro",
+    "Supervisão após certificação"
+   ],
+   "resultados": [
+    "Parceiro certificado",
+    "Parceiro mantido em acompanhamento"
+   ],
+   "papeis": [
+    "Consultor de treinamento de parceiros",
+    "Consultor de entrega",
+    "Parceiro"
+   ],
+   "metricas": [
+    "Entregas acompanhadas concluídas",
+    "Parceiros certificados"
+   ],
+   "citacao": "Certification meant partners had completed online training and successfully handled 3-5 deliveries with our customer success and professional services teams.",
+   "pagina": "p. 161"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Taxa de attach de parceiro",
+   "definicao": "Percentual de contas, atividades ou negócios ligados a parceiros; sim ou não por negócio, acompanhada por vendedor e pela empresa.",
+   "citacao": "The “partner attach rate” simply refers to the percentage of accounts, activities, or deals linked to partners.",
+   "pagina": "p. 106"
+  },
+  {
+   "nome": "Attach orientado a valor",
+   "definicao": "Só conta como attach o parceiro cuja participação melhorou substancialmente a chance de ganhar o negócio, com critério explícito.",
+   "citacao": "The litmus test is, “Did this partner’s involvement substantially improve our chances of winning the deal?”",
+   "pagina": "p. 186"
+  },
+  {
+   "nome": "Desempenho por coorte com e sem parceiro",
+   "definicao": "Compara taxa de ganho, tamanho médio, retenção e potencial de expansão entre negócios com e sem parceiro.",
+   "citacao": "From here, the ops team can then track a variety of more complex metrics and key performance indicators for each cohort such as: Win rates Average deal size Customer retention",
+   "pagina": "p. 185"
+  },
+  {
+   "nome": "Atribuição autodeclarada",
+   "definicao": "Resposta aberta do cliente sobre quem ou o que o levou até a empresa, registrada manualmente com contato e conta.",
+   "citacao": "More than 50% of people mention a specific person or company.",
+   "pagina": "p. 89"
+  },
+  {
+   "nome": "Oportunidades abertas com presença de parceiro",
+   "definicao": "Parcela das oportunidades abertas e das contas por vendedor com parceiro atribuído; o exemplo do livro usa cerca de um terço como meta.",
+   "citacao": "Around 1/3 of your open opportunities should include partner presence",
+   "pagina": "p. 106"
+  },
+  {
+   "nome": "Pipeline e fechamento por parceiro, origem e influência",
+   "definicao": "Attach ao pipeline e às vendas fechadas aberto por origem, por influência e por parceiro individual.",
+   "citacao": "Partner attach to pipeline and closed-won broken down by sourced, influenced, and on a per-partner basis",
+   "pagina": "p. 203"
+  },
+  {
+   "nome": "Movimento de contas com parceiro",
+   "definicao": "Foto do estágio das contas com parceiro no início e no fim do mês para ver quais avançaram após uma ação conjunta; ponto de partida e não prova de causa.",
+   "citacao": "take a snapshot of the status of all the accounts that have partners attached at the beginning of each month, then again at the end of the month",
+   "pagina": "p. 90"
+  },
+  {
+   "nome": "Tempo até valor do parceiro",
+   "definicao": "Rapidez com que o parceiro obtém a primeira vitória depois de ativado; prioridade antes de cobrar capital social.",
+   "citacao": "focus on fast-tracking partner time-to-value",
+   "pagina": "p. 177"
+  },
+  {
+   "nome": "Metas de parceiros novos, ativos e attach",
+   "definicao": "Metas anuais de número de parceiros, novos, ativos e attach, por vendedor e por tipo de parceiro.",
+   "citacao": "Setting your goals for # of partners, new partners, active partners, attach, etc.",
+   "pagina": "p. 203"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Regras de bloqueio entre canal e venda direta geram guerra por crédito: no HubSpot, lead registrado pelo parceiro bloqueava o time de vendas e vice-versa. A proteção de 180 dias da Wise precisa ter exceções e arbitragem claras.",
+   "citacao": "could register leads and that would block the direct sales team from pursuing them.",
+   "pagina": "p. 184"
+  },
+  {
+   "alerta": "Parcerias ganham má fama quando se anexam só a negócios já quase fechados e sem ROI claro; o gerente de parcerias deve entrar cedo e mostrar resultado.",
+   "citacao": "They only attach themselves to deals that are already closing.",
+   "pagina": "p. 171"
+  },
+  {
+   "alerta": "Origem de pipeline é métrica ruim sozinha porque ninguém origina um negócio sozinho. Para a Wise, que paga comissão por indicação, convém manter origem para pagar e influência para avaliar.",
+   "citacao": "Sourced pipeline is the absolute worst metric to use. Because no one really sources a deal ever",
+   "pagina": "p. 185"
+  },
+  {
+   "alerta": "Ajudar o parceiro só para criar obrigação de retribuir gera desconfiança e encerra a parceria antes de amadurecer.",
+   "citacao": "If you only help partners as a way to leverage their sense of obligation and get something in return, you will breed distrust and truncate your partnership before it ever matures.",
+   "pagina": "p. 179"
+  },
+  {
+   "alerta": "Pedir introdução sem preparo gasta a confiança do parceiro; é a jogada mais valiosa e a mais arriscada.",
+   "citacao": "Intros are the most valuable if obtained, but the most sophisticated to execute",
+   "pagina": "p. 117"
+  },
+  {
+   "alerta": "Parceiros não usam o portal tanto quanto se espera; sem contato direto com os parceiros principais e avisos que cheguem até eles, o web app fica vazio.",
+   "citacao": "The truth is that they will never log in to your portal as much as you think they will, or you’d like them to.",
+   "pagina": "p. 206"
+  },
+  {
+   "alerta": "Não prometer ao parceiro um caminho que a empresa nunca percorreu: sem ter vendido e entregue o serviço, o parceiro arca com descobrir o roteiro do sucesso do cliente.",
+   "citacao": "if you want to take your partners to the place you want them to go, you have to have been there yourself.",
+   "pagina": "p. 156"
+  },
+  {
+   "alerta": "Anexar parceiro a qualquer negócio não prova nada: sem critério de valor, o attach vira número inflado.",
+   "citacao": "you can attach a partner to anything without seeing results.",
+   "pagina": "p. 186"
+  }
+ ]
+}

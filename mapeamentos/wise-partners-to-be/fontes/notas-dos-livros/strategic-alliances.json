@@ -1,0 +1,634 @@
+{
+ "livro": "Strategic Alliances and Marketing Partnerships",
+ "autores": "Richard Gibbs, Andrew Humphries",
+ "slug": "strategic-alliances",
+ "tese": "O livro defende que o valor de uma parceria depende menos do contrato e mais da qualidade do relacionamento gerida de forma ativa: confiança e compromisso, colaboração e gestão de conflito. Propõe medir indicadores líderes do relacionamento (qualidade da parceria, inovação colaborativa, criação de valor), manter um ciclo contínuo de operar, revisar, adaptar e melhorar e classificar cada parceria em oito tipos para escolher a ação certa. Seleção, negociação e saída aparecem como princípios e não como etapas detalhadas; a contribuição forte é a governança contínua.",
+ "recomendacoes": [
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Desenhar o programa como governança de ciclo completo (início, operação contínua e saída) e não como um evento de assinatura: cada parceiro precisa de dono, rotina de acompanhamento e critério de encerramento desde o primeiro dia.",
+   "processo": "Gerir o ciclo de vida da parceria",
+   "citacao": "governance is a multidimensional phenomenon that encompasses the beginning, ending and ongoing relationship management between a set of parties",
+   "pagina": "p. 88",
+   "aplicabilidade": "alta",
+   "porque": "O portal já tem funil, onboarding, revisão trimestral e desligamento formal; o livro valida tratar todas as fases como uma só governança."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Adotar o ciclo operar, revisar, adaptar e melhorar como ritmo padrão de cada parceria, no lugar de campanhas esporádicas de reativação.",
+   "processo": "Executar o ciclo operar, revisar, adaptar e melhorar",
+   "citacao": "Figure 3.2 shows a relationship management cycle that not only increases control but also ensures that improvement is continuous.",
+   "pagina": "p. 99",
+   "aplicabilidade": "alta",
+   "porque": "Mapeia direto para onboarding, revisão trimestral e plano de ações conjuntas, e evita o padrão de mutirões que o livro descreve."
+  },
+  {
+   "tema": "governanca_gestao",
+   "recomendacao": "Fazer uma reunião de revisão periódica por parceiro com pauta fixa (metas do período, indicações em andamento, previsão do próximo período, problemas, planos futuros, política); no programa pequeno, mensal só para parceiros Elite e trimestral para os demais.",
+   "processo": "Realizar revisão operacional com o parceiro",
+   "citacao": "Every important relationship should invest in a regular (probably monthly) operational review meeting",
+   "pagina": "p. 100",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês a cadência precisa ser proporcional ao nível; a pauta pode ser montada pelo portal a partir dos dados de indicações. A proporção por nível é adaptação nossa."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Medir a qualidade do relacionamento além de indicações e receita: o livro diz que as empresas medem entradas e saídas, mas quase nunca o processo de parceria, e isso esconde os problemas até a crise.",
+   "processo": "Avaliar a saúde da parceria",
+   "citacao": "Firms will measure inputs and outputs but rarely give thought to the partnering process itself.",
+   "pagina": "p. 79",
+   "aplicabilidade": "alta",
+   "porque": "Hoje o portal mede indicação, SLA e nota de qualidade (resultado); falta uma medida de compromisso e confiança do parceiro."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Resumir a saúde de cada parceiro em três fatores avaliados como alto, médio, médio-baixo e baixo: qualidade da parceria (compromisso e confiança), inovação colaborativa (ações conjuntas) e criação de valor (resultado).",
+   "processo": "Pontuar a parceria por três fatores",
+   "citacao": "These are leading indicators that help us to predict the likelihood of a partnership being successful or not.",
+   "pagina": "p. 174",
+   "aplicabilidade": "alta",
+   "porque": "Dá base objetiva para a revisão trimestral de nível e para o desligamento formal, em vez de decisões por percepção."
+  },
+  {
+   "tema": "metricas",
+   "recomendacao": "Aplicar por parceiro, a cada trimestre, três perguntas simples: o parceiro nos recomendaria a um cliente, a parceria elevou a satisfação de clientes nos últimos seis meses, e houve ganho real de custo, margem ou participação na carteira do parceiro.",
+   "processo": "Autoavaliar a parceria em três perguntas",
+   "citacao": "our partner would provide us with a positive and ﬂattering reference to a key customer or buyer.",
+   "pagina": "p. 218",
+   "aplicabilidade": "alta",
+   "porque": "Autoavaliação rápida cabe nas 12 horas mensais e pode virar formulário no portal."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Classificar parceiros por importância estratégica e dificuldade de gestão e dar intensidade de gestão diferente a cada grupo, concentrando o relacionamento próximo nos poucos que importam.",
+   "processo": "Classificar parceiros por importância e esforço de gestão",
+   "citacao": "managers should classify their customers according to their importance and adopt a portfolio approach to create and manage appropriate relationships",
+   "pagina": "p. 70",
+   "aplicabilidade": "alta",
+   "porque": "Os níveis Elite, Premium e Select já fazem isso; o livro reforça que o nível define a profundidade da gestão, e não só os benefícios."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Fazer o nível subir com o investimento do parceiro (pessoas treinadas e certificadas, equipe dedicada) e a contrapartida da Wise (suporte, leads, acesso) crescer junto.",
+   "processo": "Atribuir nível por investimento recíproco",
+   "citacao": "Platinum partners, the top end of the scale, had to make even greater investments in people and equipment.",
+   "pagina": "p. 83",
+   "aplicabilidade": "alta",
+   "porque": "Caso Novell: acreditação por pessoas certificadas e topo da escala com maior investimento; combina com níveis, pacotes de contrapartidas e certificação."
+  },
+  {
+   "tema": "niveis_tiers",
+   "recomendacao": "Na revisão trimestral, comparar o retorno real com o investimento em cada parceiro e reduzir investimento ou nível quando o retorno não se justifica, mesmo que o parceiro seja simpático e satisfeito.",
+   "processo": "Revisar o nível do parceiro por retorno",
+   "citacao": "It is not uncommon to see investment being pumped into Evangelists despite the fact that the return might not be justiﬁable.",
+   "pagina": "p. 225",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês, esforço em parceiro que gosta do programa mas não indica é o maior risco de desperdício."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Priorizar, nos primeiros parceiros, quem está disposto a investir tempo e recurso numa oportunidade nova e incerta, usá-los como piloto e não esperar que sustentem a escala depois.",
+   "processo": "Selecionar parceiros piloto por disposição de investir",
+   "citacao": "It is more likely that early phases of development will be assisted by the presence of Evangelists who are prepared and willing to make sacriﬁces in terms of resources and time in the new opportunity",
+   "pagina": "p. 223",
+   "aplicabilidade": "alta",
+   "porque": "Zero parceiros assinados e fase de experimentação: a disposição de investir é um critério de seleção que o livro oferece, junto com o aviso de que esse perfil sozinho não leva à escala."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Dar preferência a parceiros que já atendem o mesmo perfil de indústria da Wise: sem linguagem e experiência comuns, troca de conhecimento e indicação qualificada ficam difíceis.",
+   "processo": "Qualificar o parceiro por afinidade de carteira",
+   "citacao": "a lack of common language, common experience and reference points hinders knowledge transfer and thus the likelihood of collaborative success",
+   "pagina": "p. 85",
+   "aplicabilidade": "media",
+   "porque": "O livro trata de aprendizado entre empresas; aplicar ao filtro de ICP da carteira é extrapolação, mas coerente com o cruzamento de carteiras."
+  },
+  {
+   "tema": "recrutamento_selecao",
+   "recomendacao": "Tratar o parceiro passivo como recrutamento novo, com foco em uma única oportunidade concreta (um cliente, uma licitação), em vez de reuniões executivas genéricas.",
+   "processo": "Reengajar parceiro passivo em uma oportunidade",
+   "citacao": "Thus by concentrating the Cherry Picker on a single activity, a single customer or single process, it can be possible to raise its expectation level",
+   "pagina": "p. 229",
+   "aplicabilidade": "alta",
+   "porque": "Alimenta a etapa de nutrição do funil e a ativação na primeira indicação que virou reunião."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Antes de assinar, documentar com o parceiro como cada lado ganha dinheiro (custos, margens, ciclo de venda) para desenhar comissão de 40% da primeira mensalidade e pacotes com números dos dois lados.",
+   "processo": "Documentar modelos de custo e lucro com o parceiro",
+   "citacao": "Successful negotiations can be identiﬁed where ﬁrms have explored, detailed and documented their respective cost and proﬁt models",
+   "pagina": "p. 135",
+   "aplicabilidade": "alta",
+   "porque": "Parceiro de software ou entidade tem modelo de receita diferente do da Wise; o livro mostra alianças que falham por supor o modelo do outro lado."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Redigir o termo de parceria curto e flexível, focado nas consequências da saída (desligamento, proteção de 180 dias, comissões pendentes) e não em prever toda a operação; evitar cláusulas de penalidade, que não geram satisfação.",
+   "processo": "Redigir termo de parceria com regras de saída",
+   "citacao": "Contracts should be drawn up in the same spirit as a pre-nuptial agreement, which is concerned with the consequence of relationship break-up and not",
+   "pagina": "p. 171",
+   "aplicabilidade": "alta",
+   "porque": "Casa com a proteção de 180 dias e o desligamento formal; o Diretor aprova uma peça simples e a operação corre pelo portal. O livro afirma que penalidades nunca geram satisfação do cliente (p. 162)."
+  },
+  {
+   "tema": "negociacao_contrato",
+   "recomendacao": "Combinar contrapartidas recíprocas e específicas (evento do Base Ativa, tempo do time do parceiro, acesso à base de contatos) como sinal de compromisso: investimento específico segura mais que cláusula.",
+   "processo": "Definir contrapartidas recíprocas do parceiro",
+   "citacao": "These non-returnable (sunk) investments build commitment and loyalty and establish a longer-term attitude to the alliance",
+   "pagina": "p. 34",
+   "aplicabilidade": "alta",
+   "porque": "O desenho com pacotes de contrapartidas e evento do Base Ativa já segue essa lógica; o livro a sustenta como o que segura a parceria."
+  },
+  {
+   "tema": "modelo_de_negocio",
+   "recomendacao": "Ancorar o programa na lógica de canal indireto: o parceiro estimula demanda na própria carteira e a Wise investe em treinamento, certificação e incentivo para que ele faça isso bem.",
+   "processo": "Definir a proposta de valor do canal de parceiros",
+   "citacao": "the manufacturer was not inclined to invest in the human resources of the intermediary through training, certiﬁcation and incentive programmes",
+   "pagina": "p. 65",
+   "aplicabilidade": "media",
+   "porque": "A analogia com canal de revenda é parcial: o parceiro Wise indica, não revende; ainda assim sustenta mentoria, certificação e incentivo como investimento da Wise."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Planejar a saída desde o desenho: encerrar a parceria de forma eficiente quando os objetivos foram capturados, com critérios e rito formais, e não como falha.",
+   "processo": "Encerrar a parceria formalmente",
+   "citacao": "the partnership can be terminated efﬁciently and effectively once the objectives have been captured and realized",
+   "pagina": "p. 88",
+   "aplicabilidade": "alta",
+   "porque": "O portal prevê desligamento formal; o livro o coloca como parte da boa governança, ressalvando que se aplica apenas se for apropriado."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Antes de investir na reativação de um parceiro desengajado, decidir se o valor potencial justifica o custo de gestão; se justificar, tratar como parceria nova por seis a doze meses com uma meta curta e tangível; se não, desligar.",
+   "processo": "Decidir entre recuperar ou desligar parceiro desengajado",
+   "citacao": "The most critical decision is whether a Deserter relationship is actually worth the investment of time and energy.",
+   "pagina": "p. 231",
+   "aplicabilidade": "alta",
+   "porque": "Com 12 horas por mês não dá para recuperar todos; a decisão precisa de critério explícito no portal."
+  },
+  {
+   "tema": "encerramento_saida",
+   "recomendacao": "Monitorar sinais de abandono (menos contatos, ausência em reuniões e eventos, queda de respostas) e acionar a revisão antes que o parceiro suma.",
+   "processo": "Monitorar sinais de abandono do parceiro",
+   "citacao": "Deserters slip into the background, making fewer and fewer calls to the other ﬁrm and distancing themselves from meetings, conferences or other social activities",
+   "pagina": "p. 211",
+   "aplicabilidade": "alta",
+   "porque": "Dá para calcular no portal a partir de acessos, reuniões e indicações; alimenta nutrição e desligamento."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Estruturar os 30, 60 e 90 dias como sequência de pequenos projetos que constroem confiança, terminando na primeira indicação no ICP que virou reunião.",
+   "processo": "Conduzir onboarding por marcos de confiança",
+   "citacao": "really strong team-working is likely to develop from a cycle of small, conﬁdence-building projects that establish trust as a virtuous cycle",
+   "pagina": "p. 114",
+   "aplicabilidade": "alta",
+   "porque": "Encaixa no onboarding de 30, 60 e 90 dias e na ativação por primeira indicação."
+  },
+  {
+   "tema": "onboarding_capacitacao",
+   "recomendacao": "Auditar se as contrapartidas oferecidas (treinamento, material, mentoria, evento) estão sendo usadas e comunicar sua disponibilidade; contrapartida sem uso vira ressentimento.",
+   "processo": "Auditar o uso das contrapartidas",
+   "citacao": "Stranded assets are investments that no longer represent value to the partnership, or have not been utilized, or have been leveraged differently than originally envisaged.",
+   "pagina": "p. 81",
+   "aplicabilidade": "alta",
+   "porque": "A Wise vai investir hora escassa em mentoria e certificação; o livro mostra que investimento sem uso nem comunicação gera atrito."
+  },
+  {
+   "tema": "co_venda_indicacao",
+   "recomendacao": "Fazer o plano de ações conjuntas depois de uma conversa de planejamento (objetivos, capacidade, perfil de cliente), e não como lista de ações de co-venda; separar a conversa de planejamento da revisão de resultados.",
+   "processo": "Elaborar o plano de ações conjuntas",
+   "citacao": "A common failing of many partnerships is the overt focus on establishing a list of cooperative actions such as joint sales engagements with prospects without the essential prior discussion and planning.",
+   "pagina": "p. 116",
+   "aplicabilidade": "alta",
+   "porque": "O plano de ações conjuntas está no portal; o livro alerta para o risco de virar checklist sem alinhamento prévio."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Proteger a indicação do parceiro contra conflito com outros canais da Wise e do grupo (Tríade, Swallow), com regra pública de atribuição e prazo de 180 dias, porque perder negócio para outro canal destrói a confiança.",
+   "processo": "Proteger a indicação do parceiro",
+   "citacao": "I had this deal, and then it went to one of their franchisees.",
+   "pagina": "p. 120",
+   "aplicabilidade": "alta",
+   "porque": "Relato de revendedor em estudo de caso; no Wise, empresas do mesmo grupo atendem as mesmas indústrias."
+  },
+  {
+   "tema": "atribuicao_comissao_incentivos",
+   "recomendacao": "Além da comissão de 40% sobre a primeira mensalidade, premiar comportamentos (retenção do parceiro ativo, variedade de indicações, frequência) no ranking e incluir retenção e planejamento conjunto nas metas do gerente de parcerias, não só receita.",
+   "processo": "Definir incentivos comportamentais do parceiro e do gerente",
+   "citacao": "various behavioural incentives were put in place including partner retention, breadth of portfolio sold by a partner and frequency of purchase",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "Metas por pessoa e ranking existem; o caso mostra reorientar a meta do gestor para retenção e planejamento conjunto."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Atribuir a cada parceiro Elite um patrocinador executivo (Diretor ou sócio) com contato mensal e visita trimestral, para ter um canal de escalada sério.",
+   "processo": "Designar patrocinador executivo do parceiro",
+   "citacao": "senior management were assigned 10 of the top resellers in each country as an internal sponsor",
+   "pagina": "p. 121",
+   "aplicabilidade": "media",
+   "porque": "O Diretor já aprova assinaturas e poucos parceiros Elite tornam viável; a cadência do caso era alta para grandes empresas e deve ser calibrada."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Posicionar o Gerente de Parcerias perto da direção, com mandato de gerir o portfólio de parceiros, e não como tarefa secundária de vendas nem diluída entre áreas.",
+   "processo": "Atribuir a gestão da carteira de parceiros a um dono único",
+   "citacao": "The alliance function will not work effectively if it is a secondary commercial or sales one, nor should it be diffused across departments.",
+   "pagina": "p. 75",
+   "aplicabilidade": "alta",
+   "porque": "Há um gerente com 12 horas por mês e um Diretor que aprova; o livro sustenta função central, com acesso à direção."
+  },
+  {
+   "tema": "organizacao_papeis",
+   "recomendacao": "Limitar o número de parcerias profundas à capacidade do time: o livro registra que relacionamentos intensos custam muito esforço de gestão, e por isso grandes empresas reduziram o número de parceiros.",
+   "processo": "Limitar parcerias profundas à capacidade de gestão",
+   "citacao": "maintaining close, intense relationships can be very expensive in management effort",
+   "pagina": "p. 56",
+   "aplicabilidade": "alta",
+   "porque": "Um gerente com 12 horas por mês não sustenta dezenas de relacionamentos próximos; sugere teto de parceiros por nível."
+  },
+  {
+   "tema": "relacionamento_comunicacao",
+   "recomendacao": "Antes de lançar nova oferta da Wise ou do grupo, testar o impacto no modelo de receita dos parceiros (por exemplo serviços de implantação e consultoria), para não repetir o conflito que a Novell gerou ao adquirir uma consultoria.",
+   "processo": "Avaliar o impacto de nova oferta no modelo do parceiro",
+   "citacao": "A lack of appreciation of the evolving business model of partners can be a major cause for relationship difﬁculties.",
+   "pagina": "p. 235",
+   "aplicabilidade": "alta",
+   "porque": "Parceiros ERP, MES e CRM vendem serviços que podem concorrer com consultoria da Wise e do grupo."
+  },
+  {
+   "tema": "tipos_de_parceiro",
+   "recomendacao": "Usar uma tipologia simples de estados da parceria, inspirada nos oito tipos do livro, para escolher a ação por parceiro (reforçar, reengajar, reduzir, desligar); com poucos parceiros, começar com quatro ou cinco estados.",
+   "processo": "Diagnosticar o tipo de parceria",
+   "citacao": "typically most partnerships can be categorized into one of only eight archetypal relationships",
+   "pagina": "p. 15",
+   "aplicabilidade": "media",
+   "porque": "A tipologia nasceu de parcerias grandes; serve como linguagem de diagnóstico, não como modelo estatístico para dez parceiros."
+  },
+  {
+   "tema": "dados_compartilhamento",
+   "recomendacao": "Definir por escrito o que a Wise e o parceiro compartilham (status das indicações, métricas, informação de carteira) e o que não compartilham, porque regras claras sobre informação proprietária aumentam compromisso e confiança.",
+   "processo": "Definir regras de compartilhamento de informação",
+   "citacao": "At the operational level, clear guidelines on the sharing of proprietary information and technology positively inﬂuence",
+   "pagina": "p. 162",
+   "aplicabilidade": "alta",
+   "porque": "O cruzamento de carteiras exige confiança sobre dados de clientes; o livro só trata de informação proprietária em geral, não de LGPD."
+  }
+ ],
+ "processos": [
+  {
+   "nome": "Gerir o ciclo de vida da parceria",
+   "descricao": "O livro trata governança como fenômeno que cobre começo, fim e gestão contínua, e propõe um ciclo de gestão do relacionamento em quatro passos: operar, revisar, adaptar e melhorar. Seleção e negociação aparecem só como princípios, não como etapas detalhadas; as duas primeiras etapas abaixo são nossa composição.",
+   "gatilho": "Decisão de recrutar ou parceria assinada",
+   "etapas": [
+    "Escolher e nutrir o parceiro com lógica estratégica clara dos dois lados",
+    "Acordar objetivos conjuntos, contrapartidas e regras de saída",
+    "Operar: reunião periódica de revisão operacional",
+    "Revisar: medir contrato e qualidade do relacionamento",
+    "Adaptar: mudar de forma acordada quando mercado ou metas mudam",
+    "Melhorar: corrigir processos e problemas em conjunto",
+    "Decidir: manter, intensificar, reduzir investimento ou encerrar"
+   ],
+   "resultados": [
+    "Manter",
+    "Intensificar",
+    "Reduzir investimento",
+    "Reengajar",
+    "Encerrar com objetivos capturados"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Contato executivo do parceiro",
+    "Diretor como patrocinador"
+   ],
+   "metricas": [
+    "Índice dos três fatores",
+    "Reuniões de revisão realizadas",
+    "Uso das contrapartidas"
+   ],
+   "citacao": "Figure 3.2 shows a relationship management cycle that not only increases control but also ensures that improvement is continuous.",
+   "pagina": "p. 99"
+  },
+  {
+   "nome": "Realizar revisão operacional com o parceiro",
+   "descricao": "Reunião regular com as pessoas que decidem de cada lado, com pauta mínima definida, que busca ativamente melhorias de processo, leva questões à direção e destaca novas oportunidades.",
+   "gatilho": "Calendário (mensal ou trimestral conforme o nível)",
+   "etapas": [
+    "Revisar metas do período anterior e estatísticas",
+    "Revisar trabalho em andamento (indicações, propostas)",
+    "Revisar previsão do próximo período",
+    "Tratar e resolver problemas",
+    "Revisar planos futuros, incluindo novos produtos, e iniciar preparação",
+    "Revisar novidades do setor e da tecnologia",
+    "Identificar política a ajustar"
+   ],
+   "resultados": [
+    "Ações corretivas acordadas",
+    "Escalada à direção",
+    "Nova oportunidade identificada",
+    "Ajuste de política"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Responsável comercial do parceiro",
+    "Executivo de cada lado quando houver escalada"
+   ],
+   "metricas": [
+    "Metas do período cumpridas",
+    "Indicações em andamento",
+    "Previsão do próximo período"
+   ],
+   "citacao": "At its heart this operational process should actively seek out and initiate process improvements.",
+   "pagina": "p. 101"
+  },
+  {
+   "nome": "Autoavaliar a parceria em três passos",
+   "descricao": "Método rápido para posicionar cada parceria: classificar três afirmações, listar sintomas observáveis, buscar evidência factual das causas e então ler a descrição do tipo para definir ações. Os passos são iterativos.",
+   "gatilho": "Fim de trimestre ou sinal de alerta",
+   "etapas": [
+    "Classificar referenciabilidade, efetividade e valor em alto, médio, médio-baixo ou baixo",
+    "Listar sintomas e comportamentos que sustentam cada nota",
+    "Buscar evidência factual das causas de cada sintoma",
+    "Ajustar a nota inicial à luz dos passos 2 e 3",
+    "Ler a descrição do tipo correspondente e decidir ações"
+   ],
+   "resultados": [
+    "Tipo de parceria identificado",
+    "Plano de ação por tipo"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Contraparte do parceiro (opcional, para comparar respostas)"
+   ],
+   "metricas": [
+    "Referenciabilidade",
+    "Efetividade da parceria",
+    "Valor para o negócio"
+   ],
+   "citacao": "In the third step you need to consider whether there is any factual evidence that explains (causes) the symptom or behaviour that you have observed.",
+   "pagina": "p. 219"
+  },
+  {
+   "nome": "Reengajar parceiro passivo em uma oportunidade",
+   "descricao": "Para parceiro de satisfação alta e compromisso baixo, o livro recomenda tratá-lo como se estivesse sendo recrutado pela primeira vez e concentrar o esforço em uma oportunidade concreta.",
+   "gatilho": "Parceiro que responde bem mas indica pouco",
+   "etapas": [
+    "Tratar como recrutamento novo",
+    "Explorar as razões estratégicas de ambos para trabalhar juntos",
+    "Examinar criticamente a proposta de valor da Wise",
+    "Avaliar forças e fraquezas da colaboração",
+    "Concentrar em uma atividade, um cliente ou um processo (por exemplo uma licitação)",
+    "Ampliar a relação depois do primeiro resultado"
+   ],
+   "resultados": [
+    "Parceiro ativado",
+    "Parceiro mantido em nutrição",
+    "Parceiro desligado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Executivo do parceiro"
+   ],
+   "metricas": [
+    "Primeira indicação no ICP",
+    "Frequência de indicações"
+   ],
+   "citacao": "Thus by concentrating the Cherry Picker on a single activity, a single customer or single process, it can be possible to raise its expectation level",
+   "pagina": "p. 229"
+  },
+  {
+   "nome": "Decidir recuperar ou desligar parceiro desengajado",
+   "descricao": "O livro manda decidir primeiro se a relação vale o esforço; se valer, alinhar expectativas, definir ação curta e tangível, renovar a abordagem e dar de seis a doze meses.",
+   "gatilho": "Sinais de abandono ou nota baixa nos três fatores",
+   "etapas": [
+    "Avaliar se o valor potencial justifica o esforço",
+    "Alinhar expectativas conjuntas e dar realismo",
+    "Definir ação de curto prazo com benefício tangível",
+    "Renovar a abordagem: novo gestor ou patrocinador mais sênior",
+    "Tratar como parceria nova por seis a doze meses",
+    "Se não houver retomada, encerrar formalmente"
+   ],
+   "resultados": [
+    "Recuperar",
+    "Manter à distância",
+    "Desligar"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Sinais de abandono",
+    "Primeira indicação após a retomada"
+   ],
+   "citacao": "The most critical decision is whether a Deserter relationship is actually worth the investment of time and energy.",
+   "pagina": "p. 231"
+  },
+  {
+   "nome": "Negociar o termo de parceria",
+   "descricao": "O livro não descreve a negociação como processo; as etapas abaixo são extraídas de princípios dos capítulos 3, 5 e 6: documentar modelos de custo e lucro, objetivos conjuntos, investimentos recíprocos e contrato flexível voltado à ruptura.",
+   "gatilho": "Parceiro qualificado e pronto para assinar",
+   "etapas": [
+    "Explorar e documentar modelos de custo e lucro de cada lado",
+    "Fixar objetivos conjuntos desafiadores e alcançáveis com incentivos claros",
+    "Combinar investimentos recíprocos",
+    "Redigir contrato flexível focado nas consequências da saída",
+    "Definir métricas conjuntas e visíveis",
+    "Arquivar o contrato e concentrar-se na operação"
+   ],
+   "resultados": [
+    "Termo assinado",
+    "Parceiro mantido em nutrição"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor (aprova a assinatura)",
+    "Executivo do parceiro"
+   ],
+   "metricas": [
+    "Prazo entre proposta e assinatura"
+   ],
+   "citacao": "Sometimes the best contract is the one that is ﬁled and forgotten as soon as it is inked, allowing the ﬁrms to concentrate on making the partnership work.",
+   "pagina": "p. 171"
+  },
+  {
+   "nome": "Auditar investimentos e contrapartidas da parceria",
+   "descricao": "Revisão periódica dos investimentos dos dois lados para separar o que gera retorno do que ficou parado, e comunicar a disponibilidade do que existe.",
+   "gatilho": "Revisão trimestral ou queda de uso",
+   "etapas": [
+    "Listar investimentos e contrapartidas de ambos os lados",
+    "Verificar uso real e se o parceiro sabe que existem",
+    "Checar se o processo de acesso é amigável",
+    "Avaliar o retorno de cada um do ponto de vista do parceiro",
+    "Realocar, simplificar ou encerrar o que está parado"
+   ],
+   "resultados": [
+    "Contrapartida mantida",
+    "Contrapartida ajustada",
+    "Contrapartida encerrada"
+   ],
+   "papeis": [
+    "Gerente de Parcerias"
+   ],
+   "metricas": [
+    "Taxa de uso das contrapartidas"
+   ],
+   "citacao": "A reappraisal and audit of the relationship investments made by both sides can help to identify those that generate ROI and those",
+   "pagina": "p. 226"
+  },
+  {
+   "nome": "Elaborar o plano de ações conjuntas",
+   "descricao": "O livro pede uma conversa prévia de planejamento (comunicação e coordenação) antes de listar ações de co-venda, com objetivos conjuntos e incentivos claros.",
+   "gatilho": "Fim do onboarding ou início de trimestre",
+   "etapas": [
+    "Conversar sobre objetivos, capacidade e perfil de cliente de ambos",
+    "Fixar objetivos conjuntos alcançáveis",
+    "Definir incentivos",
+    "Listar ações com dono e data",
+    "Revisar no encontro seguinte"
+   ],
+   "resultados": [
+    "Plano acordado",
+    "Plano reduzido a uma ação única"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Responsável do parceiro"
+   ],
+   "metricas": [
+    "Ações conjuntas realizadas",
+    "Escala e frequência de projetos conjuntos"
+   ],
+   "citacao": "A common failing of many partnerships is the overt focus on establishing a list of cooperative actions such as joint sales engagements with prospects without the essential prior discussion and planning.",
+   "pagina": "p. 116"
+  },
+  {
+   "nome": "Classificar parceiros em portfólio",
+   "descricao": "Abordagem de portfólio: classificar por importância e dificuldade e ajustar a intensidade do relacionamento, de parceria próxima a transações de mercado.",
+   "gatilho": "Entrada de parceiro ou revisão trimestral",
+   "etapas": [
+    "Classificar por importância estratégica e dificuldade de gestão",
+    "Associar cada grupo a uma intensidade de relação (próxima, média, curta ou transacional)",
+    "Alocar horas do gerente conforme o grupo",
+    "Reclassificar a cada revisão"
+   ],
+   "resultados": [
+    "Nível atribuído",
+    "Nível alterado"
+   ],
+   "papeis": [
+    "Gerente de Parcerias",
+    "Diretor"
+   ],
+   "metricas": [
+    "Horas gastas por nível"
+   ],
+   "citacao": "managers should classify their customers according to their importance and adopt a portfolio approach to create and manage appropriate relationships",
+   "pagina": "p. 70"
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Escala e frequência de ações conjuntas",
+   "definicao": "Quantidade e tamanho de projetos, propostas e ações feitos com o parceiro; medida de inovação colaborativa.",
+   "citacao": "tangible outcomes such as share of wallet, growth and scale/frequency of joint projects and bids.",
+   "pagina": "p. 161"
+  },
+  {
+   "nome": "Referenciabilidade",
+   "definicao": "Se o parceiro daria uma referência positiva a um cliente-chave; mede compromisso, objetivos comuns e confiança.",
+   "citacao": "our partner would provide us with a positive and ﬂattering reference to a key customer or buyer.",
+   "pagina": "p. 218"
+  },
+  {
+   "nome": "Efetividade da parceria",
+   "definicao": "Se, nos últimos seis meses, a satisfação dos clientes subiu por causa da parceria.",
+   "citacao": "in the last six months we have increased the level of satisfaction of our customers as a direct consequence of this partnership.",
+   "pagina": "p. 218"
+  },
+  {
+   "nome": "Valor para o negócio",
+   "definicao": "Ganho real de custo ou margem, ou peso da Wise na receita do parceiro.",
+   "citacao": "we have seen a real cost advantage/margin gain as a result of working with this partner or we represent a signiﬁcant share of this partner’s business.",
+   "pagina": "p. 218"
+  },
+  {
+   "nome": "Retenção, amplitude e frequência do parceiro",
+   "definicao": "Permanência do parceiro ativo, variedade do que ele indica e frequência das indicações; usadas como incentivo comportamental.",
+   "citacao": "partner retention, breadth of portfolio sold by a partner and frequency of purchase",
+   "pagina": "p. 121"
+  },
+  {
+   "nome": "Taxa de uso das contrapartidas",
+   "definicao": "Parte das contrapartidas oferecidas que o parceiro efetivamente usa.",
+   "citacao": "Stranded assets are investments that no longer represent value to the partnership, or have not been utilized",
+   "pagina": "p. 81"
+  },
+  {
+   "nome": "Confiança e compromisso",
+   "definicao": "Pesquisa curta com parceiro e Wise; indicador de se a aliança se sustenta e se desenvolve.",
+   "citacao": "Trust and commitment are thus key indicators of whether an alliance will be sustained and developed over time",
+   "pagina": "p. 115"
+  },
+  {
+   "nome": "Revisões realizadas sobre planejadas",
+   "definicao": "Proporção de reuniões de revisão que de fato aconteceram.",
+   "citacao": "Many organizations fail to meet frequently to review performance and plan ahead.",
+   "pagina": "p. 100"
+  },
+  {
+   "nome": "Tempo de resolução de problemas",
+   "definicao": "Rapidez com que problemas e disputas com o parceiro (inclusive de atribuição) são resolvidos.",
+   "citacao": "Disputes and problems are resolved quickly.",
+   "pagina": "p. 138"
+  },
+  {
+   "nome": "Equidade percebida",
+   "definicao": "Se o parceiro sente que os ganhos são igualmente divididos.",
+   "citacao": "The gains from this relationship are equally shared between both parties.",
+   "pagina": "p. 137"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Só se cuida da relação quando ela já está em crise; sem rotina proativa, a revisão vira apagar incêndio e cláusula.",
+   "citacao": "For many ﬁrms, managing the relationship only becomes an agenda item when the partnership is already in disarray.",
+   "pagina": "p. 92"
+  },
+  {
+   "alerta": "Satisfação alta do parceiro engana: pode vir com compromisso baixo e nenhuma indicação, e a gestão acredita que haverá crescimento.",
+   "citacao": "Their level of overall satisfaction is also relatively high and this can confuse management into believing that growth can be anticipated.",
+   "pagina": "p. 19"
+  },
+  {
+   "alerta": "Subestimar o esforço de gestão é a causa principal de mau desempenho nas parcerias; relevante para um programa com 12 horas por mês.",
+   "citacao": "The prime cause of poor performance in collaborative business relationships is the underestimation of the management task.",
+   "pagina": "p. 93"
+  },
+  {
+   "alerta": "Investimento não comunicado ou sem uso (contrapartida, treinamento, sala) gera atrito e acusações de que o outro lado não aproveita.",
+   "citacao": "Firms may invest in its partnership and simply fail to communicate its availability to the partners",
+   "pagina": "p. 82"
+  },
+  {
+   "alerta": "Mudar regras de rebate, metas e comissão com frequência corrói a confiança e leva parceiro ao abandono; mudanças de nível e comissão devem ser testadas contra o modelo do parceiro.",
+   "citacao": "They’ve changed our rebates and targets so much that it’s hard to see how we are going to make a proﬁt this year.",
+   "pagina": "p. 211"
+  },
+  {
+   "alerta": "Reativações em mutirão ('blitz') melhoram pouco e o desempenho cai logo depois; o livro recomenda abordagem conjunta e contínua.",
+   "citacao": "The solution is to adopt a more proactive, joint approach to relationship management that focuses on addressing both strengths and weaknesses and achieves continuous improvement.",
+   "pagina": "p. 99"
+  },
+  {
+   "alerta": "Reuniões de planejamento dominadas por revisão de resultados e metas em cascata são sintoma de colaboração fraca; separar planejamento de revisão.",
+   "citacao": "Planning workshops are dominated by business reviews.",
+   "pagina": "p. 166"
+  },
+  {
+   "alerta": "As empresas não reconhecem seus próprios desertores, embora a insatisfação seja evidente; sem monitoramento, o gerente só percebe quando o parceiro já saiu.",
+   "citacao": "Curiously, most ﬁrms fail to recognize their own Deserters when their level of dissatisfaction is in reality very apparent.",
+   "pagina": "p. 211"
+  }
+ ]
+}
