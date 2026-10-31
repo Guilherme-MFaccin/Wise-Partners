@@ -1,0 +1,190 @@
+<title>Perguntas ao patrocinador</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Coluna única de leitura; barra de progresso fixa no topo; um cartão por pergunta, agrupados por bloco */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-soft: #e6eefb; --accent-fg: #ffffff; --ok: #1d7a46; --warn: #9a5b00;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px; }
+.barra-in { max-width: 720px; margin: 0 auto; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.trilho { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.trilho i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.cont { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.salvo { font-size: 13px; color: var(--muted); min-width: 9ch; }
+main { max-width: 720px; margin: 0 auto; display: grid; gap: 22px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 56px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 28px; line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+h2 { font-size: 19px; margin: 18px 0 0; text-wrap: balance; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 64ch; }
+.aviso { border: 1px solid var(--line); border-left: 4px solid var(--warn); background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 12px; min-width: 0; }
+.q.feita { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.q legend { font-weight: 600; padding: 0; line-height: 1.45; }
+.q fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+.num { color: var(--muted); font-variant-numeric: tabular-nums; margin-right: 6px; font-weight: 500; }
+.dica { font-size: 13px; color: var(--muted); }
+.op { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.op:hover { border-color: var(--accent); }
+.op input { margin: 3px 0 0; accent-color: var(--accent); flex: none; width: 18px; height: 18px; }
+.op:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.op.ns { border-style: dashed; color: var(--muted); }
+textarea { width: 100%; box-sizing: border-box; min-height: 110px; font: 15px/1.5 var(--sans); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+textarea.obs { min-height: 70px; }
+.comentar { justify-self: start; background: none; border: 0; color: var(--accent); font: 500 14px var(--sans); cursor: pointer; padding: 2px 0; }
+button.principal { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 20px; font: 600 16px var(--sans); cursor: pointer; }
+button.sec { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 8px; padding: 10px 16px; font: 600 15px var(--sans); cursor: pointer; }
+button:focus-visible, .op:focus-within, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.fim { display: grid; gap: 12px; justify-items: start; }
+.estado { font-weight: 600; color: var(--ok); }
+.estado.erro { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { .trilho i { transition: none; } }
+</style>
+<div class="barra"><div class="barra-in">
+  <div class="trilho" aria-hidden="true"><i id="trilho"></i></div>
+  <span class="cont" id="cont">0 de 0</span>
+  <span class="salvo" id="salvo" role="status"></span>
+</div></div>
+<main>
+  <header>
+    <p class="eyebrow">Mapeamento de processos · Programa Wise Partners</p>
+    <h1>O que você já sabe, antes de perguntar aos colegas</h1>
+    <p class="lead">O que você responder aqui sai da lista dos colegas. Onde não souber, marque "Não sei: perguntar a..." e a pergunta vai só para quem sabe. Quase tudo é de clicar; "Comentar" serve para nuances. As respostas são salvas sozinhas enquanto você preenche.</p>
+  </header>
+  <div class="aviso" id="aviso" hidden></div>
+  <form id="form" novalidate></form>
+  <section class="fim">
+    <button type="button" class="principal" id="enviar">Enviar respostas</button>
+    <span class="estado" id="estado" role="status"></span>
+    <button type="button" class="sec" id="copiar" hidden>Copiar respostas</button>
+  </section>
+</main>
+<script type="application/json" id="dados">[{"id": "Q-0036", "bloco": "Como o programa está hoje", "texto": "Até hoje, quantos parceiros assinaram o termo?", "tipo": "escolha", "opcoes": ["Nenhum ainda", "1", "2 ou 3", "4 ou mais"]}, {"id": "Q-0031", "bloco": "Como o programa está hoje", "texto": "Onde a negociação com cada prospect fica registrada hoje, no dia a dia?", "tipo": "escolha", "opcoes": ["No RD Station", "No portal", "Nos dois, em paralelo", "Está migrando do RD para o portal"]}, {"id": "Q-0001", "bloco": "Como o programa está hoje", "texto": "Pense no último prospect com quem você avançou mais. Conte o caminho dele: como chegou, quem falou com ele, o que foi combinado e em que ponto está.", "tipo": "aberta", "opcoes": []}, {"id": "Q-0037", "bloco": "Como o programa está hoje", "texto": "Depois da reunião de apresentação, que caminhos uma negociação já tomou (ou pode tomar)?", "tipo": "multipla", "opcoes": ["Segue para minuta e assinatura", "Pausa em nutrição, com data para retomar", "Perdida por falta de interesse", "Nova reunião, com o decisor", "Fica parada sem próximo passo"]}, {"id": "Q-0006", "bloco": "Como o programa está hoje", "texto": "Quando o Igor não aprova a assinatura de um termo, o que acontece com a negociação?", "tipo": "escolha", "opcoes": ["Volta para ajuste da minuta e nova aprovação", "A negociação é perdida", "Fica parada até uma nova conversa", "Nunca aconteceu", "Não sei: perguntar ao Igor"]}, {"id": "Q-0033", "bloco": "Como o programa está hoje", "texto": "Quando um prospect vai para nutrição, o que faz ele voltar para a negociação?", "tipo": "escolha", "opcoes": ["A data de retomada marcada", "Um sinal do prospect (resposta, evento, pedido)", "As duas coisas"]}, {"id": "Q-0004", "bloco": "Duas regras que não batem", "texto": "Quando o nível de um parceiro muda? O Playbook diz: só quando a carteira dele muda de tamanho, ou quando uma informação nova corrige a estimativa. A especificação 002 diz: depois da entrada, o nível acompanha o resultado, com revisão a cada trimestre.", "tipo": "escolha", "opcoes": ["Vale o Playbook: só pela carteira", "Vale a especificação: pelo resultado, na revisão trimestral", "As duas: entra pela carteira e depois acompanha o resultado", "Não sei: perguntar ao Igor"]}, {"id": "Q-0005", "bloco": "Duas regras que não batem", "texto": "Quando termina o onboarding? O Playbook diz: quando a primeira entrega do pacote é concluída. A especificação 002 diz: na ativação, quando a primeira indicação com ICP confirmado vira reunião.", "tipo": "escolha", "opcoes": ["Vale o Playbook: na primeira entrega concluída", "Vale a especificação: na ativação", "As duas: a primeira entrega fecha a negociação e a ativação fecha o onboarding", "Não sei: perguntar ao Igor"]}, {"id": "Q-0030", "bloco": "Funis do portal", "texto": "Quais destes trabalhos repetitivos devem virar funil (kanban próprio) no portal?", "tipo": "multipla", "opcoes": ["Recrutamento", "Onboarding (integração e plano de 90 dias)", "Base Ativa", "Indicações", "Resgate de parceiro inativo", "Encerramento de parceria", "Ações conjuntas e contrapartidas"]}, {"id": "Q-0032", "bloco": "Funis do portal", "texto": "A Prateleira de RFP funciona por caso (cada necessidade de cliente atendida com um parceiro) ou como manutenção do catálogo?", "tipo": "escolha", "opcoes": ["Por caso: cada necessidade é um atendimento com começo e fim", "Manutenção contínua do catálogo", "As duas coisas"]}, {"id": "Q-0038", "bloco": "Funis do portal", "texto": "Os consultores já apresentam a prateleira de fornecedores aos clientes hoje?", "tipo": "escolha", "opcoes": ["Sim, com frequência", "Às vezes", "Ainda não: está só no papel", "Não sei: perguntar a um consultor"]}, {"id": "Q-0012", "bloco": "Indicações e comissão", "texto": "Quando um parceiro indicar um cliente, quem faz o primeiro contato com esse cliente?", "tipo": "escolha", "opcoes": ["Eu", "O comercial da empresa que vai atender (Wise, Tríade ou Swallow)", "Um consultor da Wise", "Depende da empresa que vai atender", "Não sei: perguntar ao Igor"]}, {"id": "Q-0020", "bloco": "Indicações e comissão", "texto": "Onde fica registrado de qual parceiro veio um cliente indicado?", "tipo": "escolha", "opcoes": ["No campo \"Parceiro de origem\" do RD", "No portal", "Nos dois", "Não sei: perguntar ao comercial"]}, {"id": "Q-0022", "bloco": "Indicações e comissão", "texto": "Quem avisa o parceiro sobre o andamento da indicação (primeiro contato, proposta, fechamento)?", "tipo": "escolha", "opcoes": ["Eu", "O comercial que atende o cliente", "O portal, automaticamente", "Não sei: perguntar ao comercial"]}, {"id": "Q-0023", "bloco": "Indicações e comissão", "texto": "Quando um cliente indicado pagar a primeira mensalidade, como o financeiro vai saber que há comissão a pagar?", "tipo": "escolha", "opcoes": ["Eu aviso", "O comercial avisa", "O financeiro vê no sistema", "O portal avisa", "Não sei: perguntar ao financeiro"]}, {"id": "Q-0011", "bloco": "Indicações e comissão", "texto": "Quem responde pelo pagamento da comissão ao parceiro?", "tipo": "escolha", "opcoes": ["O financeiro da Wise Makers", "O financeiro da empresa que fechou o cliente (Wise, Tríade ou Swallow)", "Eu", "Não sei: perguntar ao financeiro"]}, {"id": "Q-0027", "bloco": "Indicações e comissão", "texto": "Além do CNPJ, do contrato e da nota fiscal do parceiro (que estão no Playbook), o pagamento precisa de alguma aprovação?", "tipo": "escolha", "opcoes": ["Não, basta a documentação", "Sim, do Igor", "Sim, minha", "Não sei: perguntar ao financeiro"]}, {"id": "Q-0028", "bloco": "Indicações e comissão", "texto": "Depois que a nota fiscal do parceiro chega, em quantos dias o pagamento costuma sair?", "tipo": "escolha", "opcoes": ["Até 5 dias", "De 6 a 15 dias", "Mais de 15 dias", "Não sei: perguntar ao financeiro"]}, {"id": "Q-0019", "bloco": "Indicações e comissão", "texto": "Quem vai falar com o cliente indicado aos 6 e aos 12 meses para saber se continua ativo e satisfeito?", "tipo": "escolha", "opcoes": ["Eu", "O consultor que atende o cliente", "O comercial da empresa que atende", "Não sei: perguntar ao Igor"]}, {"id": "Q-0002", "bloco": "Indicações e comissão", "texto": "Para uma indicação virar cliente, o quanto a Wise, a Tríade e a Swallow dependem de informações umas das outras?", "tipo": "escolha", "opcoes": ["Muito: cada indicação passa por mais de uma empresa", "Em parte: só em alguns casos", "Pouco: cada empresa trata as próprias indicações sozinha", "Não sei: perguntar ao Igor"]}, {"id": "Q-0003", "bloco": "Indicações e comissão", "texto": "As três empresas devem tratar a indicação do mesmo jeito (mesmo prazo, mesmo registro, mesmo retorno ao parceiro)?", "tipo": "escolha", "opcoes": ["Sim, igual nas três", "Igual no registro e no retorno ao parceiro, livre na venda", "Cada empresa do seu jeito", "Não sei: perguntar ao Igor"]}, {"id": "Q-0008", "bloco": "Gestão do programa", "texto": "Quem define as metas do programa e a fase (experimentação, tração, crescimento)?", "tipo": "escolha", "opcoes": ["O Igor", "Eu", "Nós dois juntos", "Os sócios"]}, {"id": "Q-0009", "bloco": "Gestão do programa", "texto": "Quando as metas do programa são revisadas?", "tipo": "escolha", "opcoes": ["Na revisão semanal das terças", "Uma vez por trimestre", "Quando alguém pede", "Ainda não há revisão definida"]}, {"id": "Q-0034", "bloco": "Gestão do programa", "texto": "Quem decide e publica as regras do programa e os comunicados aos parceiros?", "tipo": "escolha", "opcoes": ["Eu", "O Igor", "Eu, com aprovação do Igor"]}, {"id": "Q-0010", "bloco": "Gestão do programa", "texto": "Quem decide se um parceiro ganha palco num evento da Wise (palestra, painel, estande)?", "tipo": "escolha", "opcoes": ["O Igor", "Os sócios", "Eu, com aprovação dos sócios", "Não sei: perguntar ao Igor"]}, {"id": "Q-0007", "bloco": "Gestão do programa", "texto": "Do lado da Wise, quem decide encerrar uma parceria?", "tipo": "escolha", "opcoes": ["O Igor, a partir de uma sugestão minha", "Eu", "O Igor sozinho", "Não sei: perguntar ao Igor"]}, {"id": "Q-0035", "bloco": "Gestão do programa", "texto": "Se já souber: nome e contato de trabalho do consultor, do comercial da Tríade ou da Swallow e do financeiro, para o caso de sobrar pergunta para eles.", "tipo": "aberta", "opcoes": []}]</script>
+<script>
+const ITENS = JSON.parse(document.getElementById('dados').textContent);
+const DOC = 'respostas/FO-06', CHAVE = 'fo06-rascunho';
+let estado = { respostas: {}, enviado: false };
+let db = null, timer = null;
+const $ = (id) => document.getElementById(id);
+
+function montar() {
+  const form = $('form'); let bloco = null, n = 0;
+  for (const it of ITENS) {
+    if (it.bloco !== bloco) { bloco = it.bloco; const h = document.createElement('h2'); h.textContent = bloco; form.appendChild(h); }
+    n++;
+    const card = document.createElement('div'); card.className = 'q'; card.id = 'c-' + it.id;
+    const fs = document.createElement('fieldset'); const lg = document.createElement('legend');
+    const num = document.createElement('span'); num.className = 'num'; num.textContent = n + '.';
+    lg.append(num, document.createTextNode(it.texto)); fs.appendChild(lg);
+    if (it.opcoes.length) {
+      if (it.tipo === 'multipla') { const d = document.createElement('span'); d.className = 'dica'; d.textContent = 'Pode marcar mais de uma.'; fs.appendChild(d); }
+      it.opcoes.forEach((op, i) => {
+        const lab = document.createElement('label'); lab.className = 'op' + (op.startsWith('Não sei') ? ' ns' : '');
+        const inp = document.createElement('input'); inp.type = it.tipo === 'multipla' ? 'checkbox' : 'radio';
+        inp.name = it.id; inp.value = op; inp.id = it.id + '-' + i;
+        inp.addEventListener('change', () => mudou(it));
+        const t = document.createElement('span'); t.textContent = op; lab.append(inp, t); fs.appendChild(lab);
+      });
+      card.appendChild(fs);
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'comentar'; b.textContent = 'Comentar';
+      const obs = document.createElement('textarea'); obs.className = 'obs'; obs.id = it.id + '-obs'; obs.hidden = true;
+      obs.placeholder = 'Comentário, exceção ou outra resposta'; obs.setAttribute('aria-label', 'Comentário sobre a pergunta ' + n);
+      b.addEventListener('click', () => { obs.hidden = false; b.hidden = true; obs.focus(); });
+      obs.addEventListener('input', () => mudou(it));
+      card.append(b, obs);
+    } else {
+      const ta = document.createElement('textarea'); ta.id = it.id + '-txt'; ta.setAttribute('aria-label', 'Resposta da pergunta ' + n);
+      ta.addEventListener('input', () => mudou(it)); fs.appendChild(ta); card.appendChild(fs);
+    }
+    form.appendChild(card);
+  }
+}
+
+function ler(it) {
+  if (!it.opcoes.length) { const v = $(it.id + '-txt').value.trim(); return v ? { valor: v } : null; }
+  const marc = [...document.querySelectorAll('input[name="' + it.id + '"]:checked')].map(i => i.value);
+  const obs = $(it.id + '-obs').value.trim();
+  if (!marc.length && !obs) return null;
+  const r = { valor: it.tipo === 'multipla' ? marc : (marc[0] || '') }; if (obs) r.obs = obs; return r;
+}
+
+function aplicar() {
+  for (const it of ITENS) {
+    const r = estado.respostas[it.id]; if (!r) continue;
+    if (!it.opcoes.length) { $(it.id + '-txt').value = r.valor || ''; continue; }
+    const vals = Array.isArray(r.valor) ? r.valor : [r.valor];
+    document.querySelectorAll('input[name="' + it.id + '"]').forEach(i => { i.checked = vals.includes(i.value); });
+    if (r.obs) { const o = $(it.id + '-obs'); o.value = r.obs; o.hidden = false; o.previousElementSibling.hidden = true; }
+  }
+  progresso();
+}
+
+function progresso() {
+  let feitas = 0;
+  for (const it of ITENS) { const ok = !!estado.respostas[it.id]; if (ok) feitas++; $('c-' + it.id).classList.toggle('feita', ok); }
+  $('cont').textContent = feitas + ' de ' + ITENS.length;
+  $('trilho').style.width = (100 * feitas / ITENS.length) + '%';
+}
+
+function mudou(it) {
+  const r = ler(it); if (r) estado.respostas[it.id] = r; else delete estado.respostas[it.id];
+  estado.atualizado_em = new Date().toISOString();
+  progresso(); $('salvo').textContent = 'Salvando...';
+  try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {}
+  clearTimeout(timer); timer = setTimeout(salvar, 900);
+}
+
+async function salvar(extra) {
+  const corpo = { ...estado, ...(extra || {}), atualizado_em: new Date().toISOString() };
+  if (!db) { $('salvo').textContent = 'Só neste navegador'; return false; }
+  try { await db.doc(DOC).set(corpo); estado = corpo; $('salvo').textContent = 'Salvo'; return true; }
+  catch (e) { $('salvo').textContent = 'Não salvou'; return false; }
+}
+
+function semBanco(msg) {
+  const a = $('aviso'); a.hidden = false; a.textContent = msg; $('copiar').hidden = false;
+}
+
+$('enviar').addEventListener('click', async () => {
+  clearTimeout(timer);
+  const ok = await salvar({ enviado: true, enviado_em: new Date().toISOString() });
+  const e = $('estado');
+  if (ok) { e.className = 'estado'; e.textContent = 'Enviado. Volte ao chat e escreva "respondi". Dá para mudar respostas depois: é só editar e enviar de novo.'; }
+  else { e.className = 'estado erro'; e.textContent = 'Não consegui gravar. Clique em Copiar respostas e cole no chat.'; $('copiar').hidden = false; }
+});
+
+$('copiar').addEventListener('click', async () => {
+  const txt = JSON.stringify(estado.respostas, null, 1);
+  try { await navigator.clipboard.writeText(txt); $('estado').textContent = 'Respostas copiadas: cole no chat.'; }
+  catch (e) { const t = document.createElement('textarea'); t.value = txt; $('copiar').after(t); t.select(); $('estado').textContent = 'Selecione e copie o texto abaixo.'; }
+});
+
+montar();
+try { const r = JSON.parse(localStorage.getItem(CHAVE) || 'null'); if (r && r.respostas) { estado = r; aplicar(); } } catch (e) {}
+progresso();
+$('salvo').textContent = 'Carregando...';
+const espera = setTimeout(() => { if (!db) { $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui conectar ao armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); } }, 10000);
+(async () => {
+  const c = window.claude && await window.claude.use('db');
+  if (!c) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Esta página não consegue salvar aqui. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); return; }
+  try {
+    const snap = await c.doc(DOC).get(); db = c; clearTimeout(espera);
+    if (snap.exists) { const s = snap.data(); const local = estado.atualizado_em || '';
+      if (!local || (s.atualizado_em || '') >= local) { estado = { ...s }; aplicar(); } }
+    $('salvo').textContent = 'Salvo';
+  } catch (e) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui ler o armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); }
+})();
+</script>
