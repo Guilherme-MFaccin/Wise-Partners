@@ -1,0 +1,353 @@
+<title>Formulários da Rodada 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Uma coluna de leitura: passos numerados, um botão principal, o código recolhido no fim */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-fg: #ffffff; --ok: #1d7a46; --code-bg: #eef1f5;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-fg: #0b1220; --ok: #5cc98b; --code-bg: #0d1218; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-fg: #0b1220; --ok: #5cc98b; --code-bg: #0d1218; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--sans);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 48px; }
+main { max-width: 680px; margin: 0 auto; display: grid; gap: 28px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 8px; text-wrap: balance; }
+h2 { font-size: 18px; margin: 0 0 10px; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 62ch; }
+ol.passos { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: p; }
+ol.passos li { counter-increment: p; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+ol.passos li::before { content: counter(p); width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--accent);
+  color: var(--accent); display: grid; place-items: center; font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
+ol.passos li > div { min-width: 0; padding-top: 3px; }
+.acoes { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; align-items: center; }
+button, .link { font: 600 15px var(--sans); border-radius: 8px; padding: 10px 16px; cursor: pointer; text-decoration: none; }
+button { background: var(--accent); color: var(--accent-fg); border: 0; }
+.link { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
+button:focus-visible, .link:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.estado { color: var(--ok); font-weight: 600; font-size: 14px; }
+.nota { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 8px; }
+.nota p { color: var(--muted); font-size: 15px; }
+code { font: 500 14px var(--mono); background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+details summary { cursor: pointer; color: var(--muted); font-weight: 600; }
+textarea { width: 100%; box-sizing: border-box; height: 280px; margin-top: 10px; font: 13px/1.5 var(--mono); color: var(--fg);
+  background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; padding: 12px; resize: vertical; }
+ul.forms { margin: 0; padding-left: 20px; color: var(--muted); font-size: 15px; }
+</style>
+<main>
+  <header>
+    <p class="eyebrow">Mapeamento de processos · Rodada 1</p>
+    <h1>Criar os 4 formulários de uma vez</h1>
+    <p class="lead">Um único código cria no seu Google Forms os formulários da diretoria, da consultoria, do comercial e do financeiro, e uma planilha com os links e as respostas. Leva uns 2 minutos e precisa ser feito no computador.</p>
+  </header>
+
+  <section>
+    <ol class="passos">
+      <li><div><strong>Copie o código.</strong>
+        <div class="acoes"><button type="button" id="copiar">Copiar código</button><span class="estado" id="estado" role="status"></span></div></div></li>
+      <li><div><strong>Abra um projeto novo do Apps Script</strong> com a conta guilherme@wisemakers.com.br.
+        <div class="acoes"><a class="link" href="https://script.google.com/create" target="_blank" rel="noopener">Abrir script.google.com/create</a></div></div></li>
+      <li><div><strong>Apague o que estiver no editor e cole o código</strong> (Ctrl+A, depois Ctrl+V). Salve com Ctrl+S.</div></li>
+      <li><div><strong>Clique em Executar.</strong> A função <code>criarTodos</code> já vem selecionada. O Google pede autorização: escolha a sua conta e clique em Permitir. Se aparecer o aviso "O Google não verificou este app", clique em Avançado e depois em "Acessar projeto". O código é seu e roda só na sua conta.</div></li>
+      <li><div><strong>Espere a mensagem "Pronto"</strong> no Registro de execução (uns 30 segundos) e me escreva "pronto" no chat.</div></li>
+    </ol>
+  </section>
+
+  <section class="nota">
+    <h2>O que acontece depois</h2>
+    <p>Eu encontro a planilha "Mapeamento Wise Partners: respostas da Rodada 1" pelo conector do Google Drive, leio os links dos formulários e devolvo para você com o texto de convite. Quando as respostas chegarem, leio direto da planilha. Você não precisa baixar nada.</p>
+    <p>Rodar o código de novo não duplica os formulários: ele só mostra o link da planilha.</p>
+  </section>
+
+  <section>
+    <h2>Formulários que serão criados</h2>
+    <ul class="forms">
+      <li>Rodada 1: o programa visto pela diretoria (Igor, 12 perguntas)</li>
+      <li>Rodada 1: prateleira e clientes indicados (consultoria, 8 perguntas)</li>
+      <li>Rodada 1: clientes indicados por parceiros (comercial, 7 perguntas)</li>
+      <li>Rodada 1: comissão ao parceiro (financeiro, 8 perguntas)</li>
+    </ul>
+  </section>
+
+  <details>
+    <summary>Ver o código</summary>
+    <label for="codigo" class="eyebrow" style="display:block;margin-top:10px">Código do Apps Script</label>
+    <textarea id="codigo" readonly spellcheck="false">/**
+ * Cria os formulários da Rodada 1 do mapeamento de processos (FO-01, FO-02, FO-03, FO-04)
+ * e uma planilha com os links e as respostas de todos eles.
+ * Como usar: cole tudo em https://script.google.com/create, salve e clique em Executar.
+ * Rodar de novo não duplica nada: só mostra os links de novo.
+ */
+function criarTodos() {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty(&#x27;planilha&#x27;)) {
+    Logger.log(&#x27;Os formulários já foram criados. Planilha: &#x27; + props.getProperty(&#x27;planilha&#x27;));
+    return;
+  }
+  var planilha = SpreadsheetApp.create(&quot;Mapeamento Wise Partners: respostas da Rodada 1&quot;);
+  var links = planilha.getSheets()[0].setName(&#x27;Links&#x27;);
+  links.appendRow([&#x27;Formulário&#x27;, &#x27;Título&#x27;, &#x27;Link para enviar&#x27;, &#x27;Link para editar&#x27;, &#x27;Aba de respostas&#x27;]);
+  var form, item;
+  // FO-01
+  form = FormApp.create(&quot;Rodada 1: o programa visto pela diretoria&quot;);
+  form.setDescription(&quot;Estamos desenhando o mapa de como o trabalho do Programa Wise Partners acontece, para organizar os funis e as tarefas do portal. Não tem resposta certa ou errada e ninguém será avaliado pelas respostas: vale como funciona hoje, na prática. Leva cerca de 10 minutos.&quot;);
+  form.setProgressBar(true);
+  form.setAllowResponseEdits(true);
+  form.setConfirmationMessage(&#x27;Obrigado! Suas respostas vão direto para o mapa de processos.&#x27;);
+  form.addSectionHeaderItem().setTitle(&quot;Sobre você&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu nome&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Sua função ou cargo&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Área ou equipe em que você trabalha&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu e-mail (opcional, só para tirarmos dúvidas)&quot;);
+  form.addPageBreakItem().setTitle(&quot;O programa na prática&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Pense no último parceiro com quem você conversou ou negociou. Conte o caminho dele, do primeiro contato até hoje: quem falou com ele, o que foi combinado e em que ponto está.&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Muito: cada indicação passa por mais de uma empresa&quot;, &quot;Em parte: só em alguns casos&quot;, &quot;Pouco: cada empresa trata as próprias indicações sozinha&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Para uma indicação de parceiro virar cliente, o quanto a Wise, a Tríade e a Swallow dependem de informações umas das outras?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Sim, deve ser igual nas três&quot;, &quot;Em parte: igual no registro e no retorno ao parceiro, livre na venda&quot;, &quot;Não: cada empresa trata do seu jeito&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;O programa ganha quando Wise, Tríade e Swallow tratam a indicação do mesmo jeito (mesmo prazo, mesmo registro, mesmo retorno ao parceiro)?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Duas regras que não batem&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;(a) Só pela carteira&quot;, &quot;(b) Pelo resultado, na revisão trimestral&quot;, &quot;As duas: entra pela carteira e depois acompanha o resultado&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Recebemos duas descrições sobre quando o nível de um parceiro muda. (a) Só quando a carteira dele muda de tamanho, ou quando uma informação nova corrige a estimativa. (b) Depois da entrada, o nível acompanha o resultado, com revisão a cada trimestre. Como deve valer?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;(a) Na primeira entrega concluída&quot;, &quot;(b) Na ativação (primeira indicação que virou reunião)&quot;, &quot;As duas: a primeira entrega fecha a negociação e a ativação fecha o onboarding&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Recebemos duas descrições sobre quando termina o onboarding de um parceiro. (a) Quando a primeira entrega do pacote é concluída. (b) Na ativação: quando a primeira indicação do parceiro, com ICP confirmado pela Wise, vira reunião. Como deve valer?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Assinatura e encerramento&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Volta para ajuste da minuta e nova aprovação&quot;, &quot;A negociação é perdida&quot;, &quot;Fica parada até uma nova conversa&quot;, &quot;Nunca aconteceu&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando você não aprova a assinatura de um termo, o que acontece com a negociação?&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Quando uma parceria precisa acabar (por decisão do parceiro ou da Wise), quem decide e o que precisa ser feito? Se já aconteceu, conte o caso.&quot;);
+  form.addPageBreakItem().setTitle(&quot;Gestão do programa&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O Igor&quot;, &quot;O Guilherme&quot;, &quot;Os dois juntos&quot;, &quot;Os sócios da Wise&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quem define as metas do programa e a fase em que ele está (experimentação, tração, crescimento)?&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;De quanto em quanto tempo as metas do programa são revisadas, e em qual reunião?&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Pense na última vez que um parceiro ganhou palco num evento da Wise (palestra, painel, estande). Quem decidiu, como foi combinado e o que o parceiro recebeu? Se ainda não aconteceu, escreva \&quot;ainda não\&quot;.&quot;);
+  form.addPageBreakItem().setTitle(&quot;Indicações e comissão&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O financeiro da Wise Makers&quot;, &quot;O financeiro da empresa que fechou o cliente (Wise, Tríade ou Swallow)&quot;, &quot;O Guilherme&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quem responde pelo pagamento da comissão ao parceiro?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O Guilherme&quot;, &quot;O comercial da empresa que vai atender (Wise, Tríade ou Swallow)&quot;, &quot;Um consultor da Wise&quot;, &quot;Depende do caso&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Para fechar&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Algo importante que não perguntamos?&quot;);
+  registrar(planilha, links, form, &quot;FO-01&quot;);
+  // FO-02
+  form = FormApp.create(&quot;Rodada 1: prateleira e clientes indicados (consultoria)&quot;);
+  form.setDescription(&quot;Estamos desenhando o mapa de como o trabalho do Programa Wise Partners acontece, para organizar os funis e as tarefas do portal. Não tem resposta certa ou errada e ninguém será avaliado pelas respostas: vale como funciona hoje, na prática. Leva cerca de 10 minutos.&quot;);
+  form.setProgressBar(true);
+  form.setAllowResponseEdits(true);
+  form.setConfirmationMessage(&#x27;Obrigado! Suas respostas vão direto para o mapa de processos.&#x27;);
+  form.addSectionHeaderItem().setTitle(&quot;Sobre você&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu nome&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Sua função ou cargo&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Área ou equipe em que você trabalha&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu e-mail (opcional, só para tirarmos dúvidas)&quot;);
+  form.addPageBreakItem().setTitle(&quot;Prateleira de fornecedores&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Pense na última vez que você mostrou a um cliente a prateleira de fornecedores (empresas parceiras que atendem uma necessidade dele). O que aconteceu: como surgiu, o que você mostrou e o que veio depois?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Toda semana&quot;, &quot;Uma ou duas vezes por mês&quot;, &quot;Raramente&quot;, &quot;Nunca aconteceu&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Com que frequência isso acontece?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Eu mesmo&quot;, &quot;O Guilherme&quot;, &quot;O cliente procura o parceiro sozinho&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando o cliente se interessa por um parceiro da prateleira, quem apresenta um ao outro?&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Onde fica registrado que você apresentou um parceiro a um cliente?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Clientes indicados por parceiros&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Sim&quot;, &quot;Não&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Você já atendeu algum cliente que chegou por indicação de um parceiro do Wise Partners?&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Se sim, conte o último: como você soube da indicação, o que fez primeiro, em quanto tempo e quando o parceiro que indicou teve retorno.&quot;);
+  form.addPageBreakItem().setTitle(&quot;Indicações e comissão&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O Guilherme&quot;, &quot;O comercial da empresa que vai atender (Wise, Tríade ou Swallow)&quot;, &quot;Um consultor da Wise&quot;, &quot;Depende do caso&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Clientes indicados por parceiros&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O consultor que atende o cliente&quot;, &quot;O Guilherme&quot;, &quot;Ninguém faz isso hoje&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Depois que um cliente indicado fecha, quem fala com ele para saber se continua ativo e satisfeito?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Para fechar&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Algo importante que não perguntamos?&quot;);
+  registrar(planilha, links, form, &quot;FO-02&quot;);
+  // FO-03
+  form = FormApp.create(&quot;Rodada 1: clientes indicados por parceiros (comercial)&quot;);
+  form.setDescription(&quot;Estamos desenhando o mapa de como o trabalho do Programa Wise Partners acontece, para organizar os funis e as tarefas do portal. Não tem resposta certa ou errada e ninguém será avaliado pelas respostas: vale como funciona hoje, na prática. Leva cerca de 10 minutos.&quot;);
+  form.setProgressBar(true);
+  form.setAllowResponseEdits(true);
+  form.setConfirmationMessage(&#x27;Obrigado! Suas respostas vão direto para o mapa de processos.&#x27;);
+  form.addSectionHeaderItem().setTitle(&quot;Sobre você&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu nome&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Sua função ou cargo&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Área ou equipe em que você trabalha&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu e-mail (opcional, só para tirarmos dúvidas)&quot;);
+  form.addPageBreakItem().setTitle(&quot;Clientes indicados por parceiros&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Sim&quot;, &quot;Não&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Você já atendeu algum cliente que chegou por indicação de um parceiro do Wise Partners?&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Se sim, conte o último: como você soube da indicação, o que fez primeiro, em quanto tempo e quando o parceiro que indicou teve retorno.&quot;);
+  form.addPageBreakItem().setTitle(&quot;Indicações e comissão&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O Guilherme&quot;, &quot;O comercial da empresa que vai atender (Wise, Tríade ou Swallow)&quot;, &quot;Um consultor da Wise&quot;, &quot;Depende do caso&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando um parceiro indica um cliente, quem faz o primeiro contato com esse cliente?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Registro e retorno&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Sim, num campo do CRM&quot;, &quot;Sim, numa anotação&quot;, &quot;Não&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando chega um cliente indicado por parceiro, vocês registram de qual parceiro ele veio?&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Em qual sistema vocês registram as oportunidades de venda?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Eu&quot;, &quot;O Guilherme&quot;, &quot;Ninguém avisa hoje&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quem avisa o parceiro sobre o andamento da indicação (primeiro contato, proposta, fechamento)?&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Eu aviso&quot;, &quot;O Guilherme avisa&quot;, &quot;O financeiro vê no sistema&quot;, &quot;Ainda não aconteceu&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando um cliente indicado fecha e paga a primeira mensalidade, como o financeiro fica sabendo que há comissão a pagar ao parceiro?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Para fechar&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Algo importante que não perguntamos?&quot;);
+  registrar(planilha, links, form, &quot;FO-03&quot;);
+  // FO-04
+  form = FormApp.create(&quot;Rodada 1: comissão ao parceiro (financeiro)&quot;);
+  form.setDescription(&quot;Estamos desenhando o mapa de como o trabalho do Programa Wise Partners acontece, para organizar os funis e as tarefas do portal. Não tem resposta certa ou errada e ninguém será avaliado pelas respostas: vale como funciona hoje, na prática. Leva cerca de 10 minutos.&quot;);
+  form.setProgressBar(true);
+  form.setAllowResponseEdits(true);
+  form.setConfirmationMessage(&#x27;Obrigado! Suas respostas vão direto para o mapa de processos.&#x27;);
+  form.addSectionHeaderItem().setTitle(&quot;Sobre você&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu nome&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Sua função ou cargo&quot;);
+  item.setRequired(true);
+  item = form.addTextItem();
+  item.setTitle(&quot;Área ou equipe em que você trabalha&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Seu e-mail (opcional, só para tirarmos dúvidas)&quot;);
+  form.addPageBreakItem().setTitle(&quot;Comissão ao parceiro&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Sim&quot;, &quot;Não&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Vocês já pagaram alguma comissão a um parceiro do Wise Partners?&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Conte o último pagamento de comissão por indicação (a um parceiro ou a outro fornecedor): quem pediu, o que foi conferido antes e como foi pago.&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Pelo extrato ou pelo sistema financeiro&quot;, &quot;O comercial avisa&quot;, &quot;O Guilherme avisa&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Como vocês ficam sabendo que o primeiro pagamento do cliente indicado foi compensado?&quot;);
+  item = form.addCheckboxItem();
+  item.setChoiceValues([&quot;Nota fiscal do parceiro&quot;, &quot;Contrato assinado com o parceiro&quot;, &quot;Aprovação do diretor&quot;, &quot;Aprovação do Guilherme&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.setTitle(&quot;O que precisa estar em mãos antes de pagar a comissão?&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Depois de receber a nota fiscal, em quantos dias o pagamento costuma sair?&quot;);
+  item = form.addTextItem();
+  item.setTitle(&quot;Em qual sistema o pagamento é registrado?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Indicações e comissão&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;O financeiro da Wise Makers&quot;, &quot;O financeiro da empresa que fechou o cliente (Wise, Tríade ou Swallow)&quot;, &quot;O Guilherme&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quem responde pelo pagamento da comissão ao parceiro?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Registro e retorno&quot;);
+  item = form.addMultipleChoiceItem();
+  item.setChoiceValues([&quot;Eu aviso&quot;, &quot;O Guilherme avisa&quot;, &quot;O financeiro vê no sistema&quot;, &quot;Ainda não aconteceu&quot;, &quot;Não sei / não é comigo&quot;]);
+  item.showOtherOption(true);
+  item.setTitle(&quot;Quando um cliente indicado fecha e paga a primeira mensalidade, como o financeiro fica sabendo que há comissão a pagar ao parceiro?&quot;);
+  form.addPageBreakItem().setTitle(&quot;Para fechar&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Quem mais deveríamos ouvir sobre estes assuntos? Diga nome, função e, se puder, contato.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Existe algum documento, planilha, sistema ou link que mostre como isso funciona? Cole aqui ou descreva onde está.&quot;);
+  item = form.addParagraphTextItem();
+  item.setTitle(&quot;Algo importante que não perguntamos?&quot;);
+  registrar(planilha, links, form, &quot;FO-04&quot;);
+  props.setProperty(&#x27;planilha&#x27;, planilha.getUrl());
+  Logger.log(&#x27;Pronto. Planilha com os links e as respostas: &#x27; + planilha.getUrl());
+}
+
+function registrar(planilha, links, form, id) {
+  form.setDestination(FormApp.DestinationType.SPREADSHEET, planilha.getId());
+  try { if (typeof form.setPublished === &#x27;function&#x27;) { form.setPublished(true); } } catch (e) {}
+  SpreadsheetApp.flush();
+  var aba = &#x27;&#x27;;
+  var abas = SpreadsheetApp.openById(planilha.getId()).getSheets();
+  for (var i = 0; i &lt; abas.length; i++) {
+    var url = abas[i].getFormUrl();
+    if (url &amp;&amp; url.indexOf(form.getId()) &gt;= 0) { abas[i].setName(id); aba = id; }
+  }
+  links.appendRow([id, form.getTitle(), form.getPublishedUrl(), form.getEditUrl(), aba]);
+  Logger.log(id + &#x27;: &#x27; + form.getPublishedUrl());
+}
+</textarea>
+  </details>
+</main>
+<script>
+const btn = document.getElementById('copiar'), estado = document.getElementById('estado'), area = document.getElementById('codigo');
+btn.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(area.value); estado.textContent = 'Código copiado'; }
+  catch (e) { area.closest('details').open = true; area.focus(); area.select(); estado.textContent = 'Código selecionado: use Ctrl+C'; }
+});
+</script>
