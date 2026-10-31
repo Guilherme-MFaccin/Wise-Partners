@@ -126,6 +126,25 @@
       "evidencias": [
         "EV-0085"
       ]
+    },
+    {
+      "id": "F-010",
+      "tema": "estrategia",
+      "texto": "Nenhum parceiro assinou o termo até 31/10/2026 e nenhum prospect chegou pelo canal de parcerias.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0103",
+        "EV-0105"
+      ]
+    },
+    {
+      "id": "F-011",
+      "tema": "recurso",
+      "texto": "O RD Station foi uma tentativa de registro que não se manteve; hoje não faz parte do processo.",
+      "status": "declarado",
+      "evidencias": [
+        "EV-0104"
+      ]
     }
   ],
   "ofertas": [
@@ -467,8 +486,10 @@
       "status": "declarado",
       "evidencias": [
         "EV-0053",
-        "EV-0023"
-      ]
+        "EV-0023",
+        "EV-0104"
+      ],
+      "descricao": "Usado numa tentativa de registro que não se manteve; fora do processo hoje."
     },
     {
       "id": "SI-02",
@@ -680,13 +701,16 @@
       "indicadores": [],
       "frequencia": "",
       "dores": [],
-      "regras": [],
-      "status": "contestado",
+      "regras": [
+        "O nível de entrada vem do potencial da carteira; depois da entrada, acompanha o resultado, com revisão trimestral"
+      ],
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0024",
         "EV-0069",
-        "EV-0070"
+        "EV-0070",
+        "EV-0109"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null
@@ -754,7 +778,9 @@
           "EV-0055",
           "EV-0090",
           "EV-0091",
-          "EV-0074"
+          "EV-0074",
+          "EV-0106",
+          "EV-0108"
         ],
         "raias": [
           "PA-01",
@@ -811,9 +837,7 @@
             "id": "g2",
             "tipo": "decisao",
             "nome": "Prospect quer seguir?",
-            "raia": "PA-01",
-            "status": "hipotese",
-            "descricao": "Os jeitos de terminar vêm do Playbook (perdas: não elegível, sem interesse); a pausa em nutrição vem da especificação 002. A ordem exata é dedução e está em pergunta."
+            "raia": "PA-01"
           },
           {
             "id": "s4",
@@ -1044,7 +1068,9 @@
         "status": "declarado",
         "evidencias": [
           "EV-0041",
-          "EV-0091"
+          "EV-0091",
+          "EV-0107",
+          "EV-0106"
         ],
         "raias": [
           "PA-01",
@@ -1062,6 +1088,14 @@
             "tipo": "inicio",
             "nome": "Próximo passo combinado na reunião",
             "raia": "PA-01"
+          },
+          {
+            "id": "t0",
+            "tipo": "tarefa",
+            "nome": "Criar o grupo de WhatsApp da parceria",
+            "raia": "PA-01",
+            "sistema": "SI-04",
+            "modo": "sistema"
           },
           {
             "id": "t1",
@@ -1085,9 +1119,7 @@
             "id": "t3",
             "tipo": "tarefa",
             "nome": "Registrar o ok na negociação",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "sistema"
+            "raia": "PA-01"
           },
           {
             "id": "t4",
@@ -1104,19 +1136,13 @@
             "raia": "PA-01"
           },
           {
-            "id": "f2",
-            "tipo": "fim",
-            "nome": "Assinatura não aprovada",
-            "raia": "PA-02",
-            "status": "hipotese",
-            "descricao": "O Playbook não diz o que acontece quando a assinatura não é aprovada; está em pergunta ao Igor."
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Ajustar a minuta",
+            "raia": "PA-01"
           }
         ],
         "ligacoes": [
-          {
-            "de": "i1",
-            "para": "t1"
-          },
           {
             "de": "t1",
             "para": "t2"
@@ -1131,17 +1157,29 @@
             "rotulo": "Sim"
           },
           {
-            "de": "g1",
-            "para": "f2",
-            "rotulo": "Não"
-          },
-          {
             "de": "t3",
             "para": "t4"
           },
           {
             "de": "t4",
             "para": "f1"
+          },
+          {
+            "de": "i1",
+            "para": "t0"
+          },
+          {
+            "de": "t0",
+            "para": "t1"
+          },
+          {
+            "de": "g1",
+            "para": "t5",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t5",
+            "para": "t2"
           }
         ],
         "mensagens": [
@@ -1154,6 +1192,11 @@
             "de": "t4",
             "para": "X1",
             "rotulo": "Termo para assinatura"
+          },
+          {
+            "de": "t0",
+            "para": "X1",
+            "rotulo": "Convite para o grupo"
           }
         ]
       }
@@ -1198,7 +1241,12 @@
           "de": "P-06"
         }
       ],
-      "saidas": [],
+      "saidas": [
+        {
+          "nome": "Parceiro ativado: primeira indicação com ICP confirmado que virou reunião",
+          "para": "P-16"
+        }
+      ],
       "cliente": "Empresa parceira",
       "sistemas": [
         "SI-04",
@@ -1208,26 +1256,28 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "contestado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0042",
         "EV-0072",
         "EV-0067",
         "EV-0055",
-        "EV-0071"
+        "EV-0071",
+        "EV-0110"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "tipo": "finalistico",
       "fluxo": {
-        "status": "contestado",
+        "status": "declarado",
         "evidencias": [
           "EV-0042",
           "EV-0072",
           "EV-0073",
           "EV-0071",
-          "EV-0055"
+          "EV-0055",
+          "EV-0110"
         ],
         "raias": [
           "PA-01"
@@ -1251,14 +1301,6 @@
             "nome": "Mover a negociação para Onboarding",
             "raia": "PA-01",
             "sistema": "SI-01",
-            "modo": "sistema"
-          },
-          {
-            "id": "t2",
-            "tipo": "tarefa",
-            "nome": "Criar o grupo de WhatsApp",
-            "raia": "PA-01",
-            "sistema": "SI-04",
             "modo": "sistema"
           },
           {
@@ -1320,14 +1362,6 @@
             "para": "t1"
           },
           {
-            "de": "t1",
-            "para": "t2"
-          },
-          {
-            "de": "t2",
-            "para": "t3"
-          },
-          {
             "de": "t3",
             "para": "s1"
           },
@@ -1362,6 +1396,10 @@
             "de": "g2",
             "para": "f2",
             "rotulo": "Não"
+          },
+          {
+            "de": "t1",
+            "para": "t3"
           }
         ],
         "mensagens": [
@@ -3208,6 +3246,87 @@
       "data": "2026-10-29",
       "trecho": "Toda indicação ganha uma nota de qualidade (Apêndice E) e passa por validação da Wise, que confirma a aderência ao ICP.",
       "local": "User Story 6"
+    },
+    {
+      "id": "EV-0103",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Nenhum ainda",
+      "local": "conversa/Q-0036"
+    },
+    {
+      "id": "EV-0104",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Atualmente no RD Station, mas lá foi uma tentativa falha de manter registrado, então não conta como parte do processo hoje.",
+      "local": "FO-05/Q-0031"
+    },
+    {
+      "id": "EV-0105",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Não tivemos nenhum prospect vindo do canal de parcerias.",
+      "local": "FO-01/Q-0001"
+    },
+    {
+      "id": "EV-0106",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Segue para minuta e assinatura. Segue para a assinatura, a pesar de nenhum possível parceiro chegou a assinar nenhum contrato. Além disso, criamos o grupo de whatsapp da parceria em conjunto para trocarmos figurinhas sobre o processo de assinatura do termo, tira-dúvidas, etc.",
+      "local": "conversa/Q-0037"
+    },
+    {
+      "id": "EV-0107",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Volta para ajuste da minuta e nova aprovação",
+      "local": "FO-01/Q-0006"
+    },
+    {
+      "id": "EV-0108",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "As duas coisas",
+      "local": "FO-05/Q-0033"
+    },
+    {
+      "id": "EV-0109",
+      "tipo": "validacao",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "As duas: entra pela carteira e depois acompanha o resultado. Acabei de identificar que precisaremos atualizar o playbook com as novas direções que viemos a fazer no web app. O playbook está desatualizado e não segue o que o webapp possibilita",
+      "local": "FO-01/Q-0004"
+    },
+    {
+      "id": "EV-0110",
+      "tipo": "validacao",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Vale a especificação: na ativação. Isso foi atualizado com o web app, mas o playbook acabou não acompanhando",
+      "local": "FO-01/Q-0005"
+    },
+    {
+      "id": "EV-0111",
+      "tipo": "formulario",
+      "fonte": "FO-06: Rodada 1, o que o patrocinador já sabe",
+      "pessoa": "PE-01",
+      "data": "2026-10-31",
+      "trecho": "Responda de alguma forma: você vai fazer o mapeamento do as-is e, com isso, projetar o to-be? Preciso do to-be perfeito com o web app",
+      "local": "FO-06/Q-0031"
     }
   ],
   "perguntas": [
@@ -3226,9 +3345,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [
+        "EV-0105"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0002",
@@ -3295,9 +3419,14 @@
       ],
       "rodada": 1,
       "bloco": "Duas regras que não batem",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [
+        "EV-0109"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0005",
@@ -3320,9 +3449,14 @@
       ],
       "rodada": 1,
       "bloco": "Duas regras que não batem",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [
+        "EV-0110"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0006",
@@ -3343,9 +3477,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": []
+      "respostas": [
+        "EV-0107"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0007",
@@ -3893,9 +4032,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-05",
-      "respostas": []
+      "respostas": [
+        "EV-0104"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0032",
@@ -3937,9 +4081,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-05",
-      "respostas": []
+      "respostas": [
+        "EV-0108"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0034",
@@ -4002,9 +4151,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": []
+      "respostas": [
+        "EV-0103"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0037",
@@ -4026,9 +4180,14 @@
       ],
       "rodada": 1,
       "bloco": "Como o programa está hoje",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": []
+      "respostas": [
+        "EV-0106"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ]
     },
     {
       "id": "Q-0038",
@@ -4240,10 +4399,12 @@
         "EV-0024",
         "EV-0069"
       ],
-      "status": "aberta",
+      "status": "resolvida",
       "pergunta": "Q-0004",
-      "resolucao": "",
-      "evidencias_resolucao": []
+      "resolucao": "O patrocinador, dono do processo, decidiu: as duas regras valem. O nível entra pela carteira e depois acompanha o resultado (EV-0109).",
+      "evidencias_resolucao": [
+        "EV-0109"
+      ]
     },
     {
       "id": "CT-02",
@@ -4253,10 +4414,12 @@
         "EV-0055",
         "EV-0071"
       ],
-      "status": "aberta",
+      "status": "resolvida",
       "pergunta": "Q-0005",
-      "resolucao": "",
-      "evidencias_resolucao": []
+      "resolucao": "O patrocinador, dono do processo, decidiu: vale a especificação, o onboarding termina na ativação (EV-0110).",
+      "evidencias_resolucao": [
+        "EV-0110"
+      ]
     }
   ],
   "decisoes": [
@@ -4319,6 +4482,27 @@
       "evidencias": [
         "EV-0007"
       ]
+    },
+    {
+      "id": "DE-07",
+      "data": "2026-10-31",
+      "texto": "A especificação 002 e o web app prevalecem sobre o Playbook v3.1, que está desatualizado e será atualizado.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0109",
+        "EV-0110"
+      ]
+    },
+    {
+      "id": "DE-08",
+      "data": "2026-10-31",
+      "texto": "Além do as-is, o mapeamento entrega o to-be completo, alinhado ao web app, num mapa separado (mapeamentos/wise-partners-to-be).",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0111"
+      ]
     }
   ],
   "glossario": [
@@ -4380,6 +4564,10 @@
     {
       "data": "2026-10-31",
       "evento": "FO-06 criado para o patrocinador; FO-01 a FO-05 suspensos até a resposta dele"
+    },
+    {
+      "data": "2026-10-31",
+      "evento": "8 respostas do FO-06 registradas; CT-01 e CT-02 resolvidas pelo patrocinador"
     }
   ]
 }

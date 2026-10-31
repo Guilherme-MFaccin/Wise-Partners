@@ -1,0 +1,57 @@
+{
+  "schema": "mapa-processos/1.0",
+  "organizacao": {
+    "nome": "Programa Wise Partners (to-be)",
+    "slug": "programa-wise-partners-to-be",
+    "descricao": "",
+    "setor": "",
+    "objetivo_do_mapeamento": "",
+    "escopo": {
+      "inclui": [],
+      "exclui": []
+    },
+    "patrocinador": null,
+    "consultor": "Claude, com Guilherme Faccin",
+    "niveis": [
+      "Organização",
+      "Macroprocesso",
+      "Processo",
+      "Subprocesso",
+      "Atividade",
+      "Tarefa"
+    ],
+    "criado_em": "2026-10-31",
+    "atualizado_em": "2026-10-31"
+  },
+  "configuracao": {},
+  "modelo_operacional": {
+    "integracao": null,
+    "padronizacao": null,
+    "tipo": null,
+    "justificativa": "",
+    "status": "hipotese",
+    "evidencias": []
+  },
+  "fatos": [],
+  "ofertas": [],
+  "cadeias_de_valor": [],
+  "areas": [],
+  "papeis": [],
+  "pessoas": [],
+  "sistemas": [],
+  "objetos": [],
+  "processos": [],
+  "evidencias": [],
+  "perguntas": [],
+  "formularios": [],
+  "contradicoes": [],
+  "decisoes": [],
+  "glossario": [],
+  "ideias": [],
+  "historico": [
+    {
+      "data": "2026-10-31",
+      "evento": "Mapeamento iniciado"
+    }
+  ]
+}
