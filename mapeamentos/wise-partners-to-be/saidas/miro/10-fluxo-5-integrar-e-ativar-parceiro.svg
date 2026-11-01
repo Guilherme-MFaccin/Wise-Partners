@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_27" transform="translate(0,12136)" data-frame="5 Integrar e ativar parceiro">
+<g id="f_P_26" transform="translate(0,12412)" data-frame="5 Integrar e ativar parceiro">
 <rect data-type="frame" x="0" y="0" width="2608" height="1058" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">5 Integrar e ativar parceiro</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="5 Integrar e ativar parceiro">
@@ -12,7 +12,7 @@ flowchart LR
       n_i1(["Termo assinado"]):::confirmado
       n_s1[["Preparar a entrada do parceiro"]]:::confirmado
       n_s2[["Conduzir o encontro de alinhamento"]]:::confirmado
-      n_s3[["Ensinar o parceiro a indicar"]]:::hipotese
+      n_s3[["Ensinar o parceiro a indicar"]]:::confirmado
       n_g1{"Parceiro ativado em 90 dias?"}:::confirmado
       n_t1["Estender o plano até 120 dias"]:::confirmado
       n_g2{"Parceiro ativado em 120 dias?"}:::confirmado

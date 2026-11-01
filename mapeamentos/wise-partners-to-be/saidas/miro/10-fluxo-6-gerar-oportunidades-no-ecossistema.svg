@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_32" transform="translate(2928,12136)" data-frame="6 Gerar oportunidades no ecossistema">
+<g id="f_P_31" transform="translate(2928,12412)" data-frame="6 Gerar oportunidades no ecossistema">
 <rect data-type="frame" x="0" y="0" width="3068" height="1258" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">6 Gerar oportunidades no ecossistema</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="6 Gerar oportunidades no ecossistema">
@@ -14,7 +14,7 @@ flowchart LR
       n_g1{"Oportunidade válida?"}:::confirmado
       n_t1["Explicar o motivo ao parceiro"]:::confirmado
       n_s2[["Entregar o lead ao closer"]]:::confirmado
-      n_s3[["Fechar o ciclo com o parceiro"]]:::hipotese
+      n_s3[["Fechar o ciclo com o parceiro"]]:::confirmado
       n_s5[["Checar o cliente aos 6 e 12 meses"]]:::confirmado
       n_f1(["Oportunidade recusada"]):::confirmado
       n_f2(["Cliente fechado, comissão paga e checado"]):::confirmado

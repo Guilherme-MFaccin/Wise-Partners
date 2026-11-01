@@ -4,23 +4,23 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro entra num tipo de risco"]):::hipotese
-      n_g1{"Qual é o tipo?"}:::hipotese
-      n_t1["Levar uma oportunidade pronta ao parceiro"]:::hipotese
-      n_t2["Ouvir o parceiro e decidir em 15 dias se vale"]:::hipotese
-      n_t3["Recrutar de novo com um foco único"]:::hipotese
-      n_t4["Decidir sem insistir"]:::hipotese
-      n_e1>"30 dias"]:::hipotese
-      n_g2{"O Ritmo voltou a ser alto?"}:::hipotese
-      n_t5["Sugerir o desligamento"]:::hipotese
-      n_t6["Decidir o desligamento com motivo"]:::hipotese
-      n_g3{"Desligar?"}:::hipotese
-      n_t7["Comunicar o encerramento em conversa e por escrito"]:::hipotese
-      n_e2>"30 dias de aviso"]:::hipotese
-      n_t8["Encerrar a parceria e revogar acessos"]:::hipotese
-      n_f1(["Parceiro retomado"]):::hipotese
-      n_f2(["Parceiro mantido em observação"]):::hipotese
-      n_f3(["Parceria encerrada"]):::hipotese
+      n_i1(["Parceiro entra num tipo de risco"]):::confirmado
+      n_g1{"Qual é o tipo?"}:::confirmado
+      n_t1["Levar uma oportunidade pronta ao parceiro"]:::confirmado
+      n_t2["Ouvir o parceiro e decidir em 15 dias se vale"]:::confirmado
+      n_t3["Recrutar de novo com um foco único"]:::confirmado
+      n_t4["Decidir sem insistir"]:::confirmado
+      n_e1>"30 dias"]:::confirmado
+      n_g2{"O Ritmo voltou a ser alto?"}:::confirmado
+      n_t5["Sugerir o desligamento"]:::confirmado
+      n_t6["Decidir o desligamento com motivo"]:::confirmado
+      n_g3{"Desligar?"}:::confirmado
+      n_t7["Comunicar o encerramento em conversa e por escrito"]:::confirmado
+      n_e2>"30 dias de aviso"]:::confirmado
+      n_t8["Encerrar a parceria e revogar acessos"]:::confirmado
+      n_f1(["Parceiro retomado"]):::confirmado
+      n_f2(["Parceiro mantido em observação"]):::confirmado
+      n_f3(["Parceria encerrada"]):::confirmado
     end
     ext_X1[/"Parceiro"/]
     n_i1 --> n_g1

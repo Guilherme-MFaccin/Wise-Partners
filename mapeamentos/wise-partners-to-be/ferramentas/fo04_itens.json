@@ -1,0 +1,517 @@
+[
+ {
+  "id": "R4-Q-0014",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "O CAC decide tudo desde o primeiro trimestre, ou o valor ao parceiro vem antes e o CAC passa a decidir a partir da Tração?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter: o CAC do Wise Partners decide desde o início",
+   "Meio-termo: na Experimentação os portões medem comportamento (ativados, desfechos devolvidos, gestos de valor) e o CAC decide a partir da Tração",
+   "Seguir os livros: valor devolvido ao parceiro e CAC lado a lado no painel, com o mesmo peso, em todas as fases"
+  ],
+  "contexto": [
+   "Você pediu que as suas aprovações não pesassem mais que os livros. Esta é a divergência mais funda que apareceu ao reler tudo com essa regra. A sua decisão: o programa é um canal de aquisição mais barato que os canais ativos, e tudo se julga pelo CAC. Com a resposta da Rodada 3, o CAC é só o do Wise Partners, sem comparar com outros canais.",
+   "Quatro livros dizem outra coisa sobre a ordem. Keystone: criar valor antes de capturar, e o hub que só extrai vira dono de pedágio. Give and Take: a vantagem de quem dá cresce com o tempo, e dar esperando retorno rápido costuma não funcionar. Customer Success: lealdade nasce de valor entregue. Business of Belonging: comunidade só entrega resultado de negócio depois de seis a doze meses, e quem vende de forma direta perde a confiança.",
+   "Nenhum deles diz que o CAC é a métrica errada. Dizem que, nos primeiros trimestres, ele mede pouco e pode empurrar decisões que afastam o parceiro: cobrar indicação cedo demais, cortar quem ainda não trouxe cliente. Refiz os portões das fases sem comparar com outros canais: na Experimentação só comportamento e 3 clientes fechados; na Tração, o CAC caindo dois trimestres seguidos e abaixo de um terço do LTV dos mesmos clientes. O um terço é inferência minha, para calibrar com dados."
+  ],
+  "logica": "Se o meio-termo for aceito, o CAC continua sendo a métrica-mãe e o motivo de existir do programa, mas só começa a decidir quando há dados suficientes para ele significar alguma coisa. Até lá, o que decide é se o parceiro está recebendo valor e se está agindo. Minha recomendação: Meio-termo.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 100",
+    "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 20",
+    "trecho": "Being a giver is not good for a 100-yard dash, but it’s valuable in a marathon"
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 136",
+    "trecho": "você aprende que os clientes serão leais por causa do valor que extraem de seu produto, não do relacionamento que possam ter com alguém na organização."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 35",
+    "trecho": "How it creates value, belonging, and emotional safety for members"
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 137",
+    "trecho": "A relação entre critério e benefício é muito semelhante à relação de CAC versus LTV."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 144\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">O CAC do Wise Partners decide</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">tudo, desde o primeiro</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">trimestre.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"120\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">CAC continua a métrica-mãe. Na</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Experimentação os portões</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">medem comportamento; o CAC</text><text x=\"239\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">decide a partir da Tração,</text><text x=\"239\" y=\"120\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">quando há dados.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"120\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Valor ao parceiro vem antes da</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">captura; dar esperando retorno</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">rápido não funciona;</text><text x=\"460\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">comunidade rende depois de 6 a</text><text x=\"460\" y=\"120\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">12 meses.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0015",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "A comissão em dinheiro, igual para todos e paga só na aquisição, continua sendo o único incentivo financeiro?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter a regra única só na aquisição; o reconhecimento não monetário que você já adotou basta",
+   "Meio-termo: dinheiro igual para todos, e o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio), revendo a regra depois de dois trimestres com dados de permanência",
+   "Seguir os livros: somar à regra única um bônus pequeno e igual para todos quando o cliente indicado completa 12 meses"
+  ],
+  "contexto": [
+   "A sua decisão: comissão por regra única, sem exceção (40% da primeira mensalidade na Wise Makers e na Tríade, 6% do projeto na Swallow). Simplicidade para não reduzir a adesão.",
+   "Cinco livros discordam em pontos diferentes. Referral Engine e Business of Belonging: dinheiro é a motivação mais fraca para indicar e troca a norma social pela de mercado. O Método Octo: modelos baseados só em comissionamento podem ser limitantes. Strategic Alliances: além da comissão, premiar comportamento, como permanência do parceiro e frequência. Platform Revolution: o efeito de preço some quando o incentivo acaba.",
+   "Dois livros apoiam a sua decisão em parte. Bech: regra de comissão simples e estável, sem mudar com frequência. Referral Engine: separar dinheiro de abordagem, com o dinheiro único e a abordagem variando por tipo. Na Rodada 3 você adotou reconhecimento por status, rede e acesso, separado da comissão. Isso já resolve metade da divergência. O que sobra é a comissão premiar só a aquisição, e não a permanência do cliente."
+  ],
+  "logica": "A comissão paga a entrada do cliente; o programa quer também que ele fique, porque cliente que fica baixa o CAC real. Um bônus de permanência igual para todos mantém a regra única e alinha o incentivo ao LTV. Variar o não monetário mantém o dinheiro intocado. Minha recomendação: Meio-termo.",
+  "citacoes": [
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 159",
+    "trecho": "On the other hand, when the motivation is monetary, they will view it as a market transaction, and the motivation is often significantly lower"
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 126",
+    "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation."
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 128",
+    "trecho": "modelos de parceria que são baseados apenas em comissionamento podem ser limitantes"
+   },
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 121",
+    "trecho": "various behavioural incentives were put in place including partner retention, breadth of portfolio sold by a partner and frequency of purchase"
+   },
+   {
+    "livro": "Building Successful Partner Channels in the software industry",
+    "pagina": "p. 71",
+    "trecho": "Keep it simple and don’t change it too frequently."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 144\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Comissão em dinheiro, igual</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">para todos, paga só quando o</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">cliente entra.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"120\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Dinheiro igual para todos; o</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">não monetário varia por tipo;</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">regra revista com dois</text><text x=\"239\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">trimestres de dados de</text><text x=\"239\" y=\"120\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">permanência.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Dinheiro sozinho é motivação</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">fraca e passageira; premiar</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">também permanência e</text><text x=\"460\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">comportamento.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0016",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "Como você fica sabendo que uma oportunidade mudou de etapa, para devolver ao parceiro, se o closer não registra nada?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O portal avisa quando a oportunidade fica 15 dias sem etapa nova, e só aí eu pergunto ao closer (exceção)",
+   "Combino com cada closer um aviso curto por WhatsApp a cada etapa, sem portal",
+   "As duas coisas: o aviso do closer quando acontece e o alerta do portal quando nada acontece",
+   "Manter como está: falo com o closer só quando há indicação ou proposta nova"
+  ],
+  "contexto": [
+   "A sua decisão: o lead vai direto ao closer da empresa do grupo, sem SLA e sem sistema para ele, e você conversa com o closer quando há indicação ou proposta nova. Na Rodada 3 você também aprovou devolver ao parceiro cada mudança de etapa.",
+   "Aí está a divergência: para devolver cada etapa, alguém precisa saber que a etapa mudou. Referral Engine diz para fechar o ciclo com quem indicou em cada fase, não só no fechamento. Give and Take: quem dá se esgota quando não vê o impacto do que deu. Channel Advantage: cada passagem de bastão precisa de dono, prazo e registro. Customer Success: todo sinal precisa virar ação com dono e prazo.",
+   "Nenhum livro exige que o closer entre no portal. Pedem só que o parceiro nunca fique sem notícia. Um combinado leve com os closers e um alerta de oportunidade parada cumprem isso sem criar SLA nem reunião."
+  ],
+  "logica": "Sem uma fonte para a etapa, a promessa de fechar o ciclo vira esforço de memória. O alerta de oportunidade parada transforma o silêncio em exceção na sua fila, que é o princípio que você já aprovou. Minha recomendação: As duas coisas.",
+  "citacoes": [
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 191",
+    "trecho": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 121",
+    "trecho": "it has less to do with the amount of giving and more with the amount of feedback about the impact of that giving"
+   },
+   {
+    "livro": "The Channel Advantage",
+    "pagina": "p. 187",
+    "trecho": "Documented, specific hand-off procedures are a must in an integrated channel system."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 128",
+    "trecho": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 128\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Lead direto ao closer;</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">conversa só quando há</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">indicação ou proposta nova.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Closer avisa por WhatsApp</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">quando a etapa muda; o portal</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">alerta a oportunidade parada</text><text x=\"239\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">há 15 dias.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Quem indicou precisa saber de</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">cada etapa; cada passagem tem</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">registro e sinal que vira</text><text x=\"460\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">ação.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0017",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "Os três pilares seguem abertos para todos, ou a Base Ativa começa com poucos parceiros-piloto?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter: Prateleira, Base Ativa e indicações abertas para todos desde o primeiro parceiro",
+   "Meio-termo: os três abertos, mas a Base Ativa só com 2 ou 3 parceiros-piloto até virar um formato que se repete",
+   "Meio-termo por parceiro: cada um começa pela porta que escolher e abre a próxima depois do primeiro valor",
+   "Os dois meio-termos juntos"
+  ],
+  "contexto": [
+   "A sua decisão: os três pilares entram juntos desde o primeiro parceiro. Na Rodada 3 você aprovou que o portão de fase controla o ritmo de escala (parceiros, categorias, regiões), não a abertura dos pilares.",
+   "Cinco livros dizem para provar valor numa escala pequena antes de abrir tudo. Keystone: liquidez em escala pequena antes de investir para escalar. Business of Belonging: comece pequeno e faça o que não escala. Winning the Right Game: o ecossistema mínimo viável é a menor configuração que gera evidência para atrair o próximo parceiro. O Método Octo: a primeira versão do programa é um teste controlado com poucos participantes. Nearbound: não ative todos de uma vez, isso decepciona os primeiros.",
+   "O pilar mais pesado é a Base Ativa: 12 semanas, 6 encontros e um evento por ciclo. Com um Gerente só, abrir a Base Ativa para todos pode consumir as horas que deveriam ir para ativar parceiros. Prateleira e indicação custam pouco por parceiro."
+  ],
+  "logica": "O meio-termo mantém a sua decisão comercial (os três pilares existem e são oferecidos) e aplica a regra dos livros só onde o custo de servir é alto. Quando a Base Ativa tiver um formato que se repete, abre para todos. Minha recomendação: Os dois meio-termos juntos.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 206",
+    "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 72",
+    "trecho": "Every community starts at the seed stage. Take your time in this stage and don't worry about starting small! Small is a superpower."
+   },
+   {
+    "livro": "Winning the Right Game",
+    "pagina": "p. 83",
+    "trecho": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners."
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 127",
+    "trecho": "a primeira versão do programa será o seu MVP e deve ser um teste controlado, com um número reduzido de participantes"
+   },
+   {
+    "livro": "Nearbound and the Rise of the Who Economy",
+    "pagina": "p. 90",
+    "trecho": "Resist the temptation to activate all potential evangelists at once. This can strain resources and disappoint early partners."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 128\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Prateleira, Base Ativa e</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">indicações abertas para todos</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">desde o início.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Os três abertos, Base Ativa</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">com 2 ou 3 pilotos; cada</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">parceiro começa pela porta que</text><text x=\"239\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">escolher.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Provar valor em escala pequena</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">antes de abrir tudo; não</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">ativar todos de uma vez.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0018",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "Você continua dono de todas as tarefas sem limite, ou o programa ganha um teto de parceiros por pessoa e, na Tração, parceiros embaixadores que assumem parte dos rituais?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter: eu sou dono de tudo, sem teto",
+   "Dono único com teto: acima de um número de parceiros acompanhados de perto (calculado pelas horas), o parceiro passa ao atendimento pelo portal e pela comunidade",
+   "Teto agora e, na Tração, o papel de parceiro embaixador, que conduz parte dos rituais da comunidade e da Base Ativa com roteiro pronto"
+  ],
+  "contexto": [
+   "A sua decisão: o Gerente de Parcerias é dono de todas as tarefas do portal, mesmo das executadas por outros.",
+   "Aqui os livros se dividem. Apoiam você: o Método Octo, que prefere atividades centralizadas em poucas pessoas no início para encurtar o ciclo de aprendizado, e Customer Success, que pede um dono único para a retenção. Discordam: Business of Belonging, para quem distribuir controle com trilhos é o que permite escalar, e Give and Take, que descreve o doador que espalha o tempo em tudo e se esgota.",
+   "Customer Success dá a ponte: dono único, mas com teto de clientes por gerente na atenção alta e o resto em atendimento um para muitos. É a atenção proporcional que você já aprovou, com um número."
+  ],
+  "logica": "O teto transforma o limite das suas horas numa regra visível, em vez de uma sobrecarga silenciosa. O embaixador é o primeiro passo para o programa não depender de uma pessoa só, que é a robustez que a saúde do ecossistema mede. Minha recomendação: Teto agora e embaixador na Tração.",
+  "citacoes": [
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 158",
+    "trecho": "No início do programa, é preferível que atividades-chave estejam centralizadas em poucas pessoas para encurtar o ciclo de feedback e facilitar o progresso da operação."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 52",
+    "trecho": "Quando muita gente é dona ninguém manda nada"
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 66",
+    "trecho": "Aqui há sem dúvida uma hierarquia de valor do cliente e do correspondente tipo de atendimento para cada nível."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 31",
+    "trecho": "The idea is to create guide rails within which members will contribute."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 126",
+    "trecho": "She proposed that instead of sprinkling their giving, they could chunk it"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 128\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"72\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">O Gerente é dono de todas as</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">tarefas, sem limite.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Dono único com teto de</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">parceiros de atenção alta; na</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Tração, parceiros embaixadores</text><text x=\"239\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">com roteiro.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"104\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Octo e Customer Success: dono</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">único no início. Belonging e</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Give and Take: distribuir para</text><text x=\"460\" y=\"104\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">não esgotar.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0019",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "O parceiro entra já em Elite, Premium ou Select pela base de clientes que declara, ou todos entram no mesmo nível e sobem pelo resultado?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter a especificação: nível de entrada pela faixa de clientes no ICP",
+   "Seguir Bech: todos entram em Select e sobem na hora em que cumprem os requisitos do nível de cima",
+   "Meio-termo: a faixa de clientes sugere o nível, mas o pacote do nível só abre depois da ativação"
+  ],
+  "contexto": [
+   "A especificação 002 define o nível de entrada pela quantidade de clientes no ICP que o candidato declara: Elite com 50 ou mais, Premium de 15 a 49, Select abaixo de 15, ajustado pela nota de qualidade.",
+   "Bech diz o contrário: começar com uma estrutura simples e diferenciar só quando o desempenho real se mostrar diferente. E alerta: com poucos parceiros, todos querem o nível de cima, e depois é preciso rebaixar quem não entrega, o que desgasta a relação. O Método Octo apoia três níveis como a forma mais simples, mas fala da estrutura, não de como se entra nela.",
+   "A subida na hora, que você já aprovou, resolve o lado de quem entrega. A divergência é só sobre quem ainda não entregou nada."
+  ],
+  "logica": "Nível por promessa dá benefício antes do valor; nível por resultado dá benefício depois. O segundo evita rebaixar e combina com o princípio de que o parceiro só conta quando ativa. Minha recomendação: Meio-termo.",
+  "citacoes": [
+   {
+    "livro": "Building Successful Partner Channels in the software industry",
+    "pagina": "p. 73",
+    "trecho": "Start with a simple channel partner structure and then differentiate later as the partners actually prove to perform very differently."
+   },
+   {
+    "livro": "Building Successful Partner Channels in the software industry",
+    "pagina": "p. 73",
+    "trecho": "leaves us with the challenge of downgrading the channel partners as they fail to deliver to the thresholds."
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 134",
+    "trecho": "uma forma simples e eficiente de operar essa estratégia é utilizar três níveis"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 112\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Especificação: Elite, Premium</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">ou Select na entrada, pela</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">base de clientes declarada.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo recomendado</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">A base sugere o nível, mas o</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">pacote só abre depois da</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">ativação.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Bech: começar simples e</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">diferenciar pelo desempenho</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">real; senão, rebaixar depois.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0023",
+  "bloco": "Onde os livros discordam de você",
+  "texto": "O portal mede o equilíbrio entre o que cada parceiro dá e recebe, ou o programa dá primeiro sem manter placar?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Manter o que aprovei: o equilíbrio entra na Relação do cubo e aparece na comunidade",
+   "Meio-termo: o portal mede o equilíbrio só para a leitura interna do cubo, e o parceiro nunca vê placar; na comunidade aparece o dar, não a conta",
+   "Seguir Never Eat Alone: tirar o equilíbrio do cubo; a Relação fica só com o pulso e o retorno mútuo"
+  ],
+  "contexto": [
+   "Esta divergência é entre dois livros, e a sua aprovação da Rodada 3 ficou do lado de um deles. Give and Take mostra que a maior parte do dar nasce de um pedido explícito, que o dar visível faz os outros darem, e que quem só toma se reconhece pelo comportamento. Por isso o cubo mede o equilíbrio entre indicações enviadas e recebidas, e você aprovou.",
+   "Never Eat Alone diz o contrário na superfície: é melhor dar antes de receber, e nunca manter placar. A moeda da rede é a generosidade, não a ganância. Mas o mesmo livro, quando fala de trocar redes com outra pessoa, pede que os dois sejam parceiros iguais, que dão tanto quanto recebem.",
+   "A conciliação entre os dois está em quem vê a conta. Give and Take quer o dar visível, não o saldo de cada um. Ferrazzi condena o placar como atitude com o outro, não a gestão do relacionamento."
+  ],
+  "logica": "Medir por dentro e mostrar só o dar mantém a utilidade do dado para encontrar quem só toma, sem transformar a comunidade numa contabilidade de favores, que é a troca de norma social por norma de mercado que Business of Belonging também condena. Minha recomendação: Meio-termo.",
+  "citacoes": [
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 33",
+    "trecho": "Bottom line: It's better to give before you receive. And never keep score."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 153",
+    "trecho": "You and the person you are sharing contacts with must be equal partners that give as much as they get."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 173",
+    "trecho": "Research shows that at work, the vast majority of giving that occurs between people is in response to direct requests for help"
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 138",
+    "trecho": "Giving and taking are based on our motives and values, and they’re choices that we make regardless of whether our personalities trend agreeable or disagreeable"
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 126",
+    "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 112\" role=\"img\" aria-label=\"Sua decisão, meio-termo e livros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"4\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b2\"/><text x=\"18\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Sua decisão</text><text x=\"18\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Rodada 3: o equilíbrio entre</text><text x=\"18\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">dar e receber entra no cubo e</text><text x=\"18\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">fica visível.</text><rect x=\"225\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b hi\"/><text x=\"239\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Meio-termo que concilia os dois</text><text x=\"239\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">Medido só por dentro, para o</text><text x=\"239\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">cubo; o parceiro vê o dar,</text><text x=\"239\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">nunca o saldo.</text><rect x=\"446\" y=\"10\" width=\"210\" height=\"88\" rx=\"10\" class=\"b\"/><text x=\"460\" y=\"34\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">O que os livros dizem</text><text x=\"460\" y=\"56\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Give and Take: dar visível.</text><text x=\"460\" y=\"72\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">Never Eat Alone: dar primeiro</text><text x=\"460\" y=\"88\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">e nunca manter placar.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0020",
+  "bloco": "O ritual com o Igor",
+  "texto": "No painel da semana com o Igor, quais números entram? Escolha no máximo cinco.",
+  "tipo": "multipla",
+  "opcoes": [
+   "CAC do Wise Partners no trimestre e a tendência",
+   "Parceiros ativos, novos e em risco",
+   "Oportunidades abertas por etapa e as paradas há mais de 15 dias",
+   "Clientes fechados e receita vinda de parceiros no trimestre",
+   "Parceiros que mudaram de tipo no cubo nesta semana",
+   "Distância do próximo portão de fase",
+   "Desfechos devolvidos aos parceiros (quantas oportunidades tiveram retorno)",
+   "Horas dedicadas ao programa na semana"
+  ],
+  "contexto": [
+   "Você pediu um painel relativamente simples, com informação estratégica, que ao mesmo tempo deixe falar de cada caso. Por isso o ritual semanal virou Revisar o programa com o Igor: substitui a revisão com os closers e o resumo mensal, que saíram.",
+   "A proposta tem duas partes. Em cima, poucos números estratégicos, os mesmos toda semana. O Método Octo conta que a Caju reduziu mais de 60 indicadores para 6 por fase, e recomenda não sobrecarregar o time com métricas. Embaixo, a lista de casos: cada parceiro que mudou de tipo, cada oportunidade parada e cada decisão pendente, com o histórico e a jogada sugerida, para vocês decidirem o próximo passo ali mesmo.",
+   "Customer Success acrescenta o motivo do ritual: a retenção precisa de voz no topo e de métricas visíveis para quem decide. O painel dá isso ao Igor sem pedir aprovação criteriosa dele."
+  ],
+  "logica": "Cinco números cabem numa tela e numa conversa de meia hora. O resto da conversa é caso a caso, que é onde as decisões de verdade acontecem.",
+  "citacoes": [
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 191",
+    "trecho": "o time elencou uma versão resumida com os 6 principais indicadores de cada fase da jornada do parceiro, que geram o maior impacto nos outros objetivos."
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 192",
+    "trecho": "Crie uma estrutura de métricas sólida, mas não sobrecarregue a equipe com um grande número delas."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 52",
+    "trecho": "Quando muita gente é dona ninguém manda nada"
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 141",
+    "trecho": "So what’s your referral number? What percentage of your clients refer business?"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 264\" role=\"img\" aria-label=\"Esboço do painel da semana\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"8\" y=\"18\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Painel da semana</text><text x=\"652\" y=\"18\" font-size=\"11\" text-anchor=\"end\" class=\"mu\">Parte de cima: até 5 números, sempre os mesmos</text><rect x=\"6\" y=\"30\" width=\"124\" height=\"62\" rx=\"8\" class=\"b\"/><text x=\"16\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">CAC do trimestre</text><text x=\"16\" y=\"72\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">tendência</text><rect x=\"137\" y=\"30\" width=\"124\" height=\"62\" rx=\"8\" class=\"b\"/><text x=\"147\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Parceiros ativos</text><text x=\"147\" y=\"72\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">novos, em risco</text><rect x=\"268\" y=\"30\" width=\"124\" height=\"62\" rx=\"8\" class=\"b\"/><text x=\"278\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Oportunidades</text><text x=\"278\" y=\"72\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">por etapa, paradas</text><rect x=\"399\" y=\"30\" width=\"124\" height=\"62\" rx=\"8\" class=\"b\"/><text x=\"409\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Clientes e receita</text><text x=\"409\" y=\"72\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">no trimestre</text><rect x=\"530\" y=\"30\" width=\"124\" height=\"62\" rx=\"8\" class=\"b\"/><text x=\"540\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Próximo portão</text><text x=\"540\" y=\"72\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">distância</text><text x=\"8\" y=\"120\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Lista de casos da semana</text><text x=\"652\" y=\"120\" font-size=\"11\" text-anchor=\"end\" class=\"mu\">Parte de baixo: caso a caso, com a decisão</text><rect x=\"6\" y=\"132\" width=\"648\" height=\"28\" rx=\"6\" class=\"b\"/><text x=\"16\" y=\"150\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Parceiro A</text><text x=\"170\" y=\"150\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">mudou para Âncora esfriando</text><text x=\"420\" y=\"150\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">jogada: levar oportunidade pronta</text><rect x=\"6\" y=\"166\" width=\"648\" height=\"28\" rx=\"6\" class=\"b2\"/><text x=\"16\" y=\"184\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Oportunidade B</text><text x=\"170\" y=\"184\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">parada há 18 dias</text><text x=\"420\" y=\"184\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">jogada: perguntar ao closer</text><rect x=\"6\" y=\"200\" width=\"648\" height=\"28\" rx=\"6\" class=\"b\"/><text x=\"16\" y=\"218\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Parceiro C</text><text x=\"170\" y=\"218\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">90 dias sem ativar</text><text x=\"420\" y=\"218\" font-size=\"11.5\" text-anchor=\"start\" class=\"tx\">jogada: estender ou encerrar</text><text x=\"8\" y=\"254\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Nomes e números ilustrativos. A decisão de cada caso fica registrada no portal.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0021",
+  "bloco": "O ritual com o Igor",
+  "texto": "O Igor aparece para os parceiros como a voz do programa, por exemplo abrindo o encontro trimestral?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, ele abre o encontro trimestral",
+   "Sim, ele grava uma mensagem por trimestre",
+   "Não, a voz do programa sou eu",
+   "Não sei: perguntar ao Igor"
+  ],
+  "contexto": [
+   "Na Rodada 2 você decidiu que o Igor só assina, e na Rodada 3, que ele revê o programa com você toda semana. Falta um ponto que dois livros levantam: quem é a voz do programa para os parceiros.",
+   "Referral Engine vê o dono da empresa como contador de histórias e guardião do sistema de indicação. Customer Success diz que o compromisso precisa vir de cima. Nenhum dos dois pede aprovação do Igor, só presença."
+  ],
+  "logica": "Uma fala curta do Diretor por trimestre mostra aos parceiros que o programa tem peso na empresa, sem tirar nada da sua autonomia.",
+  "citacoes": [
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 52",
+    "trecho": "Quando muita gente é dona ninguém manda nada"
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 12",
+    "trecho": "Boring people, products, and companies are hard to refer!"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 110\" role=\"img\" aria-label=\"Papel do Igor\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"24\" width=\"190\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"105.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Igor: termo e aviso</text><text x=\"105.0\" y=\"59.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">(assina)</text><rect x=\"235\" y=\"24\" width=\"190\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"330.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Igor e Gerente:</text><text x=\"330.0\" y=\"59.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">painel semanal</text><rect x=\"460\" y=\"24\" width=\"190\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"555.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">Igor para os parceiros:</text><text x=\"555.0\" y=\"59.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">a voz do programa?</text><line x1=\"200\" y1=\"49\" x2=\"233\" y2=\"49\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"425\" y1=\"49\" x2=\"458\" y2=\"49\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"10\" y=\"100\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">O que já está decidido, em cinza; a pergunta, em azul.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0024",
+  "bloco": "Never Eat Alone",
+  "texto": "Do sistema de relacionamento de Never Eat Alone, o que entra na rotina do programa?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Cadência de contato por importância: mensal para atenção alta, trimestral para os demais ativos, duas a três vezes por ano para candidatos e ex-parceiros",
+   "Cada contato leva algo de valor (oportunidade, conteúdo ou apresentação), nunca só o \"como vai\"",
+   "Retorno em até 24 horas depois de cada reunião com parceiro ou candidato",
+   "Quem sai da parceria continua na lista, com contato duas a três vezes por ano",
+   "As mensagens que o portal prepara sempre saem personalizadas por mim, nunca em massa"
+  ],
+  "contexto": [
+   "Never Eat Alone é o 17º livro, o que faltava. É um livro de rede pessoal, não de programa de parceiros, então ele não confirma nem contraria os fatores do cubo. O que ele traz de novo é o método de manter relações vivas, e isso tinha uma lacuna no to-be: havia jogada por tipo, mas não havia o contato de rotina entre uma jogada e outra.",
+   "O livro chama esse contato de ping e dá regras de bolso: um vínculo novo precisa ver o seu nome em três meios diferentes; depois, um contato por mês; para virar amigo, dois encontros fora do escritório; para manter um laço secundário, dois a três contatos por ano. Para as pessoas importantes, o autor prefere o contato que agrega valor. E diz que o retorno entre 12 e 24 horas depois de conhecer alguém já coloca você acima de 95% das pessoas.",
+   "Ele também avisa contra a eficiência que mata a relação: o autor errou mandando cartões em massa e conclui que conectar não é jogo de números. No portal, isso vira o processo 7.6, Manter a cadência de contato com o parceiro: o portal lembra quem passou da cadência e sugere o que levar; o contato é seu."
+  ],
+  "logica": "A cadência é a parte do relacionamento que não depende de oportunidade. É ela que impede o parceiro de esfriar entre uma indicação e outra, que é a causa do tipo Âncora esfriando.",
+  "citacoes": [
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 193",
+    "trecho": "People you're contacting to create a new relationship need to see or hear your name in at least three modes of communication"
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 193",
+    "trecho": "Once you have gained some early recognition, you need to nurture a developing relationship with a phone call or e-mail at least once a month."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 193",
+    "trecho": "Maintaining a secondary relationship requires two to three pings a year."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 197",
+    "trecho": "For people important to my career or business, I tend to favor the value-add ping."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 117",
+    "trecho": "Give yourself between twelve and twenty-four hours after you meet someone to follow up."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 71",
+    "trecho": "Reaching out to others is not a numbers game."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 236\" role=\"img\" aria-label=\"Cadência de contato por importância\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><circle cx=\"120\" cy=\"120\" r=\"34\" class=\"b hi\"/><circle cx=\"120\" cy=\"120\" r=\"70\" class=\"vazio\"/><circle cx=\"120\" cy=\"120\" r=\"104\" class=\"vazio\"/><text x=\"120\" y=\"124\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">mensal</text><text x=\"120\" y=\"70\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">trimestral</text><text x=\"120\" y=\"34\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">2 a 3 por ano</text><text x=\"260\" y=\"26\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Atenção alta</text><text x=\"260\" y=\"42\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">contato todo mês</text><text x=\"260\" y=\"66\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Demais ativos</text><text x=\"260\" y=\"82\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">contato a cada trimestre</text><text x=\"260\" y=\"106\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Candidatos e ex-parceiros</text><text x=\"260\" y=\"122\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">duas a três vezes por ano</text><text x=\"260\" y=\"146\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Depois de cada reunião</text><text x=\"260\" y=\"162\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">retorno em até 24 horas</text><text x=\"260\" y=\"186\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Todo contato</text><text x=\"260\" y=\"202\" font-size=\"11.5\" text-anchor=\"start\" class=\"mu\">leva algo de valor</text></svg>"
+ },
+ {
+  "id": "R4-Q-0025",
+  "bloco": "Never Eat Alone",
+  "texto": "Para a Wise ser a ponte entre os parceiros, o que você adota?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Apresentar parceiros entre si sem esperar pedido, sempre em torno de uma oportunidade específica",
+   "Avisar quem apresentou de como foi a conversa",
+   "Encontro presencial pequeno (seis a dez pessoas) por trimestre, com um convidado âncora e sem pauta de venda",
+   "Encontros dentro de feiras e eventos do setor, organizados pela Wise",
+   "Usar as entidades da Parceria Institucional como conectoras, com o papel de convidar para os encontros"
+  ],
+  "contexto": [
+   "O segundo achado do livro é sobre poder na rede: ele vem de ser indispensável, e se torna indispensável quem faz a ponte, passando informação, contatos e boa vontade entre grupos que não se falam. O gesto-chave é não esperar pedido: quando alguém menciona um problema, pensar em quem resolve. E proteger a rede dos outros: nunca entregar a lista inteira, trocar contatos em torno de eventos ou causas específicas.",
+   "O terceiro achado é reunir as pessoas. O autor organiza jantares de seis a dez pessoas, usa um convidado âncora para atrair quem não viria e cria encontros dentro de conferências. Quando não é aceito num clube, funda o seu.",
+   "Isso reforça o que Give and Take e Business of Belonging já diziam e você aprovou na Rodada 3 (grupo geral, encontro trimestral), mas acrescenta o presencial, que o WhatsApp não substitui. O livro diz que os meios digitais são eficientes, mas fracos para criar relação."
+  ],
+  "logica": "A Wise vale mais para o parceiro quando o conecta a quem ele não chegaria sozinho. Isso é valor antes da captura, o princípio de Keystone, feito de um jeito que custa poucas horas.",
+  "citacoes": [
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 185",
+    "trecho": "Real power comes from being indispensable. Indispensability comes from being a switchboard, parceling out as much information, contacts, and goodwill to as many people"
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 183",
+    "trecho": "And the first key is, don't wait to be asked. Just do it."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 183",
+    "trecho": "When someone mentions a problem, try to think of solutions."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 119",
+    "trecho": "Let the original referrer know how the conversation went, and express your appreciation for their help."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 203",
+    "trecho": "But an anchor allows you to reach out beyond your circle in subsequent invitations and pull in people who wouldn't otherwise attend."
+   },
+   {
+    "livro": "Never Eat Alone",
+    "pagina": "p. 205",
+    "trecho": "Six to ten guests, I've found, is the optimal number to invite to a dinner."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 224\" role=\"img\" aria-label=\"Da estrela à rede\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"110\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Hoje: centro e raios</text><text x=\"470\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Com a ponte: rede</text><line x1=\"110\" y1=\"110\" x2=\"180\" y2=\"110\" class=\"ln fino\"/><circle cx=\"180\" cy=\"110\" r=\"11\" class=\"b\"/><line x1=\"110\" y1=\"110\" x2=\"145\" y2=\"171\" class=\"ln fino\"/><circle cx=\"145\" cy=\"171\" r=\"11\" class=\"b\"/><line x1=\"110\" y1=\"110\" x2=\"75\" y2=\"171\" class=\"ln fino\"/><circle cx=\"75\" cy=\"171\" r=\"11\" class=\"b\"/><line x1=\"110\" y1=\"110\" x2=\"40\" y2=\"110\" class=\"ln fino\"/><circle cx=\"40\" cy=\"110\" r=\"11\" class=\"b\"/><line x1=\"110\" y1=\"110\" x2=\"75\" y2=\"49\" class=\"ln fino\"/><circle cx=\"75\" cy=\"49\" r=\"11\" class=\"b\"/><line x1=\"110\" y1=\"110\" x2=\"145\" y2=\"49\" class=\"ln fino\"/><circle cx=\"145\" cy=\"49\" r=\"11\" class=\"b\"/><circle cx=\"110\" cy=\"110\" r=\"18\" class=\"b hi\"/><text x=\"110\" y=\"114\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Wise</text><line x1=\"470\" y1=\"110\" x2=\"540\" y2=\"110\" class=\"ln fino\"/><line x1=\"540\" y1=\"110\" x2=\"435\" y2=\"171\" class=\"ln dash\"/><line x1=\"470\" y1=\"110\" x2=\"505\" y2=\"171\" class=\"ln fino\"/><line x1=\"470\" y1=\"110\" x2=\"435\" y2=\"171\" class=\"ln fino\"/><line x1=\"435\" y1=\"171\" x2=\"435\" y2=\"49\" class=\"ln dash\"/><line x1=\"470\" y1=\"110\" x2=\"400\" y2=\"110\" class=\"ln fino\"/><line x1=\"470\" y1=\"110\" x2=\"435\" y2=\"49\" class=\"ln fino\"/><line x1=\"435\" y1=\"49\" x2=\"540\" y2=\"110\" class=\"ln dash\"/><line x1=\"470\" y1=\"110\" x2=\"505\" y2=\"49\" class=\"ln fino\"/><circle cx=\"540\" cy=\"110\" r=\"11\" class=\"b\"/><circle cx=\"505\" cy=\"171\" r=\"11\" class=\"b\"/><circle cx=\"435\" cy=\"171\" r=\"11\" class=\"b\"/><circle cx=\"400\" cy=\"110\" r=\"11\" class=\"b\"/><circle cx=\"435\" cy=\"49\" r=\"11\" class=\"b\"/><circle cx=\"505\" cy=\"49\" r=\"11\" class=\"b\"/><circle cx=\"470\" cy=\"110\" r=\"18\" class=\"b hi\"/><text x=\"470\" y=\"114\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Wise</text><text x=\"330\" y=\"214\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Tracejado: parceiros apresentados entre si pela Wise, em torno de uma oportunidade.</text></svg>"
+ },
+ {
+  "id": "R4-Q-0022",
+  "bloco": "A comunidade",
+  "texto": "As formações internas do grupo Tríade ficam abertas a todos os parceiros ou são um acesso de reconhecimento?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Abertas a todos os parceiros ativos",
+   "Abertas a todos, com vagas reservadas para os destaques",
+   "Acesso de reconhecimento: só para os destaques e os níveis de cima"
+  ],
+  "contexto": [
+   "Você acrescentou na Rodada 3 o convite aos parceiros para as formações internas do grupo Tríade. Ele entrou no mapa como subprocesso de Cultivar a comunidade.",
+   "Business of Belonging oferece duas leituras: pedir pouco no começo e aumentar o pedido conforme cresce o compromisso, e recompensar com acesso, que é norma social. Give and Take lembra que o acesso visível a quem dá incentiva os outros a dar."
+  ],
+  "logica": "Aberto a todos fortalece o pertencimento e o conhecimento para indicar. Como reconhecimento, vira um dos acessos que a Rodada 3 adotou no lugar do dinheiro.",
+  "citacoes": [
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 105",
+    "trecho": "You need to make smaller asks first."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 126",
+    "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 173",
+    "trecho": "Research shows that at work, the vast majority of giving that occurs between people is in response to direct requests for help"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 112\" role=\"img\" aria-label=\"Formações internas da Tríade\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"24\" width=\"200\" height=\"54\" rx=\"8\" class=\"b\"/><text x=\"110.0\" y=\"47.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Aberto a todos</text><text x=\"110.0\" y=\"62.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">os ativos</text><rect x=\"230\" y=\"24\" width=\"200\" height=\"54\" rx=\"8\" class=\"b\"/><text x=\"330.0\" y=\"47.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Aberto a todos,</text><text x=\"330.0\" y=\"62.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">vagas para destaques</text><rect x=\"450\" y=\"24\" width=\"200\" height=\"54\" rx=\"8\" class=\"b\"/><text x=\"550.0\" y=\"47.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Acesso de</text><text x=\"550.0\" y=\"62.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">reconhecimento</text><text x=\"110\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">pertencimento</text><text x=\"330\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">os dois</text><text x=\"550\" y=\"100\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">norma social como prêmio</text></svg>"
+ }
+]

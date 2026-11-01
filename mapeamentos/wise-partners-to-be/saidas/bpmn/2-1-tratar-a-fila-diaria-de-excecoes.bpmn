@@ -7,7 +7,7 @@
     <bpmn:messageFlow id="P-09_M2" name="Retorno" sourceRef="Ext_P-09_X1" targetRef="P-09_e1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-09" name="2.1 Tratar a fila diária de exceções" isExecutable="false">
-    <bpmn:documentation>Abrir a fila única ordenada por prazo e tratar só o que fugiu da regra; quando outra pessoa executa, o Gerente combina por WhatsApp ou pessoalmente. No portal: gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, retorno pendente ao parceiro) e prepara a mensagem. [status do fluxo: Confirmado; evidências: EV-0046, EV-0047, EV-0009]</bpmn:documentation>
+    <bpmn:documentation>Abrir a fila única ordenada por prazo e tratar só o que fugiu da regra; quando outra pessoa executa, o Gerente combina por WhatsApp ou pessoalmente. No portal: gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, retorno pendente ao parceiro) e prepara a mensagem. [status do fluxo: Confirmado; evidências: EV-0051, EV-0052, EV-0009]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-09">
       <bpmn:lane id="Lane_P-09_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-09_i1</bpmn:flowNodeRef>
