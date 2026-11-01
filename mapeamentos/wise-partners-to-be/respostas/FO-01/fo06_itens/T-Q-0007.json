@@ -1,0 +1,14 @@
+{
+  "em": "2026-11-01T18:43:20.214Z",
+  "obs": "Gostei do detalhamento destes funis, mas para colocarmos cards de um respectivo cliente para cada funil, acaba ficando muita coisa para gerenciar ao mesmo. Precisamos repensar alguma maneira inteligente dentro do HAP (Hierarquia e arquitetetura de processos) para que isso venha a ser uma vantagem e não uma desvantagem. Seguindo aquilo que escrevi na resposta 1, caso você venha a encontrar novos processos ou mudar todos, pode acrescentar ou alterar.",
+  "valor": [
+    "Recrutamento (captar parceiros)",
+    "Onboarding (até a ativação)",
+    "Indicações",
+    "Pedidos da prateleira",
+    "Base Ativa",
+    "Parceiros em risco (retomada e desligamento)",
+    "Revisão de nível (lista trimestral, não kanban)",
+    "Ações conjuntas (calendário, não kanban)"
+  ]
+}

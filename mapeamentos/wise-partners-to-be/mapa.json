@@ -31,7 +31,7 @@
       "Tarefa"
     ],
     "criado_em": "2026-10-31",
-    "atualizado_em": "2026-10-31"
+    "atualizado_em": "2026-11-01"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -4961,6 +4961,204 @@
       "data": "2026-10-31",
       "trecho": "O sistema calcula a comissão devida ao parceiro e a do responsável pela parceria conforme a regra de cada empresa",
       "local": "User Story 6"
+    },
+    {
+      "id": "EV-0156",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Vejo que a atualização que fizemos depois da leitura dos livros foi só para incluir citações dos livros em alguns processos. Não vejo que conseguimos extrair conceitos importantes e novas perspectivas de modelo de negócio para trazer como melhoria essencial no mapeamento dos processos e modelo de negócio do programa Wise Partners. Preciso que você reveja os livros e traga novas soluções, mesmo que venham a fazer grandes alterações. Precisamos rever tudo do zero, mesmo que venhamos a fazer uma alteração para mudar 100% dos processos como estão agora. Tente fazer o conhecimentos dos livros para a realidade do Wise Partners em uma perspectiva estruturada de mapeamento de processos. Além disso, preciso de mais detalhe nos processos e mais processos",
+      "local": "FO-01/Q-0001"
+    },
+    {
+      "id": "EV-0157",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Os três pilares desde o primeiro parceiro",
+      "local": "FO-01/Q-0002"
+    },
+    {
+      "id": "EV-0158",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "10 assinados e também uma meta de ativados (recomendado). Gosto da meta, mas não podemos nos ater às metas agora, mas sim para o mapeamento dos processos e do modelo de negócio. A meta, por enquanto, será apenas a capacidade de estupilarmos as metas e a relação da meta no modelo de negócio. Veremos efetivamente qual será a meta em um segundo momento",
+      "local": "FO-01/Q-0003"
+    },
+    {
+      "id": "EV-0159",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Outra regra (comente). As horas semanais não vão interferir agora. Este momento é para refletirmos sobre mapeamento de processos e modelo de negócio. Não quero que nos atamos em detalhes agora. Deixe apenas a capacidade de podermos fazer a gestão de tempo e recursos de tempo gasto com o programa, nada mais.",
+      "local": "FO-01/Q-0004"
+    },
+    {
+      "id": "EV-0160",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Sim, igual nas três; a venda é livre (recomendado). Sim, igual, a pesar da comissão vir a ser um pouco diferente para a swallow, já que é por projeto. Fica a regra que estipulei antes (6% para quem indica e 2% para o gerente de parceria)",
+      "local": "FO-01/Q-0005"
+    },
+    {
+      "id": "EV-0161",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Manter 40% da primeira mensalidade, como no contrato. Qual é o parâmetro que os livros recomendam? Temos que considerar todo o LTV do cliente e, quando o fazemos, o percentual do que damos de comissão fica dentro dos 5% a 15%",
+      "local": "FO-01/Q-0006"
+    },
+    {
+      "id": "EV-0162",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Recrutamento (captar parceiros); Onboarding (até a ativação); Indicações; Pedidos da prateleira; Base Ativa; Parceiros em risco (retomada e desligamento); Revisão de nível (lista trimestral, não kanban); Ações conjuntas (calendário, não kanban). Gostei do detalhamento destes funis, mas para colocarmos cards de um respectivo cliente para cada funil, acaba ficando muita coisa para gerenciar ao mesmo. Precisamos repensar alguma maneira inteligente dentro do HAP (Hierarquia e arquitetetura de processos) para que isso venha a ser uma vantagem e não uma desvantagem. Seguindo aquilo que escrevi na resposta 1, caso você venha a encontrar novos processos ou mudar todos, pode acrescentar ou alterar.",
+      "local": "FO-01/Q-0007"
+    },
+    {
+      "id": "EV-0163",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Perguntando aos clientes do grupo quais sistemas e fornecedores usam e confiam (pergunta fixa no diagnóstico dos consultores); Fornecedores que já aparecem nas indústrias atendidas pelo grupo; Categorias pedidas na prateleira sem fornecedor; Eventos e Expo+Indústria; Prospecção ativa por perfil. Atualmente não precisamos de um volume muito grande de parceiros e, portanto, todos os que estão vindo, é de maneira orgânica, mas todas estas formas são legítimas para conseguirmos novas parcerias, sim.",
+      "local": "FO-01/Q-0008"
+    },
+    {
+      "id": "EV-0164",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Registrar interesses e quem decide no candidato; Registrar a melhor alternativa de cada lado e um pacote gatilho que exige o Diretor; Circular a minuta como texto único, pedindo críticas e não concessões; Workshop curto de alinhamento com a diretoria do candidato antes de assinar. Não sei o que é o workshop curto de alinhamento, mas se for o que estou pensando, que é uma conversa um pouco mais longa para revermos o que o parceiro pode fazer e o que fazemos para que consigamos alinhar melhor, ok. Preciso que no próximo formulário, você dê um contexto melhor, citando o livro e a lógica por trás de cada sugestão, mesmo que fique muito longo e mesmo que você precise usar gráficos ou outras formas visuais para explicar cada uma das perguntas.",
+      "local": "FO-01/Q-0009"
+    },
+    {
+      "id": "EV-0165",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Não, as mesmas regras para todos desde o início",
+      "local": "FO-01/Q-0010"
+    },
+    {
+      "id": "EV-0166",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "No encontro de alinhamento do onboarding, para dar ao parceiro uma primeira vitória cedo (recomendado)",
+      "local": "FO-01/Q-0011"
+    },
+    {
+      "id": "EV-0167",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Não agora. Não precisamos fazer com que o portal seja uma forma de comunicação entre o parceiro e a Wise Makers / grupo tríade, porque já temos grupos de whatsapp para cada respectivo parceiro dentro de uma comunidade da wise partners. Vamos manter a comunicação por lá. Ao mesmo tempo, precisamos deixar alguma parte no perfil do parceiro para que tenha a possibilidade de eu resgatar a apresentação de vendas dele. Ao mesmo tempo precisamos deixar disponível uma seção do portal wise partners para que o parceiro possa aprender a vender a wise makers e as outras empresas do grupo, tendo acesso a material de vendas de cada um e também entendendo quanto pode ganhar de comissão para cada indicação.",
+      "local": "FO-01/Q-0012"
+    },
+    {
+      "id": "EV-0168",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "O consultor que atende o cliente, com tarefa gerada pelo portal (recomendado). A tarefa no portal deve ser feita par ao gerente de parcerias. Não quero que o consultor ou a equipe comercial, ou CS tenham a necessidade de acessar o portal para ver isso (eles não o farão e deixarão as tarefas lá sem fazer). Quem tem responsabilidade para com o portal e a governança das tarefas de lá, mesmo que devam ser executadas por terceiros, deve ser o gerente de parcerias.",
+      "local": "FO-01/Q-0013"
+    },
+    {
+      "id": "EV-0169",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "O consultor ou comercial da empresa que vai atender (recomendado: quem fecha é dono da conta)",
+      "local": "FO-01/Q-0014"
+    },
+    {
+      "id": "EV-0170",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Sim (recomendado: ninguém perde por trabalhar com parceiro)",
+      "local": "FO-01/Q-0015"
+    },
+    {
+      "id": "EV-0171",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Quem fecha é dono durante a venda; depois, a equipe que entrega. O Gerente de Parcerias é dono da relação com o parceiro (recomendado)",
+      "local": "FO-01/Q-0016"
+    },
+    {
+      "id": "EV-0172",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Todos os parceiros ativos, trimestral; mensal para os destaques (recomendado)",
+      "local": "FO-01/Q-0017"
+    },
+    {
+      "id": "EV-0173",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Só dos parceiros Elite",
+      "local": "FO-01/Q-0018"
+    },
+    {
+      "id": "EV-0174",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Permanência depende da nota de qualidade e do retorno dos clientes; Sem limite por categoria",
+      "local": "FO-01/Q-0019"
+    },
+    {
+      "id": "EV-0175",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Sim, como está",
+      "local": "FO-01/Q-0020"
+    },
+    {
+      "id": "EV-0176",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "O Igor",
+      "local": "FO-01/Q-0021"
+    },
+    {
+      "id": "EV-0177",
+      "tipo": "formulario",
+      "fonte": "FO-01: To-be, decisões do patrocinador",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Eu, com aprovação do Igor",
+      "local": "FO-01/Q-0022"
     }
   ],
   "perguntas": [
@@ -4985,9 +5183,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0156"
+      ],
       "chave": "canvas"
     },
     {
@@ -5007,9 +5207,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0157"
+      ],
       "chave": "sequencia"
     },
     {
@@ -5029,9 +5231,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0158"
+      ],
       "chave": "meta_ativos"
     },
     {
@@ -5051,9 +5255,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0159"
+      ],
       "chave": "cauda"
     },
     {
@@ -5073,9 +5279,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0160"
+      ],
       "chave": "tres_empresas"
     },
     {
@@ -5096,9 +5304,11 @@
       ],
       "rodada": 1,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0161"
+      ],
       "chave": "comissao"
     },
     {
@@ -5129,9 +5339,11 @@
       ],
       "rodada": 1,
       "bloco": "Funis e tarefas",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0162"
+      ],
       "chave": "funis"
     },
     {
@@ -5153,9 +5365,11 @@
       ],
       "rodada": 1,
       "bloco": "Captar parceiros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0163"
+      ],
       "chave": "lista"
     },
     {
@@ -5176,9 +5390,11 @@
       ],
       "rodada": 1,
       "bloco": "Captar parceiros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0164"
+      ],
       "chave": "negociacao"
     },
     {
@@ -5197,9 +5413,11 @@
       ],
       "rodada": 1,
       "bloco": "Captar parceiros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0165"
+      ],
       "chave": "ancoras"
     },
     {
@@ -5219,9 +5437,11 @@
       ],
       "rodada": 1,
       "bloco": "Integrar parceiro",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0166"
+      ],
       "chave": "cruzamento"
     },
     {
@@ -5242,9 +5462,11 @@
       ],
       "rodada": 1,
       "bloco": "Gerar negócios",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0167"
+      ],
       "chave": "apoio"
     },
     {
@@ -5264,9 +5486,11 @@
       ],
       "rodada": 1,
       "bloco": "Gerar negócios",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0168"
+      ],
       "chave": "checagem"
     },
     {
@@ -5286,9 +5510,11 @@
       ],
       "rodada": 1,
       "bloco": "Gerar negócios",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0169"
+      ],
       "chave": "primeiro_contato"
     },
     {
@@ -5308,9 +5534,11 @@
       ],
       "rodada": 1,
       "bloco": "Gerar negócios",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0170"
+      ],
       "chave": "credito"
     },
     {
@@ -5330,9 +5558,11 @@
       ],
       "rodada": 1,
       "bloco": "Gerar negócios",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0171"
+      ],
       "chave": "dono_conta"
     },
     {
@@ -5352,9 +5582,11 @@
       ],
       "rodada": 1,
       "bloco": "Desenvolver o parceiro",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0172"
+      ],
       "chave": "revisao"
     },
     {
@@ -5375,9 +5607,11 @@
       ],
       "rodada": 1,
       "bloco": "Desenvolver o parceiro",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0173"
+      ],
       "chave": "patrocinio"
     },
     {
@@ -5398,9 +5632,11 @@
       ],
       "rodada": 1,
       "bloco": "Suporte e dados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0174"
+      ],
       "chave": "prateleira"
     },
     {
@@ -5420,9 +5656,11 @@
       ],
       "rodada": 1,
       "bloco": "Suporte e dados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0175"
+      ],
       "chave": "dados"
     },
     {
@@ -5443,9 +5681,11 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0176"
+      ],
       "chave": "metas_dono"
     },
     {
@@ -5465,9 +5705,11 @@
       ],
       "rodada": 1,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0177"
+      ],
       "chave": "comunicados"
     }
   ],
@@ -5506,7 +5748,7 @@
       ],
       "introducao": "Decisões de desenho que só o patrocinador pode tomar.",
       "link": "https://claude.ai/artifact/ErCdBFw4dwso4pcz9RbUEw",
-      "status": "enviado",
+      "status": "respondido",
       "enviado_em": "2026-10-31",
       "prazo": "",
       "identificacao": false
@@ -5716,6 +5958,10 @@
     {
       "data": "2026-10-31",
       "evento": "To-be montado a partir das especificações 001 e 002 e de 11 livros; formulário de decisões ao patrocinador"
+    },
+    {
+      "data": "2026-11-01",
+      "evento": "22 respostas do patrocinador ao formulário de decisões do to-be"
     }
   ]
 }
