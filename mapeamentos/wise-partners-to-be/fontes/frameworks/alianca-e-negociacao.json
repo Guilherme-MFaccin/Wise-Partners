@@ -1,0 +1,1421 @@
+{
+ "frente": "alianca-e-negociacao",
+ "livros": [
+  "strategic-alliances",
+  "getting-to-yes"
+ ],
+ "frameworks": [
+  {
+   "nome": "Governança de ciclo completo e ciclo de gestão do relacionamento (Partnership governance e Relationship management cycle: Operate, Review, Adapt, Improve)",
+   "livro": "strategic-alliances",
+   "paginas": "p. 87 a 101 e p. 171",
+   "componentes": [
+    {
+     "nome": "Governança em três tempos: começo, operação contínua e fim",
+     "descricao": "Os autores definem governança como o conjunto que cobre o começo (buscar e nutrir parceiros adequados e criar sistemas, processos e culturas complementares), a operação contínua (alavancar ativos e capturar aprendizado) e o fim (encerrar com eficiência quando os objetivos já foram realizados). Não é um evento de assinatura."
+    },
+    {
+     "nome": "Duas formas de controle: formal e social",
+     "descricao": "Controle formal usa regras, procedimentos, recompensas e acreditação. Controle social (clan control) usa normas de comportamento, laços pessoais e objetivos comuns. Os dois não se excluem; regras demais podem sugerir desconfiança, normas demais sem medida deixam o relacionamento sem prova."
+    },
+    {
+     "nome": "Três estilos de liderança do capitão do canal",
+     "descricao": "Participativo (consulta os parceiros antes de criar política), apoiador (olha as necessidades e conquistas, constrói clima de equipe) e diretivo (atribui tarefas, define regras e avalia desempenho). O líder real mistura os três, em doses que mudam com o tipo de parceiro."
+    },
+    {
+     "nome": "Práticas de alta e de baixa performance (Tabela 3.1)",
+     "descricao": "Baixa performance: gestão pobre do relacionamento, falta de compromisso, práticas adversariais, medição conjunta inadequada, medo de dependência. Alta performance: gestão proativa, objetivos conjuntos, compromisso de alto nível, cultura sem culpa, visibilidade das medidas, planejamento conjunto e comunicação aberta."
+    },
+    {
+     "nome": "Operar",
+     "descricao": "Reunião operacional regular (provavelmente mensal) com quem decide dos dois lados. Pauta mínima: metas do período anterior e estatísticas, trabalho em andamento, previsão do próximo período, solução de problemas, planos futuros, atualizações do setor e definição de política."
+    },
+    {
+     "nome": "Revisar",
+     "descricao": "Medidas de desempenho do relacionamento que combinam cumprimento do contrato com valores conjuntos mais amplos (qualidade, inovação, comunicação, compromisso, confiança), com métricas objetivas que permitem fixar metas conjuntas."
+    },
+    {
+     "nome": "Adaptar",
+     "descricao": "Mudança por razão interna ou externa, que numa parceria é mais difícil porque dobra o esforço. Só avança com consenso em torno dos benefícios conjuntos e com propriedade compartilhada nos níveis sênior e local."
+    },
+    {
+     "nome": "Melhorar",
+     "descricao": "Em vez de só caçar problemas, buscar ativamente processos que podem melhorar, com visões compartilhadas do desempenho e mecanismos conjuntos de solução de problemas e de melhoria."
+    },
+    {
+     "nome": "Contra-modelo: blitz e vales (Figura 3.1)",
+     "descricao": "Quando a gestão só reage, os problemas se acumulam até alguém decidir fazer uma blitz (consultoria, mutirão). O desempenho sobe e logo cai, até a blitz ser repetida. O ciclo contínuo substitui o ritmo de picos e vales."
+    }
+   ],
+   "logica": "A maior causa de parceria ruim é subestimar a tarefa de gerir o relacionamento: as empresas sabem operar, mas não têm quem faça a coreografia entre duas organizações. Complexidade e perda de autonomia são inerentes a parcerias, então a governança tem de cobrir o começo, o meio e o fim, senão cada fase herda os problemas da anterior. O ciclo operar, revisar, adaptar e melhorar transforma a gestão em hábito e evita o padrão de crise, mutirão e queda. Medir só entradas e saídas esconde o atrito até virar penalidade contratual, por isso a revisão mede o próprio relacionamento. O contrato fica simples e a atenção vai para o cliente final.",
+   "aplicacao_wise": "Hoje o desenho do portal trata funil, onboarding de 90 dias, revisão trimestral de nível e desligamento como processos separados, cada um com seu quadro. O modelo propõe um único ciclo de vida por parceiro com três governanças: Começar (da primeira conversa à ativação, com critério de entrada e de saída já escritos), Operar (o ciclo quatro tempos) e Sair (desligamento planejado). O Operar vira o ritmo: revisão operacional mensal para nível A, trimestral para B e semestral para C (proporção por nível é inferência nossa, coerente com o limite de 12 horas por mês do Gerente de Parcerias, premissa herdada da primeira leitura). A pauta é montada pelo portal com dados de indicações, SLA, Base Ativa e Prateleira de RFP. Cada giro da Base Ativa de 12 semanas é um giro do ciclo, não uma campanha avulsa. Campanhas de reativação em mutirão deixam de existir como processo: o parceiro nunca chega ao vale porque a revisão mostra o desvio cedo.",
+   "impacto_modelo_de_negocio": "O programa deixa de ser uma máquina de recrutar e pagar comissão e passa a ser uma carteira de relacionamentos geridos com custo de gestão proporcional ao nível. Como a comissão em LTV fica perto de 3 a 5%, o retorno está em reter e fazer render cada parceiro ativo, não em assinar muitos. A receita do programa passa a depender da qualidade do ciclo, e o custo de aquisição só se paga se o parceiro passar de uma volta do ciclo.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Governar o ciclo de vida da parceria",
+     "descricao": "Macroprocesso que organiza todo o programa em três governanças: Começar (qualificar, negociar o termo, onboarding de 90 dias até a ativação), Operar (ciclo operar, revisar, adaptar, melhorar) e Sair (desligamento). Substitui a lógica de um funil por processo; as fases passam a ser atributos de um registro único por parceiro.",
+     "gatilho": "Primeira conversa registrada com um possível parceiro no portal.",
+     "entregas": "Registro único do parceiro com fase do ciclo, nível, dono, próxima revisão, critério de entrada e critério de saída.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Reorganizar funil, onboarding, revisão de nível e desligamento como fases do mesmo ciclo",
+     "descricao": "Os quatro processos separados do desenho atual viram fases do ciclo de vida. O funil é a fase Começar, o onboarding é a segunda metade do Começar, a revisão de nível é a Revisão do Operar e o desligamento é a fase Sair. Um quadro por fase na visão de trabalho, não um quadro por processo.",
+     "gatilho": "Definição da arquitetura do portal antes de modelar os quadros.",
+     "entregas": "Mapa de arquitetura com um ciclo de vida, quatro fases e as transições entre elas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Executar o ciclo operar, revisar, adaptar e melhorar por parceiro",
+     "descricao": "Quatro tempos repetidos para cada parceiro ativo: operar (revisão operacional), revisar (medir o relacionamento e o resultado), adaptar (mudar pacote, contrapartidas ou plano de ações conjuntas) e melhorar (processo ou prática que deve mudar para o próximo giro).",
+     "gatilho": "Ativação do parceiro (primeira indicação no ICP que virou reunião) e depois a data da próxima revisão.",
+     "entregas": "Ata da revisão, nota de saúde atualizada, decisões de adaptar e item de melhoria com dono e prazo.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão operacional do parceiro (mensal A, trimestral B, semestral C)",
+     "descricao": "Reunião curta com quem decide do lado do parceiro e, quando for nível A, o padrinho executivo da Wise. Pauta fixa gerada pelo portal: metas e indicações do período, indicações em andamento com SLA, previsão do próximo período, problemas, planos futuros, novidades do setor e política (proteção de 180 dias, cruzamento de carteiras). A proporção por nível é inferência nossa.",
+     "gatilho": "Calendário do ciclo por nível, disparado 7 dias antes da data da revisão.",
+     "entregas": "Ata de uma página, decisões registradas e próxima data marcada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Montar a pauta da revisão a partir dos dados do portal",
+     "descricao": "O portal consolida os sete itens de pauta do livro (adaptados ao caso) em uma folha por parceiro: indicações do período, funil de indicações, SLA cumprido, ações conjuntas, nota de saúde, contrapartidas usadas, pendências. O Gerente de Parcerias só revisa e acrescenta o que falta.",
+     "gatilho": "Sete dias antes da revisão.",
+     "entregas": "Pauta pronta e compartilhável com o parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar decisões, ações e donos da revisão",
+     "descricao": "Ao final da revisão, cada decisão vira uma linha com dono, prazo e fase do ciclo (adaptar ou melhorar). Isso substitui cartões soltos: o item de trabalho nasce da ata.",
+     "gatilho": "Fim da reunião de revisão.",
+     "entregas": "Lista de ações com dono e prazo, vinculada à ata.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Adaptar termo, pacote e contrapartidas à mudança de mercado ou da oferta",
+     "descricao": "Quando o mercado, a oferta da Wise ou a situação do parceiro muda, o termo e o pacote são renegociados em uma pequena minuta, com consenso sobre o benefício conjunto. Evita que o parceiro descubra a mudança por política imposta.",
+     "gatilho": "Mudança de oferta da Wise, de comissão ou de regra, ou decisão da revisão operacional.",
+     "entregas": "Adendo ao termo, assinado ou aceito, e comunicação ao grupo do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Encerrar a parceria com saída planejada",
+     "descricao": "A saída é parte da governança. Cumpridos os critérios de saída do termo, o parceiro é encerrado com eficiência: comissões devidas, proteção de 180 dias honrada, indicações em curso concluídas e registro de aprendizado.",
+     "gatilho": "Critério de saída atingido ou decisão de recuperar ou desligar.",
+     "entregas": "Termo de encerramento, pagamentos conciliados, aprendizado registrado e acesso ao portal ajustado.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Escrever critérios de entrada e de saída no termo desde o início",
+     "descricao": "O termo-quadro traz o que fará o parceiro entrar (perfil de carteira, ICP) e o que fará a parceria acabar (sem ativação em 90 dias, sem nota mínima de saúde em dois ciclos). Dá a base objetiva do desligamento.",
+     "gatilho": "Fechamento do termo.",
+     "entregas": "Seção de entrada e saída preenchida no termo.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Trocar mutirões de reativação por cadência contínua",
+     "descricao": "Eliminar campanhas pontuais para parceiros parados. O desvio aparece na revisão e na nota de saúde, e a correção entra no ciclo seguinte. O mutirão só existe como exceção registrada.",
+     "gatilho": "Nota de saúde cai abaixo do limite ou revisão perdida.",
+     "entregas": "Plano de resgate dentro do ciclo, sem campanha separada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Retrospectiva trimestral do programa (fase Melhorar do ciclo)",
+     "descricao": "Uma vez por trimestre o Gerente de Parcerias e o Diretor da Wise olham o conjunto: o que as revisões mostraram, quais regras e pacotes devem mudar, quais processos do portal geram trabalho sem valor.",
+     "gatilho": "Fim do trimestre.",
+     "entregas": "Lista de melhorias do programa com dono e prazo.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de Parcerias como dono do ciclo de todos os parceiros",
+     "descricao": "Dono único do ciclo e de todas as tarefas do portal, mesmo quando consultor, comercial ou equipe do parceiro executa. O livro adverte que a função não pode ser tarefa secundária do comercial nem se diluir em vários departamentos.",
+     "gatilho": "Desde o primeiro parceiro.",
+     "entregas": "Responsabilidade clara por cada fase e por cada parceiro.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Aderência ao ciclo (percentual de parceiros com revisão em dia)",
+     "descricao": "Mede se o ritmo existe: parceiros ativos com revisão feita no prazo do nível, sobre o total. É o indicador de processo que antecede a nota de saúde.",
+     "gatilho": "Fechamento semanal do painel do Gerente de Parcerias.",
+     "entregas": "Percentual por nível e lista dos parceiros atrasados.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Um círculo central com quatro setas no sentido horário: Operar, Revisar, Adaptar, Melhorar, e no meio o nome do parceiro. Acima do círculo, uma faixa horizontal em três blocos (Começar, Operar, Sair) que mostra o ciclo de vida inteiro; o círculo fica dentro do bloco do meio. À direita, o gráfico de linha do contra-modelo: uma linha com picos e vales (blitz) e outra em escada crescente (ciclo contínuo).",
+   "citacoes": [
+    {
+     "trecho": "governance is a multidimensional phenomenon that encompasses the beginning, ending and ongoing relationship management between a set of parties",
+     "pagina": "p. 88"
+    },
+    {
+     "trecho": "For many firms, managing the relationship only becomes an agenda item when the partnership is already in disarray.",
+     "pagina": "p. 92"
+    },
+    {
+     "trecho": "The solution is to adopt a more proactive, joint approach to relationship management that focuses on addressing both strengths and weaknesses and achieves continuous improvement.",
+     "pagina": "p. 99"
+    },
+    {
+     "trecho": "Every important relationship should invest in a regular (probably monthly) operational review meeting",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "It is essential that shared views of the relationship's performance are created and joint mechanisms are put in place that will manage problem solving and relationship improvement.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "Sometimes the best contract is the one that is filed and forgotten as soon as it is inked",
+     "pagina": "p. 171"
+    }
+   ]
+  },
+  {
+   "nome": "Modelo de desempenho da parceria: três super fatores e espirais de sucesso e fracasso (Partnership performance model, success and failure spirals)",
+   "livro": "strategic-alliances",
+   "paginas": "p. 132 a 141 e p. 157 a 175",
+   "componentes": [
+    {
+     "nome": "Qualidade da parceria (Partnership quality)",
+     "descricao": "Qualidade da troca relacional: compromisso (motivação de investir na manutenção e no desenvolvimento, com investimentos dos dois lados) e confiança (crença de que o parceiro é confiável, confiável nos fatos e crível). Cresce com o tempo, a partir de pequenos projetos que provam compromisso."
+    },
+    {
+     "nome": "Inovação colaborativa (Collaborative innovation)",
+     "descricao": "Condições que tornam o relacionamento inovador e capaz de responder a oportunidades: adaptabilidade, inovação, comunicação e cooperação (o chamado comportamento C3: cooperação, coordenação e colaboração). Inclui planejamento conjunto antes de qualquer lista de ações conjuntas."
+    },
+    {
+     "nome": "Criação de valor (Value creation)",
+     "descricao": "Eficiência da parceria em criar e capturar o valor: gestão de conflito (conflito construtivo, resolvido rápido e com justiça), sinergia (objetivos comuns), proposição econômica e eficiência de processo (melhoria contínua dos entregáveis)."
+    },
+    {
+     "nome": "Escala de avaliação e metas por fator",
+     "descricao": "Cada fator é avaliado em alto, médio, médio-baixo e baixo, de preferência pelos dois lados. Os resultados são indicadores líderes: predizem a chance de sucesso e não substituem as medidas de resultado."
+    },
+    {
+     "nome": "Espiral de fracasso (Figura 5.1)",
+     "descricao": "Confinamento e pressão levam a foco no próprio objetivo, mínimo esforço, visão de curto prazo, informação escondida e baixo compromisso. Cada volta reduz o investimento e aumenta o custo de gerir a relação."
+    },
+    {
+     "nome": "Espiral de sucesso (Figura 5.2)",
+     "descricao": "Comunicação aberta, sincronização de objetivos, foco em serviço e entrega, redução de custos e riscos conjuntos e busca de qualidade e inovação reforçam confiança e investimento. É o círculo virtuoso desejado."
+    },
+    {
+     "nome": "Cinco medidas de desempenho do relacionamento",
+     "descricao": "Igualdade (ganhos repartidos, ninguém se sente preso, disposição de investir mais), operações (qualidade das entregas, problemas resolvidos de forma conjunta, promessas cumpridas), inovação (alto desempenho, disputas resolvidas rápido e com justiça), investimento (compreensão estratégica do negócio do outro, objetivos compatíveis) e comunicação (dados úteis compartilhados, medição objetiva, informação frequente e informal). Cada afirmação é respondida pelos dois lados e o resultado é plotado em porcentagem (Figura 5.5), com a distância entre as duas visões como dado central."
+    }
+   ],
+   "logica": "A maioria dos sistemas de gestão mede tempo, custo e qualidade, ou seja, entradas e saídas. O atrito entre as empresas só aparece nesses sistemas quando já virou crise. As três lentes (qualidade, inovação, valor) olham o processo de parcerias, que é o que antecede o resultado, e por isso predizem sucesso. As espirais explicam por que o desempenho acelera para cima ou para baixo: cada comportamento gera reação do outro lado. A medição conjunta evita a disputa de opiniões e obriga a conversar com dados, o que por si só altera o comportamento.",
+   "aplicacao_wise": "Cada parceiro ganha uma nota de saúde com três fatores, calculada pelo portal sempre que possível. Qualidade da parceria: presença nas revisões, resposta no grupo de WhatsApp dentro de prazo, uso das contrapartidas, trilhas concluídas, investimento próprio (pessoas treinadas). Inovação colaborativa: ações conjuntas planejadas e executadas, adaptação à mudança de regra, evento da Base Ativa realizado. Criação de valor: indicações no ICP que viraram reunião, SLA do parceiro e da Wise, receita gerada, conflitos resolvidos. O fator pesa o parceiro, não só o resultado: um parceiro com indicação zero mas alta qualidade merece plano diferente de um com indicação baixa e qualidade baixa. A cada trimestre, três perguntas ao parceiro: nos recomendaria a um cliente? A parceria elevou a satisfação de clientes nos últimos seis meses? Houve ganho real de custo, margem ou participação na carteira? A nota alimenta a revisão de nível e o gatilho de desligamento. Documentar o modelo de custo e lucro do parceiro e da Wise (como a comissão de 40% da primeira mensalidade chega a ele e quanto custa para ele indicar) é a prática que o livro associa à igualdade.",
+   "impacto_modelo_de_negocio": "A proposta de valor do programa para o parceiro deixa de ser só comissão e passa a incluir uma medida honesta de quanto a parceria vale para ele. O parceiro que vê seu modelo de custo e lucro documentado entende o negócio e investe mais. Para a Wise, a decisão de nível e de desligamento passa de percepção a indicador líder, o que reduz o risco de manter parceiros que consomem horas sem retorno.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Medir a saúde do portfólio de parceiros",
+     "descricao": "Macroprocesso novo que produz, por parceiro e para o portfólio, uma nota de saúde com três fatores, alimenta as revisões e alimenta os gatilhos de nível e de saída. É a base de gestão por exceção do programa.",
+     "gatilho": "Ativação do parceiro e depois todo fim de mês.",
+     "entregas": "Nota de saúde por parceiro, painel do portfólio e alertas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Pontuar a parceria por três fatores",
+     "descricao": "Atribuir alto, médio, médio-baixo ou baixo a qualidade da parceria, inovação colaborativa e criação de valor, usando os sinais do portal e a percepção do Gerente de Parcerias. O parceiro vê a nota em linguagem simples na revisão.",
+     "gatilho": "Antes de cada revisão operacional.",
+     "entregas": "Nota por fator, justificativa em uma linha por fator e tendência (sobe, estável, desce).",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Coletar sinais do portal para cada fator",
+     "descricao": "Para cada fator o portal reúne sinais objetivos já gerados pela operação (indicações, SLA, trilhas, ações conjuntas, uso de contrapartidas). Elimina coleta manual e dá a regra do cálculo.",
+     "gatilho": "Fechamento de mês.",
+     "entregas": "Tabela de sinais por parceiro, com data e origem.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Aplicar três perguntas de autoavaliação ao parceiro",
+     "descricao": "Formulário trimestral com as três perguntas do livro (referência, satisfação dos clientes, valor para o negócio), respondidas por quem decide no parceiro. Cabe em dois minutos e vira dado.",
+     "gatilho": "Trimestre da revisão de nível.",
+     "entregas": "Respostas registradas e comparadas com a nota do Gerente de Parcerias.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Aplicar o diagnóstico das cinco medidas da espiral",
+     "descricao": "Questionário semestral para parceiros de nível A e B que mede igualdade, operações, inovação, investimento e comunicação, com as afirmações do livro respondidas em escala. Resposta dos dois lados quando possível, e a distância entre elas é o dado mais útil.",
+     "gatilho": "Semestre ou queda de nota de saúde.",
+     "entregas": "Mapa das cinco medidas por parceiro e três ações de melhoria.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Documentar o modelo de custo e lucro do parceiro e da Wise",
+     "descricao": "Em conversa aberta, Wise e parceiro escrevem o quanto cada um investe e ganha com a parceria (horas, comissão, receita da carteira). A transparência do modelo é o instrumento de igualdade citado pelo livro.",
+     "gatilho": "Onboarding de 90 dias e depois a cada revisão anual.",
+     "entregas": "Planilha de custo e lucro dos dois lados anexada ao termo.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Auditar o uso das contrapartidas",
+     "descricao": "Verificar, por parceiro, quais contrapartidas oferecidas (trilhas, materiais, acesso a evento, Prateleira de RFP) foram usadas. As que não foram são ativos encalhados: o livro atribui o encalhe a comunicação ruim, desencontro de expectativas e processo pouco amigável.",
+     "gatilho": "Revisão trimestral.",
+     "entregas": "Lista de contrapartidas usadas e encalhadas, causa e ação.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Acionar alerta de espiral de fracasso",
+     "descricao": "Regra de alerta quando aparecem os sinais da espiral: investimento em queda, resposta lenta, parceiro pede apoio financeiro para qualquer ação, foco só no próprio objetivo. O alerta abre um plano de resgate dentro do ciclo.",
+     "gatilho": "Dois sinais seguidos em um mês ou nota que cai um degrau.",
+     "entregas": "Alerta registrado no parceiro e plano de resgate aberto.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Índice de saúde da parceria",
+     "descricao": "Nota de alto, médio, médio-baixo ou baixo em cada fator, e agregada por nível. Indicador líder que antecede indicações e receita.",
+     "gatilho": "Atualização mensal.",
+     "entregas": "Painel do portfólio com semáforo e tendência.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de contrapartidas encalhadas",
+     "descricao": "Contrapartidas oferecidas e não usadas sobre as oferecidas. Mostra desperdício de esforço da Wise e desalinhamento de expectativas.",
+     "gatilho": "Auditoria trimestral.",
+     "entregas": "Percentual por parceiro e por contrapartida.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral de nível com base nos três fatores e no resultado",
+     "descricao": "A decisão de manter, subir ou descer o nível passa a olhar a nota dos três fatores e o resultado em indicações, não só a contagem de indicações. Parceiros A e B têm revisão formal; C é decidido por regra.",
+     "gatilho": "Fim do trimestre.",
+     "entregas": "Decisão de nível com justificativa escrita.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Ligar nível, plano de ação e desligamento à nota de saúde",
+     "descricao": "Hoje nível, desligamento e plano de ação são decisões em quadros separados. Passam a derivar da mesma nota: queda em dois ciclos abre plano de resgate, queda em três abre a decisão de recuperar ou desligar.",
+     "gatilho": "Mudança de nota de saúde.",
+     "entregas": "Regra escrita e automatizada de transição entre os estados.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Dois gráficos lado a lado. À esquerda, um radar com três eixos (qualidade da parceria, inovação colaborativa, criação de valor) para cada parceiro, mostrando a nota em quatro anéis (baixo, médio-baixo, médio, alto). À direita, duas espirais desenhadas como círculos com setas: uma descendente (confinamento, interesse próprio, mínimo esforço, baixo compromisso) e outra ascendente (comunicação, confiança, qualidade, criatividade). Abaixo, uma linha com cinco medidas (igualdade, operações, inovação, investimento, comunicação) e a pontuação de cada lado em porcentagem.",
+   "citacoes": [
+    {
+     "trecho": "Firms will measure inputs and outputs but rarely give thought to the partnering process itself.",
+     "pagina": "p. 79"
+    },
+    {
+     "trecho": "Firms are therefore minded to reduce levels of investment in the partnership and to look for measures of immediate results rather than in process measures.",
+     "pagina": "p. 132"
+    },
+    {
+     "trecho": "We have identified five relationship performance measures that evaluate the bias or tendency towards the spiral of success or the spiral of failure",
+     "pagina": "p. 135"
+    },
+    {
+     "trecho": "Successful negotiations can be identified where firms have explored, detailed and documented their respective cost and profit models",
+     "pagina": "p. 135"
+    },
+    {
+     "trecho": "Usually through a series of initially small projects or demonstrations of commitment, the partners learn to trust each other and as a result are willing to commit more resources to the relationship.",
+     "pagina": "p. 167"
+    },
+    {
+     "trecho": "These are leading indicators that help us to predict the likelihood of a partnership being successful or not.",
+     "pagina": "p. 174"
+    }
+   ]
+  },
+  {
+   "nome": "Tipologia Gibbs e Humphries de oito tipos de parceria (Gibbs+Humphries Partnership Types)",
+   "livro": "strategic-alliances",
+   "paginas": "p. 15 a 21, p. 179 a 212 e p. 217 a 237",
+   "componentes": [
+    {
+     "nome": "Três fatores que definem o tipo",
+     "descricao": "Qualidade da parceria, inovação colaborativa e criação de valor, cada um avaliado de alto a baixo. A combinação gera oito arquétipos, como os tipos de personalidade do Myers-Briggs, mas mutáveis."
+    },
+    {
+     "nome": "Evangelistas (Evangelists)",
+     "descricao": "Lua de mel prolongada. Satisfação altíssima, boca a boca positivo, retorno acima da média no início e decrescente depois. Tendem a ficar autocomplacentes, a defender o status quo e a ter processos sobrepostos. Não ajudam a atravessar o abismo do crescimento."
+    },
+    {
+     "nome": "Pragmáticos Estáveis (Stable Pragmatists)",
+     "descricao": "Cooperam por necessidade prática, com cultura casada e gestão de relacionamento embutida no dia a dia. Retorno acima da média. A melhoria vem de gestão mais sistemática, não de mais entusiasmo."
+    },
+    {
+     "nome": "Adolescentes Rebeldes (Rebellious Teenagers)",
+     "descricao": "A dependência mútua diminui e as atitudes divergem. Retorno médio com grandes oscilações de humor, mas mantêm a adesão aos objetivos e podem ser aliados leais. Dizem o que se quer ouvir; vale reafirmar objetivos e auditar investimentos."
+    },
+    {
+     "nome": "Pessimistas em Evolução (Evolving Pessimists)",
+     "descricao": "Condições de operação difíceis, investimento difícil de justificar, curto prazo e oportunismo, mas moral que se mantém. Retorno abaixo da média. Algo novo e de peso (pessoa, oportunidade) é necessário para quebrar o ciclo."
+    },
+    {
+     "nome": "Tubarões Cativos (Captive Sharks)",
+     "descricao": "Compromisso e dependência muito altos, com conflito igualmente alto e baixa colaboração. Retorno abaixo da média. Não se gerencia, se entende e se doma parcialmente: motivação, modelo de negócio e fatores críticos de sucesso dos dois."
+    },
+    {
+     "nome": "Catadores de Cerejas (Cherry Pickers)",
+     "descricao": "Pouco compromisso e pouca dependência, bom parceiro de aparência, satisfação alta que engana a gestão sobre crescimento. Retorno médio. Ocorrem em um ou dois de cada dez parceiros; é tratá-los como se fossem recrutados de novo, com uma oportunidade única."
+    },
+    {
+     "nome": "Sem Condições (No Can Dos)",
+     "descricao": "Adversarial como norma, sensação de prisão e impotência, cooperação mínima. Retorno abaixo de 1 mais 1 igual a 2. Muitas vezes só se resolve com reestruturação profunda."
+    },
+    {
+     "nome": "Desertores (Deserters)",
+     "descricao": "Não veem nada de bom na parceria. Avaliam mal tudo, colaboração quase nula e dependência baixa. A decisão crítica é se vale a pena investir neles. Se valer, tratar a relação como nova, por 6 a 12 meses."
+    },
+    {
+     "nome": "Autoavaliação em três passos (Tabelas 8.1 a 8.3)",
+     "descricao": "Passo 1: avaliar três afirmações (o parceiro daria referência elogiosa a um cliente; nos últimos seis meses elevamos a satisfação de clientes por causa da parceria; ganhamos custo ou margem ou somos parcela relevante do parceiro). Passo 2: listar sintomas observáveis. Passo 3: levantar a evidência que explica cada sintoma. Os passos são iterativos."
+    },
+    {
+     "nome": "Tipos ao longo do ciclo de mercado (Figura 8.1) e gestão por tipo",
+     "descricao": "Evangelistas aparecem cedo, Adolescentes Rebeldes no crescimento, Pragmáticos Estáveis levam ao mercado maduro, Tubarões Cativos no maduro, Catadores de Cerejas e Desertores no declínio. A gestão e a comunicação mudam por tipo: iniciativas genéricas fracassam com os mais desengajados."
+    }
+   ],
+   "logica": "O erro mais comum é tratar todos os parceiros da mesma forma com base no resultado. Dois parceiros com a mesma receita podem estar em tipos opostos: um Evangelista e um Catador de Cerejas parecem ambos satisfeitos, mas um tem compromisso alto e o outro nenhum. O tipo explica o comportamento provável, aponta o que fazer e o que não fazer e evita gastar horas no parceiro errado. O livro lembra que os tipos mudam com as ações dos participantes, e que alguns são mais difíceis de mover do que outros: contornar o obstáculo é melhor que bater de frente.",
+   "aplicacao_wise": "Com um único Gerente de Parcerias e 12 horas por mês, o tipo vira a forma de decidir onde gastar as horas. Na primeira revisão (dia 90 do onboarding) cada parceiro é classificado nos três passos da autoavaliação. Hipóteses nossas para o caso: parceiros que chegam organicamente tendem a entrar como Evangelistas (entusiasmo inicial) ou Catadores de Cerejas (veem a Wise como mais um canal), enquanto fornecedores que temem a Wise cruzar a carteira deles podem se comportar como Adolescentes Rebeldes. Tubarões Cativos são improváveis num programa em que a dependência é baixa. Cada tipo ganha uma jogada padrão no portal (oito jogadas), e a comunicação do grupo de WhatsApp muda por tipo. Para o Catador de Cerejas (ERP, CRM ou associação que apresenta a Wise só quando convém), a jogada é focar uma única oportunidade: uma RFP na Prateleira ou um evento da Base Ativa. Para o Desertor de alto potencial, a jogada é o embaixador executivo da Wise por 6 a 12 meses; para o Desertor de baixo potencial, a decisão é desligar.",
+   "impacto_modelo_de_negocio": "O programa passa a ter uma oferta diferente por tipo de parceiro, não só por nível. O nível A/B/C diz quanto de gestão o parceiro recebe; o tipo diz como essa gestão é feita. Isso permite reduzir investimento em Evangelistas já comprometidos, concentrar esforço em Catadores de Cerejas de alto potencial e liberar horas ao desligar Desertores sem valor.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Diagnosticar o tipo de parceria em três passos",
+     "descricao": "Na primeira revisão de cada parceiro, o Gerente de Parcerias posiciona referência, efetividade e valor (passo 1), lista sintomas (passo 2) e as causas com evidência (passo 3). O resultado é o tipo, com data e justificativa.",
+     "gatilho": "Dia 90 do onboarding e depois a cada revisão trimestral.",
+     "entregas": "Tipo atribuído, três passos registrados e jogada recomendada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Posicionar o parceiro nos três fatores em linguagem simples",
+     "descricao": "Perguntas do livro adaptadas: o parceiro nos recomendaria a um cliente? A parceria elevou a satisfação de clientes nos últimos seis meses? Houve ganho real de custo, margem ou participação na carteira? Cada resposta recebe alto, médio, médio-baixo ou baixo.",
+     "gatilho": "Início do diagnóstico de tipo.",
+     "entregas": "Posição do parceiro na tabela de tipos.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Levantar sintomas e causas com evidência do portal",
+     "descricao": "Para cada resposta, listar sintomas observáveis (por exemplo, convite para falar no evento do parceiro) e a causa (por exemplo, produto desenvolvido em conjunto). O portal sugere sintomas a partir dos dados.",
+     "gatilho": "Segundo e terceiro passos do diagnóstico.",
+     "entregas": "Lista de sintomas com causa e fonte.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Aplicar a jogada do tipo",
+     "descricao": "Cada tipo tem uma jogada padrão no portal: Evangelista (testar novas ideias com ele, manter investimento sem excesso), Pragmático Estável (gestão mais sistemática), Adolescente Rebelde (reafirmar objetivos, auditar investimentos, não trocar interlocutores), Pessimista (algo novo e de peso), Tubarão Cativo (diálogo no topo sobre modelo de negócio), Catador de Cerejas (nova recrutação com uma oportunidade), Sem Condições (reestruturar ou sair), Desertor (decidir se vale e tratar como parceria nova).",
+     "gatilho": "Tipo atribuído ou alterado.",
+     "entregas": "Jogada escolhida e registrada com prazo e dono.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Reengajar o parceiro Catador de Cerejas com uma oportunidade única",
+     "descricao": "Tratar como se fosse recrutado de novo: explorar as razões estratégicas de trabalhar juntos, olhar criticamente a proposta de valor da Wise e focar uma única oportunidade (uma RFP da Prateleira, um evento da Base Ativa, um cliente específico) para elevar a expectativa.",
+     "gatilho": "Parceiro com atividade esporádica, satisfação alta e investimento baixo.",
+     "entregas": "Oportunidade escolhida, ação conjunta e revisão em 30 dias.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Decidir entre recuperar ou desligar o parceiro Desertor",
+     "descricao": "Primeira decisão é se o parceiro vale o investimento. Se valer, o embaixador executivo trata a parceria como nova por 6 a 12 meses. Se não valer, entra em saída planejada com conversa honrosa.",
+     "gatilho": "Tipo Desertor ou nota baixa em dois ciclos.",
+     "entregas": "Decisão escrita, plano de 6 a 12 meses ou saída.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Entender o modelo de negócio do parceiro em tensão",
+     "descricao": "Para Adolescentes Rebeldes e Tubarões Cativos, conversa sobre o modelo de negócio de cada lado, o que o outro entende do seu e como a mudança da Wise (nova oferta, nova regra de comissão, cruzamento de carteiras) afeta a receita dele. O livro mostra que a maior causa de tensão é não entender o modelo do outro.",
+     "gatilho": "Reclamação recorrente ou queda de nota de saúde.",
+     "entregas": "Resumo do modelo dos dois lados e acordo sobre o fator crítico.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Ajustar a comunicação do grupo do parceiro ao tipo",
+     "descricao": "A comunicação genérica falha com os mais desengajados. A mensagem ao Evangelista reitera valores conhecidos, ao Adolescente Rebelde tranquiliza sobre posição de mercado, ao Catador de Cerejas mostra o benefício do portfólio inteiro, ao Desertor é um a um.",
+     "gatilho": "Novo comunicado no grupo do parceiro.",
+     "entregas": "Roteiro de mensagem por tipo no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Embaixador executivo para parceiro Desertor ou Catador de Cerejas de alto potencial",
+     "descricao": "Diretor ou sócio assume a relação por um período definido. O livro ressalta que a figura sênior precisa dar tempo e energia reais para não ser acusada de apenas cumprir tabela.",
+     "gatilho": "Decisão de recuperar um Desertor ou de reengajar um Catador de Cerejas de alto potencial.",
+     "entregas": "Ligação mensal, visita trimestral e relatório curto ao Gerente de Parcerias.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Substituir a lista de funis por um mapa de tipos",
+     "descricao": "Em vez de um card por parceiro em cada funil, o portfólio é visto numa matriz de tipos (e nível). O card é um só, e a coluna mostra o tipo e a próxima jogada.",
+     "gatilho": "Desenho das visões do portal.",
+     "entregas": "Visão de mapa de tipos e fila de jogadas por parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Distribuição do portfólio por tipo",
+     "descricao": "Contagem de parceiros por tipo, e por nível, com tendência. Sinal precoce de qualidade de recrutamento: portfólio cheio de Catadores de Cerejas indica problema de proposta de valor.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Gráfico de barras empilhadas por tipo e nível.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão de tipos trimestral",
+     "descricao": "Parte da Revisão trimestral de nível: reclassificar os tipos e confirmar se as jogadas mudaram o comportamento. Os tipos mudam e a revisão captura isso.",
+     "gatilho": "Trimestre.",
+     "entregas": "Tipos atualizados e jogadas ajustadas.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Matriz de oito pequenos medidores lado a lado, um por tipo, com três barras (qualidade, inovação, valor) em quatro níveis (alto, médio, médio-baixo, baixo). Abaixo, uma linha do tempo do ciclo de mercado (entrada, crescimento, maturidade, declínio) com os tipos que mais aparecem em cada trecho. À direita, um fluxo de três passos (posicionar, listar sintomas, levantar causas) que termina na jogada.",
+   "citacoes": [
+    {
+     "trecho": "typically most partnerships can be categorized into one of only eight archetypal relationships",
+     "pagina": "p. 15"
+    },
+    {
+     "trecho": "they can and do change, depending on the actions and behaviours of the participants",
+     "pagina": "p. 17"
+    },
+    {
+     "trecho": "our partner would provide us with a positive and flattering reference to a key customer or buyer",
+     "pagina": "p. 218"
+    },
+    {
+     "trecho": "Instead, one needs to approach Cherry Pickers as if they were being recruited into the partnership for the very first time",
+     "pagina": "p. 229"
+    },
+    {
+     "trecho": "The most critical decision is whether a Deserter relationship is actually worth the investment of time and energy.",
+     "pagina": "p. 231"
+    },
+    {
+     "trecho": "generalist marketing initiatives can be doomed to failure",
+     "pagina": "p. 236"
+    }
+   ]
+  },
+  {
+   "nome": "Gestão do portfólio de parceiros: importância e dificuldade, escada de relacionamento e função central de alianças (Portfolio management model, KAM development, alliance function)",
+   "livro": "strategic-alliances",
+   "paginas": "p. 70 a 76, p. 80 a 83 e p. 119 a 123",
+   "componentes": [
+    {
+     "nome": "Matriz importância estratégica e dificuldade de gestão (Figura 2.5)",
+     "descricao": "Dois eixos: importância estratégica e dificuldade de gerir. Quatro quadrantes: estratégico (parcerias próximas), alavanca (parcerias médias), gargalo (parcerias curtas) e não crítico (transações de mercado). Cada quadrante recebe um tipo e uma intensidade de relacionamento."
+    },
+    {
+     "nome": "Escada de desenvolvimento do relacionamento (Figura 2.6)",
+     "descricao": "Pré, inicial (transacional), intermediário (fornecedor preferido), parceria (fonte única) e sinérgico (processos de entrega compartilhados). Um relacionamento sobe ou desce a escada com o tempo."
+    },
+    {
+     "nome": "Função central de alianças",
+     "descricao": "Um time ou pessoa profissional, perto do conselho, que institucionaliza processos colaborativos, coordena departamentos, garante recursos e cria métricas de aliança. Empresas que fizeram isso tiveram taxa de sucesso 25% maior. A função não pode ser tarefa secundária do comercial nem estar espalhada por departamentos."
+    },
+    {
+     "nome": "Boas práticas de relacionamento",
+     "descricao": "Centralizar a gestão em um só time, recrutar, treinar e premiar bem os gerentes de relacionamento, mantê-los no posto por tempo razoável, alinhar as funções internas, planejar e prever junto, conversar de adulto para adulto, criar métricas e premiar solução criativa de problemas."
+    },
+    {
+     "nome": "Investimento recíproco e acreditação (caso Novell)",
+     "descricao": "O nível de acreditação do parceiro depende de pessoas certificadas e de investimento em equipe e infraestrutura, e a contrapartida do fabricante (suporte, leads, laboratório, marketing) cresce junto. Os centros de treinamento eram lucrativos e os engenheiros certificados ganhavam valor de mercado."
+    },
+    {
+     "nome": "Ativos encalhados",
+     "descricao": "Investimentos que não são usados, ou que são usados diferente do planejado, porque o parceiro desconfia, o processo é pouco amigável ou ninguém avisou. O erro clássico é avaliar o benefício só pelo ponto de vista de quem investiu."
+    },
+    {
+     "nome": "Padrinho executivo e incentivos comportamentais (caso do canal revitalizado)",
+     "descricao": "Executivos seniores foram designados padrinhos de 10 revendas principais por país, com ligação mensal e visita trimestral. Os gerentes passaram a ter, além da meta de receita, incentivos por retenção, amplitude de portfólio vendido e frequência de compra, e o planejamento conjunto virou métrica."
+    }
+   ],
+   "logica": "Nem todo parceiro merece a mesma relação, e tratar todos como estratégicos esgota a capacidade de gestão. A matriz de importância e dificuldade escolhe a intensidade, a escada mostra o caminho e a função central dá consistência. A reciprocidade de investimento compromete as duas partes e torna a saída cara para os dois lados, o que sustenta a confiança. Metas de curto prazo para gerentes de relacionamento distorcem a gestão, empurrando produtos e esvaziando a parceria. Por isso o livro recomenda incentivar o comportamento e a retenção, não só a receita.",
+   "aplicacao_wise": "Os níveis A/B/C passam a ser a classificação do portfólio pelos dois eixos: potencial da carteira do parceiro (importância) e esforço de gestão estimado (dificuldade). O nível define a intensidade: A recebe revisão mensal, padrinho executivo e plano de ações conjuntas; B recebe revisão trimestral; C é gerido por regra e comunidade, sem cartão ativo. O mesmo nível sobe por investimento recíproco: pessoas do parceiro que concluíram a trilha (a acreditação à moda Novell), evento da Base Ativa realizado, plano de ações conjuntas assinado. A contrapartida da Wise (Prateleira de RFP, apoio ao evento, prioridade nas indicações) cresce junto. O Gerente de Parcerias é a função central de alianças, mas a comissão de 10% da primeira mensalidade que ele recebe é uma meta de curto prazo: o livro adverte que isso distorce. A proposta é manter a comissão e acrescentar indicadores comportamentais (retenção, amplitude de pilares usados, cadência de revisão em dia). O limite de parcerias profundas segue a capacidade: com 12 horas por mês, o número de parceiros A é pequeno por desenho. Os padrinhos são sócios ou diretores, no máximo dois ou três parceiros A cada um (limite nosso, o livro cita 10 por executivo em empresa grande).",
+   "impacto_modelo_de_negocio": "O programa vira um portfólio com política de alocação de horas: poucos parceiros de alto investimento, uma massa gerida por regra. A comissão e as contrapartidas ficam atreladas a investimento do parceiro, o que protege a Wise de pagar por parcerias que não se comprometem. A Wise assume que o recurso escasso é o tempo do Gerente de Parcerias e o gerencia como capital.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Classificar parceiros por importância estratégica e esforço de gestão",
+     "descricao": "Cada parceiro é posicionado na matriz de dois eixos (potencial da carteira e esforço de gestão) e recebe o nível A, B ou C. A classificação é revista a cada trimestre e sempre que muda a carteira do parceiro.",
+     "gatilho": "Fim do onboarding e a cada revisão trimestral.",
+     "entregas": "Nível com os dois eixos e justificativa em uma linha.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Definir intensidade de gestão por nível",
+     "descricao": "Tabela única do programa que diz, para cada nível, cadência de revisão, canal (reunião, grupo, formulário), padrinho, número máximo de parceiros e o que fica automático. Sai de quadro por parceiro para regra por nível.",
+     "gatilho": "Desenho do programa e a cada revisão semestral.",
+     "entregas": "Tabela de intensidade de gestão por nível, publicada no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Atribuir nível por investimento recíproco e acreditação",
+     "descricao": "O nível sobe quando o parceiro investe (pessoas que concluíram trilha, evento da Base Ativa, plano de ações conjuntas, uso da Prateleira) e quando a Wise corresponde com contrapartida maior. Acreditação por trilhas é o instrumento.",
+     "gatilho": "Revisão trimestral de nível.",
+     "entregas": "Nível confirmado, contrapartida ajustada, trilhas registradas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Limitar parcerias profundas à capacidade de gestão",
+     "descricao": "Regra de capacidade: o total de parceiros A cabe nas horas disponíveis. Se a revisão mensal de um A custa 1 hora, o limite do mês entra no planejamento. Novo parceiro A só entra quando um sai ou sobem as horas.",
+     "gatilho": "Proposta de promoção para A.",
+     "entregas": "Decisão registrada com saldo de horas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Padrinho executivo para parceiros de nível A",
+     "descricao": "Sócio ou diretor da Wise acompanha dois ou três parceiros A, com ligação mensal e visita trimestral (adaptado do caso do canal), para levar assuntos sérios e dar peso à relação.",
+     "gatilho": "Promoção do parceiro a nível A.",
+     "entregas": "Padrinho nomeado, agenda de contatos e relatório curto.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de Parcerias como função central de alianças",
+     "descricao": "Pessoa única, com status e acesso a decisão, dona de todos os parceiros e de todas as tarefas. Não subordinada ao comercial nem dividida entre áreas. O Diretor da Wise recebe a visão do portfólio.",
+     "gatilho": "Estrutura do programa.",
+     "entregas": "Mandato escrito com atribuições, limites e métricas.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Definir incentivos comportamentais para parceiro e para o gerente",
+     "descricao": "Complementar a comissão por resultado com indicadores de comportamento: retenção de parceiros, amplitude de pilares usados, cadência de revisão em dia, nota de saúde. Para o parceiro, a mesma ideia em benefícios (acesso, prioridade).",
+     "gatilho": "Desenho do programa e revisão anual.",
+     "entregas": "Tabela de incentivos com peso e regras de apuração.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Mesa do portfólio (mensal)",
+     "descricao": "Uma hora por mês com a visão de todos os parceiros por nível, tipo e nota de saúde. Decide promoções, rebaixamentos, resgates e saídas. Substitui a leitura de vários quadros.",
+     "gatilho": "Primeira semana de cada mês.",
+     "entregas": "Lista de decisões do portfólio e horas alocadas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Promover e rebaixar nível por trajetória",
+     "descricao": "Usar a escada de relacionamento: um parceiro sobe do transacional ao próximo estágio quando cumpre marcos de confiança (primeiro projeto pequeno, ação conjunta bem-sucedida, primeira receita). Rebaixa quando os marcos se perdem.",
+     "gatilho": "Marco cumprido ou perdido.",
+     "entregas": "Nível e estágio atualizados, comunicação ao parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Gerir parceiros de nível C por regra e comunidade",
+     "descricao": "Parceiros de baixo esforço e baixo potencial têm gestão mínima: grupo no WhatsApp, trilhas, indicação por link. O gerente só age por exceção (alerta, pedido do parceiro). Nenhum quadro ativo.",
+     "gatilho": "Parceiro classificado como C.",
+     "entregas": "Regras automáticas e lista de exceções.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Retorno por hora de gestão",
+     "descricao": "Indicações no ICP e receita gerada por hora do Gerente de Parcerias, por nível. Dá base para decidir onde investir o tempo e quais parceiros rebaixar.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Tabela de horas e resultado por parceiro e por nível.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Matriz de dois eixos: horizontal, importância estratégica (baixa a alta); vertical, dificuldade de gerir (baixa a alta). Quatro quadrantes com nomes do livro e, ao lado, o nível Wise (A, B, C) e a intensidade (mensal, trimestral, por regra). Uma escada de cinco degraus ao lado direito (pré, inicial, intermediário, parceria, sinérgico). Embaixo, uma barra de horas mostrando 12 horas por mês divididas por nível.",
+   "citacoes": [
+    {
+     "trecho": "managers should classify their customers according to their importance and adopt a portfolio approach to create and manage appropriate relationships",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "Platinum partners, the top end of the scale, had to make even greater investments in people and equipment.",
+     "pagina": "p. 83"
+    },
+    {
+     "trecho": "The alliance function will not work effectively if it is a secondary commercial or sales one, nor should it be diffused across departments.",
+     "pagina": "p. 75"
+    },
+    {
+     "trecho": "senior management were assigned 10 of the top resellers in each country as an internal sponsor",
+     "pagina": "p. 121"
+    },
+    {
+     "trecho": "In addition to a quarter revenue target, various behavioural incentives were put in place including partner retention, breadth of portfolio sold by a partner and frequency of purchase.",
+     "pagina": "p. 121"
+    },
+    {
+     "trecho": "Rather than overseeing the portfolio of strategically important customers to generate long-term returns, a number of firms continue to impose short-term sales targets on their KAMs.",
+     "pagina": "p. 73"
+    }
+   ]
+  },
+  {
+   "nome": "Negociação por princípios: os quatro pontos e a separação entre pessoas e problema (Principled negotiation, Separate the people from the problem)",
+   "livro": "getting-to-yes",
+   "paginas": "p. 24 a 56 e p. 155 a 158",
+   "componentes": [
+    {
+     "nome": "Barganha de posições, mole e dura",
+     "descricao": "O modelo padrão de negociar (cada lado assume uma posição e faz concessões) produz acordos pouco sábios, ineficientes e que machucam a relação. O jogo mole cede para agradar e é explorado pelo duro; o duro disputa vontade e gera resposta dura. Os dois jogos competem no mesmo eixo."
+    },
+    {
+     "nome": "Os quatro pontos do método",
+     "descricao": "Pessoas (separar as pessoas do problema), interesses (focar em interesses e não em posições), opções (inventar opções de ganho mútuo antes de decidir) e critérios (insistir em padrão objetivo independente da vontade das partes). O livro resume: duro com o mérito, suave com as pessoas."
+    },
+    {
+     "nome": "Três fases: análise, planejamento, discussão",
+     "descricao": "Os quatro pontos valem do momento de pensar na negociação até o acordo ou a ruptura. Na análise se diagnostica; no planejamento se geram ideias e se decide o que fazer; na discussão as partes conversam sobre os mesmos quatro elementos."
+    },
+    {
+     "nome": "Dois interesses de todo negociador",
+     "descricao": "Substância (o que se quer do acordo) e relação (como fica o vínculo depois). O relacionamento tende a se emaranhar com o problema, e a barganha de posições força a trocar um pelo outro. O método trata cada um em sua própria trilha."
+    },
+    {
+     "nome": "Percepção",
+     "descricao": "O conflito está na cabeça das pessoas. Técnicas: colocar-se no lugar do outro, não deduzir intenções a partir dos seus medos, não culpar, discutir as percepções, agir de modo inconsistente com a percepção que têm, envolver o outro no processo para que ele tenha uma parte no resultado e dar ao outro a chance de salvar a face."
+    },
+    {
+     "nome": "Emoção",
+     "descricao": "Reconhecer e explicitar as emoções, atender às cinco preocupações centrais (autonomia, apreciação, afiliação, papel e status), considerar ameaça à identidade, deixar o outro desabafar, não reagir a explosões e usar gestos simbólicos de baixo custo, como um pedido de desculpas."
+    },
+    {
+     "nome": "Comunicação",
+     "descricao": "Os três problemas são não falar com o outro, não ser ouvido e ser mal entendido. As respostas: ouvir ativamente e reconhecer o que foi dito, falar para ser entendido, falar sobre si e não sobre o outro, e falar com propósito."
+    },
+    {
+     "nome": "Prevenção e relação independente do acordo",
+     "descricao": "O melhor momento de tratar os problemas de pessoas é antes que eles apareçam: conhecer o outro, ver o problema lado a lado e construir uma relação de trabalho que lide bem com discordâncias, sem comprar relação com concessão de substância."
+    }
+   ],
+   "logica": "Os negociadores são pessoas primeiro: têm egos, medos e percepções diferentes, e frequentemente confundem percepção com realidade. Ceder para manter a relação premia a teimosia e gera ressentimento; apertar a relação para extrair concessão estraga a substância e a relação. Separar os dois problemas permite ser duro com o mérito e suave com a pessoa ao mesmo tempo. Quando as pessoas participam da construção do acordo, o processo é o produto: sentem que a solução é sua e a defendem. A relação de trabalho construída antes torna cada negociação mais rápida e barata.",
+   "aplicacao_wise": "A Wise ainda não tem parceiro assinado e tem cerca de 21 conversas, então a primeira camada é tratar essas conversas como relação a ser nutrida antes de qualquer negociação de termo (o livro: o tempo de construir a relação é antes da negociação). Cada reunião de apresentação do programa a um ERP, CRM, MES, SST, ESG, BPM ou associação começa pela percepção do outro: o diretor comercial do ERP pode ver a Wise como concorrente na implantação, como risco de cruzar a carteira dele ou como fonte de vendas; a associação pode ver a indicação como mercantilização do quadro associativo; o dono de uma feira como o evento da Base Ativa ocupando espaço. O Gerente de Parcerias registra essas percepções, faz a reformulação (\"o que ouvi foi isto\") antes de propor e envolve o parceiro na construção do termo e do plano de ações conjuntas. As emoções são previstas: status do diretor que defende o parceiro ante o presidente, autonomia sobre o canal dele, apreciação pelo trabalho. No grupo de WhatsApp, a regra é falar sobre si e sobre o fato (\"as três últimas indicações passaram do SLA\") e não sobre o parceiro. Relação e substância são tratadas em trilhas separadas: a Wise não cede comissão para agradar e não ameaça sair para extrair comportamento.",
+   "impacto_modelo_de_negocio": "O programa passa a vender um jeito de trabalhar além da comissão: negociação honesta, lado a lado, com critérios claros. Para parceiros que já foram maltratados por programas de canal, isso é diferencial. O custo é tempo de relação antes do primeiro contrato, o que combina com o ponto de partida orgânico. Também evita o risco de comprar relação com concessão de comissão ou de nível.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Negociar e firmar a parceria",
+     "descricao": "Macroprocesso novo que cobre da conversa inicial à assinatura do termo-quadro, organizado pelos quatro pontos do método: pessoas, interesses, opções e critérios. Subprocessos: nutrir relação, mapear percepções e interesses, inventar opções, definir critérios e BATNA, conduzir a minuta única, fechar o termo.",
+     "gatilho": "Parceiro com interesse declarado e reunião de apresentação marcada.",
+     "entregas": "Termo-quadro assinado (ou decisão de não seguir) e relação de trabalho registrada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Nutrir a relação com o parceiro antes da negociação",
+     "descricao": "Para as cerca de 21 conversas e os próximos parceiros orgânicos, manter contato leve (conteúdo, evento, convite para a Prateleira, conversa informal) antes de abrir o termo. O livro diz que o tempo de construir a relação é antes e que conhecer o outro pessoalmente reduz a atribuição de más intenções.",
+     "gatilho": "Conversa inicial sem decisão de seguir.",
+     "entregas": "Plano de contato de 60 dias e registro do que se descobriu sobre pessoa e empresa.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Mapear a percepção do parceiro sobre a Wise e o programa",
+     "descricao": "Antes da reunião de apresentação, listar o que o parceiro provavelmente pensa: concorrência na implantação, risco à carteira, conflito de canal, desconfiança de consultoria. Depois da reunião, confirmar as hipóteses com perguntas.",
+     "gatilho": "Reunião de apresentação marcada.",
+     "entregas": "Quadro de percepções (do parceiro e da Wise) com hipótese e evidência.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Reformular e confirmar o que o parceiro disse antes de propor",
+     "descricao": "Regra de conduta: repetir em termos positivos o ponto de vista do parceiro e perguntar se entendeu. O livro: entender não é concordar. Fica registrado na ata para que o próximo contato parta do mesmo ponto.",
+     "gatilho": "Ponto de discordância na conversa.",
+     "entregas": "Linha de ata com 'o que entendi' e confirmação do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar emoções e preocupações centrais do parceiro",
+     "descricao": "Anotar autonomia, apreciação, afiliação, papel e status do interlocutor e o que está em jogo para ele (carreira, meta, relação com cliente). Ajuda a evitar atos que ameaçam identidade e a escolher gestos de baixo custo.",
+     "gatilho": "Cada conversa de negociação.",
+     "entregas": "Campo de preocupações centrais na ficha do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Envolver o parceiro na construção do termo e do plano de ações conjuntas",
+     "descricao": "O termo e o plano não chegam prontos. Ele escreve ao menos uma seção (as metas dele, a ação conjunta preferida, o ICP) e recebe crédito pelas ideias. O livro: o sentimento de participar é talvez o fator mais importante para o negociador aceitar a proposta.",
+     "gatilho": "Abertura da minuta única.",
+     "entregas": "Seções do termo assinadas com autoria do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Oferecer saída honrosa ao parceiro que precisa recuar",
+     "descricao": "Formular a proposta em termos consistentes com os valores e com o que o parceiro já disse em público, para que mudar de posição não pareça perder. Ex.: o diretor anuncia o novo acordo como decisão dele.",
+     "gatilho": "Parceiro entrincheirado numa posição.",
+     "entregas": "Reformulação da proposta com a conquista creditada a ele.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Reunião de apresentação do programa lado a lado",
+     "descricao": "Reunião em que Wise e parceiro olham juntos a mesma folha (pilares, pacotes, termo-quadro em branco), sentados do mesmo lado do problema, não um contra o outro. Duração curta e fim com um próximo passo.",
+     "gatilho": "Primeiro contato aceito.",
+     "entregas": "Folha preenchida em conjunto e próximo passo marcado.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de Parcerias como negociador de linha de frente, com o Diretor da Wise como instância de decisão",
+     "descricao": "O gerente conduz a relação e a minuta; o Diretor decide concessões acima do gatilho. Isso protege o gerente de ser o único a conceder, problema descrito no livro para quem não conhece a autoridade do outro.",
+     "gatilho": "Abertura do macroprocesso de negociação.",
+     "entregas": "Alçada escrita de concessões por faixa.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Participação do parceiro na minuta",
+     "descricao": "Número de propostas do parceiro incorporadas ao termo e ao plano de ações. Indica engajamento antes da assinatura e prevê ativação.",
+     "gatilho": "Fechamento do termo.",
+     "entregas": "Contagem por parceiro, ligada à taxa de ativação em 90 dias.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Um diagrama em quatro caixas empilhadas (Pessoas, Interesses, Opções, Critérios) na vertical, com uma seta horizontal que as cruza em três fases (Analisar, Planejar, Discutir). Na caixa Pessoas, três bolhas: Percepção, Emoção, Comunicação. À esquerda, dois pratos de balança: Substância e Relação, com a nota 'tratar separado'.",
+   "citacoes": [
+    {
+     "trecho": "The method of principled negotiation is hard on the merits, soft on the people.",
+     "pagina": "p. 21"
+    },
+    {
+     "trecho": "Invent multiple options looking for mutual gains before deciding what to do.",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "Deal with people problems by changing how you treat people; don't try to solve them with substantive concessions.",
+     "pagina": "p. 40"
+    },
+    {
+     "trecho": "If they are not involved in the process, they are unlikely to approve the product.",
+     "pagina": "p. 45"
+    },
+    {
+     "trecho": "Understanding is not agreeing.",
+     "pagina": "p. 52"
+    },
+    {
+     "trecho": "It is more persuasive, however, to describe a problem in terms of its impact on you than in terms of what they did or why",
+     "pagina": "p. 53"
+    }
+   ]
+  },
+  {
+   "nome": "Interesses e opções de ganho mútuo (Focus on interests, not positions; Invent options for mutual gain)",
+   "livro": "getting-to-yes",
+   "paginas": "p. 57 a 91",
+   "componentes": [
+    {
+     "nome": "Posição versus interesse",
+     "descricao": "A posição é o que se decidiu; o interesse é o que levou a decidir. Para cada interesse existem várias posições possíveis, e atrás de posições opostas há mais interesses compartilhados ou compatíveis do que conflitantes. Interesses definem o problema."
+    },
+    {
+     "nome": "Como identificar interesses",
+     "descricao": "Perguntar por que, perguntar por que não (qual a decisão que o outro vê você pedindo e o que impede), reconhecer interesses múltiplos (inclusive de quem está atrás da mesa), olhar as necessidades humanas básicas (segurança, bem-estar econômico, pertencimento, reconhecimento, controle) e listar por escrito em ordem de importância."
+    },
+    {
+     "nome": "Como falar sobre interesses",
+     "descricao": "Dar vida aos seus interesses com detalhe, reconhecer os do outro como parte do problema, apresentar o problema antes da resposta, olhar para a frente e não para trás, ser concreto mas flexível e ser duro com o problema e suave com as pessoas."
+    },
+    {
+     "nome": "Quatro obstáculos à criação de opções",
+     "descricao": "Julgamento prematuro, busca da resposta única, suposição de bolo fixo e achar que resolver o problema do outro é problema do outro."
+    },
+    {
+     "nome": "Inventar antes de decidir",
+     "descricao": "Sessão de ideias com regras: propósito definido, cinco a oito pessoas, ambiente diferente, clima informal, facilitador, lado a lado diante do problema, sem crítica, ideias registradas à vista. Depois marcar as promissoras, melhorá-las e agendar a decisão. Também vale fazer com o outro lado, se for deixado claro que não é negociação."
+    },
+    {
+     "nome": "Ampliar as opções",
+     "descricao": "Gráfico do círculo (passar do problema à análise, à abordagem e à ação), olhar pelos olhos de diferentes especialistas, inventar acordos de força diferente (processual ou substantivo, provisório ou permanente, parcial ou completo, condicional ou não, de segunda ordem) e mudar o escopo do acordo."
+    },
+    {
+     "nome": "Procurar ganho mútuo",
+     "descricao": "Identificar interesses compartilhados e transformá-los em meta comum concreta; encaixar diferenças (interesses, crenças, valor do tempo, previsões, aversão a risco), buscando o que custa pouco a quem dá e vale muito a quem recebe; perguntar a preferência entre opções igualmente aceitáveis para quem propõe."
+    },
+    {
+     "nome": "Facilitar a decisão do outro",
+     "descricao": "Escolher de quem é o ponto de vista (uma pessoa, não uma abstração), qual decisão se pede, redigir propostas fáceis de implementar com precedente e legitimidade e testar a opção com uma proposição a que o outro possa responder apenas com sim."
+    }
+   ],
+   "logica": "Negociar posições comprime o problema numa linha entre dois números e produz divisão do meio, em que todos perdem. Interesses abrem o espaço: a bibliotecária abre a janela da sala ao lado e resolve o conflito entre ar fresco e corrente de ar. Separar inventar de decidir libera a imaginação, e olhar para as diferenças (tempo, risco, previsão) revela trocas em que cada lado dá o que custa pouco e recebe o que vale muito. Tornar a decisão fácil para o outro é a forma mais prática de aumentar a chance de sim.",
+   "aplicacao_wise": "Cada parceiro-alvo tem uma ficha de interesses (os da Wise e os do parceiro) escrita antes da reunião e revisada depois. Interesses prováveis do ERP ou CRM: proteger a carteira, aumentar receita recorrente, ter acesso a clientes industriais com gestão comercial madura, parecer relevante para o cliente. Da associação ou feira: valor para os associados, conteúdo, patrocínio, presença de indústria. Interesses da Wise: acesso a indústrias, indicação qualificada, credibilidade, evento da Base Ativa, crescimento da Prateleira. Compartilhados: o cliente industrial bem atendido. A decisão que o parceiro vê a Wise pedindo é, em geral, indicar um cliente dele a uma consultoria; os custos percebidos (risco reputacional, cruzamento de carteira) precisam ser tratados primeiro. As opções vêm em pacotes (A/B/C com contrapartidas), opções de custo parecido para a Wise e valor diferente para o parceiro (acesso à Prateleira de RFP, evento da Base Ativa, conteúdo, apoio em feira) e acordos de força diferente: um piloto de 90 dias parcial é uma opção válida, e o termo-quadro final só vem depois. A proposta termina com uma frase de um sim: 'Aceitam participar do piloto de 90 dias com estas três contrapartidas?'.",
+   "impacto_modelo_de_negocio": "O programa passa de tabela de pacotes fechada a menu de opções cujos itens têm custo baixo para a Wise e valor alto ao parceiro. Isso muda a oferta: o valor percebido sobe sem aumentar comissão. Para entidades, a opção mais valiosa pode ser conteúdo ou evento, não percentual. A Wise aprende o modelo de negócio de cada categoria de parceiro e pode ter ofertas por categoria.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar interesses do parceiro e da Wise em ficha de interesses",
+     "descricao": "Ficha de uma página por parceiro-alvo com interesses (substância e relação), os compartilhados, os divergentes e as necessidades básicas. Antes da reunião e revisada depois dela.",
+     "gatilho": "Reunião de apresentação marcada.",
+     "entregas": "Ficha de interesses com data e responsável pela revisão.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Mapear a decisão percebida e os decisores do parceiro",
+     "descricao": "Descrever a decisão que o parceiro acha que a Wise lhe pede, com ganhos e perdas percebidos, e quem influencia (diretor comercial, TI, jurídico, presidente). O interesse de cada decisor é registrado separadamente.",
+     "gatilho": "Após a reunião de apresentação.",
+     "entregas": "Mapa de decisão com decisores, interesses e obstáculos.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conduzir sessão de ideias para opções de pacote",
+     "descricao": "Sessão de 30 a 45 minutos, sem crítica, com Gerente de Parcerias e um par (consultor ou sócio). O resultado é uma lista de opções de contrapartida, formato e escopo por parceiro. Pode ser feita com o parceiro quando a relação permitir.",
+     "gatilho": "Ficha de interesses preenchida.",
+     "entregas": "Lista de dez a quinze opções e três marcadas para melhoria.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Mapear trocas de baixo custo para a Wise e alto valor para o parceiro",
+     "descricao": "Para cada opção, marcar custo para a Wise e valor para o parceiro. Priorizar as trocas com custo baixo e valor alto (acesso à Prateleira, evento, conteúdo, apresentação a cliente).",
+     "gatilho": "Fim da sessão de ideias.",
+     "entregas": "Matriz de custo e valor com as trocas escolhidas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Oferecer opções equivalentes e perguntar a preferência",
+     "descricao": "Apresentar duas ou três opções igualmente aceitáveis para a Wise e perguntar qual o parceiro prefere. Melhora o pacote sem forçar decisão e revela interesses.",
+     "gatilho": "Preparação da proposta.",
+     "entregas": "Opção preferida registrada e proposta refinada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Propor acordo piloto ou parcial antes do termo completo",
+     "descricao": "Acordo de força menor (provisório, parcial, contingente, de escopo reduzido): por exemplo, piloto de 90 dias com uma contrapartida e uma meta, que depois vira o termo-quadro.",
+     "gatilho": "Parceiro com dúvida sobre compromisso completo.",
+     "entregas": "Piloto assinado com meta e critério de passagem para o termo-quadro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Redigir proposta aceitável com um sim",
+     "descricao": "Proposta de uma página que o parceiro pode aceitar com a palavra sim: o que a Wise faz, o que o parceiro faz, prazo e como revisar. Sem alternativas e sem letras miúdas.",
+     "gatilho": "Opção escolhida.",
+     "entregas": "Proposta de uma página enviada ao decisor.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Transformar os pacotes A/B/C em um menu de opções com critérios de nível",
+     "descricao": "Os níveis deixam de ser degraus fechados e viram combinações de contrapartidas escolhidas pelo parceiro, com o nível definido por critério objetivo (potencial e resultado). Preserva a decisão do patrocinador por níveis A/B/C e dá espaço a ajuste fino.",
+     "gatilho": "Desenho do programa.",
+     "entregas": "Catálogo de contrapartidas e regra de composição por nível.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de aceitação da primeira proposta e número de opções por negociação",
+     "descricao": "Percentual de propostas aceitas sem retrabalho e quantidade média de opções consideradas. Alta aceitação com poucas opções indica oferta padrão que não explora interesses.",
+     "gatilho": "Fechamento mensal.",
+     "entregas": "Percentual e média por categoria de parceiro.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Dois círculos que se sobrepõem (interesses da Wise e do parceiro), com a área central rotulada 'compartilhados'. Abaixo, uma linha de posições (pontos opostos) e, saindo de cada uma, uma seta para baixo com a palavra 'por quê?' levando ao interesse. À direita, um funil invertido de opções (muitas no topo, uma proposta com sim na base).",
+   "citacoes": [
+    {
+     "trecho": "Interests motivate people; they are the silent movers behind the hubbub of positions.",
+     "pagina": "p. 58"
+    },
+    {
+     "trecho": "Your position is something you have decided upon. Your interests are what caused you to so decide.",
+     "pagina": "p. 58"
+    },
+    {
+     "trecho": "Behind opposed positions lie shared and compatible interests, as well as conflicting ones.",
+     "pagina": "p. 59"
+    },
+    {
+     "trecho": "Judgment hinders imagination.",
+     "pagina": "p. 72"
+    },
+    {
+     "trecho": "Invent first, decide later.",
+     "pagina": "p. 74"
+    },
+    {
+     "trecho": "Look for items that are of low cost to you and high benefit to them, and vice versa.",
+     "pagina": "p. 88"
+    }
+   ]
+  },
+  {
+   "nome": "Critérios objetivos e BATNA (Insist on using objective criteria; Best Alternative To a Negotiated Agreement)",
+   "livro": "getting-to-yes",
+   "paginas": "p. 92 a 113 e p. 174 a 175",
+   "componentes": [
+    {
+     "nome": "Critérios objetivos (padrões justos)",
+     "descricao": "Padrões independentes da vontade de qualquer das partes, legítimos e práticos, como valor de mercado, precedente, julgamento científico, padrões profissionais, eficiência, custos, o que um tribunal decidiria, padrões morais, igualdade de tratamento, tradição e reciprocidade. Quase sempre há mais de um critério disponível."
+    },
+    {
+     "nome": "Procedimentos justos",
+     "descricao": "Quando o conflito é de interesse puro: um corta e o outro escolhe, revezar, sortear, deixar um terceiro decidir, arbitragem com a última melhor oferta."
+    },
+    {
+     "nome": "Teste da reciprocidade",
+     "descricao": "Um critério é justo se a parte que o propõe aceitaria que fosse aplicado a ela mesma. Cada padrão que o outro propõe vira alavanca para persuadi-lo."
+    },
+    {
+     "nome": "Três regras de uso",
+     "descricao": "Enquadrar cada questão como busca conjunta de critérios; raciocinar e estar aberto à razão sobre qual padrão se aplica e como; nunca ceder à pressão, só a princípio. O livro mostra o diálogo com o ajustador de seguros: 'Como chegou a esse valor?'."
+    },
+    {
+     "nome": "Custos de ter um piso (bottom line)",
+     "descricao": "Um piso fixo protege contra acordo ruim, mas fecha o ouvido ao que se aprende na mesa, inibe a imaginação e costuma ser definido alto demais ou baixo demais, arbitrário."
+    },
+    {
+     "nome": "BATNA: a melhor alternativa a um acordo negociado",
+     "descricao": "O que a parte fará se não houver acordo. É o único padrão que protege tanto de aceitar um mau acordo quanto de rejeitar um bom. Quanto melhor a BATNA, maior o poder: o poder de negociar vem da atratividade de não chegar a acordo, mais do que de recursos."
+    },
+    {
+     "nome": "Como desenvolver a BATNA",
+     "descricao": "Inventar a lista de ações possíveis sem acordo, melhorar as mais promissoras e convertê-las em alternativas práticas, e escolher a melhor. Também considerar a BATNA do outro lado e, se ele a superestima, ajudá-lo a testar a realidade."
+    },
+    {
+     "nome": "Gatilho de revisão (trip wire)",
+     "descricao": "Acordo imperfeito, mas melhor que a BATNA, que serve de alerta: antes de aceitar algo pior, a parte pausa e reexamina. Limita a autoridade do agente sem engessar como o piso."
+    }
+   ],
+   "logica": "Decidir pela vontade custa caro: gera disputa de teimosia e acordos arbitrários. Substituir o 'quem cede' pelo 'o que é justo' retira o conflito das pessoas e o leva a padrões que ambos podem respeitar, o que preserva a relação e acelera. O livro avisa que ninguém precisa abandonar seus interesses: os critérios são um caminho para que ambos aceitem sem se sentir derrotados. A BATNA existe para que o negociador saiba quando dizer não e quanto vale dizer sim, e estar disposto a sair é o que dá força para defender interesses.",
+   "aplicacao_wise": "A tabela de comissão (40% da primeira mensalidade para Wise Makers e Tríade, 6% do projeto para Swallow, mais 10% e 2% ao gerente) é, na prática, o critério objetivo do programa: a Wise precisa documentar um benchmark do que o mercado paga por indicação de softwares e consultorias e mostrar ao parceiro a base da regra, em vez de apenas declará-la. O mesmo vale para níveis A/B/C e para as regras de SLA e proteção de 180 dias: ser escritas, aplicáveis a ambos (reciprocidade: a Wise aceitaria ser medida por essa regra se fosse o parceiro?) e revisadas na data combinada. Concessões fora da tabela (nível, pacote, comissão) são registradas com o critério que as justifica e passam por um gatilho: acima de determinada faixa o gerente faz uma pausa e consulta o Diretor. A BATNA da Wise é explícita por categoria: sem aquele ERP, qual o parceiro alternativo da mesma categoria? O que a Wise faz sem aquela associação? A BATNA do parceiro também é estimada (outros programas de canal, venda direta, outro parceiro de consultoria). Se a BATNA do parceiro é muito melhor do que a oferta da Wise, o gerente não negocia mais: melhora a oferta ou deixa a conversa em espera.",
+   "impacto_modelo_de_negocio": "O programa ganha legitimidade: regras com base conhecida reduzem a sensação de arbitrariedade e a negociação de percentual. Em vez de barganhar 40%, a conversa se desloca para escopo, contrapartidas e metas. A Wise protege suas margens sem rigidez: sabe quando negociar e quando sair. Também define de antemão onde está disposta a ceder, o que acelera a decisão do Diretor.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir critérios objetivos de níveis e pacotes",
+     "descricao": "Escrever, para cada nível e pacote, o critério de entrada, de permanência e de saída (potencial da carteira, indicações no ICP, SLA, nota de saúde), com a fonte de cada padrão. Vale para ambas as partes.",
+     "gatilho": "Desenho do programa e revisão anual.",
+     "entregas": "Tabela de critérios com fonte e responsável.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Testar a reciprocidade dos critérios",
+     "descricao": "Para cada critério, perguntar se a Wise aceitaria ser medida por ele se estivesse no lugar do parceiro. Se não, reescrever ou explicar a diferença.",
+     "gatilho": "Aprovação de um novo critério.",
+     "entregas": "Registro do teste com resultado e ajuste.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Documentar benchmark de comissão por indicação",
+     "descricao": "Levantar práticas de mercado para indicação (software, consultoria, evento, entidades) e registrar a posição da Wise (40% da primeira mensalidade, 6% do projeto) e seu valor equivalente em LTV (3 a 5%).",
+     "gatilho": "Antes de abrir a primeira negociação e uma vez por ano.",
+     "entregas": "Benchmark de uma página com fonte, data e posição da Wise.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar concessões com o critério que as justifica",
+     "descricao": "Toda exceção à tabela (nível, pacote, comissão, prazo) é anotada com o padrão objetivo que a sustenta (precedente, valor de mercado, desempenho). Evita precedentes arbitrários.",
+     "gatilho": "Qualquer concessão acordada.",
+     "entregas": "Registro de concessão com critério, valor e quem aprovou.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir a BATNA da Wise por categoria de parceiro",
+     "descricao": "Para ERP, CRM, MES, SST, ESG, BPM, automação, associações e feiras, listar as alternativas se não houver acordo, melhorar as promissoras e escolher a melhor. O resultado diz quanto vale cada parceiro.",
+     "gatilho": "Início do programa e revisão semestral.",
+     "entregas": "Quadro de BATNA por categoria com a alternativa escolhida.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Estimar a BATNA do parceiro e testar a oferta contra ela",
+     "descricao": "Estimar o que o parceiro faria sem a Wise (outros programas, venda direta, outro consultor) e se a oferta é mais atraente que isso. Se não for, ajustar a oferta ou pausar.",
+     "gatilho": "Antes da proposta formal.",
+     "entregas": "Nota de BATNA do parceiro e ajuste à oferta.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Configurar gatilho de revisão de concessões",
+     "descricao": "Definir a faixa a partir da qual a concessão exige pausa e consulta (por exemplo, desvio de nível, de pacote ou de comissão). Acima da faixa, o gerente não fecha sozinho.",
+     "gatilho": "Cadastro de regra no portal.",
+     "entregas": "Regra de alçada e de pausa.",
+     "dono": "Diretor da Wise"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Acordar no termo os critérios da revisão trimestral",
+     "descricao": "O termo-quadro traz os critérios pelos quais o nível será revisto (indicações no ICP, SLA, nota de saúde, investimento), para que subida ou descida de nível seja uma consequência acordada.",
+     "gatilho": "Fechamento do termo.",
+     "entregas": "Seção de critérios de revisão assinada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Mover níveis e SLAs por regra e deixar a decisão manual só para exceções",
+     "descricao": "O portal aplica as regras objetivas e produz proposta de movimento de nível, alerta de SLA e prazo de proteção. O gerente avalia exceções. Reduz cartões que esperam decisão e aumenta consistência.",
+     "gatilho": "Fechamento do trimestre.",
+     "entregas": "Fila de exceções e histórico de movimentos automáticos.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Percentual de decisões sustentadas por critério escrito",
+     "descricao": "Parte das decisões de nível, pacote e concessão que cita critério e fonte. Mede o quanto o programa se afasta da arbitrariedade.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Percentual e lista de decisões sem critério.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão anual dos critérios e do benchmark",
+     "descricao": "Uma vez por ano o Diretor e o gerente reveem o benchmark de comissão, os critérios de nível e as BATNAs. Mudança de critério vale para os próximos ciclos, não para o passado.",
+     "gatilho": "Aniversário do programa.",
+     "entregas": "Versão nova dos critérios, benchmark e BATNAs.",
+     "dono": "Diretor da Wise"
+    }
+   ],
+   "visual": "Um eixo horizontal que vai de 'pior para mim' a 'melhor para mim' e uma linha vertical marcando a BATNA, à esquerda da qual o acordo não vale. Um segundo traço, ligeiramente à direita, mostra o gatilho de revisão. Abaixo, uma caixa com os critérios (mercado, precedente, desempenho, reciprocidade) apontando para a zona de acordo possível entre as BATNAs das duas partes.",
+   "citacoes": [
+    {
+     "trecho": "At a minimum, objective criteria need to be independent of each side's will.",
+     "pagina": "p. 96"
+    },
+    {
+     "trecho": "Objective criteria should apply, at least in theory, to both sides.",
+     "pagina": "p. 96"
+    },
+    {
+     "trecho": "Frame each issue as a joint search for objective criteria.",
+     "pagina": "p. 98"
+    },
+    {
+     "trecho": "The reason you negotiate is to produce something better than the results you can obtain without negotiating.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "The better your BATNA, the greater your power.",
+     "pagina": "p. 109"
+    },
+    {
+     "trecho": "Before accepting any agreement worse than this trip-wire package, you should take a break and reexamine the situation.",
+     "pagina": "p. 109"
+    }
+   ]
+  },
+  {
+   "nome": "Texto único, acordo-quadro, jiu-jitsu de negociação e conversas difíceis (One-text procedure, Framework agreement, Negotiation jujitsu)",
+   "livro": "getting-to-yes",
+   "paginas": "p. 46 a 53, p. 114 a 122, p. 133 a 137 e p. 165 a 173",
+   "componentes": [
+    {
+     "nome": "Procedimento do texto único (one-text)",
+     "descricao": "Um mediador (ou o próprio negociador, que pode mediar sua disputa) pergunta sobre interesses, não posições, escreve uma lista de interesses e um rascunho sem compromisso, pede críticas, melhora a minuta várias vezes (no Camp David foram 23 versões em 13 dias) e só então recomenda. Cada parte tem uma única decisão: sim ou não."
+    },
+    {
+     "nome": "Jiu-jitsu de negociação",
+     "descricao": "Quando o outro ataca, não reagir. Olhar por trás da posição (tratá-la como uma opção), convidar crítica e conselho em vez de defender, reformular o ataque pessoal como ataque ao problema, fazer perguntas e usar o silêncio."
+    },
+    {
+     "nome": "Acordo-quadro (framework agreement)",
+     "descricao": "Documento com a forma de contrato mas com espaços em branco para cada termo, que serve de pauta e evita esquecimentos. Preparar versões múltiplas, começando pela mais simples, rascunhar durante a conversa e marcar 'rascunho, sem compromisso'."
+    },
+    {
+     "nome": "Movimentos até o fechamento",
+     "descricao": "Pensar no fechamento desde o início (como cada lado justificará o acordo para suas instâncias), avançar para o compromisso gradualmente, perseverar nos interesses sem rigidez na solução, fazer uma oferta que parta da conversa, usar procedimento justo para o que sobrar e ser generoso no final. Quando persistir a discordância, buscar acordo de segunda ordem (onde discordamos)."
+    },
+    {
+     "nome": "Autoridade e jogo do rascunho único",
+     "descricao": "Antes de dar e receber, perguntar quanta autoridade o outro tem. Se disser que levará a terceiro, tratar o texto como rascunho conjunto sem compromisso para os dois, com reciprocidade. Esclarecer cedo que nada está acordado até que tudo esteja."
+    },
+    {
+     "nome": "Conversa difícil: relação e substância separadas",
+     "descricao": "Falar do impacto sobre si, não do que o outro fez ou por quê; olhar para o futuro, não para trás; reconhecer emoções; oferecer saída que preserve a face; não ceder para melhorar a relação; negociar a relação em seus próprios méritos; distinguir como se trata o outro de como ele trata você."
+    },
+    {
+     "nome": "Escolha do canal",
+     "descricao": "Mensagens curtas e abreviadas aumentam os mal-entendidos. Em estudo citado pelo livro, negociações presenciais tiveram mais acordos mutuamente benéficos que por escrito, e menos impasses; por escrito aumentam mentiras e perde-se o efeito de empatia."
+    },
+    {
+     "nome": "Começar pequeno e aprender com a prática",
+     "descricao": "Experimentar em negociações de baixo risco, com BATNA boa e padrões objetivos favoráveis. Rever o desempenho depois de cada negociação importante e manter um diário."
+    }
+   ],
+   "logica": "O texto único retira a negociação do ciclo de oferta e contraoferta e a transforma em edição conjunta: criticar é fácil, ceder é difícil, e como ninguém assina rascunho, o ego não se compromete. Reduz o número de decisões e a incerteza de cada decisão, fatores que travam acordos entre mais de duas partes ou com interlocutores que precisam de aprovação superior. O acordo-quadro dá estrutura e evita esquecimentos. O jiu-jitsu aproveita a energia do ataque em vez de resistir a ela, e a escolha do canal reconhece que a forma de comunicar muda o resultado da conversa.",
+   "aplicacao_wise": "Cada parceiro tem um termo-quadro único, vivo, em formato de documento no portal, com espaços em branco para nível, pacote, contrapartidas, plano de ações conjuntas, metas, SLA, proteção de 180 dias, critérios de revisão, critérios de saída e cláusulas contingentes. Esse documento é o texto único: Wise e parceiro o editam por rodadas curtas, sempre com a nota 'rascunho, sem compromisso', e o Diretor só decide ao final, com sim ou não. O gerente atua como o 'arquiteto': pergunta o porquê, não a posição, e faz a mediação da minuta entre o parceiro e o Diretor da Wise. Antes de qualquer concessão, confirma-se quem decide no parceiro (o contato do dia a dia pode não ter alçada). Para o parceiro inativo, o roteiro de conversa difícil usa os movimentos do livro: falar de fatos e impacto (indicações paradas há 60 dias), olhar o futuro (o que dá para fazer em 30 dias), perguntar interesses, oferecer saída honrosa (pausa ou nível C) e só então a opção de desligamento. O canal conta: o grupo de WhatsApp serve para o dia a dia, mas a conversa difícil é por telefone ou presencial, com resumo no portal (inferência nossa a partir do que o livro diz de canais escritos). Antes de rodar o método com todos, o gerente faz um piloto com poucos parceiros, revisa e ajusta.",
+   "impacto_modelo_de_negocio": "O contrato deixa de ser um documento padrão assinado uma vez e passa a ser o registro vivo do relacionamento, com critérios, metas e saída. Isso reduz o tempo de negociação e o risco de erro de interpretação, e prepara a Wise para um programa maior sem multiplicar documentos. A formalização de saída honrosa e de cláusulas contingentes diminui o custo de desligar parceiros sem brigar.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar termo-quadro de parceria com espaços em branco",
+     "descricao": "Modelo único, com seções para cada termo a ser negociado (nível, pacote, contrapartidas, ações conjuntas, metas, SLA, proteção de 180 dias, revisão, saída, cláusulas contingentes). Serve de pauta de negociação e de registro vivo depois da assinatura.",
+     "gatilho": "Decisão do parceiro de seguir para o termo.",
+     "entregas": "Termo-quadro em branco gerado no portal, com campos obrigatórios e opcionais.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conduzir a minuta única do termo em rodadas curtas",
+     "descricao": "Gerente atua como mediador: coleta interesses, escreve o rascunho, envia para críticas ('o que estaria errado nisto?'), incorpora e reenvia. Rascunho marcado como sem compromisso. A última versão é recomendada ao parceiro e ao Diretor.",
+     "gatilho": "Termo-quadro aberto.",
+     "entregas": "Versões numeradas da minuta, lista de críticas e versão final recomendada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Confirmar a autoridade de decisão das duas partes",
+     "descricao": "Perguntar abertamente quem decide no parceiro, o que precisa de aprovação e em que prazo. Fazer o mesmo na Wise (alçada do gerente versus Diretor). Combinar que nada está fechado até que tudo esteja.",
+     "gatilho": "Antes da primeira concessão.",
+     "entregas": "Campo de decisor e alçada no registro do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Mediar a minuta entre parceiro e Diretor da Wise",
+     "descricao": "O gerente traduz as respostas do parceiro em linguagem de decisão e leva ao Diretor uma única proposta, com sim ou não, e as consequências de cada uma. Evita idas e vindas.",
+     "gatilho": "Minuta pronta para recomendação.",
+     "entregas": "Nota de decisão de uma página.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Enviar proposta formal do termo",
+     "descricao": "Depois de rodadas de rascunho, o gerente envia a versão final como proposta, com o que cada lado entrega e o que decide cada instância. Pode ser aceita com um sim.",
+     "gatilho": "Minuta sem pendências.",
+     "entregas": "Proposta formal e prazo de resposta.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Incluir cláusulas contingentes de revisão e de saída",
+     "descricao": "Cláusulas condicionais que determinam o que acontece se metas não forem cumpridas (rebaixar de nível, pausar contrapartidas, encerrar), escritas em conjunto desde o começo para tirar o peso da conversa difícil.",
+     "gatilho": "Fechamento do termo.",
+     "entregas": "Seção de contingências assinada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conduzir conversa difícil com parceiro em quatro movimentos",
+     "descricao": "Roteiro: fatos e impacto sobre mim, olhar para a frente, perguntar interesses e propor saída honrosa. Evita acusação e preserva a relação, mesmo se terminar em desligamento.",
+     "gatilho": "Alerta de saúde, SLA estourado ou parceiro inativo.",
+     "entregas": "Roteiro preenchido, conversa feita e resumo no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Escolher o canal da conversa difícil",
+     "descricao": "Telefone ou presencial para conversas difíceis; WhatsApp só para registro e rotina. O resumo vai ao portal para que o histórico não fique só no grupo.",
+     "gatilho": "Antes da conversa difícil.",
+     "entregas": "Canal escolhido e justificativa em uma linha.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Oferecer saída honrosa ao parceiro",
+     "descricao": "Dar ao parceiro uma forma de sair ou mudar de nível sem perder reputação: pausa de 90 dias, mudança para C, parceria só de eventos. O livro trata a preservação da face como parte do acordo.",
+     "gatilho": "Conversa de resgate ou desligamento.",
+     "entregas": "Opção de saída documentada e aceita (ou recusada).",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Encerrar a parceria de forma amigável",
+     "descricao": "Conduzir o encerramento sem ressentimento: reconhecer o que foi construído, honrar proteção de 180 dias e comissões, combinar o que fica público e o que fica privado, deixar a porta aberta.",
+     "gatilho": "Decisão de encerrar.",
+     "entregas": "Termo de encerramento e mensagem final.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar plano de resgate de parceiro inativo",
+     "descricao": "Para parceiro com nota baixa, tratar o assunto como problema compartilhado, definir uma ação pequena de 30 dias com um dono de cada lado e revisar. Se não houver resposta, a decisão passa a ser recuperar ou desligar.",
+     "gatilho": "Nota de saúde baixa por dois ciclos.",
+     "entregas": "Plano de 30 dias e reavaliação.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Retrospectiva após cada negociação importante",
+     "descricao": "Dez minutos depois de cada termo ou de cada desligamento: o que funcionou, o que não funcionou, o que mudar. As anotações viram um diário do programa e alimentam a retrospectiva trimestral.",
+     "gatilho": "Fim da negociação.",
+     "entregas": "Diário de negociação com aprendizado e ajuste.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Rodar piloto com poucos parceiros antes de escalar o método",
+     "descricao": "Começar pelos primeiros três a cinco parceiros, com a escolha deliberada de casos de baixo risco e BATNA boa. Revisar, ajustar modelos de termo e só então abrir o método ao programa.",
+     "gatilho": "Primeiros parceiros assinados.",
+     "entregas": "Relatório curto do piloto e ajustes nos modelos.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Fluxo circular de rascunhos: uma folha no centro (termo-quadro), setas para parceiro e Diretor, cada uma voltando com 'críticas' e a folha reescrita. Numeração de versões (v1, v2, v3) e, no final, uma única caixa 'Sim ou não'. Ao lado, um pequeno quadro 'conversa difícil' com quatro passos e um símbolo de telefone no lugar de mensagem.",
+   "citacoes": [
+    {
+     "trecho": "It is hard to make concessions, but it is easy to criticize.",
+     "pagina": "p. 120"
+    },
+    {
+     "trecho": "Each spouse now has only one decision to make: yes or no.",
+     "pagina": "p. 121"
+    },
+    {
+     "trecho": "Mediate your own dispute.",
+     "pagina": "p. 122"
+    },
+    {
+     "trecho": "To encourage brainstorming, it is a good idea to agree explicitly that all commitments are tentative.",
+     "pagina": "p. 170"
+    },
+    {
+     "trecho": "Before starting on any give-and-take, find out about the authority on the other side.",
+     "pagina": "p. 137"
+    },
+    {
+     "trecho": "The short length and abbreviations used in texting greatly increase the likelihood of unintended misunderstandings.",
+     "pagina": "p. 165"
+    }
+   ]
+  }
+ ],
+ "excesso_de_kanbans": [
+  {
+   "ideia": "Um único ciclo de vida por parceiro no lugar de um funil por processo: funil, onboarding, revisão de nível e desligamento viram fases de um registro único, com um só card por parceiro.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 88",
+   "como_aplicar": "O portal mantém uma tabela de parceiros com campo fase (Conhecer, Ativar, Operar, Rever, Sair). Os quadros por processo deixam de existir como quadros e viram filtros sobre a mesma tabela. O card é o registro do parceiro; a ação seguinte é um campo, não outro card."
+  },
+  {
+   "ideia": "Gestão por exceção com a nota de três fatores: o parceiro só aparece na fila de trabalho do gerente quando um fator cai ou o ciclo atrasa.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 174",
+   "como_aplicar": "Painel do portfólio com um semáforo por parceiro (qualidade, inovação, valor). Fila de exceções com no máximo quinze itens por semana, ordenada pela queda de nota. Parceiros verdes não têm cartão ativo; eles estão no calendário de revisão."
+  },
+  {
+   "ideia": "Intensidade de gestão proporcional ao nível: parceiros de baixo potencial ficam em modo de regra e comunidade, sem card, e só voltam à mesa por exceção.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 70",
+   "como_aplicar": "Tabela de intensidade por nível (A mensal, B trimestral, C por regra). C não tem cartão: recebe tarefas automáticas (boas-vindas, lembrete de trilha, indicação por link) e entra na fila só por exceção. Corta o número de cards ativos pela maior fatia do portfólio."
+  },
+  {
+   "ideia": "A reunião de revisão com pauta gerada pelo portal substitui os cartões de acompanhamento: um parceiro, uma revisão, uma ata, com as ações dentro dela.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 100",
+   "como_aplicar": "Em vez de cards separados para indicações paradas, ações conjuntas atrasadas, comissão a conferir e nível a revisar, a pauta da revisão reúne os sete itens do livro. As ações nascem da ata, com dono e prazo, e saem da pauta quando concluídas."
+  },
+  {
+   "ideia": "Uma função central de alianças com visão de portfólio: a mesa do portfólio mensal substitui a leitura de vários quadros.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 75",
+   "como_aplicar": "Uma tela única do Gerente de Parcerias com a matriz de níveis, os tipos, as notas de saúde e as horas alocadas. A reunião mensal de uma hora decide promoções, rebaixamentos, resgates e saídas sem abrir um quadro por parceiro."
+  },
+  {
+   "ideia": "Limite de trabalho em andamento por padrinho e por capacidade: o número de parceiros profundos é limitado pelas horas, e quem não cabe fica em C.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 121",
+   "como_aplicar": "Regra de capacidade no portal: máximo de parceiros A por padrinho e por mês (nosso limite: dois ou três por padrinho, e o total de A cabe nas 12 horas do gerente). Excedeu, o portal sugere manter em B ou esperar uma saída."
+  },
+  {
+   "ideia": "Os oito tipos de parceria escolhem a jogada: o card é um só, a coluna indica o tipo e a próxima jogada, no lugar de um funil para cada situação.",
+   "livro": "strategic-alliances",
+   "pagina": "p. 17",
+   "como_aplicar": "Mapa de tipos com oito colunas e uma jogada padrão por coluna (por exemplo, reengajar Catador de Cerejas com uma oportunidade única). A jogada gera as tarefas; o parceiro muda de coluna quando muda o comportamento, não quando muda a etapa do funil."
+  },
+  {
+   "ideia": "Um texto único vivo por parceiro: o termo-quadro acumula interesses, opções, critérios, BATNA e compromissos, e as tarefas nascem de seus campos em branco em vez de cards soltos.",
+   "livro": "getting-to-yes",
+   "pagina": "p. 120",
+   "como_aplicar": "Cada parceiro tem um documento no portal com seções que correspondem a processos (negociação, onboarding, ações conjuntas, revisão, saída). Um campo vazio gera uma tarefa; um campo preenchido a fecha. O quadro de tarefas é um relatório do documento, não uma coleção de funis."
+  },
+  {
+   "ideia": "Reduzir o número de decisões: a fila do Diretor traz só perguntas de sim ou não, cada uma com a proposta completa, em vez de cards que andam por etapas.",
+   "livro": "getting-to-yes",
+   "pagina": "p. 121",
+   "como_aplicar": "Uma fila de decisões com três campos: proposta, consequência do sim, consequência do não. O gerente prepara e o Diretor responde. Tudo que não é decisão é executado pelo gerente por regra."
+  },
+  {
+   "ideia": "Critérios objetivos como regras automáticas: nível, SLA e prazo de proteção se movem por regra, e só as exceções viram trabalho humano.",
+   "livro": "getting-to-yes",
+   "pagina": "p. 96",
+   "como_aplicar": "O portal calcula nível sugerido, prazos de SLA e vencimento de proteção a partir dos critérios escritos no termo. O gerente revisa só as exceções e as concessões, com registro do critério que as justifica."
+  },
+  {
+   "ideia": "Acordos de força menor e piloto: dividir o programa em partes pequenas e começar com poucos parceiros reduz a quantidade de fluxos abertos ao mesmo tempo.",
+   "livro": "getting-to-yes",
+   "pagina": "p. 173",
+   "como_aplicar": "Os três primeiros parceiros entram num piloto de 90 dias com um subconjunto de processos ligados. Cada processo novo só vira quadro depois de rodar com cinco parceiros e provar que gera valor."
+  },
+  {
+   "ideia": "O termo-quadro define a agenda: a lista de cabeçalhos do documento é o roteiro da negociação e depois do ciclo, e substitui uma lista de funis.",
+   "livro": "getting-to-yes",
+   "pagina": "p. 170",
+   "como_aplicar": "O modelo do termo tem as mesmas seções para todos os parceiros; as seções determinam as etapas do ciclo de vida. Em vez de um funil por pilar (Prateleira, Base Ativa, Link), cada pilar é uma seção do termo com status."
+  }
+ ],
+ "tensoes": [
+  {
+   "tensao": "Strategic Alliances diz que o melhor contrato pode ser arquivado e esquecido logo após a assinatura e que ele deve ser tratado como acordo pré-nupcial, focado na separação. Getting to Yes recomenda um acordo-quadro vivo, com critérios objetivos e rascunhos sucessivos. O desenho atual do programa tem proteção de 180 dias, SLA e desligamento formal, que são regras detalhadas.",
+   "como_resolver": "O termo-quadro é curto e foca em quatro coisas: interesses e metas, critérios de revisão, regras de proteção e SLA, e critérios de saída. A operação diária vive no ciclo de relacionamento e na revisão, não no texto. O termo muda por adendo curto quando o ciclo manda adaptar."
+  },
+  {
+   "tensao": "Strategic Alliances diz que confiança e compromisso nascem de pequenos projetos que se repetem e crescem. Getting to Yes diz para proceder independentemente de confiança e apoiar-se em critérios. O programa quer ativação em 90 dias, rápido para criar confiança.",
+   "como_resolver": "Usar os dois: critérios objetivos para as regras (que protegem das duas partes) e marcos de confiança para o relacionamento (primeira ação conjunta pequena, primeira indicação, evento da Base Ativa). A ativação é um marco, não prova de confiança completa; o tipo só é diagnosticado depois do dia 90."
+  },
+  {
+   "tensao": "Strategic Alliances recomenda concentrar o relacionamento próximo em poucos parceiros e limitar parcerias profundas à capacidade. O patrocinador decidiu entrar com os três pilares ao mesmo tempo desde o primeiro parceiro, e os parceiros chegam de forma orgânica, sem filtro. Há um único Gerente de Parcerias.",
+   "como_resolver": "Manter os três pilares na oferta, mas ativar um por vez por parceiro no plano de ações conjuntas, em cada giro do ciclo (inferência nossa, que não contraria a decisão de oferecer todos). Níveis A/B/C pelo potencial e pelo esforço limitam quantos parceiros recebem gestão profunda; os demais ficam em regra e comunidade."
+  },
+  {
+   "tensao": "Strategic Alliances avisa que metas de curto prazo para gerentes de relacionamento distorcem a gestão. O desenho atual paga ao gerente 10% da primeira mensalidade (Wise Makers e Tríade) e 2% do projeto (Swallow), ou seja, uma remuneração de curto prazo.",
+   "como_resolver": "Manter a comissão e acrescentar uma parte comportamental (retenção, cadência de revisão em dia, nota de saúde, amplitude de pilares usados), como no caso do canal revitalizado. Decisão do patrocinador, com a leitura do livro como argumento."
+  },
+  {
+   "tensao": "Getting to Yes recomenda evitar o piso e negociar opções e critérios. O programa tem uma tabela de comissão fixa (40%, 6%) e pacotes A/B/C com contrapartidas, que se parecem com preço de pegar ou largar.",
+   "como_resolver": "O livro aceita o 'pegar ou largar' quando existe padrão legítimo que o sustenta (p. 101). A tabela vira critério objetivo com benchmark documentado e reciprocidade testada; a negociação se desloca para escopo, contrapartidas, metas e prazo. A faixa de concessão e o gatilho de revisão ficam escritos."
+  },
+  {
+   "tensao": "Strategic Alliances propõe medir a saúde com questionários aplicados aos dois lados, e Getting to Yes depende de conversas presenciais para o que é difícil. O programa tem consultores e comercial fora do portal e comunicação por WhatsApp, com um Gerente de Parcerias com poucas horas.",
+   "como_resolver": "Medir principalmente com sinais do portal e três perguntas trimestrais de dois minutos. Aplicar o questionário de cinco medidas só em nível A e B, a cada semestre. Conversas difíceis são por telefone, e o gerente registra o resumo no portal."
+  },
+  {
+   "tensao": "A tipologia de Strategic Alliances foi construída a partir de relações maduras e mensuráveis, com dados dos dois lados. A Wise ainda não tem parceiro assinado.",
+   "como_resolver": "Nos primeiros 90 dias não há tipo, só marcos de confiança. O primeiro diagnóstico acontece na revisão do dia 90. Antes disso, o portfólio é lido apenas por fase e nível."
+  },
+  {
+   "tensao": "Strategic Alliances adverte que o gerente de relacionamento não pode virar solucionador de problemas e atendente de consultas, e que a função não pode ser secundária ao comercial. No desenho atual o Gerente de Parcerias é dono de todas as tarefas do portal, mesmo quando outro executa, e consultores e comercial não entram no portal.",
+   "como_resolver": "Ser dono significa responder pelo resultado, não executar. Regras automáticas, fila de exceções e fila de decisões limitam o trabalho manual. Os consultores e o comercial registram o que fazem pelo gerente (por exemplo, por mensagem no grupo, convertida em registro), e o Diretor recebe a visão do portfólio."
+  }
+ ]
+}

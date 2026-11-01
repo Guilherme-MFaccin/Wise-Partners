@@ -1,0 +1,1441 @@
+{
+ "frente": "ecossistema-e-plataforma",
+ "livros": [
+  "platform-revolution",
+  "ecosystem-economy"
+ ],
+ "frameworks": [
+  {
+   "nome": "Core Interaction: Participants, Value Unit and Filter, com os quatro efeitos de rede e a curadoria (Interação central: participantes, unidade de valor e filtro; efeitos de rede e curadoria)",
+   "livro": "platform-revolution",
+   "paginas": "p. 34 a 58",
+   "componentes": [
+    {
+     "nome": "Interação central",
+     "descricao": "A forma de atividade mais importante da plataforma, a troca de valor que atrai a maioria dos usuários. A plataforma é desenhada uma interação por vez; as demais interações entram em camadas depois que a central funciona."
+    },
+    {
+     "nome": "Participantes",
+     "descricao": "Dois papéis descritos de forma explícita: o produtor, que cria valor, e o consumidor, que o recebe. O mesmo usuário pode ocupar papéis diferentes em interações diferentes, e uma boa plataforma facilita a troca de papel."
+    },
+    {
+     "nome": "Unidade de valor",
+     "descricao": "O que o produtor cria e que dá ao outro lado a base para decidir se avança (anúncio, perfil, ficha). Quem produz a unidade é o participante, não a plataforma. Por isso o que separa uma unidade boa de uma fraca precisa estar escrito."
+    },
+    {
+     "nome": "Filtro",
+     "descricao": "Ferramenta de software que entrega ao consumidor só as unidades relevantes para ele. Sem filtro bom, o usuário recebe unidades sem valor e abandona a plataforma."
+    },
+    {
+     "nome": "As três trocas",
+     "descricao": "Toda interação troca informação, bens ou serviços e alguma moeda. A informação passa sempre pela plataforma; a moeda pode ser dinheiro, atenção ou reputação. O que a plataforma consegue capturar das trocas define o que ela consegue monetizar."
+    },
+    {
+     "nome": "Puxar, facilitar e combinar (pull, facilitate, match)",
+     "descricao": "As três funções do desenho. Puxar atrai e mantém os dois lados, com ciclos de retroalimentação. Facilitar dá ferramentas e regras que tornam a troca fácil e desencorajam a troca ruim. Combinar usa dados dos dois lados para ligar os pares certos. Uma estratégia de aquisição de dados (barra de progresso do perfil, por exemplo) é parte do desenho."
+    },
+    {
+     "nome": "Quatro efeitos de rede",
+     "descricao": "Efeito do mesmo lado (consumidores sobre consumidores, produtores sobre produtores) e do lado oposto, cada um positivo ou negativo. Crescimento que atrapalha a busca do melhor par vira efeito negativo. A gestão precisa tratar os quatro ao mesmo tempo."
+    },
+    {
+     "nome": "Curadoria",
+     "descricao": "Processo pelo qual a plataforma filtra, controla e limita o acesso, as atividades e as conexões. Equilibra a entrada sem atrito. Com mais dados a curadoria melhora (efeito de rede movido por dados), desde que as ferramentas sejam testadas e atualizadas."
+    },
+    {
+     "nome": "Núcleo pequeno, periferia aberta",
+     "descricao": "Princípio ponta a ponta: funções que servem a poucos usuários ficam nas bordas e não no coração da rede. Novas interações entram em camadas sobre a central (novo tipo de valor, nova categoria de usuário), para evitar o inchaço de funcionalidades."
+    }
+   ],
+   "logica": "O valor de uma plataforma nasce de interações bem sucedidas entre dois lados, não de ativos próprios. Por isso o desenho começa por dizer o que é uma boa interação (quem participa, o que se troca, quem filtra) e só depois acrescenta funcionalidade. Crescer sem curadoria faz o ruído aumentar e os melhores participantes saírem; com curadoria, mais dados melhoram o filtro e o crescimento reforça o valor em vez de diluí-lo. Manter o núcleo pequeno protege a interação central do inchaço e deixa a variedade para a borda, onde cada um resolve o que só interessa a si.",
+   "aplicacao_wise": "Escrever a interação central do programa em uma frase: uma indústria com uma necessidade conhecida é apresentada a um parceiro adequado, com contexto suficiente para virar reunião, e o resultado volta ao portal. Os participantes são a indústria cliente da Wise (consumidora) e o parceiro fornecedor (produtor); a Wise é a curadora e, no início, também a primeira produtora. A unidade de valor, proposta minha porque o livro não trata da Wise, é a indicação com contexto, que nasce em qualquer dos três pilares: ficha da Prateleira de RFP apresentada a um cliente, link exclusivo ou contato gerado na Base Ativa. O filtro é um critério de aderência escrito (segmento, porte, sistema em uso, momento de compra, região) mais um limite de fornecedores por categoria, aplicado à mão pela Gerente de Parcerias no começo e transformado em regra do portal depois. Dos quatro efeitos de rede, o que mais pesa é o negativo do mesmo lado: três ERPs na mesma categoria fazem a indústria não achar o certo e fazem cada parceiro receber pouco. Todo pedido de funcionalidade que não sustente a interação central vai para a periferia (trilhas, kits, integrações) ou espera.",
+   "impacto_modelo_de_negocio": "O programa deixa de ser um canal de comissão e passa a ser um mercado de duas pontas, em que o ativo é a qualidade e a velocidade das combinações entre indústria e parceiro. Os três pilares viram três portas de entrada para a mesma unidade de valor (inferência minha, a partir do livro). A pergunta de gestão muda de quantos parceiros existem para quantas interações boas acontecem por semana.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Combinar necessidade da indústria com o parceiro adequado",
+     "descricao": "Macroprocesso do filtro. Recebe toda necessidade registrada (demanda de RFP, achado do consultor, contato de evento, indicação de parceiro), aplica o critério de aderência e o limite por categoria, escolhe o parceiro e faz a apresentação com contexto. Substitui o fluxo separado de cada pilar.",
+     "gatilho": "Necessidade registrada no portal por qualquer origem",
+     "entregas": "Apresentação feita, interação registrada com a origem, prazo de SLA aberto",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir a interação central e a unidade de valor do programa",
+     "descricao": "Escrever em uma página quem são produtor e consumidor, qual é a unidade de valor, qual é o filtro, o que se troca (informação, serviço, moeda) e o que fica de fora. O documento vira o teste para aceitar ou adiar qualquer funcionalidade.",
+     "gatilho": "Antes de assinar o primeiro parceiro e a cada revisão trimestral",
+     "entregas": "Documento publicado no portal e checklist de teste de funcionalidade",
+     "dono": "Patrocinador do programa com a Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Padronizar a ficha de indicação com critério de qualidade",
+     "descricao": "Definir campos mínimos (necessidade, sistema atual, decisor, momento de compra, histórico), uma nota de completude e um exemplo de ficha boa e de ficha fraca. A ficha fraca volta ao parceiro antes de consumir tempo da Gerente.",
+     "gatilho": "Criação de uma indicação ou de uma ficha de fornecedor",
+     "entregas": "Ficha com nota de completude e devolutiva ao parceiro quando abaixo do mínimo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Escrever o critério de aderência do filtro",
+     "descricao": "Listar os critérios que decidem quem aparece para quem (segmento, porte, sistema em uso, momento de compra, região, histórico do parceiro), com peso e exemplo. Começa manual e revisável; só vira regra de software depois de calibrado com casos reais.",
+     "gatilho": "Antes da primeira apresentação e a cada revisão trimestral",
+     "entregas": "Tabela de critérios com pesos e exemplos, versão datada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Curar a prateleira por categoria",
+     "descricao": "Fixar um limite de fornecedores por categoria (ERP, CRM, MES, SST, ESG, BPM, automação), regras de entrada e de permanência e fila de espera. Categoria saturada fecha entrada; categoria vazia vira pauta de recrutamento.",
+     "gatilho": "Novo candidato à prateleira ou revisão trimestral",
+     "entregas": "Categorias com limite, fichas ativas, fila de espera, decisão registrada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Equilibrar demanda aberta e fornecedores ativos por categoria",
+     "descricao": "Comparar demandas abertas de clientes com fornecedores ativos em cada categoria e decidir abrir ou fechar a entrada. Corresponde à razão entre os dois lados que o livro manda acompanhar.",
+     "gatilho": "Rotina semanal",
+     "entregas": "Razão por categoria e decisão de abrir ou fechar",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar demanda sem fornecedor na prateleira como sinal de recrutamento",
+     "descricao": "Toda necessidade de cliente que ficou sem fornecedor adequado é registrada com categoria e porte. O livro usa buscas sem resposta como sinal de onde há cliente esperando um parceiro (p. 202).",
+     "gatilho": "Apresentação impossível por falta de fornecedor",
+     "entregas": "Lista de lacunas por categoria, ordenada por frequência, que alimenta o recrutamento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Unificar o fluxo de indicações vindas de Prateleira, link, Base Ativa e cruzamento de carteiras",
+     "descricao": "Em vez de um quadro por pilar, um único fluxo de interações com estados comuns (registrada, apresentada, reunião, proposta, fechada, perdida) e a origem como etiqueta. Visões por parceiro e por origem são derivadas, não quadros novos.",
+     "gatilho": "Desenho do portal e de cada novo pilar",
+     "entregas": "Um quadro de interações, visões derivadas, dicionário de estados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Mover funções específicas para a periferia do portal",
+     "descricao": "Aplicar o princípio ponta a ponta: o núcleo do portal fica com funil, indicação, prateleira e comissão. Trilhas, kits, integrações e relatórios sob demanda ficam na borda, podendo ser feitos por parceiros ou por ferramentas externas.",
+     "gatilho": "Pedido de nova funcionalidade",
+     "entregas": "Lista de núcleo e lista de periferia, com decisão por pedido",
+     "dono": "Gerente de Parcerias, decidindo com o Patrocinador"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Dona da interação central",
+     "descricao": "Responsável por responder, para qualquer proposta de mudança no portal ou no regulamento, se ela sustenta a interação central. Também guarda a definição de unidade de valor e de filtro.",
+     "gatilho": "Qualquer proposta de funcionalidade, regra ou pilar novo",
+     "entregas": "Parecer curto registrado no backlog do portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de apresentações que viram reunião dentro do SLA",
+     "descricao": "Percentual de apresentações feitas que resultaram em reunião agendada no prazo do SLA, por categoria e por origem. É a medida mais direta de que a interação central funciona.",
+     "gatilho": "Fechamento semanal",
+     "entregas": "Percentual por categoria e por origem, com tendência",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Esquerda: caixa Parceiro (produtor) com seta para a caixa Unidade de valor (indicação com contexto). Centro: losango Filtro (aderência e limite por categoria). Direita: caixa Indústria cliente (consumidora). Seta de retorno por baixo: resultado volta ao portal (reunião, proposta, contrato). Abaixo, três círculos (Prateleira, Link exclusivo, Base Ativa) entrando na mesma caixa de unidade de valor. Ao lado, quadrante 2 por 2 com linhas mesmo lado e lado oposto, colunas positivo e negativo, e um exemplo do programa em cada célula.",
+   "citacoes": [
+    {
+     "trecho": "successful platforms begin with a single core interaction that consistently generates high value for users.",
+     "pagina": "p. 48"
+    },
+    {
+     "trecho": "Participants + Value Unit + Filter → Core Interaction",
+     "pagina": "p. 47"
+    },
+    {
+     "trecho": "A well-designed filter ensures that platform users receive only value units that are relevant and valuable to them",
+     "pagina": "p. 47"
+    },
+    {
+     "trecho": "Thus, platforms are “information factories” that have no control over inventory.",
+     "pagina": "p. 48"
+    },
+    {
+     "trecho": "frictionless entry must be balanced through effective curation.",
+     "pagina": "p. 34"
+    },
+    {
+     "trecho": "activities that are not central to the workings of the network but valuable only to particular users should be located at the edges of the network rather than at its heart.",
+     "pagina": "p. 57"
+    }
+   ]
+  },
+  {
+   "nome": "Eight Ways to Launch a Platform: the chicken-or-egg strategies and viral growth (Oito estratégias de lançamento contra o dilema do ovo e da galinha, e crescimento viral)",
+   "livro": "platform-revolution",
+   "paginas": "p. 84 a 103",
+   "componentes": [
+    {
+     "nome": "Puxar em vez de empurrar",
+     "descricao": "Em plataformas, o marketing vem embutido no produto: o serviço precisa ser tão atraente que puxa o usuário. Propaganda e relações públicas (empurrar) ainda servem, mas o crescimento rápido e sustentável vem de processos de puxar."
+    },
+    {
+     "nome": "Compromisso, não cadastro",
+     "descricao": "A adoção real se mede por uso ativo e comprometimento. O PayPal desenhou os incentivos para empurrar o novo usuário a fazer a primeira transação, não só a se cadastrar."
+    },
+    {
+     "nome": "Três técnicas de base",
+     "descricao": "Encenar a criação de valor (a plataforma cria as primeiras unidades), desenhar a plataforma para atrair um só lado e entrada simultânea dos dois lados em um espaço pequeno."
+    },
+    {
+     "nome": "Seguir o coelho (follow the rabbit)",
+     "descricao": "Usar um projeto que não é plataforma para demonstrar sucesso e atrair usuários e produtores para a plataforma erguida sobre essa infraestrutura provada."
+    },
+    {
+     "nome": "Carona (piggyback)",
+     "descricao": "Conectar-se à base de usuários de outra plataforma e encenar a criação de valor para recrutá-los."
+    },
+    {
+     "nome": "Semeadura (seeding)",
+     "descricao": "Criar unidades de valor relevantes para pelo menos um lado. Em muitos casos a plataforma age como a primeira produtora, o que também define o padrão de qualidade das próximas."
+    },
+    {
+     "nome": "Cabeça de cartaz (marquee)",
+     "descricao": "Dar incentivos a um grupo-chave cuja presença faz ou desfaz a plataforma."
+    },
+    {
+     "nome": "Lado único (single side)",
+     "descricao": "Criar primeiro um negócio útil a um só conjunto de usuários (software de gestão para restaurantes) e só depois abrir o segundo lado."
+    },
+    {
+     "nome": "Evangelização do produtor (producer evangelism)",
+     "descricao": "Atrair produtores que levam os próprios clientes para a plataforma. O caso Mercateo dá ao fornecedor a última palavra nas disputas, mas só nos clientes que ele trouxe."
+    },
+    {
+     "nome": "Grande explosão (big bang)",
+     "descricao": "Usar marketing de empurrar para concentrar interesse no tempo e no espaço (o caso do Twitter em um festival). Funciona quando há um evento relevante e raramente se repete."
+    },
+    {
+     "nome": "Micromercado (micromarket)",
+     "descricao": "Começar por um mercado minúsculo em que os membros já interagem (um campus, uma categoria). Reduz a massa crítica necessária. Para crescer, ligar os micromercados entre si em vez de resolver o ovo e a galinha do zero em cada um."
+    },
+    {
+     "nome": "Crescimento viral",
+     "descricao": "Quatro elementos: remetente, unidade de valor que se espalha, rede externa e destinatário. O remetente compartilha a própria criação, não fala bem da plataforma. O ato de enviar precisa caber no fluxo de trabalho; incentivo em dinheiro pode virar sangria de caixa, incentivo em uso do serviço não."
+    }
+   ],
+   "logica": "O dilema do ovo e da galinha só se resolve reduzindo o tamanho do problema: criar valor para um lado sozinho, trazer o outro lado em bloco ou começar onde os dois já se encontram. As oito estratégias são variações dessas três técnicas, e a escolha depende de quem já tem base, de quem sabe produzir e de onde há concentração. Medir comprometimento em vez de cadastro evita celebrar uma base que não usa. Crescimento viral só funciona se o ato de espalhar for um subproduto de usar bem a plataforma.",
+   "aplicacao_wise": "Hoje não há parceiro assinado, existem cerca de 21 conversas e os parceiros chegam de forma orgânica, ou seja, o programa está no ponto zero dos dois lados. Combinação proposta (inferência minha, a partir das oito estratégias): micromercado como estratégia principal, com um segmento industrial ou região em que já exista um parceiro com comunidade. Seguir o coelho: o primeiro cliente da Wise fechado por indicação vira o caso demonstrativo. Semeadura: a Wise escreve e verifica as primeiras fichas da Prateleira. Evangelização do produtor: o parceiro traz a própria carteira pelo ciclo de 12 semanas da Base Ativa e pelo link exclusivo. Cabeça de cartaz: um parceiro âncora do micromercado (nível Elite) com condições melhores. Carona: associações e feiras como a Expo+Indústria funcionam como rede externa e como big bang pontual. Ativação, a primeira indicação no ICP que virou reunião, passa a ser o único marco de entrada que conta.",
+   "impacto_modelo_de_negocio": "O recrutamento aberto de parceiros dispersos dá lugar à expansão por células: cada micromercado precisa atingir liquidez antes de a Wise abrir o seguinte. A comissão deixa de ser o único estímulo, entram estímulos orgânicos (acesso a demanda real, vitrine na Prateleira, evento). O link exclusivo é o mecanismo viral do programa, e a unidade que o parceiro espalha precisa ter valor próprio para a indústria (por exemplo um diagnóstico, hipótese minha).",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Lançar e replicar micromercados",
+     "descricao": "Ciclo repetível por célula: escolher o micromercado, recrutar âncora e parceiros complementares, semear fichas, produzir o primeiro caso, medir liquidez e só então abrir a célula seguinte, conectando-a às anteriores.",
+     "gatilho": "Decisão de abrir uma nova célula, depois que a anterior atingiu a meta de liquidez",
+     "entregas": "Célula ativa com âncora, parceiros, fichas semeadas e primeiro caso publicado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Escolher o micromercado de lançamento",
+     "descricao": "Classificar as cerca de 21 conversas por segmento industrial, região e entidade, e escolher a célula com maior concentração de interações já existentes. Critério: onde parceiro e indústria já se encontram sem a Wise.",
+     "gatilho": "Fim do mapeamento das conversas atuais",
+     "entregas": "Micromercado escolhido, justificativa e lista de alvos da célula",
+     "dono": "Patrocinador do programa com a Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Recrutar o parceiro âncora do micromercado",
+     "descricao": "Escolher e conquistar o parceiro cuja presença faz a célula valer para os demais, oferecendo condições especiais declaradas. É o único recrutamento com negociação individual de condições.",
+     "gatilho": "Micromercado escolhido",
+     "entregas": "Âncora assinada com condições registradas e meta de indicações",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Semear a Prateleira com fichas escritas e verificadas pela Wise",
+     "descricao": "A Wise age como primeira produtora: cadastra e verifica as primeiras fichas de fornecedores com casos em indústrias parecidas, fixando o padrão de qualidade que os parceiros seguintes copiam.",
+     "gatilho": "Micromercado escolhido e parceiros aceitos",
+     "entregas": "Fichas verificadas por categoria da célula",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Transformar o primeiro fechamento em caso demonstrativo",
+     "descricao": "O primeiro cliente fechado por indicação vira história curta (problema, parceiro, resultado) usada no convite aos próximos parceiros. É o equivalente do projeto que mostra o caminho antes da plataforma existir.",
+     "gatilho": "Primeiro contrato fechado vindo de indicação",
+     "entregas": "Caso de uma página, autorizado pelo cliente, publicado na área de parceiros",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Fazer o parceiro trazer a própria carteira pelo link exclusivo",
+     "descricao": "Apoiar cada parceiro a enviar o convite com valor próprio (por exemplo um diagnóstico) à sua carteira, usando o link, dentro do ciclo de 12 semanas da Base Ativa. O envio precisa caber na rotina do parceiro, não ser tarefa extra.",
+     "gatilho": "Parceiro ativado e início do ciclo da Base Ativa",
+     "entregas": "Convites enviados, aberturas, indicações geradas por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Usar feira ou evento da entidade como momento de concentração",
+     "descricao": "Concentrar no tempo e no espaço o recrutamento e as primeiras interações em um evento de entidade, como a Expo+Indústria. Planejar antes (fichas prontas, links, metas) e fechar depois (follow up em 7 dias).",
+     "gatilho": "Evento de entidade parceira na agenda",
+     "entregas": "Plano do evento, interações registradas, relatório de concentração",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Trocar o funil de recrutamento por funil de ativação",
+     "descricao": "O parceiro só deixa de ser prospect quando faz a primeira indicação no ICP que vira reunião. Cadastro, assinatura e participação em grupo de WhatsApp deixam de contar como adoção.",
+     "gatilho": "Desenho do funil de parceiros no portal",
+     "entregas": "Estados do funil baseados em ação do parceiro, não em etapa administrativa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conectar micromercados entre si",
+     "descricao": "Ao abrir uma célula nova, ligar seus parceiros aos da célula anterior (cruzamento de carteiras e apresentações cruzadas), para que o novo parceiro tenha interações antes de a própria célula estar cheia.",
+     "gatilho": "Abertura de célula nova",
+     "entregas": "Lista de apresentações cruzadas planejadas entre células",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros comprometidos por micromercado",
+     "descricao": "Número e percentual de parceiros que fizeram ao menos uma indicação válida em 90 dias, por célula. Substitui parceiros assinados como medida de lançamento.",
+     "gatilho": "Fechamento semanal",
+     "entregas": "Painel por célula com comprometidos, ativados e parados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão quinzenal de lançamento por célula",
+     "descricao": "Reunião curta por micromercado: o que travou a ativação, qual a próxima apresentação cruzada, se a célula atingiu a meta para abrir a seguinte.",
+     "gatilho": "A cada 15 dias",
+     "entregas": "Decisão de abrir, manter ou reforçar a célula",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Linha do tempo horizontal com quatro caixas em sequência: Semear (Wise escreve as primeiras fichas), Âncora (parceiro cabeça de cartaz), Caso (primeiro fechamento por indicação), Replicar (nova célula). Acima, um círculo pequeno representando o micromercado, com setas tracejadas ligando-o a um segundo círculo. Embaixo, o ciclo viral em quatro setas: remetente (parceiro), unidade de valor (convite com diagnóstico), rede externa (carteira, associação, evento), destinatário (indústria).",
+   "citacoes": [
+    {
+     "trecho": "user commitment was more important than user acquisition.",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "Focusing on a micromarket reduces the critical mass required to start interactions and makes matchmaking much easier.",
+     "pagina": "p. 99"
+    },
+    {
+     "trecho": "Use a non-platform demonstration project to model success, thereby attracting both users and producers to a new platform erected on your project’s proven infrastructure.",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "In many cases, the platform company takes the task of value creation upon itself by acting as the first producer.",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "Design your platform to attract producers, who can induce their customers to become users of the platform.",
+     "pagina": "p. 96"
+    },
+    {
+     "trecho": "In network businesses, marketing needs to be baked into the platform.",
+     "pagina": "p. 87"
+    }
+   ]
+  },
+  {
+   "nome": "Monetization: capturing the value created by network effects (Monetização: capturar parte do valor excedente sem ferir os efeitos de rede)",
+   "livro": "platform-revolution",
+   "paginas": "p. 106 a 121",
+   "componentes": [
+    {
+     "nome": "Quatro fontes de valor excedente",
+     "descricao": "Valor que só existe por causa da plataforma: acesso ao valor criado (para o consumidor), acesso à comunidade ou ao mercado (para o produtor), acesso a ferramentas e serviços que facilitam a interação, e acesso à curadoria que melhora a qualidade. A monetização captura uma parte desse excedente."
+    },
+    {
+     "nome": "Perguntas-teste",
+     "descricao": "Como gerar receita sem reduzir os efeitos de rede positivos? Há preço que reforce os positivos e reduza os negativos? Há preço que estimule interações desejáveis e desestimule as indesejáveis?"
+    },
+    {
+     "nome": "Taxa de transação",
+     "descricao": "Cobrar um percentual ou valor fixo quando a transação acontece. Não afasta ninguém da entrada. O desafio é capturar a interação dentro da plataforma, porque as partes têm incentivo para sair e evitar a taxa."
+    },
+    {
+     "nome": "Capturar a interação com valor para as duas partes",
+     "descricao": "Em serviços profissionais, que exigem conversa direta, a plataforma precisa ampliar o papel e dar ferramentas (acompanhamento, pagamento, faturamento) que tornem permanecer melhor do que sair."
+    },
+    {
+     "nome": "Cobrar de terceiros o acesso à comunidade",
+     "descricao": "Terceiros pagam para falar com a comunidade (vagas no Dribbble). Só funciona se o conteúdo novo reforça o valor da plataforma para os usuários."
+    },
+    {
+     "nome": "Cobrar acesso reforçado",
+     "descricao": "O produtor paga para se destacar, sem impedir a participação dos demais. Exige separar com clareza o destaque pago do orgânico e aplicar a mesma curadoria ao conteúdo pago."
+    },
+    {
+     "nome": "Cobrar curadoria reforçada",
+     "descricao": "Quando há excesso de oferta, o consumidor paga por qualidade garantida (assinatura do Sittercity). Depende de curadoria rigorosa de quem entra."
+    },
+    {
+     "nome": "Quem cobrar",
+     "descricao": "Cobrar todos é raro. Quatro heurísticas: cobrar um lado e subsidiar o outro, cobrar a maioria e subsidiar as estrelas, cobrar quem é menos sensível a preço e subsidiar quem é mais. A decisão depende de quem valoriza o contato com o outro lado."
+    },
+    {
+     "nome": "Subsidiar a entrada, cobrar na conclusão",
+     "descricao": "Não cobrar para entrar nem para listar: isso cria atrito, reduz o volume de interações e os dados de que o filtro precisa. Cobrar na conclusão torna a taxa performance e quase imperceptível. Serviços recorrentes que melhoram a qualidade, como a análise de por que se perdeu uma disputa, são fonte de receita sem atrito."
+    },
+    {
+     "nome": "Tamanho da rede não é receita",
+     "descricao": "Uma rede grande pode não gerar excedente capturável (expectativa de completude do Zvents). E às vezes cobrar melhora a qualidade, como o Meetup, que perdeu quase toda a atividade e ficou com encontros que de fato acontecem."
+    }
+   ],
+   "logica": "Os efeitos de rede são a razão de ser da plataforma e qualquer cobrança mal posta os enfraquece. Por isso a pergunta não é quanto cobrar, é onde o preço reforça a rede: cobrar na conclusão e não na entrada, cobrar de quem tem muito a ganhar e subsidiar quem puxa o outro lado, e criar serviços que valham o preço. O maior risco prático é a desintermediação: quando a interação sai da plataforma, a receita some e os dados também. A resposta do livro é dar às duas partes um motivo para ficar.",
+   "aplicacao_wise": "Hoje o dinheiro corre da Wise para o parceiro: 40% da primeira mensalidade (Wise Makers e Tríade) mais 10% ao gerente de parcerias, ou 6% do projeto mais 2% na Swallow, perto de 3 a 5% em LTV. Isso equivale a uma taxa de transação paga pela Wise. O livro convida a olhar também o excedente que a Prateleira cria para o parceiro fornecedor quando uma apresentação vira contrato. Opções, todas hipóteses minhas a validar com o patrocinador: taxa de sucesso do parceiro fornecedor, cobrada só na conclusão; destaque de ficha no nível Elite, sempre marcado como destaque; selo de curadoria verificada; relatório de perda de RFP para o parceiro que não ganhou (é o caso Ad World do livro, p. 106 e 107); acesso de terceiros à comunidade da Base Ativa e aos eventos, como patrocinadores. No lançamento nada se cobra de entrada ou listagem, e os parceiros menores recebem trilhas e kits sem custo. O portal precisa capturar toda interação: proteção de 180 dias, status em tempo real e pagamento de comissão só valem para indicação registrada.",
+   "impacto_modelo_de_negocio": "A estrutura do programa (comissão paga) ganha uma tese de receita por fase, sem cobrar a entrada: primeiro nenhuma cobrança, depois taxa de sucesso na conclusão, depois serviços recorrentes de curadoria e aprendizado. A comissão paga continua sendo o motor do lado da demanda. O desenho do portal passa a ser também desenho de captura: o que não está registrado não gera proteção nem comissão.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Desenhar a tese de monetização por fase do programa",
+     "descricao": "Decidir, para cada fase (lançamento, crescimento, maturidade), quem paga o quê e quando, usando as quatro fontes de excedente e as perguntas-teste. Registrar o que não será cobrado no lançamento.",
+     "gatilho": "Antes do primeiro parceiro e a cada revisão de fase",
+     "entregas": "Quadro de monetização por fase aprovado pelo Patrocinador",
+     "dono": "Patrocinador do programa com a Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Cobrar taxa de sucesso do parceiro fornecedor na conclusão",
+     "descricao": "Opção a decidir: quando uma apresentação da Prateleira vira contrato, o parceiro fornecedor paga um percentual combinado. Nada na entrada nem na listagem. Só entra depois de a prateleira gerar contratos.",
+     "gatilho": "Contrato fechado a partir de apresentação da Prateleira",
+     "entregas": "Cobrança registrada, vinculada à interação, regra publicada no regulamento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Oferecer relatório de perda de RFP ao parceiro que não ganhou",
+     "descricao": "Serviço de aprendizado: por que a indústria escolheu outro fornecedor, o que faltou na ficha, no preço ou na referência. Gera receita recorrente sem atrito e melhora a qualidade das fichas.",
+     "gatilho": "Interação de RFP encerrada como perdida",
+     "entregas": "Relatório de uma página ao parceiro, base de motivos de perda",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Destacar parceiro Elite na prateleira com marcação clara",
+     "descricao": "O destaque sai de nível ou de pagamento, e vem sempre marcado como destaque, nunca disfarçado de resultado orgânico. A curadoria vale igual para fichas destacadas.",
+     "gatilho": "Parceiro atinge o nível Elite ou contrata destaque",
+     "entregas": "Posição de destaque com selo, regra de rotação, registro de critério",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Registrar toda interação no portal para valer proteção e comissão",
+     "descricao": "Regra de captura: sem registro, sem proteção de 180 dias e sem comissão. Em compensação o portal oferece status em tempo real, lembretes de SLA e histórico, que são o valor que mantém o parceiro dentro.",
+     "gatilho": "Primeiro contato entre parceiro e indústria indicada",
+     "entregas": "Interação registrada com data, canal e responsável",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Pagar comissão só depois da validação no portal",
+     "descricao": "A liberação da comissão exige interação registrada, reunião confirmada e primeira mensalidade ou marco de projeto confirmado. Reduz disputa e reforça o hábito de registrar.",
+     "gatilho": "Primeira mensalidade ou marco de projeto confirmado",
+     "entregas": "Comissão liberada com trilha de auditoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Subsidiar parceiros sensíveis a preço com trilhas e kits sem custo",
+     "descricao": "Parceiros menores (nível C) recebem capacitação e material sem custo, porque o contato com eles é que atrai o outro lado. O custo é tratado como investimento na rede.",
+     "gatilho": "Entrada de parceiro no nível C",
+     "entregas": "Pacote básico liberado e registrado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Analisar o excedente de valor por parceiro e por categoria",
+     "descricao": "Trimestralmente, estimar o valor que cada parceiro e cada categoria geram (contratos, receita do parceiro, reunião evitada) e comparar com o que a Wise paga em comissão. Orienta níveis e política de preço.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Tabela de excedente por parceiro e por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de captura de interações",
+     "descricao": "Percentual das interações com indústria indicada que estão registradas no portal. O livro chama de interaction capture a medida do valor processado pela plataforma.",
+     "gatilho": "Fechamento mensal",
+     "entregas": "Percentual por parceiro e por origem, com alerta abaixo da meta",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Valor gerado em conjunto por interação concluída",
+     "descricao": "Receita do parceiro, receita da Wise e economia ou ganho do cliente associados a cada interação concluída. Prepara a discussão de preço e de nível com dado e não com impressão.",
+     "gatilho": "Interação concluída",
+     "entregas": "Valor por interação, somado por parceiro e por categoria",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Diagrama de dois lados com a plataforma no meio. De cada lado, setas de entrada marcadas com um X (sem cobrança na entrada ou na listagem). À direita, uma seta final de conclusão, com um cifrão: cobrança só ali. Abaixo, linha do tempo em três fases (lançamento sem cobrança, crescimento com taxa de sucesso, maturidade com serviços recorrentes). Na lateral, quatro caixas pequenas com as fontes de excedente e uma seta tracejada de volta ao portal para a regra de captura.",
+   "citacoes": [
+    {
+     "trecho": "How can we generate revenues without reducing our positive network effects?",
+     "pagina": "p. 113"
+    },
+    {
+     "trecho": "Charging a transaction fee is a powerful way of monetizing the value created by the platform without hampering the growth of network effects.",
+     "pagina": "p. 113"
+    },
+    {
+     "trecho": "Buyers and sellers who find each other on the platform are naturally incentivized to take the interaction off the platform if they can, in order to avoid paying the transaction fee.",
+     "pagina": "p. 113"
+    },
+    {
+     "trecho": "service provider platforms that want to capture and monetize interactions must create tools and services that benefit both parties by removing friction, mitigate risk, and otherwise facilitate interactions.",
+     "pagina": "p. 115"
+    },
+    {
+     "trecho": "In fact, rather than charging users to join the platform, the founders should be subsidizing their participation",
+     "pagina": "p. 106"
+    },
+    {
+     "trecho": "Why not charge ad agencies for a service that helps them do a postmortem to discover why they lost a deal?",
+     "pagina": "p. 106"
+    }
+   ]
+  },
+  {
+   "nome": "Governance: market failures and the four tools of control, with openness and curation (Governança: falhas de mercado e as quatro ferramentas de controle, leis, normas, arquitetura e mercados, com abertura e curadoria)",
+   "livro": "platform-revolution",
+   "paginas": "p. 129 a 168",
+   "componentes": [
+    {
+     "nome": "Falha de mercado e suas quatro causas",
+     "descricao": "Falha de mercado é quando interações boas deixam de acontecer ou interações ruins acontecem. Causas: assimetria de informação, externalidades (custos ou benefícios que caem em quem não participou), poder de monopólio e risco."
+    },
+    {
+     "nome": "Quatro alavancas de mercado (Roth)",
+     "descricao": "Segurança (transparência, qualidade, seguro), espessura (os lados se encontram), menos congestionamento e menos atividade repugnante."
+    },
+    {
+     "nome": "Leis, normas, arquitetura e mercados (Lessig)",
+     "descricao": "Leis são as regras explícitas e transparentes. Normas são a cultura e as expectativas da comunidade. Arquitetura é o código, que bem desenhado se aperfeiçoa e premia o bom comportamento. Mercados são incentivos, na tríade diversão, fama e fortuna, incluindo moeda social como reputação e pontos."
+    },
+    {
+     "nome": "Desenho de comportamento",
+     "descricao": "Gatilho, ação, recompensa e investimento: o ciclo que cria hábito. Serve para construir normas, e também pode manipular, por isso os participantes devem conhecê-lo."
+    },
+    {
+     "nome": "Princípios de Ostrom para bens comuns",
+     "descricao": "Fronteiras claras de quem tem direito aos benefícios, voz para quem é afetado pelas decisões, monitores que prestam contas, sanções graduadas, resolução barata de disputas e governança em camadas aninhadas, com questões simples decididas em grupos locais."
+    },
+    {
+     "nome": "Autogovernança da plataforma",
+     "descricao": "Transparência interna (quebrar silos, tratar colegas como clientes de informação) e participação (dar a parceiros externos voz equivalente à dos internos), para as decisões não favorecerem sempre a plataforma."
+    },
+    {
+     "nome": "Decisões de abertura",
+     "descricao": "Três tipos: quem gerencia e quem patrocina a plataforma (modelos proprietário, licenciamento, joint venture e compartilhado), a participação de desenvolvedores de extensão e a de usuários produtores. Aberto e fechado é um espectro, e as plataformas costumam abrir com o tempo, o que obriga a rever a curadoria."
+    },
+    {
+     "nome": "Curadoria na entrada e no retorno",
+     "descricao": "Triagem decide quem entra; feedback incentiva o bom comportamento de quem entrou. A reputação, dentro e fora da plataforma, é fator central. Pode ser feita por moderadores humanos, que não escalam, ou por usuários com ferramentas de software."
+    },
+    {
+     "nome": "O que abrir e o que possuir",
+     "descricao": "Não deixar um terceiro controlar a principal fonte de valor da plataforma. Se uma função extra tem potencial de virar plataforma, ou se vários parceiros reinventam a mesma função, a plataforma deve incorporá-la e abri-la por interface padrão."
+    }
+   ],
+   "logica": "Mercados totalmente livres falham de quatro formas conhecidas, e plataformas são pequenas economias que enfrentam as mesmas falhas. A governança é o conjunto de regras, cultura, código e incentivos que mantém as interações boas em maior número que as ruins. A parte mais eficaz é a que se aplica sozinha, no código e nos incentivos, porque não depende de alguém lembrar. Participantes que enxergam as regras, podem contestá-las e têm voz nas mudanças aceitam benefícios desiguais e punições, o que mantém a rede.",
+   "aplicacao_wise": "Mapear as quatro falhas na Prateleira: assimetria (o parceiro exagera capacidade, a indústria esconde orçamento), externalidade (um parceiro ruim queima a marca da Wise com um cliente), monopólio (um ERP parceiro concentra as indicações da categoria) e risco (indicação mal feita estraga a relação do cliente). Respostas com as quatro ferramentas: leis, o regulamento em três partes (quem participa, como se divide o valor, como se corrige) e contrato padrão modular; normas, a comunidade de WhatsApp, o reconhecimento público e o convite a casos; arquitetura, a proteção de 180 dias, os SLAs, as expirações e o rebaixamento automático escritos no portal; mercados, a comissão, os níveis A/B/C e a moeda social (ranking, selos). Sanções graduadas (aviso, rebaixamento, desligamento formal) com canal simples de contestação, instância de apelação que não seja a própria Gerente. Dar voz aos parceiros nas mudanças de regra, com aviso prévio. Sobre abertura: a Wise gerencia e patrocina (modelo proprietário) e deve guardar para si a relação e os dados do cliente industrial, que são a principal fonte de valor. Entidades e feiras podem ser gestoras de uma comunidade menor (modelo de licenciamento).",
+   "impacto_modelo_de_negocio": "A confiança vira o ativo do programa: o parceiro aceita a prateleira curada, os níveis e as sanções porque conhece as regras e pode contestar, e a indústria aceita as indicações porque sabe que a Wise verifica. A governança deixa de ser documento jurídico e passa a ser parte do produto, com custo de gestão baixo porque está no código. Também define o que a Wise nunca abre: dados e relação com o cliente.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Governar o ecossistema de parceiros",
+     "descricao": "Macroprocesso que reúne regulamento, curadoria, níveis, sanções, disputas e voz dos parceiros. Passa a ser a camada de regras sobre a qual correm todos os demais processos do programa.",
+     "gatilho": "Criação do programa e ciclo trimestral",
+     "entregas": "Regulamento vigente, calendário de revisão, registro de decisões de governança",
+     "dono": "Patrocinador do programa, executado pela Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Escrever e publicar o regulamento em três partes",
+     "descricao": "Quem participa (critérios de entrada e permanência), como se divide o valor (comissão, proteção, ranking, prazos) e como se corrige o que dá errado (sanções, contestação). Publicado no portal com data de vigência.",
+     "gatilho": "Antes do primeiro parceiro e a cada mudança de regra",
+     "entregas": "Regulamento versionado e página pública no portal",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Verificar a ficha do parceiro",
+     "descricao": "Checar escopo, referências, casos e capacidade de atendimento antes de publicar a ficha. Ataca a assimetria de informação, que é a primeira causa de falha de mercado do livro.",
+     "gatilho": "Ficha submetida pelo parceiro",
+     "entregas": "Ficha verificada com selo e data de validade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Auditar a prateleira por falha de mercado a cada trimestre",
+     "descricao": "Revisar fichas e interações por assimetria de informação, externalidade, concentração em um parceiro e risco. Decide saídas, ajustes de limite por categoria e mudanças de regra.",
+     "gatilho": "Fim de cada trimestre",
+     "entregas": "Relatório de auditoria com ações por parceiro e por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Aplicar sanções graduadas com direito de contestação",
+     "descricao": "Escada pública: aviso, rebaixamento de nível, desligamento formal. Cada passo tem critério escrito, prazo de resposta do parceiro e registro. A contestação segue para a instância de apelação.",
+     "gatilho": "Descumprimento do regulamento ou de SLA reincidente",
+     "entregas": "Decisão registrada, comunicação ao parceiro, nova revisão de nível quando couber",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Resolver disputa de proteção ou de comissão",
+     "descricao": "Canal simples e barato: o parceiro abre o caso no portal, a Gerente decide em prazo curto, e a decisão pode ser levada à instância de apelação. Evidências vêm do registro do portal.",
+     "gatilho": "Contestação de proteção, de comissão ou de nível",
+     "entregas": "Decisão fundamentada, registro no histórico do parceiro",
+     "dono": "Gerente de Parcerias, com apelação ao Patrocinador"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Passar para o código do portal as regras que dependem de memória",
+     "descricao": "Proteção de 180 dias, SLAs, expiração de proteção, alerta de ativação parada, rebaixamento por revisão e bloqueio de comissão sem registro viram regra de software. A Gerente passa a tratar só as exceções.",
+     "gatilho": "Desenho de cada processo com prazo ou critério",
+     "entregas": "Lista de regras automatizadas e lista de exceções que sobem para a Gerente",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Conselho trimestral de parceiros",
+     "descricao": "Reunião com representantes dos parceiros (por exemplo os âncoras e as entidades) para ouvir sobre mudanças de regra, comissão, nível e ranking antes de decidir. Dá voz externa equivalente à interna.",
+     "gatilho": "Trimestre, antes da revisão de níveis",
+     "entregas": "Ata, lista de mudanças aceitas e recusadas, aviso prévio aos demais parceiros",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Comunicar mudança de regra com aviso prévio",
+     "descricao": "Toda mudança de regra (nível, comissão, ranking, SLA) é anunciada no portal e na comunidade com prazo antes de valer. A Wise não promete que nada muda, promete aviso.",
+     "gatilho": "Decisão de mudar regra",
+     "entregas": "Comunicado e prazo de vigência",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Decidir o que a Wise mantém e o que abre ao parceiro",
+     "descricao": "Fixar que relação com o cliente industrial e dados de qualidade da indicação ficam com a Wise, e abrir ao parceiro o que é periférico (kits, conteúdos, eventos). Rever quando várias fichas ou parceiros reinventam a mesma função: incorporar no núcleo.",
+     "gatilho": "Revisão trimestral ou pedido de acesso a dado",
+     "entregas": "Matriz de aberto e fechado, regra de acesso a dados por nível",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Instância de apelação",
+     "descricao": "Pessoa que decide contestações quando a Gerente é parte interessada (comissão, desligamento). Garante o direito de contestar que o livro aponta como condição de legitimidade.",
+     "gatilho": "Contestação em segunda instância",
+     "entregas": "Decisão final registrada",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Dar reconhecimento público ao bom comportamento",
+     "descricao": "Selos, destaque na comunidade e ranking de parceiros que cumprem SLA, registram tudo e geram caso. É a norma e o mercado de fama trabalhando juntos, com baixo custo.",
+     "gatilho": "Fim de ciclo de 12 semanas ou revisão trimestral",
+     "entregas": "Lista de reconhecidos, selos atualizados, post na comunidade",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Quatro quadrantes (leis, normas, arquitetura, mercados) em torno de um círculo central chamado Interação boa. Em cada quadrante, a ferramenta concreta do programa (regulamento, comunidade e reconhecimento, regras do portal, comissão e níveis). Uma faixa na borda mostra as quatro falhas de mercado (assimetria, externalidade, monopólio, risco), cada uma com uma seta apontando o quadrante que a combate. Ao lado, escada de sanções (aviso, rebaixamento, desligamento) com uma seta lateral de contestação até a instância de apelação.",
+   "citacoes": [
+    {
+     "trecho": "there are four main causes of market failures: information asymmetry, externalities, monopoly power, and risk.",
+     "pagina": "p. 154"
+    },
+    {
+     "trecho": "systems of control involve four main sets of tools: laws, norms, architecture, and markets",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "Graduated sanctions apply to those who violate community rules.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "Well-designed software systems are self-improving: they encourage and reward good behavior, thereby producing more of the same.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "Screening decides who to let in, while feedback encourages desirable behavior on the part of those who have been granted entry.",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "It’s crucial for platform managers to give external partners and stakeholders a voice in internal decision processes equal to that of internal stakeholders.",
+     "pagina": "p. 167"
+    }
+   ]
+  },
+  {
+   "nome": "Metrics across the platform life cycle: liquidity, matching quality and trust (Métricas por fase do ciclo de vida: liquidez, qualidade da combinação e confiança)",
+   "livro": "platform-revolution",
+   "paginas": "p. 173 a 187",
+   "componentes": [
+    {
+     "nome": "Métrica central: taxa de sucesso da interação",
+     "descricao": "O que importa é a taxa de interações bem sucedidas e os fatores que a produzem, não o fluxo de valor de ponta a ponta de um pipeline. Receita, caixa e margem pesam pouco na fase de partida."
+    },
+    {
+     "nome": "Fase de partida: liquidez, combinação e confiança",
+     "descricao": "Liquidez é haver produtores e consumidores mínimos e alta proporção de interações bem sucedidas, medida por exemplo pelo percentual de listagens que levam a interações em um período. Qualidade da combinação é a precisão do filtro e da navegação (conversão de buscas em interações). Confiança é o conforto dos usuários com o risco, obtida com curadoria de participantes."
+    },
+    {
+     "nome": "Calibrar o limiar",
+     "descricao": "Correlacionar o percentual de interação de cada usuário na primeira semana com sua atividade em um a três meses, para achar o corte (o exemplo do livro é 40%) que passa a ser meta de saúde."
+    },
+    {
+     "nome": "Fase de crescimento",
+     "descricao": "Razão entre produtores e consumidores ativos, frequência e resultado dos produtores, falha de interação (iniciadas que não se completam), fraude de produtor, valor de vida (LTV) de produtores e consumidores, taxa de conversão e taxa de troca de lado."
+    },
+    {
+     "nome": "Fase de maturidade",
+     "descricao": "Métricas que movem inovação, têm alto sinal sobre ruído e orientam alocação de recursos. Observar extensões repetidas dos parceiros para absorvê-las no núcleo e ameaças de plataformas adjacentes."
+    },
+    {
+     "nome": "Métricas comparativas",
+     "descricao": "As mais úteis são razões e taxas (ativos sobre totais, novos ativos sobre ativos) e comparações entre grupos ou períodos."
+    },
+    {
+     "nome": "Vaidade versus teste dos três A",
+     "descricao": "Total de cadastros é métrica de vaidade. Toda métrica deve ser acionável, acessível e auditável."
+    },
+    {
+     "nome": "Poucas métricas e troca na mudança de fase",
+     "descricao": "Mais métricas significam menos prioridade (over-measured and under-prioritized). Ao mudar de fase, trocar o painel em vez de se agarrar a números que o negócio já superou."
+    }
+   ],
+   "logica": "Em plataforma, o valor sai da repetição de interações boas, então o que se mede é a saúde dessas interações e não o tamanho da base. Cada fase tem a pergunta que decide o futuro: na partida, se a interação funciona (liquidez, combinação, confiança); no crescimento, se o equilíbrio e o valor dos dois lados se sustentam; na maturidade, onde inovar e de quem se defender. Poucas métricas comparativas e auditáveis protegem a atenção de quem tem pouco tempo e evitam o erro de comemorar cadastro enquanto o uso cai.",
+   "aplicacao_wise": "O programa está na fase de partida, o que manda medir liquidez, qualidade da combinação e confiança, não parceiros assinados, conversas nem cadastros. Definições propostas (inferências minhas para o caso Wise): liquidez é o percentual de indicações e apresentações que viram reunião dentro do SLA, mais a parcela de demandas de clientes atendidas por ao menos um fornecedor adequado; qualidade da combinação é o percentual de apresentações que o cliente considera pertinentes depois da primeira reunião; confiança é o percentual de interações avaliadas pelas duas partes sem incidente. Falha de interação é a indicação que cai por SLA estourado, cliente sem retorno ou perda por má combinação. A ativação (primeira indicação no ICP que virou reunião) é a métrica de compromisso do parceiro. O limiar de combinação se calibra com os primeiros parceiros, ligando a taxa nas primeiras semanas à atividade em três meses. No crescimento entram razão de parceiros ativos por demanda aberta em cada categoria, LTV do parceiro e taxa de troca de lado (cliente que vira parceiro e parceiro que vira cliente da Wise). Se a Gerente tem mesmo cerca de 12 horas por mês, como a primeira leitura registrou, o painel de topo não pode passar de cinco números.",
+   "impacto_modelo_de_negocio": "A medida de sucesso do programa muda de número de parceiros para taxa de interações boas, e a decisão de passar de fase (abrir a próxima célula, começar a cobrar, abrir categorias) passa a depender de limiares de liquidez e de qualidade, não de calendário. O LTV do parceiro, que hoje fica em 3 a 5% da comissão, ganha um denominador comparável: quanto cada parceiro gera de interações bem sucedidas.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Construir o painel de saúde do programa com no máximo cinco números",
+     "descricao": "Painel de topo com liquidez, qualidade da combinação, confiança, falha de interação e ativação, cada um com meta e alerta. Todo o resto é detalhe consultado por exceção.",
+     "gatilho": "Antes do primeiro parceiro",
+     "entregas": "Painel no portal, definições escritas e auditáveis de cada métrica",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Liquidez: indicações que viram reunião dentro do SLA",
+     "descricao": "Percentual de indicações e apresentações que viraram reunião no prazo, por categoria e origem. Complementa a parcela de demandas com ao menos um fornecedor adequado.",
+     "gatilho": "Fechamento semanal",
+     "entregas": "Percentual e tendência por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Qualidade da combinação: apresentações consideradas pertinentes pelo cliente",
+     "descricao": "Pergunta de duas respostas feita ao cliente depois da primeira reunião: o fornecedor era pertinente para a sua necessidade? Alimenta o ajuste do critério de aderência.",
+     "gatilho": "Reunião realizada",
+     "entregas": "Percentual por parceiro, categoria e critério",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Confiança: interações avaliadas pelas duas partes sem incidente",
+     "descricao": "Proporção de interações com avaliação do cliente e do parceiro e sem incidente registrado (promessa não cumprida, fuga do canal, queixa).",
+     "gatilho": "Interação encerrada",
+     "entregas": "Percentual e lista de incidentes por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Falha de interação",
+     "descricao": "Percentual de indicações iniciadas que caem antes de reunião ou proposta, com o motivo (SLA estourado, sem retorno, má combinação, perda para concorrente).",
+     "gatilho": "Interação marcada como perdida ou expirada",
+     "entregas": "Taxa por motivo e por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Calibrar o limiar de qualidade da combinação com os primeiros parceiros",
+     "descricao": "Com os primeiros 10 a 20 parceiros, cruzar a taxa de reuniões nas quatro primeiras semanas com a atividade em 90 dias, para achar o corte que passa a ser meta de saúde.",
+     "gatilho": "Primeiros parceiros chegam a 90 dias",
+     "entregas": "Limiar calibrado e nota de metodologia",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Retirar métricas de vaidade do painel de topo",
+     "descricao": "Cadastros, conversas abertas e parceiros assinados saem do painel de decisão. Podem existir como informação de contexto, nunca como indicador de sucesso.",
+     "gatilho": "Desenho do painel e revisão de fase",
+     "entregas": "Lista de métricas aposentadas e motivo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Leitura semanal de liquidez em 15 minutos",
+     "descricao": "Olhar os cinco números e o alerta, decidir uma ação e passar adiante. Não é reunião de acompanhamento de card.",
+     "gatilho": "Toda segunda",
+     "entregas": "Uma decisão registrada por semana",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral de fase e de painel",
+     "descricao": "Decidir se o programa passou da partida para o crescimento e trocar o painel: entram razão de ativos por demanda, LTV e taxa de troca de lado.",
+     "gatilho": "Fim do trimestre",
+     "entregas": "Painel da fase seguinte e critério de mudança de fase",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Medir a taxa de troca de lado entre cliente e parceiro",
+     "descricao": "Contar clientes da Wise que passam a indicar (ou a ser parceiros) e parceiros que contratam a Wise. O livro usa a taxa de troca de lado para saber se a base se renova e se os dois lados se equilibram.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Taxa de troca de lado e lista de casos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Identificar funções que vários parceiros reinventam",
+     "descricao": "Na maturidade, olhar o que mais de um parceiro está fazendo por conta própria (diagnóstico, material, evento) e decidir se a Wise padroniza e incorpora no núcleo.",
+     "gatilho": "Revisão trimestral na fase de maturidade",
+     "entregas": "Lista de candidatos à incorporação e decisão",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Três colunas lado a lado, Partida, Crescimento e Maturidade, cada uma com a pergunta decisiva no topo e três a cinco métricas. Uma seta grande de baixo para cima mostra a passagem de fase por limiar. Acima, uma pirâmide invertida com Vaidade (cadastros, conversas) riscada no topo e Interações bem sucedidas na base. No rodapé, o selo dos três A (acionável, acessível, auditável) ao lado do painel de cinco números.",
+   "citacoes": [
+    {
+     "trecho": "there are three main metrics: liquidity, matching quality, and trust.",
+     "pagina": "p. 177"
+    },
+    {
+     "trecho": "Note that user commitment and active usage of the platform are the vital metrics of platform adoption, not sign-ups.",
+     "pagina": "p. 177"
+    },
+    {
+     "trecho": "One reasonable way to measure liquidity is by tracking the percentage of listings that lead to interactions within a given time period.",
+     "pagina": "p. 177"
+    },
+    {
+     "trecho": "If users are being retained but the rate of successful interaction is falling, there is a serious problem.",
+     "pagina": "p. 182"
+    },
+    {
+     "trecho": "Companies often make the mistake of clinging to metrics that their business has outgrown.",
+     "pagina": "p. 181"
+    },
+    {
+     "trecho": "you should make sure your metrics meet the ‘3 A’s test’ where your metrics are actionable, accessible, and auditable.",
+     "pagina": "p. 187"
+    }
+   ]
+  },
+  {
+   "nome": "Orchestrators and Participants: the spectrum of ecosystem roles (Orquestradores e participantes: o espectro de papéis no ecossistema, onde jogar e modelos de relacionamento)",
+   "livro": "ecosystem-economy",
+   "paginas": "p. 104 a 144",
+   "componentes": [
+    {
+     "nome": "Ecossistema",
+     "descricao": "Comunidade de empresas, digitais e físicas, que atravessa fronteiras setoriais para atender um conjunto de necessidades do cliente, compartilhando ativos, informação e recursos e criando valor que cada uma não criaria sozinha. Relação de fornecedor e cliente, por si, não é ecossistema."
+    },
+    {
+     "nome": "Organizar pela necessidade do cliente",
+     "descricao": "O supermercado reuniu cinco lojas especializadas porque organizou o varejo pela necessidade (uma compra única), não pela cadeia de suprimento. O ecossistema nasce do mesmo raciocínio: parte-se do problema do cliente, não do problema do negócio."
+    },
+    {
+     "nome": "Quatro passos para escolher onde jogar",
+     "descricao": "Começar pelo básico (necessidades e base de clientes, propostas, apostas diferenciadas), avaliar ecossistemas (preciso de um, já existe, há lacuna), avaliar a concorrência (tradicional, nova, postura) e repetir o ciclo a cada poucos trimestres."
+    },
+    {
+     "nome": "Orquestrador",
+     "descricao": "Seis traços: plataforma ou espinha dorsal, organização da comunidade (recrutar, coordenar, reter e aplicar padrões), rede de clientes e infraestrutura de ir ao mercado, recursos para o participante se encaixar, trajetória de melhoria e arcabouço de relacionamentos. Tem mais controle e mais obrigações."
+    },
+    {
+     "nome": "Participante",
+     "descricao": "Usa a plataforma de outro, constrói a proposta sobre ela, aproveita a infraestrutura de ir ao mercado e adere ao arcabouço de relacionamento, normalmente dividindo o valor com o orquestrador. Menos custo de partida e menos controle."
+    },
+    {
+     "nome": "Espectro de papéis",
+     "descricao": "Participante comum, participante exclusivo ou em vários ecossistemas, papel híbrido, orquestrador de um subecossistema dentro do ecossistema de outro e orquestrador de ecossistema amplo. Escolher exige honestidade sobre ambição, relações e capacidades."
+    },
+    {
+     "nome": "Papel híbrido",
+     "descricao": "Controle forte sobre um aspecto da relação e leve sobre outro, por exemplo forte controle de dados e leve controle do cliente, ou o inverso."
+    },
+    {
+     "nome": "Quatro modelos de relacionamento e receita",
+     "descricao": "Taxa fixa para participar, partilha de valor entre orquestrador e participantes (às vezes com os usuários), partilha com participação societária e código aberto, em que o participante não paga e contribui com melhorias."
+    },
+    {
+     "nome": "Âncora e dor aguda",
+     "descricao": "Ecossistema precisa de um serviço central poderoso e distinto, ao redor do qual se organizam os demais. Resolver o passo mais difícil da jornada do cliente ganha confiança para o resto."
+    },
+    {
+     "nome": "Realismo na escolha do papel",
+     "descricao": "Muitas empresas não podem ser orquestradoras: só poucas têm ativos, recursos e capacidades. Gastar tempo tentando orquestrar sem estar preparado é desperdício; melhor concentrar energia onde há produtividade."
+    }
+   ],
+   "logica": "Um ecossistema distribui trabalho e risco entre quem tem as capacidades certas, mas alguém precisa manter a plataforma, o padrão e a comunidade, e esse papel (orquestrador) tem custo contínuo. O espectro de papéis mostra que não é binário: dá para orquestrar uma parte e participar do resto, ou controlar o cliente e não os dados. A relação entre as partes é governada por um modelo de relacionamento que pode ser taxa fixa, partilha de valor, equity ou aberto, e o que torna a relação ecossistema e não compra é a criação conjunta de valor.",
+   "aplicacao_wise": "Declarar por escrito o papel da Wise: orquestradora do subecossistema de empresas que vendem para as mesmas indústrias, e ao mesmo tempo participante de ecossistemas maiores (associações setoriais, redes de ERP), portanto papel híbrido (inferência minha, a partir do espectro). Controle forte: a relação com a indústria e a qualidade da indicação. Controle leve: tudo o que o parceiro faz no próprio mercado. A necessidade do cliente industrial que sustenta o ecossistema é encontrar o fornecedor certo e implantar sem rodar uma concorrência sozinho; a Prateleira de RFP é a âncora e o método de gestão comercial da Wise é a vantagem diferenciada. O livro avisa que relação baseada em RFP não é ecossistema (p. 202): a Prateleira é distribuição transacional enquanto não houver criação conjunta, que vem da Base Ativa, de ações conjuntas e do cruzamento de carteiras. Um parceiro só é tratado como parceiro de ecossistema se criar valor junto. Realismo de capacidade: com uma Gerente, orquestrar significa um subecossistema pequeno, em um segmento por vez. Modelos de relacionamento: pacotes com contrapartidas são taxa fixa, comissão é partilha de valor, trilhas abertas são um pedaço de código aberto.",
+   "impacto_modelo_de_negocio": "O programa deixa de ser tratado como canal de indicação e passa a ser um papel assumido (orquestrador de subecossistema) com obrigações (plataforma, comunidade, recursos, melhoria) e direitos (partilha do valor). O catálogo de relacionamentos por nível passa a escolher o modelo de receita por tipo de parceiro, e não mais um único desenho para todos.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Definir e rever o papel e a proposta do programa no ecossistema",
+     "descricao": "Camada de estratégia do programa. Decide necessidade do cliente atendida, papel da Wise no espectro, âncora, aposta diferenciada e leitura de outros ecossistemas, em ciclo trimestral.",
+     "gatilho": "Criação do programa e fim de cada trimestre",
+     "entregas": "Documento de papel e proposta com decisões datadas",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Descrever a necessidade do cliente industrial que o ecossistema atende",
+     "descricao": "Escrever em linguagem do cliente a jornada completa (diagnóstico, escolha de solução, implantação, resultado), marcar o passo mais difícil e dizer onde o programa entra. Orienta a escolha da âncora.",
+     "gatilho": "Antes do primeiro parceiro e a cada ciclo trimestral",
+     "entregas": "Mapa da jornada com a dor mais aguda e a proposta do programa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear ecossistemas vizinhos e concorrentes do programa",
+     "descricao": "Listar programas de parceiros de ERPs, redes setoriais, associações e plataformas de compras que atendem as mesmas indústrias, com pontos fortes, fracos e possível coexistência.",
+     "gatilho": "Trimestre e entrada de nova categoria",
+     "entregas": "Mapa de ecossistemas e postura competitiva da Wise",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir a âncora do ecossistema e a dor aguda do cliente",
+     "descricao": "Escolher o serviço central em torno do qual os demais pilares se organizam. Hipótese: a Prateleira de RFP como âncora, com a Base Ativa como laço de engajamento recorrente.",
+     "gatilho": "Revisão de proposta",
+     "entregas": "Âncora declarada e justificada",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Exigir criação conjunta de valor para promover um contato a parceiro",
+     "descricao": "Antes de tratar alguém como parceiro de ecossistema, exigir ao menos uma ação conjunta (evento, caso, conteúdo, indicação cruzada). Quem só vende ou compra permanece como participante transacional.",
+     "gatilho": "Contato pede entrada ou passa do onboarding",
+     "entregas": "Classificação do contato com registro da criação conjunta",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Reclassificar os contatos atuais em parceiro de ecossistema, híbrido ou participante transacional",
+     "descricao": "Aplicar o espectro às cerca de 21 conversas: quem tem carteira e disposição de co-criar, quem é só fornecedor da Prateleira, quem é entidade (que orquestra um subecossistema próprio).",
+     "gatilho": "Mapeamento das conversas",
+     "entregas": "Lista classificada com tratamento de cada tipo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Escolher o modelo de relacionamento por nível e tipo de parceiro",
+     "descricao": "Casar o modelo ao tipo: taxa fixa nos pacotes com contrapartidas, partilha de valor na comissão, acesso aberto a trilhas, e (mais adiante) participação conjunta em produtos novos.",
+     "gatilho": "Desenho dos níveis e a cada revisão",
+     "entregas": "Matriz nível por modelo de relacionamento",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Orquestradora do subecossistema de parceiros",
+     "descricao": "Papel da Wise, exercido pela Gerente de Parcerias: manter plataforma (portal), organizar a comunidade, aplicar padrões, dar recursos ao parceiro, melhorar a proposta e conduzir o arcabouço de relacionamento.",
+     "gatilho": "Contínuo",
+     "entregas": "Plataforma operante, comunidade ativa, padrões publicados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Parceiro participante por nível A, B e C",
+     "descricao": "Compromissos do participante: usar o portal, aderir ao regulamento, cumprir SLA, compartilhar o valor criado e contribuir com casos e dados quando combinado.",
+     "gatilho": "Assinatura e revisão trimestral de nível",
+     "entregas": "Termo de adesão por nível",
+     "dono": "Parceiro (acompanhado pela Gerente de Parcerias)"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral do papel e da proposta",
+     "descricao": "Rever papel, âncora, mapa de ecossistemas e metas. O livro adverte que revisar a cada dois ou três anos é raro demais e a cada mês é frequente demais.",
+     "gatilho": "Fim do trimestre",
+     "entregas": "Decisão de manter, ajustar ou mudar o papel",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros com criação conjunta de valor",
+     "descricao": "Percentual de parceiros ativos com pelo menos uma ação conjunta nos últimos 90 dias. Mostra quanto do programa é ecossistema e quanto é distribuição.",
+     "gatilho": "Fechamento mensal",
+     "entregas": "Percentual por nível e por célula",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Eixo horizontal com cinco pontos: Participante comum, Participante em vários ecossistemas, Híbrido, Orquestrador de subecossistema, Orquestrador amplo. Um marcador grande indica a Wise entre Híbrido e Orquestrador de subecossistema, com uma seta dupla para o ecossistema maior (associações, ERPs). Abaixo, duas colunas Orquestrador e Participante com os seis e quatro traços. Ao lado, o quadro dos quatro modelos de relacionamento, cada um ligado ao nível do programa que o usa.",
+   "citacoes": [
+    {
+     "trecho": "Generally speaking, though, these roles fall into two main categories: orchestrators and participants.",
+     "pagina": "p. 138"
+    },
+    {
+     "trecho": "As the orchestrator, you typically have the responsibility to lead, organize, and evolve the ecosystem in order to make it as effective and efficient as possible.",
+     "pagina": "p. 138"
+    },
+    {
+     "trecho": "More sophisticated ecosystems often use a business model in which the participants and orchestrators share the value they are creating together",
+     "pagina": "p. 142"
+    },
+    {
+     "trecho": "if you are more of a back-office orchestrator, you might have strong control over the data generated by the ecosystem but a much lighter control over the customer relationship.",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "The reality is that many companies simply cannot be ecosystem orchestrators.",
+     "pagina": "p. 200"
+    },
+    {
+     "trecho": "If you typically are dealing with your partners within an RFP-based approach, more than likely, they are not true ecosystem partners",
+     "pagina": "p. 202"
+    }
+   ]
+  },
+  {
+   "nome": "Ecosystem necessities analysis, build-acquire-partner grid and partnership matrix (Matriz de necessidades do ecossistema, grade construir, adquirir ou associar e matriz de parceria)",
+   "livro": "ecosystem-economy",
+   "paginas": "p. 145 a 155",
+   "componentes": [
+    {
+     "nome": "Matriz de necessidades do ecossistema",
+     "descricao": "Lista das capacidades e ativos necessários à proposta em quatro categorias (plataforma ou espinha dorsal, produto ou oferta, ir ao mercado, clientes), com quem os tem hoje e quem os terá no futuro, você e a concorrência."
+    },
+    {
+     "nome": "Grade construir, adquirir ou associar",
+     "descricao": "Duas perguntas por capacidade: é difícil desenvolver? É difícil manter? Fácil nas duas, construa. Difícil de desenvolver e fácil de manter, adquira. Difícil nas duas, associe-se por ecossistema. Fácil de desenvolver e difícil de manter, depende de outros fatores."
+    },
+    {
+     "nome": "Matriz de parceria",
+     "descricao": "Para cada capacidade que exige parceiro, listar quem a tem hoje e vai tê-la amanhã e está em condições de colaborar."
+    },
+    {
+     "nome": "Atratividade e viabilidade",
+     "descricao": "Atratividade: base de clientes complementar, dados, capacidade de alcançar clientes, capacidades que aceleram outras parcerias. Viabilidade: parceiros que já tem, interesse nos seus ativos, horizonte de colaboração e rapidez para sair da conversa para a implementação. A pergunta é: queremos nos associar a eles e eles querem se associar a nós?"
+    },
+    {
+     "nome": "Continuum de parcerias",
+     "descricao": "Parcerias tradicionais são contratuais, transacionais, de fornecedor e cliente, movem valor e são estáticas. Parcerias de ecossistema são cooperativas, estratégicas, crescem o bolo, criam mercados e se aprofundam com o tempo."
+    },
+    {
+     "nome": "Amplitude e profundidade",
+     "descricao": "Para sobreviver, ampliar o número de parceiros e aprofundar cada relação: número sem profundidade é vendedor e cliente com outro nome."
+    },
+    {
+     "nome": "Pontos de controle",
+     "descricao": "Passos da jornada do cliente ou conjuntos de dados cujo controle dá vantagem e relação mais próxima com o cliente. Dados costumam ser bons pontos de controle."
+    },
+    {
+     "nome": "Orquestrador começa forte em algumas capacidades",
+     "descricao": "Quem orquestra costuma partir de posição forte em algumas capacidades e usa essa posição para atrair os participantes que fornecem o resto."
+    }
+   ],
+   "logica": "Ninguém tem todas as capacidades de uma proposta de ecossistema; a pergunta é qual obter de qual forma. Dois critérios simples (dificuldade de desenvolver e de manter) separam o que construir do que pedir a parceiro, e uma segunda leitura (atrativo e viável) ordena quais parceiros abordar. Sem isso a empresa recruta por simpatia, abre dezenas de relações superficiais e acaba com um custo de gestão que não cabe na equipe.",
+   "aplicacao_wise": "Preencher a matriz com hipóteses a validar: Plataforma, o portal, que a Wise constrói e mantém; Produto ou oferta, conteúdo técnico das trilhas (co-criar com parceiros, difícil de manter), integração com ERP (associar a parceiros de ERP, difícil nas duas dimensões), dados de maturidade comercial das indústrias (ponto de controle da Wise, vindo da consultoria); Ir ao mercado, relação com indústrias (a Wise já tem) e eventos e feiras (associar às entidades, como a Expo+Indústria, porque são difíceis de manter); Clientes, atendimento do fornecedor (parceiro) e sucesso do cliente industrial (Wise). Cada parceiro candidato é pontuado nos dois eixos: atratividade, pelo potencial da carteira, dados, alcance e capacidades; viabilidade, por conflito com parceiros atuais, interesse, visão de longo prazo e rapidez. Os níveis A, B e C nascem da combinação dos dois eixos e não só do tamanho da carteira. A complementaridade de carteira entre candidato e base da Wise é checada antes do convite. Entidades entram como parceiros de ir ao mercado, não como fornecedores. As relações são ampliadas só até onde o gerente consegue aprofundar.",
+   "impacto_modelo_de_negocio": "O recrutamento deixa de ser fila e vira carteira posicionada em um mapa de dois eixos, com ondas de convite por quadrante. Cada capacidade que a Wise não quer manter vira papel de um parceiro com nome, o que tira trabalho da Gerente e transforma o parceiro em dono de função, não só em fonte de indicação. O limite de relações profundas passa a ser regra de crescimento.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar a matriz de necessidades do programa",
+     "descricao": "Listar capacidades e ativos nas quatro categorias, marcar quem os tem hoje e amanhã. É o diagnóstico de onde a Wise é forte e onde depende de parceiros.",
+     "gatilho": "Antes do primeiro parceiro e a cada revisão trimestral",
+     "entregas": "Matriz preenchida, versão datada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Decidir construir, adquirir ou associar por capacidade",
+     "descricao": "Pontuar cada capacidade em dificuldade de desenvolver e de manter e registrar a decisão. Para as que viram parceria, abrir uma linha na matriz de parceria.",
+     "gatilho": "Nova capacidade necessária ao programa",
+     "entregas": "Decisão registrada por capacidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Pontuar prospects por atratividade e viabilidade",
+     "descricao": "Cada conversa recebe duas notas: quanto o parceiro é atraente à Wise (carteira, dados, alcance, capacidades) e quanto a colaboração é viável (conflitos, interesse, horizonte, rapidez). A nota decide ordem, tratamento e nível inicial.",
+     "gatilho": "Nova conversa com parceiro em potencial",
+     "entregas": "Ficha de prospect com duas notas e quadrante",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Checar complementaridade de carteira antes de convidar",
+     "descricao": "Comparar, com os dados da Wise e do parceiro, se a carteira dele complementa a da Wise em alvos e segmentos. Se não há complementaridade, o convite perde prioridade.",
+     "gatilho": "Prospect em quadrante de alta atratividade",
+     "entregas": "Parecer curto de complementaridade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Trocar o funil linear de recrutamento por mapa de prospects em dois eixos",
+     "descricao": "O recrutamento deixa de ser uma coluna de cards por etapa. Prospects aparecem como pontos no mapa de atratividade por viabilidade, e só quem está nos quadrantes prioritários tem trabalho aberto.",
+     "gatilho": "Desenho do funil de parceiros",
+     "entregas": "Mapa de prospects e lista curta de trabalho",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Convidar parceiros em ondas por quadrante",
+     "descricao": "Primeira onda: alta atratividade e alta viabilidade, dentro do micromercado. Depois, os quadrantes intermediários. A quarta zona fica fora do programa por ora. Evita abrir relações demais para a capacidade da Gerente.",
+     "gatilho": "Fim da onda anterior ou meta atingida",
+     "entregas": "Lista de convidados da onda, metas e prazo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Estruturar entidades e feiras como parceiros de ir ao mercado",
+     "descricao": "Entidades (associações, feiras) têm capacidade de acesso à comunidade e de eventos e necessidade de serviço para seus associados. Tratar com uma matriz própria, em que oferecem alcance e recebem programação, não comissão por indicação.",
+     "gatilho": "Contato com entidade",
+     "entregas": "Acordo de colaboração com o que cada lado entrega",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Atribuir cada capacidade parceirizada a um parceiro dono",
+     "descricao": "Cada capacidade que a Wise optou por não construir recebe um parceiro responsável com meta e prazo (por exemplo integração com ERP, evento ou conteúdo técnico).",
+     "gatilho": "Decisão de associar",
+     "entregas": "Capacidade, parceiro dono, meta e data de revisão",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Identificar e proteger os pontos de controle do programa",
+     "descricao": "Declarar o que a Wise não divide (relação com o cliente, dados de qualidade da indicação, dados de maturidade comercial) e como o portal protege o acesso por nível.",
+     "gatilho": "Desenho do portal e de cada nível",
+     "entregas": "Lista de pontos de controle e regra de acesso",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Cobertura de capacidades com dono",
+     "descricao": "Percentual das capacidades necessárias que têm responsável nomeado (interno ou parceiro) e meta ativa.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Percentual por categoria de capacidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral da matriz de necessidades e de parceria",
+     "descricao": "Atualizar posições, rever decisões de construir ou associar e reordenar prospects, antes da revisão de níveis.",
+     "gatilho": "Fim do trimestre",
+     "entregas": "Matrizes atualizadas e nova lista de convites",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Três peças. À esquerda, a matriz de necessidades com quatro faixas horizontais (plataforma, produto, ir ao mercado, clientes) e colunas hoje e futuro, Wise e concorrência. No centro, a grade 2 por 2 de dificuldade de desenvolver por dificuldade de manter, com Construir, Adquirir, Associar e Depende. À direita, o mapa de prospects com atratividade no eixo vertical e viabilidade no horizontal, e os 21 pontos posicionados em ondas numeradas.",
+   "citacoes": [
+    {
+     "trecho": "propositions generally fall into a few categories: platform or backbone capabilities, product/offer capabilities, go-to-market capabilities, and customer capabilities.",
+     "pagina": "p. 145"
+    },
+    {
+     "trecho": "you must judge the assets and capabilities by two criteria: how difficult they would be to develop on your own, and how difficult they would be to maintain thereafter.",
+     "pagina": "p. 149"
+    },
+    {
+     "trecho": "difficult both to develop and to maintain, the best route is likely an ecosystem partnership.",
+     "pagina": "p. 150"
+    },
+    {
+     "trecho": "The relationship is not transactional, but rather, cooperative.",
+     "pagina": "p. 151"
+    },
+    {
+     "trecho": "how attractive they are to you, and the feasibility of the overall collaboration",
+     "pagina": "p. 154"
+    },
+    {
+     "trecho": "Will their customer base complement your existing customer base in terms of specific targets and segments?",
+     "pagina": "p. 154"
+    }
+   ]
+  },
+  {
+   "nome": "Changing from the Inside Out: operating model, performance management by stage and ecosystem governance (Mudar de dentro para fora: modelo operacional ágil, gestão de desempenho por estágio e governança do ecossistema)",
+   "livro": "ecosystem-economy",
+   "paginas": "p. 167 a 193",
+   "componentes": [
+    {
+     "nome": "Onde colocar o ecossistema na organização",
+     "descricao": "Espectro entre dentro do negócio principal e projeto separado, tipo moonshot. Perto demais sufoca o espírito empreendedor; longe demais impede escala e sinergias. A zona ideal fica nem tão perto nem tão longe, em geral com incubadora ou aceleradora ligada por pontes (rodízio de talentos, supervisão de líderes do negócio principal)."
+    },
+    {
+     "nome": "Duas governanças",
+     "descricao": "Decidir onde fica o ecossistema dentro da empresa e como governar o próprio ecossistema (quem recebe o quê, segurança, desenvolvimento, polícia contra abuso, princípios transparentes e evolutivos). A maioria das construções fracassadas falha em governança."
+    },
+    {
+     "nome": "Modelo ágil: tribos, capítulos e esquadrões",
+     "descricao": "Esquadrões pequenos e multifuncionais, com responsabilidade de ponta a ponta por uma missão voltada ao cliente, organizados em tribos e com capítulos de competência. Dono de produto prioriza e mantém a lista de trabalho, líder de capítulo desenvolve competências, treinador ágil remove obstáculos."
+    },
+    {
+     "nome": "Talento",
+     "descricao": "Diversidade de experiência, de pensamento e de origem; abertura a ideias novas; predisposição à colaboração profunda. Precisa de especialistas e de generalistas."
+    },
+    {
+     "nome": "Gestão de desempenho em quatro perguntas",
+     "descricao": "Qual a cadência (mais frequente e orientada a tirar obstáculos, com check-ins semanais ou mais). Quem participa (menos hierárquico, mais próximo do trabalho). O que se cobre (poucos objetivos e resultados-chave por esquadrão). Como se faz o seguimento (apoio e aprendizado em vez de punição, com incentivos alinhados)."
+    },
+    {
+     "nome": "Metas por estágio",
+     "descricao": "No começo, o único resultado que importa é operar e alcançar clientes. Depois, serviços gratuitos que levam clientes ao negócio principal. Depois receita e escala. Por fim lucro. Em todos os estágios, a meta mais importante é o valor criado para todos, incluindo parceiros e clientes."
+    },
+    {
+     "nome": "Cultura",
+     "descricao": "Curiosidade intelectual, falhar rápido, liderança servidora, trabalho em equipe e visão de longo prazo."
+    },
+    {
+     "nome": "Infraestrutura voltada para fora e para dentro",
+     "descricao": "Para fora: conexão plug and play, dados com fluxo controlado e sem silos. Para dentro: finanças que medem cada unidade e processo jurídico que escala sem multiplicar advogados."
+    },
+    {
+     "nome": "Cinco armadilhas",
+     "descricao": "Foco no curto prazo, terceirizar a construção do ecossistema ao fornecedor de tecnologia, não medir o impacto como um todo, construir perto ou longe demais do núcleo e falhar devagar."
+    }
+   ],
+   "logica": "Um ecossistema não cabe em estrutura desenhada para um negócio de setor único: exige times pequenos, responsáveis por ponta a ponta, medidos por poucos objetivos e acompanhados com frequência por quem quer remover obstáculos. As metas mudam com o estágio, para que não se cobre lucro de quem ainda está aprendendo a operar nem se aceite sempre métrica de alcance sem valor. Falhar devagar é o custo escondido: projetos que não funcionam continuam consumindo atenção e atrapalham os que funcionam.",
+   "aplicacao_wise": "Posicionar o programa dentro do grupo Wise, Tríade e Swallow na zona do meio: perto o bastante para usar a relação com as indústrias e o método, longe o bastante para o programa ter ritmo e metas próprios (inferência minha, a partir do livro). Em vez de acompanhar cada parceiro, organizar esquadrões por micromercado, cada um com um parceiro âncora, de 3 a 6 parceiros, um consultor da Wise e um contato comercial, e um único OKR. Como consultores e comercial não entram no portal, o esquadrão é um agrupamento virtual: a Gerente de Parcerias registra no portal o que eles executam e é dona da tarefa. Os OKRs seguem os estágios: primeiro operar e ativar parceiros (primeira indicação), depois alcançar clientes e levar quem chega ao negócio principal da Wise, depois receita e por fim lucro; o valor criado, incluindo a receita do parceiro e a experiência do cliente industrial, aparece em todos os estágios. Cadência semanal curta por esquadrão, revisão trimestral de estágio. Contrato padrão modular por nível, para cada parceiro novo não exigir jurídico novo. O parceiro que não entregar os indicadores combinados sai, e o fracasso é registrado como aprendizado.",
+   "impacto_modelo_de_negocio": "O programa passa a ser tratado como um negócio com estágio, metas e saída próprios, dentro do grupo, em vez de um conjunto de tarefas da Gerente. A unidade de gestão passa a ser o esquadrão por micromercado, com um número de metas pequeno, e o valor criado para os três lados vira indicador principal, à frente de receita.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerir o programa por esquadrões de micromercado",
+     "descricao": "Macroprocesso de operação: cada micromercado tem um esquadrão com missão, âncora, OKR e cadência próprios. A Gerente acompanha esquadrões e não cards de parceiro.",
+     "gatilho": "Abertura de cada micromercado",
+     "entregas": "Esquadrão formado, OKR definido, calendário de check-ins",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o OKR do esquadrão e do programa por estágio",
+     "descricao": "Um objetivo e poucos resultados-chave por esquadrão, derivados do estágio do programa: operar e ativar, alcançar clientes, gerar receita, gerar lucro. O valor criado para parceiros, Wise e clientes entra em todos.",
+     "gatilho": "Abertura de esquadrão e mudança de estágio",
+     "entregas": "OKR escrito no portal e acompanhado semanalmente",
+     "dono": "Gerente de Parcerias com o Patrocinador"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Check-in semanal de esquadrão de 20 minutos",
+     "descricao": "Conversa com o âncora e o consultor sobre obstáculos, não sobre status de cada card. Resultado: uma ação para remover o maior obstáculo da semana.",
+     "gatilho": "Toda semana por esquadrão",
+     "entregas": "Lista de obstáculos e ação decidida",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral de estágio do programa",
+     "descricao": "Decidir se o programa mudou de estágio e trocar os OKRs. Cadência escolhida pelo livro: nem a cada mês, nem a cada dois ou três anos.",
+     "gatilho": "Fim do trimestre",
+     "entregas": "Estágio atual, OKRs novos, decisão de continuar, ajustar ou encerrar partes",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Posicionar o programa dentro do grupo Wise, Tríade e Swallow",
+     "descricao": "Decidir o que o programa herda do grupo (relação com indústrias, método, consultores) e o que tem de próprio (metas, ritmo, orçamento). Definir pontes: rodízio de consultores, supervisão do Patrocinador.",
+     "gatilho": "Antes do primeiro parceiro e na revisão anual",
+     "entregas": "Mapa de relação com Wise Makers, Tríade e Swallow",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Estruturar contrato padrão modular por nível",
+     "descricao": "Contrato base com anexos por nível e pacote, para que cada parceria nova não exija trabalho jurídico novo. O livro manda repensar a escala do jurídico para multiplicar parcerias sem multiplicar advogados.",
+     "gatilho": "Antes do primeiro parceiro",
+     "entregas": "Contrato base, anexos por nível, rotina de assinatura no portal",
+     "dono": "Patrocinador do programa"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Tornar a entrada do parceiro plug and play",
+     "descricao": "Poucos passos, sem comitê, com conexão simples do parceiro ao portal e à comunidade. O objetivo é a primeira indicação o mais cedo possível.",
+     "gatilho": "Parceiro aceito",
+     "entregas": "Fluxo de entrada de poucos passos e prazo até a primeira indicação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o fluxo de dados compartilhados entre Wise e parceiros",
+     "descricao": "Decidir quais dados circulam, para quem e em que nível, evitando silos e vazamentos. Dados de qualidade da indicação são ponto de controle e ficam com a Wise.",
+     "gatilho": "Desenho do portal e novo tipo de dado",
+     "entregas": "Política de dados por nível e regras no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Medir o valor criado para parceiros, Wise e clientes",
+     "descricao": "Reunir receita do parceiro, receita da Wise e experiência do cliente industrial em uma medida única de valor criado. O livro avisa que muitas empresas medem só a si mesmas.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Medida de valor criado por esquadrão",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Desligar parceiro que não entrega os indicadores combinados",
+     "descricao": "Parceiro com metas combinadas por escrito e sem entrega depois do prazo sai pela escada de sanções. O programa não mantém por simpatia nem por orgulho.",
+     "gatilho": "Fim do prazo de meta sem entrega",
+     "entregas": "Decisão registrada, aprendizado anotado, vaga liberada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar o aprendizado de cada fracasso em retrospectiva",
+     "descricao": "Ao fim de cada ciclo de 12 semanas e de cada revisão trimestral, listar o que não funcionou e o que mudou por causa disso. Evita falhar devagar.",
+     "gatilho": "Fim do ciclo de 12 semanas e da revisão trimestral",
+     "entregas": "Página de aprendizados, ações assumidas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Valor criado para os três lados por esquadrão",
+     "descricao": "Medida composta de receita do parceiro, receita da Wise e satisfação do cliente industrial, acompanhada por esquadrão e por estágio.",
+     "gatilho": "Fechamento trimestral",
+     "entregas": "Valor criado por esquadrão",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Organograma achatado: no topo, uma caixa Patrocinador; abaixo, a Gerente como líder de tribo; abaixo dela, quatro a seis círculos (esquadrões por micromercado), cada um com os ícones âncora, parceiros, consultor e comercial. Ao lado, uma escada de quatro degraus (operar, alcançar clientes, receita, lucro) com a faixa valor criado atravessando todos. Embaixo, um relógio com três ritmos: semanal (check-in), trimestral (estágio), anual (posição no grupo).",
+   "citacoes": [
+    {
+     "trecho": "Our research shows that the vast majority of unsuccessful ecosystem builds can trace their failure back to a flawed approach to governance.",
+     "pagina": "p. 168"
+    },
+    {
+     "trecho": "That is, they must develop ecosystem ideas that are not too close to the core business, but also not too far.",
+     "pagina": "p. 169"
+    },
+    {
+     "trecho": "it is not uncommon to have weekly or even more frequent check-ins",
+     "pagina": "p. 182"
+    },
+    {
+     "trecho": "At the very beginning, the only OKR that really matters is your effectiveness in delivering basic services and in reaching customers.",
+     "pagina": "p. 183"
+    },
+    {
+     "trecho": "the single most important OKR is the degree to which the ecosystem is creating value.",
+     "pagina": "p. 183"
+    },
+    {
+     "trecho": "you will need to radically rethink the scalability of your legal process.",
+     "pagina": "p. 191"
+    }
+   ]
+  }
+ ],
+ "excesso_de_kanbans": [
+  {
+   "ideia": "A unidade de gestão é a interação (unidade de valor), não o parceiro: um único quadro de interações com a origem como etiqueta",
+   "livro": "platform-revolution",
+   "pagina": "p. 45 a 48",
+   "como_aplicar": "Em vez de um quadro por processo com um card por parceiro, existe um quadro de interações (indicação, apresentação de RFP, lead de evento, ação conjunta, cruzamento de carteiras), com estados comuns e a origem como etiqueta. O parceiro vira atributo da interação e ganha uma visão derivada com seu histórico. Com nenhum parceiro assinado, o número de cards vivos é pequeno e cresce com o uso, não com o cadastro."
+  },
+  {
+   "ideia": "O filtro decide o que chega à Gerente: tela inicial é uma fila de exceções, não um quadro",
+   "livro": "platform-revolution",
+   "pagina": "p. 46 a 48",
+   "como_aplicar": "A tela de trabalho mostra só o que precisa de decisão hoje: SLA vencendo, ativação de 90 dias parada, indicação sem retorno, proteção prestes a expirar, nível a revisar. O restante corre em estados automáticos. É a mesma lógica do filtro que entrega à pessoa só as unidades relevantes."
+  },
+  {
+   "ideia": "Núcleo pequeno no portal e funções específicas na borda, feitas pelo próprio parceiro",
+   "livro": "platform-revolution",
+   "pagina": "p. 56 a 58",
+   "como_aplicar": "O núcleo do portal gerencia só funil de ativação, indicação, prateleira e comissão. Checklist de capacitação, trilhas, kits e relatórios sob demanda ficam na borda, em autosserviço do parceiro, e a Gerente não acompanha cada um por card. Cada pedido novo passa pelo teste da interação central."
+  },
+  {
+   "ideia": "Curadoria por reputação alimentada pelo cliente e pelo consultor, com intervenção só nos extremos",
+   "livro": "platform-revolution",
+   "pagina": "p. 143 a 144",
+   "como_aplicar": "Avaliação do cliente indicado, retorno do consultor e SLA formam uma nota por parceiro calculada pelo portal. A Gerente age em quem fica abaixo de um limiar (conversa e plano) e em quem fica acima (reconhecimento, nível). O livro diz que moderadores pagos não escalam e que ferramentas de software que agregam feedback escalam melhor."
+  },
+  {
+   "ideia": "Regras no código: o portal move os estados e só sobem exceções",
+   "livro": "platform-revolution",
+   "pagina": "p. 160 e 161",
+   "como_aplicar": "SLA, expiração da proteção de 180 dias, alerta de ativação parada, rebaixamento na revisão trimestral e bloqueio de comissão sem registro são automáticos. Sistemas bem desenhados premiam sozinhos o bom comportamento. A Gerente decide só nas exceções e nas sanções que exigem julgamento."
+  },
+  {
+   "ideia": "Cada processo vira um número e um alerta, não um quadro: painel de no máximo cinco indicadores",
+   "livro": "platform-revolution",
+   "pagina": "p. 186 e 187",
+   "como_aplicar": "Em vez de acompanhar cada kanban, o processo é resumido por uma métrica (por exemplo, liquidez, falha de interação, ativação) com meta e alerta. O livro cita o conselheiro que disse que a empresa estava medindo demais e priorizando de menos. Métricas que não passam no teste acionável, acessível e auditável saem."
+  },
+  {
+   "ideia": "Esquadrões por micromercado com um OKR cada: o número de unidades de gestão cai de dezenas de parceiros para poucas células",
+   "livro": "ecosystem-economy",
+   "pagina": "p. 173 a 175 e 182",
+   "como_aplicar": "A Gerente acompanha de 4 a 6 esquadrões (âncora, parceiros, consultor, comercial), cada um com missão e um objetivo com poucos resultados-chave. O card passa a ser o esquadrão. O parceiro individual só vira assunto se o esquadrão pedir."
+  },
+  {
+   "ideia": "Cadência semanal por exceção, voltada a remover obstáculos",
+   "livro": "ecosystem-economy",
+   "pagina": "p. 182",
+   "como_aplicar": "Um check-in curto por esquadrão por semana, para listar obstáculos e remover o maior. Substitui as revisões separadas de cada processo. O livro condena a revisão mensal ou trimestral que vira exibição e defende o acompanhamento frequente e de apoio."
+  },
+  {
+   "ideia": "Atenção individual só aos parceiros âncora e estrelas; os demais em coortes",
+   "livro": "platform-revolution",
+   "pagina": "p. 94 e 120",
+   "como_aplicar": "Os parceiros Elite e o âncora de cada célula têm acompanhamento individual (cabeça de cartaz). Os parceiros B e C são geridos em coortes por data de entrada e por micromercado, com ações em lote (ciclo de 12 semanas, trilha, lembrete) e exceções pelo alerta."
+  },
+  {
+   "ideia": "Mapa de atratividade por viabilidade no lugar do funil de recrutamento",
+   "livro": "ecosystem-economy",
+   "pagina": "p. 154",
+   "como_aplicar": "As cerca de 21 conversas viram pontos em um mapa de dois eixos, ordenados em ondas. Só os dois quadrantes prioritários têm trabalho aberto. Elimina colunas e cards parados de quem não é prioridade."
+  },
+  {
+   "ideia": "Entrada plug and play e sem comitê, para a primeira indicação ser o único marco",
+   "livro": "ecosystem-economy",
+   "pagina": "p. 190",
+   "como_aplicar": "O parceiro entra em poucos passos e o portal gera o link, o kit e a primeira tarefa sozinho. Um estado só (ativado ou não ativado) substitui as etapas de onboarding e reduz os cards por parceiro a dois ou três momentos."
+  },
+  {
+   "ideia": "Moeda social e privilégios por pontos: o ranking dá direitos automáticos",
+   "livro": "platform-revolution",
+   "pagina": "p. 157 e 163",
+   "como_aplicar": "Pontos por indicação registrada, caso publicado e SLA cumprido liberam direitos sem pedido (destaque, acesso a demandas, vaga em evento). O parceiro conquista sozinho o que hoje seria um card de solicitação. O Stack Overflow, no livro, usa pontos para conceder direitos de votar e de ver menos anúncios."
+  }
+ ],
+ "tensoes": [
+  {
+   "tensao": "Platform Revolution manda começar por uma única interação central (p. 48), mas o patrocinador decidiu entrar com os três pilares (Prateleira de RFP, Base Ativa e indicações por link) juntos desde o primeiro parceiro.",
+   "como_resolver": "Tratar os três pilares como três portas de entrada para a mesma unidade de valor (a indicação com contexto) e não como três produtos. A prioridade operacional dos primeiros 90 dias é a interação que mais rápido gera liquidez no micromercado escolhido; os outros pilares seguem, mas sem processo próprio de acompanhamento. Isso é inferência minha e precisa ser validada com o patrocinador."
+  },
+  {
+   "tensao": "Ecosystem Economy (princípios 6 e 9, p. 202 e 203) diz que relação baseada em RFP não é ecossistema e que é preciso evitar o incrementalismo, enquanto o programa tem uma Gerente e a Prateleira de RFP é um pilar.",
+   "como_resolver": "Ser ambicioso na proposta e pequeno na superfície operacional: o papel de orquestrador de subecossistema e o modelo de relacionamento por nível ficam completos desde o início, a operação começa em um micromercado. A Prateleira de RFP é tratada como distribuição transacional, e a promoção a parceiro de ecossistema exige criação conjunta de valor (Base Ativa, ação conjunta, cruzamento de carteiras)."
+  },
+  {
+   "tensao": "Platform Revolution recomenda não cobrar entrada nem listagem e subsidiar a participação (p. 106 e 121), enquanto o desenho atual prevê pacotes com contrapartidas, que são uma taxa fixa de participação no sentido de Ecosystem Economy (p. 142).",
+   "como_resolver": "Manter contrapartidas em esforço e dado (casos, carteira, evento, SLA), não em dinheiro, durante o lançamento. Cobrança em dinheiro só na conclusão (taxa de sucesso) ou em serviços recorrentes que melhorem a qualidade, e só depois de a prateleira gerar contratos."
+  },
+  {
+   "tensao": "O livro de plataformas pede transparência interna e voz equivalente de parceiros externos (p. 165 a 167), enquanto o desenho atual restringe o portal à Gerente de Parcerias e deixa consultores e comercial de fora.",
+   "como_resolver": "Manter a regra de acesso e dar visibilidade por saída: o portal envia ao consultor e ao comercial um resumo semanal por cliente indicado (em texto, pelo canal que eles já usam) e registra o retorno por meio da Gerente. A voz do parceiro entra pelo conselho trimestral e pelo aviso prévio de mudança de regra."
+  },
+  {
+   "tensao": "Platform Revolution mostra que curadoria feita por pessoas não escala (p. 32 e 144), mas no começo a prateleira só pode ser curada à mão pela Gerente.",
+   "como_resolver": "Começar manual com critérios escritos e revisáveis, registrando cada decisão de aderência e cada perda para calibrar. Quando houver volume, transformar o critério em regra do portal e usar a nota do cliente para a curadoria contínua."
+  },
+  {
+   "tensao": "Platform Revolution (p. 125) define plataforma aberta como a que aplica restrições razoáveis e não discriminatórias, e o programa tem níveis A/B/C com benefícios diferentes e condições especiais para âncoras.",
+   "como_resolver": "Publicar os critérios dos níveis e da revisão trimestral, aplicá-los de modo uniforme e registrar exceções de âncora como condição declarada. Benefício desigual é aceito quando todos conhecem a regra e podem contestar."
+  },
+  {
+   "tensao": "Ecosystem Economy assume equipes com esquadrões, capítulos e dono de produto (p. 173 a 175), mas o programa tem uma única Gerente e consultores e comercial que não entram no portal.",
+   "como_resolver": "Tratar o esquadrão como agrupamento virtual por micromercado, com o parceiro âncora assumindo parte do papel de líder (convite, animação da comunidade) e a Gerente como dona de todas as tarefas. O ganho é reduzir unidades de gestão e não criar cargos."
+  },
+  {
+   "tensao": "Platform Revolution manda dar feedback rápido e aberto ao bom comportamento e lento e opaco a quem pune má conduta (p. 157), enquanto o princípio de transparência e de contestação (Ostrom, p. 159 e 160) pede regras claras para todos.",
+   "como_resolver": "Regras e escada de sanções públicas, mas detalhes dos sinais de fraude e de fuga do canal não divulgados, e comunicação da sanção com prazo e contestação. Reconhecimento imediato para o bom comportamento."
+  }
+ ]
+}

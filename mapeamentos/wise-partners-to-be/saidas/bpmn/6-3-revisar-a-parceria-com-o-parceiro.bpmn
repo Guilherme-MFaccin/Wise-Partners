@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-63" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-63">
+    <bpmn:participant id="Participant_P-63" name="6.3 Revisar a parceria com o parceiro" processRef="Process_P-63" />
+    <bpmn:participant id="Ext_P-63_X1" name="Parceiro" />
+    <bpmn:messageFlow id="P-63_M1" name="Pauta e resultados" sourceRef="P-63_t3" targetRef="Ext_P-63_X1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-63" name="6.3 Revisar a parceria com o parceiro" isExecutable="false">
+    <bpmn:documentation>Revisão conjunta com pauta montada pelo portal (resultados, oportunidades abertas, saúde, próximos passos); trimestral para todos os ativos, mensal para os destaques; o Diretor participa nas dos parceiros Elite. As ações nascem da ata. [status do fluxo: Confirmado; evidências: EV-0163, EV-0164, EV-0093, EV-0165, EV-0101]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-63">
+      <bpmn:lane id="Lane_P-63_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-63_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_t1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_t2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_t4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-63_f1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-63_PA-02" name="Diretor">
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-63_i1" name="Data da revisão pela cadência"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-63_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-63_i1_def" /></bpmn:startEvent>
+    <bpmn:serviceTask id="P-63_t1" name="Montar a pauta com os dados do parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F1</bpmn:incoming><bpmn:outgoing>P-63_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="P-63_g1" name="Parceiro Elite?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F2</bpmn:incoming><bpmn:outgoing>P-63_F3</bpmn:outgoing><bpmn:outgoing>P-63_F4</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:userTask id="P-63_t2" name="Convidar o Diretor"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F3</bpmn:incoming><bpmn:outgoing>P-63_F5</bpmn:outgoing></bpmn:userTask>
+    <bpmn:task id="P-63_t3" name="Conduzir a revisão com o parceiro"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F4</bpmn:incoming><bpmn:incoming>P-63_F5</bpmn:incoming><bpmn:outgoing>P-63_F6</bpmn:outgoing></bpmn:task>
+    <bpmn:userTask id="P-63_t4" name="Registrar a ata e as ações"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F6</bpmn:incoming><bpmn:outgoing>P-63_F7</bpmn:outgoing></bpmn:userTask>
+    <bpmn:endEvent id="P-63_f1" name="Plano do próximo período combinado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-63_F7</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-63_F1" name="" sourceRef="P-63_i1" targetRef="P-63_t1" />
+    <bpmn:sequenceFlow id="P-63_F2" name="" sourceRef="P-63_t1" targetRef="P-63_g1" />
+    <bpmn:sequenceFlow id="P-63_F3" name="Sim" sourceRef="P-63_g1" targetRef="P-63_t2" />
+    <bpmn:sequenceFlow id="P-63_F4" name="Não" sourceRef="P-63_g1" targetRef="P-63_t3" />
+    <bpmn:sequenceFlow id="P-63_F5" name="" sourceRef="P-63_t2" targetRef="P-63_t3" />
+    <bpmn:sequenceFlow id="P-63_F6" name="" sourceRef="P-63_t3" targetRef="P-63_t4" />
+    <bpmn:sequenceFlow id="P-63_F7" name="" sourceRef="P-63_t4" targetRef="P-63_f1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-63">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-63" bpmnElement="Collaboration_P-63">
+      <bpmndi:BPMNShape id="Participant_P-63_di" bpmnElement="Participant_P-63" isHorizontal="true"><dc:Bounds x="0" y="100" width="1352" height="296" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-63_PA-01_di" bpmnElement="Lane_P-63_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="1322" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-63_PA-02_di" bpmnElement="Lane_P-63_PA-02" isHorizontal="true"><dc:Bounds x="30" y="248" width="1322" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-63_X1_di" bpmnElement="Ext_P-63_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="1352" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_i1_di" bpmnElement="P-63_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_t1_di" bpmnElement="P-63_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_g1_di" bpmnElement="P-63_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="505" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="205" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_t2_di" bpmnElement="P-63_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_t3_di" bpmnElement="P-63_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_t4_di" bpmnElement="P-63_t4" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-63_f1_di" bpmnElement="P-63_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1216" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-63_F1_di" bpmnElement="P-63_F1"><di:waypoint x="196" y="174" /><di:waypoint x="290" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F2_di" bpmnElement="P-63_F2"><di:waypoint x="418" y="174" /><di:waypoint x="505" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F3_di" bpmnElement="P-63_F3"><di:waypoint x="555" y="174" /><di:waypoint x="642" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="561" y="154" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F4_di" bpmnElement="P-63_F4"><di:waypoint x="530" y="149" /><di:waypoint x="530" y="124" /><di:waypoint x="882" y="124" /><di:waypoint x="882" y="138" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="108" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F5_di" bpmnElement="P-63_F5"><di:waypoint x="770" y="174" /><di:waypoint x="818" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F6_di" bpmnElement="P-63_F6"><di:waypoint x="946" y="174" /><di:waypoint x="994" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_F7_di" bpmnElement="P-63_F7"><di:waypoint x="1122" y="174" /><di:waypoint x="1216" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-63_M1_di" bpmnElement="P-63_M1"><di:waypoint x="882" y="138" /><di:waypoint x="882" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="73" width="126" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

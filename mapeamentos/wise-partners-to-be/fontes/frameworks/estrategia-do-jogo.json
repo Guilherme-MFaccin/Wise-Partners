@@ -1,0 +1,1245 @@
+{
+ "frente": "estrategia-do-jogo",
+ "livros": [
+  "co-opetition",
+  "winning-the-right-game"
+ ],
+ "frameworks": [
+  {
+   "nome": "Value Net (Rede de Valor): clientes, fornecedores, concorrentes e complementadores",
+   "livro": "co-opetition",
+   "paginas": "p. 29 a 50",
+   "componentes": [
+    {
+     "nome": "Clientes",
+     "descricao": "Eixo vertical superior. Quem recebe produtos e serviços e paga por eles. O livro pede para olhar como cliente quem a organização costuma chamar de outra coisa (os doadores, no exemplo da universidade). Na Wise: as indústrias da carteira de Wise Makers, Tríade e Swallow e, em alguns escopos, o próprio parceiro (quando compra Base Ativa, trilhas ou visibilidade)."
+    },
+    {
+     "nome": "Fornecedores",
+     "descricao": "Eixo vertical inferior. Quem fornece recursos: insumos, capital, trabalho e ideias. Os empregados também são fornecedores. Na Wise (leitura nossa): o parceiro fornece acesso (carteira, indicações, palco), a entidade fornece audiência, o gerente de parcerias e os consultores fornecem horas."
+    },
+    {
+     "nome": "Concorrentes, pelo teste do cliente",
+     "descricao": "Eixo horizontal esquerdo. O jogador é concorrente se o cliente valoriza menos o seu produto quando tem o produto do outro. A pergunta vale também para o lado do fornecedor (quem disputa os mesmos recursos). Fronteira de setor não define concorrência."
+    },
+    {
+     "nome": "Complementadores",
+     "descricao": "Eixo horizontal direito. O jogador é complementador se o cliente valoriza mais o seu produto quando tem o produto do outro. Os autores cunharam a palavra porque 'parceiro' e 'aliado' são amplos demais (cliente e fornecedor também são) e estreitos demais (escondem a tensão pelo bolo)."
+    },
+    {
+     "nome": "Papéis múltiplos",
+     "descricao": "O mesmo jogador ocupa vários lugares na rede ao mesmo tempo (American e Delta são concorrentes e complementadoras). Tipificar alguém como um papel só é contraproducente. A Value Net serve para varrer todos os papéis de cada jogador."
+    },
+    {
+     "nome": "Dualidade amigo e inimigo",
+     "descricao": "Nas quatro direções há um elemento ganha-ganha (criar o bolo) e um ganha-perde (dividir o bolo). Quando o complementador entra o bolo cresce, mas ainda há disputa por quem fica com a maior parte. Competidor nem sempre deve ser eliminado: guerra de preço vira perde-perde."
+    }
+   ],
+   "logica": "Estratégia sem mapa completo cria pontos cegos: quem olha só os concorrentes não vê os complementadores, e quem trata o parceiro como aliado puro não vê a disputa pelo bolo. A Value Net obriga a ver os quatro papéis e as dependências entre eles. O teste do cliente troca a classificação por setor por uma classificação pelo efeito no valor percebido, e por isso funciona entre indústrias diferentes. Como o mesmo jogador ocupa vários lugares, as regras precisam ser escritas por papel e não por empresa. Em cada direção da rede há cooperação para criar o bolo e competição para dividi-lo, e o mapa deixa claro onde está cada parte.",
+   "aplicacao_wise": "Desenhar duas Value Nets antes de qualquer conversa de recrutamento: a do grupo (Wise Makers, Tríade e Swallow) e a de cada candidato. Na rede do grupo, as indústrias ficam no topo, os parceiros como fornecedores de acesso embaixo, outras consultorias e programas de canais dos grandes ERPs à esquerda, e as categorias de software e as entidades à direita. Aplicar o teste do cliente dentro da indústria atendida: uma indústria que tem MES e SST tende a valorizar mais a consultoria comercial (complementador), enquanto o parceiro que vende implantação de processo comercial é concorrente naquele escopo e complementador nos demais. O ERP que também vende consultoria é o caso padrão de papéis múltiplos, com regra por escopo em vez de rótulo único. Com cerca de 21 conversas em andamento, a rede mostra quais candidatos disputam as mesmas indústrias (o que forma painel de alternativas na Prateleira) e quais se complementam. A ficha do parceiro no portal passa a ter campo de papéis e de escopo de sobreposição no lugar de um campo de tipo.",
+   "impacto_modelo_de_negocio": "O programa deixa de ser uma lista de parceiros com tipo único e passa a ser um jogo de quatro papéis. Cada parceria é contratada em duas camadas de regras: cooperação (Prateleira, evento, Base Ativa, ações conjuntas) e competição (comissão, escopo de venda, proteção de 180 dias, cruzamento de carteira). O valor do programa para a indústria é a combinação de complementadores, o que muda a conversa de recrutamento: o parceiro entra para aumentar o bolo da indústria e depois disputa a divisão dele sob regras claras.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerir a rede de valor do programa",
+     "descricao": "Macroprocesso permanente que mantém o mapa dos quatro papéis do grupo e dos parceiros e alimenta decisões de recrutamento, regras e níveis. Agrupa os processos de mapear, classificar e reavaliar papéis. A organização em macroprocesso é proposta desta leitura; o livro entrega o mapa e as perguntas.",
+     "gatilho": "Início do programa; atualização a cada trimestre e sempre que entra parceiro novo",
+     "entregas": "Value Net do grupo, Value Net por categoria de parceiro e alertas de mudança de papel",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear a Value Net do candidato a parceiro",
+     "descricao": "Antes da primeira reunião de recrutamento, levantar clientes comuns com o grupo, fornecedores, concorrentes e complementadores do candidato, e quem ganha com a entrada dele.",
+     "gatilho": "Candidato passa para a etapa de conversa no funil",
+     "entregas": "Ficha de rede de valor preenchida no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Classificar o papel do parceiro pelo teste do cliente",
+     "descricao": "Perguntar, tendo a indústria atendida como referência, se o cliente valoriza mais ou menos o serviço do grupo quando tem o produto do candidato, escopo por escopo (consultoria, implantação, software, evento).",
+     "gatilho": "Ficha de rede de valor concluída",
+     "entregas": "Matriz de papéis por escopo (complementador, concorrente parcial, cliente, fornecedor)",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar papéis múltiplos e escopo de sobreposição na ficha do parceiro",
+     "descricao": "Campo estruturado no portal com os papéis ativos e o escopo em que há sobreposição, versionado a cada revisão. Alimenta a cláusula de escopo do contrato.",
+     "gatilho": "Classificação de papéis concluída",
+     "entregas": "Campo de papéis e escopo preenchido e com histórico",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Reavaliar os papéis dos parceiros a cada trimestre",
+     "descricao": "Revisitar cada papel, porque um complementador pode virar concorrente com o tempo. Liga-se ao teste de inversão de valor do framework de arquitetura de valor.",
+     "gatilho": "Revisão trimestral de níveis",
+     "entregas": "Lista de papéis alterados, decisões de escopo e ajuste de nível",
+     "dono": "Gerente de Parcerias; decisão de mudança de escopo com o Diretor"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Organizar a gestão do funil por categoria e papel, além de etapa",
+     "descricao": "Em vez de um quadro por processo com um cartão por parceiro, a visão principal passa a ser a Value Net por categoria (ERP, CRM, MES, SST, ESG, BPM, automação, entidades), com os parceiros como membros de cada célula. Detalhado na seção de excesso de kanbans.",
+     "gatilho": "Desenho do portal e início do funil",
+     "entregas": "Visão por categoria com contagem de parceiros por papel e por etapa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Cobertura de papéis da rede de valor",
+     "descricao": "Percentual de parceiros ativos e candidatos em conversa com ficha de papéis revisada nos últimos 90 dias. Meta próxima de 100 por cento.",
+     "gatilho": "Cálculo mensal",
+     "entregas": "Indicador no painel do programa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Alternativas por categoria",
+     "descricao": "Número de categorias com dois ou mais fornecedores parceiros que concorrem entre si; mede a capacidade de oferecer alternativas na Prateleira.",
+     "gatilho": "Cálculo mensal",
+     "entregas": "Indicador no painel do programa e meta por categoria",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Cruz com a Wise ao centro. Em cima, as indústrias (clientes). Embaixo, os fornecedores de acesso (parceiros, entidades, equipe). À esquerda, os concorrentes (outras consultorias e programas de canais dos grandes ERPs). À direita, os complementadores (software e entidades). Setas de serviço para cima e setas de dinheiro para baixo. Parceiros com mais de um papel desenhados com contorno duplo e ligados por linhas pontilhadas aos lados em que aparecem.",
+   "citacoes": [
+    {
+     "trecho": "Customers, suppliers, and competitors. And one more category: people who provide complements.",
+     "pagina": "p. 29"
+    },
+    {
+     "trecho": "A player is your complementor if customers value your product more when they have the other player’s product than when they have your product alone.",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "The right way to identify your competitors is, again, to put yourself in the customers’ shoes.",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "It’s counterproductive to typecast someone as just a customer or just a supplier or just a competitor or just a complementor.",
+     "pagina": "p. 41"
+    },
+    {
+     "trecho": "There’s a bias toward seeing every new player as a competitive threat.",
+     "pagina": "p. 44"
+    },
+    {
+     "trecho": "There is a duality in every relationship",
+     "pagina": "p. 49"
+    }
+   ]
+  },
+  {
+   "nome": "PARTS (Players, Added values, Rules, Tactics, Scope: jogadores, valores adicionados, regras, táticas e escopo) e a alavanca Players",
+   "livro": "co-opetition",
+   "paginas": "p. 73 a 77; p. 78 a 111; p. 252 a 254",
+   "componentes": [
+    {
+     "nome": "Players (jogadores)",
+     "descricao": "Quem está no jogo e em que papéis (a Value Net). Entrar no jogo muda o jogo, e quem não pensa nisso entra num jogo diferente do que viu."
+    },
+    {
+     "nome": "Added values (valores adicionados)",
+     "descricao": "O que cada jogador traz: o bolo com ele menos o bolo sem ele. É a principal fonte de poder."
+    },
+    {
+     "nome": "Rules (regras)",
+     "descricao": "Costume, contrato e lei que estruturam a negociação. Pequenas cláusulas mudam muito o resultado."
+    },
+    {
+     "nome": "Tactics (táticas)",
+     "descricao": "Instrumentos para moldar percepções, porque o jogo é o que os jogadores acham que ele é."
+    },
+    {
+     "nome": "Scope (escopo)",
+     "descricao": "Fronteiras que as pessoas desenham em volta de um jogo e as ligações entre jogos. Mudar fronteiras muda o jogo."
+    },
+    {
+     "nome": "Cui bono (quem ganha)",
+     "descricao": "Antes de entrar, ou de aceitar alguém, perguntar quem ganha com a entrada e se o beneficiário pagaria por ela. A BellSouth negociou pagamento para entrar e para sair de uma disputa de compra; Holland Sweetener e Norfolk Southern entraram sem negociar e outros lucraram à custa deles."
+    },
+    {
+     "nome": "Pagar para jogar",
+     "descricao": "Competição tem valor para o comprador. Oferecer lance, preço ou concorrência de graça transfere valor a quem compra. Se a participação importa ao cliente, deve gerar compensação; se não importa, é melhor reconsiderar o lance."
+    },
+    {
+     "nome": "Trazer jogadores",
+     "descricao": "Trazer clientes reduz o valor adicionado de cada um. Trazer complementadores aumenta o seu: formar coalizão de compra em nome dos clientes, pagar complementadores para jogar, ser o próprio complementador. Trazer competidores: licenciar, criar segunda fonte, estimular concorrência interna."
+    },
+    {
+     "nome": "Checklist para mudar o jogo",
+     "descricao": "Perguntas de autodiagnóstico por letra do PARTS (quem está na Value Net, qual o meu valor adicionado, quais regras me ajudam, como os outros percebem o jogo, quais jogos estão ligados ao meu)."
+    }
+   ],
+   "logica": "PARTS decompõe qualquer situação estratégica em cinco alavancas e afirma que mudar uma delas muda o jogo todo. O ganho para a gestão é sistemático: em vez de buscar boas ideias ao acaso, percorre-se as cinco alavancas e nenhuma é esquecida. A alavanca Players traz uma lição prática: entrar altera o jogo, e quem não pergunta quem ganha com a própria entrada paga para jogar enquanto outros lucram. Como a competição tem valor para quem compra, oferecê-la de graça transfere valor ao comprador. Trazer mais clientes e mais complementadores aumenta o bolo e reduz o poder individual de cada um.",
+   "aplicacao_wise": "A Prateleira de RFP é, nos termos do livro, uma coalizão de compra: a Wise reúne fornecedores em nome da indústria e negocia condições melhores. O fornecedor que entra num RFP traz uma competição que a indústria valoriza, então a Wise deve pedir contrapartida (destaque, ação conjunta, presença no evento, condição comercial para a indústria) e não colocar parceiros em RFP de graça. Manter dois ou três fornecedores por categoria vem dessa lógica: com muitos concorrentes nenhum tem valor adicionado alto e a indústria negocia melhor. Antes de aprovar cada parceiro, a ficha PARTS é preenchida e a pergunta quem ganha é respondida para indústria, Wise, entidade e concorrentes do parceiro. No Base Ativa, reunir no mesmo evento parceiros que competem entre si segue o princípio de trazer jogadores para aumentar o bolo antes de dividir a demanda (conexão feita por nós, o livro não trata de eventos). O ciclo PARTS vira rito trimestral por categoria.",
+   "impacto_modelo_de_negocio": "A Prateleira de RFP deixa de ser vitrine gratuita e passa a ter preço em contrapartida. O programa assume o papel de coalizão de compra da indústria, o que cria um benefício para a carteira do grupo (condições negociadas) e uma moeda de troca para negociar com fornecedores. O recrutamento deixa de ser porta aberta e vira seleção por valor adicionado e por quem ganha com a entrada de cada parceiro.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Preencher a ficha PARTS do candidato",
+     "descricao": "Ficha com cinco blocos: jogadores (Value Net), valor adicionado esperado, regras que valerão, táticas de sinalização exigidas e escopo com ligações a outros jogos. É o documento único que circula entre Gerente de Parcerias e Diretor.",
+     "gatilho": "Candidato avança de conversa para proposta",
+     "entregas": "Ficha PARTS no portal, aprovada ou devolvida",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Responder quem ganha antes de aprovar a assinatura",
+     "descricao": "Listar quem ganha e quem perde com a entrada do parceiro (indústria, Wise, entidade, concorrentes do parceiro) e se o beneficiário pagaria para ele entrar.",
+     "gatilho": "Ficha PARTS completa",
+     "entregas": "Registro de beneficiários e decisão sobre contrapartida",
+     "dono": "Diretor decide; Gerente de Parcerias prepara"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar o painel de dois a três fornecedores por categoria da Prateleira",
+     "descricao": "Para cada categoria, reunir alternativas comparáveis que deem à indústria opção real; o cliente pode se recusar a avançar com uma única opção.",
+     "gatilho": "Categoria com pedido de RFP ou meta de lançamento",
+     "entregas": "Painel por categoria com alternativas e critérios de comparação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Negociar contrapartida pela entrada em RFP",
+     "descricao": "Medir o quanto a participação do fornecedor importa para a indústria; se importa, pedir contrapartida; se não, reconsiderar o convite.",
+     "gatilho": "Parceiro indicado para participar de um RFP",
+     "entregas": "Contrapartida acordada e registrada (ação conjunta, destaque, condição comercial)",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Apresentar à indústria as condições negociadas pela coalizão",
+     "descricao": "Levar ao cliente do grupo as condições obtidas com o painel de fornecedores (prazo, implantação, preço) como benefício de pertencer à carteira.",
+     "gatilho": "RFP aberto na indústria",
+     "entregas": "Pacote de condições negociadas entregue ao cliente",
+     "dono": "Gerente de Parcerias; execução pelo consultor do grupo"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão PARTS trimestral por categoria",
+     "descricao": "Rodar as cinco alavancas por categoria com o checklist do livro: quais regras ajudam, quais atrapalham, quais percepções preservar, quais ligações entre jogos mudaram.",
+     "gatilho": "Fim de cada trimestre",
+     "entregas": "Ata PARTS por categoria com até três decisões",
+     "dono": "Gerente de Parcerias com o Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Comitê de assinatura com Gerente de Parcerias e Diretor",
+     "descricao": "Duas pessoas decidem cada assinatura com base na ficha PARTS, evitando aprovações por simpatia ou pela pressão da conversa em curso.",
+     "gatilho": "Ficha PARTS pronta para decisão",
+     "entregas": "Decisão registrada (aprovar, devolver, recusar) com motivo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Contrapartida obtida por RFP com entrada de fornecedor",
+     "descricao": "Valor ou equivalente em ações obtido por RFP em que houve entrada de fornecedor parceiro; mostra se a competição está sendo cobrada.",
+     "gatilho": "Fechamento de cada RFP",
+     "entregas": "Indicador por RFP e média por trimestre",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Pentágono com as letras P, A, R, T e S nos vértices e a ficha do candidato no centro. Ao lado, um funil da Prateleira: indústria no topo, painel de dois a três fornecedores abaixo e uma seta de contrapartida voltando dos fornecedores para a Wise.",
+   "citacoes": [
+    {
+     "trecho": "Change one of the PARTS, and you change the whole.",
+     "pagina": "p. 76"
+    },
+    {
+     "trecho": "PARTS is the way to understand what’s going on in any game.",
+     "pagina": "p. 74"
+    },
+    {
+     "trecho": "The reason is that anytime you enter a game, you change it.",
+     "pagina": "p. 78"
+    },
+    {
+     "trecho": "A prospective player should always ask Cicero’s question: Cui bono? Who stands to gain?",
+     "pagina": "p. 90"
+    },
+    {
+     "trecho": "Competition is valuable. Don’t give it away. Get paid to play.",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "So you want as many complementors as possible in the game competing with one another.",
+     "pagina": "p. 104"
+    }
+   ]
+  },
+  {
+   "nome": "Added Values (Valores adicionados) e valor adicionado da relação: lealdade e agradecimento",
+   "livro": "co-opetition",
+   "paginas": "p. 51 a 56; p. 117 a 120; p. 133 a 145",
+   "componentes": [
+    {
+     "nome": "Definição de valor adicionado",
+     "descricao": "Tamanho do bolo com você no jogo menos o tamanho do bolo que os outros criam sem você. Mede o que se traz e, portanto, o poder de negociação."
+    },
+    {
+     "nome": "Teto de captura",
+     "descricao": "Dificilmente se obtém mais do que o valor adicionado: quem pede mais do que traz deixa aos outros um bolo menor do que eles criariam sem ele, e eles fecham acordo entre si."
+    },
+    {
+     "nome": "Jogo das cartas e escassez",
+     "descricao": "Com cartas simétricas, a divisão tende a 50 e 50. Quando faltam cartas de um lado, os jogadores do outro lado perdem valor adicionado e quem controla a escassez captura mais. A Nintendo usou a escassez e limitou o valor adicionado de varejistas, desenvolvedores e fornecedores."
+    },
+    {
+     "nome": "Limitar o valor adicionado dos outros",
+     "descricao": "Nenhum desenvolvedor pôde ficar poderoso demais porque a Nintendo restringiu o número de títulos por ano e produzia jogos próprios. Equivale a evitar dependência de um único complementador."
+    },
+    {
+     "nome": "Construir valor adicionado",
+     "descricao": "Trade-offs: aumentar a disposição a pagar mais que o custo. Trade-ons: melhorar a qualidade de um jeito que reduz o custo (e vice-versa), muitas vezes por círculo virtuoso."
+    },
+    {
+     "nome": "Valor adicionado da relação",
+     "descricao": "Quando muitos oferecem o mesmo, o que sustenta margem é a relação. Programas de lealdade (milhas) criam relação do nada e premiam mais quem mais vale."
+    },
+    {
+     "nome": "Nove dicas para agradecer",
+     "descricao": "Em espécie e não em dinheiro; o melhor agradecimento ao melhor cliente; de modo que construa seu negócio; nem cedo nem tarde demais; avisar que vai agradecer; competir por lealdade; deixar concorrentes terem clientes leais; agradecer mesmo com monopólio; agradecer a fornecedores como a clientes."
+    },
+    {
+     "nome": "Programa de fornecedor frequente",
+     "descricao": "A rede é simétrica: todo programa para clientes tem espelho para fornecedores. Quem alimenta o seu negócio com recursos recorrentes merece reconhecimento recorrente."
+    }
+   ],
+   "logica": "O poder num jogo vem do valor adicionado, e não do tamanho do bolo nem de justiça: quem exige mais do que traz é substituível, e quem é essencial captura mais. Como concorrentes tendem a copiar produto, preço e qualidade, o valor adicionado de oferta erode, e o que protege é a relação que torna a escolha repetida. Programas de lealdade funcionam porque agradecem com o próprio produto, que custa pouco a quem dá e vale mais a quem recebe, e porque dão mais a quem mais traz. O mesmo vale do lado do fornecedor. Gerenciar valor adicionado também significa evitar a dependência de um único jogador, mantendo os outros simétricos.",
+   "aplicacao_wise": "Dois cálculos passam a existir no portal. O valor adicionado do parceiro para a Wise: receita esperada do grupo com ele menos a que o grupo geraria sem ele (indicações que só existem por ele, acesso a carteira, palco de evento); define o nível A, B ou C e dá o teto do que ele deve capturar, de modo que os 3 a 5 por cento em LTV fiquem dentro dessa conta. O valor adicionado da Wise para o parceiro: receita do parceiro atribuível ao Base Ativa, à Prateleira de RFP e ao evento; é o argumento de venda do programa. Os níveis viram programa de fornecedor frequente com reconhecimento em espécie (palco no evento, mentoria, certificação, selo, prioridade na Prateleira), tabela divulgada antes e primeiro agradecimento alinhado à ativação, isto é, à primeira indicação em ICP que virou reunião. Limitar a participação de um parceiro no total de indicações segue a lógica da Nintendo com os desenvolvedores (aplicação nossa).",
+   "impacto_modelo_de_negocio": "A comissão deixa de ser o único mecanismo de remuneração. O modelo passa a ter duas camadas: comissão contratual (40 por cento da primeira mensalidade ao parceiro, 6 por cento do projeto da Swallow) calibrada para ficar abaixo do valor adicionado do parceiro, e retorno em espécie por nível, que o parceiro valoriza mais do que custa à Wise. A relação passa a ser o ativo defendido, de modo que a lealdade ao programa sobreviva à cópia do produto da Wise.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Calcular o valor adicionado do parceiro",
+     "descricao": "Estimar, por parceiro, a diferença entre o resultado do grupo com e sem ele: indicações que só existem por ele, acesso à carteira, presença em evento. Base do nível e do teto de comissão.",
+     "gatilho": "Fim do onboarding de 90 dias e cada revisão trimestral",
+     "entregas": "Valor adicionado do parceiro registrado, com série trimestral",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Calcular o valor adicionado da Wise para o parceiro",
+     "descricao": "Medir a receita do parceiro atribuível a Base Ativa, Prateleira de RFP, evento e indicações conjuntas; sustenta o argumento de venda e a cobrança de contrapartida.",
+     "gatilho": "Fim do ciclo de 12 semanas de Base Ativa",
+     "entregas": "Relatório de valor entregue ao parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Definir nível A, B ou C pelo valor adicionado e não pelo tamanho da categoria",
+     "descricao": "O nível passa a ser função do valor adicionado individual; a revisão trimestral sobe ou desce o nível conforme a série.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Nível atualizado, comunicado ao parceiro e registrado",
+     "dono": "Gerente de Parcerias; Diretor valida"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Operar o programa de lealdade em espécie",
+     "descricao": "Catálogo de reconhecimentos por nível com custo estimado para a Wise e regra de liberação (palco, mentoria, selo, prioridade na Prateleira).",
+     "gatilho": "Parceiro atinge marco de nível",
+     "entregas": "Reconhecimento entregue e registrado no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Anunciar o agradecimento antes de entregá-lo",
+     "descricao": "Mostrar ao parceiro, no onboarding, a tabela de reconhecimentos e os marcos que os destravam, para que ele permaneça até o momento de recebê-los.",
+     "gatilho": "Início do onboarding",
+     "entregas": "Tabela visível no portal e na comunidade do parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Alinhar o primeiro reconhecimento com a ativação",
+     "descricao": "Entregar o primeiro agradecimento junto à primeira indicação em ICP que virou reunião; antes disso funciona como desconto, e muito depois perde sentido.",
+     "gatilho": "Ativação do parceiro",
+     "entregas": "Primeiro reconhecimento entregue",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Acompanhar a concentração de indicações por parceiro",
+     "descricao": "Medir a participação de cada parceiro no total e propor diversificação ou teto quando um passa de um limite combinado. Aplicação nossa da lógica de manter complementadores simétricos.",
+     "gatilho": "Fechamento mensal",
+     "entregas": "Alerta de concentração por parceiro e por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Valor adicionado do parceiro por nível",
+     "descricao": "Mediana do valor adicionado dos parceiros A, B e C; confirma se a segmentação reflete valor e se a comissão cabe dentro dele.",
+     "gatilho": "Cálculo trimestral",
+     "entregas": "Indicador no painel de níveis",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Razão entre valor percebido e custo do reconhecimento",
+     "descricao": "Pergunta curta ao parceiro (valor percebido do reconhecimento) dividida pelo custo estimado para a Wise; deve ficar acima de 1 em todo nível.",
+     "gatilho": "Semestral",
+     "entregas": "Indicador por reconhecimento",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Dois círculos sobrepostos: o bolo com o parceiro e o bolo sem o parceiro; a diferença sombreada é o valor adicionado. Embaixo, uma escada A, B e C com degraus de reconhecimento em espécie e a data de cada marco, com o primeiro degrau ligado ao marco de ativação.",
+   "citacoes": [
+    {
+     "trecho": "Take the size of the pie when you and everyone else are in the game; then see how big a pie the other players can create without you.",
+     "pagina": "p. 55"
+    },
+    {
+     "trecho": "It’s hard to get more from a game than your added value.",
+     "pagina": "p. 55"
+    },
+    {
+     "trecho": "Nintendo’s strategy resulted in a high added value for itself and a low added value for everyone else.",
+     "pagina": "p. 120"
+    },
+    {
+     "trecho": "Say thank you. Create loyalty by rewarding it.",
+     "pagina": "p. 140"
+    },
+    {
+     "trecho": "Save the best thank-you for your best customers.",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "If you’re planning to say thank you, you should let your customers know in advance so they’ll stick around for it.",
+     "pagina": "p. 142"
+    }
+   ]
+  },
+  {
+   "nome": "Rules (Regras): contratos com clientes e fornecedores",
+   "livro": "co-opetition",
+   "paginas": "p. 59 a 61; p. 159 a 177; p. 191 a 193; p. 239 a 241",
+   "componentes": [
+    {
+     "nome": "Regra como fonte de poder",
+     "descricao": "Regras vêm de costume, contrato e lei e mudam o equilíbrio de poder tanto quanto o valor adicionado. Uma única cláusula pode inclinar a negociação. Quem estabelece as regras ganha a batalha anterior à batalha."
+    },
+    {
+     "nome": "Cláusula de cliente mais favorecido (MFC)",
+     "descricao": "Garante ao cliente o melhor preço que a empresa dá a qualquer um. O efeito contraintuitivo: cada concessão a um cliente custa duas vezes, então o vendedor negocia de modo mais duro com todos, e o cliente protegido acaba com um acordo pior. Atar as próprias mãos fortalece a posição."
+    },
+    {
+     "nome": "Cláusula de igualar a concorrência (MCC, last look)",
+     "descricao": "Dá à empresa a opção de manter o cliente igualando qualquer oferta rival. Reduz o incentivo de rivais a ofertar e tira o palpite do lance. O espelho do lado do comprador é o direito de preferência."
+    },
+    {
+     "nome": "Contrato take-or-pay",
+     "descricao": "O comprador paga ao fornecedor por um volume mínimo mesmo sem retirar. Reduz o risco do fornecedor (que em troca dá preço menor) e torna certa a retaliação contra rivais, o que dissuade ataques."
+    },
+    {
+     "nome": "Duração do contrato como escopo",
+     "descricao": "Contrato longo transforma vários jogos curtos em um jogo só e faz o outro lado competir com mais força. A regra do livro: quem está do lado curto do mercado (lado escasso, com mais valor adicionado) deve ir para contratos longos, e quem está do lado abundante deve preferir contratos curtos. Contratos longos são incompletos e mais difíceis de aplicar."
+    },
+    {
+     "nome": "Regras mudam e podem ser derrubadas",
+     "descricao": "Regra vale enquanto o poder que a sustenta existe. Quem perde valor adicionado perde o poder de impô-la, e o outro lado pode reescrevê-la ou ignorá-la. É arriscado basear a estratégia em regra que não se controla."
+    }
+   ],
+   "logica": "Regras estruturam a negociação e por isso movem o poder, muitas vezes mais do que o preço em si. O MFC mostra o mecanismo: ao prometer o melhor preço a um, o vendedor passa a ter mais a perder em cada concessão e se torna negociador mais firme com todos. Regras escritas antes da negociação evitam decidir caso a caso sob pressão e dão previsibilidade ao outro lado. Mas toda regra depende do poder que a sustenta, então convém escrevê-las quando se tem valor adicionado e revisá-las quando o poder muda. O lado escasso do mercado deve preferir contratos longos e o lado abundante contratos curtos.",
+   "aplicacao_wise": "O contrato de parceria vira um livro de seis regras. Primeiro, tabela única de comissões e contrapartidas por nível, divulgada antes e sem exceção por parceiro: o mecanismo do MFC mostra que ficar com as mãos atadas dá mais força à Wise em cada negociação (aplicação nossa, o livro trata de preço ao cliente). Segundo, regra de escopo por papel: onde o parceiro concorre (consultoria, implantação), dizer quem indica quem. Terceiro, proteção de 180 dias com registro datado e prova de origem. Quarto, direito de último olhar do fornecedor parceiro quando a indústria já tem fornecedor incumbente (aplicação nossa do MCC). Quinto, vigência de 12 meses com revisão trimestral de nível; se a Wise mantiver poucas vagas por categoria ela passa a ser o lado escasso e contratos mais longos a favorecem, mas enquanto não houver prova de valor vale o contrário, e a revisão trimestral protege a relação (inferência a validar). Sexto, saída formal, com o destino das indicações em andamento. As regras entram nos primeiros contratos, quando a Wise ainda pode escrevê-las, e exclusividade, proteção e preço único passam pelo jurídico.",
+   "impacto_modelo_de_negocio": "O contrato passa de formulário de adesão a conjunto de regras que reconfiguram a negociação: tabela única, escopo por papel, último olhar, proteção de 180 dias e saída formal. O programa vira produto com regras públicas, o que reduz o custo de negociar com cada parceiro, protege a Wise da erosão por exceções e dá previsibilidade ao parceiro sobre o que ele pode capturar.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerir as regras do programa",
+     "descricao": "Livro de regras versionado com tabela de comissões, escopos, proteção de 180 dias, saída, último olhar e duração; cada regra tem dono, data de revisão e poder de exceção definido.",
+     "gatilho": "Antes do primeiro contrato e a cada revisão semestral",
+     "entregas": "Livro de regras e minuta de contrato derivada dele",
+     "dono": "Diretor aprova; Gerente de Parcerias mantém"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Redigir o contrato de parceria em duas camadas",
+     "descricao": "Camada de cooperação (o que se cria junto: Prateleira, evento, Base Ativa, ações conjuntas) e camada de competição (como se divide: comissão, escopo, proteção, saída).",
+     "gatilho": "Candidato aprovado no comitê de assinatura",
+     "entregas": "Contrato com cláusulas de escopo, proteção, tabela e saída",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Aplicar a tabela única e registrar pedidos de exceção",
+     "descricao": "Responder a pedidos de condição diferente com a regra padrão e registrar quem pediu o quê, para medir pressão e decidir revisões na reunião semestral e não na negociação.",
+     "gatilho": "Parceiro pede condição diferente",
+     "entregas": "Resposta padrão enviada e pedido registrado no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Definir a regra de escopo por papel e categoria",
+     "descricao": "Para cada escopo de sobreposição, decidir se o parceiro indica a Wise, se a Wise indica o parceiro ou se nenhum dos dois atua; vira cláusula.",
+     "gatilho": "Ficha de papéis concluída",
+     "entregas": "Cláusula de escopo no contrato",
+     "dono": "Gerente de Parcerias; Diretor decide casos novos"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar e provar a proteção de 180 dias",
+     "descricao": "Registro datado da indicação no portal, com prova de origem, janela de 180 dias e regra clara de quem recebe se a conversão ocorrer na janela.",
+     "gatilho": "Indicação registrada no portal",
+     "entregas": "Registro, prazo e regra de remuneração visíveis ao parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Submeter exclusividade, proteção e preço único à revisão jurídica",
+     "descricao": "Levar as cláusulas ao jurídico antes de assinar, porque leis e interpretações mudam por país.",
+     "gatilho": "Antes de cada nova minuta",
+     "entregas": "Parecer do jurídico anexado ao contrato",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Executar a saída formal do parceiro",
+     "descricao": "Rito de encerramento previsto em contrato: o que acontece com indicações em andamento, com a proteção de 180 dias e com materiais e acessos.",
+     "gatilho": "Pedido de desligamento ou decisão de desligar",
+     "entregas": "Termo de encerramento e lista de pendências resolvidas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão semestral das regras",
+     "descricao": "Perguntar quais regras ajudam, quais atrapalham, quem tem poder para derrubá-las e se o poder da Wise na negociação mudou; ajustar enquanto a Wise ainda pode escrever.",
+     "gatilho": "Semestre",
+     "entregas": "Livro de regras atualizado e comunicado",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Exceções concedidas à tabela",
+     "descricao": "Contagem de condições fora da tabela por trimestre; a meta é zero, e qualquer exceção exige decisão do Diretor.",
+     "gatilho": "Cálculo trimestral",
+     "entregas": "Indicador e lista das exceções",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Dois blocos lado a lado: cooperar para criar (Prateleira, evento, Base Ativa, ações conjuntas) e competir para dividir (tabela, escopo, proteção, saída). Abaixo, uma linha do tempo com contrato de 12 meses, revisão trimestral de nível e janela de 180 dias em cada indicação. Uma caixa lateral pergunta quem tem poder para mudar cada regra.",
+   "citacoes": [
+    {
+     "trecho": "A single clause can tilt the balance of power heavily toward you or against you.",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "The battle to establish the rules is the battle before the battle.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "A most-favored-customer clause (MFC) is a contractual arrangement between company and customer that guarantees the customer the best price the company gives to anyone.",
+     "pagina": "p. 161"
+    },
+    {
+     "trecho": "Even though Tarun is not in the room, his presence is felt in every negotiation.",
+     "pagina": "p. 162"
+    },
+    {
+     "trecho": "An MCC is a contractual arrangement between company and customer that gives the company an option to retain the customer’s business by meeting any rival bids.",
+     "pagina": "p. 168"
+    },
+    {
+     "trecho": "If you can’t control a rule, it’s risky to base your strategy on it.",
+     "pagina": "p. 193"
+    }
+   ]
+  },
+  {
+   "nome": "Tactics (Táticas: percepções e sinais) e Scope (Escopo: ligações entre jogos)",
+   "livro": "co-opetition",
+   "paginas": "p. 194 a 213; p. 226 a 229; p. 251",
+   "componentes": [
+    {
+     "nome": "Percepção é o jogo",
+     "descricao": "As pessoas agem pelo que percebem, e não pelo que é. O jogo é o que os jogadores coletivamente acham que ele é. Mudar percepções muda o jogo."
+    },
+    {
+     "nome": "Teste de credibilidade",
+     "descricao": "Quem tem os bens deve colocar o dinheiro onde está a boca: aceitar contrato por desempenho, oferecer garantia, dar teste gratuito, anunciar. O que não se faz também sinaliza. E deve-se pedir aos outros o mesmo teste."
+    },
+    {
+     "nome": "Sinais custosos",
+     "descricao": "Como a cauda do pavão, uma exibição cara só é viável a quem de fato tem o que alega. Gillette gastou 100 milhões de dólares no lançamento para mostrar que acreditava no produto."
+    },
+    {
+     "nome": "Preservar a neblina com intermediário neutro",
+     "descricao": "Settlement escrows: as duas partes dizem em segredo ao mediador o menor e o maior preço que aceitam; ele revela só se os preços se cruzam, sem expor nenhum dos lados. Permite negociar de boa fé sem entregar a posição."
+    },
+    {
+     "nome": "Ameaças melhor deixadas implícitas",
+     "descricao": "Uma ameaça explícita muda a relação para sempre (o gato fora do saco). O fornecedor que ameaçou cortar o comprador levou-o a buscar outra fonte."
+    },
+    {
+     "nome": "Nenhum jogo é uma ilha",
+     "descricao": "Todo jogo se liga a outros por jogadores comuns, por valor adicionado (complementos e canibalização), por regras (duração de contrato, MFC) e por táticas (ameaças e precedentes)."
+    },
+    {
+     "nome": "Precedente como ligação",
+     "descricao": "Como o jogador reage num jogo cria expectativa em outros: a guerra de preços da NutraSweet na Europa era um recado para quem pensasse em entrar nos Estados Unidos."
+    },
+    {
+     "nome": "Sempre há um jogo maior",
+     "descricao": "Todo jogo está dentro de um contexto maior, e é o poder no jogo maior que permite mover as fronteiras do menor."
+    }
+   ],
+   "logica": "O jogo de negócios é jogado numa neblina: o que as pessoas acham que vai acontecer determina o que elas fazem. Táticas são os instrumentos para levantar, preservar ou agitar essa neblina, e o teste de credibilidade diz que o único sinal confiável é o que custa caro a quem blefa. Intermediários neutros permitem trocar informação sensível revelando apenas o que importa para fechar o acordo. O escopo lembra que cada decisão, precedente ou ameaça se propaga para outros jogos que parecem separados. Quem desenha o escopo com cuidado vê canibalização, precedentes e jogos maiores antes de pagar o preço deles.",
+   "aplicacao_wise": "Sem parceiros assinados, a Wise precisa de credibilidade antes de ter prova. Aplicado de dentro para fora: a Wise coloca dinheiro onde está a boca (comissão por resultado, garantia de SLA de resposta às indicações, diagnóstico de carteira sem custo, evento como anúncio) e pede ao candidato o mesmo (primeira indicação como piloto, presença em evento, lista da carteira). O cruzamento de carteiras vira um settlement escrow: o portal, como intermediário neutro, compara as listas do parceiro e da Wise e revela apenas os clientes em comum, sem expor as listas completas (aplicação nossa da lógica da p. 211). Todo desvio da regra para o primeiro parceiro cria precedente para os seguintes, e por isso exceções devem ser decididas pelo Diretor e registradas. No escopo, a Wise mapeia onde ela e o parceiro jogam juntos (mesma indústria, outras consultorias, programas de canais dos grandes ERPs) e onde um novo serviço da Wise canibalizaria o parceiro. O desligamento do parceiro deve seguir rito previsto, nunca ameaça explícita no calor da conversa.",
+   "impacto_modelo_de_negocio": "O programa passa a se vender por sinais custosos e não por promessas: comissão por resultado, SLA de resposta e participação conjunta no evento são provas que a Wise dá, e a mesma exigência vale para o parceiro. O cruzamento de carteiras ganha estrutura de confiança (intermediário neutro) em vez de troca bilateral de listas. Precedentes e ligações entre jogos viram critério explícito de decisão.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Exigir demonstração custosa de compromisso antes de conceder nível",
+     "descricao": "Pedir ao candidato um sinal difícil de fingir: primeira indicação como piloto, presença em evento, lista da carteira, comissão por resultado. A Wise oferece o equivalente (garantia de resposta, diagnóstico sem custo).",
+     "gatilho": "Antes da assinatura ou de promoção de nível",
+     "entregas": "Prova de credibilidade registrada na ficha PARTS",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Publicar a garantia da Wise ao parceiro",
+     "descricao": "Compromisso explícito de SLA de resposta às indicações e de transparência de status, com consequência definida se for quebrado.",
+     "gatilho": "Antes do lançamento do programa e revisão semestral",
+     "entregas": "Texto de garantia no portal e na comunidade de WhatsApp",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Cruzar carteiras por intermediário neutro",
+     "descricao": "O portal compara as listas de clientes da Wise e do parceiro e devolve apenas os clientes em comum, sem expor as listas; análogo ao settlement escrow do livro.",
+     "gatilho": "Parceiro assina e envia lista da carteira",
+     "entregas": "Lista de clientes comuns e oportunidades derivadas",
+     "dono": "Gerente de Parcerias; execução pelo portal"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar precedentes do programa",
+     "descricao": "Toda decisão fora do padrão (exceção de comissão, escopo, prazo) é registrada como precedente e avaliada pelo efeito nos demais parceiros: a primeira exceção tende a virar regra.",
+     "gatilho": "Pedido de exceção ou decisão fora da tabela",
+     "entregas": "Registro de precedente com análise de efeitos em outros jogos",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear as ligações entre jogos do parceiro",
+     "descricao": "Para cada parceiro, listar em quais outros jogos ele e a Wise se encontram (mesma indústria, outras consultorias, programas de canais) e onde há canibalização.",
+     "gatilho": "Ficha PARTS em preenchimento e revisão trimestral",
+     "entregas": "Mapa de ligações por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Testar canibalização antes de lançar oferta nova da Wise",
+     "descricao": "Perguntar se o novo serviço reduz o valor adicionado de algum parceiro; se sim, aplicar o teste de reação do parceiro (framework de ego-system).",
+     "gatilho": "Proposta de novo serviço, pilar ou categoria",
+     "entregas": "Parecer de canibalização anexado à decisão",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão semestral do jogo maior",
+     "descricao": "Rever em que jogos maiores o programa toca (a transformação comercial da indústria, o mercado de cada categoria) e se as fronteiras do programa ainda fazem sentido.",
+     "gatilho": "Semestre",
+     "entregas": "Nota de escopo com alterações propostas",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Provas de credibilidade entregues por parceiro",
+     "descricao": "Contagem de sinais custosos entregues no onboarding (indicação piloto, evento, lista da carteira); parceiro sem nenhuma não passa para nível acima de C.",
+     "gatilho": "Fim do onboarding de 90 dias",
+     "entregas": "Indicador por parceiro no portal",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Duas metades. À esquerda, o portal ao centro entre a carteira da Wise e a carteira do parceiro, com apenas a interseção saindo para o outro lado. À direita, círculos de jogos ligados por jogadores comuns (a indústria) e setas de precedente do primeiro contrato para os seguintes.",
+   "citacoes": [
+    {
+     "trecho": "Change people’s perceptions, and you change the game.",
+     "pagina": "p. 195"
+    },
+    {
+     "trecho": "If you have the goods, put your money where your mouth is",
+     "pagina": "p. 205"
+    },
+    {
+     "trecho": "Ask other people to demonstrate their credibility to you",
+     "pagina": "p. 206"
+    },
+    {
+     "trecho": "Settlement escrows preserve the fog.",
+     "pagina": "p. 211"
+    },
+    {
+     "trecho": "The links aren’t ironclad: you can create new links between games or sever existing ones.",
+     "pagina": "p. 227"
+    },
+    {
+     "trecho": "There’s always a LARGER game.",
+     "pagina": "p. 251"
+    }
+   ]
+  },
+  {
+   "nome": "Value Architecture (arquitetura de valor) e Value Inversion (inversão de valor)",
+   "livro": "winning-the-right-game",
+   "paginas": "p. 26 a 29; p. 33 a 45; p. 52 a 60",
+   "componentes": [
+    {
+     "nome": "Insight, proposta de valor, arquitetura e atividades",
+     "descricao": "Quatro níveis em sequência: o insight sobre o consumidor final, a proposta de valor que responde a ele, a arquitetura de valor que decompõe a proposta em elementos, e só então as atividades, tecnologias e parceiros (onde ficam cadeias de valor e mapas de ecossistema)."
+    },
+    {
+     "nome": "Elementos de valor",
+     "descricao": "Rótulos abstratos que são os blocos da proposta (no exemplo da Kodak: capturar, produzir, ver e compartilhar a imagem). Não são etapas de uma cadeia nem atividades, e não precisam corresponder ao que o cliente diz querer."
+    },
+    {
+     "nome": "Arquitetura não é modelo de negócio",
+     "descricao": "O modelo de negócio diz como a empresa é paga. A arquitetura de valor diz como se constrói o valor que sustenta a disposição a pagar. A mesma proposta pode ter arquiteturas diferentes, avaliadas como úteis ou inúteis e não como certas ou erradas."
+    },
+    {
+     "nome": "Setas verticais e horizontais",
+     "descricao": "Dentro do elemento (verticais) mudam atividades e tecnologias, o que é disrupção clássica. Entre elementos (horizontais) uma mudança num elemento altera o jogo de outro, o que é disrupção de ecossistema."
+    },
+    {
+     "nome": "Três trajetórias do complementador",
+     "descricao": "Sinergia contínua (quanto melhor o parceiro, melhor para o foco), maturidade (melhorias deixam de importar) e inversão de valor (depois de certo ponto, a melhoria do parceiro passa a destruir o valor do foco, de modo que o parceiro vira ameaça sem mudar de intenção)."
+    },
+    {
+     "nome": "Teste dos dez",
+     "descricao": "Pergunta para surfar os 'conhecidos desconhecidos': e se um parceiro ficar dez vezes melhor e dez vezes mais barato? Se isso deixa a empresa nervosa, é preciso continuar investigando."
+    },
+    {
+     "nome": "Respostas à ruptura",
+     "descricao": "Especializar-se no que continua a se beneficiar das melhorias, estender (levar uma atividade lateral ao centro), diversificar e buscar um nicho defensável."
+    },
+    {
+     "nome": "Modificar a arquitetura recrutando e requalificando parceiros",
+     "descricao": "A defesa da Wayfair contra a Amazon foi aprimorar um elemento (descoberta) e acrescentar outro (deliberação), apoiando-se na especialização e em requalificar fornecedores (consultoria para melhorar a expedição deles)."
+    }
+   ],
+   "logica": "Quem pensa o negócio por atividades e tecnologias fica cego para o que acontece fora da sua caixa. A arquitetura de valor dá uma gramática de elementos que independe de quem os executa, e por isso revela mudanças que cruzam fronteiras de indústria. O ponto mais incômodo é que a ameaça nasce como cocriador de valor: o parceiro útil de hoje pode, ao melhorar, anular o valor do seu núcleo. Como a inversão é gradual e invisível às ferramentas tradicionais, o teste dos dez e a revisão por elemento servem de alarme. Defender-se então significa mexer na arquitetura, e não apenas executar melhor, o que quase sempre exige recrutar ou requalificar parceiros.",
+   "aplicacao_wise": "Escrever a proposta de valor do programa a partir da indústria, o consumidor final escolhido de propósito (proposta a validar com o patrocinador): decidir e implantar com segurança soluções de gestão comercial, com fornecedores e consultoria que atuam juntos. Elementos propostos, em rótulos abstratos (inferência nossa): Descobrir (saber quem resolve o quê), Comparar e decidir (alternativas comparáveis com credenciais), Implantar de forma integrada, Pertencer e aprender (comunidade e evento) e Confiar (regras e dados). Pilares e parceiros passam a ser maneiras de preencher elementos: Prateleira de RFP preenche Comparar e decidir, Base Ativa e evento preenchem Pertencer e aprender, link exclusivo e ações conjuntas preenchem Implantar, entidades e feiras preenchem Descobrir. O teste dos dez vale por categoria: se o módulo comercial do ERP ficar dez vezes melhor e mais barato, o que sobra para a consultoria? Se a Expo+Indústria criar o seu próprio diretório de fornecedores, o que sobra para a Prateleira? As respostas definem onde a Wise especializa, estende ou diversifica.",
+   "impacto_modelo_de_negocio": "O programa é redefinido pelos elementos de valor entregues à indústria, e não pelos pilares internos. Cada pilar passa a ser uma maneira de entregar elementos, e novos pilares só entram quando um elemento tem cobertura baixa. Parceiros são mapeados nos elementos que preenchem, e o valor do programa mede-se pela cobertura dos elementos e não pela soma de cartões em funis separados.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Definir e manter a arquitetura de valor do programa",
+     "descricao": "Escrever a proposta de valor para a indústria, decompor em cinco a sete elementos, mapear que pilar e que parceiro sustenta cada elemento e revisar quando um elemento muda. É o macroprocesso que organiza todos os outros.",
+     "gatilho": "Antes do primeiro parceiro e a cada semestre",
+     "entregas": "Mapa de arquitetura (elementos, ligações entre elementos e parceiros) versionado no portal",
+     "dono": "Diretor decide; Gerente de Parcerias mantém"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear parceiros e pilares nos elementos de valor",
+     "descricao": "Para cada parceiro ativo, marcar os elementos em que contribui e o grau de prontidão (não iniciado, em preparo, ativo, em risco). Vira a visão principal do portal no lugar de quadros por processo.",
+     "gatilho": "Assinatura do parceiro e fechamento mensal",
+     "entregas": "Matriz parceiro por elemento com estado por célula",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Rodar o teste de inversão de valor por categoria",
+     "descricao": "Para cada categoria de complementador, perguntar o que acontece com a proposta se o parceiro ficar dez vezes melhor e custar dez vezes menos; classificar em sinergia contínua, maturidade ou inversão e definir a resposta (especializar, estender, diversificar, nicho).",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Classificação por categoria e plano de resposta",
+     "dono": "Gerente de Parcerias; Diretor decide a resposta"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Reforçar um elemento recrutando ou qualificando parceiros",
+     "descricao": "Quando um elemento tem cobertura baixa, recrutar parceiros que o fortaleçam ou qualificar os atuais por trilhas, como a Wayfair ensinando seus fornecedores a melhorar a expedição.",
+     "gatilho": "Elemento com cobertura abaixo da meta na matriz",
+     "entregas": "Plano de reforço do elemento com parceiros e trilhas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Monitorar sinais fracos de inversão nas categorias",
+     "descricao": "Acompanhar lançamentos de parceiros (módulos de gestão comercial em ERPs, diretórios de fornecedores de feiras, oferta de consultoria por parceiros) e registrar no portal.",
+     "gatilho": "Rotina mensal e alerta por notícia",
+     "entregas": "Registro de sinais por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Ordenar os processos operacionais por elemento de valor",
+     "descricao": "Cada processo operacional (funil, onboarding, indicações, ações conjuntas, comissões) é ligado ao elemento que sustenta e só se justifica enquanto o sustenta. Processos que não sustentam elemento algum são questionados.",
+     "gatilho": "Redesenho do programa",
+     "entregas": "Matriz processo por elemento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão semestral da arquitetura de valor",
+     "descricao": "Rever a proposta, os elementos e as ligações entre elementos à luz de sinais de inversão, de novas categorias e de falhas de cobertura.",
+     "gatilho": "Semestre",
+     "entregas": "Ata e nova versão do mapa",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Cobertura dos elementos de valor",
+     "descricao": "Percentual de elementos com ao menos dois parceiros em estado 'ativo' na matriz; mede se a arquitetura de valor está de fato entregue.",
+     "gatilho": "Cálculo mensal",
+     "entregas": "Indicador no painel do programa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Categorias em risco de inversão",
+     "descricao": "Número de categorias classificadas como inversão ou maturidade no último teste; acompanha a exposição do programa ao risco de os complementadores virarem substitutos.",
+     "gatilho": "Cálculo trimestral",
+     "entregas": "Indicador e lista de categorias",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Caixa larga no topo com a proposta de valor para a indústria. Abaixo, uma fileira de cinco a sete caixas (elementos de valor). Setas verticais descem de cada elemento para atividades e parceiros. Arcos horizontais ligam elementos entre si, com cor de alerta nos arcos em que há risco de inversão. Abaixo, a matriz parceiro por elemento com as células coloridas por estado.",
+   "citacoes": [
+    {
+     "trecho": "A value architecture is defined by the elements that are brought together to create the value proposition.",
+     "pagina": "p. 26"
+    },
+    {
+     "trecho": "Where a business model is focused on how you operate to get paid by a customer, a value architecture is focused on how you construct the value that underlies your customers’ willingness to pay for your offer",
+     "pagina": "p. 28"
+    },
+    {
+     "trecho": "The value elements of the architecture are not steps in a value chain, an activity system, or a value stream.",
+     "pagina": "p. 28"
+    },
+    {
+     "trecho": "Ecosystem disruption arises when a change in one element of value changes the game in another element.",
+     "pagina": "p. 33"
+    },
+    {
+     "trecho": "The key difference between classic disruption and ecosystem disruption is that the source of the threat does not start as an opponent, but as a benign cocreator of value.",
+     "pagina": "p. 36"
+    },
+    {
+     "trecho": "How would my value architecture be impacted if a given partner presented a tenfold increase in performance and a tenfold decrease in price?",
+     "pagina": "p. 41"
+    }
+   ]
+  },
+  {
+   "nome": "Ecosystem Construction (construção de ecossistema): MVE, expansão em etapas, carryover, prontidão e tempo",
+   "livro": "winning-the-right-game",
+   "paginas": "p. 83 a 94; p. 104 a 107; p. 114 a 126; p. 133 a 136",
+   "componentes": [
+    {
+     "nome": "MVE (Minimum Viable Ecosystem, ecossistema mínimo viável)",
+     "descricao": "A menor configuração de atividades que cria evidência suficiente de geração de valor para atrair novos parceiros. O papel do cliente nessa etapa não é gerar lucro, e sim gerar evidência que leve o parceiro a se comprometer."
+    },
+    {
+     "nome": "MVE versus MVP",
+     "descricao": "O MVP testa a demanda do cliente com um protótipo barato. O MVE alinha os parceiros de que se precisa para entregar a proposta. Com um MVP os parceiros cocriam, mas não se alinham, e cobram liderança."
+    },
+    {
+     "nome": "Expansão em etapas (staged expansion)",
+     "descricao": "A ordem de entrada dos parceiros precisa ser explícita: o parceiro B entra antes do C porque sua presença facilita trazer o C. Cada parceiro entra com dois objetivos: construir a arquitetura e abrir caminho para o próximo. O papel dos primeiros não é gerar lucro."
+    },
+    {
+     "nome": "Carryover (transbordo de ecossistema)",
+     "descricao": "Parceiros e relações construídos num ecossistema ajudam a iniciar o MVE de outro. No caso da ASSA ABLOY, relações com distribuidores e um pequeno grupo de chaveiros que aceitaram investir em novas habilidades em troca de status certificado e promessa de indicações."
+    },
+    {
+     "nome": "Prontidão do ecossistema (desafios de emergência)",
+     "descricao": "Mesmo quando a sua peça está pronta, falta pronto o resto: co-inovação (o que mais precisa ser criado) e adoção (quem precisa escolher mudar). Os gargalos de outros elementos atrasam a criação de valor."
+    },
+    {
+     "nome": "Extensão do ecossistema antigo",
+     "descricao": "A proposta antiga, com ecossistema já montado, também melhora e empurra o ponto de substituição para frente. A tabela de prontidão por extensão separa substituição rápida, coexistência robusta, ilusão de resiliência e status quo estendido."
+    },
+    {
+     "nome": "Agir, esperar, deslocar ou moldar",
+     "descricao": "Quatro opções diante dos desafios de emergência: agir (condições maduras), esperar com confiança dizendo exatamente quais indicadores precisam ficar verdes, deslocar o alvo para um mercado de passagem, ou moldar o contexto com uma oferta pré-MVE."
+    },
+    {
+     "nome": "Deseconomias de compressão de tempo e meia-vida de relevância",
+     "descricao": "Reputação e confiança não se aceleram, o que justifica investir cedo em relações. A meia-vida é o ritmo em que o valor de um recurso cai depois de implantado: o entusiasmo do parceiro decai sem novo investimento."
+    }
+   ],
+   "logica": "Ecossistemas não surgem prontos: constroem-se por um núcleo pequeno que gera evidência, e cada parceiro seguinte entra porque a evidência anterior reduziu o risco dele. Por isso a ordem de entrada importa, e a receita das primeiras etapas é irrelevante diante do que elas provam. Parceiros novos são trazidos, sempre que possível, por relações que já existem (carryover), o que reduz o custo de alinhamento. Para decidir o ritmo é preciso olhar a prontidão do ecossistema inteiro, e não só a da própria peça, e dizer com clareza o que se está esperando quando se decide esperar. Tentar fazer tudo de uma vez é uma forma de pedir a todos que sejam seguidores de alguém que ainda não provou nada.",
+   "aplicacao_wise": "O MVE do programa seria algo como três a cinco parceiros âncora de uma ou duas categorias onde o grupo já tem carryover (fornecedores que já aparecem nas indústrias de Wise Makers, Tríade e Swallow), mais uma entidade como a Expo+Indústria e duas ou três indústrias da carteira. Cada âncora recebe uma versão mínima dos três pilares: um RFP real, um ciclo curto do Base Ativa e o link exclusivo ativo. A primeira indicação em ICP que vira reunião, e depois proposta, é evidência para recrutar o parceiro seguinte, e não receita. A ordem de expansão: estágio 0 mapeia o carryover, estágio 1 monta o MVE, estágio 2 adiciona um segundo fornecedor por categoria (formando painel) e a entidade, estágio 3 abre novas categorias e estágio 4 abre ao fluxo orgânico com regras de entrada. Cada passagem depende de indicadores verdes (SLA cumprido, reuniões geradas, parceiros ativados). As 21 conversas são lidas como fila de estágios: quem não tem papel assinado espera com data de reavaliação, e não ocupa horas do Gerente de Parcerias. A decisão do patrocinador de lançar os três pilares juntos fica preservada na oferta, mas o escalonamento passa a ser por parceiro e por maturidade de cada pilar (ver tensões).",
+   "impacto_modelo_de_negocio": "O programa deixa de ser um funil aberto para as conversas em curso e vira uma sequência de estágios com portões. Nos primeiros estágios o objetivo é evidência (indicações, reuniões, parceiros ativados) e não receita. A meta de assinaturas é reinterpretada como massa crítica por categoria. A relação do grupo com as indústrias vira ativo de recrutamento (carryover) em vez de apenas carteira de clientes.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Construir o ecossistema do programa em estágios",
+     "descricao": "Macroprocesso de topo que define o MVE, a ordem de expansão, os indicadores de portão e os critérios de espera; substitui a visão de funil único por uma sequência de estágios.",
+     "gatilho": "Início do programa e revisão mensal",
+     "entregas": "Plano de estágios com portões, indicadores e donos",
+     "dono": "Diretor patrocina; Gerente de Parcerias conduz"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o MVE do programa",
+     "descricao": "Escolher a menor configuração de parceiros e atividades que gera evidência: categorias, âncoras, entidade, indústrias e versão mínima de cada pilar.",
+     "gatilho": "Antes do recrutamento do estágio 1",
+     "entregas": "Documento do MVE com evidências esperadas e prazo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear o carryover do grupo",
+     "descricao": "Cruzar as indústrias atendidas por Wise Makers, Tríade e Swallow com os fornecedores que já aparecem nelas, produzindo a lista de candidatos por relação existente.",
+     "gatilho": "Antes do recrutamento e a cada novo estágio",
+     "entregas": "Lista de carryover priorizada no portal",
+     "dono": "Gerente de Parcerias; execução pelos consultores do grupo, que respondem sem acessar o portal"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Priorizar candidatos pelo poder de atrair o próximo parceiro",
+     "descricao": "Escolher âncoras por referência na categoria, entidade com carteira ou evento de peso, e não por volume imediato de indicações.",
+     "gatilho": "Lista de carryover pronta",
+     "entregas": "Ordem de abordagem por estágio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar o livro de evidências do estágio",
+     "descricao": "Cada indicação, reunião, proposta e fechamento vira evidência com data, parceiro e indústria, para usar nas conversas de recrutamento seguintes (casos, números).",
+     "gatilho": "Indicação registrada no portal",
+     "entregas": "Livro de evidências por estágio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Decidir o portão de cada estágio",
+     "descricao": "Rodar os indicadores verdes (por exemplo, SLA de indicações cumprido, reuniões geradas, parceiros ativados) antes de recrutar o próximo estágio ou lançar nova versão de um pilar; escolher entre agir, esperar, deslocar ou moldar.",
+     "gatilho": "Fim de cada estágio e revisão mensal",
+     "entregas": "Decisão de avançar, esperar, deslocar ou moldar, com o que se espera",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Listar os desafios de emergência do estágio",
+     "descricao": "Para cada estágio, listar quem mais precisa criar ou adotar algo para o valor aparecer (indústria aceitar a apresentação, parceiro ter lista da carteira pronta, comercial do grupo cumprir o SLA) e dar dono e data.",
+     "gatilho": "Início de cada estágio",
+     "entregas": "Lista de desafios com dono e prazo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Tratar as conversas em curso como fila de estágios",
+     "descricao": "Só entra em processo operacional quem tem papel, termos e contrapartidas assinados; as demais conversas ficam em nutrição com data de reavaliação, para evitar pilotos sem papel.",
+     "gatilho": "Início da operação do funil",
+     "entregas": "Fila de estágios com data de reavaliação por candidato",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão mensal de evidência do MVE",
+     "descricao": "Reunião curta para ler o livro de evidências, os desafios abertos e os indicadores de portão; define o que o Gerente de Parcerias faz no mês.",
+     "gatilho": "Primeira semana de cada mês",
+     "entregas": "Ata com decisões e próximos passos",
+     "dono": "Gerente de Parcerias com o Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Tempo até a primeira evidência",
+     "descricao": "Dias entre a assinatura e a primeira indicação em ICP que virou reunião; acompanha a meia-vida de entusiasmo do parceiro e se alinha ao onboarding de 90 dias.",
+     "gatilho": "Cálculo a cada ativação",
+     "entregas": "Indicador por parceiro e mediana por estágio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Evidências por estágio",
+     "descricao": "Contagem de indicações, reuniões, propostas e fechamentos do estágio em curso; serve de gatilho para abrir o estágio seguinte.",
+     "gatilho": "Cálculo semanal",
+     "entregas": "Indicador por estágio no painel",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Eixo horizontal de estágios 0 a 4. Em cada estágio, caixas com os parceiros entrando. Setas de 'atrai' do estágio n para o estágio n+1. Entre estágios, losangos de portão com indicadores verdes. Abaixo, uma faixa de evidências acumuladas e uma linha de carryover vinda de Wise Makers, Tríade e Swallow.",
+   "citacoes": [
+    {
+     "trecho": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
+     "pagina": "p. 83"
+    },
+    {
+     "trecho": "The role of early partners is not to drive profits, but to attract subsequent partners and create the evidence required for their confident participation.",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "Partners who were onboarded into Ecosystem 1 can be carried over to help jump-start the MVE for Ecosystem 2.",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "The MVP is a tool for customer insight, while the MVE is a tool for partner alignment and scale.",
+     "pagina": "p. 94"
+    },
+    {
+     "trecho": "In exchange for certified status and the promise of business leads, these locksmiths would invest in developing the new skill set required.",
+     "pagina": "p. 104"
+    },
+    {
+     "trecho": "The readiness of a given technology does not offset the bottlenecks created when other pieces are not ready.",
+     "pagina": "p. 118"
+    }
+   ]
+  },
+  {
+   "nome": "Ego-System Trap (a armadilha do ecossistema do ego): liderança como papel, seguidor inteligente e ecossistema interno",
+   "livro": "winning-the-right-game",
+   "paginas": "p. 68 a 80; p. 141 a 160; p. 164 a 168; p. 182 a 186; p. 189 a 193",
+   "componentes": [
+    {
+     "nome": "Armadilha do ego-sistema",
+     "descricao": "Ver o ecossistema com a própria empresa no centro, sem notar que os parceiros pensam o mesmo. Quando todos acham que lideram, ninguém lidera, e a coordenação se desfaz."
+    },
+    {
+     "nome": "Liderança é papel, não resultado",
+     "descricao": "Em indústrias, liderar é um resultado (participação, margem). Em ecossistemas, liderar é um papel medido pela capacidade de alinhar os outros em torno de uma arquitetura de valor."
+    },
+    {
+     "nome": "Hierarquia dos vencedores",
+     "descricao": "Primeiro lugar, líder de ecossistema bem-sucedido. Segundo, seguidores de ecossistema bem-sucedido. Terceiro, seguidores de ecossistema fracassado. Último, líder de ecossistema fracassado, que mais investiu. Falhar em liderar é falha de alinhamento, sem prêmio de consolação."
+    },
+    {
+     "nome": "Duas perguntas de legitimidade",
+     "descricao": "Ao expandir, os novos parceiros achariam a liderança tão convincente quanto os atuais? E os parceiros atuais continuarão aceitando seus papéis? Um não em qualquer pergunta indica que os papéis serão contestados."
+    },
+    {
+     "nome": "Seguidor inteligente",
+     "descricao": "Seguir é estratégico: entender a arquitetura do líder, perguntar se ele ganha quando você ganha e vice-versa, escolher bem o líder e moldar regras para os outros seguidores. Em ecossistema nascente, são os seguidores que determinam o líder."
+    },
+    {
+     "nome": "Ciclo do ecossistema e mentalidades",
+     "descricao": "Antes do alinhamento, o foco é montar a estrutura (mentalidade de alinhamento, diplomacia, coalizão primeiro). Depois, negociar os termos dentro da estrutura (mentalidade de execução). O retorno ao alinhamento ao entrar em nova categoria pode ser a troca mais difícil, porque parte de uma posição de força."
+    },
+    {
+     "nome": "Ecossistemas internos",
+     "descricao": "Dentro da organização, iniciativas que cruzam silos exigem alinhamento sem autoridade. Pilotos que funcionam porque o ecossistema foi 'dobrado' não escalam; é preciso realinhá-lo para torná-los rotina. O cliente interno pode ser lido como demanda de mercado, e não é."
+    },
+    {
+     "nome": "Disciplina de ambição e teste da reação do parceiro",
+     "descricao": "Crescer à custa de rivais é saudável; crescer à custa dos parceiros da coalizão é arriscado (caso Spotify e gravadoras). O teste: se o parceiro fosse consultado, diria que é uma ótima ideia ou que o incomoda?"
+    },
+    {
+     "nome": "Paradoxo de desistir e política de dados",
+     "descricao": "Ecossistemas só falham quando os candidatos a líder desistem, por isso convém definir critérios de parada. A TomTom ganhou confiança ao se comprometer a não competir com seus clientes e a usar dados só para melhorar o produto."
+    }
+   ],
+   "logica": "Em ecossistemas, a autoridade não existe: os parceiros podem recusar o papel que se desenha para eles e ainda contestar a liderança. Por isso a liderança é um papel conquistado pelo alinhamento, e a pergunta central deixa de ser 'como vencer' e passa a ser 'quem aceita seguir quem, em que termos'. Assumir que o seguimento é automático (o ego-sistema) leva a pilotos sem escala e a investimento sem retorno; reconhecer o papel de seguidor inteligente abre caminho a ganhar sem comandar. Cada vez que o programa cresce, os dois testes de legitimidade precisam ser refeitos, porque lealdade num domínio não é lealdade em outro. O mesmo raciocínio vale para dentro da casa, onde a falta de realinhamento interno faz a iniciativa depender de esforço heroico.",
+   "aplicacao_wise": "A Wise lidera o programa (estrutura, regras e ritmo), mas a liderança é uma reivindicação que cada categoria testa de forma diferente. Para entidades e feiras, que têm seu próprio público, a legitimidade da Wise vem da demanda das indústrias da carteira do grupo; para os grandes ERPs, que já têm programa de canais, a Wise deve ser seguidora inteligente (entender a arquitetura do parceiro e onde o grupo se encaixa). O Base Ativa pede ao parceiro que dê acesso à própria carteira: é o momento de perguntar se ele continua aceitando o papel (pergunta 2) e de posicionar o parceiro como protagonista da comunidade. Wise Makers, Tríade e Swallow formam um ecossistema interno: o comercial e a entrega que não entram no portal precisam acordar o tratamento e o SLA das indicações antes do primeiro parceiro, e o volume interno não pode ser lido como demanda de mercado nem usado como receita do programa. Na fase de emergência o Gerente de Parcerias opera em mentalidade de alinhamento (diplomacia, sem autoridade); quando a estrutura estabilizar, a agenda migra para execução (inferência nossa, a validar). A política de dados é publicada, e critérios de parada por categoria e pilar impedem esgotar as horas do gerente.",
+   "impacto_modelo_de_negocio": "O programa assume dois papéis explícitos, líder onde tem legitimidade (indústrias do grupo) e seguidor onde o parceiro já tem estrutura (grandes ERPs). O sucesso do programa passa a ser medido por alinhamento (papéis aceitos e assinados) além de comissões. Comunicação e política de dados reforçam o parceiro como protagonista. A relação com o ecossistema interno do grupo vira condição de lançamento e não detalhe operacional.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Aplicar as duas perguntas de legitimidade antes de abrir categoria ou pilar",
+     "descricao": "Para cada nova categoria ou pilar, perguntar se os novos parceiros achariam a liderança da Wise convincente e se os parceiros atuais continuariam a aceitar seu papel; um não em qualquer uma sinaliza disputa de papéis.",
+     "gatilho": "Proposta de nova categoria, pilar ou pedido ao parceiro",
+     "entregas": "Parecer com resposta por categoria (sim, não, a testar) e decisão",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Executar o teste da reação do parceiro antes de lançar oferta nova",
+     "descricao": "Representar o parceiro afetado na reunião de decisão (um advogado do parceiro designado) e registrar se a reação esperada é de aplauso ou de incômodo.",
+     "gatilho": "Proposta de nova oferta, serviço ou pilar",
+     "entregas": "Parecer A ou B com decisão registrada",
+     "dono": "Gerente de Parcerias; Diretor decide"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o papel da Wise (líder ou seguidor) por categoria",
+     "descricao": "Para cada categoria (ERP com programa de canais, CRM, MES, entidade, feira), decidir se a Wise lidera ou segue; para seguidor, estudar a arquitetura do parceiro e onde a Wise se encaixa.",
+     "gatilho": "Ficha de categoria preenchida",
+     "entregas": "Mapa de papéis por categoria",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Realinhar o ecossistema interno do grupo",
+     "descricao": "Acordar com comercial e entrega de Wise Makers, Tríade e Swallow o tratamento e o SLA das indicações, e quem faz o quê sem uso do portal. Realinhar rotinas em vez de dobrá-las caso a caso.",
+     "gatilho": "Antes do primeiro parceiro e revisão trimestral",
+     "entregas": "Acordo de SLA interno e rito de revisão",
+     "dono": "Diretor patrocina; Gerente de Parcerias conduz"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Publicar a política de dados do programa",
+     "descricao": "Texto curto no portal: a Wise não usa a carteira nem os dados do parceiro para fins alternativos nem para abordar clientes dele por fora.",
+     "gatilho": "Antes da primeira assinatura",
+     "entregas": "Política publicada e aceita no contrato",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir critérios de parada por categoria e pilar",
+     "descricao": "Critérios explícitos para parar de investir ou mudar de papel antes de esgotar as horas do Gerente de Parcerias (por exemplo, meses sem evidência, pergunta 2 com resposta não).",
+     "gatilho": "Início de cada estágio e revisão trimestral",
+     "entregas": "Critérios com indicador, prazo e dono",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de Parcerias em mentalidade de alinhamento na emergência",
+     "descricao": "Perfil e agenda do gerente na fase de emergência: diplomacia sem autoridade, coalizão primeiro, parceiro como protagonista. Quando a estrutura de papéis estiver assinada, avaliar separar alinhamento (relação com âncoras, regras) de execução (operação de indicações e comissões). Separação é inferência nossa.",
+     "gatilho": "Início do programa e portão de estágio",
+     "entregas": "Descrição de papel e agenda por fase",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Reunião de alinhamento com parceiros âncora",
+     "descricao": "Encontro regular, antes de precisar pedir algo, para checar se continuam aceitando o papel (pergunta 2) e coletar o que mudaria o desenho.",
+     "gatilho": "Mensal",
+     "entregas": "Ata de alinhamento por âncora",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Dar fluência na linguagem do programa a consultores e comercial do grupo",
+     "descricao": "Mapa de arquitetura e glossário em uma página; quem não entra no portal precisa saber descrever o programa e o SLA de indicação.",
+     "gatilho": "Início do programa e entrada de novo consultor",
+     "entregas": "Material de uma página e checagem rápida de entendimento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de aceitação de papel",
+     "descricao": "Parceiros que passaram na pergunta 2 na última rodada dividido pelo total de parceiros ativos; sinaliza risco de disputa de liderança.",
+     "gatilho": "Cálculo trimestral",
+     "entregas": "Indicador por categoria",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Iniciativas sem papel assinado",
+     "descricao": "Contagem de pilotos e conversas com atividade operacional sem papel, termos e contrapartidas assinados há mais de 60 dias; meta zero.",
+     "gatilho": "Cálculo mensal",
+     "entregas": "Lista no painel e alerta ao Diretor",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Quatro degraus (líder bem-sucedido, seguidor bem-sucedido, seguidor em ecossistema fracassado, líder em ecossistema fracassado), com a pergunta 'em qual degrau cada categoria me coloca'. Ao lado, duas colunas P1 e P2 com semáforo por categoria (software, entidade, feira). Embaixo, o ciclo do ecossistema: emergência (alinhamento) para maturidade (execução), com seta de volta quando entra nova categoria ou pilar.",
+   "citacoes": [
+    {
+     "trecho": "But if everyone believes that they are the leader, then no one is the leader, and coordination and effectiveness break down.",
+     "pagina": "p. 142"
+    },
+    {
+     "trecho": "In ecosystems, leadership is not an outcome but a role.",
+     "pagina": "p. 142"
+    },
+    {
+     "trecho": "Rather, the absence of alignment precludes collaboration at scale.",
+     "pagina": "p. 153"
+    },
+    {
+     "trecho": "will your existing partners continue to accept their current role?",
+     "pagina": "p. 150"
+    },
+    {
+     "trecho": "Sustaining a coalition requires disciplining your own urges and direction of growth.",
+     "pagina": "p. 78"
+    },
+    {
+     "trecho": "the ecosystem was “bent” to make them work; it was not realigned to make them routine.",
+     "pagina": "p. 184"
+    }
+   ]
+  }
+ ],
+ "excesso_de_kanbans": [
+  {
+   "ideia": "Trocar quadros por processo por uma matriz parceiro por elemento de valor, com um cartão-passaporte por parceiro",
+   "livro": "winning-the-right-game",
+   "pagina": "p. 26 a 29, p. 33",
+   "como_aplicar": "Cada parceiro tem um único cartão com uma linha de cinco células, uma por elemento de valor da arquitetura (Descobrir, Comparar e decidir, Implantar de forma integrada, Pertencer e aprender, Confiar). Cada célula tem um estado (não iniciado, em preparo, ativo, em risco) calculado a partir dos processos de baixo (funil, onboarding, indicações, ações conjuntas, comissões). O Gerente de Parcerias lê uma matriz com todos os parceiros e age só nas células em risco ou paradas. Os processos continuam existindo como subprocessos e atividades, mas alimentam a célula em vez de ter quadro próprio. Fundamento: elementos de valor não são etapas de cadeia (p. 28) e atividades são o nível abaixo da arquitetura (p. 27 e 28). A matriz em si é aplicação nossa."
+  },
+  {
+   "ideia": "Estágios com portões: só âncoras e quem tem papel assinado entram nos processos operacionais, as demais conversas ficam em fila de estágio",
+   "livro": "winning-the-right-game",
+   "pagina": "p. 83 a 84, p. 133",
+   "como_aplicar": "O programa tem estágios (0 a 4). Em cada estágio, o limite de trabalho em andamento é o número de parceiros do MVE e dos parceiros do estágio vigente, com no máximo cinco ou seis cartões operacionais vivos (limite proposto por nós, o livro não fixa número). As demais conversas ficam numa lista única de espera com data de reavaliação e motivo do que se espera (indicador). O portão para o estágio seguinte é um único indicador agregado no painel. Reduz de dezenas de cartões simultâneos para poucos, e dá ao Gerente de Parcerias uma razão para dizer não por escrito."
+  },
+  {
+   "ideia": "Papel assinado como condição para existir em processo operacional (fim do piloto sem papel)",
+   "livro": "winning-the-right-game",
+   "pagina": "p. 153",
+   "como_aplicar": "No portal, o cartão operacional só nasce quando papel, termos e contrapartidas estão assinados. Antes disso o candidato vive numa linha única do funil de recrutamento. Pilotos sem papel há mais de 60 dias aparecem como alerta no painel do Diretor. O resultado é que o número de cartões abertos passa a refletir alinhamento, não conversas."
+  },
+  {
+   "ideia": "Um quadro por célula da Value Net (categoria por papel), com os parceiros como membros da célula",
+   "livro": "co-opetition",
+   "pagina": "p. 29 a 33, p. 41",
+   "como_aplicar": "Em vez de acompanhar cada parceiro por funil, o painel principal mostra categorias (ERP, CRM, MES, SST, ESG, BPM, automação, entidades) e papéis (complementador, concorrente parcial, fornecedor de acesso, cliente). Cada célula mostra quantos parceiros estão em cada estágio e se há alternativas suficientes para a Prateleira. A decisão tomada é por célula (abrir, esperar, fechar a categoria), e só então se desce ao parceiro. Aplicação nossa da Value Net."
+  },
+  {
+   "ideia": "Ficha PARTS única por parceiro, com os processos como visões filtradas da mesma ficha",
+   "livro": "co-opetition",
+   "pagina": "p. 74 a 76",
+   "como_aplicar": "Uma ficha com cinco abas (jogadores, valor adicionado, regras, táticas, escopo) é o único registro do parceiro. Funil, onboarding, indicações, comissões e ações conjuntas viram filtros da mesma ficha, que mostram apenas os campos e tarefas relevantes. Não existe cartão por processo, existe uma ficha com tarefas listadas pelo portal. A área de tarefas do Gerente de Parcerias mostra o que vence, não quadros. Aplicação nossa."
+  },
+  {
+   "ideia": "Gestão por exceção a partir de regras escritas: tabela única, janela de 180 dias e SLA geram cartão só quando a regra é quebrada",
+   "livro": "co-opetition",
+   "pagina": "p. 159 a 162, p. 193",
+   "como_aplicar": "Regras claras permitem que o portal processe automaticamente o que está dentro da regra (cálculo de comissão da tabela, prazo da proteção, SLA de resposta) e abra tarefa apenas na exceção (SLA estourado, indicação dentro da janela atribuída a outro, pedido fora da tabela). Os cartões de decisão caem porque a decisão foi tomada uma vez, na regra, e não a cada caso. Fundamento: regras estruturam a negociação e dispensam decisão caso a caso (p. 159 a 162); a automação pelo portal é aplicação nossa."
+  },
+  {
+   "ideia": "Distribuir atenção por valor adicionado: cartões individuais para A e B, cadência automática por coorte para C",
+   "livro": "co-opetition",
+   "pagina": "p. 55, p. 141",
+   "como_aplicar": "Parceiros A e B (maior valor adicionado) têm cartão e rito individual. Parceiros C são tratados por coorte, com mensagens e tarefas coletivas na comunidade de WhatsApp e revisão trimestral por lote. A promoção a B gera cartão individual. Segue a regra de reservar o melhor agradecimento ao melhor parceiro (p. 141) aplicada também à atenção do gerente."
+  },
+  {
+   "ideia": "Sinais custosos como filtro de entrada para reduzir o número de cartões abertos",
+   "livro": "co-opetition",
+   "pagina": "p. 205 a 206",
+   "como_aplicar": "Antes de abrir cartão operacional, o candidato precisa entregar um sinal difícil de fingir (primeira indicação como piloto, presença em evento, lista da carteira). Quem não entrega permanece em nutrição, sem processo operacional. O filtro reduz o funil antes de a gestão dele existir."
+  },
+  {
+   "ideia": "Realinhar rotinas internas do grupo em vez de acompanhar manualmente cada indicação",
+   "livro": "winning-the-right-game",
+   "pagina": "p. 183 a 184",
+   "como_aplicar": "Um acordo de SLA com comercial e entrega do grupo, combinado uma vez, evita cartões de acompanhamento manual por indicação. O portal só abre tarefa quando o SLA estoura. O Gerente de Parcerias continua dono das tarefas mesmo quando outra pessoa executa, mas a rotina já está realinhada e não depende de pedidos individuais."
+  },
+  {
+   "ideia": "Um painel por pergunta, e não por processo",
+   "livro": "winning-the-right-game",
+   "pagina": "p. 189 a 190",
+   "como_aplicar": "Em lugar de um quadro para cada processo, o portal organiza poucas telas que respondem a perguntas fixas: quais elementos de valor estão em risco, quais parceiros estão prontos para o próximo estágio, quais regras foram quebradas, quais categorias estão ameaçadas por inversão. Cada tela se escreve na linguagem da arquitetura de valor, que todos (inclusive quem não usa o portal) conseguem descrever. Aplicação nossa da ideia de linguagem estratégica compartilhada."
+  }
+ ],
+ "tensoes": [
+  {
+   "tensao": "Os três pilares entram juntos desde o primeiro parceiro (decisão do patrocinador), mas o livro Winning the Right Game defende MVE e expansão em etapas, com portões de indicadores antes de lançar cada etapa (p. 83, 84 e 133).",
+   "como_resolver": "Preservar a decisão na oferta e escalonar na operação. Os três pilares existem juntos na proposta e entram em versão mínima em cada parceiro âncora, mas a expansão é escalonada por parceiro (âncoras primeiro) e por maturidade de cada pilar (primeiro RFP real, primeiro ciclo curto de Base Ativa, primeiro link ativo). Novas versões de cada pilar só são lançadas quando os indicadores de portão ficam verdes. A decisão do patrocinador pode ser mantida sem contradizer o MVE se for lida como 'os três pilares na oferta' e não como 'os três pilares em plena escala em todos os parceiros'."
+  },
+  {
+   "tensao": "Co-opetition recomenda cobrar para jogar (contrapartida por RFP, destaque, vaga limitada), mas Winning the Right Game diz que o papel dos primeiros parceiros é atrair os seguintes e não gerar lucro (p. 84).",
+   "como_resolver": "Dar às âncoras um regime diferente por prazo definido: condições de entrada simbólicas, status de fundador e reconhecimento em espécie, com cobrança de contrapartida a partir do estágio 2, quando há painel e evidência. A regra de cobrança fica escrita no contrato desde o início, de modo que a mudança de regime seja prevista e não surpresa."
+  },
+  {
+   "tensao": "A comissão do programa é em dinheiro (40 por cento da primeira mensalidade; 6 por cento do projeto), enquanto co-opetition recomenda agradecer em espécie e não em dinheiro (p. 140).",
+   "como_resolver": "Manter a comissão em dinheiro como parte da regra contratual (é decisão econômica do patrocinador e dá previsibilidade) e acrescentar uma camada em espécie por nível (palco, mentoria, selo, prioridade na Prateleira) para o que o dinheiro não compra. A comissão é calibrada pelo valor adicionado do parceiro, e o reconhecimento em espécie é o que sustenta a relação."
+  },
+  {
+   "tensao": "Co-opetition recomenda tabela única sem exceções (efeito MFC), mas Winning the Right Game defende seguidor inteligente nos programas de canais dos grandes ERPs e carryover com âncoras, que pedem condições próprias (p. 157).",
+   "como_resolver": "Tabela única por nível e por categoria, pública, sem negociação individual; a diferença entre âncoras e demais vem do nível e do prazo (status de fundador por 12 meses), nunca de acordo especial. Para grandes ERPs com programa de canais, usar o papel de seguidor com um anexo padrão (como a Wise se encaixa no programa deles), e não uma exceção à tabela."
+  },
+  {
+   "tensao": "Co-opetition diz que regra só vale enquanto o poder existe e que não se deve basear estratégia em regra que não se controla (p. 193), mas Winning the Right Game mostra que quem molda a governança de longo prazo enquanto as regras ainda são maleáveis leva vantagem (p. 160). Sem parceiros assinados e com recrutamento orgânico, a Wise começa com pouco valor adicionado.",
+   "como_resolver": "Escrever poucas regras e deixar claras as que são inegociáveis (proteção de 180 dias, tabela, saída formal), revisá-las semestralmente e reforçá-las com credibilidade (garantia de SLA, comissão por resultado). Usar as regras que valem em qualquer cenário e deixar as regras de dependência de poder (exclusividade, preço único) com revisão jurídica e cláusula de revisão."
+  },
+  {
+   "tensao": "A Value Net trata o complementador como amigo e o recomenda (mais complementadores, mais bolo), mas a inversão de valor mostra que o complementador de hoje pode virar o substituto de amanhã sem mudar de intenção (p. 37 a 40).",
+   "como_resolver": "Manter as duas leituras: aplicar a Value Net para recrutar e o teste dos dez, trimestralmente, para monitorar. Se uma categoria entrar em inversão, a resposta é especializar, estender ou diversificar, e não romper a parceria. O papel do parceiro na ficha é versionado, e o teste vira item fixo da revisão trimestral."
+  },
+  {
+   "tensao": "Co-opetition pede para não eliminar do funil o candidato que sobrepõe parte do portfólio da Wise (p. 44), mas Winning the Right Game só conta como parceria o que tem papel, termos e contrapartidas assinados (p. 153).",
+   "como_resolver": "Separar classificar de alocar horas. O candidato com sobreposição é classificado por escopo (Value Net), mas só ocupa horas do Gerente de Parcerias quando existe papel assinado. Antes disso fica em nutrição, sem sair do funil de recrutamento."
+  }
+ ]
+}

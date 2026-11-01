@@ -1,0 +1,45 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Plano conjunto acordado no workshop"]):::declarado
+      n_t1["Registrar interesses, alternativas e pacote gatilho"]:::declarado
+      n_t2["Preencher o termo-quadro"]:::declarado
+      n_t3["Enviar o rascunho pedindo críticas"]:::declarado
+      n_e1>"Críticas do candidato"]:::declarado
+      n_g1{"Rascunho ainda melhora?"}:::declarado
+      n_t4["Revisar o rascunho"]:::declarado
+      n_g0{"Termos dentro do pacote gatilho?"}:::hipotese
+      n_t6["Enviar o termo para assinatura digital"]:::declarado
+      n_e2>"Termo assinado"]:::declarado
+      n_t7["Anexar o termo assinado"]:::declarado
+      n_f1(["Termo assinado"]):::declarado
+      n_f2(["Negociação encerrada sem acordo"]):::declarado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t5["Responder sim ou não à assinatura"]:::hipotese
+      n_g2{"Assinatura aprovada?"}:::declarado
+    end
+    ext_X1[/"Empresa candidata"/]
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_e1
+    n_e1 --> n_g1
+    n_g1 -->|Sim| n_t4
+    n_t4 --> n_t3
+    n_g1 -->|Não| n_g0
+    n_g0 -->|Sim| n_t5
+    n_g0 -->|Não| n_f2
+    n_t5 --> n_g2
+    n_g2 -->|Sim| n_t6
+    n_g2 -->|Não| n_t4
+    n_t6 --> n_e2
+    n_e2 --> n_t7
+    n_t7 --> n_f1
+    n_t3 -.->|Rascunho do termo| ext_X1
+    ext_X1 -.->|Críticas| n_e1
+    n_t6 -.->|Termo para assinatura| ext_X1
+    ext_X1 -.->|Termo assinado| n_e2

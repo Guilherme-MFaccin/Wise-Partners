@@ -5,25 +5,28 @@ flowchart TB
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph cat_gestao ["Gestão"]
     direction LR
-      P_01["1 Governar o programa de parceiros"]:::declarado
+      P_01["1 Arquitetar o ecossistema"]:::hipotese
+      P_16["2 Gerir o programa por rituais"]:::hipotese
     end
     subgraph cat_finalistico ["Finalísticos"]
     direction LR
-      P_10["2 Captar parceiros"]:::declarado
-      P_17["3 Integrar parceiro"]:::confirmado
-      P_22["4 Gerar negócios com o parceiro"]:::declarado
-      P_29["5 Desenvolver o parceiro"]:::declarado
-      P_36["6 Reter ou encerrar a parceria"]:::declarado
-      P_10 --> P_17
-      P_17 --> P_22
-      P_22 --> P_29
-      P_29 --> P_36
+      P_29["3 Atrair e selecionar parceiros"]:::declarado
+      P_39["4 Integrar e ativar parceiro"]:::confirmado
+      P_51["5 Gerar oportunidades no ecossistema"]:::hipotese
+      P_60["6 Desenvolver o parceiro e a comunidade"]:::declarado
+      P_71["7 Reter ou encerrar a parceria"]:::declarado
+      P_29 --> P_39
+      P_39 --> P_51
+      P_51 --> P_60
+      P_60 --> P_71
     end
     subgraph cat_suporte ["Suporte"]
     direction LR
-      P_39["7 Manter a prateleira de fornecedores"]:::declarado
-      P_40["8 Manter conteúdos, trilhas e modelos"]:::declarado
-      P_41["9 Administrar o portal e os dados"]:::declarado
+      P_75["8 Manter a Prateleira de fornecedores"]:::confirmado
+      P_76["9 Gerir conteúdos e capacitação"]:::declarado
+      P_77["10 Gerir dados, atribuição e privacidade"]:::confirmado
+      P_78["11 Alinhar o ecossistema interno do grupo"]:::hipotese
+      P_79["12 Administrar o portal e os contratos"]:::declarado
     end
     cat_gestao ~~~ cat_finalistico
     cat_finalistico ~~~ cat_suporte

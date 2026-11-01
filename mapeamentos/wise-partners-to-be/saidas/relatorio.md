@@ -1,58 +1,72 @@
 # Mapeamento de processos: Programa Wise Partners (to-be)
 
-Atualizado em 2026-10-31.
+Atualizado em 2026-11-01.
 
 ## Situação
 
-- Completude (informação mínima levantada): **91.5%**
-- Validação (elementos confirmados): **2.7%** (2 de 75)
-- Hipóteses ainda não confirmadas: 9
-- Perguntas pendentes: 22 · Contradições abertas: 0
+- Completude (informação mínima levantada): **62.0%**
+- Validação (elementos confirmados): **27.0%** (31 de 115)
+- Hipóteses ainda não confirmadas: 39
+- Perguntas pendentes: 16 · Contradições abertas: 0
 - Modelo de negócio: 5 de 5 temas com informação
 
 ## Processos por nível
 
 | Nível | Processos | Confirmados | Declarados | Hipóteses | Contestados | Campos preenchidos | Folhas com fluxo |
 |---|---|---|---|---|---|---|---|
-| 1 (Macroprocesso) | 9 | 1 | 8 | 0 | 0 | 27/27 | 0/0 |
-| 2 (Processo) | 32 | 1 | 28 | 3 | 0 | 143/160 | 5/5 |
+| 1 (Macroprocesso) | 12 | 3 | 5 | 4 | 0 | 24/36 | 0/0 |
+| 2 (Processo) | 42 | 13 | 20 | 9 | 0 | 164/210 | 4/4 |
+| 3 (Subprocesso) | 25 | 6 | 7 | 12 | 0 | 68/175 | 1/1 |
 
 ## Lacunas por pessoa sugerida
 
 ### Guilherme Faccin
-- 2.1 Montar a lista de candidatos: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0008 pendente)
-- 4.4 Pedir apoio do parceiro numa venda da Wise: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0012 pendente)
-- 5.4 Revisar a parceria com o parceiro: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0017 pendente)
-- 3.4 Cruzar carteiras com o parceiro: o que dispara o processo é hipótese, confirmar (pergunta Q-0011 pendente)
-- 4.6 Checar cliente indicado aos 6 e 12 meses: dono do processo é hipótese, confirmar (pergunta Q-0013 pendente)
-- Modelo operacional: falta saber o quanto as áreas ou unidades compartilham dados e seguem o mesmo jeito de trabalhar (pergunta Q-0005 pendente)
-- 1.4 Revisar o nível dos parceiros: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 2 Captar parceiros: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 2.5 Negociar e formalizar o termo: passo a passo declarado, falta validação do dono (pergunta Q-0009 pendente)
-- 3 Integrar parceiro: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 4.1 Tratar indicação do parceiro: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 4.3 Atender pedido de fornecedor pela prateleira: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 5.1 Conduzir o ciclo do Base Ativa: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
-- 6 Reter ou encerrar a parceria: passo a passo declarado, falta validação do dono (pergunta Q-0007 pendente)
+- 1 Arquitetar o ecossistema: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0001 pendente)
+- 1.1 Mapear a rede de valor e o papel da Wise: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0003 pendente)
+- 1.1.1 Desenhar a rede de valor do grupo: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0003 pendente)
+- 1.1.2 Definir o papel da Wise por categoria: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0003 pendente)
+- 1.1.3 Testar a legitimidade antes de abrir categoria: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0003 pendente)
+- 1.2 Desenhar a arquitetura de valor para a indústria: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0004 pendente)
+- 1.4.2 Publicar o critério objetivo da comissão: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0005 pendente)
+- 1.4.4 Manter o termo-quadro modular: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0011 pendente)
+- 1.5.1 Diagnosticar a maturidade do programa nos oito eixos: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0013 pendente)
+- 1.5.2 Definir os portões da próxima fase: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0013 pendente)
+- 11 Alinhar o ecossistema interno do grupo: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0014 pendente)
+- 2 Gerir o programa por rituais: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0001 pendente)
+- 2.1 Tratar a fila diária de exceções: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0006 pendente)
+- 2.3 Conduzir a mesa mensal do portfólio: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0007 pendente)
+- 2.4.2 Avaliar a saúde das parcerias: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0009 pendente)
+- 2.8 Decidir na fila do Diretor: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0008 pendente)
+- 3.2.2 Preencher a ficha de jogo do candidato: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0003 pendente)
+- 3.2.3 Estimar a sobreposição de carteiras: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0010 pendente)
+- 5 Gerar oportunidades no ecossistema: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0002 pendente)
+- 5.6 Gerar jogadas a partir do cruzamento de carteiras: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0002 pendente)
+- 6.4 Animar a comunidade Wise Partners: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0012 pendente)
+- 6.4.1 Publicar o comunicado do mês na comunidade: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0012 pendente)
+- 6.4.2 Promover a troca entre parceiros: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0012 pendente)
+- 6.5 Reconhecer o parceiro por nível: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0005 pendente)
+- 6.7 Escolher a jogada pelo tipo de parceria: existência ainda é hipótese; confirmar se esse processo existe (pergunta Q-0009 pendente)
+- 2.1 Tratar a fila diária de exceções: o passo a passo ainda é rascunho, validar com quem executa (pergunta Q-0006 pendente)
+- 3.4 Conduzir o workshop de alinhamento: propósito do processo é hipótese, confirmar (pergunta Q-0010 pendente)
+- 5 Gerar oportunidades no ecossistema: o passo a passo ainda é rascunho, validar com quem executa (pergunta Q-0002 pendente)
+- 1.1.1 Desenhar a rede de valor do grupo: falta o que o processo recebe e de quem
+- 1.1.1 Desenhar a rede de valor do grupo: falta papéis que participam
+- 1.1.2 Definir o papel da Wise por categoria: falta papéis que participam
+- 1.1.3 Testar a legitimidade antes de abrir categoria: falta o que o processo recebe e de quem
+- 1.1.3 Testar a legitimidade antes de abrir categoria: falta papéis que participam
+- 1.4.1 Definir níveis, pacotes e contrapartidas: falta o que o processo recebe e de quem
+- 1.4.1 Definir níveis, pacotes e contrapartidas: falta papéis que participam
+- 1.4.2 Publicar o critério objetivo da comissão: falta o que o processo recebe e de quem
+- 1.4.2 Publicar o critério objetivo da comissão: falta papéis que participam
+- 1.4.4 Manter o termo-quadro modular: falta o que o processo recebe e de quem
+- 1.4.4 Manter o termo-quadro modular: falta papéis que participam
+- 1.5.1 Diagnosticar a maturidade do programa nos oito eixos: falta o que o processo recebe e de quem
+- e mais 36 lacunas
+
+### Guilherme Faccin, Igor Makoto
+- Nenhum macroprocesso de gestão foi declarado ainda; perguntar se existe e quem faz
 
 ## Conferência lógica
 
 0 erros e 0 alertas.
 
-
-## Ideias de melhoria anotadas (fora do mapa atual)
-
-- Marcar como lead do ecossistema a indicação de empresa que também está na carteira de outro parceiro e comparar a conversão.
-- Alertar quando uma oportunidade da Wise avança sem parceiro anexado e existe parceiro com aquela conta na carteira.
-- Estruturar o cruzamento na matriz 3x3 (prospects, oportunidades e clientes de cada lado), com uma jogada por célula.
-- Registrar o saldo de ajuda dada e recebida com cada parceiro e devolver algo a cada pedido.
-- Perguntar ao cliente, em campo aberto, quem o indicou ou influenciou, e cruzar com o registro do portal.
-- Plano de contas conjuntas (5 clientes de cada lado e 5 novos logos em comum) só para parceiros Elite.
-- Entrevista estruturada anual com cada parceiro, perguntando que negócio a Wise pode ajudar a fechar hoje.
-- Mesmo preço da consultoria para cliente indicado e cliente direto, para não criar conflito de canal.
-- Mapear a rede de valor (clientes, fornecedores, complementadores e concorrentes) de cada candidato antes da primeira reunião.
-- Auditar a prateleira a cada trimestre pelas quatro causas de falha de mercado.
-- Antes de abrir nova categoria de parceiro, testar se a nova categoria aceita a liderança da Wise e se os atuais continuam aceitando o próprio papel.
-- Montar a planilha do programa como negócio à parte (receita, comissão, custo do time) e ler o resultado por fase.
-- Reunir parceiros que competem entre si no mesmo evento ou comunidade, porque a presença conjunta cria o mercado para todos.
-- Monitorar sinais de abandono (menos contatos, ausência em reuniões e eventos) e acionar a revisão antes que o parceiro suma.

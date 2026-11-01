@@ -1,0 +1,1435 @@
+{
+ "frente": "programa-de-parceiros",
+ "livros": [
+  "ecossistema-de-parceiros",
+  "bech-partner-channels"
+ ],
+ "frameworks": [
+  {
+   "nome": "Método Octo: oito eixos, três movimentos e cinco níveis de maturidade (Octo Method)",
+   "livro": "ecossistema-de-parceiros",
+   "paginas": "p. 21 a 36",
+   "componentes": [
+    {
+     "nome": "Eixo 1, Visão e Estratégia",
+     "descricao": "Modelo de negócios e mentalidade de operar via parceiros, compartilhados por todas as áreas. Parte do cliente ideal e da jornada do cliente, e exige que a operação primária já esteja validada e documentada."
+    },
+    {
+     "nome": "Eixo 2, Design e Modelos",
+     "descricao": "Escolha dos modelos de parceria (canais como afiliados, revendedores, VARs e implementadores; parcerias tecnológicas; parcerias estratégicas). Começa pela dor mais latente, com um modelo simples, e desenha uma trilha de evolução do parceiro."
+    },
+    {
+     "nome": "Eixo 3, Atração e Recrutamento",
+     "descricao": "Perfil de parceiro ideal (IPP), critérios objetivos, scorecard, funil de recrutamento e alinhamento de compromisso na entrada."
+    },
+    {
+     "nome": "Eixo 4, Capacitação",
+     "descricao": "Onboarding por marcos e capacitação contínua, com cinco componentes (conhecimento da empresa, técnico, validação da aprendizagem, métricas e sistemas, recursos)."
+    },
+    {
+     "nome": "Eixo 5, Co-Go-to-Market",
+     "descricao": "Ida conjunta ao mercado em três frentes: co-marketing, co-sell e co-sucesso do cliente, com remuneração e incentivos claros."
+    },
+    {
+     "nome": "Eixo 6, Programa de Parceiros",
+     "descricao": "Proposta de valor, benefícios, níveis, critérios de evolução e regras auditáveis para os pontos de sobreposição entre as empresas."
+    },
+    {
+     "nome": "Eixo 7, Time de Parceiros",
+     "descricao": "Gestão interna da jornada do parceiro: funções (hunter, farmer, enablement, suporte, operações do canal), início enxuto e posição no organograma."
+    },
+    {
+     "nome": "Eixo 8, Gestão do Ecossistema",
+     "descricao": "KPIs, processos, ferramentas e plano financeiro (DRE do canal) para medir eficácia e decidir investimento."
+    },
+    {
+     "nome": "Movimento 1, Arquitetura",
+     "descricao": "Eixos 1 e 2. Mapeia como será a operação com parceiros e quais critérios autorizam começar. É a fundação do ecossistema."
+    },
+    {
+     "nome": "Movimento 2, Jornada do Parceiro",
+     "descricao": "Eixos 3, 4 e 5. Reflete a jornada na perspectiva do parceiro e garante o alinhamento e o engajamento para que ele execute seu papel."
+    },
+    {
+     "nome": "Movimento 3, Gestão e Escala",
+     "descricao": "Eixos 6, 7 e 8. Monitora o ecossistema ao longo do crescimento e converte informação em melhoria."
+    },
+    {
+     "nome": "Escala de cinco níveis de maturidade",
+     "descricao": "Cada eixo é pontuado de 1 (nenhum domínio ou primeiros passos) a 5 (relação estabelecida, em ciclos de crescimento e melhoria contínua). O resultado é um radar em forma de teia de aranha que mostra o eixo mais fraco."
+    },
+    {
+     "nome": "Ciclo de aceleração via ecossistema",
+     "descricao": "Cinco passos em loop: oportunidade de impactar o mercado, parceiro ideal, oferta conjunta de valor agregado, construção de autoridade e mais recursos de qualidade, que realimentam o ciclo."
+    },
+    {
+     "nome": "Quatro fases do negócio",
+     "descricao": "Experimentação, Tração, Crescimento acelerado e Otimização. A estratégia de parceiros deve começar na fase 2, com produto e mercado validados."
+    }
+   ],
+   "logica": "Programas de canal falham por desequilíbrio: a empresa investe em recrutar e esquece capacitação, time e métricas, ou desenha níveis antes de ter onboarding. O Octo obriga a olhar os oito eixos ao mesmo tempo e pontua cada um, o que transforma opinião em diagnóstico comparável no tempo. Os três movimentos dão a ordem de leitura (para quem e com qual modelo, depois a jornada, depois a gestão). O desenho em ciclo lembra que a jornada se repete: novas dores geram novas ofertas. A condição de entrada na fase 2 protege contra construir canal em cima de produto ou processo ainda não validados.",
+   "aplicacao_wise": "O desenho atual do programa Wise cobre os oito eixos no papel, com maturidade desigual. Autodiagnóstico inicial, que é inferência minha e precisa de confirmação do patrocinador: eixos 1, 2 e 6 mais avançados (ICP, tipos de parceria, pilares, níveis A/B/C e pacotes definidos), eixos 3 e 4 intermediários (funil e trilhas existem, mas sem dados reais), eixos 5, 7 e 8 mais baixos (nenhum parceiro assinado, um gerente com 12 horas por mês, nenhum indicador de resultado). A regra do Octo é equilibrar antes de refinar: não vale polir níveis (eixo 6) antes de ter time e gestão mínimos (eixos 7 e 8). A pré-condição do eixo 1 está cumprida, pois a Wise já vende gestão comercial a indústrias, mas o programa em si está na fase 1 (Experimentação) e deve ser tratado como experimento. Os três movimentos viram os três macroprocessos do portal e os oito eixos viram oito grupos de processos, no lugar de um kanban por processo. O portal ganha uma tela de radar Octo, atualizada a cada trimestre.",
+   "impacto_modelo_de_negocio": "O programa deixa de ser uma soma de ações (RFP, Base Ativa, link) e passa a ser um negócio cooperativo com ciclo de aceleração: a indústria cliente é a oportunidade, o parceiro ideal é o IPP, a oferta conjunta é Prateleira mais Base Ativa, a autoridade vem do evento e do selo, e os melhores parceiros trazem mais recursos. O modelo de entrada é a indicação (afiliado ou finder), que o livro descreve como o mais simples, com trilha para modelos mais ricos conforme o parceiro amadurece. A fase 1 mede validação de tese, e não eficiência financeira.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Arquitetar o programa",
+     "descricao": "Movimento 1 do Octo. Agrupa documentar a jornada de venda e o ICP da Wise, escolher o modelo de parceria por tipo de parceiro, escrever a proposta de valor e definir a trilha de evolução. É o macroprocesso que muda menos e é revisto a cada trimestre.",
+     "gatilho": "Início do programa e revisão trimestral do Octo",
+     "entregas": "Jornada de venda e ICP escritos, matriz de modelos por tipo de parceiro, proposta de valor por tipo, trilha de evolução",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Conduzir a jornada do parceiro",
+     "descricao": "Movimento 2 do Octo. Une atrair e recrutar, decidir o ingresso, fazer onboarding e capacitar, e operar o co-GTM (Prateleira, Base Ativa, links). Um único fluxo por parceiro, com sete etapas, em vez de um funil por processo.",
+     "gatilho": "Primeiro contato com candidato a parceiro",
+     "entregas": "Parceiro ativado, com indicações, ações conjuntas e comissões registradas no mesmo card",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerir e escalar o programa",
+     "descricao": "Movimento 3 do Octo. Reúne níveis e critérios, time e capacidade do gerente, DRE do canal e painel por fase. Só avança de escala quando o fluxo do movimento 2 entrega resultado previsível.",
+     "gatilho": "Fechamento mensal e revisão trimestral",
+     "entregas": "Níveis revistos, DRE do canal, painel por fase, decisão de passar de fase",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Avaliar a maturidade Octo do programa",
+     "descricao": "Pontuar de 1 a 5 cada um dos oito eixos, desenhar o radar e escolher o eixo mais fraco como foco do trimestre. O resultado alimenta a pauta da revisão estratégica com o diretor.",
+     "gatilho": "Último dia útil de cada trimestre",
+     "entregas": "Radar Octo datado, eixo prioritário, três ações do trimestre",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Documentar a jornada de venda e o ICP da Wise para uso dos parceiros",
+     "descricao": "Escrever as etapas da venda da Wise, duração do ciclo, gatilhos de compra e partes interessadas, para que o parceiro saiba qualificar uma indicação. É pré-requisito do SLA de indicações.",
+     "gatilho": "Antes de assinar o primeiro parceiro",
+     "entregas": "Documento de jornada de venda, critérios de qualificação de indicação, perguntas de diagnóstico",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Escolher o modelo de parceria por tipo de parceiro",
+     "descricao": "Para cada tipo (software, serviço, entidade, feira) escolher o ponto de partida da trilha: indicação por link, prateleira, Base Ativa ou oferta conjunta, e registrar o porquê.",
+     "gatilho": "Qualificação do candidato",
+     "entregas": "Modelo inicial e próximo degrau previsto, gravados no card do parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral do Octo",
+     "descricao": "Reunião de 60 minutos com o diretor: radar, DRE do canal, painel por fase, revisão de níveis e de critérios, decisão sobre mudar de fase do canal.",
+     "gatilho": "Trimestral, mesma semana da revisão de níveis",
+     "entregas": "Ata com decisões e radar arquivado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Maturidade por eixo (1 a 5)",
+     "descricao": "Nota de cada um dos oito eixos, registrada a cada trimestre, com meta de elevar o eixo mais fraco e não de elevar a média.",
+     "gatilho": "Trimestral",
+     "entregas": "Série histórica do radar",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Agrupar os processos do portal por movimento e eixo",
+     "descricao": "Substituir a lista de processos independentes, cada um com seu kanban, por três macroprocessos e oito grupos. Só a jornada do parceiro tem quadro por parceiro; os demais são filas de tarefas e telas de painel.",
+     "gatilho": "Redesenho da arquitetura do portal",
+     "entregas": "Mapa de processos em três níveis e menu do portal reorganizado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de Parcerias como orquestrador do ecossistema",
+     "descricao": "No Octo o time de parceiros funciona como uma empresa dentro da empresa. O gerente é dono do programa e de todas as tarefas; consultores e comercial executam fora do portal e o gerente registra o resultado.",
+     "gatilho": "Permanente",
+     "entregas": "Responsabilidade única por parceiro e por indicador",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Octógono com oito vértices numerados e nomeados. Três arcos coloridos por fora agrupam os vértices 1 e 2 (Arquitetura), 3 a 5 (Jornada do Parceiro) e 6 a 8 (Gestão e Escala). Cinco anéis concêntricos de 1 (centro) a 5 (borda) formam o radar; a área preenchida mostra a maturidade atual da Wise e a área tracejada a meta do trimestre. Ao lado, uma seta circular de cinco caixas representa o ciclo de aceleração.",
+   "citacoes": [
+    {
+     "trecho": "Nós defendemos que há oito eixos que você deve implementar para construir uma relação de cooperação com outras empresas",
+     "pagina": "p. 32"
+    },
+    {
+     "trecho": "Dispusemos esses oito eixos de modo a formarem um octógono, e essa escolha não foi por acaso.",
+     "pagina": "p. 33"
+    },
+    {
+     "trecho": "implementar uma operação via canais exige pensar a relação com parceiros de maneira 360º",
+     "pagina": "p. 34"
+    },
+    {
+     "trecho": "Outra análise importante que a visão em Octo nos traz é entender quais frentes precisam de mais energia e esforço para que a estratégia de ecossistema possa ter mais impacto no mercado.",
+     "pagina": "p. 35"
+    },
+    {
+     "trecho": "ter a execução fundamentada em terceiros já na largada pode até fazer uma tese bacana dar com os burros na água.",
+     "pagina": "p. 26"
+    },
+    {
+     "trecho": "uma estratégia de parceiros deve começar a ser implementada a partir da segunda fase, quando o produto e o mercado estão validados",
+     "pagina": "p. 21"
+    }
+   ]
+  },
+  {
+   "nome": "Jornada do Parceiro em sete etapas e onboarding por marcos de 30, 60, 90 e 120 dias (Partner Journey)",
+   "livro": "ecossistema-de-parceiros",
+   "paginas": "p. 41 a 47; p. 89 a 104",
+   "componentes": [
+    {
+     "nome": "Jornada do cliente em ampulheta (Winning by Design)",
+     "descricao": "Funil espelhado em forma de gravata borboleta: lado de aquisição (consciência, educação, seleção), ponto central de compra e lado de expansão (onboarding, impacto, crescimento). A compra deixa de ser o fim e vira o início de um compromisso recorrente."
+    },
+    {
+     "nome": "Etapa 1, Consciência",
+     "descricao": "O parceiro ainda não entende bem o problema. O programa ajuda a descobrir: como aumentar receita ou recorrência, ganhar produtividade, melhorar a experiência do cliente final, ampliar portfólio, trocar com pares."
+    },
+    {
+     "nome": "Etapa 2, Educação",
+     "descricao": "O parceiro já conhece o problema e procura soluções. Participar de um programa de parcerias é uma das saídas possíveis."
+    },
+    {
+     "nome": "Etapa 3, Seleção",
+     "descricao": "O parceiro compara programas: qual canal é atrativo, qual a dedicação necessária (tempo, investimento) para entrar."
+    },
+    {
+     "nome": "Etapa 4, Decisão de ingresso",
+     "descricao": "Ponto central da jornada. Marca a transição de aquisição para expansão e é a assinatura do compromisso mútuo."
+    },
+    {
+     "nome": "Etapa 5, Onboarding",
+     "descricao": "Primeiro ciclo completo do que se espera do parceiro, com marcos de sucesso. Para o VAR, só termina com a ativação do primeiro cliente, e não com a conclusão de horas de treinamento."
+    },
+    {
+     "nome": "Etapa 6, Impacto",
+     "descricao": "O parceiro vê os primeiros resultados prometidos e a geração conjunta de negócios passa a ser recorrente. O momento de sucesso vira moeda de reengajamento."
+    },
+    {
+     "nome": "Etapa 7, Crescimento",
+     "descricao": "A parceria vira parte da estratégia do parceiro: novas ofertas conjuntas, outros modelos de parceria, incentivos diferenciados."
+    },
+    {
+     "nome": "Plano de 30, 60, 90 e 120 dias",
+     "descricao": "Marcos ligados ao domínio da solução e aos resultados esperados. O foco inicial é o parceiro ganhar dinheiro nos primeiros 90 dias."
+    },
+    {
+     "nome": "Quatro interações de onboarding",
+     "descricao": "Alinhamento (conhecer o negócio, plano de trabalho, ferramentas), Vendas (mapear oportunidades, diagnóstico, proposta), Produto (funcionalidades, planos, concorrentes, cases) e Pós-vendas (implantação, métricas, atendimento)."
+    },
+    {
+     "nome": "Cinco componentes da capacitação",
+     "descricao": "Conhecimento sobre a empresa, conhecimento técnico, validações da aprendizagem, métricas e sistemas, recursos disponíveis. Funcionam como checklist do plano."
+    },
+    {
+     "nome": "Um tópico por período",
+     "descricao": "Em vez de pílulas soltas, um tópico por semana com objetivo claro e validação (recomendação de Jacco van der Kooij estendida a parceiros)."
+    },
+    {
+     "nome": "Período starter e handoff (RD Station)",
+     "descricao": "Seis meses de onboarding mês a mês, com papéis definidos: o implementador faz a ativação da primeira conta e entrega para o atendimento contínuo; um farmer starter cuida das primeiras vendas; scorecard acompanha tudo."
+    }
+   ],
+   "logica": "O parceiro é uma empresa com sua própria jornada de decisão, e tratar a entrada como um evento (assinatura) é o erro mais comum. Espelhar a jornada do cliente dá a cada etapa uma pergunta, um responsável e um critério de saída. O marco central é a ativação por resultado: o parceiro só está onboardado quando entregou o primeiro resultado real, o que evita parceiros assinados e inativos. O plano de 30, 60, 90 e 120 dias converte entusiasmo inicial em hábito antes que a atenção do parceiro se disperse, e o handoff para o ritmo contínuo libera o gerente para novos parceiros.",
+   "aplicacao_wise": "As sete etapas se mapeiam direto no caso Wise. Consciência e educação ocorrem nos eventos (Expo+Indústria), em entidades e em indicações de rede; seleção é a reunião de apresentação e a proposta; decisão de ingresso é a assinatura do contrato; onboarding são os 90 dias até a ativação, definida como primeira indicação no ICP que virou reunião; impacto é a primeira comissão e a primeira reunião de valor; crescimento é subir degraus (Prateleira de RFP, Base Ativa de 12 semanas, oferta conjunta, nível). Proposta, inferida do livro: manter a ativação em 90 dias e acrescentar um marco de 120 dias para o primeiro negócio fechado, porque o ciclo de uma consultoria é mais longo que o de uma indicação. Marcos sugeridos: D30 contrato, responsável nomeado, grupo de WhatsApp, link ativo e trilha de alinhamento; D60 primeira indicação qualificada pelo roteiro e ficha na Prateleira publicada; D90 ativação; D120 primeiro negócio ou decisão sobre a revisão de nível. Após a ativação o parceiro passa para o ritmo contínuo, como no handoff da RD.",
+   "impacto_modelo_de_negocio": "O programa passa a vender uma jornada de sucesso do parceiro e não só a comissão: cada etapa tem uma entrega da Wise e um resultado do parceiro. A ativação por resultado (primeira indicação no ICP que virou reunião) define quando um parceiro conta como parceiro, o que protege os indicadores e o tempo escasso do gerente. O programa deixa de ser medido por contratos assinados e passa a ser medido por parceiros ativados.",
+   "impacto_processos": [
+    {
+     "tipo": "reorganizar",
+     "nome": "Unificar o funil do parceiro na jornada de sete etapas",
+     "descricao": "Um único quadro por parceiro, com as sete etapas do livro nomeadas para a Wise (Conhecer, Entender, Avaliar, Assinar, Ativar, Gerar resultado, Crescer). Onboarding, indicações e ações conjuntas deixam de ter quadros próprios e passam a ser marcos e tarefas do card.",
+     "gatilho": "Redesenho do portal",
+     "entregas": "Quadro único de jornada e regras de passagem entre etapas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conduzir onboarding por marcos de 30, 60, 90 e 120 dias",
+     "descricao": "Plano padrão com quatro marcos, cada um com resultado esperado e tarefa associada. O card mostra o próximo marco e a data limite.",
+     "gatilho": "Assinatura do contrato",
+     "entregas": "Parceiro ativado em até 90 dias, primeiro negócio em até 120",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar a interação de alinhamento",
+     "descricao": "Conhecer o negócio do parceiro, confirmar o compromisso de tempo, nomear o responsável, combinar pontos de contato e criar o plano de trabalho de 90 dias.",
+     "gatilho": "D0 a D7 após a assinatura",
+     "entregas": "Plano de trabalho assinado, responsável nomeado, grupo de WhatsApp criado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar a interação de vendas",
+     "descricao": "Ensinar o roteiro de qualificação de indicação do ICP, o diagnóstico e como apresentar a Wise sem vender a consultoria. Executa quem conhece o ICP (consultor); o gerente registra.",
+     "gatilho": "D7 a D30",
+     "entregas": "Roteiro de indicação entendido, três nomes da carteira mapeados no ICP",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar a interação de produto",
+     "descricao": "Apresentar os serviços da Wise, Tríade e Swallow, quando indicar cada um, casos de sucesso e perguntas frequentes.",
+     "gatilho": "D14 a D45",
+     "entregas": "Material de produto entregue, trilha de produto concluída",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar a interação de pós-venda",
+     "descricao": "Explicar o que acontece com o cliente indicado, o SLA de resposta, a proteção de 180 dias e quando a comissão é paga.",
+     "gatilho": "D30 a D60",
+     "entregas": "Parceiro sabe o que esperar depois da indicação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Marcar o parceiro como ativado e fazer o handoff para o ritmo contínuo",
+     "descricao": "Ao ocorrer a primeira indicação no ICP que virou reunião, o card muda de Ativar para Gerar resultado, o parceiro recebe a comemoração e passa a ser acompanhado pela régua contínua.",
+     "gatilho": "Primeira reunião realizada por indicação no ICP",
+     "entregas": "Etapa atualizada, mensagem de reconhecimento, cadência contínua ativa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Tema da semana de capacitação",
+     "descricao": "Uma pauta temática por semana, igual para todos os parceiros em onboarding (por exemplo, semana do roteiro de indicação). Evita sessões individuais simultâneas e concentra o trabalho na terça de manhã.",
+     "gatilho": "Semanal",
+     "entregas": "Um tópico por semana, com mini validação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Dias até a ativação",
+     "descricao": "Tempo entre a assinatura e a primeira indicação no ICP que virou reunião. Meta de 90 dias; alerta em 60.",
+     "gatilho": "Calculado por parceiro e mediana por coorte",
+     "entregas": "Valor por parceiro e mediana",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros ativados sobre assinados",
+     "descricao": "Taxa de parceiros que atingiram a ativação em até 120 dias. É o indicador do eixo de onboarding do painel.",
+     "gatilho": "Mensal",
+     "entregas": "Percentual por coorte de assinatura",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Ampulheta deitada (gravata borboleta). À esquerda, três caixas encadeadas (Consciência, Educação, Seleção) afunilando até um losango central (Decisão de ingresso). À direita, três caixas que se alargam (Onboarding, Impacto, Crescimento). Sob a metade direita, uma régua de tempo com quatro marcas (D30, D60, D90, D120) e o rótulo ativação em D90. Setas curvas de retorno da etapa 7 para a etapa 1 representam o loop.",
+   "citacoes": [
+    {
+     "trecho": "Análoga à jornada do cliente, a jornada do parceiro é a evolução da empresa ao longo da parceria.",
+     "pagina": "p. 45"
+    },
+    {
+     "trecho": "o onboarding deve ser considerado finalizado depois da ativação do primeiro cliente e não apenas após o consumo de determinado volume de treinamentos",
+     "pagina": "p. 46"
+    },
+    {
+     "trecho": "Pegar atalhos no onboarding de seus parceiros é uma falsa economia.",
+     "pagina": "p. 90"
+    },
+    {
+     "trecho": "trace um processo que cubra ao menos os primeiros 30, 60, 90 e 120 dias",
+     "pagina": "p. 90"
+    },
+    {
+     "trecho": "certifique-se de que seu foco inicial seja garantir que eles ganhem dinheiro nos primeiros 90 dias",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "que os líderes de ecossistema foquem e selecionem apenas um tópico por período de tempo (uma semana, por exemplo)",
+     "pagina": "p. 98"
+    }
+   ]
+  },
+  {
+   "nome": "Perfil de Parceiro Ideal, scorecard e funil de recrutamento de cinco etapas (IPP, Scorecard and Recruitment Funnel)",
+   "livro": "ecossistema-de-parceiros",
+   "paginas": "p. 73 a 87",
+   "componentes": [
+    {
+     "nome": "Diagnóstico da base atual",
+     "descricao": "Quantos parceiros existem, quantos são ativos e quantos geram receita. O que se relaciona com receita é o volume de canais ativos e com boa performance, e não o de cadastrados."
+    },
+    {
+     "nome": "IPP em três passos",
+     "descricao": "O parceiro ideal é aquele com quem o cliente ideal quer comprar ou se relacionar; critérios objetivos e mensuráveis; alinhamento de valores e sinergia real de negócios."
+    },
+    {
+     "nome": "Lacunas da jornada do cliente",
+     "descricao": "Pergunta-chave: quais lacunas da jornada do cliente poderiam ser preenchidas ou potencializadas por parceiros? Define o modelo de parceria e o perfil."
+    },
+    {
+     "nome": "Critérios essenciais e desejáveis",
+     "descricao": "Duas categorias: recursos essenciais para entrar e recursos desejáveis, mas não decisivos. Exemplos: expertise da indústria, capacidade de prospecção e vendas, capacidade de atendimento, presença geográfica, plano de negócios."
+    },
+    {
+     "nome": "Critérios, não segmentos",
+     "descricao": "Em vez de olhar o segmento (contadores, agências, consultorias), pensar nos critérios de complementaridade; o segmento aparece como consequência."
+    },
+    {
+     "nome": "Scorecard",
+     "descricao": "Nota de 0 (ruim), 0,5 (intermediário) ou 1 (bom) por critério, com pesos, somada em uma nota por parceiro. Serve para priorizar atendimento de forma automática ou manual e para segmentar comunicação."
+    },
+    {
+     "nome": "Alinhamento de valores",
+     "descricao": "Ética e fit cultural como critério inegociável: se há barreira de valores, a sinergia fica prejudicada e o risco de reputação supera a oportunidade."
+    },
+    {
+     "nome": "Alinhamento na entrada",
+     "descricao": "Metas de longo prazo, a parceria como ferramenta-chave, investimento (inclusive de tempo, por exemplo oito horas por semana no primeiro mês) e plano de médio prazo em conjunto."
+    },
+    {
+     "nome": "Proposta como visão de negócios",
+     "descricao": "Vender uma estratégia de negócios, e não funcionalidades: aumento de receita, redução de custos, ampliação de mercado, diferencial competitivo, apoio e certificações."
+    },
+    {
+     "nome": "Funil de recrutamento",
+     "descricao": "Cinco etapas num pipeline simples, que pode viver no CRM: Pesquisa e Conexão, Qualificação, Diagnóstico e Solução, Fechamento e Nutrição (preparação para onboarding)."
+    },
+    {
+     "nome": "Lição do caso Omie",
+     "descricao": "A Omie acertou o IPP (contadores são o elo de confiança com a PME) mas errou o perfil de venda: contadores não eram vendedores. A solução foi rever papéis, com time próprio vendendo e franquias regionais recrutando contadores."
+    }
+   ],
+   "logica": "Sem um perfil explícito, o recrutamento vira volume de cadastros, a análise de resultado fica distorcida e o programa conclui erradamente que canal não funciona. O IPP faz para o parceiro o que o ICP faz para o cliente: dá critérios para dizer não e para saber por que um parceiro não performou (faltou apoio ou faltava fit). O scorecard transforma julgamento em número comparável e permite priorizar sem reunião. O funil curto, com etapas nomeadas, evita um processo de venda de parceiro mais complexo que o de cliente. O caso Omie mostra que o perfil precisa incluir capacidade de executar o papel que se espera, e não só acesso ao cliente.",
+   "aplicacao_wise": "O IPP da Wise vira dois perfis, um para parceria comercial (ERP, CRM, MES, SST, ESG, BPM, automação) e outro para entidades e feiras. Critérios essenciais sugeridos, a validar: carteira no ICP da Wise (indústrias), acesso ao decisor, responsável nomeado com tempo, ausência de conflito direto com Wise, Tríade ou Swallow, e valores compatíveis. Desejáveis: já faz eventos ou tem comunidade, programa de parceiros próprio, presença regional. O scorecard de 0 a 1 por critério ordena as cerca de 21 conversas atuais e sugere o nível inicial A, B ou C pelo potencial da carteira. O funil de cinco etapas assume o lugar do quadro de recrutamento: Conexão, Qualificação, Diagnóstico (reunião de apresentação com mapeamento da carteira), Fechamento (contrato) e Nutrição, que já é o início do onboarding. A lição da Omie se aplica: um parceiro pode ter confiança com a carteira e pouca disciplina de indicação, então a Wise empresta o roteiro de qualificação e participa da primeira conversa.",
+   "impacto_modelo_de_negocio": "A seleção passa a ser parte da proposta de valor: o programa é seletivo e diz não, o que protege o tempo do gerente e dá status a quem entra. A carteira no ICP, e não o porte da empresa parceira, define o potencial (nível). O parceiro entra sabendo o compromisso de tempo esperado, o que filtra interessados sem capacidade de execução.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o perfil de parceiro ideal por tipo de parceiro",
+     "descricao": "Escrever o IPP de cada tipo (software, serviço, entidade, feira) com critérios essenciais e desejáveis, motivo de exclusão e como cada critério é validado ao longo da jornada.",
+     "gatilho": "Antes da prospecção e revisão trimestral",
+     "entregas": "IPP por tipo, lista de critérios, regras de exclusão",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Calcular o scorecard do candidato",
+     "descricao": "Pontuar de 0 a 1 cada critério na qualificação, somar com pesos e registrar a nota e a data no card. A nota ordena a fila de contato e sugere o nível A, B ou C.",
+     "gatilho": "Fim da etapa de Qualificação",
+     "entregas": "Nota do scorecard e nível sugerido",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Redesenhar o funil de recrutamento nas cinco etapas do Octo",
+     "descricao": "Pesquisa e Conexão, Qualificação, Diagnóstico e Solução, Fechamento e Nutrição. Cada etapa com critério de saída, número máximo de tentativas de contato e prazo.",
+     "gatilho": "Redesenho do portal",
+     "entregas": "Funil de recrutamento com critérios de saída por etapa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Higienizar a base de parceiros",
+     "descricao": "Separar cadastrados de ativos, pausar quem não atende ao critério de ativação e registrar o motivo. Evita a distorção de achar que canal não funciona.",
+     "gatilho": "Mensal",
+     "entregas": "Lista de ativos, pausados e desligados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Alinhar o compromisso de tempo na entrada",
+     "descricao": "Dizer ao candidato quanto tempo se espera dele nos primeiros 30 dias e perguntar quem será o responsável. Registrar a resposta; a recusa é motivo de pausa.",
+     "gatilho": "Etapa de Diagnóstico e Solução",
+     "entregas": "Responsável nomeado e horas combinadas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Construir o pitch de valor do programa por tipo de parceiro",
+     "descricao": "Montar a proposta em seis perguntas: aumento de receita, redução de custos, ampliação de mercado, diferencial, apoio e certificações. Acrescentar o argumento da Prateleira de RFP e da Base Ativa.",
+     "gatilho": "Antes da reunião de apresentação",
+     "entregas": "Pitch por tipo, com exemplos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral do IPP",
+     "descricao": "Comparar as notas de entrada com os resultados e incluir ou retirar critérios, como fez a RD Station ao descobrir comportamentos comuns aos parceiros de sucesso.",
+     "gatilho": "Trimestral",
+     "entregas": "IPP revisado e versionado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Conversão por etapa do funil de recrutamento",
+     "descricao": "Percentual de passagem entre etapas e tempo médio em cada uma. Orienta onde gastar tempo e se o IPP está bom.",
+     "gatilho": "Mensal",
+     "entregas": "Taxas por etapa e idade média dos cards",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros ativos",
+     "descricao": "Contagem de parceiros que atingiram a ativação, e não de assinados ou cadastrados. Um novo parceiro só entra na contagem depois da primeira indicação que virou reunião.",
+     "gatilho": "Mensal",
+     "entregas": "Número de ativos e série histórica",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Funil horizontal de cinco caixas (Pesquisa e Conexão, Qualificação, Diagnóstico e Solução, Fechamento, Nutrição). Acima, uma peneira com três filtros: lacuna na jornada do cliente, critérios essenciais e valores. Abaixo, uma tabela de scorecard com critérios nas linhas, notas 0, 0,5 e 1 nas colunas e a soma ponderada à direita. Uma seta liga a nota ao nível sugerido A, B ou C.",
+   "citacoes": [
+    {
+     "trecho": "O que está diretamente relacionado à receita é o volume de canais ativos e com boa performance.",
+     "pagina": "p. 74"
+    },
+    {
+     "trecho": "Se o parceiro não estiver diretamente interessado no mesmo público que sua empresa, as prioridades vão se desalinhar em algum momento",
+     "pagina": "p. 76"
+    },
+    {
+     "trecho": "Na nossa visão, em vez de olhar para o segmento fim, vale mais a pena pensar nos critérios que podem trazer maior assertividade na complementaridade da sua solução.",
+     "pagina": "p. 77"
+    },
+    {
+     "trecho": "Uma forma de avaliar os canais é atribuir uma pontuação para identificar quais potenciais parceiros estão mais preparados para entrar e performar no programa e priorizar o atendimento de forma automática ou manual.",
+     "pagina": "p. 78"
+    },
+    {
+     "trecho": "o programa de parcerias deve ser pensado como a venda de uma estratégia de negócios.",
+     "pagina": "p. 81"
+    },
+    {
+     "trecho": "uma visão simples de pipeline funciona para organizar as oportunidades de parceria e fechamentos de contrato.",
+     "pagina": "p. 82"
+    }
+   ]
+  },
+  {
+   "nome": "Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e níveis (MVCP, Value Canvas and Tiers)",
+   "livro": "ecossistema-de-parceiros",
+   "paginas": "p. 113 a 115; p. 127 a 139",
+   "componentes": [
+    {
+     "nome": "Primeira versão como MVP controlado",
+     "descricao": "O primeiro programa é um teste com poucos participantes, para aprender sobre desafios e sobre a infraestrutura interna necessária antes de crescer."
+    },
+    {
+     "nome": "MVCP, programa mínimo viável",
+     "descricao": "Minimum Viable Channel Program: o que pode ser feito mais rápido, com menor investimento e que prova valor. Não é preciso uma universidade de parceiros no dia zero, mas um bom onboarding é crítico."
+    },
+    {
+     "nome": "Proposta de valor do programa",
+     "descricao": "Quatro traços: reflete o cenário do parceiro, é tangível, promove crescimento mútuo e fortalece a relação. Modelos baseados só em comissão podem ser limitantes."
+    },
+    {
+     "nome": "Canvas da proposta de valor",
+     "descricao": "Pirâmide preenchida da base para o topo: valor desejado (por que a empresa busca parceiros), oferta de valor (o ganho do parceiro), atividade de transferência (o que cada um faz) e valor criado (resultado para o cliente final)."
+    },
+    {
+     "nome": "Três fontes de valor para o parceiro",
+     "descricao": "Geração de receita (comissão mais demanda de volta), redução de custos (know-how e ferramentas) e melhoria da experiência do cliente (certificações, boas práticas)."
+    },
+    {
+     "nome": "Remuneração",
+     "descricao": "Por receita gerada (percentual ou fixo), por margem ou escalonada; recorrente ou única (upfront). Em afiliados, comissão menor porque a empresa ainda faz todo o processo comercial."
+    },
+    {
+     "nome": "Incentivo de marketing (MDF)",
+     "descricao": "Verba pré-destinada a gerar negócios, fixa (condicionada a requisitos) ou percentual da receita gerada, sempre com prestação de contas."
+    },
+    {
+     "nome": "Três níveis",
+     "descricao": "Nível 1 (entrou e precisa de assistência), nível 2 (certa maturidade), nível 3 (maior performance e independência). Quanto mais simples, melhor; melhores benefícios só no nível 3."
+    },
+    {
+     "nome": "Três grupos de critérios de qualificação",
+     "descricao": "Desempenho (indicadores mensais do modelo: afiliado gera oportunidades, revendedor receita), técnico (treinamentos, certificações) e jurídico (contrato e regras, de natureza binária)."
+    },
+    {
+     "nome": "Cuidados com os níveis",
+     "descricao": "Regras simples (um parceiro consegue explicá-las a outro), sem zigue-zague (carência antes de rebaixar), critérios atingíveis e revistos a cada trimestre, e relação entre critério e benefício como CAC versus LTV."
+    },
+    {
+     "nome": "Distribuição 5, 15 e 80",
+     "descricao": "5% de parceiros top, 15% potenciais top e 80% menos maduros ou menos ambiciosos. Recursos caros e personalizados vão para o topo; a base recebe recursos online e comunidade."
+    },
+    {
+     "nome": "Diferenciação, engajamento e colaboração",
+     "descricao": "Três fases de maturidade do programa (Openview): como o programa se destaca, como o parceiro se envolve e como as duas empresas trabalham juntas."
+    }
+   ],
+   "logica": "Um programa grande demais antes de provar valor consome o que a empresa não tem: tempo, margem e credibilidade. O MVCP pergunta qual é o mínimo que prova a tese. O canvas obriga a escrever a oferta do ponto de vista do parceiro, e não da empresa. Os níveis funcionam como incentivo (o parceiro vê o caminho) e como controle de investimento (os melhores benefícios só são pagos depois do resultado). Usar os mesmos critérios de recrutamento e de evolução evita um segundo sistema de regras. A régua de critério e benefício igual a CAC e LTV impede que o programa gaste mais com parceiros do que eles devolvem.",
+   "aplicacao_wise": "O MVCP da Wise é o mínimo de cada um dos três pilares que entram juntos desde o primeiro parceiro: na Prateleira, ficha do parceiro e ao menos três opções por categoria; na Base Ativa, um ciclo de 12 semanas conduzido com um parceiro piloto; nas indicações, link exclusivo, registro, SLA e proteção de 180 dias. O resto (universidade, certificação formal, premiações) fica para depois. A comissão (40% da primeira mensalidade ao parceiro e 10% ao gerente na Wise Makers e na Tríade; 6% e 2% na Swallow) é uma comissão por receita, única e sem escalonamento, e em LTV equivale a algo entre 3% e 5%. O livro diz que isso é insuficiente como proposta de valor, então o canvas deve explicitar os outros ganhos: demanda de volta pela Prateleira, comunidade e evento pela Base Ativa, selo e trilhas. Os níveis A, B e C (potencial da carteira) coexistem com os níveis de maturidade 1, 2 e 3 do Octo (resultado): o primeiro dá o teto, o segundo diz se o parceiro está chegando lá. Critérios de qualificação: desempenho (indicações no ICP que viraram reunião), técnico (trilhas concluídas e responsável treinado), jurídico (contrato assinado e regras de proteção aceitas).",
+   "impacto_modelo_de_negocio": "A remuneração deixa de ser o centro da oferta. O programa vende acesso a demanda (Prateleira), crescimento da base do parceiro (Base Ativa) e reconhecimento (nível e selo), com a comissão como parte. Benefícios e pacotes são liberados em degraus, depois da primeira ativação, para limitar o risco no nível de entrada. O custo do programa por nível passa a ser comparado ao retorno por nível.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o programa mínimo viável por pilar",
+     "descricao": "Para Prateleira de RFP, Base Ativa e Indicações por link, escrever o que é obrigatório no dia 1 e o que fica para o trimestre seguinte. Aprovar com o diretor.",
+     "gatilho": "Antes do primeiro contrato",
+     "entregas": "Escopo mínimo por pilar e lista do que fica fora",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Preencher o canvas da proposta de valor por tipo de parceiro",
+     "descricao": "Montar a pirâmide da base para o topo: valor desejado pela Wise, oferta ao parceiro, atividades de cada lado e valor para o cliente final. Atualizar a cada trimestre.",
+     "gatilho": "Início do programa e revisão trimestral",
+     "entregas": "Canvas por tipo de parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Verificar os critérios de qualificação de desempenho, técnico e jurídico",
+     "descricao": "Para cada parceiro, conferir os três grupos: indicações no ICP que viraram reunião, trilhas concluídas e responsável treinado, contrato e regras aceitos. O jurídico é binário.",
+     "gatilho": "Revisão trimestral de nível",
+     "entregas": "Resultado dos três grupos por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão trimestral de níveis",
+     "descricao": "Subir imediatamente quem atinge os critérios, dar carência de um trimestre antes de rebaixar, ajustar a régua se muitos sobem fácil ou nenhum sobe.",
+     "gatilho": "Trimestral",
+     "entregas": "Lista de movimentos de nível e ajuste de critérios",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Ligar nível A, B ou C ao potencial e a maturidade 1, 2 ou 3 ao resultado",
+     "descricao": "Manter duas colunas no card: potencial da carteira no ICP (A, B, C) e maturidade por resultado (1, 2, 3). O pacote de benefícios depende do potencial; a atenção do gerente depende da maturidade.",
+     "gatilho": "Qualificação e revisão trimestral",
+     "entregas": "Duas marcações separadas e regras de uso",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Calcular o retorno por nível",
+     "descricao": "Comparar o custo dos benefícios e das horas gastas em cada nível com a receita originada. Segue a lógica de CAC versus LTV do livro.",
+     "gatilho": "Trimestral",
+     "entregas": "Tabela custo versus retorno por nível",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar o ganho do parceiro além da comissão",
+     "descricao": "Anotar por parceiro o que ele ganhou em demanda, evento, selo e comunidade, para alimentar o argumento de valor e o P&L do parceiro.",
+     "gatilho": "Mensal",
+     "entregas": "Campo de ganhos no card",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros por nível e tempo em cada nível",
+     "descricao": "Distribuição entre A, B e C e entre maturidade 1, 2 e 3, com tempo médio em cada. Acompanha a hipótese 5, 15 e 80.",
+     "gatilho": "Mensal",
+     "entregas": "Distribuição e tempo médio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Custo do programa por indicação ativa",
+     "descricao": "Horas do gerente, custo de eventos e comissões divididos pelas indicações no ICP que viraram reunião.",
+     "gatilho": "Trimestral",
+     "entregas": "Valor por trimestre",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Pirâmide de quatro andares do canvas, preenchida da base para o topo: valor desejado, oferta de valor, atividade de transferência, valor criado. Ao lado, escada de três degraus (nível 1, 2, 3) com a lista de benefícios crescente, e uma matriz 3 por 3 cruzando potencial (A, B, C) com maturidade (1, 2, 3). Um selo de carência de um trimestre aparece na seta de descida.",
+   "citacoes": [
+    {
+     "trecho": "a primeira versão do programa será o seu MVP e deve ser um teste controlado, com um número reduzido de participantes",
+     "pagina": "p. 127"
+    },
+    {
+     "trecho": "modelos de parceria que são baseados apenas em comissionamento podem ser limitantes",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "não é necessário ter uma universidade para os parceiros no dia zero, mas um bom onboarding é crítico.",
+     "pagina": "p. 132"
+    },
+    {
+     "trecho": "uma forma simples e eficiente de operar essa estratégia é utilizar três níveis",
+     "pagina": "p. 134"
+    },
+    {
+     "trecho": "Você sabe que as regras do seu programa estão claras quando um parceiro consegue explicá-las para outros parceiros.",
+     "pagina": "p. 136"
+    },
+    {
+     "trecho": "A relação entre critério e benefício é muito semelhante à relação de CAC versus LTV.",
+     "pagina": "p. 137"
+    }
+   ]
+  },
+  {
+   "nome": "Time de Parceiros e Gestão do Ecossistema: funções, DRE do canal, fases e painel por fase (Partner Team and Ecosystem Management)",
+   "livro": "ecossistema-de-parceiros",
+   "paginas": "p. 148 a 162; p. 168 a 193",
+   "componentes": [
+    {
+     "nome": "Funções do time de canais",
+     "descricao": "SDR (gera oportunidades qualificadas), hunter (converte candidatos em parceiros), farmer ou channel account manager (gera vendas da carteira e faz parceiros evoluírem), channel marketing, CS para clientes de parceiros, partner enablement, partner support e channel operations."
+    },
+    {
+     "nome": "Começar enxuto",
+     "descricao": "O time inicial tem uma ou duas pessoas, hunter e farmer na mesma pessoa, com perfil empreendedor. Centralizar atividades-chave em poucas pessoas encurta o ciclo de feedback."
+    },
+    {
+     "nome": "Posição no organograma",
+     "descricao": "Área independente (orçamento próprio, mais custo) ou dentro de uma área funcional (mais agilidade, menos orçamento). Erro comum: usar vendedor de venda direta como ponta do canal."
+    },
+    {
+     "nome": "POD de parcerias",
+     "descricao": "Equipe de três funções (hunter, farmers, CS) que responde por uma entrega completa com autonomia. Relevante só em escala."
+    },
+    {
+     "nome": "Plano financeiro em página em branco",
+     "descricao": "O canal tem projeção própria, separada do core, com rateio de recursos compartilhados. Responde se o negócio para em pé, quando há breakeven e payback."
+    },
+    {
+     "nome": "DRE do canal",
+     "descricao": "Receita líquida (própria versus via parceiros), COGS (inclui atendimento e implementação terceirizados), margem bruta, OPEX (S&M com incentivos e time de parceiros, R&D, G&A) e EBITDA."
+    },
+    {
+     "nome": "Quatro fases e expectativa financeira",
+     "descricao": "Experimentação (poucos parceiros, custo alto, EBITDA negativo), Tração (valida operação), Crescimento acelerado (escala e melhora margens) e Otimização (parceiros mais experientes exigem menos, margem pode superar o canal principal)."
+    },
+    {
+     "nome": "KPIs por fase",
+     "descricao": "Fase 1: satisfação do cliente e do parceiro, adoção. Fase 2: churn e conversão de SAL em venda. Fase 3: indicadores por etapa da jornada do cliente (atração, conversão, ativação, retenção e expansão). Fase 4: participação na carteira do parceiro, cobertura de território, parceiros multiprogramas."
+    },
+    {
+     "nome": "KPIs da base de parceiros",
+     "descricao": "Funil de aquisição de parceiros (novo parceiro só depois da primeira venda), churn de parceiros com processo formal de desligamento e base segmentada por ciclo de vida e performance."
+    },
+    {
+     "nome": "Ferramentas em camadas",
+     "descricao": "Sistemas de processo (CRM, ERP), sistemas de dados (BI) e PRM voltado ao parceiro. Primeiro definir processo e programa, depois a ferramenta, de forma incremental."
+    },
+    {
+     "nome": "Cockpit da Caju",
+     "descricao": "Mais de 60 indicadores condensados em 6 por fase da jornada do parceiro (Aquisição, Onboarding, Ongoing, Produção), cada fase com um ou dois KPIs com meta, revisto a cada trimestre."
+    },
+    {
+     "nome": "Channel Market Fit",
+     "descricao": "Marco da Caju: a primeira pessoa que atende parceiros gerencia uma carteira maior que a de quem atende clientes diretos, com demanda crescente. Só então se amplia o investimento."
+    }
+   ],
+   "logica": "Misturar o canal novo no resultado da empresa faz o canal parecer ruim, porque ele está em outra fase e tem outro ritmo de margem. Uma DRE própria isola o efeito, mostra quanto investir até o ponto de equilíbrio e permite comparar com outros canais. Um painel por fase evita a armadilha de medir tudo ao mesmo tempo: no início importa validar a tese, depois a eficiência do funil, depois a escala. Poucas métricas bem escolhidas e revistas a cada trimestre mantêm o time alinhado, e o time começa pequeno porque a função existe antes de a escala justificar a pessoa.",
+   "aplicacao_wise": "O Gerente de Parcerias acumula, por necessidade, os chapéus de hunter, farmer, enablement, suporte e channel ops, e isso é coerente com o livro para a fase 1, mas a carga é de 12 horas por mês. Proposta: tratar cada chapéu como um bloco de tarefas na terça de manhã, com horas medidas. O DRE do canal Wise vive em planilha própria: receita é a primeira mensalidade (e o LTV) de clientes originados por parceiros; custo de entrega é COGS; comissões ao parceiro (40%) e ao gerente (10%), horas do gerente, eventos da Base Ativa e trilhas são S&M. Com mensalidade média de R$ 5.500 (valor do playbook do programa), a primeira mensalidade gera R$ 2.200 de comissão ao parceiro e R$ 550 ao gerente. Na fase 1 espera-se EBITDA negativo, e o critério de sucesso é validar a tese, não a margem. O cockpit tem quatro blocos (Aquisição, Onboarding, Ongoing, Produção) com até seis indicadores cada, dois deles com meta, e substitui a leitura por quadro individual.",
+   "impacto_modelo_de_negocio": "O programa passa a ser gerido como unidade de negócio com resultado próprio, e não como custo diluído nas áreas. A pergunta da fase 1 muda de quanto faturou para quanto aprendemos e quanto custa chegar à tração. A decisão de ampliar (mais horas do gerente, segunda pessoa) fica amarrada a marcos mensuráveis, como o Channel Market Fit.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Operar o resultado do canal",
+     "descricao": "Mantém a DRE do canal, o rateio de horas e o painel por fase. É o macroprocesso que dá as razões para ampliar ou frear o programa.",
+     "gatilho": "Fechamento mensal",
+     "entregas": "DRE do canal, rateio e painel atualizados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Fechar a DRE do canal",
+     "descricao": "Preencher receita líquida originada por parceiros, COGS, margem bruta, S&M (comissões, horas, eventos, trilhas), G&A rateado e EBITDA. Comparar com a projeção da fase.",
+     "gatilho": "Até o 5º dia útil do mês",
+     "entregas": "DRE mensal e leitura do desvio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Ratear as horas do Gerente de Parcerias por chapéu",
+     "descricao": "Registrar horas por função (hunter, farmer, enablement, suporte, operações) e por parceiro quando possível. Ajuda a ver qual função consome o tempo escasso.",
+     "gatilho": "Semanal",
+     "entregas": "Horas por função e custo por indicação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Terça de parceiros",
+     "descricao": "Bloco semanal fixo com ordem de chapéus: operações do canal (painel e exceções), farmer (parceiros que pedem ação), hunter (candidatos), enablement (tema da semana). O portal mostra só as tarefas do bloco.",
+     "gatilho": "Toda terça de manhã",
+     "entregas": "Lista de tarefas concluídas e exceções tratadas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Cockpit trimestral",
+     "descricao": "Revisão do conjunto de até seis indicadores por fase, com meta em um ou dois, e decisão de trocar ou retirar indicadores que não orientam decisão.",
+     "gatilho": "Trimestral",
+     "entregas": "Cockpit atualizado e decisões registradas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Desligar um parceiro e encerrar a relação sem fricção",
+     "descricao": "Formalizar critérios de inatividade e de perfil inadequado, avisar o parceiro, encerrar benefícios, respeitar a proteção de 180 dias e garantir que o cliente siga atendido pela Wise.",
+     "gatilho": "Parceiro dormente fora da régua de resgate ou perfil inadequado",
+     "entregas": "Parceiro desligado, motivo registrado, indicações em curso preservadas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Decidir a passagem de fase do canal",
+     "descricao": "Checar se a fase atual cumpriu sua tese (experimentação, tração, crescimento, otimização) antes de ampliar investimento. Usa o Channel Market Fit como um dos sinais.",
+     "gatilho": "Trimestral",
+     "entregas": "Decisão de manter ou mudar de fase",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Chapéus do Gerente de Parcerias",
+     "descricao": "Hunter, farmer, enablement, suporte e operações do canal acumulados em uma pessoa na fase 1, com horas medidas. Separar quando a carga justificar uma segunda pessoa.",
+     "gatilho": "Permanente",
+     "entregas": "Registro de horas e de resultados por chapéu",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Receita originada por parceiro",
+     "descricao": "Primeira mensalidade e LTV estimado dos clientes vindos de indicações de cada parceiro. Indicador de topo da fase Produção.",
+     "gatilho": "Mensal",
+     "entregas": "Valor por parceiro e por nível",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Churn de parceiros",
+     "descricao": "Parceiros desligados ou dormentes sobre os ativos no período, com motivo. Complementa a base de parceiros qualificada.",
+     "gatilho": "Trimestral",
+     "entregas": "Taxa e motivos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Conversão de indicação em reunião e em negócio",
+     "descricao": "Percentual de indicações no ICP que viraram reunião e depois contrato. Equivale ao SAL em venda do livro.",
+     "gatilho": "Mensal",
+     "entregas": "Taxa por parceiro e geral",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Quatro colunas lado a lado representam as fases do painel (Aquisição, Onboarding, Ongoing, Produção). Cada coluna mostra um KPI com meta em destaque e até cinco indicadores menores. Abaixo, uma linha de tempo de quatro fases do canal (Experimentação, Tração, Crescimento, Otimização) com curva de EBITDA começando negativa. À direita, uma coluna com os cinco chapéus do gerente e as horas da terça de manhã.",
+   "citacoes": [
+    {
+     "trecho": "No início do programa, é preferível que atividades-chave estejam centralizadas em poucas pessoas para encurtar o ciclo de feedback e facilitar o progresso da operação.",
+     "pagina": "p. 158"
+    },
+    {
+     "trecho": "é colocar uma pessoa do time comercial, que é responsável por resultados de venda direta, como a ponta comercial com os parceiros.",
+     "pagina": "p. 161"
+    },
+    {
+     "trecho": "sugerimos que inicie as projeções do seu modelo operacional de canais em uma página em branco, independente.",
+     "pagina": "p. 170"
+    },
+    {
+     "trecho": "pode atrapalhar o foco da fase: validar suas teses.",
+     "pagina": "p. 176"
+    },
+    {
+     "trecho": "o time elencou uma versão resumida com os 6 principais indicadores de cada fase da jornada do parceiro, que geram o maior impacto nos outros objetivos.",
+     "pagina": "p. 191"
+    },
+    {
+     "trecho": "Crie uma estrutura de métricas sólida, mas não sobrecarregue a equipe com um grande número delas.",
+     "pagina": "p. 192"
+    }
+   ]
+  },
+  {
+   "nome": "O canal como modelo de negócio de terceiros: Find, Win, Make, Keep, Grow, níveis de contato e fases de desenvolvimento do canal (Channel as a Third-Party Business Model)",
+   "livro": "bech-partner-channels",
+   "paginas": "p. 37 a 53; p. 71 a 75",
+   "componentes": [
+    {
+     "nome": "Canvas do modelo de negócio e ambiente (Osterwalder)",
+     "descricao": "Nove blocos do modelo (perspectiva interna) e quatro forças do ambiente (perspectiva externa). Dá vocabulário comum para discutir o modelo com o parceiro."
+    },
+    {
+     "nome": "Canal como bloco do modelo: Find, Win, Make, Keep, Grow",
+     "descricao": "O trabalho do canal é encontrar, vencer, fazer, manter e fazer crescer clientes felizes. Quem delega esses passos a terceiros introduz um modelo de negócio independente dentro do próprio."
+    },
+    {
+     "nome": "Duas propostas de valor opostas",
+     "descricao": "O fornecedor de software vive de liderança em produto e volume; o parceiro independente vive de intimidade com o cliente e de maximizar o valor do cliente ao longo da vida (CLV). Por isso os modelos são diferentes e precisam ser alinhados, e não impostos."
+    },
+    {
+     "nome": "Níveis de contato (touch levels)",
+     "descricao": "Sem ou pouco contato (venda online, não precisa de canal), contato médio (vendedor em campo, ciclo menor que 12 meses, zona natural do canal) e contato alto (ciclo maior que 12 meses, poucos negócios, canal deixa de ser viável)."
+    },
+    {
+     "nome": "Três estágios de desenvolvimento do canal",
+     "descricao": "Modo inicial (o fornecedor precisa mais dos parceiros que eles dele, cada recrutamento é artesanal), modo de crescimento (limiar simples de entrada, o tempo mostra quem cresce) e modo maduro (a maior parte da receita vem de parceiros existentes)."
+    },
+    {
+     "nome": "Programa como suporte da cadeia de valor",
+     "descricao": "Cada elemento do programa deve apoiar um passo do processo de aquisição de clientes (Find, Win, Make, Keep, Grow, mais Support). O programa deve ser justo e equilibrado, e não um almoço grátis nem um centro de lucro."
+    },
+    {
+     "nome": "Find e Win",
+     "descricao": "Find: no início é a empresa que lidera a geração de leads com o parceiro, e não o contrário. Win: apoio nos primeiros negócios, ferramentas de venda e um preço para o apoio, melhor na forma de margem menor do que pagamento em dinheiro."
+    },
+    {
+     "nome": "Make",
+     "descricao": "Garantir que o parceiro entregue produto mais serviços de forma que o cliente vire referência. Quando a capacidade do canal é o gargalo, investir junto na formação de recursos."
+    },
+    {
+     "nome": "Keep e Grow",
+     "descricao": "O foco sai do cliente individual e vai para o mercado: criar um ecossistema em que clientes recebem valor adicional de terceiros. Produtos de ecossistema são pegajosos e têm alta retenção de clientes e de parceiros."
+    },
+    {
+     "nome": "Incentivos",
+     "descricao": "Três regras: simples e estáveis; recompensar pessoas e não empresas; o parceiro vive de rodar um negócio em torno do produto, não só da margem. Margem baixa, MDF dividido 50 a 50, SPIF para vendedores do parceiro, funded heads para parceiros importantes."
+    },
+    {
+     "nome": "Níveis Platinum, Gold e Silver só depois",
+     "descricao": "No início todos querem o nível mais alto e o resultado é um canal só de parceiros ouro, com rebaixamento difícil depois. Começar com estrutura simples e diferenciar quando o desempenho divergir."
+    },
+    {
+     "nome": "Desenvolvimento de negócio e eventos",
+     "descricao": "Troca de boas práticas, ideias e conexão entre parceiros pesa mais do que margem, MDF e SPIF. Eventos presenciais criam pertencimento e premiações geram motivação."
+    },
+    {
+     "nome": "Acordo de parceria curto e igual para todos",
+     "descricao": "Documento jurídico curto, idêntico para todos e raramente alterado; pode ser usado como diferencial de facilidade para fazer negócio."
+    }
+   ],
+   "logica": "O erro típico é tratar o parceiro como força de vendas barata. Ele é um negócio independente, com ambição, recursos e cliente próprios, e só faz o que cabe no próprio modelo. Quando a empresa enxerga os dois modelos lado a lado, descobre que o programa precisa apoiar exatamente os passos que pede ao parceiro, e nada além. A tabela de níveis de contato mostra onde o canal é viável. A sequência de estágios explica por que o programa e o perfil do gerente precisam mudar com o tempo. A ideia de ecossistema no Keep e no Grow é a mais importante: o parceiro cresce por acréscimos ao redor do produto, não pela margem.",
+   "aplicacao_wise": "A inversão do caso Wise é instrutiva. Para o parceiro (ERP, CRM, MES e outros), a carteira de indústrias é o ativo; para a Wise, a venda de consultoria também é de contato médio, o que torna o canal viável desde que o ciclo fique abaixo de 12 meses (hipótese a confirmar). O parceiro Wise executa apenas o Find (indicação por link exclusivo) e, na Base Ativa, o Keep e o Grow da própria carteira; a Wise faz Win e Make. A Prateleira de RFP é um produto de ecossistema no sentido de Bech: a Wise oferece à carteira dela fornecedores parceiros, o que cria demanda de volta para o parceiro e retenção para as duas partes. No estágio atual (modo inicial, nenhum parceiro), o livro orienta a liderar o Find (eventos, Expo+Indústria, conteúdo) em vez de esperar que os parceiros tragam a demanda, a oferecer apoio no Win nos primeiros negócios e a não complicar com níveis de benefício. Em Bech, a margem é o menor atrativo: a comissão de 40% da primeira mensalidade, equivalente a uma taxa de indicação, tem de ser acompanhada de valor próprio.",
+   "impacto_modelo_de_negocio": "O programa é descrito como a camada de parceiros dentro do modelo de negócio da Wise, com proposta de valor do parceiro separada da proposta ao cliente. A Prateleira de RFP e a Base Ativa viram o Keep e o Grow do ecossistema, e a comissão fica como incentivo de indicação. Cada elemento do programa passa a ter de justificar qual passo da cadeia apoia. O canal é tratado como investimento de tempo e paciência, e não como atalho de receita.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear a cadeia Find, Win, Make, Keep, Grow e o papel do parceiro em cada passo",
+     "descricao": "Desenhar, por tipo de parceiro, quem faz o quê: Find (link, eventos), Win (Wise comercial), Make (consultoria), Keep (comunidade e Prateleira), Grow (Base Ativa). Cada tarefa do portal aponta para um passo.",
+     "gatilho": "Antes do primeiro contrato e revisão semestral",
+     "entregas": "Mapa da cadeia por tipo de parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Alinhar cada pilar a um passo da cadeia",
+     "descricao": "Indicações por link apoiam o Find; Prateleira e Base Ativa apoiam o Keep e o Grow; o SLA de indicações apoia o Win. Pilar sem passo correspondente é revisto.",
+     "gatilho": "Redesenho da arquitetura",
+     "entregas": "Matriz pilar versus passo da cadeia",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Escrever a proposta de valor do parceiro",
+     "descricao": "Texto separado da proposta ao cliente, centrado em como o parceiro constrói negócio com a Wise (demanda de volta, comunidade, selo), e não nas virtudes da consultoria.",
+     "gatilho": "Antes das 21 conversas avançarem para proposta",
+     "entregas": "Proposta de valor do parceiro por tipo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Operar a Prateleira de RFP como produto de ecossistema",
+     "descricao": "Compor categorias com pelo menos três fornecedores, tratar sobreposição entre parceiros como vantagem, medir demanda enviada a cada ficha e retorno ao cliente da Wise.",
+     "gatilho": "Cliente da Wise com demanda de compra em uma categoria",
+     "entregas": "Lista de categorias, fichas, demandas enviadas e respostas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Apoiar o parceiro nos primeiros negócios (Win)",
+     "descricao": "Acompanhar as duas ou três primeiras indicações: preparar o roteiro, entrar na reunião quando útil e registrar o aprendizado para o próximo parceiro.",
+     "gatilho": "Primeira indicação do parceiro",
+     "entregas": "Indicação acompanhada e lição registrada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Medir ACAC e ACLV por origem",
+     "descricao": "Comparar o custo de aquisição e o valor de vida de clientes vindos de parceiros com os de outras origens. Dá a régua para decidir quanto o canal pode custar.",
+     "gatilho": "Trimestral",
+     "entregas": "ACAC e ACLV por origem",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão semestral do estágio do canal",
+     "descricao": "Verificar se o programa continua no modo inicial ou mudou para crescimento, e trocar o perfil de atuação do gerente e o rigor do recrutamento de acordo.",
+     "gatilho": "Semestral",
+     "entregas": "Estágio registrado e ajustes decididos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Manter o contrato de parceria curto e igual para todos",
+     "descricao": "Um único modelo por tipo de parceria (comercial e institucional), alterado raramente e comunicado com antecedência.",
+     "gatilho": "Mudança de regra do programa",
+     "entregas": "Contrato versionado e comunicado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de valor próprio do parceiro",
+     "descricao": "Parcela dos ganhos do parceiro que vêm de fontes além da comissão (demanda pela Prateleira, vendas à sua base na Base Ativa, eventos).",
+     "gatilho": "Trimestral",
+     "entregas": "Percentual por parceiro",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Faixa horizontal com cinco setas encadeadas (Find, Win, Make, Keep, Grow) e uma seta de suporte abaixo (Support). Abaixo de cada seta, dois quadros: o que a Wise faz e o que o parceiro faz. Ao lado, dois canvas pequenos, um da Wise e outro do parceiro, com o do parceiro encaixado no bloco Canal do primeiro. Eixos de tempo mostram os três estágios do canal (inicial, crescimento, maduro).",
+   "citacoes": [
+    {
+     "trecho": "We are introducing an independent third party business model into our own business model",
+     "pagina": "p. 40"
+    },
+    {
+     "trecho": "The job of the channel(s) is to find, win, make, keep and grow happy customers.",
+     "pagina": "p. 38"
+    },
+    {
+     "trecho": "Our independent channel partners will typically have a value proposition that is focused on the individual customer with the objective of optimizing the Customer Lifetime Value.",
+     "pagina": "p. 42"
+    },
+    {
+     "trecho": "Fundamentally the partner program must be designed to support precisely those activities that we ask our channel partners to assume responsibility for.",
+     "pagina": "p. 52"
+    },
+    {
+     "trecho": "Our channel partners should not only make a living from the margin associated with selling our product, but from running a business around our product adding extensions and offering auxiliary services.",
+     "pagina": "p. 71"
+    },
+    {
+     "trecho": "Start with a simple channel partner structure and then differentiate later as the partners actually prove to perform very differently.",
+     "pagina": "p. 73"
+    }
+   ]
+  },
+  {
+   "nome": "Recrutamento de parceiros como headhunting, workshop estratégico e P&L do parceiro (Recruitment, Strategy Workshop and Partner P&L)",
+   "livro": "bech-partner-channels",
+   "paginas": "p. 54 a 58; p. 76 a 89; p. 187 a 197",
+   "componentes": [
+    {
+     "nome": "Perfil de parceiro ideal como descrição de vaga",
+     "descricao": "Equivale ao anúncio de emprego. Três categorias: demográficas (consultáveis em fontes públicas), sociográficas (exigem conversar com pessoas-chave: proposta de valor, base instalada, estratégia) e psicográficas (várias entrevistas: experiência, ambição, cultura)."
+    },
+    {
+     "nome": "Armadilhas do perfil",
+     "descricao": "Pode identificar parceiros dos concorrentes, descrever um perfil que ninguém tem, ou deixar de fora os outliers, que não se encaixam no perfil mas têm liderança para crescer; estes precisam de visibilidade para nos encontrar e de benefício da dúvida."
+    },
+    {
+     "nome": "Processo de seis passos (mercado conhecido)",
+     "descricao": "Perfil, lista longa, ligação ao dono ou executivo com pacote de informação, reunião introdutória presencial, short list, assessment, carta de intenção, workshop executivo e assinatura."
+    },
+    {
+     "nome": "Lista longa de dez vezes a meta",
+     "descricao": "A lista longa deve ter pelo menos dez vezes o número de candidatos que se quer recrutar no período. Cerca de metade passa para a short list longa, que é visitada uma ou duas vezes."
+    },
+    {
+     "nome": "Assessment coletivo",
+     "descricao": "Reunir de três a quatro candidatos em um evento em que cada um apresenta como organizaria a ida ao mercado. Avalia o que é mais difícil: ambição, motivação e persistência da equipe dirigente."
+    },
+    {
+     "nome": "Carta de intenção e workshop estratégico",
+     "descricao": "Carta de intenção marca as datas do workshop executivo, de um a três dias, antes do contrato, que alinha objetivos, KPIs e plano. Se não houver acordo sobre o essencial, a parceria dificilmente funciona."
+    },
+    {
+     "nome": "Ciclo médio de recrutamento",
+     "descricao": "No modo inicial é um projeto de 6 a 9 meses: lista longa em 30 a 60 dias, primeiras entrevistas em até 30 dias, 1 a 3 meses para chegar à carta de intenção e cerca de 60 dias do workshop à assinatura."
+    },
+    {
+     "nome": "Dinâmica de recrutamento muda com a fase",
+     "descricao": "No crescimento, quem atende ao limiar assina sem entrevistas, assessment e workshop; o tempo mostra quem tem potencial. Recrutamento estratégico (marcas grandes) é conduzido por executivo sênior."
+    },
+    {
+     "nome": "Perímetro de defesa para inbound fora do foco",
+     "descricao": "Qualificar com rigor ou repassar a parceiros capazes os contatos de mercados fora do núcleo, porque o retorno raramente justifica o esforço."
+    },
+    {
+     "nome": "P&L do parceiro",
+     "descricao": "Resultado do modelo de negócio do parceiro com o produto: receita, COGS, OpEx e CapEx. Responde a oito perguntas (potencial em 3 a 5 anos, o que fazer, como ajudar, fatores críticos, tempo até a primeira receita, tempo até o lucro, investimento e caixa)."
+    },
+    {
+     "nome": "Sequência do P&L",
+     "descricao": "Proposta de valor, segmentos de clientes, atividades, recursos, OpEx e CapEx, receita, COGS, resultado. Curva de aprendizagem com ciclo de venda de 8, 6 e depois 5 meses."
+    },
+    {
+     "nome": "Vender primeiro à base instalada",
+     "descricao": "O parceiro se beneficia dramaticamente de vender primeiro à própria base. Se isso não é possível, o caso de negócio recebe sinal vermelho, porque é uma operação em terreno virgem."
+    }
+   ],
+   "logica": "Recrutar parceiro se parece com contratar um vendedor de alto desempenho, com a diferença de que o parceiro não recebe salário e precisa investir antes de ganhar. Por isso o programa e o perfil precisam existir antes da prospecção, e o processo precisa checar não só credenciais profissionais, mas ambição e persistência de quem dirige. O workshop com P&L antes do contrato força a conversa sobre dinheiro e prazo, que é onde as parcerias morrem depois. A lista longa grande protege contra a incerteza de qualquer parceiro individual. A mudança do rigor com a fase evita pagar o preço do modo inicial quando já há volume.",
+   "aplicacao_wise": "O recrutamento Wise é o modo inicial puro: nenhum assinado, 21 conversas, chegada orgânica. Bech aconselha lista longa de dez vezes a meta, então uma meta de dez assinaturas pediria cerca de 100 nomes (a meta atual de assinaturas até dezembro de 2026 conflita com o ciclo médio de 6 a 9 meses, e isso é um risco a decidir). A reunião de apresentação de 45 minutos da Wise corresponde à reunião introdutória; a nova peça é um workshop curto de P&L do parceiro antes do contrato (inferência minha, em escala reduzida: 90 minutos em vez de um a três dias), em que se estima quantos negócios saem da carteira dele no ICP, a comissão, a demanda recebida pela Prateleira e o tempo até a primeira receita. A regra da base instalada vira o critério central: carteira no ICP igual a zero é sinal vermelho. O assessment coletivo, com três ou quatro candidatos, pode virar uma turma de entrada que reduz o número de reuniões individuais. Entidades e feiras (Expo+Indústria) são outliers no sentido de Bech: não seguem o perfil comercial, mas têm audiência, e devem ter trilha própria e benefício da dúvida. Parceiros estratégicos (grandes ERPs) pedem executivo sênior, ou seja, entrada do diretor.",
+   "impacto_modelo_de_negocio": "A entrada do parceiro passa a depender de um caso de negócio escrito (P&L do parceiro), e não só de entusiasmo. O programa assume o ciclo de recrutamento real, com lista longa maior e expectativas de tempo explícitas. Parceiros institucionais e outliers ganham uma via própria, e a barra de entrada sobe ou desce conforme a fase do canal.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar e manter a lista longa de candidatos",
+     "descricao": "Reunir candidatos por categoria (ERP, CRM, MES, SST, ESG, BPM, automação, entidades) em bases públicas, LinkedIn e eventos, com meta de dez vezes o número de assinaturas desejado. É uma lista com filtros, e não um quadro de cards.",
+     "gatilho": "Contínuo, revisado mensalmente",
+     "entregas": "Lista longa com nota do scorecard e origem",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Qualificar o candidato por ligação ao dono ou executivo",
+     "descricao": "Primeiro contato direto com o decisor, envio do pacote de informação e pedido de pequena reunião. Só vira card quando há reunião marcada.",
+     "gatilho": "Candidato priorizado pelo scorecard",
+     "entregas": "Ligação registrada, pacote enviado, reunião marcada ou descarte",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar a reunião introdutória",
+     "descricao": "Apresentar a oportunidade, a Prateleira, a Base Ativa e as indicações, ouvir o negócio do parceiro e mapear a carteira no ICP. Equivale à reunião de 45 minutos.",
+     "gatilho": "Reunião marcada",
+     "entregas": "Carteira mapeada, nota do scorecard atualizada, decisão de seguir",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Conduzir uma turma de entrada (assessment coletivo)",
+     "descricao": "Reunir de três a quatro candidatos qualificados para apresentar o programa e ouvir como cada um organizaria sua ida ao mercado. Permite avaliar ambição e comparar candidatos sem repetir reuniões.",
+     "gatilho": "Três a quatro candidatos qualificados",
+     "entregas": "Candidatos avaliados, indicação de quem segue para carta de intenção",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Realizar o workshop de P&L do parceiro antes da assinatura",
+     "descricao": "Estimar com o parceiro receita, custos e investimento de tempo, tempo até a primeira receita, e responder às oito perguntas de Bech. Se não houver acordo sobre o essencial, a parceria não segue.",
+     "gatilho": "Carta de intenção assinada",
+     "entregas": "P&L simplificado e plano de 90 dias aceitos pelas duas partes",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Assinar a carta de intenção",
+     "descricao": "Registrar o interesse mútuo e marcar a data do workshop de P&L antes do contrato. Dá visibilidade ao compromisso sem custo jurídico.",
+     "gatilho": "Decisão de seguir após a reunião ou assessment",
+     "entregas": "Carta assinada e data do workshop",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Tratar inbound fora do foco com perímetro de defesa",
+     "descricao": "Aplicar filtro curto aos contatos de categorias ou regiões que o programa decidiu não abrir, repassar ou deixar em lista de espera. Preserva as horas do gerente.",
+     "gatilho": "Contato espontâneo fora do foco",
+     "entregas": "Resposta padrão, item na lista ou repasse",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Recrutar parceiro estratégico com o diretor",
+     "descricao": "Para marcas grandes ou parceiros que trariam acesso novo, conduzir como negociação executiva com caso de negócio e prazo maior. Lembrar o risco de ser engolido por um parceiro grande.",
+     "gatilho": "Candidato com carteira muito superior ao porte do programa",
+     "entregas": "Caso de negócio e decisão do diretor",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão mensal da lista longa",
+     "descricao": "Atualizar a lista com novos nomes, eliminar descartes e checar se há dez vezes a meta no período. Dura 30 minutos.",
+     "gatilho": "Primeira terça do mês",
+     "entregas": "Lista atualizada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Duração do ciclo de recrutamento",
+     "descricao": "Dias entre o primeiro contato e a assinatura, por etapa. Referência do livro: 6 a 9 meses no modo inicial.",
+     "gatilho": "Mensal",
+     "entregas": "Mediana por etapa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Cobertura da lista longa",
+     "descricao": "Candidatos na lista longa divididos pela meta de assinaturas do período. Alvo de 10 para 1.",
+     "gatilho": "Mensal",
+     "entregas": "Razão e série histórica",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Funil em formato de peneira com seis degraus decrescentes: lista longa (100), ligações (metade), reuniões introdutórias, short list, turma de entrada (3 a 4), assinatura. À direita do funil, a linha do tempo de 6 a 9 meses com marcadores de 30 a 60 dias, 30 dias, 1 a 3 meses e 60 dias. Abaixo, uma pequena tabela de P&L com anos 1, 2 e 3 e a marca de caixa mínimo no primeiro ano.",
+   "citacoes": [
+    {
+     "trecho": "In the channel partner recruitment context the job description is called the ideal partner profile and the opportunities and benefits we offer are called the channel partner program.",
+     "pagina": "p. 78"
+    },
+    {
+     "trecho": "The long-list should have at least ten times the number of candidates that we plan on recruiting in any given time frame in the area in question.",
+     "pagina": "p. 83"
+    },
+    {
+     "trecho": "Outliers are those partners that do not fit our ideal and rational profile, but nevertheless have the leadership potential to grow a business based on our products.",
+     "pagina": "p. 81"
+    },
+    {
+     "trecho": "In total we must expect that the channel partner recruitment in a new territory will take 6-9 months.",
+     "pagina": "p. 88"
+    },
+    {
+     "trecho": "It is recommended that this workshop be run before signing the channel partner agreement.",
+     "pagina": "p. 55"
+    },
+    {
+     "trecho": "the channel partner will benefit dramatically from selling to her installed base of customers first.",
+     "pagina": "p. 196"
+    }
+   ]
+  },
+  {
+   "nome": "Pirâmide do canal (estrelas 5%, potencial 15%, demais 80%), gerente de canal por estágio, PRM e portal (Channel Pyramid, Account Managers, PRM and Portal)",
+   "livro": "bech-partner-channels",
+   "paginas": "p. 74 a 75; p. 90 a 95",
+   "componentes": [
+    {
+     "nome": "Estrelas (cerca de 5%)",
+     "descricao": "Parceiros que crescem sozinhos acima do mercado, com liderança ambiciosa e gestão competente. O fornecedor deve estar integrado na proposta central deles e remover obstáculos rapidamente, com relação executiva, revisão estratégica anual e reuniões mensais ou trimestrais."
+    },
+    {
+     "nome": "Potencial de crescimento (cerca de 15%)",
+     "descricao": "Ambiciosos, geralmente ótimos em produto, com gestão de negócio imatura e atitude curiosa. Precisam de um programa de desenvolvimento disponível a todos, com critério de admissão e preço; o gerente atua como coach, com interações semanais."
+    },
+    {
+     "nome": "Os demais (cerca de 80%)",
+     "descricao": "Sem ambição ou com gestão fraca demais para que apoio externo mude o resultado. Representam receita, cobertura de mercado e mão de obra de subcontratação para os melhores, e devem ser geridos pelo portal, chat, central e e-mail."
+    },
+    {
+     "nome": "Reclassificação contínua",
+     "descricao": "Todos os parceiros começam pequenos; observar o progresso e decidir quando subir o investimento. Na fase inicial todos recebem atenção, e depois o apoio é graduado."
+    },
+    {
+     "nome": "Desenvolvimento por terceiros",
+     "descricao": "Programas caros de desenvolvimento de gestão podem ser desenhados e cofinanciados pelo fornecedor, mas executados por prestadores terceiros, que contratam diretamente com o parceiro."
+    },
+    {
+     "nome": "Sistema de gestão de relacionamento com parceiros (PRM)",
+     "descricao": "Equivalente ao CRM para parceiros. Primeiro definir os processos, depois o sistema. Leads alocados, propostas especiais, MDF e eventos só devem passar pelo PRM para criar hábito."
+    },
+    {
+     "nome": "Gerente de parceiros por estágio",
+     "descricao": "Início: vendedores empreendedores, os cowboys, que reinventam o programa. Crescimento: tenentes, que operam dentro do programa e reportam problemas globais. Maturidade: fábrica de gestão para os pequenos, consultores de negócio para o potencial e executivos para as estrelas."
+    },
+    {
+     "nome": "Portal do parceiro 24 horas",
+     "descricao": "Plataforma para comunicação um para muitos e um para um: desempenho, oportunidades, certificados, perfil, pedidos, base de conhecimento, roteiros e suporte. Sem portal moderno, a ambição de canal não é levada a sério."
+    },
+    {
+     "nome": "Eventos de parceiros",
+     "descricao": "Encontros presenciais periódicos para criar relações, energia, pertencimento e reconhecimento. No início, um evento anual com todos; depois divididos por região e função."
+    }
+   ],
+   "logica": "O comportamento dos parceiros é muito desigual e relativamente previsível: poucos crescem sozinhos, alguns crescem se ajudados e a maioria não cresce. A atenção humana é o recurso mais caro do programa e, se for distribuída por igual, é desperdiçada na maioria que não responde. A pirâmide diz onde colocar o tempo do gerente (nas estrelas e no potencial) e o que fazer com o resto (autoatendimento e comunidade). O PRM e o portal tornam esse autoatendimento viável e padronizam as respostas. O gerente também precisa mudar de perfil ao longo do tempo, porque começar, crescer e manter um canal exigem competências diferentes.",
+   "aplicacao_wise": "Com um gerente de 12 horas por mês, aplicar a pirâmide é decisivo. Os níveis A, B e C medem potencial pela carteira no ICP e não coincidem com estrelas, potencial e demais, que medem comportamento. Proposta: criar um segmento de atenção, revisto a cada trimestre, que determine quanto da atenção do gerente cada parceiro recebe (por exemplo, parceiros em estrela ou potencial no quadro individual semanal, demais no portal e no grupo de WhatsApp). Com poucos parceiros no início, as proporções de 5, 15 e 80 não valem como regra numérica; valem como princípio de alocação de horas. Os parceiros pequenos recebem trilhas, status e link no portal, sem acompanhamento individual. A Base Ativa, que é individual e consome horas, vai para parceiros com carteira A e interesse demonstrado. O portal precisa existir antes da escala, e o PRM (o próprio Portal Wise Partners) só deve ser desenhado depois que os processos forem definidos. Um evento anual de parceiros, no estilo Expo+Indústria, entra no calendário quando houver parceiros ativos suficientes.",
+   "impacto_modelo_de_negocio": "O programa passa a ter dois serviços: um serviço premium de coaching e Base Ativa para poucos parceiros, e um serviço de autoatendimento por portal e comunidade para o resto. O custo de servir cada parceiro passa a ser proporcional ao potencial demonstrado, o que viabiliza a escala com um gerente. A promoção de um parceiro depende de comportamento observado, não de promessa.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Classificar o parceiro em estrela, potencial ou demais",
+     "descricao": "Aplicar critérios de ambição, gestão, resultado e carteira para marcar o segmento de atenção. A nota do scorecard e a ativação entram como entrada; o resultado define o ritmo de contato.",
+     "gatilho": "Ativação do parceiro e revisão trimestral",
+     "entregas": "Segmento de atenção registrado e justificativa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Quadro individual apenas para estrelas e potencial",
+     "descricao": "Parceiros demais saem do quadro semanal e passam a ser vistos em lista de exceções: voltam ao quadro quando atingem marco ou entram em risco.",
+     "gatilho": "Redesenho do portal",
+     "entregas": "Quadro reduzido e lista de exceções",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Atender os demais por autoatendimento",
+     "descricao": "Trilhas no portal, status do link e das indicações, perguntas frequentes e grupo de WhatsApp com respostas padronizadas. O gerente só entra por gatilho (ativação, marco vencido, pedido do parceiro).",
+     "gatilho": "Parceiro classificado como demais",
+     "entregas": "Parceiro com trilha, status e régua automática",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão estratégica anual com as estrelas",
+     "descricao": "Reunião executiva com o dono do parceiro, o diretor e o gerente: ambições, obstáculos causados pela Wise, oportunidades de oferta conjunta.",
+     "gatilho": "Anual, mais contatos mensais ou trimestrais",
+     "entregas": "Plano de crescimento conjunto",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Coaching mensal para parceiros de potencial",
+     "descricao": "Encontro mensal individual ou em grupo para estruturar o negócio do parceiro ao redor da Wise, com pauta fixa e acompanhamento do P&L do parceiro.",
+     "gatilho": "Mensal",
+     "entregas": "Ata e dois compromissos por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir os processos antes do PRM",
+     "descricao": "Documentar o que o portal deve fazer em cada etapa antes de configurar telas: passagem entre etapas, alocação de leads, registro de indicações, comissões e eventos. Garante que o sistema reforça o processo, e não o inverso.",
+     "gatilho": "Antes de cada nova versão do portal",
+     "entregas": "Especificação de processo e backlog do portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Organizar o evento anual de parceiros",
+     "descricao": "Reunir parceiros ativos, entregar prêmios, promover networking e apresentar casos. Pode ser acoplado a um evento já existente (Expo+Indústria).",
+     "gatilho": "Quando houver parceiros ativos suficientes",
+     "entregas": "Evento realizado, prêmios e novas conexões",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Perfil do gerente por estágio do canal",
+     "descricao": "No modo inicial, perfil de empreendedor que reinventa o programa; no crescimento, de operador que respeita o programa; na maturidade, de especialista por segmento. Define quando contratar a segunda pessoa.",
+     "gatilho": "Revisão semestral do estágio",
+     "entregas": "Perfil e plano de capacidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Distribuição da receita e da atenção por segmento",
+     "descricao": "Percentual da receita originada e das horas do gerente em estrelas, potencial e demais, para verificar se a atenção segue o resultado.",
+     "gatilho": "Trimestral",
+     "entregas": "Tabela de receita e horas por segmento",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Pirâmide invertida de atenção com três faixas: estrelas (topo estreito, cartão executivo), potencial (faixa média, coaching) e demais (base larga, portal). Ao lado de cada faixa, o formato de contato (diário e anual, semanal e mensal, portal e comunidade). Setas de reclassificação sobem e descem entre as faixas, controladas por um relógio trimestral. À direita, o portal 24 horas como um bloco que atende a base e alimenta o quadro individual por exceção.",
+   "citacoes": [
+    {
+     "trecho": "5% of our partners will grow by themselves, 15% will grow if helped and 80% has no growth potential whatsoever.",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "Our job is first and foremost to ensure that we are and remain an integrated part of their core value proposition and that any obstacles caused by us are removed as fast as possible.",
+     "pagina": "p. 92"
+    },
+    {
+     "trecho": "We cannot waste Partner Account Manager resources in managing channel partners who do not have any growth potential!",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "They should primarily be managed through the partner portal with opportunities for chat, call centre and email communication.",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "The PRM supports the channel partner relationship management processes, thus we must define these first and then implement the system afterwards.",
+     "pagina": "p. 94"
+    },
+    {
+     "trecho": "The stages of starting, growing and managing a partner channel require completely different skill sets.",
+     "pagina": "p. 94"
+    }
+   ]
+  }
+ ],
+ "excesso_de_kanbans": [
+  {
+   "ideia": "Um único quadro de parceiros, o da jornada em sete etapas; os demais processos viram marcos, filas de tarefas e telas de painel, e não quadros próprios.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 44 a 47; p. 82",
+   "como_aplicar": "Manter um quadro com um card por parceiro nas etapas Conhecer, Entender, Avaliar, Assinar, Ativar, Gerar resultado e Crescer. Indicações, comissões, ações conjuntas e cruzamento de carteiras ficam como abas e tarefas dentro do card, e a área de tarefas agrega o que vence em todos os cards numa lista só. O livro defende uma visão simples de pipeline para recrutamento e a jornada do parceiro como estrutura contínua única."
+  },
+  {
+   "ideia": "Atenção proporcional ao potencial: quadro individual só para as estrelas e o potencial de crescimento; os demais parceiros por autoatendimento.",
+   "livro": "bech-partner-channels",
+   "pagina": "p. 91 a 93",
+   "como_aplicar": "Criar o segmento de atenção (estrela, potencial, demais) revisto a cada trimestre. O quadro semanal mostra apenas estrela e potencial, e os demais aparecem em lista de exceções quando há marco vencido, risco de dormência ou pedido. Bech diz que não se deve gastar tempo de gerente com quem não tem potencial e que esses parceiros devem ser geridos pelo portal, chat e e-mail. O Octo confirma com a distribuição 5, 15 e 80 (p. 138 a 139)."
+  },
+  {
+   "ideia": "Painel por fase da jornada, com poucos indicadores e metas, no lugar de ler quadros individuais.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 190 a 193",
+   "como_aplicar": "Seguir o exemplo da Caju: de mais de 60 indicadores, ficaram 6 por fase da jornada, com um ou dois KPIs com meta (Aquisição: leads qualificados e parceiros cadastrados; Onboarding: parceiros ativos; Ongoing: parceiros produtivos; Produção: clientes ativos e rentabilidade). O gerente olha primeiro o painel e só abre cards em fila de exceção (parado acima do prazo, marco vencido, SLA estourado)."
+  },
+  {
+   "ideia": "Marcos no lugar de funil de onboarding: 30, 60, 90 e 120 dias como checkpoints do mesmo card.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 90 a 92",
+   "como_aplicar": "O onboarding deixa de ser um quadro e vira um plano com quatro marcos visíveis no card do parceiro. A tela de tarefas mostra só o próximo marco vencendo, e a ativação (primeira indicação no ICP que virou reunião) muda a etapa do card automaticamente."
+  },
+  {
+   "ideia": "Turmas de entrada: processar três ou quatro candidatos num mesmo evento em vez de reuniões individuais em sequência.",
+   "livro": "bech-partner-channels",
+   "pagina": "p. 83 a 84",
+   "como_aplicar": "Reunir candidatos qualificados em uma sessão de meio período (assessment coletivo) e, depois da assinatura, conduzir o alinhamento e a primeira interação de onboarding em turma. Uma tarefa passa a mover vários cards ao mesmo tempo, e o portal permite ação em lote por turma."
+  },
+  {
+   "ideia": "Um tópico por semana: a pauta temática da terça de manhã define quais cards são tocados.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 98",
+   "como_aplicar": "Cada terça tem um tema (por exemplo, roteiro de indicação, Prateleira, Base Ativa, financeiro). O portal mostra apenas os cards e as tarefas ligados ao tema da semana, mais as exceções urgentes. Reduz a troca de contexto e dá ritmo previsível ao único gerente."
+  },
+  {
+   "ideia": "Scorecard para ordenar a fila e priorizar o atendimento de forma automática.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 78",
+   "como_aplicar": "A nota do scorecard (0 a 1 por critério) ordena os candidatos no funil e sugere a ordem de contato. Cards com nota baixa ficam em lista de espera com data de revisão, e não ocupam coluna do quadro."
+  },
+  {
+   "ideia": "Separar volume de relacionamento: a lista longa é uma lista filtrável, e só o candidato que teve reunião vira card.",
+   "livro": "bech-partner-channels",
+   "pagina": "p. 83",
+   "como_aplicar": "A lista longa de dez vezes a meta vive como tabela com filtros (categoria, nota, origem, última ação). Entrar no quadro exige reunião introdutória marcada. As 21 conversas atuais e as futuras 100 entradas não inflam o quadro."
+  },
+  {
+   "ideia": "PRM de duas faces: o parceiro enxerga o próprio progresso e faz solicitações no portal, o que reduz a carga de tarefas do gerente.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 186; p. 193",
+   "como_aplicar": "Dar ao parceiro uma tela com seu nível, marcos, indicações com status, comissões e próximos passos, e permitir que ele registre indicações e peça apoio. Boa parte das tarefas que hoje seriam do gerente passa a ser autoatendimento. Bech acrescenta que leads, propostas especiais, MDF e eventos devem passar apenas pelo PRM (p. 94)."
+  },
+  {
+   "ideia": "Só entra na contagem e no quadro de ativos quem já gerou uma indicação que virou reunião; parceiros dormentes e desligados saem do quadro.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 184",
+   "como_aplicar": "Definir parceiro novo como aquele com a primeira indicação que virou reunião, e tratar desligamento como processo formal que remove o card do quadro. Evita acumular cards de parceiros que só têm intenção ou que já saíram."
+  },
+  {
+   "ideia": "Centralizar poucas atividades-chave em poucas pessoas no início para encurtar o ciclo de feedback.",
+   "livro": "ecossistema-de-parceiros",
+   "pagina": "p. 157 a 158",
+   "como_aplicar": "Agrupar as tarefas do portal por chapéu do gerente (hunter, farmer, enablement, suporte, operações) e reservar blocos de horas. O gerente alterna entre quatro listas curtas em vez de um quadro por processo."
+  }
+ ],
+ "tensoes": [
+  {
+   "tensao": "Níveis desde o primeiro parceiro. O desenho atual tem níveis A, B e C com pacotes e contrapartidas desde o início; o Octo só propõe níveis depois de validar o programa mínimo viável, e Bech manda começar com estrutura simples, porque todos os parceiros iniciais querem o nível mais alto.",
+   "como_resolver": "Usar A, B e C como classificação interna de potencial da carteira, sem diferenciar benefícios até a primeira ativação. Liberar pacotes em degraus depois do marco de 90 dias e do primeiro retorno medido, e rever a régua a cada trimestre, com carência antes de rebaixar."
+  },
+  {
+   "tensao": "Rigor versus volume de recrutamento. Bech recomenda processo artesanal e seletivo no modo inicial (entrevistas, assessment, workshop, carta de intenção) e depois assinar o máximo possível com limiar simples; o Octo diz que é melhor ter menos parceiros que produzem do que muitos com baixa performance.",
+   "como_resolver": "Aplicar o rigor de Bech enquanto o programa estiver na fase 1, o que combina com o Octo, e só afrouxar quando houver parceiros ativos em número suficiente e custo de servir o pequeno via portal. Registrar a fase do canal e o rigor de entrada correspondente."
+  },
+  {
+   "tensao": "Prazo da meta de assinaturas versus ciclo de recrutamento. A meta de assinaturas até dezembro de 2026 e as 12 horas mensais do gerente colidem com o aviso de Bech de que o canal é um jogo de paciência (6 a 9 meses de recrutamento no modo inicial) e com o Octo, que quer onboarding de 90 a 120 dias antes de escalar.",
+   "como_resolver": "Separar a meta de assinar da meta de ativar, e usar ativados como meta principal. Aceitar que as 21 conversas são o estoque do ciclo e que o primeiro marco real é a ativação. Pedir decisão explícita do patrocinador sobre recurso (horas) ou sobre expectativa de prazo."
+  },
+  {
+   "tensao": "Comissão como proposta de valor. Bech prevê que margens tendem a virar taxa de indicação (finder's fee) e o Octo diz que programas baseados só em comissionamento podem ser limitantes; o desenho atual é basicamente comissão (40% da primeira mensalidade, perto de 3 a 5% em LTV).",
+   "como_resolver": "Não mexer na comissão como alavanca principal. Escrever o canvas da proposta de valor com Prateleira (demanda de volta), Base Ativa (comunidade e evento), selo e trilhas como pontos principais, e medir a fatia do ganho do parceiro que vem de fontes além da comissão."
+  },
+  {
+   "tensao": "Proteção de 180 dias versus ecossistema aberto. O desenho protege a indicação por 180 dias; Bech diz que a sobreposição de parceiros na mesma categoria não é conflito de canal e é vantagem (Prateleira com três ou mais opções), e o Octo sugere matriz de mapeamento de contas para reduzir disputas.",
+   "como_resolver": "Proteger a indicação (quem indicou aquele cliente), e não a categoria. A Prateleira de RFP segue com pelo menos três opções e o link exclusivo garante a origem. Registrar claramente na proposta que não há exclusividade, alinhado com o conselho de Bech."
+  },
+  {
+   "tensao": "Nível A, B e C por potencial versus estrela, potencial e demais por comportamento. O desenho atual mede a carteira; Bech e o Octo medem ambição e resultado. O mesmo parceiro pode ser A pelo potencial e demais pelo comportamento.",
+   "como_resolver": "Manter duas dimensões separadas no card: potencial (A, B, C) e segmento de atenção (estrela, potencial, demais). O primeiro define o teto de pacote e o segundo define as horas do gerente. Rever o segundo a cada trimestre."
+  },
+  {
+   "tensao": "Tarefas do gerente versus funções do time. O Octo e Bech descrevem papéis distintos (hunter, farmer, enablement, operações), e Bech mostra perfis diferentes do gerente por estágio; o desenho atual concentra tudo em uma pessoa com 12 horas por mês, com dono único das tarefas.",
+   "como_resolver": "Aceitar o acúmulo na fase 1, como diz o Octo, mas organizar as tarefas por chapéu e medir horas por função. Definir antecipadamente os gatilhos para dividir funções (por exemplo, quando enablement e suporte consumirem mais que a metade das horas) e escolher quem entra primeiro."
+  },
+  {
+   "tensao": "Livros pensados para produto de software versus consultoria. Bech assume que o principal tem produto e que o parceiro revende e entrega; ele próprio diz que empresa de serviço com produto não se encaixa bem em canal. O Octo cobre outros modelos, mas os exemplos são de tecnologia. A Wise vende consultoria, e o parceiro Wise indica e participa da comunidade, sem entregar.",
+   "como_resolver": "Usar Bech para a lógica de dois modelos de negócio, recrutamento e pirâmide, e não para dividir a entrega. Adotar o Octo para a jornada e os indicadores. Tratar o canal como indicação com enriquecimento por ecossistema, e checar se o ciclo de venda da consultoria cabe nos 12 meses de contato médio."
+  },
+  {
+   "tensao": "Dado de pequeno número versus regras percentuais. As proporções 5, 15 e 80 e a lista longa de dez para um pressupõem volumes grandes; a Wise tem zero assinados e cerca de 21 conversas.",
+   "como_resolver": "Usar os percentuais como princípio de alocação e não como regra numérica. Revisar quando a base passar de 20 parceiros ativos, e até lá classificar por julgamento com critérios escritos."
+  }
+ ]
+}

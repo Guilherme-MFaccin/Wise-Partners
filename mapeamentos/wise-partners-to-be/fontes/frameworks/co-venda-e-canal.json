@@ -1,0 +1,1504 @@
+{
+ "frente": "co-venda-e-canal",
+ "livros": [
+  "ecosystem-led-growth",
+  "nearbound",
+  "channel-advantage"
+ ],
+ "frameworks": [
+  {
+   "nome": "Account Mapping Matrix, matriz 3x3 de mapeamento de contas, e regras de compartilhamento de dados (ecosystem data layer)",
+   "livro": "ecosystem-led-growth",
+   "paginas": "secao 14, 20 e 21 (capítulos 5, 10 e 11), com as jogadas de cada célula nas secoes 25, 26 e 27",
+   "componentes": [
+    {
+     "nome": "Três populações de cada lado",
+     "descricao": "Prospects (empresas que o lado queria atender e ainda não engajou), Oportunidades (pipeline ativo, acompanhado até uma venda provável) e Clientes (pagantes). As linhas da matriz são as populações de quem olha e as colunas são as populações do parceiro. São as três etapas de funil que quase todo negócio consegue mapear nos seus dados, por isso o livro manda começar por elas."
+    },
+    {
+     "nome": "Nove células, cada uma é uma jogada",
+     "descricao": "A matriz não é só um cruzamento de dados: cada quadrado é uma jogada que fica em algum ponto do funil, da geração de lead até retenção e expansão. Por isso o livro usa a matriz como mapa dos playbooks do ecossistema."
+    },
+    {
+     "nome": "Célula clientes x clientes do parceiro",
+     "descricao": "Clientes compartilhados. É o melhor canto do mapa para retenção: aumentar a proposta de valor conjunta de quem já usa os dois lados (secao 27)."
+    },
+    {
+     "nome": "Célula meus clientes x oportunidades do parceiro",
+     "descricao": "Devolver o favor: o cliente seu é oportunidade do parceiro, então você ajuda o parceiro a vender dentro da sua base e o seu cliente fica mais amarrado à história conjunta (secao 26)."
+    },
+    {
+     "nome": "Célula minhas oportunidades x clientes do parceiro",
+     "descricao": "Usar a inteligência, os relacionamentos e o conselho do parceiro para aumentar velocidade e chance de ganhar uma oportunidade sua (secao 26)."
+    },
+    {
+     "nome": "Célula minhas oportunidades x oportunidades do parceiro",
+     "descricao": "Oportunidade conjunta: venda em dupla, em que os dois produtos formam uma proposta melhor juntos (secao 26)."
+    },
+    {
+     "nome": "Linha de baixo: meus prospects x (clientes, oportunidades e prospects do parceiro)",
+     "descricao": "É de onde saem os leads qualificados pelo ecossistema (EQL). Os prospects são uma lista enorme em que as agulhas são encontradas pelo cruzamento (secao 25)."
+    },
+    {
+     "nome": "Células que o livro não detalha (cliente x prospect do parceiro e oportunidade x prospect do parceiro)",
+     "descricao": "Inferência minha: seguem a mesma lógica das vizinhas. A primeira vira ajuda inicial ao parceiro; a segunda sinaliza que os dois lados perseguem a mesma conta e precisam combinar quem faz o quê."
+    },
+    {
+     "nome": "Camada de dados neutra entre as empresas",
+     "descricao": "O diagnóstico do livro: não dá para saber o que está no meio de um diagrama de Venn sem acesso total aos dois conjuntos, e isso trava o compartilhamento (dilema do prisioneiro, secao 14). A solução é uma camada que calcula apenas o que se sobrepõe, sem expor o restante."
+    },
+    {
+     "nome": "Regra de compartilhamento = condição de correspondência + dados a compartilhar",
+     "descricao": "Condição: nunca compartilhar, compartilhar só registros que se sobrepõem, ou sempre compartilhar (espaço em branco). Dados: só contagens de sobreposição ou campos escolhidos. Cada regra é definida por população e por parceiro (secao 20)."
+    },
+    {
+     "nome": "Posturas de compartilhamento",
+     "descricao": "Mapeamento de contas (compartilha só quando há sobreposição), só entrada (o parceiro mostra, você não devolve), só métricas de resumo (apenas contagens) e abertura total (para aliados estratégicos com acordo). Podem ser combinadas por parceiro (secao 20)."
+    },
+    {
+     "nome": "Controles de risco",
+     "descricao": "Parceria com aceite duplo das duas partes, dado protegido até haver regra, listas curadas em vez de dado bruto, exclusão de dados pessoais (só nível empresa), populações amplas para não revelar o tipo de relação, exclusão de contas sensíveis, auditoria de quem viu e exportou, e cláusulas de confidencialidade e privacidade no contrato (secao 20)."
+    },
+    {
+     "nome": "Normalização de nomes de empresa",
+     "descricao": "Sem padronização nasce falso negativo e falso positivo (o livro cita Marketo x Adobe e Delta Faucets x Delta Airlines). Exige identificador único e tratamento de grupos e filiais (secao 21)."
+    },
+    {
+     "nome": "Mercado alcançável da parceria (SOM)",
+     "descricao": "Medida derivada da matriz: quantas contas conhecidas e acionáveis os dois lados compartilham. É mais útil que o tamanho da base do parceiro e serve de linha de base para priorizar (secao 24)."
+    }
+   ],
+   "logica": "Parceria sempre travou porque a pergunta mais básica (quantos clientes temos em comum e quem são) exige que um lado entregue a lista inteira ao outro, e o resultado de equilíbrio do jogo é ninguém compartilhar. Uma camada neutra que só revela a interseção, com regra explícita do que aparece e para quem, desfaz o impasse sem exigir confiança prévia. A matriz 3x3 transforma o resultado em um mapa de ações: cada célula já diz que jogada fazer e em que ponto do funil. Como o dado é de empresa e nasce do cruzamento, ele é um ativo que só quem tem aquele ecossistema consegue montar, o que o livro chama de dado de segunda parte.",
+   "aplicacao_wise": "No Portal, cada parceiro envia a carteira (planilha ou lista) na ativação e o portal cruza com três populações da Wise, de Tríade e de Swallow: clientes, oportunidades (reuniões e propostas) e prospects do ICP industrial. O portal mostra a cada lado só as contas que aparecem nas duas listas, com campos liberados por nível: nível C só contagem, nível B nome da conta e etapa, nível A também dono da conta e contexto. A Prateleira de RFP passa a ser a célula meus clientes x oportunidades do parceiro; o Base Ativa trabalha a célula clientes do parceiro x prospects da Wise (a carteira dele é a comunidade) e a indicação por link é a mesma linha de baixo vista do lado do parceiro. A identificação por CNPJ raiz como chave única é inferência minha, porque o livro só pede identificador único e tratamento de filiais. Dado pessoal fica fora por padrão (LGPD) e a abertura do cruzamento só acontece com aceite dos dois lados no termo de parceria.",
+   "impacto_modelo_de_negocio": "A unidade de valor do programa deixa de ser a 'empresa parceira' e passa a ser a sobreposição de contas entre ela e a Wise. Isso dá base objetiva para nível A/B/C, para estimar quanto rende, antes de investir, uma comissão que em LTV fica perto de 3 a 5% e para provar ao parceiro o que a parceria entrega. Os três pilares ganham um mesmo mapa: Prateleira de RFP, Base Ativa e indicações são jogadas de células diferentes da mesma matriz.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Operar o mapa de contas do ecossistema",
+     "descricao": "Macroprocesso novo que contém: importar e normalizar carteiras, cruzar com as populações da Wise, publicar visões por nível, gerar jogadas por célula e auditar acessos. Substitui a ideia de ter um funil por pilar por um único mapa de contas de onde as jogadas saem.",
+     "gatilho": "Aceite de compartilhamento assinado pelo parceiro",
+     "entregas": "Mapa 3x3 por parceiro, lista de contas sobrepostas, jogadas abertas por célula",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Cruzar a carteira do parceiro com a base e o pipeline da Wise",
+     "descricao": "Receber a lista, padronizar identificadores, comparar com clientes, oportunidades e prospects das três empresas e gravar o resultado por célula.",
+     "gatilho": "Parceiro assina o termo (ou atualiza a lista, no mínimo uma vez por mês)",
+     "entregas": "Contagem por célula, lista de contas sobrepostas, linha de base de mercado alcançável",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Normalizar identificadores de empresa",
+     "descricao": "Chave única por empresa (CNPJ raiz é a sugestão), tratamento de grupo e filiais, revisão das correspondências duvidosas antes de publicar.",
+     "gatilho": "Cada nova carga de carteira",
+     "entregas": "Tabela de correspondência sem falsos positivos conhecidos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir regras de compartilhamento por nível",
+     "descricao": "Tabela única que diz, para cada população e nível, se aparece contagem, conta nomeada ou campos completos, e em que sentido (o parceiro mostra, a Wise não precisa devolver).",
+     "gatilho": "Definição do programa e revisão trimestral de níveis",
+     "entregas": "Matriz de regras versionada, publicada no termo de parceria",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Coletar o aceite das duas partes antes de abrir o cruzamento",
+     "descricao": "Registrar no portal o aceite do parceiro e o da Wise; sem o aceite, o dado fica protegido e a parceria só mostra campos de cadastro.",
+     "gatilho": "Assinatura do termo ou entrada em nível probatório",
+     "entregas": "Registro de aceite com data e responsável",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Auditar acesso e exportação de dados de parceiros",
+     "descricao": "Revisar quem viu, alterou ou exportou dados de cada parceiro e se as regras vigentes foram respeitadas.",
+     "gatilho": "Trimestral e a cada exportação",
+     "entregas": "Relatório de auditoria e ajustes de permissão",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Contas sobrepostas por parceiro e por célula",
+     "descricao": "Contagem de contas que aparecem nas duas listas, aberta nas nove células. Linha de base na triagem e acompanhamento mensal.",
+     "gatilho": "Mensal",
+     "entregas": "Número por parceiro, por célula e por nível",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Mercado alcançável da parceria (SOM)",
+     "descricao": "Quantidade de contas compartilhadas acionáveis (no ICP e sem proteção ativa de outro parceiro), usada como eixo de priorização.",
+     "gatilho": "Na triagem do candidato e a cada revisão trimestral",
+     "entregas": "SOM por parceiro e variação no trimestre",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Reorganizar os funis por célula da matriz e não por pilar",
+     "descricao": "Em vez de um funil de Prateleira, um de Base Ativa e um de indicações, cada pilar é uma jogada de uma célula e todas aparecem na mesma lista de contas com parceiro, conforme detalhado na seção de excesso de kanbans.",
+     "gatilho": "Desenho do portal",
+     "entregas": "Uma visão única de contas com parceiro e jogada aberta",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Grade 3x3. Linhas à esquerda: Prospects, Oportunidades, Clientes da Wise (Tríade e Swallow somados). Colunas no topo: Prospects, Oportunidades, Clientes do parceiro. Cada célula recebe o nome da jogada e a contagem de contas (células da linha de baixo em um tom, células de oportunidade em outro, células de cliente em outro). À direita da grade, uma coluna 'o que cada nível enxerga' com três degraus: só contagem, conta nomeada, campos completos. Seta da grade para a lista de jogadas abertas.",
+   "citacoes": [
+    {
+     "trecho": "The best way to think of this opportunity space is as a simple three-by-three account mapping matrix",
+     "pagina": "secao 21"
+    },
+    {
+     "trecho": "it's a map of the many ELG playbooks that exist at the intersection of you and the partners in your ecosystem, with each square representing a play that sits somewhere in your revenue funnel",
+     "pagina": "secao 21"
+    },
+    {
+     "trecho": "you cannot determine what sits “in the middle” of a Venn diagram without first having full access to all of the data in both of the input sets",
+     "pagina": "secao 14"
+    },
+    {
+     "trecho": "Share overlapping records: The most common match condition, this causes information to be shared only for the specific records in your population that also exist in the population of your partner.",
+     "pagina": "secao 20"
+    },
+    {
+     "trecho": "In order for a partnership to be established, a user with appropriate permissions from each party must explicitly approve the creation of the partnership.",
+     "pagina": "secao 20"
+    },
+    {
+     "trecho": "Only company-level information is shared, such as business name, funnel stage, or firmographic data.",
+     "pagina": "secao 20"
+    }
+   ]
+  },
+  {
+   "nome": "Ecosystem Qualified Lead (EQL, lead qualificado pelo ecossistema) e atribuição de resultado originado (sourced) x influenciado (influenced)",
+   "livro": "ecosystem-led-growth",
+   "paginas": "secao 19 (capítulo 9) e secao 25 (capítulo 14)",
+   "componentes": [
+    {
+     "nome": "EQL",
+     "descricao": "Lead com mais chance de virar cliente por causa de comportamentos observados no ecossistema de parceiros: comprar ou avaliar ferramentas complementares, trabalhar com parceiros de serviço do seu setor, ser perseguido por empresas parceiras que atendem o mesmo perfil."
+    },
+    {
+     "nome": "EQL como critério de primeira classe",
+     "descricao": "Entra como uma coluna nos relatórios principais ao lado de MQL e PQL, e não como slide separado em uma ilha."
+    },
+    {
+     "nome": "Origem do EQL",
+     "descricao": "Linha de baixo da matriz de contas: prospects seus que aparecem na carteira, no pipeline ou nos alvos de um parceiro. O dado é de segunda parte, que ninguém compra."
+    },
+    {
+     "nome": "Prova de que EQL vale mais",
+     "descricao": "Comparar com as demais origens: conversão em oportunidade qualificada, em negócio fechado, ticket, velocidade e retenção de longo prazo; abrir por parceiro; e fazer análise retroativa nas oportunidades do último trimestre ou ano."
+    },
+    {
+     "nome": "Resultado originado (sourced)",
+     "descricao": "O resultado não existiria sem o esforço do ecossistema. Quatro pontos de inflexão com evidência: originar lead que não seria acessível, converter lead em oportunidade que não converteria, converter oportunidade em negócio que não seria ganho, expandir cliente que ficaria estável ou sairia."
+    },
+    {
+     "nome": "Resultado influenciado (influenced)",
+     "descricao": "Outros fatores também contribuíram (primeiro ou último toque de outra origem). O ecossistema estava no meio. Deve ser medido com dado, não com autodeclaração."
+    },
+    {
+     "nome": "Trilha de evidência",
+     "descricao": "Cada marca de atribuição tem interação registrada, data e quem participou, e fica no sistema de registro (CRM) onde as demais origens também ficam."
+    },
+    {
+     "nome": "Três famílias de números",
+     "descricao": "Brutos (clientes e receita originados e influenciados), comparativos (velocidade, conversão, competição, ticket, retenção contra quem não teve o ecossistema) e agregado (aumento do valor de vida do cliente)."
+    },
+    {
+     "nome": "Mesmos KPIs do comercial",
+     "descricao": "Regra central do livro: não inventar métricas de parceria. Medir com pipeline, fechamento, ciclo e ticket, e perguntar só quanto disso se atribui ao ecossistema."
+    }
+   ],
+   "logica": "Os times de parceria sempre reportaram métricas que os outros não entendem, então ninguém levava o impacto a sério e o investimento não vinha. Ao amarrar a atribuição a pontos de inflexão verificáveis e a mesma régua do comercial, o resultado deixa de depender do que o gerente de parcerias lembra ter feito. A comparação estatística entre oportunidades com e sem influência responde a pergunta 'o ecossistema ajuda de verdade?' sem discussão de crédito. O EQL dá ao lead uma história de origem mensurável, assim como o PQL fez no crescimento por produto. Os números do livro vêm de uma fornecedora de plataforma do tema, então tratam-se como hipótese a testar.",
+   "aplicacao_wise": "Cada indicação e cada oportunidade ganha no portal dois campos independentes: origem (link exclusivo, Prateleira de RFP, Base Ativa, EQL por sobreposição, evento) e marca de atribuição (originado, influenciado, sem parceiro). 'Originado' é a base da comissão (40% da primeira mensalidade, ou 6% do projeto na Swallow) e da proteção de 180 dias, e exige o teste do livro: a conta não estava acessível sem o parceiro. 'Influenciado' não paga comissão (decisão de desenho a confirmar com o patrocinador) e alimenta nível, ranking e priorização. Como nenhum parceiro assinou ainda, a análise retroativa é a primeira entrega possível: pegar clientes ganhos de Wise, Tríade e Swallow, ver quais já usavam os sistemas dos parceiros-alvo e comparar ciclo e ticket com os demais. Isso vira a linha de base do EQL antes de existir o primeiro parceiro. A Gerente de Parcerias decide a marca e guarda a evidência (quem pediu o quê, quando).",
+   "impacto_modelo_de_negocio": "Separa pagamento de valor: comissão só sobre o que o parceiro originou; valor de ecossistema (influenciado e EQL) comprovado com dado e usado para escolher onde investir e para subir ou descer o parceiro de nível. Também dá ao patrocinador a prova que ele precisa sem criar métrica própria do programa, porque o programa é medido em pipeline, fechamento, ciclo e ticket.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Classificar a origem e a atribuição de cada oportunidade",
+     "descricao": "Ao criar a oportunidade, registrar origem e marca (originado, influenciado, sem parceiro) com o teste de ter sido acessível sem o parceiro.",
+     "gatilho": "Criação de indicação ou oportunidade com sobreposição",
+     "entregas": "Origem, marca e evidência anexadas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar a trilha de evidência da atribuição",
+     "descricao": "Guardar interação, data e participantes de cada ajuda do parceiro, em vez de aceitar autodeclaração.",
+     "gatilho": "Cada pedido ou entrega de ajuda",
+     "entregas": "Registro auditável ligado à oportunidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Marcar EQL na indicação e no pipeline",
+     "descricao": "Toda empresa que está na carteira ou no pipeline de um parceiro e entra no funil da Wise recebe marca de EQL e a etapa em que apareceu.",
+     "gatilho": "Nova sobreposição detectada ou nova oportunidade",
+     "entregas": "Campo EQL preenchido e relatório mensal de EQL",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Comparar desempenho de EQL e de oportunidades influenciadas com as demais origens",
+     "descricao": "Conversão para reunião, proposta e contrato, ciclo, ticket e retenção, por origem, por parceiro e por nível.",
+     "gatilho": "Trimestral, na revisão de níveis",
+     "entregas": "Quadro comparativo e decisão de onde investir",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Rodar a análise retroativa da base fechada",
+     "descricao": "Cruzar clientes ganhos nos últimos 12 a 24 meses com os sistemas dos parceiros-alvo para estimar o diferencial antes do primeiro parceiro assinado.",
+     "gatilho": "Antes da assinatura do primeiro parceiro",
+     "entregas": "Linha de base de ciclo e ticket de clientes que já usavam sistemas parceiros",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Atribuir comissão apenas ao originado e usar o influenciado para nível e prioridade",
+     "descricao": "Duas marcas, dois usos. Evita pagar por influência discutível e evita medir parceiro só por indicação.",
+     "gatilho": "Desenho de comissões e níveis",
+     "entregas": "Regra escrita no termo de parceria",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de conversão de EQL contra outras origens",
+     "descricao": "Razão entre EQL que viram reunião, proposta e contrato e o mesmo indicador das demais origens.",
+     "gatilho": "Mensal",
+     "entregas": "Percentual e diferença em pontos",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Receita originada e receita influenciada por parceiro",
+     "descricao": "Duas colunas separadas, abertas por parceiro, por pilar e por nível, com LTV estimado.",
+     "gatilho": "Mensal",
+     "entregas": "Tabela por parceiro",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Linha do tempo do funil (lead, oportunidade, negócio, expansão) com quatro marcos de 'ponto de inflexão' pintados. Acima, uma faixa 'originado' (a conta não existiria sem o parceiro) e abaixo uma faixa 'influenciado' (o parceiro mudou o resultado). À direita, duas barras comparando 'com ecossistema' e 'sem ecossistema' em conversão, ciclo e ticket.",
+   "citacoes": [
+    {
+     "trecho": "An EQL is a lead that is more likely to become a paying customer due to behaviors it is exhibiting in your partner ecosystem.",
+     "pagina": "secao 25"
+    },
+    {
+     "trecho": "The EQL is a first-class qualification metric that can live alongside marketing-qualified leads (MQLs), product-qualified leads (PQLs), and any other bespoke qualification metrics a company might have.",
+     "pagina": "secao 25"
+    },
+    {
+     "trecho": "Go retroactive. Even if you haven't been historically tracking EQLs, you can use ELG data from a platform such as Crossbeam to go back in time and see which of your opportunities",
+     "pagina": "secao 25"
+    },
+    {
+     "trecho": "In cases where an entire revenue outcome would not have existed at all if not for the ELG effort, we use the term sourced outcomes",
+     "pagina": "secao 19"
+    },
+    {
+     "trecho": "If ELG influence on opportunities isn't real, why do they close at a higher percentage rate? Why are deal cycles faster? Why are deal sizes larger?",
+     "pagina": "secao 19"
+    },
+    {
+     "trecho": "If you adopt ELG, you must also measure your success using the same KPIs that your go-to-market teams and company are using.",
+     "pagina": "secao 19"
+    }
+   ]
+  },
+  {
+   "nome": "Partner Prioritization Matrix (matriz de priorização de parceiros), curva J, parceiros gerenciados x não gerenciados (unmanaged partners) e mentalidade pull x push",
+   "livro": "ecosystem-led-growth",
+   "paginas": "secao 19 (capítulo 9), secao 24 (capítulo 13) e secao 26 (capítulo 15)",
+   "componentes": [
+    {
+     "nome": "Curva J do valor da parceria",
+     "descricao": "Todo parceiro começa com valor negativo (investimento) e só depois passa para retorno positivo. O dado serve para encurtar a queda, aumentar a inclinação da subida, escolher melhor as apostas e levantar o teto de valor de cada novo grupo de parceiros (secao 24)."
+    },
+    {
+     "nome": "Eixo 1: mercado alcançável (SOM)",
+     "descricao": "Quantas contas conhecidas e acionáveis dois lados compartilham. Mais preciso que o tamanho do parceiro ou o mercado total do ICP. Um parceiro grande com pouca sobreposição perde para um parceiro pequeno com sobreposição altíssima (secao 24)."
+    },
+    {
+     "nome": "Eixo 2: valor criado para clientes compartilhados",
+     "descricao": "Ganho dos clientes comuns frente ao resto da base em velocidade de fechamento, valor de contrato, retenção e NPS (secao 24)."
+    },
+    {
+     "nome": "Quatro quadrantes e a próxima melhor ação",
+     "descricao": "Prioridade máxima (atenção humana, investimento e revisões regulares), próxima melhor escolha (estratégico em contas-chave, mas sem confiar nele para demanda em escala), batalha morro acima (mercado grande com história conjunta fraca, bom para co-marketing) e perda de tempo (observar e esperar, sem investir, e rever com o tempo)."
+    },
+    {
+     "nome": "Níveis com requisitos e dado proporcional",
+     "descricao": "Exemplo da Intercom: nível básico com benefícios programáticos, nível Plus com requisito mínimo e só contagem de sobreposição, nível Premier só por convite com relatórios detalhados e co-venda. O tempo humano vai para o Premier."
+    },
+    {
+     "nome": "Parceiros gerenciados x não gerenciados",
+     "descricao": "No modelo antigo todo parceiro precisa de alguém investindo tempo, senão a parceria definha. No modelo de dados, uma cauda longa segue poucas jogadas de alto impacto e baixa manutenção, com oportunidades surgindo sozinhas e o comercial se servindo (secao 19)."
+    },
+    {
+     "nome": "Pull em vez de push",
+     "descricao": "Push: o time de parcerias identifica oportunidades, se enfia nelas e carimba influência, o que é trabalhoso e incomoda quem está conduzindo a venda. Pull: o vendedor vê o dado do ecossistema no próprio sistema e chama o parceiro ou o time de parcerias quando precisa (secao 19)."
+    },
+    {
+     "nome": "Mecanismos de pull e de alerta",
+     "descricao": "Canal único de pedidos para os vendedores (formulário de pedido de apresentação) e alerta para o gerente de parcerias quando uma oportunidade avança sem parceiro anexado e existe parceiro na carteira cruzada (secao 26)."
+    },
+    {
+     "nome": "Co-venda em quatro passos",
+     "descricao": "Achar o time da conta em cada lado, abrir um canal de comunicação, combinar a próxima melhor ação alinhada aos incentivos e medir e atribuir o resultado (secao 26). A ação pode ser aprender a proposta conjunta, compartilhar inteligência, dar referência de bastidor ou incluir o produto na própria abordagem do parceiro."
+    },
+    {
+     "nome": "Relatório de quem recebe e não devolve",
+     "descricao": "Mostra parceiros que receberam muitas indicações ou apresentações e não retribuem, para tratar na revisão do parceiro (secao 26)."
+    },
+    {
+     "nome": "Tetraedro da venda por ecossistema",
+     "descricao": "Para pegar fogo precisa de ferramenta, dado democratizado, adesão contínua da liderança e uma reação em cadeia de vitórias que gera mais dado, treino e adesão (secao 26)."
+    }
+   ],
+   "logica": "A atenção humana é o recurso escasso; o livro propõe gastá-la só onde o dado mostra potencial e valor, e deixar o resto operando por regras e automações. A matriz torna a decisão transparente e revisável, porque a posição de cada parceiro muda quando o dado muda. O modelo pull tira o gerente de parcerias do papel de intermediário de tudo e coloca o dado nas mãos de quem fecha, que sabe melhor quando o parceiro ajuda. O resultado é impacto sem aumentar a equipe, desde que os mecanismos de alerta e de pedido existam. O livro vem de quem vende a plataforma, então o ganho prometido é hipótese.",
+   "aplicacao_wise": "Os níveis A, B e C passam a ser faixas de gestão derivadas da matriz: eixo horizontal é sobreposição com o ICP e com a base da Wise (SOM), eixo vertical é valor gerado (indicações válidas que viram reunião, proposta e contrato, com ciclo e ticket). A, quadrante de prioridade máxima, recebe cadência humana e patrocínio do Diretor; B recebe cadência menor e jogadas fixas (Base Ativa e Prateleira); C e observação viram parceiros não gerenciados: link exclusivo, trilha no portal, alertas automáticos e revisão trimestral por dado, sem um funil individual. Como consultores e comercial não entram no portal, o pull é feito por um pedido sem login (formulário curto ou mensagem) que cria tarefa para a Gerente, e o alerta de 'oportunidade avançou sem parceiro e há sobreposição' cai na fila dela. As etapas de co-venda ficam como quatro tarefas encadeadas. A capacidade escassa da Gerente (a leitura anterior trabalhou com 12 horas mensais) define quantos parceiros A e B cabem.",
+   "impacto_modelo_de_negocio": "O programa passa a ter uma economia em duas camadas: poucos parceiros gerenciados com investimento humano e potencial alto, e uma cauda não gerenciada de custo marginal baixo que alimenta o funil por dado e automação. Isso torna viável a escala com 1 Gerente, aceita a curva J como parte do plano e permite recusar a ideia de 'todo parceiro assinado merece o mesmo acompanhamento'.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerir o portfólio de parceiros por dados",
+     "descricao": "Substitui a gestão de um funil por parceiro por quatro processos: pontuar e posicionar, definir a cadência, automatizar a cauda e tratar exceções. O estado do parceiro é calculado a partir do dado e só vira tarefa humana quando sai do esperado.",
+     "gatilho": "Mensal (dado) e trimestral (revisão de níveis)",
+     "entregas": "Portfólio posicionado na matriz, cadência por faixa, lista de exceções",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Posicionar cada parceiro na matriz mercado alcançável x valor gerado",
+     "descricao": "Atualizar os dois eixos e definir a próxima melhor ação do quadrante. Fica registrada a justificativa para subir, manter ou descer de nível.",
+     "gatilho": "Mensal e na revisão trimestral",
+     "entregas": "Posição do parceiro, nível sugerido e ação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Níveis A, B e C como faixas de gestão",
+     "descricao": "A e B são gerenciados (cadência humana). C e observação são não gerenciados (automação e dado). Nível Premier ou A só por convite.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Regra de níveis no termo de parceria",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Operar a cauda de parceiros não gerenciados",
+     "descricao": "Conjunto fixo de jogadas automáticas: boas-vindas, trilha no portal, link, alerta de nova sobreposição, resumo trimestral e reativação por dado. Só vira tarefa humana quando há sobreposição relevante, indicação ou pedido.",
+     "gatilho": "Evento no portal (nova sobreposição, indicação, inatividade)",
+     "entregas": "Mensagens e tarefas automáticas e lista de exceções",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Receber pedidos de ajuda de parceiro dos consultores (pull)",
+     "descricao": "Canal único com formulário curto: conta, tipo de ajuda (intel, influência, intro), prazo. Cria tarefa com SLA, e o consultor não precisa entrar no portal.",
+     "gatilho": "Pedido do consultor ou do Diretor",
+     "entregas": "Tarefa criada, parceiro acionado e retorno ao consultor",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Alertar oportunidade avançada sem parceiro quando há sobreposição",
+     "descricao": "Regra no portal: se a oportunidade muda de etapa e existe parceiro com a conta na carteira cruzada, abre tarefa para a Gerente perguntar ao responsável o que ele precisa do parceiro.",
+     "gatilho": "Mudança de etapa da oportunidade",
+     "entregas": "Tarefa com parceiros candidatos e contexto da conta",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Co-vender em conta compartilhada",
+     "descricao": "Subprocessos: achar o time da conta no parceiro, abrir o canal (grupo), combinar a próxima ação com incentivo alinhado e registrar a medição.",
+     "gatilho": "Oportunidade com sobreposição ou pedido de ajuda",
+     "entregas": "Próxima ação combinada e resultado atribuído",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Acompanhar reciprocidade",
+     "descricao": "Relatório de parceiros que recebem muitas apresentações da Wise e não devolvem indicação, tratado na revisão do parceiro.",
+     "gatilho": "Trimestral",
+     "entregas": "Lista de parceiros em desequilíbrio e plano de conversa",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Consultor como acionador (pull)",
+     "descricao": "O consultor é quem decide quando pedir ajuda ao parceiro. Não gerencia a relação, não usa o portal e responde ao formulário e ao briefing da Gerente.",
+     "gatilho": "Reunião com conta sobreposta",
+     "entregas": "Pedido de ajuda enviado com contexto",
+     "dono": "Consultor responsável"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros gerenciados por Gerente de Parcerias",
+     "descricao": "Número de parceiros A e B que a capacidade da Gerente sustenta, calculado por horas por parceiro e por faixa.",
+     "gatilho": "Trimestral",
+     "entregas": "Capacidade máxima e fila de espera",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de oportunidades com sobreposição que tiveram pedido ao parceiro",
+     "descricao": "Percentual das oportunidades que têm parceiro disponível e cuja equipe pediu ajuda (pull efetivo).",
+     "gatilho": "Mensal",
+     "entregas": "Percentual por consultor e por faixa",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão mensal da matriz de priorização",
+     "descricao": "Reunião curta para mover parceiros de quadrante e escolher onde gastar as horas do mês.",
+     "gatilho": "Primeira semana do mês",
+     "entregas": "Lista de parceiros e horas alocadas",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Quadrado com mercado alcançável no eixo horizontal e valor gerado no vertical. Os quatro quadrantes recebem os rótulos de ação (cadência semanal, cadência mensal, jogada de co-marketing, observação) e as letras A, B, C. À direita, um funil de atenção: no topo poucos pontos grandes com um rosto (gerenciados), embaixo uma nuvem de pontos pequenos ligada a uma engrenagem (automação). Setas finas dos pontos da nuvem para um sino de alerta que aponta para a Gerente.",
+   "citacoes": [
+    {
+     "trecho": "The return of value in any partner relationship follows a classic J-curve shape",
+     "pagina": "secao 24"
+    },
+    {
+     "trecho": "The holy grail: Choice priority partners deserving of human attention, technical investments, and regular business reviews.",
+     "pagina": "secao 24"
+    },
+    {
+     "trecho": "the Intercom team sticks to sharing only overlap counts (the number of overlaps in the account mapping matrix) with their “Plus” partners.",
+     "pagina": "secao 24"
+    },
+    {
+     "trecho": "This model creates a long tail of “unmanaged partners” who do far more than languish on a list somewhere",
+     "pagina": "secao 19"
+    },
+    {
+     "trecho": "As soon as an opportunity in Salesforce hits the “Solution Review” sales stage, the partner manager will get an alert in a Slack channel called #no-partner-attached.",
+     "pagina": "secao 26"
+    },
+    {
+     "trecho": "Brodigan created a #partnership-requests Slack channel so that reps have a single place to go to get assistance on deals.",
+     "pagina": "secao 26"
+    }
+   ]
+  },
+  {
+   "nome": "Who Economy (economia do quem), nearbound (cercar o comprador) e modelo de sobreposição (overlay model)",
+   "livro": "nearbound",
+   "paginas": "p. 17 a 28, 41 a 42, 156 a 161, 171 a 190",
+   "componentes": [
+    {
+     "nome": "Da economia do como para a economia do quem",
+     "descricao": "Na economia do como o comprador busca no Google, compara especificações e vence quem tem o melhor conteúdo. Na economia do quem o comprador pergunta a quem confia, vê quem já usa e vence a melhor rede. A confiança vem de quem ajuda os outros a chegar à terra prometida (p. 17 a 19, 28)."
+    },
+    {
+     "nome": "Nearbound em uma frase",
+     "descricao": "Estratégia que conecta com o comprador por meio da rede de parcerias e relações que o cercam. Outbound mira o cliente, inbound atrai o cliente, nearbound cerca o cliente. Soma-se ao outbound e ao inbound, não os substitui (p. 35 a 36)."
+    },
+    {
+     "nome": "Trifurcação do canal",
+     "descricao": "O canal de transação, dono de registro de negócio e fechamento, está em declínio. Surgem o canal de influência (recomenda, valida, indica) e o canal de retenção (adoção, expansão, renovação). Cada parceiro exerce papéis específicos, não os três (p. 24 a 25)."
+    },
+    {
+     "nome": "Sobreposição (overlay) em vez de departamento",
+     "descricao": "Parceria é estratégia de todos os departamentos, não ilha. Marketing, vendas, sucesso e produto rodam jogadas com parceiros. O oposto é o canal separado, que gerou conflito de crédito na HubSpot (p. 41 a 42, 171, 183 a 184)."
+    },
+    {
+     "nome": "Uma só receita",
+     "descricao": "Sem número de custo ou produção de parcerias separado do comercial: é uma receita, não direta e indireta. Unir o número é o que distingue canal antigo de nearbound (p. 197)."
+    },
+    {
+     "nome": "Lista do quem (IPP nominal)",
+     "descricao": "O perfil de parceiro ideal é uma lista enumerada de contas reais, montada perguntando aos melhores clientes com quem trabalham e em quem confiam. Vale também para quem a empresa quer conquistar (p. 159, 172 a 174)."
+    },
+    {
+     "nome": "Quatro C para qualificar e desqualificar",
+     "descricao": "Carteira relevante e acessível, credibilidade, capacidade de executar e comprometimento (p. 174 a 175)."
+    },
+    {
+     "nome": "Ajudar primeiro (first helper advantage)",
+     "descricao": "Capital social precisa ser depositado antes de gasto. Ajuda genuína precede o pedido, cada pedido de intel, influência ou intro é pareado com uma entrega equivalente, e a primeira vitória do parceiro vem cedo (p. 175 a 179)."
+    },
+    {
+     "nome": "Problema da Ilha dos Piratas",
+     "descricao": "Não dá para levar o parceiro a um lugar aonde você nunca foi. A empresa precisa executar e documentar o método antes de pedir que o parceiro o replique, e depois certifica o parceiro com entregas acompanhadas (p. 156 a 161)."
+    },
+    {
+     "nome": "Quem constrói a confiança e quem a gasta",
+     "descricao": "O time de parcerias constrói e mantém confiança com o parceiro; vendedores a capitalizam. Executivos patrocinam 3 a 5 parceiros. Papéis de entrega e treino de parceiro podem ficar no sucesso do cliente, e o livro defende que serviços de parceiros nasçam no sucesso do cliente (p. 118, 161, 178, 204)."
+    },
+    {
+     "nome": "Partner attach (anexação de parceiro)",
+     "descricao": "Métrica sim ou não: havia parceiro envolvido na oportunidade? Só vale com critério de valor (integração, indicação qualificada, influência real). Compara-se desempenho das oportunidades com e sem parceiro. É a métrica norte; o sourced é tratado como pior métrica (p. 185 a 187)."
+    },
+    {
+     "nome": "Remuneração alinhada",
+     "descricao": "Qualificador anual de taxa de anexação, aceleradores contingentes, crédito integral de meta ao vendedor apesar da comissão do parceiro e taxa padrão de serviços mesmo quando o parceiro entrega (p. 188 a 190)."
+    }
+   ],
+   "logica": "O livro parte da observação de que o comprador já não responde a abordagem direta e decide com base em quem o cerca. Se a influência está nas pessoas ao redor, a empresa precisa de parceiros que ocupem papéis específicos no entorno e de uma operação em que todos os times saibam usá-los. Tratar parceria como departamento cria disputa de crédito; tratar como sobreposição elimina a disputa porque há uma só receita e a meta de quem fecha não é penalizada. A confiança é um estoque que se acumula ajudando primeiro e que se esgota se só se retirar dele. O livro é de um fundador de plataforma do tema e de contexto SaaS, então os números são hipóteses.",
+   "aplicacao_wise": "O parceiro da Wise não é o ICP (a indústria é), mas a carteira dele é. Logo, os 40% da primeira mensalidade (e os 6% do projeto na Swallow) pagam influência e introdução, não revenda: o contrato e a transação ficam com a Wise. ERP, CRM, MES, SST, ESG, BPM e automação recomendam e validam; associações e feiras abrem acesso. O programa vira overlay sobre a rotina comercial e de entrega de Wise, Tríade e Swallow: uma só meta de receita, com crédito integral ao consultor que fecha. A lista de parceiros-alvo é nominal e nasce de entrevistas com os melhores clientes das três empresas e de uma pergunta fixa em cada diagnóstico (que sistemas e fornecedores vocês usam e em quem confiam). Aplicando a Ilha dos Piratas: antes de oferecer o Base Ativa a parceiros, rodar o ciclo de 12 semanas e o evento na base da própria Wise e documentar o método, que depois vira trilha de capacitação e certificação no portal. A Gerente de Parcerias constrói a confiança; consultores e Diretor a gastam em jogadas de intel, influência e introdução.",
+   "impacto_modelo_de_negocio": "O parceiro passa a ser definido pelo papel que exerce (influência e retenção) e não pelo que vende. A Wise deixa de ter um canal indireto separado e passa a ter uma receita só com taxa de anexação como indicador de saúde. O parceiro é tratado como cliente do programa: recebe valor (comunidade ativa na carteira, evento, ranking, primeira vitória) antes de ouvir o pedido de indicação.",
+   "impacto_processos": [
+    {
+     "tipo": "reorganizar",
+     "nome": "Reorganizar o programa como overlay sobre a rotina comercial e de entrega, e não como funil paralelo",
+     "descricao": "Cada macroprocesso do programa tem um ponto de encaixe em uma rotina que já existe (reunião de pipeline, diagnóstico, proposta, entrega, revisão comercial) e seus indicadores aparecem nos mesmos relatórios do comercial.",
+     "gatilho": "Desenho do programa",
+     "entregas": "Mapa de encaixes entre processos do programa e rotinas de Wise, Tríade e Swallow",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Construir e manter confiança com o parceiro (ajudar primeiro)",
+     "descricao": "Contém: entregar a primeira vitória, manter o saldo de ajuda dada e recebida, reconhecer o parceiro em público, devolver cada pedido com algo equivalente e fechar o ciclo de cada indicação.",
+     "gatilho": "Assinatura do parceiro e cada pedido de ajuda",
+     "entregas": "Primeira vitória registrada, saldo de ajuda atualizado, reconhecimentos publicados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar a lista nominal de parceiros-alvo a partir dos clientes",
+     "descricao": "Entrevistar os melhores clientes de Wise, Tríade e Swallow para listar sistemas, consultorias e entidades em que confiam, e priorizar por sobreposição e pelos quatro C.",
+     "gatilho": "Trimestral e em cada novo ciclo de recrutamento",
+     "entregas": "Lista nominal com sinais e responsáveis pela abordagem",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Perguntar em todo diagnóstico quais sistemas e fornecedores o cliente usa e em quem confia",
+     "descricao": "Pergunta fixa com registro no portal feito pela Gerente a partir da nota do consultor, porque o consultor não entra no portal.",
+     "gatilho": "Cada reunião de diagnóstico",
+     "entregas": "Resposta registrada na conta e candidato a parceiro sinalizado",
+     "dono": "Consultor responsável"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Classificar cada parceiro pelo papel que exerce",
+     "descricao": "Recomendar, validar, indicar ou abrir acesso. Define o que se espera, o que se mede e o que se paga.",
+     "gatilho": "Triagem e revisão trimestral",
+     "entregas": "Papel do parceiro registrado no cadastro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Rodar o Base Ativa na base da própria Wise antes de oferecer o ciclo ao parceiro",
+     "descricao": "Executar as 12 semanas e o evento com clientes da Wise, medir resultado e documentar o roteiro.",
+     "gatilho": "Antes da assinatura do primeiro parceiro",
+     "entregas": "Roteiro documentado e resultado do primeiro ciclo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar anexação de parceiro com critério de valor",
+     "descricao": "Cada oportunidade ganha ou perdida é marcada com e sem parceiro. A marca só vale se houver jogada registrada (intel, influência, intro ou integração) validada por quem conduz a venda.",
+     "gatilho": "Mudança de etapa e fechamento",
+     "entregas": "Marca de anexação com evidência",
+     "dono": "Consultor responsável"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Patrocinador executivo de parceiro",
+     "descricao": "O Diretor patrocina de 3 a 5 parceiros principais, participa da revisão trimestral e fala diretamente com a liderança do parceiro.",
+     "gatilho": "Início do ano e cada revisão trimestral",
+     "entregas": "Plano anual com o parceiro e presença na revisão",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Taxa de anexação de parceiro",
+     "descricao": "Percentual de contas, atividades e oportunidades com parceiro anexado com critério de valor, aberto por consultor e por trimestre.",
+     "gatilho": "Mensal",
+     "entregas": "Taxa e comparação de desempenho com e sem parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Saldo de ajuda dada e recebida por parceiro",
+     "descricao": "Contagem de jogadas de intel, influência e intro pedidas e devolvidas.",
+     "gatilho": "Mensal",
+     "entregas": "Saldo por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Creditar integralmente a meta de quem fecha mesmo com comissão ao parceiro",
+     "descricao": "Evita penalizar o consultor que trabalha com parceiro e mantém uma só receita.",
+     "gatilho": "Desenho de metas",
+     "entregas": "Regra de crédito no plano de metas por pessoa",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Três círculos concêntricos em volta de um ponto 'comprador (indústria)': anel interno com parceiros de retenção e implantação, anel do meio com parceiros de influência (ERP, CRM, consultorias) e anel externo com entidades e feiras. A Wise aparece como um nó que toca vários anéis. À direita, duas colunas comparando 'canal separado' e 'sobreposição': um número ou dois, crédito disputado ou crédito integral.",
+   "citacoes": [
+    {
+     "trecho": "Today’s buyers ask, “Who do I know that has solved this problem?”",
+     "pagina": "p. 17"
+    },
+    {
+     "trecho": "The channel world owns the point of transaction, while the emerging partner world seems to own the points of influence and retention.",
+     "pagina": "p. 24"
+    },
+    {
+     "trecho": "An overlay model is what allows marketing, sales, success, and product to run nearbound plays and embed partner motions in the fabric of the company.",
+     "pagina": "p. 171"
+    },
+    {
+     "trecho": "Your IPP is not a theoretical list of firmographics and qualifiers that make up an ideal partner universe. Instead, IPP is an enumerated list of actual partner accounts.",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "Pair every ask for a nearbound “I” of intel, influence, or intro with a give of the same.",
+     "pagina": "p. 179"
+    },
+    {
+     "trecho": "Partner attach is a simple yes/no metric regarding partner contribution: was there a partner involved in this deal?",
+     "pagina": "p. 185"
+    }
+   ]
+  },
+  {
+   "nome": "Nearbound Sales Blueprint (roteiro de vendas nearbound) e os 3 I's: Intel, Influence e Intros, com a estratégia 3x5",
+   "livro": "nearbound",
+   "paginas": "p. 104 a 124",
+   "componentes": [
+    {
+     "nome": "Passo 1: matemática nearbound",
+     "descricao": "Definir a mistura de receita desejada entre outbound, inbound e nearbound. No exemplo do livro, um terço de cada, o que exige cerca de um terço das oportunidades abertas, das atividades e das contas de cada vendedor com parceiro anexado (taxa de anexação) (p. 105 a 106)."
+    },
+    {
+     "nome": "Passo 2: lista de contas nearbound",
+     "descricao": "Reunião por trimestre ou por atribuição de contas entre vendedor, gerente de vendas e gerente de parcerias. Ordena contas pela sobreposição mais influente, identifica os sinais mais relevantes (parceiro fechou a conta há 3 meses, renovou, abriu oportunidade) e mapeia as pessoas certas. Revisão mensal ou trimestral (p. 106 a 109)."
+    },
+    {
+     "nome": "Nearbound proativo e reativo",
+     "descricao": "Proativo é a lista de 33 contas em 100. Reativo é o sinal que chega depois (parceiro fecha uma conta da lista). Gatilhos automáticos criam tarefa ou mensagem quando uma conta nova com sinal é atribuída ou a relação do parceiro com uma conta muda (p. 109 a 111)."
+    },
+    {
+     "nome": "Intel (inteligência)",
+     "descricao": "Qualquer informação que o parceiro ou a tecnologia dele dá sobre a oportunidade: melhor contato, tecnologia usada, dores como o cliente as descreve, iniciativas e metas. Como obter: usar o que já se sabe, ajudar primeiro, juntar o conhecimento de vários parceiros e enviar pedido claro (p. 112 a 114)."
+    },
+    {
+     "nome": "Influence (influência)",
+     "descricao": "Pedir ao parceiro uma palavra de recomendação ao decisor, entregando o texto pronto para encaminhar. O comprador típico tem 28 momentos até escolher o fornecedor e só 4 envolvem o fornecedor; os outros 24 são influências externas (p. 114 a 117)."
+    },
+    {
+     "nome": "Intros (introduções)",
+     "descricao": "Mais valiosas, mais difíceis e mais arriscadas. Diferença para o referral: a intro leva contexto, não só o nome. Cinco regras: chegar preparado, estar pronto para ajudar, importar-se com o que o outro importa, ter hipótese forte de valor e facilitar entregando o rascunho da mensagem (p. 117 a 120)."
+    },
+    {
+     "nome": "Ordem das jogadas",
+     "descricao": "Intel vem antes de intros, porque só com inteligência a hipótese de valor é confiável (p. 118)."
+    },
+    {
+     "nome": "Quem faz o quê",
+     "descricao": "O vendedor planeja, documenta e prepara as jogadas. O gerente de vendas faz a ponte, aprende quais parceiros funcionam e cobra tanto o vendedor quanto o gerente de parcerias. O gerente de parcerias traz o sinal e a força do relacionamento. Parcerias constrói a confiança; vendedores a gastam (p. 107, 118)."
+    },
+    {
+     "nome": "Ciclo de aprendizado",
+     "descricao": "Cada tentativa que dá certo é analisada, e cada tentativa que falha vira pergunta sobre a falta de 'fundos de confiança'. O playbook é refinado com o time, não isolado (p. 120)."
+    },
+    {
+     "nome": "Estratégia 3x5 para parceiros estratégicos",
+     "descricao": "5 contas-alvo suas que são clientes do parceiro, 5 contas-alvo do parceiro que são suas clientes e 5 novos logos que ambos querem. Sem exigir muita gente, alinha executivos, mensagens e campanhas, com intel, influência e intro em cada etapa (p. 120 a 122)."
+    }
+   ],
+   "logica": "O comprador atende quem já conhece. Se um parceiro que o comprador respeita entrega intel, uma palavra ou uma introdução, a confiança do parceiro se transfere ao vendedor e o primeiro contato deixa de ser de um desconhecido. Com intel antes, a conversa começa mais perto da necessidade real; com influência e intro, o contato deixa de ser frio. Limitar a lista a um terço das contas concentra esforço onde há sinal e dá ao parceiro uma única pergunta fácil de responder. O livro apresenta números de ganho vindos da base da plataforma do autor (mais oportunidades abertas, taxa de vitória e tempo de fechamento melhores), por isso valem como hipótese.",
+   "aplicacao_wise": "A venda da Wise é serviço de baixa definição, vendido por humanos: o parceiro abre a porta e a Wise conduz. Para cada conta com parceiro disponível, a Gerente prepara três pedidos curtos. Intel antes da reunião: contato certo, tecnologia em uso (ERP, CRM, MES), dor e iniciativa em curso. Influência: palavra do parceiro ao decisor, com texto pronto que o portal monta a partir da conta e da hipótese de valor da Wise. Intro: quando houver reunião marcada e relação do parceiro com quem decide, com rascunho de mensagem. Como o consultor não entra no portal, ele recebe um briefing de uma página e a Gerente envia o pedido ao parceiro por WhatsApp ou telefone. A lista nearbound do trimestre começa pequena (a proporção de um terço é a do exemplo do livro, não uma meta recomendada para um programa sem parceiros assinados) e cresce com o histórico. A 3x5 é reservada a parceiros do nível A: 5 clientes do parceiro que a Wise quer (indicação), 5 clientes da Wise que o parceiro quer (Prateleira de RFP) e 5 logos novos para atacar em conjunto (Base Ativa e evento).",
+   "impacto_modelo_de_negocio": "A indicação deixa de ser um nome e um telefone e passa a ser uma jogada com contexto (problema do cliente, quem decide, por que a Wise), e o parceiro passa a ser pago pela jogada que de fato faz. Cada pedido feito ao parceiro é pareado com algo devolvido, e a Prateleira de RFP funciona como moeda de retribuição para parceiros fornecedores, desde que a Wise não prometa leads que não sabe gerar.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Co-vender com parceiro: intel, influência e intro",
+     "descricao": "Macroprocesso com três processos (um por I), uma lista de contas do trimestre e uma estratégia 3x5 para parceiros A. Substitui a ideia genérica de 'ação conjunta'.",
+     "gatilho": "Conta com sobreposição ou pedido do consultor",
+     "entregas": "Pedido atendido, jogada registrada e atribuição marcada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Montar a lista de contas nearbound do trimestre",
+     "descricao": "Escolher, com o consultor e o Diretor, as contas com maior sobreposição e sinal para receber jogadas de parceiros.",
+     "gatilho": "Início do trimestre e atribuição de novas contas",
+     "entregas": "Lista de contas com parceiro candidato e jogada planejada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Pedir intel ao parceiro antes de reunião",
+     "descricao": "Briefing curto com contato certo, tecnologia em uso, dor e iniciativa em curso, pedido em linguagem do parceiro e com oferta de intel de volta.",
+     "gatilho": "Reunião marcada com conta sobreposta",
+     "entregas": "Briefing de uma página entregue ao consultor antes da reunião",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Pedir palavra de recomendação ao decisor (influência)",
+     "descricao": "Gerar a mensagem pronta para o parceiro encaminhar, com a hipótese de valor da Wise para aquele contato.",
+     "gatilho": "Reunião marcada e relação do parceiro com a conta",
+     "entregas": "Mensagem enviada e retorno do parceiro registrado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Pedir introdução com rascunho pronto",
+     "descricao": "Só pedir intro depois de intel, com hipótese de valor, contexto e texto de apresentação já escrito.",
+     "gatilho": "Relação do parceiro com o decisor confirmada",
+     "entregas": "Introdução feita e reunião marcada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Gerar o texto do pedido a partir da conta",
+     "descricao": "O portal monta o rascunho (intel, influência ou intro) com contexto da conta, hipótese de valor e item de retribuição.",
+     "gatilho": "Abertura de uma tarefa de pedido",
+     "entregas": "Texto revisado pela Gerente",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Retribuir cada pedido feito ao parceiro",
+     "descricao": "Para cada pedido, devolver intel sobre conta do parceiro que a Wise atende, aviso de movimento ou divulgação, e registrar no saldo.",
+     "gatilho": "Pedido enviado",
+     "entregas": "Retribuição registrada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Rodar a estratégia 3x5 com parceiros A",
+     "descricao": "Reunião trimestral de 5+5+5 contas com o parceiro, com mensagens, campanhas e responsáveis para cada conta.",
+     "gatilho": "Trimestral",
+     "entregas": "Plano de 15 contas com donos dos dois lados",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Perguntar ao cliente, em campo aberto, quem o indicou ou influenciou",
+     "descricao": "Pergunta aberta no fechamento e no onboarding do cliente; o nome do parceiro é cruzado com os registros do portal.",
+     "gatilho": "Contrato assinado",
+     "entregas": "Nome informado pelo cliente e comparação com o registro",
+     "dono": "Consultor responsável"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Disparar tarefa por sinal",
+     "descricao": "Regras: prospect é cliente de parceiro, negócio parado e parceiro com a conta, parceiro fechou conta da lista.",
+     "gatilho": "Mudança de dado no portal",
+     "entregas": "Tarefa com contexto para a Gerente",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Fechar o ciclo com o parceiro após cada pedido",
+     "descricao": "Informar aceita, em andamento, perdida ou ganha, com motivo e próximo passo, por mensagem direta.",
+     "gatilho": "Mudança de status do pedido",
+     "entregas": "Mensagem enviada e status registrado",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Conversão das contas nearbound contra as demais",
+     "descricao": "Taxa de reunião, proposta e contrato, ciclo e ticket das contas da lista contra as outras do consultor.",
+     "gatilho": "Trimestral",
+     "entregas": "Comparação por consultor e por parceiro",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Linha horizontal da conta, da esquerda para a direita: 'sinal' (parceiro fecha ou renova), 'Intel', 'Influência', 'Intro', 'reunião'. Embaixo, três pessoas (consultor, Gerente, Diretor) ligadas por setas ao parceiro, com o texto 'rascunho pronto' nas setas de influência e intro. Ao lado, uma lista com 100 quadradinhos e 33 destacados.",
+   "citacoes": [
+    {
+     "trecho": "The Nearbound Sales Blueprint is a dead simple way to operationalize plays from sellers that utilize partners in the revenue mix, without altering the structure of your organization or attempting to rebuild it from the ground up.",
+     "pagina": "p. 104"
+    },
+    {
+     "trecho": "Ensure that 33 of those 100 accounts have partners attached for nearbound plays.",
+     "pagina": "p. 106"
+    },
+    {
+     "trecho": "Intel refers to any information your partners and/or partnership technology can provide you about an opportunity.",
+     "pagina": "p. 112"
+    },
+    {
+     "trecho": "Never, ever, ever ask for an intro where you have not already written an example intro for the person you are asking for an intro from.",
+     "pagina": "p. 119"
+    },
+    {
+     "trecho": "While Partner teams should be focused on creating and building trustworthy partner relationships and reciprocity, sellers should be the ones capitalizing on that trust.",
+     "pagina": "p. 118"
+    },
+    {
+     "trecho": "1. Identify your top 5 target accounts that are customers of your partner 2. Identify your partner’s top 5 target accounts that are customers of yours 3. Identify your mutual top 5 new logos to pursue together",
+     "pagina": "p. 121"
+    }
+   ]
+  },
+  {
+   "nome": "Nearbound Rhythm of Business (ritmo do negócio nearbound) e ritmo do papel de parcerias",
+   "livro": "nearbound",
+   "paginas": "p. 188 a 209",
+   "componentes": [
+    {
+     "nome": "Cultura é o que se promove e o que se tolera, mais as cadências",
+     "descricao": "Definição do livro: cultura é o que se promove e o que se tolera, acrescida das cadências e rituais que reforçam isso. O ritmo anual, trimestral, mensal, semanal e diário é o instrumento (p. 188 e 191)."
+    },
+    {
+     "nome": "Sobreposição na rotina comercial: anual",
+     "descricao": "Plano operacional com sobreposição de parceiro em contas e segmentos, território com presença de parceiro, meta de receita nearbound, taxa de anexação, kickoff com histórias de parceiros, treino de como trazer parceiros e crédito de meta para quem trabalha com parceiros (p. 196 a 198)."
+    },
+    {
+     "nome": "Sobreposição na rotina comercial: trimestral",
+     "descricao": "Métrica de parceiro no modelo de slide de toda revisão trimestral (QBR) de vendedor: anexação, produtividade, mix de receita, origem versus influência. Gerente de vendas pergunta por que o vendedor que não bateu meta não anexou parceiros (p. 198 a 199)."
+    },
+    {
+     "nome": "Sobreposição na rotina comercial: mensal e semanal",
+     "descricao": "Mensal: reunião geral e enablement com dados de parceiro por vendedor. Semanal: reunião de forecast com oportunidades em risco em que parceiro pode ajudar, e reunião de pipeline com reconhecimento de parceiro que abriu pipeline. O gerente de parcerias tem de estar nesses dois encontros (p. 199 a 201)."
+    },
+    {
+     "nome": "Sobreposição na rotina comercial: diária",
+     "descricao": "Dashboards, filtros e alertas em ferramentas onde o vendedor vive; gerente de linha de frente inspeciona e treina para anexação de parceiro. 'Inspecione o que você espera' (p. 201 a 202)."
+    },
+    {
+     "nome": "Ritmo do papel de parcerias: anual",
+     "descricao": "Plano de parceiros por segmento e por vendedor, proposta de valor, desenho do programa (níveis, comp, acordos, medição), plano anual com parceiros-alvo, alinhamento entre executivos dos 3 a 5 principais, kickoff de parceiros e orçamento (p. 202 a 204)."
+    },
+    {
+     "nome": "Ritmo do papel de parcerias: trimestral",
+     "descricao": "QBR com os 3 a 10 principais parceiros por gerente de parcerias, com executivos dos dois lados. Cada executivo patrocina 3 a 5 parceiros e se compromete a participar de toda QBR. QBR interna dos gerentes antes das externas (p. 204 a 205)."
+    },
+    {
+     "nome": "Ritmo do papel de parcerias: mensal",
+     "descricao": "Reunião com os 20% mais ativos, revisão das listas de contas nearbound, jogada 3x5 e novas sobreposições nos dois sentidos. O livro avisa que o parceiro nunca entra no portal tanto quanto se imagina (p. 205 a 206)."
+    },
+    {
+     "nome": "Ritmo do papel de parcerias: semanal",
+     "descricao": "Revisão de sobreposições novas e negócios parados, de contas e oportunidades com próximo passo pendente (quem espera: gerente, vendedor ou parceiro), escrever mensagens para os outros, documentar as jogadas, aprovar a marca de anexação e fechar o ciclo com o parceiro (p. 206 a 207)."
+    },
+    {
+     "nome": "Ritmo do papel de parcerias: diário",
+     "descricao": "Dashboard e funil, calendário, tarefas da semana, e comunicação: telefone e mensagem de texto primeiro, depois chat e e-mail. 'Fechar o ciclo antes de fechar o notebook' (p. 207 a 208)."
+    },
+    {
+     "nome": "Dois relatos paralelos",
+     "descricao": "Um para parceiros e outro para a atividade interna das jogadas, reduzindo ciclos de feedback (p. 207)."
+    }
+   ],
+   "logica": "A mudança de comportamento só se sustenta se aparecer nos encontros que o comercial já faz e se quem lidera cobrar o que espera. Colocar a métrica de parceiro em todo modelo de reunião faz o tema se tornar rotina e não campanha. Reuniões de parceiro são preparadas com o dado, porque o valor está em identificar padrões e alinhar lideranças, não em ler painel. A cadência tem duas camadas: o que o gerente faz sobre a rotina dos outros e o que faz com seus parceiros, e essas camadas se encaixam por frequência. Escalonar a atenção (20% mais ativos por mês, 3 a 10 por trimestre) mantém o ritmo possível para pouca gente.",
+   "aplicacao_wise": "Cabe a um único Gerente de Parcerias com horas limitadas e a um Diretor. Semanal: 10 a 15 minutos na reunião de pipeline e forecast da Wise com três perguntas (que oportunidades tiveram sobreposição nova, que negócios estão parados e podem usar um parceiro, que pedidos a parceiros estão sem retorno), mais uma revisão própria da Gerente de contas e pendências por quem espera. Mensal: reunião com os parceiros A (cerca de 20% dos ativos) e mensagem coletiva aos demais nos grupos de WhatsApp, com pauta de novas sobreposições e jogadas 3x5. Trimestral: a revisão de níveis já prevista vira QBR com patrocínio do Diretor, que apadrinha 3 a 5 parceiros, e QBR interna antes. Anual: plano do programa, kickoff com parceiros e a Expo+Indústria como semana de parceiros, além de histórias de parceiros no encontro anual de vendas da Wise. O Base Ativa tem ritmo próprio de 12 semanas encaixado nesse calendário. Como o livro recomenda telefone e mensagem de texto em vez de portal, a comunidade de WhatsApp é coerente, desde que cada interação relevante gere um registro no portal.",
+   "impacto_modelo_de_negocio": "O programa passa a ser gerido por um calendário, não por funis. A cadência define o custo de atenção por parceiro e, portanto, o número de parceiros sustentáveis. Parceiros que não entram no ritmo dos A (reunião mensal, QBR, conselho) são tratados como não gerenciados.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Governar o programa pelo ritmo do negócio",
+     "descricao": "Macroprocesso novo que organiza o programa em cinco ciclos (diário, semanal, mensal, trimestral e anual) e define o que cada ciclo decide, entrega e cobra. Substitui revisões soltas por um calendário único.",
+     "gatilho": "Início do ano e cada ciclo",
+     "entregas": "Calendário, pautas, modelos e registro de decisões",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão diária de 15 minutos da Gerente",
+     "descricao": "Painel de tarefas do dia, pendências aguardando a Gerente, o consultor ou o parceiro, comunicações com os A por telefone ou mensagem, e fechar o ciclo antes de encerrar.",
+     "gatilho": "Todo dia útil",
+     "entregas": "Tarefas atualizadas e mensagens de fechamento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Reunião semanal de pipeline e forecast com camada de parceiros",
+     "descricao": "Dez a quinze minutos na reunião comercial: sobreposições novas, negócios parados e que podem usar parceiro, pedidos sem retorno.",
+     "gatilho": "Semanal",
+     "entregas": "Lista de pedidos de ajuda ao parceiro com responsável e prazo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão semanal de contas e oportunidades do programa",
+     "descricao": "Revisar atividades paradas, esperando por quem, escrever pedidos, atualizar marcas de anexação e fechar ciclos.",
+     "gatilho": "Semanal",
+     "entregas": "Lista de ações por quem espera e atualização de status",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Reunião mensal com os parceiros A",
+     "descricao": "Atualizações, histórias de sucesso, novas sobreposições nos dois sentidos, jogada 3x5 e funil do parceiro por conta.",
+     "gatilho": "Mensal",
+     "entregas": "Ações combinadas e registro no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "QBR trimestral com patrocinador executivo (revisão de níveis)",
+     "descricao": "Resultado do trimestre, ganhos e perdas, metas e contas, lançamentos, e decisão de nível, recompensa e sanção.",
+     "gatilho": "Trimestral",
+     "entregas": "Decisão de nível e plano do próximo trimestre",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "QBR interna prévia",
+     "descricao": "Revisão do desempenho da Gerente e dos parceiros antes de qualquer QBR externa, com métricas de anexação e atribuição.",
+     "gatilho": "Trimestral, antes das QBRs externas",
+     "entregas": "Dados e narrativa prontos",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Planejamento anual do programa e kickoff de parceiros",
+     "descricao": "Metas, orçamento, perfil de parceiro, desenho de níveis, calendário e evento de abertura com parceiros.",
+     "gatilho": "Anual",
+     "entregas": "Plano anual, orçamento e calendário publicados",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Inserir métricas de parceiro nos modelos de reunião e relatório do comercial",
+     "descricao": "Garantir que os modelos de relatório e pauta de Wise, Tríade e Swallow tenham campos de parceiro.",
+     "gatilho": "Anual e quando houver mudança de modelo",
+     "entregas": "Modelos atualizados",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Gerente de linha de frente que inspeciona anexação",
+     "descricao": "O Diretor cobra, na reunião comercial, a anexação de parceiro de cada consultor.",
+     "gatilho": "Cada reunião de pipeline",
+     "entregas": "Pergunta registrada na ata",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Aderência ao ritmo",
+     "descricao": "Percentual de reuniões semanais e mensais realizadas com a camada de parceiro e tempo médio para fechar o ciclo com o parceiro.",
+     "gatilho": "Mensal",
+     "entregas": "Percentual e tempo médio",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Tabela de cinco linhas (diário, semanal, mensal, trimestral, anual) e três colunas: 'rotina da Wise onde o programa entra', 'ritmo da Gerente com o parceiro', 'decisão tomada'. Cores diferentes para parceiros A e para os demais. Setas curvas ligam a linha mensal à trimestral (as ações de cada mês alimentam a QBR).",
+   "citacoes": [
+    {
+     "trecho": "Culture is what you promote and what you tolerate.",
+     "pagina": "p. 188"
+    },
+    {
+     "trecho": "Well, that was only half the definition. The second half is the cadences and rituals to enforce them.",
+     "pagina": "p. 191"
+    },
+    {
+     "trecho": "It’s one revenue number, not direct and indirect.",
+     "pagina": "p. 197"
+    },
+    {
+     "trecho": "Appoint each executive on your team 3-5 partners where they play executive sponsor for the year and get their commitment to joining each quarterly QBR.",
+     "pagina": "p. 204"
+    },
+    {
+     "trecho": "The truth is that they will never log in to your portal as much as you think they will, or you’d like them to.",
+     "pagina": "p. 206"
+    },
+    {
+     "trecho": "If you aren’t texting and calling daily with your top partners, you’re not breaking through. Don’t rely on portals.",
+     "pagina": "p. 208"
+    }
+   ]
+  },
+  {
+   "nome": "Channel mix and integration (mix e integração de canais): mapa híbrido de cobertura, divisão da venda por tarefa, passagens de bastão (hand-offs), dono da conta (account ownership), conflito de canal e crédito duplo de receita",
+   "livro": "channel-advantage",
+   "paginas": "p. 47 a 53 (encaixe produto e canal), p. 99 a 101 (conflito e crédito) e p. 172 a 191 (capítulo 10)",
+   "componentes": [
+    {
+     "nome": "Mix x integração",
+     "descricao": "Mix: vários canais cobrem o mercado de forma mais ou menos independente, para interceptar mais compras. Integração: vários canais atuam em uma única venda, cada um em uma tarefa, para melhorar lucratividade e atender vendas complexas. Mix é mais fácil de desenhar, integração é mais complexa e muitas vezes rende mais (p. 173)."
+    },
+    {
+     "nome": "Cobertura intensiva, seletiva e híbrida",
+     "descricao": "Intensiva: vários canais sobrepostos no mesmo produto-mercado. Seletiva: um canal único por produto-mercado. Híbrida (a mais comum e a recomendada): um canal único em poucos produtos-mercados prioritários e canais sobrepostos no restante (p. 174 a 176). Mapa de cobertura: clientes de um eixo, complexidade da oferta no outro."
+    },
+    {
+     "nome": "Quatro princípios do híbrido",
+     "descricao": "Alinhar a cobertura intensiva à massa crítica de compra, gerir o mix pela lucratividade e não só pelo volume, reservar cobertura seletiva para quando realmente importa e cuidar do conflito, principalmente com canais indiretos (p. 176 a 181)."
+    },
+    {
+     "nome": "Deslocamento x ganho de canal (shift x lift)",
+     "descricao": "Um canal novo pode apenas tirar venda de outro (shift) com custo maior, ou trazer venda nova (lift). Só o ganho melhora a lucratividade (p. 177)."
+    },
+    {
+     "nome": "Divisão do trabalho na venda",
+     "descricao": "Um processo de venda tem cerca de cinco tarefas. Só as do meio (venda face a face e fechamento) exigem o canal caro. As pontas (gerar e qualificar leads no início, apoiar depois da venda) podem ser empurradas para canais mais baratos (p. 182 a 184). Custo de venda caiu de 25% para quase 19% e depois para 11% no exemplo de uma venda de US$ 2.000 (p. 185)."
+    },
+    {
+     "nome": "Alinhar canal e tarefa",
+     "descricao": "Cada canal é melhor em uma tarefa, razoável em outra ou inadequado em outras. O ideal é empurrar cada tarefa ao canal mais barato que ainda tenha nota alta, validando a hipótese em mercado de baixo risco antes de ampliar (p. 185 a 187, 190 a 191)."
+    },
+    {
+     "nome": "Passagens de bastão",
+     "descricao": "São o ponto crítico de risco. Exigem definição exata de quando cada tarefa está completa e procedimento documentado de como passar a venda ao canal seguinte. No exemplo do livro, 300 leads da telemarketing viraram 11 vendas por falta dessa definição (p. 187)."
+    },
+    {
+     "nome": "Dono da conta",
+     "descricao": "Alguém tem de ser dono da relação durante toda a venda: garantir o que precisa ser feito, resolver falhas de passagem, converter oportunidades e achar novas oportunidades. Padrão: quem fecha. Em venda complexa e longa, o canal de pós-venda pode ser melhor dono. Tiers de conta com donos diferentes (p. 188 a 189)."
+    },
+    {
+     "nome": "Conflito de canal com parceiros indiretos",
+     "descricao": "Direto contra direto é só um problema de custo; direto contra indireto é de verdade. Três variáveis: preço igual entre canais, configuração de produto específica por canal e crescimento do mercado versus parcela já atendida por parceiros (p. 180 a 181)."
+    },
+    {
+     "nome": "Crédito duplo de receita (dual revenue credit)",
+     "descricao": "Quando outro canal fecha a venda, o vendedor continua recebendo comissão, e a meta dele sobe. Reduz a disputa por conta e incentiva usar outros canais, mas só funciona se o volume subir bastante (p. 100 a 101)."
+    },
+    {
+     "nome": "Encaixe produto-canal: grau de definição",
+     "descricao": "Oferta de baixa definição, geralmente serviço profissional, exige contato humano de profissionais experientes e quase nunca se vende em canais de marketing direto (p. 52 e 53)."
+    }
+   ],
+   "logica": "Usar o recurso mais caro só onde ele faz diferença reduz o custo de venda em um terço a metade, e liberar o recurso caro das pontas dá a ele mais tempo para as vendas grandes. O ganho depende de disciplina: tarefa certa no canal certo, passagem sem perda e um dono por conta. Os maiores erros vêm da passagem (lead jogado cedo demais, sem triagem) e do conflito de crédito, que faz cada canal esconder a venda dos outros. O livro, de 1999, descreve call centers e distribuidores; a lógica de divisão de trabalho e de bastão independe do tempo, mas os números são de outro contexto.",
+   "aplicacao_wise": "A venda de consultoria é serviço de baixa definição, então o meio da venda fica humano, com Diretor e consultor. Divisão proposta, por tarefa: gerar lead (parceiro, por link exclusivo, Base Ativa e Prateleira de RFP; Wise por outbound), qualificar (Gerente de Parcerias, com critério escrito: ICP, decisor, necessidade e prazo), conduzir reunião, proposta e fechamento (Diretor e consultor), entregar (equipes de Wise, Tríade e Swallow) e sustentar a relação em torno do software (parceiro). Quatro passagens documentadas no portal: parceiro para portal (indicação com contexto), Gerente para Diretor (indicação qualificada com briefing), Diretor para entrega (contrato para kickoff) e entrega para o parceiro (aviso de oportunidade de adoção ou renovação do software). Dono da conta: o consultor ou Diretor que fecha, e a equipe de entrega depois da assinatura, enquanto a Gerente é dona da relação com o parceiro. Conflito: mesmo preço para cliente indicado e direto, proteção de 180 dias, limite de parceiros ativos por categoria de software na mesma carteira, e crédito integral de meta ao consultor mesmo com comissão paga ao parceiro. Mapa híbrido: contas-chave com cobertura seletiva (Diretor, com parceiro abrindo portas) e as demais com cobertura intensiva (link, eventos, Prateleira). O teste shift x lift evita pagar 40% por uma conta que já estava no pipeline da Wise.",
+   "impacto_modelo_de_negocio": "O papel padrão do parceiro é gerar lead e, em parte, apoiar retenção, não vender: a transação, a proposta e o contrato ficam com a Wise. A comissão deve acompanhar o papel. A Prateleira de RFP e o Base Ativa funcionam como cobertura intensiva em carteiras de parceiros, e as contas grandes ficam em cobertura seletiva.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Coordenar o fluxo de venda por tarefa e por canal",
+     "descricao": "Macroprocesso que substitui 'um funil por pilar' por uma única esteira com tarefas atribuídas ao agente certo: gerar, qualificar, conduzir e fechar, entregar, sustentar. As passagens entre tarefas são subprocessos próprios.",
+     "gatilho": "Entrada de uma indicação ou de um lead",
+     "entregas": "Esteira única com tarefa, responsável, critério de conclusão e prazo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Atribuir cada tarefa da venda ao agente que a faz melhor e mais barato",
+     "descricao": "Quadro tarefa x agente (parceiro, Gerente, consultor, Diretor, entrega), com custo em horas e nota de desempenho, revisado a cada semestre.",
+     "gatilho": "Definição do programa e revisão semestral",
+     "entregas": "Quadro tarefa x agente publicado",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Definir o ponto de conclusão de cada etapa",
+     "descricao": "Escrever o que significa indicação qualificada, reunião realizada, proposta enviada e contrato assinado, e usar a mesma definição para ativar o parceiro.",
+     "gatilho": "Desenho do portal",
+     "entregas": "Glossário de etapas com critério objetivo",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Qualificar a indicação com critério escrito",
+     "descricao": "A Gerente, e não quem fecha, avalia (ICP, decisor, necessidade, prazo) e devolve o motivo ao parceiro quando descarta.",
+     "gatilho": "Indicação recebida",
+     "entregas": "Nota de qualidade, decisão e retorno ao parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Passar o bastão: parceiro para portal",
+     "descricao": "Indicação com contexto mínimo (problema, quem decide, por que a Wise), registrada no link exclusivo.",
+     "gatilho": "Parceiro indica",
+     "entregas": "Registro completo ou pedido de complemento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Passar o bastão: Gerente para Diretor",
+     "descricao": "Indicação qualificada com briefing e hipótese de valor, e prazo para primeira reunião.",
+     "gatilho": "Indicação qualificada",
+     "entregas": "Briefing entregue e reunião agendada",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Passar o bastão: fechamento para entrega e para o parceiro",
+     "descricao": "Contrato assinado vira kickoff com a equipe de entrega e aviso ao parceiro sobre a conta ganha.",
+     "gatilho": "Contrato assinado",
+     "entregas": "Kickoff marcado, parceiro informado, dono da conta atualizado",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Nomear um único dono por indicação e por conta, e trocar o dono no fechamento",
+     "descricao": "Dono = quem fecha até a assinatura; equipe de entrega depois. A Gerente é dona da relação com o parceiro em todo o processo.",
+     "gatilho": "Entrada da indicação e assinatura",
+     "entregas": "Campo dono no portal",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Gerir conflito de canal",
+     "descricao": "Regras escritas: mesmo preço, proteção de 180 dias, limite de parceiros ativos por categoria e carteira, crédito de meta integral ao consultor e tratamento de casos de disputa.",
+     "gatilho": "Conta disputada ou nova categoria de parceiro",
+     "entregas": "Decisão registrada e comunicação ao parceiro",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Medir shift x lift",
+     "descricao": "Marcar se a conta indicada já estava no pipeline, na base ou em contato da Wise nos últimos meses antes de classificar como originada.",
+     "gatilho": "Indicação recebida",
+     "entregas": "Marca de conta nova ou já conhecida",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Levantar como o cliente industrial realmente compra consultoria",
+     "descricao": "Entrevistas com clientes e análise do histórico de ganhos por origem para achar a massa crítica de compra e os canais (parceiro, evento, indicação, outbound).",
+     "gatilho": "Início do programa e anual",
+     "entregas": "Mapa de cobertura híbrida por tipo de conta e oferta",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Conversão por passagem de bastão",
+     "descricao": "Indicação para qualificada, para reunião, para proposta, para contrato, com tempo em cada etapa.",
+     "gatilho": "Mensal",
+     "entregas": "Funil por passagem e identificação da passagem que mais perde",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisão mensal de onde o bastão cai",
+     "descricao": "Quinze minutos para olhar a passagem com pior conversão e ajustar critério ou prazo.",
+     "gatilho": "Mensal",
+     "entregas": "Ajuste de critério ou prazo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Dono da conta",
+     "descricao": "Papel formal com quatro responsabilidades do livro: garantir o que precisa ser feito, resolver falhas de passagem, converter a oportunidade e achar novas oportunidades na conta.",
+     "gatilho": "Entrada da indicação",
+     "entregas": "Conta com dono único",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Esteira horizontal com cinco caixas (gerar, qualificar, conduzir e fechar, entregar, sustentar). Cada caixa mostra o agente (parceiro, Gerente, consultor e Diretor, entrega, parceiro) com um selo de custo (baixo, médio, alto). Entre as caixas, losangos numerados são as passagens de bastão com o critério de conclusão escrito. Acima, uma faixa 'dono da conta' que muda de cor no fechamento. Ao lado, o mapa de cobertura: eixo horizontal oferta, eixo vertical tamanho da conta, com contas-chave em seletiva e o resto em intensiva.",
+   "citacoes": [
+    {
+     "trecho": "a sales process consists of a number of different tasks, each of which can potentially be assigned to a different channel based on what that channel is capable of doing best.",
+     "pagina": "p. 182"
+    },
+    {
+     "trecho": "Hand-offs are the critical risk areas in channel integration.",
+     "pagina": "p. 187"
+    },
+    {
+     "trecho": "Each task in the sales process must be defined clearly so each channel understands what it is supposed to complete before it moves a sale down the pipeline.",
+     "pagina": "p. 187"
+    },
+    {
+     "trecho": "in complex, lengthy sales, a post-sales support channel can be a better choice for account ownership than the deal-closing channel.",
+     "pagina": "p. 188"
+    },
+    {
+     "trecho": "Dual revenue credit, in most circumstances, is a smarter way to pay channels than a system in which channels compete for the same commissions.",
+     "pagina": "p. 101"
+    },
+    {
+     "trecho": "Are prices for the same products the same across different channels? If not, customers will migrate to whichever channels offer more competitive prices.",
+     "pagina": "p. 180"
+    }
+   ]
+  },
+  {
+   "nome": "Seven best practices of partner channel design (sete práticas de desenho do canal de parceiros), planejamento de investimento por receita e gestão de desempenho por papel",
+   "livro": "channel-advantage",
+   "paginas": "p. 104 a 130 (capítulo 7), p. 192 a 209 (capítulo 11) e p. 209 a 222 (capítulo 12)",
+   "componentes": [
+    {
+     "nome": "1. Definir o escopo e o tamanho do canal",
+     "descricao": "Dimensionar o canal a partir do mercado: tamanho do mercado, produtividade realista por parceiro e número de parceiros necessários. Aumentar produtividade antes de aumentar o número de parceiros, porque parceiros demais num mercado pequeno geram conflito, perda de volume e dano à marca (p. 108 a 112)."
+    },
+    {
+     "nome": "2. Definir o papel do parceiro na venda",
+     "descricao": "Três opções, não excludentes: gerar lead, vender, apoiar e prestar serviço. Parceiro que só gera lead deve reportar tudo a um sistema central que roteia, nunca direto a quem fecha, porque metade dos leads some no caminho (p. 113 a 115)."
+    },
+    {
+     "nome": "3. Políticas robustas e atraentes",
+     "descricao": "Termos e condições que cubram a variedade de situações (o livro lista 22 temas: exclusividade, devolução, pagamento, território e outros) e sejam aceitos pelos parceiros, consultados na elaboração (p. 116 a 117)."
+    },
+    {
+     "nome": "4. Base de parceiros forte",
+     "descricao": "Perfil de parceiro ideal em uma página, lista de verificação de recrutamento, nível probatório de pouco compromisso e poda anual dos 5 a 10% de menor resultado, ou rebaixamento de nível antes de desligar. Estudo citado: 10% dos parceiros geraram 84% da receita (p. 118 a 120)."
+    },
+    {
+     "nome": "5. Infraestrutura de apoio",
+     "descricao": "Apoio de marketing, treinamento (conhecer a oferta antes de vender e uma noção de análise de necessidade do cliente) e apoio de vendas e técnico (p. 120 a 122)."
+    },
+    {
+     "nome": "6. Medir e gerir o desempenho",
+     "descricao": "Expectativa de 18 a 30 meses até a meta, com custo inicial de 18 a 30 centavos por real contra 12 centavos em regime. Dados exigidos combinados por escrito, poucos indicadores que importam e ligação clara entre desempenho, recompensa e sanção (p. 122 a 125)."
+    },
+    {
+     "nome": "7. Obter feedback do canal",
+     "descricao": "Pesquisa, entrevistas estruturadas (pelo menos uma por ano, com perguntas como 'há algum negócio que possamos ajudar a fechar hoje?') e conselho de parceiros com alta liderança e agenda dominada pela fala do parceiro (p. 125 a 127)."
+    },
+    {
+     "nome": "O parceiro como cliente",
+     "descricao": "O fator que mais influencia o sucesso é tratar o parceiro como cliente, porque lealdade e compromisso dele são proporcionais aos que a empresa demonstra (p. 129)."
+    },
+    {
+     "nome": "Planejamento de investimento por receita",
+     "descricao": "Começar pela receita esperada por canal, não pelo custo do ano anterior: definir oportunidade de receita, previsão por canal, recursos (receita do canal = recursos x contribuição por recurso) e modelo de custo (p. 193 a 208)."
+    },
+    {
+     "nome": "Objetivos e metas por papel",
+     "descricao": "Traduzir metas corporativas em três a cinco objetivos de venda; cada canal recebe metas compatíveis com a sua tarefa (meta de leads para quem gera lead, de receita para quem vende); três a cinco métricas por canal, e metas pensadas para 18 a 30 meses (p. 211 a 222)."
+    }
+   ],
+   "logica": "Canal de parceiros é um sistema com ciclo de vida: dimensionar, definir papel, escrever regras, recrutar bem e podar, apoiar, medir e ouvir. Os erros típicos são recrutar demais, esperar resultado de regime logo no começo, medir o parceiro pelo que ele não faz (receita de quem só gera lead) e dar sanção sem ter combinado a recompensa. Tratar o parceiro como cliente e ouvi-lo é o que sustenta a lealdade, já que o parceiro tem outras opções. O livro é de 1999 e fala de distribuidores e revendedores; use a lógica e trate os números como referência de outro contexto.",
+   "aplicacao_wise": "As sete práticas viram o esqueleto do termo de parceria e do plano do programa. (1) Escopo: receita do programa igual ao número de parceiros ativos vezes a contribuição de cada um (indicações válidas, conversão e ticket), limitada pela capacidade da Gerente. (2) Papel: gerar lead e abrir acesso; indicações passam sempre pelo portal. (3) Termo escrito antes da assinatura: exclusividade ou carteira, proteção de 180 dias, prazo de pagamento, marca, dados e saída. (4) Perfil de parceiro ideal de uma página (porte da carteira, aderência ao ICP, tipo de solução, capacidade de evento), nível probatório de entrada, poda anual dos 5 a 10% de menor resultado com rebaixamento antes de desligar. (5) Trilha curta obrigatória antes de liberar o link. (6) Expectativa de 18 a 30 meses: a meta de dezembro de 2026 citada na leitura anterior é marco, não resultado de regime, e a Prateleira de RFP não deve prometer volume de leads ao fornecedor sem capacidade de gerá-los e qualificá-los (parceiros x leads prometidos). Ativação medida pela primeira indicação no ICP que virou reunião. (7) Entrevista estruturada anual por parceiro e conselho de parceiros com os A e o Diretor. Metas por papel: indicações válidas para quem gera lead, não receita.",
+   "impacto_modelo_de_negocio": "Dá ao programa uma estrutura contratual e econômica: papel do parceiro definido, políticas, recompensa e sanção, expectativa de maturação e dimensionamento a partir da receita. O custo do programa é planejado para ser maior nos dois primeiros anos que no regime. O pagamento de 40% da primeira mensalidade (em LTV, perto de 3 a 5%) deve ser comparado com as referências do livro para quem só gera lead (5 a 15% da venda, em contexto de varejo digital) e para quem vende (11%).",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Desenhar e manter o termo e as políticas do programa",
+     "descricao": "Macroprocesso que reúne os documentos que regem o programa: termo de parceria, política de comissão, níveis, dados, marca, saída. Hoje esses temas estão espalhados em decisões.",
+     "gatilho": "Início do programa e revisão anual",
+     "entregas": "Termo e políticas versionados",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o perfil de parceiro ideal e a lista de verificação de recrutamento",
+     "descricao": "Uma página com porte da carteira, aderência ao ICP, tipo de solução, capacidade de evento e critérios dos quatro C, usada como filtro do recrutamento.",
+     "gatilho": "Anual e a cada novo ciclo de recrutamento",
+     "entregas": "Perfil e lista de verificação aprovados",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Dimensionar o programa: quantos parceiros ativos cabem",
+     "descricao": "Fórmula receita do programa = parceiros ativos x contribuição por parceiro, com a restrição de horas da Gerente e de capacidade da Prateleira.",
+     "gatilho": "Trimestral",
+     "entregas": "Número máximo de parceiros A, B e C e fila de espera",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Receber o parceiro em nível probatório",
+     "descricao": "Entrada de baixo compromisso (por exemplo nível de experiência) em que as duas partes veem resultado antes de assumir contrapartidas maiores.",
+     "gatilho": "Candidato aprovado nos quatro C",
+     "entregas": "Parceiro ativo no programa com benefícios limitados e meta de ativação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Treinar o parceiro antes de liberar o link",
+     "descricao": "Trilha curta sobre a oferta da Wise e o critério de indicação qualificada, com registro de conclusão.",
+     "gatilho": "Assinatura do termo",
+     "entregas": "Registro de conclusão da trilha",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Medir parceiros pelo papel e aplicar recompensa e sanção",
+     "descricao": "Metas por papel (indicações válidas, ativação, reuniões geradas) combinadas por escrito. Recompensa por atingir (leads da Prateleira, destaque) e sanção por não atingir (rebaixamento de nível, perda de leads, desligamento).",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Decisão registrada por parceiro",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Podar por rebaixamento antes de desligar",
+     "descricao": "Rever anualmente os 5 a 10% de menor resultado, rebaixar de nível e, se necessário, desligar com revisão jurídica, a menos que a saída esteja prevista no termo.",
+     "gatilho": "Anual",
+     "entregas": "Lista de rebaixamentos e desligamentos",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Ouvir os parceiros: entrevista estruturada anual e conselho de parceiros",
+     "descricao": "Uma entrevista por parceiro por ano com perguntas fixas, conselho com parceiros A e o Diretor, e devolutiva pública do que foi decidido.",
+     "gatilho": "Anual",
+     "entregas": "Relatório de entrevistas e plano de resposta",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Planejar o investimento do programa a partir da receita esperada",
+     "descricao": "Quatro passos do livro aplicados ao programa: oportunidade de receita, previsão por pilar e por nível, recursos necessários e modelo de custo, evitando orçamento por inércia.",
+     "gatilho": "Anual",
+     "entregas": "Previsão de receita e custo por pilar",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Conselho de parceiros",
+     "descricao": "Grupo de parceiros A com o Diretor, para opinar sobre regras, produto e evento, com presença de alta liderança e pouca propaganda.",
+     "gatilho": "Semestral",
+     "entregas": "Registro de decisões e retorno ao grupo",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Parceiros ativos (não assinados)",
+     "descricao": "Parceiros com ao menos uma indicação válida que virou reunião no período, abertos por nível e por coorte de entrada.",
+     "gatilho": "Mensal",
+     "entregas": "Quantidade, taxa de ativação em 90 dias e tempo até a primeira indicação",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Custo do programa por real de receita ao longo da curva de maturação",
+     "descricao": "Custo dividido pela receita atribuída, acompanhado por coorte para comparar com a expectativa de 18 a 30 meses.",
+     "gatilho": "Trimestral",
+     "entregas": "Curva por coorte",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Linha do ciclo de vida do parceiro, da esquerda para a direita: perfil, recrutamento, nível probatório, apoio, medição, feedback e poda, com setas de retorno. Embaixo, a curva de custo e receita em 30 meses: custo acima da receita nos primeiros 18 meses, cruzamento e regime. Marcar dezembro de 2026 como um ponto no início da curva.",
+   "citacoes": [
+    {
+     "trecho": "There are basically three choices, though they are not mutually exclusive: lead generation, selling, and support/service.",
+     "pagina": "p. 113"
+    },
+    {
+     "trecho": "a lead-generating partner channel should report all leads to a central management system for routing to an appropriate sales resource.",
+     "pagina": "p. 115"
+    },
+    {
+     "trecho": "The first step in partner recruitment is to develop an Ideal Partner Profile.",
+     "pagina": "p. 118"
+    },
+    {
+     "trecho": "A good rule of thumb is to prune the five to ten per cent of channel partners each year who are generating the lowest sales.",
+     "pagina": "p. 120"
+    },
+    {
+     "trecho": "Most partner channels take eighteen to thirty months to achieve target levels of sales and profitability.",
+     "pagina": "p. 122"
+    },
+    {
+     "trecho": "What is the sanction for failing to achieve target levels of performance? Will they lose money? New leads? Membership in the channel?",
+     "pagina": "p. 123"
+    }
+   ]
+  }
+ ],
+ "excesso_de_kanbans": [
+  {
+   "ideia": "Trocar a unidade de trabalho: em vez de um card por parceiro em cada funil, uma jogada sobre uma conta, que é uma célula da matriz 3x3. O parceiro vira atributo e filtro da jogada, não dono de um card.",
+   "livro": "ecosystem-led-growth",
+   "pagina": "secao 21",
+   "como_aplicar": "Tabela única de jogadas no portal: conta, parceiro, célula da matriz, tipo de jogada (recrutar, ativar, co-vender, retribuir), estado e responsável. Prateleira de RFP, Base Ativa e indicações são tipos de jogada, não funis. O Gerente trabalha uma fila de tarefas e não doze quadros. O kanban continua existindo como visão filtrada (por tipo de jogada, por parceiro ou por consultor), gerada do mesmo dado."
+  },
+  {
+   "ideia": "Parceiros não gerenciados: só o parceiro que sai do esperado ganha tarefa humana. A cauda segue um conjunto pequeno de jogadas automáticas.",
+   "livro": "ecosystem-led-growth",
+   "pagina": "secao 19",
+   "como_aplicar": "Parceiros C e em observação não têm card em funil. Têm um estado calculado (ativo, dormente, com sobreposição relevante, com indicação aberta) e só geram tarefa quando uma regra dispara: nova sobreposição, indicação recebida, inatividade longa, fim do prazo probatório. O onboarding de 90 dias do nível C vira sequência automática com marcos e não um card."
+  },
+  {
+   "ideia": "Alerta por exceção em vez de revisão de cards: tarefa criada por sinal, como oportunidade que avança sem parceiro quando existe parceiro disponível.",
+   "livro": "ecosystem-led-growth",
+   "pagina": "secao 26",
+   "como_aplicar": "Regras no portal geram tarefas na fila da Gerente: oportunidade avançou sem parceiro e há sobreposição, indicação parada acima do SLA, parceiro com pedido sem retorno, proteção de 180 dias perto do fim. O que não dispara regra não pede atenção."
+  },
+  {
+   "ideia": "Canal único de pedidos dos consultores (pull): formulário curto que vira tarefa, em vez de cada consultor falar com a Gerente por um lado e cada parceiro ter um card.",
+   "livro": "ecosystem-led-growth",
+   "pagina": "secao 26",
+   "como_aplicar": "Como consultores e comercial não entram no portal, o pedido nasce em formulário público curto ou mensagem fixa que a Gerente transforma em tarefa com tipo de ajuda (intel, influência, intro). Todos os pedidos aparecem na mesma lista, com SLA."
+  },
+  {
+   "ideia": "Um só objeto de dados com visões por papel (relatórios prontos filtrados para as contas de quem olha) no lugar de um quadro por processo.",
+   "livro": "ecosystem-led-growth",
+   "pagina": "secao 26",
+   "como_aplicar": "O cadastro mestre de parceiro e conta recebe estado derivado; cada papel vê um relatório pronto: Gerente (fila de tarefas e exceções), Diretor (portfólio por quadrante e níveis), consultor (briefing das contas dele, enviado por mensagem). Quadros por processo viram filtros desse mesmo dado."
+  },
+  {
+   "ideia": "Cadência por faixa em vez de um card de acompanhamento por parceiro: 20% mais ativos por mês, 3 a 10 por trimestre, os demais de forma assíncrona.",
+   "livro": "nearbound",
+   "pagina": "p. 205",
+   "como_aplicar": "A pauta mensal e trimestral é gerada do dado (sobreposições novas, contas paradas, saldo de ajuda). Dos parceiros A saem reuniões; dos demais, uma mensagem coletiva nos grupos da comunidade. A reunião gera tarefas na fila, não cards novos."
+  },
+  {
+   "ideia": "Lista de contas do trimestre por consultor (cerca de um terço, a calibrar) como visão central do trabalho com parceiros, no lugar de quadros por parceiro.",
+   "livro": "nearbound",
+   "pagina": "p. 106",
+   "como_aplicar": "A cada trimestre, a Gerente, o consultor e o Diretor escolhem as contas com maior sobreposição e sinal. A visão do consultor passa a ser 'minhas contas com parceiro' e a jogada planejada em cada uma. A proporção de um terço é do exemplo do livro e deve começar menor na Wise."
+  },
+  {
+   "ideia": "Painel único de atividades envelhecidas, agrupadas por quem espera (Gerente, consultor ou parceiro), em lugar de quadros por funil.",
+   "livro": "nearbound",
+   "pagina": "p. 206",
+   "como_aplicar": "Uma lista ordenada por idade, filtrada por 'aguardando'. O Gerente começa o dia pelo que está aguardando a ele e pelo que passou do prazo com consultor e parceiro, e fecha o dia respondendo."
+  },
+  {
+   "ideia": "Uma só esteira de indicação com passagens de bastão e dono único, em vez de um funil por pilar. Cada etapa tem critério objetivo de conclusão, o que reduz estados vagos.",
+   "livro": "channel-advantage",
+   "pagina": "p. 187",
+   "como_aplicar": "Esteira: indicação registrada, qualificada, reunião realizada, proposta enviada, contrato, em entrega. Cada etapa vem com a definição escrita do que precisa ter acontecido e o dono do passo. Os pilares Prateleira de RFP, Base Ativa e link só diferem na entrada, não na esteira."
+  },
+  {
+   "ideia": "Entrada central de leads: toda indicação passa por um único registro e uma única triagem, em vez de cada pilar ter a sua fila.",
+   "livro": "channel-advantage",
+   "pagina": "p. 115",
+   "como_aplicar": "Link exclusivo, Prateleira, Base Ativa e eventos alimentam a mesma entrada. A Gerente qualifica com critério escrito, devolve o motivo do descarte ao parceiro e roteia a indicação qualificada ao Diretor."
+  },
+  {
+   "ideia": "Nível probatório e lista de candidatos pontuada pelos quatro C: candidato é linha de uma lista até passar da nota, e só então vira parceiro com onboarding.",
+   "livro": "channel-advantage",
+   "pagina": "p. 119",
+   "como_aplicar": "Os 21 contatos em conversa ficam como linhas de uma lista pontuada pelos quatro C e pela sobreposição. Só vira card quem passa da nota. O nível probatório tem tarefas padrão mínimas e meta única de ativação."
+  },
+  {
+   "ideia": "Poucos indicadores por papel (três a cinco), em vez de um painel por funil.",
+   "livro": "channel-advantage",
+   "pagina": "p. 211",
+   "como_aplicar": "Cada papel (Gerente, consultor, Diretor, parceiro) tem de três a cinco indicadores ligados à tarefa dele. O que não ajuda a decidir sai do portal. Menos indicadores reduz a necessidade de quadros de acompanhamento."
+  },
+  {
+   "ideia": "Tiers de conta com donos diferentes: contas-chave com atenção humana e demais por regra.",
+   "livro": "channel-advantage",
+   "pagina": "p. 188",
+   "como_aplicar": "Contas grandes (alta complexidade) ficam com Diretor e consultor com jogada planejada; contas médias seguem a esteira padrão; contas pequenas só recebem material e link. Isso define quanto cada conta merece de card."
+  }
+ ],
+ "tensoes": [
+  {
+   "tensao": "Atribuição: o ecosystem-led growth trata o resultado originado (sourced) como padrão-ouro e a Wise paga comissão e protege por 180 dias o que o parceiro originou. O nearbound diz que sourced é a pior métrica e que a taxa de anexação sim/não é a métrica norte, e fala em abolir a disputa por crédito.",
+   "como_resolver": "Manter duas marcas independentes no portal. Originado (a conta não existiria sem o parceiro, com evidência) é a única base de comissão e de proteção. Anexação (havia parceiro envolvido com critério de valor) é a métrica de saúde, de nível e de crédito de meta do consultor. Os dois livros ficam compatíveis se o pagamento e a gestão usarem marcas diferentes."
+  },
+  {
+   "tensao": "O ecosystem-led growth pressupõe dado compartilhado entre CRMs, plataforma neutra e vendedores que veem o overlap onde trabalham, e diz que o crescimento por ecossistema não serve a quem tem proposta autônoma e pouca escala. A Wise não tem parceiro assinado, os parceiros chegam de forma orgânica e muitos terão carteira em planilha. Consultores e comercial não entram no portal.",
+   "como_resolver": "A matriz de readiness do livro (escala pequena, proposta de valor dependente de ecossistema) indica investir, e a proposta conjunta da Prateleira de RFP sustenta isso. Começar por cruzamento por lista (CNPJ raiz como chave, inferência minha), com regras por nível e aceite duplo, e levar o dado ao consultor em briefing de uma página enviado pela Gerente, já que ele não entra no portal."
+  },
+  {
+   "tensao": "Os dois primeiros livros defendem modelo pull: o vendedor se serve do dado e o time de parcerias não vira intermediário de tudo. O desenho atual faz de um único Gerente o dono de todas as tarefas, mesmo quando outra pessoa executa, e proíbe consultores no portal.",
+   "como_resolver": "Separar dono de executor. A Gerente é dona da tarefa no portal, mas o pull acontece fora dele: formulário público, mensagem e pauta na reunião de pipeline. O consultor decide quando pedir, a Gerente executa e devolve. Só se mede pull como pedidos feitos sobre oportunidades com sobreposição."
+  },
+  {
+   "tensao": "O ecosystem-led growth defende parceiros não gerenciados e crescer sem contratar nem criar títulos. O desenho atual tem uma comunidade de WhatsApp com um grupo por parceiro, o que tende a gerar acompanhamento individual de todos. O nearbound defende telefone e texto diário com os principais parceiros e diz para não depender de portal.",
+   "como_resolver": "Manter os grupos, mas atribuir cadência humana só a A e B. No nível C o grupo é canal de notificação com mensagens padronizadas e alertas, sem acompanhamento individual, e toda interação relevante gera registro no portal. A regra do nearbound vale para os A, e a do ecosystem-led growth vale para a cauda."
+  },
+  {
+   "tensao": "O channel-advantage trata parceiros como canais com políticas, controle, metas e sanções, com divisão formal de tarefas e dono por conta. O nearbound critica canal separado, fala em overlay, uma receita só e fim de muros de crédito.",
+   "como_resolver": "Aplicar a disciplina do channel-advantage (tarefa, passagem de bastão, dono da conta e termo escrito) dentro da cultura de overlay do nearbound. Como o parceiro da Wise não vende, o conflito clássico de canal é pequeno, e o risco real é de passagem e de crédito, que se resolvem com dono único, critério de conclusão e crédito integral de meta ao consultor."
+  },
+  {
+   "tensao": "Remuneração: o channel-advantage cita 5 a 15% da venda para quem só gera lead (em contexto de varejo digital) e 11% para quem vende. A Wise paga 40% da primeira mensalidade, em LTV perto de 3 a 5%. O nearbound fala de pagar por influência e introdução e de reconhecimento público.",
+   "como_resolver": "Não elevar o percentual por causa dos livros. Os 3 a 5% em LTV ficam abaixo da faixa de quem só gera lead, mas o pagamento é adiantado e vem com valor entregue (comunidade ativa na carteira, evento, Prateleira, ranking). Calibrar por papel, medir em 12 meses se o parceiro A continua gerando e reabrir a discussão com dado, não por referência de outro setor."
+  },
+  {
+   "tensao": "Prazo: o ecosystem-led growth e o nearbound mostram ganhos rápidos em outras empresas (EQL, lista de contas, 3 I's), enquanto o channel-advantage afirma que o canal de parceiros leva de 18 a 30 meses para atingir a meta e custa mais no começo. A meta de dezembro de 2026 aparece na leitura anterior do programa.",
+   "como_resolver": "Tratar dezembro de 2026 como marco de ativação (parceiros ativos e primeiras indicações) e não como meta de receita de regime. O ecosystem-led growth reforça isso ao tratar o valor de cada parceria como curva J. Planejar o custo do programa para ser maior nos dois primeiros anos."
+  },
+  {
+   "tensao": "Vieses e contexto das fontes: o ecosystem-led growth vem do fundador de uma plataforma de dados entre empresas e o nearbound de uma plataforma ligada ao tema, ambos SaaS e com números próprios; o channel-advantage é de 1999 e fala de call centers, distribuidores e revendedores.",
+   "como_resolver": "Usar os livros como hipóteses de desenho e não como benchmarks. Todo percentual citado (um terço de contas, 41% de vitória, 25% para 11% de custo, 18 a 30 meses) entra no portal como hipótese a medir já na primeira coorte, comparando oportunidades com e sem parceiro."
+  },
+  {
+   "tensao": "Quantidade de métricas: o ecosystem-led growth manda usar os mesmos KPIs do comercial e não inventar métricas, o nearbound propõe taxa de anexação como número norte, o channel-advantage limita a três a cinco por papel. O programa atual tem funil, onboarding, SLA, comissões, ações conjuntas, cruzamentos e níveis, cada um com os seus números.",
+   "como_resolver": "Definir um conjunto curto: pipeline, fechamento, ciclo e ticket do comercial, comparados com e sem parceiro (ecosystem-led growth), anexação de parceiro (nearbound), e de três a cinco indicadores de parceiros por papel (channel-advantage). O resto fica em consulta e não em painel."
+  }
+ ]
+}
