@@ -6,11 +6,10 @@ flowchart LR
     subgraph raia_PA_01 ["Gerente de Parcerias"]
       n_i1(["Primeiro dia útil do trimestre"]):::declarado
       n_s1[["Revisar o nível dos parceiros"]]:::declarado
-      n_s2[["Ouvir a satisfação dos parceiros"]]:::declarado
-      n_s3[["Avaliar a saúde das parcerias"]]:::hipotese
-      n_s4[["Apurar o ranking e o reconhecimento"]]:::declarado
+      n_s2[["Ouvir o pulso da relação"]]:::hipotese
+      n_s3[["Medir a saúde do ecossistema e os portões"]]:::hipotese
       n_t1["Agendar as revisões conjuntas do trimestre"]:::declarado
-      n_t2["Enviar ao Diretor as decisões do trimestre"]:::declarado
+      n_t2["Enviar ao Diretor o resumo do trimestre"]:::declarado
       n_f1(["Trimestre fechado"]):::declarado
     end
     subgraph raia_PA_02 ["Diretor"]
@@ -18,7 +17,6 @@ flowchart LR
     n_i1 --> n_s1
     n_s1 --> n_s2
     n_s2 --> n_s3
-    n_s3 --> n_s4
-    n_s4 --> n_t1
+    n_s3 --> n_t1
     n_t1 --> n_t2
     n_t2 --> n_f1

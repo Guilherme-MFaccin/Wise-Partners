@@ -1,0 +1,27 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Leitura diária do portal"]):::hipotese
+      n_t1["Calcular o Valor de cada parceiro"]:::hipotese
+      n_t2["Calcular o Ritmo de cada parceiro"]:::hipotese
+      n_g1{"É fechamento trimestral?"}:::hipotese
+      n_t3["Calcular a Relação com o pulso"]:::hipotese
+      n_t4["Ler o tipo na tabela de oito células"]:::hipotese
+      n_g2{"O parceiro mudou de tipo?"}:::hipotese
+      n_t5["Criar a tarefa da jogada do novo tipo"]:::hipotese
+      n_f1(["Tipo mantido"]):::hipotese
+      n_f2(["Tipo atualizado e jogada criada"]):::hipotese
+    end
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_g1
+    n_g1 -->|Sim| n_t3
+    n_g1 -->|Não| n_t4
+    n_t3 --> n_t4
+    n_t4 --> n_g2
+    n_g2 -->|Não| n_f1
+    n_g2 -->|Sim| n_t5
+    n_t5 --> n_f2

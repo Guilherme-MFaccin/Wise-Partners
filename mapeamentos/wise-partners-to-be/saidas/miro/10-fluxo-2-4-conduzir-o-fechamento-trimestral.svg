@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_20" transform="translate(2728,7758)" data-frame="2.4 Conduzir o fechamento trimestral">
-<rect data-type="frame" x="0" y="0" width="2608" height="858" fill="#ffffff" />
+<g id="f_P_12" transform="translate(2728,8402)" data-frame="2.4 Conduzir o fechamento trimestral">
+<rect data-type="frame" x="0" y="0" width="2348" height="858" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">2.4 Conduzir o fechamento trimestral</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="2.4 Conduzir o fechamento trimestral">
 flowchart LR
@@ -11,11 +11,10 @@ flowchart LR
     subgraph raia_PA_01 ["Gerente de Parcerias"]
       n_i1(["Primeiro dia útil do trimestre"]):::declarado
       n_s1[["Revisar o nível dos parceiros"]]:::declarado
-      n_s2[["Ouvir a satisfação dos parceiros"]]:::declarado
-      n_s3[["Avaliar a saúde das parcerias"]]:::hipotese
-      n_s4[["Apurar o ranking e o reconhecimento"]]:::declarado
+      n_s2[["Ouvir o pulso da relação"]]:::hipotese
+      n_s3[["Medir a saúde do ecossistema e os portões"]]:::hipotese
       n_t1["Agendar as revisões conjuntas do trimestre"]:::declarado
-      n_t2["Enviar ao Diretor as decisões do trimestre"]:::declarado
+      n_t2["Enviar ao Diretor o resumo do trimestre"]:::declarado
       n_f1(["Trimestre fechado"]):::declarado
     end
     subgraph raia_PA_02 ["Diretor"]
@@ -23,8 +22,7 @@ flowchart LR
     n_i1 --&gt; n_s1
     n_s1 --&gt; n_s2
     n_s2 --&gt; n_s3
-    n_s3 --&gt; n_s4
-    n_s4 --&gt; n_t1
+    n_s3 --&gt; n_t1
     n_t1 --&gt; n_t2
     n_t2 --&gt; n_f1
 

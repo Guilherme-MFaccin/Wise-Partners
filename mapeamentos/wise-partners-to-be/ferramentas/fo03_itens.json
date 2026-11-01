@@ -1,0 +1,491 @@
+[
+ {
+  "id": "R3-Q-0001",
+  "bloco": "Os princípios",
+  "texto": "Você aprova estes 18 princípios, em quatro camadas, como a base que ordena toda a hierarquia de processos?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Você pediu para refatorar todos os conceitos de uma vez. Juntei o que os 16 livros dizem em comum e separei em quatro camadas: por que o programa existe, como se organiza, como se relaciona e como se mede e evolui. Cada camada responde a uma pergunta diferente, e cada princípio aponta para os processos que o colocam em prática.",
+   "Dez dos dezoito já estavam aprovados nas suas respostas: canal mais barato que os ativos, interação central, ocupar pouco, interface simples, portal no centro, atenção proporcional, só a exceção vira trabalho, primeiro valor em 90 dias, ritmos no lugar de quadros e governança com o Diretor só assinando.",
+   "Os oito novos vêm dos livros da segunda pasta: criar valor antes de capturar (Keystone, Give and Take), fechar o ciclo e mostrar o impacto (Referral Engine, Give and Take, Business of Belonging), ensinar a indicar (Referral Engine), norma social antes de norma de mercado (Business of Belonging, Referral Engine), reciprocidade visível (Give and Take), comunidade com ritual (Business of Belonging), medir por fatores objetivos (Keystone, Customer Success) e crescer por fases (Keystone, Winning the Right Game)."
+  ],
+  "logica": "Quando os princípios estão escritos e ordenados, cada decisão nova tem um critério para ser julgada. Um processo que não serve a nenhum princípio é candidato a sair, o que protege o programa da complexidade que você quer evitar.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 100",
+    "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem."
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 191",
+    "trecho": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 126",
+    "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 173",
+    "trecho": "Research shows that at work, the vast majority of giving that occurs between people is in response to direct requests for help"
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 123",
+    "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 378\" role=\"img\" aria-label=\"Dezoito princípios em quatro camadas\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"30\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Por que existe</text><rect x=\"150\" y=\"8\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"27.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">1 Canal mais barato (CAC)</text><rect x=\"318\" y=\"8\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"398.0\" y=\"27.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">2 Valor antes de capturar</text><rect x=\"486\" y=\"8\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"566.0\" y=\"27.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">3 Uma interação central</text><rect x=\"150\" y=\"46\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"65.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">4 Ocupar pouco</text><text x=\"10\" y=\"118\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Como se organiza</text><rect x=\"150\" y=\"96\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"115.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">5 Interface simples</text><rect x=\"318\" y=\"96\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"398.0\" y=\"115.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">6 Portal no centro</text><rect x=\"486\" y=\"96\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"566.0\" y=\"115.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">7 Atenção proporcional</text><rect x=\"150\" y=\"134\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"153.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">8 Só a exceção vira trabalho</text><text x=\"10\" y=\"206\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Como se relaciona</text><rect x=\"150\" y=\"184\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"203.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">9 Primeiro valor em 90 dias</text><rect x=\"318\" y=\"184\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"398.0\" y=\"203.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">10 Fechar o ciclo</text><rect x=\"486\" y=\"184\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"566.0\" y=\"203.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">11 Ensinar a indicar</text><rect x=\"150\" y=\"222\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"230.0\" y=\"241.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">12 Norma social</text><rect x=\"318\" y=\"222\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"398.0\" y=\"241.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">13 Reciprocidade visível</text><rect x=\"486\" y=\"222\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"566.0\" y=\"241.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">14 Comunidade com ritual</text><text x=\"10\" y=\"294\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Como se mede</text><rect x=\"150\" y=\"272\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"230.0\" y=\"291.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">15 Fatores objetivos</text><rect x=\"318\" y=\"272\" width=\"160\" height=\"32\" rx=\"8\" class=\"b hi\"/><text x=\"398.0\" y=\"291.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">16 Fases e portões</text><rect x=\"486\" y=\"272\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"566.0\" y=\"291.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">17 Ritmos fixos</text><rect x=\"150\" y=\"310\" width=\"160\" height=\"32\" rx=\"8\" class=\"b\"/><text x=\"230.0\" y=\"329.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">18 Governança clara</text><text x=\"10\" y=\"368\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Em azul, os oito princípios novos desta rodada; os demais você já aprovou.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0002",
+  "bloco": "A nova arquitetura",
+  "texto": "Você aprova a hierarquia v3: três macroprocessos de gestão (Arquitetar, Gerir por rituais, Medir e aprender), seis finalísticos (Atrair, Integrar, Gerar oportunidades, Desenvolver, Cultivar a comunidade, Reter ou encerrar) e três de suporte (Prateleira, Equipar o parceiro, Operar o portal no centro)?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Três mudanças em relação à v2. Medir e aprender virou macroprocesso, porque é ali que o portal calcula o CAC, o cubo de cada parceiro, o nível, a saúde do ecossistema e os portões. Cultivar a comunidade também virou macroprocesso, porque os livros novos mostram que a comunidade é onde o parceiro decide ficar e dar.",
+   "No suporte, Dados e Portal viraram um só: Operar o portal no centro da gestão. É onde moram as regras que rodam sozinhas, os dados e a privacidade, os contratos e os acessos. O ecossistema interno saiu como processo, porque você decidiu que o lead vai direto ao closer, sem SLA, e isso virou uma atividade dentro de Gerar oportunidades.",
+   "Cada processo agora diz o que o portal faz nele (registra, calcula, alerta, prepara mensagem, monta pauta). Ao todo são 12 macroprocessos, 54 processos e 24 subprocessos, com 13 fluxos detalhados."
+  ],
+  "logica": "Com o portal descrito em cada processo, o web app fica no centro da gestão de forma concreta: dá para ver, processo a processo, o que é trabalho humano e o que é trabalho do sistema.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 100",
+    "trecho": "The key to creating leverage is to make sure that the value of these assets divided by the cost of creating, maintaining, and sharing them increases rapidly with the number of ecosystem members that share them."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 129",
+    "trecho": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!"
+   },
+   {
+    "livro": "Building Successful Partner Channels in the software industry",
+    "pagina": "p. 94",
+    "trecho": "The PRM supports the channel partner relationship management processes, thus we must define these first and then implement the system afterwards."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 306\" role=\"img\" aria-label=\"Doze macroprocessos em volta do portal\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><circle cx=\"330\" cy=\"150\" r=\"62\" class=\"b hi\"/><text x=\"330\" y=\"145\" font-size=\"14\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Portal</text><text x=\"330\" y=\"163\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\">no centro</text><line x1=\"330\" y1=\"86\" x2=\"330\" y2=\"46\" class=\"ln fino\"/><rect x=\"268.0\" y=\"17.0\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"330.0\" y=\"35.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">1 Arquitetar</text><line x1=\"362\" y1=\"95\" x2=\"420\" y2=\"60\" class=\"ln fino\"/><rect x=\"383.0\" y=\"32.80900235343623\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"445.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">2 Rituais</text><line x1=\"385\" y1=\"118\" x2=\"486\" y2=\"98\" class=\"ln fino\"/><rect x=\"467.18584287042086\" y=\"76.0\" width=\"124\" height=\"30\" rx=\"8\" class=\"b hi\"/><text x=\"529.1858428704209\" y=\"94.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">3 Medir e aprender</text><line x1=\"394\" y1=\"150\" x2=\"510\" y2=\"150\" class=\"ln fino\"/><rect x=\"498.0\" y=\"135.0\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"560.0\" y=\"153.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">4 Atrair</text><line x1=\"385\" y1=\"182\" x2=\"486\" y2=\"202\" class=\"ln fino\"/><rect x=\"467.18584287042086\" y=\"193.99999999999997\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"529.1858428704209\" y=\"212.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">5 Integrar</text><line x1=\"362\" y1=\"205\" x2=\"420\" y2=\"240\" class=\"ln fino\"/><rect x=\"383.0\" y=\"237.19099764656377\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"445.0\" y=\"255.9\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">6 Oportunidades</text><line x1=\"330\" y1=\"214\" x2=\"330\" y2=\"254\" class=\"ln fino\"/><rect x=\"268.0\" y=\"253.0\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"330.0\" y=\"271.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">7 Desenvolver</text><line x1=\"298\" y1=\"205\" x2=\"240\" y2=\"240\" class=\"ln fino\"/><rect x=\"153.00000000000006\" y=\"237.19099764656377\" width=\"124\" height=\"30\" rx=\"8\" class=\"b hi\"/><text x=\"215.00000000000006\" y=\"255.9\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">8 Comunidade</text><line x1=\"275\" y1=\"182\" x2=\"174\" y2=\"202\" class=\"ln fino\"/><rect x=\"68.81415712957914\" y=\"194.00000000000006\" width=\"124\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"130.81415712957914\" y=\"212.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">9 Reter</text><line x1=\"266\" y1=\"150\" x2=\"150\" y2=\"150\" class=\"ln fino\"/><rect x=\"38.0\" y=\"135.00000000000003\" width=\"124\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"100.0\" y=\"153.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">10 Prateleira</text><line x1=\"275\" y1=\"118\" x2=\"174\" y2=\"98\" class=\"ln fino\"/><rect x=\"68.81415712957912\" y=\"75.99999999999999\" width=\"124\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"130.81415712957912\" y=\"94.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">11 Equipar</text><line x1=\"298\" y1=\"95\" x2=\"240\" y2=\"60\" class=\"ln fino\"/><rect x=\"152.9999999999999\" y=\"32.80900235343627\" width=\"124\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"214.9999999999999\" y=\"51.5\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">12 Operar o portal</text><text x=\"330\" y=\"296\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Gestão e finalísticos em branco, suporte em cinza; em azul, os dois macroprocessos novos.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0003",
+  "bloco": "Fatores e tipos",
+  "texto": "No lugar dos três fatores de saúde e dos oito tipos do livro, você aprova o cubo: Valor, Ritmo e Relação, cada um alto ou baixo, formando oito tipos por regra fixa, com o Potencial definindo só a atenção?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Você desconfiou dos três fatores e pediu uma regra lógica que levasse aos oito tipos. Relemos o livro inteiro para isso. O próprio Strategic Alliances diz que a autoavaliação posiciona a parceria só de forma muito aproximada. Os oito tipos são perfis escolhidos entre 64 combinações de quatro níveis em três fatores: só 8 combinações batem exatamente com um perfil, e 22 empatam entre perfis. Nenhum corte alto ou baixo separa os oito. Ou seja, não é uma matriz, e a sua desconfiança procedia.",
+   "A proposta mantém a ideia do livro (valor, cooperação, qualidade da relação), mas mede comportamentos que o portal registra e transforma tudo numa matriz de verdade. Valor: o que a relação já entregou em 12 meses, receita ganha mais pipeline ponderado. Ritmo: recência e frequência de ações de valor. Relação: o pulso trimestral, o retorno mútuo e o equilíbrio entre indicações enviadas e recebidas, a reciprocidade de Give and Take. Dois níveis em cada fator dão exatamente oito células, e cada célula é um tipo.",
+   "A lógica RFV que você pediu está dentro do cubo: o Ritmo é a recência e a frequência, e o Valor é o V. A Relação acrescenta o que o RFV de clientes não vê, a tensão na relação. O Potencial (os 4 Cs de Nearbound: carteira, credibilidade, capacidade, compromisso) não muda o tipo, só decide se vale pôr mais horas."
+  ],
+  "logica": "Com três fatores binários, qualquer pessoa explica a regra em um minuto, e cada tipo leva a uma ação. Os cortes (12 meses, 30 dias, 2 ações, índice 70) são provisórios e se calibram na primeira revisão trimestral com dados reais.",
+  "citacoes": [
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 217",
+    "trecho": "To make it easier to carry out a self-assessment, each partnership can be considered in terms of three factors:"
+   },
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 218",
+    "trecho": "This will help you to very roughly position a particular relationship within a G+H Type using Table 8.1."
+   },
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 212",
+    "trecho": "There are doubtless other types, but these are unlikely to be generic or widely applicable."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 123",
+    "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 13",
+    "trecho": "Takers have a distinctive signature: they like to get more than they give"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 288\" role=\"img\" aria-label=\"Cubo Valor, Ritmo e Relação\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Valor</text><text x=\"70\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Ritmo</text><text x=\"130\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Relação</text><text x=\"210\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Tipo</text><rect x=\"12\" y=\"28\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"34\" y=\"43\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"72\" y=\"28\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"94\" y=\"43\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"132\" y=\"28\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"154\" y=\"43\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"210\" y=\"26\" width=\"170\" height=\"26\" rx=\"8\" class=\"b\"/><text x=\"295.0\" y=\"42.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">Embaixador</text><rect x=\"12\" y=\"58\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"34\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"72\" y=\"58\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"94\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"132\" y=\"58\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"154\" y=\"73\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"210\" y=\"56\" width=\"170\" height=\"26\" rx=\"8\" class=\"b\"/><text x=\"295.0\" y=\"72.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">Gerador sob tensão</text><rect x=\"12\" y=\"88\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"34\" y=\"103\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"72\" y=\"88\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"94\" y=\"103\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"132\" y=\"88\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"154\" y=\"103\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"210\" y=\"86\" width=\"170\" height=\"26\" rx=\"8\" class=\"b2\"/><text x=\"295.0\" y=\"102.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Âncora esfriando</text><rect x=\"12\" y=\"118\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"34\" y=\"133\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"72\" y=\"118\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"94\" y=\"133\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"132\" y=\"118\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"154\" y=\"133\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"210\" y=\"116\" width=\"170\" height=\"26\" rx=\"8\" class=\"b2\"/><text x=\"295.0\" y=\"132.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Valioso em risco</text><rect x=\"12\" y=\"148\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"163\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"72\" y=\"148\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"94\" y=\"163\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"132\" y=\"148\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"154\" y=\"163\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"210\" y=\"146\" width=\"170\" height=\"26\" rx=\"8\" class=\"b\"/><text x=\"295.0\" y=\"162.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">Promissor</text><rect x=\"12\" y=\"178\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"193\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"72\" y=\"178\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"94\" y=\"193\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"132\" y=\"178\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"154\" y=\"193\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"210\" y=\"176\" width=\"170\" height=\"26\" rx=\"8\" class=\"b\"/><text x=\"295.0\" y=\"192.7\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"600\" class=\"tx\">Ativo sem tração</text><rect x=\"12\" y=\"208\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"223\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"72\" y=\"208\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"94\" y=\"223\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"132\" y=\"208\" width=\"44\" height=\"22\" rx=\"5\" class=\"barra1\"/><text x=\"154\" y=\"223\" font-size=\"10\" text-anchor=\"middle\" class=\"inv\">alto</text><rect x=\"210\" y=\"206\" width=\"170\" height=\"26\" rx=\"8\" class=\"b2\"/><text x=\"295.0\" y=\"222.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cordial seletivo</text><rect x=\"12\" y=\"238\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"253\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"72\" y=\"238\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"94\" y=\"253\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"132\" y=\"238\" width=\"44\" height=\"22\" rx=\"5\" class=\"b2\"/><text x=\"154\" y=\"253\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">baixo</text><rect x=\"210\" y=\"236\" width=\"170\" height=\"26\" rx=\"8\" class=\"b2\"/><text x=\"295.0\" y=\"252.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Desertor</text><text x=\"400\" y=\"50\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Valor: receita ganha em 12 meses</text><text x=\"400\" y=\"65\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">mais pipeline ponderado.</text><text x=\"400\" y=\"95\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Ritmo: recência e frequência de</text><text x=\"400\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">ações de valor (o R e o F do RFV).</text><text x=\"400\" y=\"140\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Relação: pulso trimestral, retorno</text><text x=\"400\" y=\"155\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">mútuo e equilíbrio entre dar e receber.</text><text x=\"400\" y=\"185\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Potencial (4 Cs) não muda o tipo:</text><text x=\"400\" y=\"200\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">decide só a intensidade da atenção.</text><text x=\"10\" y=\"278\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Três fatores, dois níveis cada: 2 × 2 × 2 = 8 tipos, por regra. Em cinza, os quatro tipos de risco.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0004",
+  "bloco": "Fatores e tipos",
+  "texto": "Você aprova a ação, a abordagem e a cadência de cada um dos oito tipos, inclusive para quem está em risco (Âncora esfriando, Valioso em risco, Cordial seletivo, Desertor)?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Você pediu uma abordagem por tipo, como numa matriz RFV. A tabela da figura mostra o resumo. Embaixador: proteger e alavancar, com tom de sócio. Gerador sob tensão: diagnosticar em 7 dias o que tensiona (lead sem retorno, comissão percebida como injusta). Âncora esfriando: chegar com uma oportunidade pronta, sem cobrança. Valioso em risco: ouvir primeiro, por ligação, e decidir em 15 dias se vale. Promissor: buscar a primeira venda em 90 dias. Ativo sem tração: descobrir em 60 dias por que a atividade não vira receita. Cordial seletivo: recrutar de novo com foco único. Desertor: decidir, sem insistir.",
+   "As ações vêm do que o Strategic Alliances recomenda para os perfis equivalentes: o catador de cerejas tratado como recrutamento novo, o desertor como decisão sobre se vale o esforço. A elas se somam Customer Success (todo sinal vira ação com dono e prazo) e Give and Take (julgar quem só toma pelo comportamento).",
+   "No portal, a mudança de tipo cria a tarefa da jogada na sua fila, com a mensagem sugerida. A retenção deixa de ser um fluxo único e passa a seguir o tipo de cada parceiro."
+  ],
+  "logica": "Abordar o parceiro pelo motivo real do afastamento economiza tempo e preserva a relação: quem esfriou por falta de oportunidade não precisa de cobrança, e quem nunca teve tração precisa de diagnóstico, não de convite.",
+  "citacoes": [
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 17",
+    "trecho": "they are not immutable; they can and do change, depending on the actions and behaviours of the participants."
+   },
+   {
+    "livro": "Strategic Alliances and Marketing Partnerships",
+    "pagina": "p. 219",
+    "trecho": "The more positive symptoms that are observable the more likely it is that the relationship is performing at a higher level of satisfaction to the partner."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 128",
+    "trecho": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!"
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 138",
+    "trecho": "Giving and taking are based on our motives and values, and they’re choices that we make regardless of whether our personalities trend agreeable or disagreeable"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 278\" role=\"img\" aria-label=\"Jogada por tipo\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Tipo</text><text x=\"190\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Jogada</text><text x=\"540\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Cadência</text><rect x=\"6\" y=\"26\" width=\"648\" height=\"26\" rx=\"5\" class=\"b\"/><text x=\"14\" y=\"43\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Embaixador</text><text x=\"190\" y=\"43\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Proteger e alavancar; tom de sócio</text><text x=\"540\" y=\"43\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Mensal</text><rect x=\"6\" y=\"56\" width=\"648\" height=\"26\" rx=\"5\" class=\"b2\"/><text x=\"14\" y=\"73\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Gerador sob tensão</text><text x=\"190\" y=\"73\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Diagnosticar a tensão em 7 dias</text><text x=\"540\" y=\"73\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Quinzenal</text><rect x=\"6\" y=\"86\" width=\"648\" height=\"26\" rx=\"5\" class=\"b\"/><text x=\"14\" y=\"103\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Âncora esfriando</text><text x=\"190\" y=\"103\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Chegar com oportunidade pronta</text><text x=\"540\" y=\"103\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Quinzenal</text><rect x=\"6\" y=\"116\" width=\"648\" height=\"26\" rx=\"5\" class=\"b2\"/><text x=\"14\" y=\"133\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Valioso em risco</text><text x=\"190\" y=\"133\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Ouvir por ligação; decidir em 15 dias</text><text x=\"540\" y=\"133\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Semanal</text><rect x=\"6\" y=\"146\" width=\"648\" height=\"26\" rx=\"5\" class=\"b\"/><text x=\"14\" y=\"163\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Promissor</text><text x=\"190\" y=\"163\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Primeira venda em 90 dias</text><text x=\"540\" y=\"163\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Semanal</text><rect x=\"6\" y=\"176\" width=\"648\" height=\"26\" rx=\"5\" class=\"b2\"/><text x=\"14\" y=\"193\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Ativo sem tração</text><text x=\"190\" y=\"193\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Descobrir por que não vira receita</text><text x=\"540\" y=\"193\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Quinzenal</text><rect x=\"6\" y=\"206\" width=\"648\" height=\"26\" rx=\"5\" class=\"b\"/><text x=\"14\" y=\"223\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Cordial seletivo</text><text x=\"190\" y=\"223\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Recrutar de novo com foco único</text><text x=\"540\" y=\"223\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Mensal leve</text><rect x=\"6\" y=\"236\" width=\"648\" height=\"26\" rx=\"5\" class=\"b2\"/><text x=\"14\" y=\"253\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Desertor</text><text x=\"190\" y=\"253\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Decidir, sem insistir</text><text x=\"540\" y=\"253\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Trimestral</text></svg>"
+ },
+ {
+  "id": "R3-Q-0005",
+  "bloco": "Modelo de negócio",
+  "texto": "A métrica-mãe do programa passa a ser o CAC dos clientes vindos de parceiros, comparado ao CAC dos canais ativos. Quem informa o CAC dos canais ativos?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Eu informo",
+   "O financeiro informa",
+   "O Igor informa",
+   "Não sei: perguntar ao Igor"
+  ],
+  "contexto": [
+   "Você deixou claro o porquê do programa: parceria é um canal de aquisição de receita mais barato que os canais ativos, e a comissão só serve para baratear ainda mais o CAC. Se é esse o objetivo, ele precisa ser a primeira medida, não um resultado escondido entre outros.",
+   "O portal já tem o que precisa para o lado do canal: comissões, horas registradas e custos diretos, divididos pelos clientes fechados vindos de parceiros. O Método Octo compara a relação entre critério e benefício à de CAC e LTV, e o Referral Engine manda medir fonte, conversão e custo por cliente.",
+   "Falta o termo de comparação: o CAC dos canais ativos do grupo (prospecção, eventos, mídia). Só alguém fora do portal tem esse número."
+  ],
+  "logica": "Uma métrica-mãe ligada ao motivo de existir do programa decide sozinha boa parte das discussões: o que não baixa o CAC nem aumenta a adesão não entra.",
+  "citacoes": [
+   {
+    "livro": "FO-02",
+    "pagina": "FO-02/Q-0015",
+    "trecho": "Contrapartida não financeira para entrar num pedido da Prateleira (ação conjunta, condição comercial para a indústria). Não vamos complicar o que não precisa. Parceria para a Wise Makers é um canal de aquisição de receita mais barato do que os canais ativos agora. O nosso benefício são leads e novos clientes. Comissão da parte do parceiro pode vir só para baratear ainda mais o CAC, mas não pode ser um fator de tornar o programa mais complexo e diminuir a taxa de aderência, o que diminuiria a quantidade de parceiros, por consequência a quantidade de empresas indicadas e, por fim, o CAC.\nVamos manter simples nessa parte que é sucesso."
+   },
+   {
+    "livro": "Ecossistema de Parceiros",
+    "pagina": "p. 137",
+    "trecho": "A relação entre critério e benefício é muito semelhante à relação de CAC versus LTV."
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 141",
+    "trecho": "So what’s your referral number? What percentage of your clients refer business?"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 192\" role=\"img\" aria-label=\"CAC do canal comparado aos canais ativos\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"300\" height=\"110\" rx=\"8\" class=\"b hi\"/><text x=\"160.0\" y=\"64.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">CAC do canal de parcerias =</text><text x=\"160.0\" y=\"79.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">comissões + horas + custos diretos</text><text x=\"160.0\" y=\"94.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">÷ clientes fechados vindos de parceiros</text><rect x=\"350\" y=\"20\" width=\"300\" height=\"110\" rx=\"8\" class=\"b2\"/><text x=\"500.0\" y=\"64.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">CAC dos canais ativos =</text><text x=\"500.0\" y=\"79.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">o custo médio de trazer um cliente</text><text x=\"500.0\" y=\"94.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">por prospecção, eventos e mídia</text><text x=\"330\" y=\"80\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">comparado a</text><text x=\"10\" y=\"160\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">O portal calcula o lado esquerdo sozinho. O lado direito é o único número que vem de fora.</text><text x=\"10\" y=\"180\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Regra de decisão: o que não baixa o CAC nem aumenta a adesão dos parceiros não entra no programa.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0006",
+  "bloco": "Fatores e tipos",
+  "texto": "Além do cubo por parceiro, o programa inteiro ganha três medidas de saúde: produtividade (oportunidades e clientes por parceiro ativo, e o CAC caindo), robustez (ativos que seguem ativos e base que não depende de um só parceiro) e criação de nicho (categorias e tipos novos gerando valor). Você aprova?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "The Keystone Advantage mostra que um programa pode ter parceiros bons e mesmo assim estar doente. É o caso de quando tudo depende de um parceiro só, ou quando o custo de servir cresce mais do que o valor. Por isso o livro mede o ecossistema inteiro em três medidas: produtividade, robustez e criação de nicho.",
+   "Aqui elas viram números do painel trimestral, calculados pelo portal. Produtividade: oportunidades e clientes por parceiro ativo e a tendência do CAC. Robustez: quantos ativos seguem ativos depois de dois trimestres e quanto o resultado depende dos três maiores parceiros. Criação de nicho: categorias e tipos de parceiro novos que já geram oportunidade."
+  ],
+  "logica": "O cubo diz onde agir em cada parceiro. A saúde do ecossistema diz se o programa como um todo está ficando mais forte ou mais frágil, que é a pergunta do Diretor.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 54",
+    "trecho": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains."
+   },
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 56",
+    "trecho": "measures of productivity should also capture the effectiveness of an ecosystem in converting innovation into lowered costs and new products and functions."
+   },
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 58",
+    "trecho": "the plummeting ROIC numbers precede by more than three years the actual collapse of the Internet sector."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 142\" role=\"img\" aria-label=\"Três medidas de saúde do ecossistema\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"200\" height=\"40\" rx=\"8\" class=\"b hi\"/><text x=\"110.0\" y=\"44.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Produtividade</text><text x=\"110\" y=\"82\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">oportunidades e clientes por</text><text x=\"110\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">parceiro ativo; CAC caindo</text><rect x=\"228\" y=\"20\" width=\"200\" height=\"40\" rx=\"8\" class=\"b hi\"/><text x=\"328.0\" y=\"44.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Robustez</text><text x=\"328\" y=\"82\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">ativos que seguem ativos; não</text><text x=\"328\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">depender de um só parceiro</text><rect x=\"446\" y=\"20\" width=\"200\" height=\"40\" rx=\"8\" class=\"b hi\"/><text x=\"546.0\" y=\"44.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Criação de nicho</text><text x=\"546\" y=\"82\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">categorias e tipos novos</text><text x=\"546\" y=\"97\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">gerando valor</text><text x=\"10\" y=\"132\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Painel trimestral do programa inteiro; o cubo continua sendo a leitura de cada parceiro.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0007",
+  "bloco": "Gestão do programa",
+  "texto": "Você pediu que eu recomendasse os portões. Você aprova os portões abaixo (ajustando números no comentário, se quiser)?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Recomendação, juntando o seu objetivo (CAC menor que os canais ativos) com o que os livros pedem em cada fase. Winning the Right Game pede evidência que atraia o próximo parceiro. Keystone pede liquidez em escala pequena antes de escalar. Customer Success pede um processo que se repete antes de se padronizar. Business of Belonging pede que os parceiros comecem a puxar a conversa.",
+   "Experimentação para Tração, valendo por um trimestre: 5 parceiros ativados; 3 clientes fechados vindos de parceiros; CAC do canal menor ou igual ao dos canais ativos; metade das oportunidades qualificadas virando reunião; rituais rodando dois trimestres seguidos do mesmo jeito.",
+   "Tração para Crescimento: 15 parceiros ativos, com 40% em Ritmo alto; parceiros originando 20% dos clientes novos do grupo; CAC do canal na metade do dos canais ativos; metade das conversas da comunidade iniciadas por parceiros; 80% dos ativos seguindo ativos depois de dois trimestres. Na fase de Crescimento entram categorias e regiões novas e, quando o custo de servir passar das horas disponíveis, uma segunda pessoa no time.",
+   "Os números são inferência minha, calibrada ao tamanho do grupo; nenhum livro dá números para o caso Wise. Os três pilares ficam abertos desde o início, como você decidiu."
+  ],
+  "logica": "O portão controla o ritmo de escala, não a abertura dos pilares. Com portões ligados ao CAC, crescer só faz sentido quando crescer barateia a aquisição.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 206",
+    "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up."
+   },
+   {
+    "livro": "Winning the Right Game",
+    "pagina": "p. 83",
+    "trecho": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 162",
+    "trecho": "Os clientes não renovam, nem ficam com você, nem compram mais de você a não ser que, ou até que, você realmente lhes entregue valor."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 70",
+    "trecho": "The community is first started and needs a lot of love and care to keep it alive."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 302\" role=\"img\" aria-label=\"Fases e portões recomendados\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"150\" width=\"190\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"105.0\" y=\"179.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Experimentação</text><rect x=\"230\" y=\"100\" width=\"190\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"325.0\" y=\"129.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Tração</text><rect x=\"450\" y=\"50\" width=\"190\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"545.0\" y=\"79.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Crescimento</text><line x1=\"200\" y1=\"170\" x2=\"228\" y2=\"130\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"420\" y1=\"120\" x2=\"448\" y2=\"80\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"14\" y=\"222\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 5 parceiros ativados</text><text x=\"14\" y=\"237\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 3 clientes de parceiros</text><text x=\"14\" y=\"252\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• CAC ≤ canais ativos</text><text x=\"14\" y=\"267\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 50% viram reunião</text><text x=\"14\" y=\"282\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• rituais estáveis</text><text x=\"234\" y=\"172\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 15 ativos, 40% em Ritmo alto</text><text x=\"234\" y=\"187\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 20% dos clientes novos</text><text x=\"234\" y=\"202\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• CAC na metade</text><text x=\"234\" y=\"217\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 50% da conversa dos parceiros</text><text x=\"234\" y=\"232\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">• 80% seguem ativos</text><text x=\"454\" y=\"120\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Categorias e regiões novas;</text><text x=\"454\" y=\"135\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">segunda pessoa no time quando</text><text x=\"454\" y=\"150\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">o custo de servir passar das horas.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0008",
+  "bloco": "Gestão do programa",
+  "texto": "Revisei o princípio das três perguntas, como você pediu: elas saem. No lugar, toda semana você revisa as oportunidades abertas e conversa com cada closer sobre as dele, e uma vez por mês o Igor recebe um resumo de poucos números. Você aprova?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "As três perguntas vinham de Nearbound, que propõe embutir o programa na reunião comercial (uma receita só, não direta e indireta). O princípio continua certo: o parceiro tem de fazer parte da rotina de venda. Mas o meio estava pesado para o caso Wise. Você já decidiu que o lead vai direto ao closer e que a conversa com ele é pessoal.",
+   "Então o ritual semanal fica seu, sem pauta formal com o grupo. O portal lista, por closer, as oportunidades abertas e o último retorno dado ao parceiro, e você conversa com cada um como preferir. Com o Igor, o contato vira um resumo mensal de poucos números: CAC do canal, parceiros ativos, oportunidades e clientes do mês, distância dos portões. Ele já confia na sua autonomia."
+  ],
+  "logica": "O princípio (o programa vive dentro da rotina comercial) fica; o mecanismo vira o mais leve possível. Isso tira uma reunião da agenda dos closers e do Igor e mantém a informação que importa.",
+  "citacoes": [
+   {
+    "livro": "Nearbound and the Rise of the Who Economy",
+    "pagina": "p. 197",
+    "trecho": "It’s one revenue number, not direct and indirect."
+   },
+   {
+    "livro": "FO-02",
+    "pagina": "FO-02/Q-0014",
+    "trecho": "Aprovo com ajustes (comente). Vamos fazer de maneira simples, cara. Simplesmente o lead que vem, vai para o closer de cada respectiva empresa do grupo. O próprio gerente de parcerias conversa com o closer diretamente (até pessoalmente) para que ele atenda no tempo que melhor funcionar. O closer nunca vai atrasar. Vamos manter simples. O SLA pode funcionar, mas é uma regra que só pesa o sistema e não serve efetivamente para nada. Siga o que eu falei e será sucesso."
+   },
+   {
+    "livro": "FO-02",
+    "pagina": "FO-02/Q-0011",
+    "trecho": "Aprovo como está. Gostei da parte de eu propor uma minuta, rascunho ou proposta pedindo críticas e ela ir sendo trabalhada até ser aprovada pelas duas partes. É uma forma mais orgânica e funcional do que um contrato padrão único e travado. A única coisa é que isso toma tempo e, se for através de e-mail pode levar semanas. Não vou me opor de fazer assim, pois realmente é o melhor encaixe, até porque, imagino que serão excessões que pedirão ajustes constantes. A única coisa que quero pontuar é a aprovação final do diretor. Nem eu nem ele queremos que ele faça uma efetiva aprovação criteriosa. Ele não tem tempo para isso e me dá autonomia para negociar com o parceiro e encontrar o melhor dos dois lados. A única coisa que ele faz é assinar. Claro que ele pode revisar etc, mas tem que ser um processo simples da parte dele."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 126\" role=\"img\" aria-label=\"Rituais semanal e mensal\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"300\" height=\"70\" rx=\"8\" class=\"b hi\"/><text x=\"160.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Semanal: você revisa as oportunidades</text><text x=\"160.0\" y=\"66.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">abertas e conversa com cada closer</text><rect x=\"350\" y=\"20\" width=\"300\" height=\"70\" rx=\"8\" class=\"b\"/><text x=\"500.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Mensal: resumo ao Igor em poucos números</text><text x=\"500.0\" y=\"66.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">(CAC, ativos, oportunidades, portões)</text><text x=\"10\" y=\"116\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Saem as três perguntas na reunião comercial. Fica o princípio: o programa vive dentro da rotina de venda.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0009",
+  "bloco": "Gestão do programa",
+  "texto": "Como o Igor só assina, quem decide o desligamento de um parceiro?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Eu decido e informo o Igor",
+   "Eu decido e o Igor assina o aviso formal",
+   "O Igor decide, como na especificação",
+   "Não sei: perguntar ao Igor"
+  ],
+  "contexto": [
+   "A especificação prevê aprovação do Diretor no desligamento. Na Rodada 2 você disse que o Igor não faz aprovação criteriosa: ele assina. A governança que os livros pedem (Keystone, Customer Success) é ter um dono único com autoridade e regras visíveis, não necessariamente uma aprovação em duas camadas.",
+   "O desligamento já tem critérios objetivos no portal (tempo sem resultado, duas tentativas de retomada, tipo Desertor no cubo). A pergunta é só quem dá a palavra final."
+  ],
+  "logica": "Se você é o dono do programa, a decisão é sua; se o desligamento tem peso de contrato, a assinatura do Igor no aviso fecha o rito sem exigir análise dele.",
+  "citacoes": [
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 210",
+    "trecho": "Although both extremes work, what seem not to work are intermediate models."
+   },
+   {
+    "livro": "Customer Success",
+    "pagina": "p. 52",
+    "trecho": "Quando muita gente é dona ninguém manda nada"
+   },
+   {
+    "livro": "FO-02",
+    "pagina": "FO-02/Q-0011",
+    "trecho": "Aprovo como está. Gostei da parte de eu propor uma minuta, rascunho ou proposta pedindo críticas e ela ir sendo trabalhada até ser aprovada pelas duas partes. É uma forma mais orgânica e funcional do que um contrato padrão único e travado. A única coisa é que isso toma tempo e, se for através de e-mail pode levar semanas. Não vou me opor de fazer assim, pois realmente é o melhor encaixe, até porque, imagino que serão excessões que pedirão ajustes constantes. A única coisa que quero pontuar é a aprovação final do diretor. Nem eu nem ele queremos que ele faça uma efetiva aprovação criteriosa. Ele não tem tempo para isso e me dá autonomia para negociar com o parceiro e encontrar o melhor dos dois lados. A única coisa que ele faz é assinar. Claro que ele pode revisar etc, mas tem que ser um processo simples da parte dele."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 100\" role=\"img\" aria-label=\"Quem decide o desligamento\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"30\" width=\"180\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"100.0\" y=\"51.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Critérios no portal:</text><text x=\"100.0\" y=\"65.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">tempo, tentativas, tipo</text><line x1=\"190\" y1=\"55\" x2=\"230\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"232\" y=\"30\" width=\"180\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"322.0\" y=\"59.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Gerente decide</text><line x1=\"412\" y1=\"55\" x2=\"452\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"454\" y=\"30\" width=\"190\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"549.0\" y=\"51.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Igor: informado ou assina</text><text x=\"549.0\" y=\"65.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">o aviso (sua escolha)</text></svg>"
+ },
+ {
+  "id": "R3-Q-0010",
+  "bloco": "A relação com o parceiro",
+  "texto": "A cada mudança de etapa de uma oportunidade, o portal prepara a mensagem e você a envia no grupo do parceiro; no fim, mostra o impacto gerado (cliente fechado, valor, comissão). Você aprova?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Três livros novos chegam ao mesmo ponto. O Referral Engine diz para fechar o ciclo com quem indicou em cada fase, não só no fechamento. Give and Take mostra que quem dá se esgota quando não vê o impacto do que fez, não por dar demais. Business of Belonging diz que, sem validação, a participação não volta.",
+   "Como o closer está fora do portal, o retorno ao parceiro só acontece se alguém o fizer. O portal detecta a mudança de etapa e deixa a mensagem pronta. Você só copia, ajusta e envia no WhatsApp, como já é o seu canal."
+  ],
+  "logica": "O parceiro que vê o que sua indicação gerou indica de novo. Este é provavelmente o gesto de maior retorno do programa, e custa um minuto por etapa.",
+  "citacoes": [
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 191",
+    "trecho": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 121",
+    "trecho": "it has less to do with the amount of giving and more with the amount of feedback about the impact of that giving"
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 80",
+    "trecho": "Validation. Participation is rewarded in some way, making them feel good about their participation, which strengthens their investment in the shared identity, and the cycle repeats."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 150\" role=\"img\" aria-label=\"Fechar o ciclo em cada etapa\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><line x1=\"40\" y1=\"60\" x2=\"620\" y2=\"60\" class=\"ln\"/><circle cx=\"40\" cy=\"60\" r=\"8\" class=\"pt\"/><text x=\"40\" y=\"40\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Recebida</text><text x=\"40\" y=\"86\" font-size=\"10\" text-anchor=\"middle\" class=\"mu\">mensagem ao parceiro</text><circle cx=\"185\" cy=\"60\" r=\"8\" class=\"pt\"/><text x=\"185\" y=\"40\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Com o closer</text><text x=\"185\" y=\"86\" font-size=\"10\" text-anchor=\"middle\" class=\"mu\">mensagem ao parceiro</text><circle cx=\"330\" cy=\"60\" r=\"8\" class=\"pt\"/><text x=\"330\" y=\"40\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Primeiro contato</text><text x=\"330\" y=\"86\" font-size=\"10\" text-anchor=\"middle\" class=\"mu\">mensagem ao parceiro</text><circle cx=\"475\" cy=\"60\" r=\"8\" class=\"pt\"/><text x=\"475\" y=\"40\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Proposta</text><text x=\"475\" y=\"86\" font-size=\"10\" text-anchor=\"middle\" class=\"mu\">mensagem ao parceiro</text><circle cx=\"620\" cy=\"60\" r=\"8\" class=\"pt\"/><text x=\"620\" y=\"40\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Fechada ou perdida</text><text x=\"620\" y=\"86\" font-size=\"10\" text-anchor=\"middle\" class=\"mu\">mensagem ao parceiro</text><rect x=\"470\" y=\"104\" width=\"180\" height=\"34\" rx=\"8\" class=\"b hi\"/><text x=\"560.0\" y=\"124.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">No fim: o impacto gerado</text><text x=\"40\" y=\"124\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">O portal prepara cada mensagem; você envia no grupo do parceiro.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0011",
+  "bloco": "A relação com o parceiro",
+  "texto": "Na integração, o parceiro aprende a indicar: o perfil do cliente ideal, frases que reconhecem a dor na conversa com o cliente dele e um gesto de indicação sem atrito. O que você adota?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Perfil do cliente ideal de cada empresa do grupo em uma página",
+   "Frases-gatilho: o que o cliente diz quando precisa da Wise, da Tríade ou da Swallow",
+   "Mensagem pronta de indicação para o parceiro enviar ao cliente dele",
+   "Encontro curto de prática na integração"
+  ],
+  "contexto": [
+   "O Referral Engine diz que a indicação falha mais por falta de método do que por falta de vontade. Quem indica precisa reconhecer o cliente certo e saber o que dizer, e qualquer atrito reduz a taxa de indicação.",
+   "O kit de vendas e o simulador de ganho que você pediu já entram no portal do parceiro. A proposta acrescenta o que transforma conhecimento em gesto: as frases que o cliente do parceiro diz quando precisa de gestão comercial, e a mensagem pronta para apresentar a Wise."
+  ],
+  "logica": "Ensinar a reconhecer o momento é mais barato que gerar lead do zero, e baixa o CAC sem mudar a comissão.",
+  "citacoes": [
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 95",
+    "trecho": "Problem is, we don’t spend enough time teaching our customers and sources the kinds of complaints, frustrations, challenges, and situations that qualify someone as a great referral."
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 69",
+    "trecho": "Put tangible referral tools in the hands of your referral sources."
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 66",
+    "trecho": "A fully developed referral system targets two distinct prospect groups."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 126\" role=\"img\" aria-label=\"Ferramentas para indicar\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"150\" height=\"44\" rx=\"8\" class=\"b hi\"/><text x=\"85.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Perfil do cliente ideal</text><text x=\"85\" y=\"84\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">uma página por empresa</text><rect x=\"172\" y=\"20\" width=\"150\" height=\"44\" rx=\"8\" class=\"b hi\"/><text x=\"247.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Frases-gatilho</text><text x=\"247\" y=\"84\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">o que o cliente diz</text><rect x=\"334\" y=\"20\" width=\"150\" height=\"44\" rx=\"8\" class=\"b hi\"/><text x=\"409.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Mensagem pronta</text><text x=\"409\" y=\"84\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">com o link exclusivo</text><rect x=\"496\" y=\"20\" width=\"150\" height=\"44\" rx=\"8\" class=\"b hi\"/><text x=\"571.0\" y=\"46.0\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Prática curta</text><text x=\"571\" y=\"84\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">na integração</text><text x=\"10\" y=\"116\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Reconhecer o momento + saber o que dizer + gesto sem atrito = mais indicações com o mesmo CAC.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0012",
+  "bloco": "A relação com o parceiro",
+  "texto": "Para cultivar a comunidade Wise Partners, o que você adota?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Um ou dois objetivos por fase (nesta, trazer parceiros e trazer oportunidades), medidos pelo portal",
+   "Rituais de formato fixo: comunicado do mês, encontro trimestral de parceiros e mentoria mensal",
+   "Um grupo geral da comunidade, além dos grupos por parceiro, com pedidos e contribuições à vista",
+   "Reconhecimento por status, rede e acesso (destaque, acesso antecipado à Prateleira, palco), separado da comissão"
+  ],
+  "contexto": [
+   "Business of Belonging diz que a comunidade precisa de um objetivo de negócio claro por fase, de rituais que se repetem e de validação. Diz também que trocar norma social por norma de mercado mata o pertencimento: o parceiro fica pela utilidade e pela identidade, não pelo pagamento.",
+   "Give and Take traz o Anel de Reciprocidade: a maior parte do dar nasce de um pedido explícito, e o dar visível faz os outros darem também. Com um grupo por parceiro, ninguém vê ninguém dar. Por isso a proposta de um espaço geral, que fica opcional porque muda a dinâmica que você já tem.",
+   "A comissão continua sendo a regra única que você decidiu, só fica fora da conversa da comunidade."
+  ],
+  "logica": "Uma comunidade com objetivo, ritual e reconhecimento custa poucas horas e vira o lugar onde o parceiro decide ficar. Isso pesa na robustez do ecossistema e no CAC.",
+  "citacoes": [
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 60",
+    "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small."
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 144",
+    "trecho": "a steady cadence of different content and experiences for people to engage with (the beat), regular rituals where everyone knows how to participate (the chorus)"
+   },
+   {
+    "livro": "The Business of Belonging",
+    "pagina": "p. 126",
+    "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation."
+   },
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 161",
+    "trecho": "In generalized giving, on the other hand, the community is the source of the gifts you receive"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 238\" role=\"img\" aria-label=\"Comunidade como macroprocesso\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><circle cx=\"330\" cy=\"110\" r=\"58\" class=\"b hi\"/><text x=\"330\" y=\"106\" font-size=\"13\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Comunidade</text><text x=\"330\" y=\"122\" font-size=\"13\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Wise Partners</text><rect x=\"30\" y=\"20\" width=\"170\" height=\"44\" rx=\"8\" class=\"b\"/><text x=\"115.0\" y=\"38.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Objetivo por fase:</text><text x=\"115.0\" y=\"52.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">parceiros e oportunidades</text><line x1=\"200\" y1=\"42\" x2=\"275\" y2=\"85\" class=\"ln fino\"/><rect x=\"470\" y=\"20\" width=\"170\" height=\"44\" rx=\"8\" class=\"b\"/><text x=\"555.0\" y=\"38.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Rituais fixos:</text><text x=\"555.0\" y=\"52.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">mês, trimestre, mentoria</text><line x1=\"470\" y1=\"42\" x2=\"385\" y2=\"85\" class=\"ln fino\"/><rect x=\"30\" y=\"160\" width=\"170\" height=\"44\" rx=\"8\" class=\"b\"/><text x=\"115.0\" y=\"178.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Grupo geral com pedidos</text><text x=\"115.0\" y=\"192.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">e contribuições à vista</text><line x1=\"200\" y1=\"182\" x2=\"275\" y2=\"135\" class=\"ln fino\"/><rect x=\"470\" y=\"160\" width=\"170\" height=\"44\" rx=\"8\" class=\"b\"/><text x=\"555.0\" y=\"178.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Reconhecimento por status,</text><text x=\"555.0\" y=\"192.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">rede e acesso</text><line x1=\"470\" y1=\"182\" x2=\"385\" y2=\"135\" class=\"ln fino\"/><text x=\"330\" y=\"228\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">A comissão fica fora da conversa da comunidade: norma social antes de norma de mercado.</text></svg>"
+ },
+ {
+  "id": "R3-Q-0013",
+  "bloco": "Atrair e selecionar",
+  "texto": "Na qualificação, você aprova incluir a leitura de comportamento (quem só toma se reconhece pelo que faz, não pela simpatia) e a regra de só aceitar quem a Wise indicaria ao seu melhor cliente?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aprovo como está",
+   "Aprovo com ajustes (comente)",
+   "Não aprovo (comente)"
+  ],
+  "contexto": [
+   "Give and Take mostra que quem só toma costuma ser simpático com quem está acima e duro com quem está ao lado, e que se reconhece pelo comportamento e pela reputação. O Referral Engine dá a regra de entrada mais simples possível: só entra na rede quem você indicaria ao seu melhor cliente.",
+   "Na prática, isso entra na ficha de jogo que você já aprovou, como duas perguntas: o que esse candidato já deu antes de pedir, e se a Wise o indicaria a um cliente importante. Sem formulário novo."
+  ],
+  "logica": "Um tomador na rede consome horas, pede exceções e desanima quem dá. Filtrar na entrada é muito mais barato que desligar depois.",
+  "citacoes": [
+   {
+    "livro": "Give and Take",
+    "pagina": "p. 138",
+    "trecho": "Giving and taking are based on our motives and values, and they’re choices that we make regardless of whether our personalities trend agreeable or disagreeable"
+   },
+   {
+    "livro": "The Referral Engine",
+    "pagina": "p. 167",
+    "trecho": "Would I feel 100 percent confident referring my best customer to this business?"
+   },
+   {
+    "livro": "The Keystone Advantage",
+    "pagina": "p. 100",
+    "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 112\" role=\"img\" aria-label=\"Qualificação com leitura de comportamento\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"150\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"85.0\" y=\"49.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Scorecard</text><line x1=\"160\" y1=\"45\" x2=\"180\" y2=\"45\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"182\" y=\"20\" width=\"150\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"257.0\" y=\"49.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Ficha de jogo</text><line x1=\"332\" y1=\"45\" x2=\"352\" y2=\"45\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"354\" y=\"20\" width=\"150\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"429.0\" y=\"49.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Sobreposição</text><line x1=\"504\" y1=\"45\" x2=\"524\" y2=\"45\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"526\" y=\"20\" width=\"124\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"588.0\" y=\"49.0\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Comportamento</text><text x=\"10\" y=\"100\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Duas perguntas novas na ficha: o que ele já deu antes de pedir? A Wise o indicaria ao melhor cliente?</text></svg>"
+ }
+]

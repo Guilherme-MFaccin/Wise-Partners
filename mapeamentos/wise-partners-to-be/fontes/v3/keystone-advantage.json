@@ -1,0 +1,1147 @@
+{
+ "livro": "The Keystone Advantage: What the New Dynamics of Business Ecosystems Mean for Strategy, Innovation, and Sustainability",
+ "autores": "Marco Iansiti, Roy Levien",
+ "slug": "keystone-advantage",
+ "tese": "Em redes de negócios, o destino das empresas é compartilhado, e por isso o desempenho de cada uma depende da saúde do ecossistema inteiro, que os autores medem por três indicadores: produtividade, robustez e criação de nicho. Quem ocupa um ponto central da rede escolhe entre papéis opostos: o keystone cria valor, compartilha esse valor por meio de plataformas e ocupa pouco espaço; o dominador integra e controla a cadeia; o landlord extrai valor sem criar nada, e acaba matando a rede de que depende. A maioria das empresas joga o papel de nicho: especializa-se, apoia-se em plataformas alheias e gerencia o grau de acoplamento para não ficar refém de um hub. A mecânica que sustenta o keystone é a alavancagem operacional (valor entregue por parceiro cresce mais rápido que o custo de compartilhar), interfaces simples e estáveis, mercados com liquidez antes da escala, preços que equilibram os lados e governança clara. Os exemplos são grandes plataformas dos anos 1990 e 2000 (Microsoft, Wal-Mart, eBay, Visa, TSMC, Enron), então a transposição para um programa de parceiros B2B de uma consultoria é inferência.",
+ "principios": [
+  {
+   "principio": "Meça a saúde do ecossistema inteiro, não só o resultado do próprio funil.",
+   "explicacao": "Os autores propõem três lentes para a saúde de uma rede de empresas: produtividade (converter insumos e inovação em resultado, ano após ano), robustez (sobrevivência, estrutura persistente, previsibilidade) e criação de nicho (novas empresas e novas funções com sentido). Yahoo! e Cisco tinham lucro alto enquanto o ecossistema adoecia, e o ROIC da rede caiu mais de três anos antes do colapso.",
+   "aplicacao_wise": "Montar um painel trimestral do conjunto de parceiros com as três lentes (custo e tempo por oportunidade, sobrevivência e estabilidade dos parceiros ativos, novos parceiros e novas portas por domínio), lido na revisão conjunta. Não aprovar o programa só pela receita de comissão do trimestre.",
+   "citacoes": [
+    {
+     "trecho": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains.",
+     "pagina": "p. 54"
+    },
+    {
+     "trecho": "In the cases of Yahoo! and Cisco, the poor health of their business ecosystem should have raised enormous red flags, despite the significant profit.",
+     "pagina": "p. 52"
+    },
+    {
+     "trecho": "the plummeting ROIC numbers precede by more than three years the actual collapse of the Internet sector.",
+     "pagina": "p. 58"
+    }
+   ]
+  },
+  {
+   "principio": "Crie valor antes de capturar valor e compartilhe o que criar.",
+   "explicacao": "A estratégia keystone tem dois componentes inseparáveis: criar valor no ecossistema e compartilhá-lo com os participantes. Quem cria e não entrega à rede fica temporariamente rico e depois é abandonado. Os autores insistem que isso não é altruísmo, é a melhor estratégia para o próprio hub.",
+   "aplicacao_wise": "A comissão (40% e 10% na Wise Makers e Tríade; 6% e 2% na Swallow) é só a parte monetária do compartilhamento. O que cria valor para o parceiro é a Prateleira de RFP, a Base Ativa e as oportunidades de volta. O teste: o parceiro está melhor com o programa do que sem ele? Se o programa só entrega lead e cliente novo para a Wise, ele ainda não é keystone.",
+   "citacoes": [
+    {
+     "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "A firm that creates value but fails to deliver it to the ecosystem as a whole will find itself perhaps temporarily enriched, but ultimately abandoned.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "they do so because it is a great strategy.",
+     "pagina": "p. 91"
+    }
+   ]
+  },
+  {
+   "principio": "Ocupe pouco do ecossistema e deixe o resto aos parceiros.",
+   "explicacao": "Keystones têm impacto muito maior do que a fatia que ocupam, e dominadores fazem o oposto, ocupam muitos nós da rede. O keystone evita assumir as atividades do ecossistema e, quando necessário, declara publicamente em que áreas não compete (IBM com aplicativos, TSMC com projeto de chips).",
+   "aplicacao_wise": "Escrever no regulamento do programa o que a Wise não faz: não vende software de parceiro, não disputa o cliente dele no escopo dele, não opera a carteira do parceiro. Isso dá segurança para parceiros de ERP, CRM, MES e outros entrarem.",
+   "citacoes": [
+    {
+     "trecho": "Good keystones ought to avoid taking over the activities of their ecosystems, leaving room for a wide variety of other participants to grow and thrive.",
+     "pagina": "p. 116"
+    },
+    {
+     "trecho": "IBM offers an effective platform through its WebSphere product line and will explicitly not compete with any of the application companies that are potential WebSphere customers and users.",
+     "pagina": "p. 138"
+    },
+    {
+     "trecho": "The fact that we don't do any design and don't compete with any of our customers is a big advantage.",
+     "pagina": "p. 140"
+    }
+   ]
+  },
+  {
+   "principio": "Faça o custo de compartilhar valor cair a cada novo parceiro.",
+   "explicacao": "A alavancagem operacional só existe se o valor dos ativos compartilhados, dividido pelo custo de criá-los, mantê-los e compartilhá-los, cresce com o número de membros. Muitos negócios em rede falharam porque o benefício subia com os clientes, mas o custo operacional subia junto. Ativos com interfaces claras e simples (ferramentas, APIs) compartilham melhor que relacionamentos pessoais.",
+   "aplicacao_wise": "Medir horas do Gerente de Parcerias por parceiro ativo e por oportunidade. Se o custo por parceiro não cai com o tamanho da base, o desenho está dependendo de relacionamento pessoal e de WhatsApp e vai travar na tração. Transformar o que se repete em interface padrão do portal.",
+   "citacoes": [
+    {
+     "trecho": "The key to creating leverage is to make sure that the value of these assets divided by the cost of creating, maintaining, and sharing them increases rapidly with the number of ecosystem members that share them.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "The cost of sharing value with each individual partner must therefore be very low and must decrease with the size of the network.",
+     "pagina": "p. 105"
+    },
+    {
+     "trecho": "This is why certain types of assets with clear, simple, and easy-to-use interfaces (such as APIs or tools, for example) can be more effective in providing foundations for a keystone strategy than more traditional assets, such as customer relationships.",
+     "pagina": "p. 105"
+    }
+   ]
+  },
+  {
+   "principio": "Alcance liquidez em escala pequena antes de investir para escalar.",
+   "explicacao": "Os mercados que deram certo foram cautelosos: ficaram pervasivos numa pequena comunidade, ajustaram o desenho com pouco investimento em tecnologia e só então escalaram. A estratégia que falhou foi investir grande em tecnologia e operação antes de existir liquidez, ou seja, antes de as transações realmente fecharem.",
+   "aplicacao_wise": "Escolher um recorte contido (poucos parceiros em um ou dois domínios, ou uma entidade) e provar que oportunidades compartilhadas viram reunião e contrato. Só depois ampliar. Hoje há zero parceiros assinados, então o primeiro portão deveria ser liquidez, não cobertura.",
+   "citacoes": [
+    {
+     "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up.",
+     "pagina": "p. 206"
+    },
+    {
+     "trecho": "Liquidity needs to be a self-sustaining process, and if you don't achieve this in a contained fashion at a smaller scale before committing to large investments, it is likely you will never achieve it at scale.",
+     "pagina": "p. 207"
+    },
+    {
+     "trecho": "Both became pervasive in small communities (microcomputer software developers in 1978 and Pez package collectors in 1996, respectively) before any significant investment had been made.",
+     "pagina": "p. 206"
+    }
+   ]
+  },
+  {
+   "principio": "Mantenha a interface com o parceiro simples e estável, e mude a operação por dentro.",
+   "explicacao": "Uma plataforma tem implementação (proprietária, melhorada de forma invisível) e interface (o que o parceiro enxerga e usa). A implementação pode mudar desde que a interface não quebre. O bom padrão está no ponto mais fino possível de interação e costuma ser um acordo simples.",
+   "aplicacao_wise": "A regra única de comissão, as quatro portas e o formato de entrega do lead são a interface do programa e devem ser tratados como contrato estável. Roteamento interno, ritos do gerente e ferramentas podem evoluir sem aviso. Isso apoia a decisão do patrocinador de manter o programa simples.",
+   "citacoes": [
+    {
+     "trecho": "Platform interfaces are the visible embodiment of the solutions achieved in the implementation.",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "the details of the implementation can change as long as they don't \"break\" the interface.",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "Perhaps surprisingly, this interoperability is often best achieved by simple designs.",
+     "pagina": "p. 166"
+    }
+   ]
+  },
+  {
+   "principio": "Não prenda o parceiro: acoplamento frouxo e mobilidade mantêm o keystone honesto.",
+   "explicacao": "Quanto mais apertado o acoplamento, maior o risco de hold-up e o poder da plataforma sobre o nicho. Parceiros que conseguem sair dão poder de negociação coletivo e impedem que o keystone vire dominador. Os autores avisam que custos de troca evaporam e que a retenção sustentável vem de criar valor de novo, sempre.",
+   "aplicacao_wise": "Não exigir exclusividade nem integrações caras com o portal. Aceitar que o parceiro participe de outros programas. A Wise precisa merecer o parceiro a cada trimestre com valor entregue, não com fricção de saída.",
+   "citacoes": [
+    {
+     "trecho": "Because loose coupling enables mobility, niche firms acquire enormous collective negotiating power with respect to keystones.",
+     "pagina": "p. 146"
+    },
+    {
+     "trecho": "Niche players, in effect, can use this leverage to keep keystones honest and to prevent them from straying into becoming dominators.",
+     "pagina": "p. 146"
+    },
+    {
+     "trecho": "Continuously creating value for ecosystem members is a much more sustainable strategy for keystones than relying on switching costs that, sooner or later, are bound to evaporate.",
+     "pagina": "p. 163"
+    }
+   ]
+  },
+  {
+   "principio": "Equilibre os lados do mercado pelo preço e pela atenção, não pela média.",
+   "explicacao": "Em mercados de vários lados, o valor de cada lado depende da presença dos outros, então o preço ótimo não acompanha o custo marginal de cada lado: subsidia-se quem traz valor ao sistema (desenvolvedores) e cobra-se de quem mais lucra. Preços triviais, iguais para todos, estavam entre as marcas dos marketplaces B2B que fracassaram.",
+   "aplicacao_wise": "O programa tem pelo menos três lados: parceiro emissor, indústria compradora e (nas entidades) a associação ou feira. Acompanhar o equilíbrio entre eles. A regra única de comissão pode ser mantida como interface, mas a Wise deve medir se ela equilibra os lados (ver tensões).",
+   "citacoes": [
+    {
+     "trecho": "In an N-sided market, price should be set so that the right communities are attracted to the market in the appropriate combination and balance.",
+     "pagina": "p. 201"
+    },
+    {
+     "trecho": "in software operating systems, pricing is set so that most of the cost burden is carried by end users, not developers, because developers provide critical value to the system by creating third-party applications.",
+     "pagina": "p. 202"
+    },
+    {
+     "trecho": "In contrast with most of the failed B2B exchanges, in which the pricing policies were trivial (e.g., 5 percent of transaction value for all transactions, paid by the sellers), effective markets used complex and evolving pricing policies",
+     "pagina": "p. 207"
+    }
+   ]
+  },
+  {
+   "principio": "Dê informação comum e padrões de desempenho aos dois lados: confiança baixa o custo de operar.",
+   "explicacao": "Wal-Mart compartilha com fornecedores os dados que eles precisam para ter seu próprio demonstrativo de resultado, e as duas partes discutem ações, não números. Keystones também impõem padrões via avaliações e incentivos, com direito de intervir. Mercados confiáveis gastam menos para atrair e gerir participantes e escalam mais fácil.",
+   "aplicacao_wise": "Dar ao parceiro visibilidade do que acontece com cada oportunidade que enviou (andamento, motivo de perda, resultado), mesmo que closers e consultores não entrem no portal: o gerente alimenta o status. Definir um padrão mínimo de qualidade para indicações e para o retorno da Wise.",
+   "citacoes": [
+    {
+     "trecho": "Both parties know the same information, so the discussion centers around actions.",
+     "pagina": "p. 110"
+    },
+    {
+     "trecho": "Keystones can enforce performance standards via customer evaluations and partner incentives.",
+     "pagina": "p. 102"
+    },
+    {
+     "trecho": "A well-trusted marketplace will need to spend less in attracting customers and in managing their interactions, which means that it will be much easier to scale.",
+     "pagina": "p. 210"
+    }
+   ]
+  },
+  {
+   "principio": "Defina governança clara, com dono único e regras visíveis.",
+   "explicacao": "Mercados de sucesso são ou empresas independentes com fins lucrativos ou cooperativas bem desenhadas; os modelos intermediários, como consórcios de participantes com objetivos conflitantes, não funcionaram. O que parece necessário é uma estrutura limpa e independente dos participantes.",
+   "aplicacao_wise": "Manter a Wise como orquestradora com regras publicadas num texto único, sem comitês mistos de parceiros que decidem preço ou prioridade. A revisão trimestral conjunta recolhe feedback, mas a decisão fica com a Wise, e o Diretor assina o que já foi desenhado.",
+   "citacoes": [
+    {
+     "trecho": "Although both extremes work, what seem not to work are intermediate models.",
+     "pagina": "p. 210"
+    },
+    {
+     "trecho": "what appears to be required here is a clean, clear structure that is independent of market participants",
+     "pagina": "p. 210"
+    }
+   ]
+  },
+  {
+   "principio": "Vigie a tentação de extrair demais: o hub vira landlord sem perceber.",
+   "explicacao": "Todo hub enfrenta a tentação de explorar a posição para ganho de curto prazo. O landlord não precisa agir de má-fé: pode ser só um erro de dosagem em cada negócio, que somado derruba o ecossistema. Yahoo! e AOL acharam que o tráfego garantiria a fila de parceiros e levaram os parceiros à parede.",
+   "aplicacao_wise": "Criar sinais de alerta de que a Wise está extraindo mais do que devolve: parceiros que param de indicar, comissão como única razão de permanência, reclamações de falta de retorno. Testar a cada revisão trimestral.",
+   "citacoes": [
+    {
+     "trecho": "Any firm occupying a hub in a business network faces powerful temptations to exploit that position for shortterm gain to the great detriment of the entire network of firms that are connected to that hub.",
+     "pagina": "p. 120"
+    },
+    {
+     "trecho": "extracting a little too much value, if done in a large number of cases, could help bring down the whole thing.",
+     "pagina": "p. 121"
+    },
+    {
+     "trecho": "By driving their partners to the wall, they left them unable to cope with even the slightest downturn in their markets.",
+     "pagina": "p. 122"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "The Three Measures of Ecosystem Health: Productivity, Robustness, Niche Creation (As três medidas de saúde do ecossistema: produtividade, robustez e criação de nicho)",
+   "paginas": "p. 53 a 66",
+   "componentes": [
+    {
+     "nome": "Domínios do ecossistema",
+     "descricao": "O ecossistema é subdividido em domínios (grupos de organizações com atividades parecidas). Cada domínio crítico para entregar o produto precisa estar saudável: a fragilidade de um só pode comprometer o todo."
+    },
+    {
+     "nome": "Produtividade",
+     "descricao": "Quão bem a rede converte insumos e inovação em resultado, de forma sustentada. Três submedidas: produtividade de fatores (por exemplo ROIC agregado), mudança da produtividade ao longo do tempo e entrega de inovações (tempo e dificuldade para uma novidade chegar aos membros)."
+    },
+    {
+     "nome": "Robustez",
+     "descricao": "Capacidade de persistir diante de choques. Cinco submedidas: taxa de sobrevivência, persistência da estrutura, previsibilidade, obsolescência limitada e continuidade da experiência de uso. A presença de um hub estável e de uma comunidade diversa é forte indicador."
+    },
+    {
+     "nome": "Criação de nicho",
+     "descricao": "Capacidade de aumentar a diversidade com sentido, criando funções novas e valiosas. Duas submedidas: crescimento da variedade de empresas e crescimento da variedade de produtos e blocos técnicos. Diversidade sozinha não é saúde: o novo precisa ser de fato novo e gerar valor."
+    }
+   ],
+   "logica": "Saúde é propriedade coletiva e se mede no conjunto, não na empresa. As três lentes se complementam: produtividade sem robustez colapsa no primeiro choque; robustez sem criação de nicho estagna; nicho sem produtividade é diversidade inútil. Indicadores como o ROIC caíram anos antes do colapso das empresas, então funcionam como alerta antecedente. Uma advertência dos autores (nota 6, p. 231): essas medidas definem saúde para redes produtivas e criativas de negócios, não para qualquer rede.",
+   "aplicacao_wise": "A Wise define o ecossistema do programa como as indústrias atendidas mais os domínios de parceiros (ERP, CRM, MES, SST, ESG, BPM, automação, entidades e feiras). O painel de saúde do programa passa a ter três blocos: produtividade (oportunidade por parceiro, custo e tempo por oportunidade, tempo para uma novidade chegar a todos os parceiros), robustez (sobrevivência e estabilidade de parceiros ativos, concentração, estabilidade das regras) e criação de nicho (parceiros novos e portas ou segmentos novos por período). Inferência minha: as três medidas respondem melhor à pergunta 'o programa está saudável?' do que à pergunta 'que fatores definem uma parceria?', mas podem ser aplicadas por parceiro como 'o que este parceiro soma a cada lente'.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Mapear os domínios do ecossistema de parceiros",
+     "descricao": "Listar domínios (por exemplo ERP, CRM, MES, SST, ESG, BPM, automação, entidades, feiras), contar parceiros por domínio e identificar domínio crítico sem cobertura.",
+     "gatilho": "Abertura do programa e a cada revisão trimestral",
+     "entregas": "Mapa de domínios com contagem e lacunas",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a produtividade do ecossistema de parceiros",
+     "descricao": "Receita por parceiro ativo, custo e horas por oportunidade e tempo entre uma novidade (nova porta, nova RFP, novo material) e sua disponibilidade para todos.",
+     "gatilho": "Fechamento mensal, leitura trimestral",
+     "entregas": "Indicadores de produtividade no portal",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a robustez do ecossistema de parceiros",
+     "descricao": "Taxa de sobrevivência de parceiros ativos, concentração das oportunidades nos maiores parceiros, estabilidade das regras e previsibilidade do fluxo mês a mês.",
+     "gatilho": "Fechamento mensal, leitura trimestral",
+     "entregas": "Indicadores de robustez",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a criação de nicho do programa",
+     "descricao": "Número de parceiros novos por período e número de portas, segmentos ou categorias de oferta realmente novos (não repetições).",
+     "gatilho": "Fechamento trimestral",
+     "entregas": "Indicadores de criação de nicho",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Revisar a saúde do ecossistema na revisão conjunta trimestral",
+     "descricao": "Incluir as três lentes na pauta fixa da revisão trimestral, com um sinal de alerta por lente.",
+     "gatilho": "Trimestral",
+     "entregas": "Ata com leitura das três lentes e decisões",
+     "dono": "Gerente de Parcerias, com o Diretor"
+    }
+   ],
+   "visual": "Três eixos saindo de um centro (produtividade, robustez, criação de nicho), com o conjunto de parceiros como uma forma única sobre os eixos; abaixo, uma faixa de domínios (ERP, CRM, MES, SST, ESG, BPM, automação, entidades) colorida por domínio saudável, frágil ou ausente. Cada parceiro pode ser um ponto menor dentro do mesmo desenho.",
+   "citacoes": [
+    {
+     "trecho": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains.",
+     "pagina": "p. 54"
+    },
+    {
+     "trecho": "measures of productivity should also capture the effectiveness of an ecosystem in converting innovation into lowered costs and new products and functions.",
+     "pagina": "p. 56"
+    },
+    {
+     "trecho": "the plummeting ROIC numbers precede by more than three years the actual collapse of the Internet sector.",
+     "pagina": "p. 58"
+    },
+    {
+     "trecho": "a healthy ecosystem will promote the survival of a diverse set of firms that populate a variety of niches and undergo the variety of inevitable disruptions.",
+     "pagina": "p. 61"
+    },
+    {
+     "trecho": "the presence of a stable hub and a diverse community of interconnected entities is a strong indicator of ecosystem robustness.",
+     "pagina": "p. 64"
+    },
+    {
+     "trecho": "What matters in these systems is the capacity to increase meaningful diversity over time through the creation of new valuable functions.",
+     "pagina": "p. 65"
+    }
+   ]
+  },
+  {
+   "nome": "Operating Strategies: Keystone, Dominator (and Hub Landlord) and Niche Player (Estratégias de operação: keystone, dominador (e landlord) e nicho)",
+   "paginas": "p. 76 a 88 e p. 121 a 129",
+   "componentes": [
+    {
+     "nome": "Keystone",
+     "descricao": "Hub que melhora a saúde do ecossistema criando e compartilhando valor, ocupando poucos nós da rede e tendo impacto desproporcional à sua presença. Opera por plataformas e padrões. Não é altruísmo, é a estratégia que sustenta o próprio desempenho."
+    },
+    {
+     "nome": "Dominador clássico",
+     "descricao": "Integra vertical ou horizontalmente para controlar e possuir grande parte da rede, sendo responsável pela maior parte da criação e da captura de valor. Reduz diversidade e robustez a longo prazo, mas pode funcionar onde a inovação é lenta ou exige esforço muito coordenado."
+    },
+    {
+     "nome": "Hub landlord (dominador de valor)",
+     "descricao": "Não controla a rede, só a extração de valor. Cria pouco ou nada de novo e fica com o que existe, deixando o ecossistema faminto e instável. É descrito como a estratégia mais perigosa (caso Enron)."
+    },
+    {
+     "nome": "Niche player",
+     "descricao": "Empresa com número típico ou menor de relações, que ocupa uma parte estreita da rede, se especializa e aproveita plataformas dos outros. Compõe a maior parte do ecossistema e é onde mora a maior parte da criação de valor e inovação."
+    }
+   ],
+   "logica": "(Leitura minha) Dois eixos organizam os quatro papéis: quanto da rede a empresa ocupa e o que faz com o valor. Keystone: pouca rede, cria e compartilha. Landlord: pouca rede, extrai sem criar. Dominador: muita rede, cria e captura. Nicho: borda da rede, especializa-se. Os papéis podem se misturar na mesma empresa por domínio (keystone numa área, dominador em outra), e nichos bem-sucedidos podem virar keystones do seu segmento. O teste prático do keystone é a relação entre presença e impacto: pequeno em massa, grande em valor.",
+   "aplicacao_wise": "A Wise orquestra o programa, então deve agir como keystone: ocupar pouco, criar valor e compartilhar. Onde um parceiro já tem programa próprio (ele é hub no próprio segmento), a Wise segue e se conecta, o que bate com a decisão do patrocinador. Onde a Wise tem legitimidade e o parceiro é nicho, a Wise lidera. O risco a vigiar é virar landlord: extrair comissão e lead sem devolver valor. Inferência minha: ao tipificar parceiros, usar posição (hub ou nicho) e comportamento de valor (devolve ou extrai).",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Publicar o que a Wise não faz no ecossistema",
+     "descricao": "Declaração curta e pública das áreas em que a Wise não compete com parceiros (não vende o produto do parceiro, não disputa o cliente dele no escopo dele).",
+     "gatilho": "Antes da assinatura do primeiro parceiro",
+     "entregas": "Cláusula única no texto do programa",
+     "dono": "Diretor assina, Gerente de Parcerias mantém"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Classificar o parceiro como hub ou nicho",
+     "descricao": "Contar relações relevantes do parceiro (clientes na carteira, comunidade, eventos, programa próprio) e registrar o papel no card da jornada.",
+     "gatilho": "Entrada do parceiro e revisão trimestral",
+     "entregas": "Campo 'papel na rede' no card do parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Separar liderar e seguir por domínio",
+     "descricao": "Para cada domínio, decidir se a Wise lidera (parceiros nicho) ou segue (parceiro hub com programa próprio) e adaptar a abordagem.",
+     "gatilho": "Mapeamento de domínios",
+     "entregas": "Quadro de domínios com postura da Wise",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a parcela de valor devolvida ao parceiro",
+     "descricao": "Comparar o que a Wise retém por oportunidade com o que o parceiro recebe em comissão, retorno de informação e oportunidades de volta.",
+     "gatilho": "Trimestral",
+     "entregas": "Razão valor devolvido sobre valor retido",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Testar o sinal de landlord a cada trimestre",
+     "descricao": "Checar parceiros que reduziram indicações, queixas de falta de retorno e a participação da comissão como única razão de permanência.",
+     "gatilho": "Revisão conjunta trimestral",
+     "entregas": "Lista de sinais e ações corretivas",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Matriz de duas dimensões: eixo horizontal 'parcela da rede ocupada' (pouca à esquerda, muita à direita) e eixo vertical 'valor devolvido à rede' (alto em cima, baixo embaixo). Keystone no alto à esquerda, landlord embaixo à esquerda, dominador à direita, nicho como pontos pequenos nas bordas. Setas pontilhadas indicam migrações possíveis (nicho que vira keystone, keystone que desliza para landlord).",
+   "citacoes": [
+    {
+     "trecho": "A keystone strategy is an operating strategy that improves the overall health of the ecosystem and, in so doing, benefits the sustained performance of the firm.",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "keystones do not occupy a large number of the nodes in the ecosystem network, whereas dominators do.",
+     "pagina": "p. 82"
+    },
+    {
+     "trecho": "A value dominator, or hub landlord, in contrast, eschews control of the network and instead pursues control of value extraction alone.",
+     "pagina": "p. 83"
+    },
+    {
+     "trecho": "A niche player acts to develop or enhance specialized capabilities that differentiate it from other firms in the network, leveraging resources from the network while occupying only a narrow part of the network itself.",
+     "pagina": "p. 85"
+    },
+    {
+     "trecho": "A hub landlord strategy is an operating strategy that extracts as much value as possible from an ecosystem or ecosystem domain without integrating forward to control it.",
+     "pagina": "p. 121"
+    },
+    {
+     "trecho": "Over time, a dominator reduces the diversity of organizations that populate its ecosystem, and reduces the ecosystem's robustness to external shocks.",
+     "pagina": "p. 124"
+    }
+   ]
+  },
+  {
+   "nome": "Keystone Strategy: Value Creation and Value Sharing, Operating Leverage (Estratégia keystone: criação e compartilhamento de valor, alavancagem operacional)",
+   "paginas": "p. 100 a 105",
+   "componentes": [
+    {
+     "nome": "Criar valor",
+     "descricao": "Construir ativos sharable (físicos, intelectuais ou financeiros) cujo valor dividido pelo custo cresça rápido com o número de membros: ativos de alto valor compartilhável, conexões diretas com clientes, hubs de informação, padrões uniformes, ferramentas e blocos de inovação, padrões de desempenho, capital financeiro, comunicação centralizada e plataformas que reduzem complexidade."
+    },
+    {
+     "nome": "Compartilhar valor",
+     "descricao": "Entregar parte do valor criado à rede, a custo muito baixo por parceiro e decrescente com a escala. Plataformas e interfaces simples são o veículo; a licença simples permite equilibrar o que se compartilha e o que se captura."
+    },
+    {
+     "nome": "Alavancagem operacional",
+     "descricao": "Razão entre o valor dos ativos e o custo de criar, manter e compartilhá-los, que deve crescer com o número de membros, descontando o custo real de administrar o hub."
+    },
+    {
+     "nome": "Padrões de desempenho e informação comum",
+     "descricao": "Avaliações de clientes e incentivos para parceiros mantêm o padrão, com direito de intervir quando a performance ou a integridade falha. Compartilhar informação e comunicar direção reduz a incerteza da rede."
+    }
+   ],
+   "logica": "Criação sem compartilhamento afasta os parceiros; compartilhamento sem criação não se sustenta. A condição de escala é que o custo de compartilhar caia com a rede, o que favorece ativos com interface clara (ferramentas, APIs, padrões) sobre relacionamentos pessoais. O keystone mantém o equilíbrio entre capturar e compartilhar (eBay fica com até 7%, enquanto varejistas ficam com 30% a 70%).",
+   "aplicacao_wise": "Ativos compartilháveis do programa: a Prateleira de RFP (informação de demanda), a Base Ativa (comunidade e eventos na carteira do parceiro), o link de indicação, o cruzamento de carteiras e o material de entrega. O portal vira a interface. A comissão é a parte monetária do compartilhamento; ela precisa ser complementada com valor informacional (retorno sobre cada oportunidade, demanda agregada das indústrias) e com padrão de desempenho. Inferência minha: o Gerente de Parcerias ocupa a função reguladora que o livro descreve para o keystone.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Operar a plataforma de oportunidades compartilhadas",
+     "descricao": "Macroprocesso que agrupa as quatro portas (indicação, Prateleira, cruzamento de carteiras, Base Ativa), a interface com o parceiro e o retorno de informação, tratando o conjunto como plataforma e não como lista de tarefas.",
+     "gatilho": "Estruturação do programa",
+     "entregas": "Mapa do macroprocesso com interfaces para o parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Compartilhar demanda e prioridades com os parceiros",
+     "descricao": "Publicar para os parceiros um resumo periódico de demanda agregada, temas das RFPs e prioridades da Wise, respeitando a confidencialidade dos clientes (inferência minha sobre o que pode ser aberto).",
+     "gatilho": "Mensal",
+     "entregas": "Boletim de demanda enviado na comunidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Calcular a alavancagem operacional do programa",
+     "descricao": "Valor entregue por parceiro (receita de oportunidades, valor informacional) dividido pelo custo de criar, manter e compartilhar a plataforma, incluindo horas do gerente.",
+     "gatilho": "Trimestral",
+     "entregas": "Razão valor sobre custo e sua tendência",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Definir padrão mínimo de desempenho do parceiro",
+     "descricao": "Critérios claros de qualidade de indicação, de retorno e de uso do programa, com consequência (alerta, revisão do card, saída), aplicados de forma uniforme.",
+     "gatilho": "Revisão trimestral",
+     "entregas": "Padrão publicado e lista de exceções",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Atribuir ao gerente a função de regulador da saúde da rede",
+     "descricao": "Formalizar que o Gerente de Parcerias cuida da saúde do ecossistema (não só das tarefas), com autoridade para ajustar regras dentro do texto único.",
+     "gatilho": "Desenho de papéis",
+     "entregas": "Descrição de papel atualizada",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Um hub central pequeno (a Wise) ligado a vários parceiros por 'cabos' de valor: um cabo grosso saindo do hub (ativos compartilhados: Prateleira, Base Ativa, link, informação) e um cabo de retorno (oportunidades, comissão). Ao lado, duas curvas: valor total subindo com N e custo por parceiro descendo com N.",
+   "citacoes": [
+    {
+     "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "It is not sufficient to create value: In order to sustain an entire network of firms, that value must be effectively shared with other participants in the ecosystem.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "The key to creating leverage is to make sure that the value of these assets divided by the cost of creating, maintaining, and sharing them increases rapidly with the number of ecosystem members that share them.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "It is critical in the calculation of operating leverage to subtract the true system costs of administering the hub and sharing its assets.",
+     "pagina": "p. 101"
+    },
+    {
+     "trecho": "The cost of sharing value with each individual partner must therefore be very low and must decrease with the size of the network.",
+     "pagina": "p. 105"
+    },
+    {
+     "trecho": "Although eBay may take up to 7 percent of a given transaction, that is well below the typical 30 percent to 70 percent margins that most retailers would charge.",
+     "pagina": "p. 104"
+    }
+   ]
+  },
+  {
+   "nome": "Niche Strategy: Specialization, Leverage and Coupling Strength (Estratégia de nicho: especialização, alavancagem e força de acoplamento)",
+   "paginas": "p. 133 a 148",
+   "componentes": [
+    {
+     "nome": "Especializar em capacidades únicas",
+     "descricao": "Escolher uma especialização realmente diferente, com diferença sustentável e mercado grande o bastante. Nichos sem fôlego (calendário web, limusine por aplicativo) foram absorvidos."
+    },
+    {
+     "nome": "Alavancar keystones e outros",
+     "descricao": "Combinar ativos especializados com plataformas e produtos complementares, ficando leve e focado."
+    },
+    {
+     "nome": "Sustentar a inovação",
+     "descricao": "Integrar tecnologia do ecossistema para afiar a oferta e evitar a fronteira da plataforma, onde o nicho é absorvido."
+    },
+    {
+     "nome": "Gerir o acoplamento",
+     "descricao": "Acoplamento forte (ativos específicos, custo de troca alto) rende eficiência mas aumenta o risco de hold-up. Acoplamento frouxo (interfaces mínimas) dá mobilidade. Empresas com várias plataformas sobreviveram mais que as de uma só."
+    },
+    {
+     "nome": "Poder coletivo e evolução para keystone",
+     "descricao": "A mobilidade dos nichos mantém os keystones honestos; ecossistemas competem por nichos móveis. Nichos de sucesso podem virar keystones de um segmento próprio (NVIDIA)."
+    }
+   ],
+   "logica": "Primeiro mapear o ecossistema (há keystones fortes? vários concorrendo pelo mesmo papel? quão longe estão os dominadores? a quantos keystones se ligar?). Depois escolher o grau de acoplamento: um único keystone dá eficiência, vários dão proteção e poder de barganha, ao custo de adaptação.",
+   "aplicacao_wise": "Dupla leitura. (1) A própria Wise é nicho na cadeia da indústria: consultoria de gestão comercial especializada, que se apoia em parceiros para tudo o que não é seu foco. (2) Cada parceiro é um nicho cuja relação com a Wise deve ser frouxa: sem exclusividade, com interface mínima, e a Wise deve acompanhar sua própria dependência de poucos parceiros grandes (risco de hold-up inverso). Inferência minha: o 'acoplamento' é um terceiro fator útil na tipologia de parceiros, medido pela parcela do pipeline do parceiro que vem da Wise e da parcela de oportunidades da Wise que vem dele.",
+   "impacto_processos": [
+    {
+     "tipo": "nova_atividade",
+     "nome": "Mapear keystones e dominadores do ecossistema da Wise",
+     "descricao": "Responder, para cada domínio, as perguntas do livro: quem é o hub, quantos competem pelo mesmo papel, quem tenta dominar e a quantos hubs ligar.",
+     "gatilho": "Mapeamento inicial e revisão semestral",
+     "entregas": "Mapa de hubs e dominadores por domínio",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir o acoplamento entre o parceiro e a Wise",
+     "descricao": "Parcela do pipeline do parceiro que vem da Wise, parcela das oportunidades da Wise que vêm dele e existência de exclusividade.",
+     "gatilho": "Trimestral",
+     "entregas": "Índice de acoplamento por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a concentração de oportunidades nos maiores parceiros",
+     "descricao": "Percentual das oportunidades e da receita originado pelos três maiores parceiros, como termômetro do risco de hold-up sobre a Wise.",
+     "gatilho": "Trimestral",
+     "entregas": "Índice de concentração",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Dispensar exclusividade e integração cara",
+     "descricao": "O parceiro entra com interface mínima (link, formulário, entrada no grupo) e pode participar de outros programas.",
+     "gatilho": "Assinatura",
+     "entregas": "Cláusula no texto único",
+     "dono": "Diretor assina"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Apoiar parceiro nicho que cresce em hub do segmento",
+     "descricao": "Identificar parceiros com comunidade ou programa em formação e oferecer ferramentas, visibilidade e mentoria para que sejam keystone em seu domínio, a quem a Wise passará a seguir.",
+     "gatilho": "Sinal de crescimento de comunidade",
+     "entregas": "Plano de apoio e marco de transição de liderar para seguir",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Espectro horizontal de acoplamento, de 'frouxo' (link, formulário, sem exclusividade) a 'apertado' (integração específica, exclusividade). Parceiros marcados como pontos no espectro, com tamanho proporcional ao volume de oportunidades. Uma faixa lateral mostra 'um hub só' versus 'vários hubs' como estratégia de proteção.",
+   "citacoes": [
+    {
+     "trecho": "A niche strategy is an operating strategy that specializes capabilities to differentiate a business within an ecosystem domain.",
+     "pagina": "p. 136"
+    },
+    {
+     "trecho": "Do strong keystones exist? Are there multiple keystones that compete to play the same role? How far removed are the dominators? How many keystones should the firm tie into?",
+     "pagina": "p. 136"
+    },
+    {
+     "trecho": "Tight coupling (or high coupling strength) implies that a given niche player needs to develop highly specific internal assets to leverage the assets provided by a third party.",
+     "pagina": "p. 143"
+    },
+    {
+     "trecho": "A common failure of niche players is to bind too tightly to a keystone, which increases the power of the keystone over the niche player",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "Because loose coupling enables mobility, niche firms acquire enormous collective negotiating power with respect to keystones.",
+     "pagina": "p. 146"
+    },
+    {
+     "trecho": "By following a successful and focused niche strategy, NVIDIA built a firm foundation for the next step: the transformation of its niche into an ecosystem in its own right, with NVIDIA as its keystone.",
+     "pagina": "p. 147"
+    }
+   ]
+  },
+  {
+   "nome": "Platform Architecture: Implementation, Interface and Standards (Arquitetura de plataforma: implementação, interface e padrões)",
+   "paginas": "p. 154 a 171",
+   "componentes": [
+    {
+     "nome": "Implementação",
+     "descricao": "Abordagens proprietárias para resolver problemas, melhoradas de forma incremental e invisível pelo dono da plataforma."
+    },
+    {
+     "nome": "Interface",
+     "descricao": "Expressão visível das soluções, ponto de acesso dos membros. A implementação pode mudar sem quebrar a interface."
+    },
+    {
+     "nome": "Interfaces de acesso e padrões",
+     "descricao": "Interfaces de acesso (APIs) moldam a relação entre plataforma e membros; padrões são interfaces de interoperabilidade entre os próprios membros. Bons padrões são simples e amplos."
+    },
+    {
+     "nome": "Gestão da plataforma",
+     "descricao": "Resolver problemas gerais, equilibrar implementação e interface, abrir seletivamente partes menos valiosas, e moldar o ecossistema sem confiar só em custos de troca."
+    },
+    {
+     "nome": "Fronteira da plataforma",
+     "descricao": "A plataforma cresce e absorve funcionalidade estável. Nichos perto da fronteira são absorvidos, e por isso devem se afastar, se especializar ou se tornar atraentes para aquisição."
+    }
+   ],
+   "logica": "A plataforma é o 'pacote' pelo qual o keystone compartilha valor. Seu valor depende de resolver problemas comuns com interface expressiva e estável, deixando a implementação evoluir. Parceiros participam do desenho das interfaces porque conhecem os problemas reais.",
+   "aplicacao_wise": "O portal e o texto único são a interface do programa; o roteamento interno de leads, os ritos do gerente e a relação com closers de cada empresa do grupo são a implementação. Manter a interface estável (regra única de comissão, quatro portas, formato de entrega) dá previsibilidade ao parceiro e permite mudar o miolo sem fricção. Inferência minha: este é o argumento mais forte do livro a favor da simplicidade pedida pelo patrocinador.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Manter estável a interface do programa com o parceiro",
+     "descricao": "Tratar a regra de comissão, as quatro portas e o formato de entrega do lead como contrato estável, alterado só na revisão trimestral e com aviso.",
+     "gatilho": "Mudança proposta ao programa",
+     "entregas": "Registro de versões do texto único",
+     "dono": "Gerente de Parcerias, com o Diretor"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Padronizar o formato mínimo de entrega de oportunidade",
+     "descricao": "Definir os poucos campos que o parceiro precisa informar para uma indicação, no ponto mais fino possível de interação.",
+     "gatilho": "Desenho do portal",
+     "entregas": "Formulário padrão de oportunidade",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Coletar a opinião dos parceiros sobre a interface do programa",
+     "descricao": "Perguntar na revisão trimestral o que atrapalha a participação e onde a interface não resolve problema real do parceiro.",
+     "gatilho": "Revisão conjunta trimestral",
+     "entregas": "Lista priorizada de ajustes de interface",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Definir a fronteira da plataforma da Wise",
+     "descricao": "Decidir quais funções o portal passará a absorver e quais continuam com parceiros, para não ocupar espaço do parceiro e avisar com antecedência quando a fronteira mover.",
+     "gatilho": "Planejamento semestral",
+     "entregas": "Documento de fronteira",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir o esforço do parceiro para participar",
+     "descricao": "Tempo e passos entre o parceiro decidir indicar e a oportunidade registrada.",
+     "gatilho": "Contínuo, leitura mensal",
+     "entregas": "Tempo mediano de registro",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Um bloco de duas camadas: em cima a 'interface do programa' (texto único, comissão, quatro portas, formato de entrega), visível ao parceiro; embaixo a 'operação' (roteamento, ritos, closers, ferramentas), oculta. Setas de parceiros tocam só a camada de cima; uma linha tracejada mostra a fronteira que avança.",
+   "citacoes": [
+    {
+     "trecho": "A platform is a set of solutions to problems that is made available to the members of the ecosystem through a set of access points or interfaces.",
+     "pagina": "p. 154"
+    },
+    {
+     "trecho": "The platform is the \"package\" through which keystones share value with their ecosystems.",
+     "pagina": "p. 154"
+    },
+    {
+     "trecho": "Platform interfaces are the visible embodiment of the solutions achieved in the implementation.",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "the details of the implementation can change as long as they don't \"break\" the interface.",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "Platforms, to have any use at all, must unlock the potential of the underlying technology on which an ecosystem is organized or solve fundamental shared problems faced by members of the ecosystem.",
+     "pagina": "p. 161"
+    },
+    {
+     "trecho": "Perhaps surprisingly, this interoperability is often best achieved by simple designs.",
+     "pagina": "p. 166"
+    }
+   ]
+  },
+  {
+   "nome": "N-Sided Markets: Liquidity First, Pricing, Operations and Governance (Mercados de N lados: liquidez primeiro, preço, operação e governança)",
+   "paginas": "p. 198 a 211",
+   "componentes": [
+    {
+     "nome": "Mercado de N lados e massa crítica",
+     "descricao": "Mercados que ligam dois ou mais grupos de clientes; cada lado só tem valor se os outros estiverem presentes em massa crítica. Efeitos de rede simples não bastam."
+    },
+    {
+     "nome": "Curvas de valor e de custo",
+     "descricao": "O valor deve superar rapidamente o custo, e as perdas antes da massa crítica devem ser gerenciáveis. Custos de aquisição, retenção, atendimento e integração podem subir mais rápido que o valor."
+    },
+    {
+     "nome": "Liquidez primeiro",
+     "descricao": "Alcançar liquidez (transações fecham em tempo aceitável) em escala pequena e com pouco investimento em tecnologia, e só depois escalar."
+    },
+    {
+     "nome": "Preço e operação",
+     "descricao": "Preço pensado para equilibrar as comunidades, não para refletir custo marginal de cada lado; operação alavancada nos participantes, com ferramentas fáceis, e com mínimo esforço interno por transação."
+    },
+    {
+     "nome": "Adoção experimental, confiança e governança",
+     "descricao": "Seguir onde a comunidade vai; só se comprometer após provar o modelo; construir confiança; não tomar posições nos mercados que opera; governança clara e independente."
+    }
+   ],
+   "logica": "Sequência: liquidez em pequeno recorte, depois ajuste de preço e operação, depois escala. O erro típico foi inverter: investir em tecnologia antes da liquidez, operar à mão e cobrar preço trivial igual para todos, o que fez o custo subir mais rápido que o valor.",
+   "aplicacao_wise": "O programa é um mercado de vários lados (parceiro emissor, indústria, e entidade onde houver) e a Wise é o operador. Os três pilares e as quatro portas competem por atenção do gerente. A lição principal é abrir um recorte contido e provar fechamento antes de ampliar, e acompanhar o equilíbrio entre os lados. Inferência minha: as lições têm origem em plataformas digitais de grande escala; para um programa pequeno e de relacionamento, o que vale é o raciocínio (massa crítica, custo versus valor, liquidez), não os números.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Provar liquidez em um recorte contido",
+     "descricao": "Escolher poucos parceiros em um ou dois domínios (ou uma entidade) e acompanhar até que oportunidades compartilhadas virem reunião e contrato, antes de abrir novos recortes.",
+     "gatilho": "Primeiros parceiros assinados",
+     "entregas": "Relatório de liquidez do recorte",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a liquidez do programa",
+     "descricao": "Percentual de oportunidades compartilhadas que viram reunião e depois contrato, e tempo mediano entre indicação e retorno ao parceiro.",
+     "gatilho": "Mensal",
+     "entregas": "Taxa de conversão e tempo de fechamento",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Comparar a curva de valor com a curva de custo do programa",
+     "descricao": "Receita incremental por parceiro versus horas e custo para operá-lo, mostrando se o custo cresce mais que o valor.",
+     "gatilho": "Trimestral",
+     "entregas": "Gráfico valor versus custo por parceiro",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Acompanhar o equilíbrio entre os lados do programa",
+     "descricao": "Ver se há parceiros demais para poucas oportunidades de retorno, ou indústrias sem cobertura de domínio, e ajustar atenção e incentivos.",
+     "gatilho": "Mensal",
+     "entregas": "Leitura de equilíbrio na agenda de rituais",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Evitar posição no negócio do parceiro",
+     "descricao": "A Wise não revende nem intermedeia o produto do parceiro, evitando conflito e exposição de risco.",
+     "gatilho": "Desenho do regulamento",
+     "entregas": "Cláusula no texto único",
+     "dono": "Diretor assina"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Construir confiança com avaliação das indicações",
+     "descricao": "Registrar a qualidade de cada indicação e o feedback da Wise, para o parceiro ver o que funciona e a Wise ver quem indica bem.",
+     "gatilho": "Fechamento de cada oportunidade",
+     "entregas": "Registro de qualidade e feedback no card",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Três círculos que se sobrepõem (parceiro emissor, indústria compradora, Wise como operadora) com a zona central marcada 'oportunidade compartilhada que fecha'. Ao lado, funil de fases: liquidez em recorte pequeno, ajuste de preço e operação, escala; e um gráfico com duas linhas (valor e custo) cruzando no ponto de equilíbrio.",
+   "citacoes": [
+    {
+     "trecho": "Unlike a traditional market that adds value incrementally for each additional customer, Visa would provide no value to retailers without a critical mass of cardholders.",
+     "pagina": "p. 198"
+    },
+    {
+     "trecho": "Simple network effects are not sufficient to automatically drive them to success. Their effectiveness is the result of continued investments and deep-rooted operational capabilities.",
+     "pagina": "p. 199"
+    },
+    {
+     "trecho": "In a networked environment, a cost curve can rise as fast as or even faster than the value curve, making the business model unsustainable.",
+     "pagina": "p. 200"
+    },
+    {
+     "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up.",
+     "pagina": "p. 206"
+    },
+    {
+     "trecho": "In an N-sided market, price should be set so that the right communities are attracted to the market in the appropriate combination and balance.",
+     "pagina": "p. 201"
+    },
+    {
+     "trecho": "Although both extremes work, what seem not to work are intermediate models.",
+     "pagina": "p. 210"
+    }
+   ]
+  }
+ ],
+ "respostas_abertas": {
+  "fatores_e_tipos": "O livro não trata de fatores de parceria no sentido de Strategic Alliances (qualidade, inovação colaborativa, criação de valor). O que oferece é: (a) três medidas de saúde do ecossistema, produtividade, robustez e criação de nicho, que avaliam o conjunto e não cada parceiro (p. 55 a 66); e (b) uma tipologia de papéis (keystone, dominador, landlord e nicho) definida por posição na rede e por comportamento com o valor (p. 76 a 88 e p. 121 a 129). Os autores defendem que os papéis são desiguais por natureza, sem paridade imposta (p. 46), e que o ecossistema se delimita pelo nível e tipo de interação, não por setor (p. 49). Regra lógica que proponho a partir do livro (inferência minha, sem validação empírica para programas de parceria B2B): Eixo 1, posição na rede: quantidade de relações relevantes. O livro define nicho como negócio com número típico ou menor de relações e hub como o muito conectado (p. 133). Na prática: parceiro com programa próprio, comunidade, entidade ou carteira grande é hub; parceiro com produto específico e poucas relações é nicho. Eixo 2, comportamento de valor: o hub devolve valor ao que depende dele (keystone), extrai sem criar (landlord) ou controla toda a cadeia (dominador)? Fator 3, acoplamento: grau de dependência mútua entre o parceiro e a Wise (p. 143). Resultado: matriz hub versus nicho por devolve versus extrai, com o acoplamento como sinal de risco. Cada parceiro pode ainda ser lido pelas três lentes (o que soma em produtividade, robustez e criação de nicho), o que dá o equivalente ao 'V' do valor. O livro não traz um equivalente de recência e frequência.",
+  "abordagem_por_tipo": "O livro não prescreve ações por tipo de parceiro, mas as ações decorrem do papel (leitura minha). Hub keystone (parceiro com programa próprio, entidade, grande comunidade): a Wise segue, conecta-se à interface dele, não duplica o que ele faz e compartilha informação; medir se ele devolve valor (p. 146, p. 221). Hub landlord (só extrai): reduzir dependência, não concentrar pipeline e manter alternativas (p. 193, p. 221). Dominador (solução fechada que ocupa o espaço de outros): manter distância e vigiar a fronteira (p. 165). Nicho: a Wise lidera com interface mínima, ferramentas, informação comum e redução de esforço (p. 102 a 103, p. 208), sem exigir exclusividade (p. 144). Nicho emergente na borda (parceiro novo com comunidade pequena): nutrir, porque pode virar keystone do seu segmento (p. 147). Sinais de acompanhamento por tipo que o livro sugere: taxa de sobrevivência, estabilidade, crescimento de variedade, razão valor sobre custo.",
+  "portoes_de_fase": "O livro não define portões de programa. Ele fornece, para mercados de vários lados, uma lógica de estágios que serve de base (inferência minha na transposição): (1) liquidez em escala pequena, com pouco investimento em tecnologia (p. 206 a 207); (2) só depois escalar, redesenhando mercado e operação (p. 207); (3) a curva de valor deve superar a de custo, com perdas pré-massa crítica administráveis (p. 201); (4) massa crítica simultânea em cada lado (p. 199). Proposta de portões a partir disso (inferência): Experimentação para Tração quando houver liquidez comprovada num recorte (oportunidades que fecham, custo manual ainda baixo, regra de comissão validada pelo parceiro). Tração para Crescimento quando o custo por parceiro adicional cair, o valor por parceiro subir (alavancagem operacional acima de 1), as três lentes de saúde estiverem estáveis e o processo funcionar sem o gerente em cada passo. As metas escalonadas devem usar as mesmas métricas com limiares crescentes; o livro não traz números para isso.",
+  "simplicidade": "O livro apoia a simplicidade em pontos específicos e pede complexidade em outros. Manter simples: a interface com o parceiro (padrões no 'ponto mais fino' de interação e melhores quando simples, p. 41 e p. 166), o acoplamento (interfaces mínimas reduzem risco de hold-up, p. 144) e o texto do que se promete. Isso apoia a regra única e o texto único. Não confundir com simplicidade de gestão: o livro mostra que operação manual (40 intermediários, semanas por transação) matou marketplaces (p. 202 a 203), que preços triviais iguais para todos foram marca de B2B que falhou (p. 207) e que governança confusa não funciona (p. 210). Regra prática: simples na interface e na regra, rigoroso na operação e na medição por trás. Inferência minha: a regra única de comissão é aceitável como interface, desde que a Wise meça se ela equilibra os lados.",
+  "citacoes": [
+   {
+    "trecho": "Loosely coupled integration therefore requires only standardization at the \"thinnest\" possible point of interaction",
+    "pagina": "p. 41"
+   },
+   {
+    "trecho": "Perhaps surprisingly, this interoperability is often best achieved by simple designs.",
+    "pagina": "p. 166"
+   },
+   {
+    "trecho": "less invasive, \"minimalist\" interfaces between organizations and technologies have the great advantage of minimizing technological risk and hold-up.",
+    "pagina": "p. 144"
+   },
+   {
+    "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up.",
+    "pagina": "p. 206"
+   },
+   {
+    "trecho": "One way of identifying a niche player is as a business that exhibits a \"typical\" (or less than typical) number of relationships with other ecosystem participants.",
+    "pagina": "p. 133"
+   },
+   {
+    "trecho": "We should expect a heterogeneous structure, with different firms adopting dramatically different roles that influence different aspects of the stability and productivity of the network.",
+    "pagina": "p. 46"
+   }
+  ]
+ },
+ "recomendacoes": [
+  {
+   "tema": "Saúde do ecossistema",
+   "recomendacao": "Criar um painel de saúde do programa com as três lentes (produtividade, robustez, criação de nicho) e um sinal de alerta por lente, lido na revisão trimestral.",
+   "processo": "Medir produtividade, robustez e criação de nicho do ecossistema de parceiros",
+   "citacao": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains.",
+   "pagina": "p. 54",
+   "aplicabilidade": "alta",
+   "porque": "É a contribuição mais direta do livro e se traduz em métricas simples; evita decidir o futuro do programa só pela receita de comissão."
+  },
+  {
+   "tema": "Compartilhamento de valor",
+   "recomendacao": "Tratar a comissão como o piso do compartilhamento e acrescentar valor informacional (retorno por oportunidade, demanda agregada). Testar se o parceiro, depois de tudo, está melhor com o programa.",
+   "processo": "Calcular a razão valor devolvido sobre valor retido por parceiro",
+   "citacao": "It is not sufficient to create value: In order to sustain an entire network of firms, that value must be effectively shared with other participants in the ecosystem.",
+   "pagina": "p. 100",
+   "aplicabilidade": "alta",
+   "porque": "Sem compartilhar o valor criado, o hub é abandonado. O programa hoje é descrito pela ótica do ganho da Wise."
+  },
+  {
+   "tema": "Papel da Wise",
+   "recomendacao": "Declarar publicamente o que a Wise não faz no ecossistema (não vende o produto do parceiro, não disputa o cliente dele no escopo dele).",
+   "processo": "Publicar o que a Wise não faz no ecossistema",
+   "citacao": "IBM offers an effective platform through its WebSphere product line and will explicitly not compete with any of the application companies that are potential WebSphere customers and users.",
+   "pagina": "p. 138",
+   "aplicabilidade": "alta",
+   "porque": "Reduz o receio de parceiros que vendem para as mesmas indústrias e é de custo zero."
+  },
+  {
+   "tema": "Liquidez primeiro",
+   "recomendacao": "Provar fechamento em um recorte pequeno (poucos parceiros, um ou dois domínios, ou uma entidade) antes de abrir os três pilares em escala.",
+   "processo": "Provar liquidez em um recorte contido",
+   "citacao": "Liquidity needs to be a self-sustaining process, and if you don't achieve this in a contained fashion at a smaller scale before committing to large investments, it is likely you will never achieve it at scale.",
+   "pagina": "p. 207",
+   "aplicabilidade": "media",
+   "porque": "Bate de frente com a decisão de abrir os três pilares juntos (ver tensões), por isso a aplicabilidade é média: pode ser aplicada como ordem de atenção, não como adiamento de pilares."
+  },
+  {
+   "tema": "Custo de compartilhar",
+   "recomendacao": "Registrar horas do gerente por parceiro e por oportunidade e exigir que o custo por parceiro adicional caia.",
+   "processo": "Calcular a alavancagem operacional do programa",
+   "citacao": "The cost of sharing value with each individual partner must therefore be very low and must decrease with the size of the network.",
+   "pagina": "p. 105",
+   "aplicabilidade": "alta",
+   "porque": "O desenho atual concentra tudo num gerente e num grupo de WhatsApp por parceiro, que é o formato clássico de custo que cresce junto com o número de parceiros."
+  },
+  {
+   "tema": "Interface estável",
+   "recomendacao": "Tratar regra de comissão, quatro portas e formato de entrega como interface estável e versionada, mudando só na revisão trimestral e com aviso.",
+   "processo": "Manter estável a interface do programa com o parceiro",
+   "citacao": "the details of the implementation can change as long as they don't \"break\" the interface.",
+   "pagina": "p. 156",
+   "aplicabilidade": "alta",
+   "porque": "Dá previsibilidade ao parceiro e liberdade interna à Wise, além de reforçar a simplicidade que o patrocinador quer."
+  },
+  {
+   "tema": "Padrão de entrega",
+   "recomendacao": "Definir os poucos campos mínimos de uma indicação, no ponto mais fino de interação.",
+   "processo": "Padronizar o formato mínimo de entrega de oportunidade",
+   "citacao": "Loosely coupled integration therefore requires only standardization at the \"thinnest\" possible point of interaction",
+   "pagina": "p. 41",
+   "aplicabilidade": "alta",
+   "porque": "Reduz esforço do parceiro e retrabalho do gerente sem exigir integração."
+  },
+  {
+   "tema": "Informação comum",
+   "recomendacao": "Dar ao parceiro visibilidade do andamento e do resultado de cada oportunidade que enviou, alimentada pelo gerente já que closers não entram no portal.",
+   "processo": "Construir confiança com avaliação das indicações",
+   "citacao": "Both parties know the same information, so the discussion centers around actions.",
+   "pagina": "p. 110",
+   "aplicabilidade": "alta",
+   "porque": "Confiança reduz custo de operar. Hoje o lead vai direto ao closer sem SLA, e o parceiro pode ficar no escuro."
+  },
+  {
+   "tema": "Demanda compartilhada",
+   "recomendacao": "Publicar, em boletim mensal, demanda agregada e prioridades das RFPs (sem expor clientes) para que parceiros ajustem oferta e indicações.",
+   "processo": "Compartilhar demanda e prioridades com os parceiros",
+   "citacao": "A keystone can have tremendous impact on the organization's ecosystem simply by centralizing and simplifying communication about key trends and opportunities.",
+   "pagina": "p. 103",
+   "aplicabilidade": "media",
+   "porque": "Reduz incerteza dos parceiros; o limite é a confidencialidade das indústrias, que é decisão da Wise."
+  },
+  {
+   "tema": "Padrões de desempenho",
+   "recomendacao": "Definir padrão mínimo de qualidade de indicação e de retorno, com consequência clara e uniforme.",
+   "processo": "Definir padrão mínimo de desempenho do parceiro",
+   "citacao": "Keystones can enforce performance standards via customer evaluations and partner incentives.",
+   "pagina": "p. 102",
+   "aplicabilidade": "media",
+   "porque": "Distribui o controle e evita monitoramento centralizado, mas exige cuidado para não afastar parceiros orgânicos no início."
+  },
+  {
+   "tema": "Mapa do ecossistema",
+   "recomendacao": "Mapear domínios (ERP, CRM, MES, SST, ESG, BPM, automação, entidades, feiras) e os hubs e dominadores de cada um, usando as quatro perguntas do livro.",
+   "processo": "Mapear keystones e dominadores do ecossistema da Wise",
+   "citacao": "Do strong keystones exist? Are there multiple keystones that compete to play the same role? How far removed are the dominators? How many keystones should the firm tie into?",
+   "pagina": "p. 136",
+   "aplicabilidade": "alta",
+   "porque": "É a base para decidir onde liderar e onde seguir, e responde à questão de tipos de parceiro."
+  },
+  {
+   "tema": "Tipologia de parceiros",
+   "recomendacao": "Classificar cada parceiro por posição na rede (número de relações), comportamento de valor (devolve ou extrai) e acoplamento, e registrar no card da jornada.",
+   "processo": "Classificar o parceiro como hub ou nicho",
+   "citacao": "One way of identifying a niche player is as a business that exhibits a \"typical\" (or less than typical) number of relationships with other ecosystem participants.",
+   "pagina": "p. 133",
+   "aplicabilidade": "alta",
+   "porque": "Dá a regra lógica que o patrocinador pede. É inferência minha a partir do livro, a validar com os primeiros parceiros."
+  },
+  {
+   "tema": "Acoplamento",
+   "recomendacao": "Não exigir exclusividade nem integração cara, e medir o acoplamento e a concentração de oportunidades.",
+   "processo": "Medir o acoplamento entre o parceiro e a Wise",
+   "citacao": "First, the tighter the coupling between organizations, the higher the risk of hold-up and the more power that platforms have over niche players.",
+   "pagina": "p. 144",
+   "aplicabilidade": "alta",
+   "porque": "O livro mostra que empresas multiplataforma sobrevivem mais e que a mobilidade mantém o keystone honesto."
+  },
+  {
+   "tema": "Sinais de landlord",
+   "recomendacao": "A cada trimestre, checar sinais de que a Wise extrai mais do que devolve (parceiros que reduzem indicações, queixas de falta de retorno).",
+   "processo": "Testar o sinal de landlord a cada trimestre",
+   "citacao": "extracting a little too much value, if done in a large number of cases, could help bring down the whole thing.",
+   "pagina": "p. 121",
+   "aplicabilidade": "alta",
+   "porque": "O landlord pode surgir por erro de dosagem, sem má-fé. O programa nasce com visão de canal de aquisição barato, que tende a esse viés."
+  },
+  {
+   "tema": "Governança",
+   "recomendacao": "Manter a Wise como orquestradora independente, com regras no texto único, e evitar comitês mistos que decidam preço ou prioridade.",
+   "processo": "Revisar a governança do programa no texto único",
+   "citacao": "what appears to be required here is a clean, clear structure that is independent of market participants",
+   "pagina": "p. 210",
+   "aplicabilidade": "media",
+   "porque": "O livro mostra que modelos intermediários não funcionam; o desenho atual já tem dono claro, então a recomendação é preservar."
+  },
+  {
+   "tema": "Operação manual",
+   "recomendacao": "Para cada tarefa recorrente do gerente, perguntar se vira ferramenta de autoatendimento (formulário, status automático, material padrão) antes de a base crescer.",
+   "processo": "Reorganizar a fila de tarefas do gerente por exceção",
+   "citacao": "With this operating framework, a single transaction typically would take many weeks and lots of manual effort to clear, costing considerably more than the transaction fees charged to the market participants.",
+   "pagina": "p. 203",
+   "aplicabilidade": "alta",
+   "porque": "A operação manual por transação foi uma das causas de falha mais claras do livro e se parece com o desenho atual do gerente como dono de todas as tarefas."
+  },
+  {
+   "tema": "Adoção experimental",
+   "recomendacao": "Reforçar o que já funciona na comunidade (portas e parceiros com resposta) antes de criar novas frentes; não se comprometer com novas portas sem prova.",
+   "processo": "Decidir novas portas e parceiros por evidência na revisão trimestral",
+   "citacao": "eBay watched where its user communities were going and simply reinforced the markets that were already functioning well.",
+   "pagina": "p. 208",
+   "aplicabilidade": "media",
+   "porque": "Evita compromissos irreversíveis num programa sem parceiros assinados, mas convive com a decisão de abrir as quatro portas juntas."
+  },
+  {
+   "tema": "Nicho que vira hub",
+   "recomendacao": "Apoiar parceiros com comunidade ou programa em formação para que cresçam como hub do segmento.",
+   "processo": "Apoiar parceiro nicho que cresce em hub do segmento",
+   "citacao": "in healthy ecosystems we should expect to find niche players that eventually grow their niches into ecosystems in their own right, for which they serve as a keystone.",
+   "pagina": "p. 113",
+   "aplicabilidade": "media",
+   "porque": "É o caminho natural de crescimento do ecossistema e conecta com a regra de a Wise seguir onde o parceiro tem programa próprio."
+  },
+  {
+   "tema": "Fronteira da plataforma",
+   "recomendacao": "Decidir e comunicar quais funções o portal absorve e quais ficam com parceiros, e avisar quando a fronteira mover.",
+   "processo": "Definir a fronteira da plataforma da Wise",
+   "citacao": "Niche players that hope to survive and remain independent over the long term should stake out domains that lie as far as possible from the platform or that are highly specialized",
+   "pagina": "p. 165",
+   "aplicabilidade": "media",
+   "porque": "Parceiros perto da fronteira são absorvidos e reagem mal; vale para a Wise como operadora do portal."
+  },
+  {
+   "tema": "Retenção por valor",
+   "recomendacao": "Não contar com custos de troca para reter parceiros; reter por valor entregue a cada ciclo.",
+   "processo": "Medir a razão valor devolvido sobre valor retido por parceiro",
+   "citacao": "Continuously creating value for ecosystem members is a much more sustainable strategy for keystones than relying on switching costs that, sooner or later, are bound to evaporate.",
+   "pagina": "p. 163",
+   "aplicabilidade": "alta",
+   "porque": "Alinha a estratégia de retenção com a evidência do livro e com a mobilidade dos parceiros."
+  },
+  {
+   "tema": "Cobertura de domínios",
+   "recomendacao": "Garantir ao menos um parceiro ativo em cada domínio crítico para as indústrias atendidas e acompanhar domínios frágeis.",
+   "processo": "Mapear os domínios do ecossistema de parceiros",
+   "citacao": "The fragility of any single domain can undermine the performance of the whole.",
+   "pagina": "p. 53",
+   "aplicabilidade": "media",
+   "porque": "A fragilidade de um domínio compromete o todo; para a indústria cliente, falta de domínio vira falta de solução."
+  },
+  {
+   "tema": "Equilíbrio entre lados",
+   "recomendacao": "Medir mensalmente se há equilíbrio entre parceiros, oportunidades de retorno e indústrias cobertas, e ajustar atenção e incentivos.",
+   "processo": "Acompanhar o equilíbrio entre os lados do programa",
+   "citacao": "Unlike a traditional market that adds value incrementally for each additional customer, Visa would provide no value to retailers without a critical mass of cardholders.",
+   "pagina": "p. 198",
+   "aplicabilidade": "media",
+   "porque": "Em mercados de lados, cada lado só tem valor com os outros presentes; é mais um tema de gestão que de regra."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Produtividade do ecossistema de parceiros",
+   "definicao": "Receita por parceiro ativo e custo por oportunidade compartilhada, com a tendência ao longo dos trimestres (análogo ao ROIC agregado do livro, adaptado).",
+   "citacao": "ecosystems may be compared according to the productivity of their participants in converting factors of production into useful work.",
+   "pagina": "p. 57"
+  },
+  {
+   "nome": "Tempo de difusão de novidades",
+   "definicao": "Tempo entre uma novidade do programa (nova porta, RFP, material) e a disponibilidade para todos os parceiros ativos.",
+   "citacao": "Does the ecosystem effectively deliver new technologies, processes, or ideas to its members?",
+   "pagina": "p. 59"
+  },
+  {
+   "nome": "Sobrevivência de parceiros ativos",
+   "definicao": "Percentual de parceiros ativos que seguem ativos no período, por domínio.",
+   "citacao": "a healthy ecosystem will promote the survival of a diverse set of firms that populate a variety of niches and undergo the variety of inevitable disruptions.",
+   "pagina": "p. 61"
+  },
+  {
+   "nome": "Crescimento da variedade de parceiros",
+   "definicao": "Número de parceiros novos por período, por domínio.",
+   "citacao": "Growth in firm variety: The number of new firms created within the ecosystem community in a given period of time.",
+   "pagina": "p. 65"
+  },
+  {
+   "nome": "Crescimento da variedade de portas e ofertas",
+   "definicao": "Número de portas, segmentos ou categorias de oferta realmente novas por período (novas, não repetidas).",
+   "citacao": "Growth in product and technical variety: The number of new product options, technological building blocks, categories, products, or businesses being created within the ecosystem in a given period of time.",
+   "pagina": "p. 65"
+  },
+  {
+   "nome": "Alavancagem operacional do programa",
+   "definicao": "Valor entregue por parceiro dividido pelo custo de criar, manter e compartilhar a plataforma, incluindo horas do gerente.",
+   "citacao": "The key to creating leverage is to make sure that the value of these assets divided by the cost of creating, maintaining, and sharing them increases rapidly with the number of ecosystem members that share them.",
+   "pagina": "p. 100"
+  },
+  {
+   "nome": "Parcela de parceiros multiprograma",
+   "definicao": "Percentual de parceiros ativos que participam de outros programas, como indicador de acoplamento frouxo e de poder de barganha (leitura minha).",
+   "citacao": "Figure 7-2 shows that multiplatform firms in the software industry enjoyed higher net survival rates than single-platform firms throughout the 1990s.",
+   "pagina": "p. 144"
+  },
+  {
+   "nome": "Custo de compartilhar por parceiro",
+   "definicao": "Horas do gerente e custo por parceiro adicional, que devem cair com a escala.",
+   "citacao": "The cost of sharing value with each individual partner must therefore be very low and must decrease with the size of the network.",
+   "pagina": "p. 105"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Virar landlord: extrair comissão e lead sem devolver valor faz os parceiros saírem, e o hub só percebe tarde.",
+   "citacao": "they extract so much value from the ecosystem that they make the business models of the needed niche firms unsustainable.",
+   "pagina": "p. 121"
+  },
+  {
+   "alerta": "O custo de operar o programa pode crescer mais rápido que o valor entregue, como nos marketplaces B2B que fracassaram.",
+   "citacao": "In a networked environment, a cost curve can rise as fast as or even faster than the value curve, making the business model unsustainable.",
+   "pagina": "p. 200"
+  },
+  {
+   "alerta": "Operação manual por oportunidade (gerente como dono de tudo, sem automação) não escala e gasta mais que a receita.",
+   "citacao": "With this operating framework, a single transaction typically would take many weeks and lots of manual effort to clear, costing considerably more than the transaction fees charged to the market participants.",
+   "pagina": "p. 203"
+  },
+  {
+   "alerta": "Investir grande em portal e tecnologia antes de existir liquidez foi a estratégia de falha mais comum nos mercados estudados.",
+   "citacao": "We found that a common failed strategy consisted of making large investments in technology and operations early in the life of a market, long before liquidity was achieved.",
+   "pagina": "p. 206"
+  },
+  {
+   "alerta": "Governança intermediária, com decisões divididas entre a operadora e participantes de interesses distintos, gera conflito em toda decisão estratégica.",
+   "citacao": "Although both extremes work, what seem not to work are intermediate models.",
+   "pagina": "p. 210"
+  },
+  {
+   "alerta": "Não contar com custos de troca para reter parceiros: eles evaporam.",
+   "citacao": "Keystones must not overestimate the power of the switching costs they engender.",
+   "pagina": "p. 163"
+  },
+  {
+   "alerta": "Lucro alto de curto prazo pode esconder um ecossistema doente; a saúde precisa ser medida em separado.",
+   "citacao": "In the cases of Yahoo! and Cisco, the poor health of their business ecosystem should have raised enormous red flags, despite the significant profit.",
+   "pagina": "p. 52"
+  },
+  {
+   "alerta": "Hubs maduros sofrem a pressão do crescimento para canibalizar os nichos do ecossistema em troca de ganho de curto prazo.",
+   "citacao": "Microsoft, like all mature keystones, must struggle against the pressure exerted by its growth imperative to cannibalize niches in the ecosystem for short-term gain at the expense of long-term ecosystem growth and health.",
+   "pagina": "p. 112"
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "Regra única de comissão para todos versus o livro, que mostra que preços triviais e iguais para todos foram marca de B2B que falhou e que o preço deve equilibrar os lados do mercado.",
+   "como_resolver": "Manter a regra única como interface do programa (decisão do patrocinador, bom para simplicidade), mas instrumentar a medição: acompanhar se a comissão equilibra os lados (parceiros que indicam, indústrias atendidas, entidades). Se um lado ficar sistematicamente sem retorno, resolver com valor não monetário (informação, visibilidade) antes de abrir exceção de preço."
+  },
+  {
+   "tensao": "Os três pilares abrem juntos versus 'liquidez primeiro': o livro recomenda provar fechamento num recorte pequeno antes de ampliar.",
+   "como_resolver": "Manter os três pilares abertos, mas definir um recorte de atenção (poucos parceiros, um ou dois domínios, ou uma entidade) onde se mede fechamento antes de expandir a atenção do gerente. A decisão de abertura é mantida, a ordem de atenção segue o livro."
+  },
+  {
+   "tensao": "Portal no centro da gestão desde o início versus o achado de que investir grande em tecnologia antes da liquidez foi a estratégia de falha mais comum.",
+   "como_resolver": "Começar o portal pelo mínimo (card de parceiro, jornada, oportunidades e fila por exceção) e adicionar recursos conforme a liquidez aparecer. O livro não se opõe ao portal, mas à construção ampla antes da prova."
+  },
+  {
+   "tensao": "Gerente dono de todas as tarefas, comunicação por grupos de WhatsApp e lead direto ao closer sem SLA interno versus a ênfase do livro em custo de compartilhar baixo e decrescente, ferramentas de autoatendimento e informação comum aos dois lados.",
+   "como_resolver": "Manter o desenho (pessoa dona, fila só por exceção), mas registrar no portal o status de cada oportunidade para o parceiro e transformar tarefas repetidas em modelos e formulários. Acompanhar horas por parceiro e usar a alavancagem operacional como gatilho de revisão do formato."
+  },
+  {
+   "tensao": "O ganho declarado para a Wise é lead e cliente novo a custo menor que os canais ativos, enquanto o livro diz que criar e compartilhar valor vem antes de capturar, e que o hub que só extrai vira landlord.",
+   "como_resolver": "Manter o objetivo comercial, mas acrescentar ao desenho metas de valor devolvido ao parceiro (retorno de informação, oportunidades de volta, visibilidade) e verificar na revisão trimestral se o parceiro está melhor com o programa. O programa continua um canal de aquisição, com a pergunta do parceiro na pauta."
+  },
+  {
+   "tensao": "Parceiros chegam de forma orgânica, sem seleção, versus o argumento de que diversidade por si só não é saúde: o novo precisa ser significativamente novo e gerar valor, e cada domínio crítico precisa estar saudável.",
+   "como_resolver": "Manter a entrada aberta, mas tipificar o parceiro na entrada (posição, devolução de valor, acoplamento) e acompanhar cobertura por domínio, para orientar a atenção do gerente e o convite a domínios que faltam."
+  },
+  {
+   "tensao": "O livro descreve exemplos de grandes plataformas digitais (Microsoft, eBay, Visa, TSMC), enquanto o programa é pequeno e de relacionamento; os números e mecanismos de efeitos de rede não se transferem diretamente.",
+   "como_resolver": "Usar o livro pela lógica (valor versus custo, liquidez, papéis, acoplamento) e não pelos números; tratar as proposições aqui como hipóteses a validar com os primeiros parceiros. Esta própria curadoria marca como inferência minha as transposições."
+  }
+ ]
+}

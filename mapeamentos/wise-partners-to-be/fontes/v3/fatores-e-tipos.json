@@ -1,0 +1,1075 @@
+{
+ "strategic_alliances": {
+  "dimensoes": [
+   {
+    "nome": "Partnership quality (qualidade da parceria)",
+    "nome_na_tabela_8_1": "Reference-ability (capacidade de servir de referência)",
+    "o_que_mede": "Qualidade da troca relacional: compromisso, investimento, confiança, metas comuns e percepção de justiça.",
+    "componentes_tabela_6_2": [
+     "Commitment (compromisso)",
+     "Trust (confiança)"
+    ],
+    "frase_de_autoavaliacao": "Nosso parceiro nos daria uma referência positiva e elogiosa a um cliente-chave (Tabela 8.1, passo 1).",
+    "sintomas_do_passo_2": "Compromisso de longo prazo, metas e aspirações comuns, confiança na justiça da parceria.",
+    "citacoes": [
+     {
+      "trecho": "the quality of the relationship exchange including commitment and trust.",
+      "pagina": "p. 159"
+     },
+     {
+      "trecho": "our partner would provide us with a positive and flattering reference to a key customer or buyer.",
+      "pagina": "p. 218"
+     },
+     {
+      "trecho": "commitment to the partnership over the longer term; common goals and aspirations; trust in the fairness of the partnership.",
+      "pagina": "p. 219"
+     }
+    ]
+   },
+   {
+    "nome": "Collaborative innovation (inovação colaborativa)",
+    "nome_na_tabela_8_1": "Partnering effectiveness (efetividade da parceria)",
+    "o_que_mede": "Condições que tornam a parceria capaz de inovar e responder a oportunidades: adaptação, inovação, comunicação e cooperação.",
+    "componentes_tabela_6_1": [
+     "Adaptability (adaptabilidade)",
+     "Innovation (inovação)",
+     "Communication (comunicação)",
+     "Cooperation (cooperação)"
+    ],
+    "frase_de_autoavaliacao": "Nos últimos seis meses aumentamos a satisfação dos nossos clientes como consequência direta desta parceria (Tabela 8.1, passo 1).",
+    "sintomas_do_passo_2": "Capacidade de inovar e se adaptar, comunicação aberta, disposição e capacidade de cooperar.",
+    "citacoes": [
+     {
+      "trecho": "in the last six months we have increased the level of satisfaction of our customers as a direct consequence of this partnership.",
+      "pagina": "p. 218"
+     },
+     {
+      "trecho": "the ability of the partnership to innovate and adapt to new opportunities; communication effectiveness and openness; the willingness and ability to cooperate.",
+      "pagina": "p. 219"
+     }
+    ]
+   },
+   {
+    "nome": "Value creation (criação de valor)",
+    "nome_na_tabela_8_1": "Value significance (relevância do valor para o negócio)",
+    "o_que_mede": "Eficiência da parceria em criar e capturar o valor que ela oferece: gestão de conflito, sinergia, proposta econômica e eficiência de processo.",
+    "componentes_tabela_6_3": [
+     "Conflict management (gestão de conflito)",
+     "Synergy (sinergia)",
+     "Value creation (proposta econômica)",
+     "Process efficiency (eficiência de processo)"
+    ],
+    "frase_de_autoavaliacao": "Vimos ganho real de custo ou margem com este parceiro, ou representamos fatia relevante do negócio dele (Tabela 8.1, passo 1).",
+    "sintomas_do_passo_2": "Velocidade e eficiência para resolver problemas, captura de novos clientes e lucro, melhoria de processos.",
+    "citacoes": [
+     {
+      "trecho": "the efficiency of the partnership to create and capture the potential value that the partnership offers.",
+      "pagina": "p. 159"
+     },
+     {
+      "trecho": "we have seen a real cost advantage/margin gain as a result of working with this partner or we represent a significant share of this partner's business.",
+      "pagina": "p. 218"
+     },
+     {
+      "trecho": "the speed and efficiency at solving problems and issues; capturing new customers, better profits, etc; improving processes.",
+      "pagina": "p. 219"
+     }
+    ]
+   },
+   {
+    "nome": "Escala e quem avalia",
+    "o_que_mede": "Cada fator recebe um de quatro níveis: High, Medium, Medium-low, Low. No modelo completo a nota é dada em conjunto pelos dois parceiros. Na autoavaliação rápida do capítulo 8 basta o lado de quem avalia.",
+    "citacoes": [
+     {
+      "trecho": "it is possible to identify and accurately characterize eight archetypal partnership types using high, medium, medium-low and low ratings for the three",
+      "pagina": "p. 178"
+     },
+     {
+      "trecho": "Table 6.4 shows how this can be used as a performance model for any partnership where each factor is jointly rated by the partners.",
+      "pagina": "p. 174"
+     }
+    ]
+   },
+   {
+    "nome": "Cinco medidas de espiral (capítulo 5), base de pesquisa dos três fatores",
+    "itens": [
+     "Equality (igualdade)",
+     "Operations (operações)",
+     "Innovation (inovação)",
+     "Investment (investimento)",
+     "Communication (comunicação)"
+    ],
+    "o_que_mede": "Cada medida tem de 6 a 10 afirmações respondidas pelos gestores dos dois lados. O capítulo 6 reúne esses fatores nos três super fatores. A relação exata entre as cinco medidas e os três fatores não vem em tabela; é leitura minha.",
+    "citacoes": [
+     {
+      "trecho": "We have identified five relationship performance measures that evaluate the bias or tendency towards the spiral of success or the spiral of failure",
+      "pagina": "p. 135"
+     },
+     {
+      "trecho": "This chapter will show how these key factors can be assembled into an all-embracing model that can be used to describe and assess business partnership performance.",
+      "pagina": "p. 157"
+     },
+     {
+      "trecho": "Better still, ask your opposite number in a partner firm the same questions and compare your responses.",
+      "pagina": "p. 155"
+     }
+    ]
+   },
+   {
+    "nome": "Sub-sinais que realmente separam os tipos no capítulo 7 (leitura minha)",
+    "itens": [
+     "Compromisso e dependência (Tubarões Cativos: muito altos; Catadores de Cerejas e Desertores: baixos)",
+     "Confiança, que pode ser alta na competência e baixa nas intenções de longo prazo",
+     "Nível de conflito (alto nos Tubarões Cativos, baixo nos Catadores de Cerejas, frequente nos Desertores)",
+     "Laço social e abertura de informação",
+     "Economia da proposta (margem, produto, marca)"
+    ],
+    "o_que_mede": "Esses sub-sinais não aparecem como dimensões na Tabela 8.1. Eles vivem dentro dos três fatores e explicam por que o livro manda complementar a nota com sintomas e causas (passos 2 e 3).",
+    "citacoes": [
+     {
+      "trecho": "The key descriptor of a Captive Shark is the very high level of commitment and dependency.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "Cherry Pickers are epitomized by their lack of commitment to the relationship or dependency upon the host firm or the beneficial outcomes of the partnership.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "The level of dependency and commitment is low and as their name suggests, these firms are typically most likely to desert.",
+      "pagina": "p. 20"
+     }
+    ]
+   }
+  ],
+  "regra_dos_tipos": [
+   {
+    "tipo": "Evangelists (Evangelistas)",
+    "combinacao": "Tabela 8.1: Reference-ability Alta, Partnering effectiveness Alta, Value significance Alta (High, High, High).",
+    "descricao": "Lua de mel prolongada: satisfação e boca a boca excepcionais, confiança e compromisso altos, muito investimento estrutural e muita coordenação. O livro desmonta o mito: muitos Evangelistas não são os maiores nem os mais lucrativos, tendem a ficar internos, defensivos e lentos para mudar, e podem virar reféns do relacionamento.",
+    "o_que_fazer": "Não lançar iniciativa nova sem uma avaliação factual do ganho comercial. Usar o apoio explícito dele para testar abordagens novas em conjunto. Mensagens conservadoras e constantes, sem mudanças bruscas de rumo. Reduzir investimento se o retorno não se justificar, mas reinjetar apoio periodicamente. Não esperar que ele ajude a cruzar o abismo para o crescimento. Trocar o gestor é opção, mas arriscada; outra é mudar o estilo de liderança, de participativo para diretivo, com metas, métricas de processo e SLAs mais duros.",
+    "retorno_tipico_segundo_o_livro": "Retornos acima da norma no início, que tendem a cair com o tempo (1+1=5 no começo).",
+    "fase_tipica_no_ciclo": "Cedo (early adopters) e também no fim, quando são o tipo dominante e às vezes o único que sobra.",
+    "citacoes": [
+     {
+      "trecho": "Evangelists are firms that appear to be on an extended honeymoon for one or both of the parties involved in the partnership.",
+      "pagina": "p. 17"
+     },
+     {
+      "trecho": "Research has shown that many Evangelists are not the largest or most profitable partners.",
+      "pagina": "p. 181"
+     },
+     {
+      "trecho": "Introducing new initiatives into evangelistic partnerships is unlikely to succeed unless a detailed and factual assessment of the commercial realities has been carried out.",
+      "pagina": "p. 224"
+     },
+     {
+      "trecho": "The firm can leverage this overt support to test and trial new approaches jointly with the partner in the knowledge that the inherent strength will typically sustain the underlying relationship.",
+      "pagina": "p. 225"
+     },
+     {
+      "trecho": "Typically there is no such thing as over-communication for an Evangelist, as long as it is a message that it is familiar and comfortable with.",
+      "pagina": "p. 234"
+     }
+    ]
+   },
+   {
+    "tipo": "Rebellious Teenagers (Adolescentes Rebeldes)",
+    "combinacao": "Tabela 8.1: Reference-ability Alta, Partnering effectiveness Média-baixa, Value significance Média (High, Medium-low, Medium).",
+    "descricao": "Confiança e compromisso altos, escala relevante, mas inquietos: impacientes por retorno, atentos a qualquer desequilíbrio de contribuição, reclamam de burocracia e pedem mais autonomia. Falam o que você quer ouvir e guardam as queixas reais. O valor possível se perde (1+1=2,5 ou 3).",
+    "o_que_fazer": "Continuar nutrindo, porque são aliados leais e bons candidatos para a fase de crescimento. Reformular os objetivos à luz dos pontos fortes e fracos de ambos, auditar os investimentos de cada lado para separar os que dão retorno dos encalhados, usá-los como voz do cliente em melhorias de processo. Não trocar interlocutores-chave sem consentimento, porque eles leem isso como sinal de rompimento. Fazer revisões frequentes e publicar material técnico e estratégico para restaurar a confiança na competência do anfitrião.",
+    "retorno_tipico_segundo_o_livro": "Retorno médio, com grandes oscilações de humor; crescimento baixo e estável apesar da escala.",
+    "fase_tipica_no_ciclo": "Fase de crescimento, quando as tensões de processo e estratégia aparecem.",
+    "citacoes": [
+     {
+      "trecho": "However, Rebellious Teenagers are restless partnerships and will become impatient for returns.",
+      "pagina": "p. 190"
+     },
+     {
+      "trecho": "Rebellious Teenagers maintain a 'buy-in' to the aims and objectives of the partnership.",
+      "pagina": "p. 226"
+     },
+     {
+      "trecho": "It is therefore worthwhile to continue to nurture and develop them.",
+      "pagina": "p. 226"
+     },
+     {
+      "trecho": "In some instances Rebellious Teenagers represent the best candidates for moving into the growth and development phase of an opportunity",
+      "pagina": "p. 226"
+     }
+    ]
+   },
+   {
+    "tipo": "Stable Pragmatists (Pragmáticos Estáveis)",
+    "combinacao": "Tabela 8.1: Reference-ability Média, Partnering effectiveness Média-baixa, Value significance Média (Medium, Medium-low, Medium).",
+    "descricao": "Cooperação por necessidade pragmática, cultura casada, gestão da relação intuitiva e sem estrutura, inovação como ponto fraco. Funcionam, duram e dão retorno acima da média, mas abaixo do que poderiam. Há bolsões de clareza no topo e variação no resto.",
+    "o_que_fazer": "O segredo é uma gestão da relação mais sistemática: uma função central, não uma tarefa secundária de vendas nem diluída em vários departamentos. A causa mais provável do desempenho abaixo do potencial é falta de atenção gerencial e de acompanhamento da mudança.",
+    "retorno_tipico_segundo_o_livro": "Retorno tipicamente acima da média.",
+    "fase_tipica_no_ciclo": "Levam o negócio através do abismo para a maturidade.",
+    "citacoes": [
+     {
+      "trecho": "They are not generally failing, just not performing as well as they could, and it is highly likely that the current position results from a lack of management attention and keeping up with change.",
+      "pagina": "p. 225"
+     },
+     {
+      "trecho": "The secret to improving the quality of Stable Pragmatists is a more systematic approach to relationship management.",
+      "pagina": "p. 226"
+     }
+    ]
+   },
+   {
+    "tipo": "Captive Sharks (Tubarões Cativos)",
+    "combinacao": "Tabela 8.1: Reference-ability Baixa, Partnering effectiveness Média, Value significance Alta (Low, Medium, High).",
+    "descricao": "Escala enorme, compromisso e dependência altíssimos, conflito e comportamento adversarial igualmente altos, pouca colaboração real. Confiam na competência do parceiro, desconfiam das intenções de longo prazo, tratam informação como arma. A proposta econômica forte é o que sustenta a relação.",
+    "o_que_fazer": "Não dá para gerenciá-los; dá para entendê-los e domesticá-los em parte. Entender a lógica estratégica de cada lado e como o sucesso é medido, por diálogo que começa no topo. Responder melhor a conversas diretas sobre o modelo de negócio e o ROI do que a campanhas. Revisões frequentes de impacto de políticas e mudanças de mercado. Com o tempo podem evoluir para Pragmáticos Estáveis.",
+    "retorno_tipico_segundo_o_livro": "Retorno abaixo da média (1+1=2,5).",
+    "fase_tipica_no_ciclo": "Maturidade e fim do ciclo.",
+    "citacoes": [
+     {
+      "trecho": "The key descriptor of a Captive Shark is the very high level of commitment and dependency.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "This high commitment is matched by equally high levels of conflict and adversarial behaviour, which leads to low levels of collaboration.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "The first rule is that Captive Sharks cannot be managed; the second is they can be understood and partially tamed.",
+      "pagina": "p. 228"
+     },
+     {
+      "trecho": "Captive Sharks can be tamed by understanding the motivations (positive and negative) of the partners in sustaining the relationship (the strategic logic) and understanding the mechanisms or model by which success will be measured (critical success factors).",
+      "pagina": "p. 228"
+     },
+     {
+      "trecho": "Captives Sharks will be more responsive to direct discussions on the strength and dynamics of the business model and how they can increase their perceived low level of ROI.",
+      "pagina": "p. 235"
+     }
+    ]
+   },
+   {
+    "tipo": "Cherry Pickers (Catadores de Cerejas)",
+    "combinacao": "Tabela 8.1: Reference-ability Alta, Partnering effectiveness Média, Value significance Baixa (High, Medium, Low).",
+    "descricao": "Parceiro bom, confiável e sem conflitos, satisfação relativamente alta, o que engana a gestão a esperar crescimento. Na prática: compromisso baixo, colaboração morna, nenhuma meta comum, foco em ganho transacional de curto prazo. Ocorrem em uma ou duas de cada dez parcerias e a oportunidade que representam costuma ser grande e nunca realizada.",
+    "o_que_fazer": "Tratá-los como se estivessem sendo recrutados pela primeira vez: explorar a razão estratégica, examinar criticamente a proposta de valor do anfitrião e avaliar prós e contras da colaboração. Evitar a rodada de reuniões executivas, que eles questionam. Concentrá-los numa única atividade, um cliente ou um processo, como uma grande concorrência, para elevar a expectativa e depois ampliar. Programas de autorização e credenciamento aumentam o compromisso.",
+    "retorno_tipico_segundo_o_livro": "Retorno apenas médio (1+1 menos que 3).",
+    "fase_tipica_no_ciclo": "Declínio do mercado ou do produto, quando passam a aproveitar a marca sem se comprometer.",
+    "citacoes": [
+     {
+      "trecho": "Cherry Pickers are epitomized by their lack of commitment to the relationship or dependency upon the host firm or the beneficial outcomes of the partnership.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "Their level of overall satisfaction is also relatively high and this can confuse management into believing that growth can be anticipated.",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "Such relationships occur in roughly one or two out of 10 partnerships, rarely more.",
+      "pagina": "p. 203"
+     },
+     {
+      "trecho": "Instead, one needs to approach Cherry Pickers as if they were being recruited into the partnership for the very first time, and usually this can be done without too much difficulty.",
+      "pagina": "p. 229"
+     },
+     {
+      "trecho": "Thus by concentrating the Cherry Picker on a single activity, a single customer or single process, it can be possible to raise its expectation level and open the way to broadening the relationship in the future.",
+      "pagina": "p. 229"
+     },
+     {
+      "trecho": "In marketing channels, authorization and accreditation programmes can be very successful in driving the increase in commitment from Cherry Pickers to the host firm.",
+      "pagina": "p. 236"
+     }
+    ]
+   },
+   {
+    "tipo": "Evolving Pessimists (Pessimistas em Evolução)",
+    "combinacao": "Tabela 8.1: Reference-ability Média-baixa, Partnering effectiveness Média-baixa, Value significance Média-baixa (Medium-low nos três).",
+    "descricao": "Tentam melhorar, mas problemas operacionais, mercado instável e produtos complexos consomem os gestores e travam o investimento na relação. Trégua infeliz: a moral se mantém, há conversa e resolução conjunta de problemas, a vontade de cooperar cresce, mas a capacidade de transformar isso em entrega confiável ainda não existe.",
+    "o_que_fazer": "Quebrar o ciclo com algo novo e forte o bastante: um sênior que não carrega as cicatrizes do passado, ou uma oportunidade de negócio que restabeleça colaboração e otimismo. Ação unilateral para romper o impasse, apelando a uma facção que fala a mesma língua (no caso do livro, os engenheiros). Melhoria exige tempo, esforço constante e pressão política.",
+    "retorno_tipico_segundo_o_livro": "Retorno abaixo da média (1+1=2).",
+    "fase_tipica_no_ciclo": "Declínio.",
+    "citacoes": [
+     {
+      "trecho": "The introduction of something new or different can potentially break the cycle of bad feelings and low productivity.",
+      "pagina": "p. 227"
+     },
+     {
+      "trecho": "trust between the partners may be very thin on the ground and unilateral action is needed to break the impasse.",
+      "pagina": "p. 227"
+     },
+     {
+      "trecho": "Returns from these relationships will be below average, ie 1+1=2.",
+      "pagina": "p. 194"
+     }
+    ]
+   },
+   {
+    "tipo": "No Can Dos (Sem Saída)",
+    "combinacao": "Tabela 8.1: Reference-ability Baixa, Partnering effectiveness Média-baixa, Value significance Baixa (Low, Medium-low, Low).",
+    "descricao": "Condições adversariais são padrão e as chances de escapar são mínimas, o que cria sensação de prisão e impotência. Oposição enraizada à inovação, cumprir o mínimo do contrato, brigas pela letra miúda e retenção de informação.",
+    "o_que_fazer": "Doutrinação simples, mesmo apoiada pela alta direção, falha. São necessárias estratégias radicais (reestruturação ou romper e recomeçar), e pequenos projetos que reconstruam confiança podem levar a uma transição para Pragmático Estável.",
+    "retorno_tipico_segundo_o_livro": "Retorno abaixo de 1+1=2.",
+    "fase_tipica_no_ciclo": "Só entram no ciclo depois de reformados, junto com os Pragmáticos Estáveis, na travessia para a maturidade.",
+    "citacoes": [
+     {
+      "trecho": "Within No Can Dos adversarial conditions are standard and since the opportunities to escape are very slim",
+      "pagina": "p. 19"
+     },
+     {
+      "trecho": "It is thus likely that simple indoctrination programmes, even if wholeheartedly backed by senior management, will fail and more radical strategies will be needed.",
+      "pagina": "p. 230"
+     }
+    ]
+   },
+   {
+    "tipo": "Deserters (Desertores)",
+    "combinacao": "Tabela 8.1: Reference-ability Baixa, Partnering effectiveness Baixa, Value significance Baixa (Low, Low, Low).",
+    "descricao": "Enquanto o Evangelista não vê mal algum, o Desertor não vê bem algum. Raramente são parcerias novas: algo foi melhor ou prometeu mais. Desconfiança do parceiro e do gerente de conta, pouca comunicação, discordâncias quase diárias, economia decepcionante. A relação termina em litígio ou os Desertores somem aos poucos; nem todos desertam de fato.",
+    "o_que_fazer": "A decisão crítica é se vale o investimento de tempo e energia, pois muitos têm baixo valor comercial. Se vale: alinhar expectativas, definir ações curtas com benefício tangível, trocar o gestor ou instalar um gestor embaixador e tratar como parceria nova, com seis a doze meses de horizonte. Em alianças complexas, manter a equipe e subir o nível de engajamento sênior. Marketing genérico tende a falhar, e o gestor de conta um a um pode reenergizar, desde que o valor compense o custo.",
+    "retorno_tipico_segundo_o_livro": "Retorno mínimo: os objetivos de negócio quase não são atingidos.",
+    "fase_tipica_no_ciclo": "Declínio, mas podem aparecer até no começo de um programa de alianças.",
+    "citacoes": [
+     {
+      "trecho": "The level of dependency and commitment is low and as their name suggests, these firms are typically most likely to desert.",
+      "pagina": "p. 20"
+     },
+     {
+      "trecho": "The most critical decision is whether a Deserter relationship is actually worth the investment of time and energy.",
+      "pagina": "p. 231"
+     },
+     {
+      "trecho": "A possibility is to change personnel to create a fresh approach, perhaps replacing the incumbent account or alliance manager or installing a new ambassadorial manager",
+      "pagina": "p. 231"
+     },
+     {
+      "trecho": "it is not unusual for a six to 12 month period to elapse before new, fresher and more positive perspectives are in place.",
+      "pagina": "p. 232"
+     },
+     {
+      "trecho": "The critical caveat is the relative value to the partnership compared to the cost of management and motivation.",
+      "pagina": "p. 236"
+     }
+    ]
+   }
+  ],
+  "tres_super_fatores": {
+   "o_que_sao": "Três agrupamentos de comportamentos e condições que o livro chama de super fatores de sucesso da parceria. Os três juntos formam o modelo de desempenho da parceria (Figura 6.1, Tabela 6.4) e são medidos como leading indicators, ao lado dos resultados operacionais.",
+   "partnership_quality": {
+    "definicao": "Qualidade da troca relacional: compromisso (motivação de investir e de manter a parceria) e confiança (credibilidade, interesses e benefícios mútuos).",
+    "componentes": [
+     "Commitment",
+     "Trust"
+    ],
+    "sintomas_de_falha": "Parceiro reduz o investimento na marca do anfitrião ou na relação, é excluído de eventos, compete por contas com outros parceiros, não libera pessoas-chave, ou espera retorno alto no curto prazo.",
+    "citacoes": [
+     {
+      "trecho": "the quality of the relationship exchange including commitment and trust.",
+      "pagina": "p. 159"
+     },
+     {
+      "trecho": "Partners reduce investment in the host's brand or service or in the overall relationship.",
+      "pagina": "p. 170"
+     }
+    ]
+   },
+   "collaborative_innovation": {
+    "definicao": "Efetividade da relação e condições que a deixam inovar e responder a oportunidades; é o motor, descrito como o comportamento de C3 (cooperação, coordenação, colaboração).",
+    "componentes": [
+     "Adaptability",
+     "Innovation",
+     "Communication",
+     "Cooperation"
+    ],
+    "sintomas_de_falha": "Responsabilidades fugidas, informação mal compartilhada, falta de proatividade com dependência excessiva do anfitrião para ter ideias, muitos ciclos de venda transacionais e de baixo valor.",
+    "citacoes": [
+     {
+      "trecho": "Lack of proactivity with over-reliance on the host to initiate activities and come up with ideas.",
+      "pagina": "p. 166"
+     }
+    ]
+   },
+   "value_creation": {
+    "definicao": "Eficiência da parceria para criar e capturar o valor potencial; soma dos comportamentos de construir, sustentar e desenvolver a relação, com foco em sinergia produtiva.",
+    "componentes": [
+     "Conflict management",
+     "Synergy",
+     "Value creation",
+     "Process efficiency"
+    ],
+    "sintomas_de_falha": "Dificuldade de recrutar e reter parceiros, conflito aberto, microgestão de métricas operacionais, programas táticos usados como ferramenta de preço, parceiro que pede financiamento contínuo ao anfitrião.",
+    "citacoes": [
+     {
+      "trecho": "the efficiency of the partnership to create and capture the potential value that the partnership offers.",
+      "pagina": "p. 159"
+     },
+     {
+      "trecho": "The partner seeks ongoing funding from the host to support any activity.",
+      "pagina": "p. 174"
+     }
+    ]
+   },
+   "argumento_do_livro_para_os_tres": "O livro afirma que os três foram sintetizados de pesquisa extensa e que, combinados, dão uma medida abrangente do desempenho da aliança. O argumento é de autoridade e de casos (Defesa do Reino Unido, Sonatest e Paragon, distribuição de TI, cadeias de cereais). Não apresenta no texto um teste de que os três esgotam o que define uma parceria, e o escopo declarado é desempenho, não definição.",
+   "citacoes": [
+    {
+     "trecho": "have been synthesized through research, which when combined, provide a comprehensive measure of alliance performance",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "through which it is possible to explore the activities and behaviours that promote partnership success",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "there is typically less focus on what can be considered as the affective outcomes or the leading indicators.",
+     "pagina": "p. 158"
+    },
+    {
+     "trecho": "These are leading indicators that help us to predict the likelihood of a partnership being successful or not.",
+     "pagina": "p. 174"
+    }
+   ]
+  },
+  "autoavaliacao": "Passo 1 (Tabela 8.1): avaliar a parceria em três afirmações, cada uma em High, Medium, Medium-low ou Low: (1) Reference-ability, (2) Partnership effectiveness, (3) Value to the business. A Tabela 8.1 lista, para cada tipo, o trio de níveis que o caracteriza: Evangelistas (Alta, Alta, Alta); Adolescentes Rebeldes (Alta, Média-baixa, Média); Pragmáticos Estáveis (Média, Média-baixa, Média); Tubarões Cativos (Baixa, Média, Alta); Catadores de Cerejas (Alta, Média, Baixa); Pessimistas em Evolução (Média-baixa nos três); Sem Saída (Baixa, Média-baixa, Baixa); Desertores (Baixa nos três). O livro diz que isso posiciona a relação apenas de forma muito aproximada. Passo 2 (Tabela 8.2): listar sintomas e comportamentos observáveis que sustentam cada nota; mais sintomas positivos, maior a satisfação do parceiro (o exemplo do livro contabiliza 4 positivos, 4 positivos e 1 negativo, 2 positivos e 1 negativo). Passo 3 (Tabela 8.3): achar fatos que expliquem a causa de cada sintoma. Os passos são iterativos: volta-se à nota do passo 1. Depois, ler a descrição completa do tipo e decidir as ações. Leitura por colunas: as colunas da Tabela 8.1 não trazem os nomes dos super fatores. A correspondência (Reference-ability com qualidade da parceria, Partnering effectiveness com inovação colaborativa, Value significance com criação de valor) é minha, e se apoia nas listas de sintomas do passo 2, que repetem os componentes das Tabelas 6.1 a 6.3.",
+  "e_uma_matriz": "Não no sentido lógico que o patrocinador procura. O livro não traz uma regra do tipo 'se fator A alto e fator B baixo, então tipo X'. Traz oito perfis arquetípicos, escolhidos de um espaço de 4 x 4 x 4 = 64 combinações possíveis, e uma tabela de consulta aproximada (Tabela 8.1). Três testes que fiz por script sobre a Tabela 8.1: (1) os oito trios são todos distintos, mas nenhuma combinação de limiares binários (alto ou baixo por fator) separa os oito tipos em oito células; o máximo que se alcança são 6 células distintas, porque Adolescentes Rebeldes colidem com Pragmáticos Estáveis (diferem só por Alta contra Média no primeiro fator) e Sem Saída colide com Desertores; logo o livro não é um cubo 2 x 2 x 2. (2) Das 64 combinações, só 8 coincidem exatamente com um perfil; 42 têm um perfil mais próximo único pela distância de Manhattan e 22 empatam entre dois ou mais perfis; ou seja, o próprio livro precisa dos passos 2 e 3 (sintomas e causas) para desempatar. (3) Os tipos são lidos como arquétipos, não como categorias exaustivas: o livro diz que há outros tipos, mas improváveis de serem genéricos. Também observo duas inconsistências internas: Catadores de Cerejas têm compromisso baixo no texto mas Reference-ability Alta na tabela; Tubarões Cativos têm compromisso altíssimo no texto mas Reference-ability Baixa. Isso mostra que a primeira coluna mistura compromisso, confiança e disposição de recomendar.",
+  "veredito_sobre_os_tres_fatores": "O livro recomenda os três fatores, mas só como lentes para medir o desempenho do relacionamento em alianças, cadeias de suprimento e canais maduros, em geral com contrato e interdependência operacional, avaliadas por percepção dos gestores dos dois lados. Ele não argumenta que os três definem tudo o que uma parceria é. Ficam de fora, por exemplo, o papel do parceiro, o potencial de alcance e de aderência ao cliente ideal, a direção do fluxo de oportunidades e o estágio no ciclo. Para o caso Wise, o patrocinador tem razão em desconfiar: os três fatores são uma boa ideia de base (qualidade da relação, capacidade de cooperar e valor capturado) e merecem ser mantidos como inspiração, mas precisam ser redefinidos em comportamentos que o portal enxerga e completados por um fator de potencial.",
+  "citacoes": [
+   {
+    "trecho": "typically most partnerships can be categorized into one of only eight archetypal relationships",
+    "pagina": "p. 15"
+   },
+   {
+    "trecho": "The synthesis of a set of key relationship drivers, a master set of probes, is cross-related to the major categories of relationship and generates the Gibbs+Humphries Partnership Types.",
+    "pagina": "p. 15"
+   },
+   {
+    "trecho": "they are not immutable; they can and do change, depending on the actions and behaviours of the participants.",
+    "pagina": "p. 17"
+   },
+   {
+    "trecho": "By evaluating performance jointly using the following dynamic drivers you can easily locate your partnerships in the appropriate partnership type",
+    "pagina": "p. 21"
+   },
+   {
+    "trecho": "There are doubtless other types, but these are unlikely to be generic or widely applicable.",
+    "pagina": "p. 212"
+   },
+   {
+    "trecho": "Each of the relationship types is defined in terms of an extensive set of metrics.",
+    "pagina": "p. 217"
+   },
+   {
+    "trecho": "To make it easier to carry out a self-assessment, each partnership can be considered in terms of three factors:",
+    "pagina": "p. 217"
+   },
+   {
+    "trecho": "This will help you to very roughly position a particular relationship within a G+H Type using Table 8.1.",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Evangelists High High High",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Rebellious High Medium-low Medium Teenagers",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Stable Medium Medium-low Medium Pragmatists",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Captive Sharks Low Medium High",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Cherry Pickers High Medium Low",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Evolving Medium-low Medium-low Medium-low Pessimists",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "No Can Dos Low Medium-low Low",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "Deserters Low Low Low",
+    "pagina": "p. 218"
+   },
+   {
+    "trecho": "The more positive symptoms that are observable the more likely it is that the relationship is performing at a higher level of satisfaction to the partner.",
+    "pagina": "p. 219"
+   },
+   {
+    "trecho": "These three steps will give you a rough idea of the sort of characteristics that describe your relationship and so help you position it in one or other of the eight relationship types.",
+    "pagina": "p. 219"
+   },
+   {
+    "trecho": "early phases of development will be assisted by the presence of Evangelists who are prepared and willing to make sacrifices in terms of resources and time",
+    "pagina": "p. 223"
+   },
+   {
+    "trecho": "determine whether they reflect a generalist view to your partners or whether you reflect their specific relationship needs.",
+    "pagina": "p. 238"
+   }
+  ]
+ },
+ "outros_livros": [
+  {
+   "livro": "Customer Success (Mehta, Steinman e Murphy)",
+   "modelo": "Escore de saúde do cliente decomposto em componentes, mais modelo de cobertura por camadas (high-touch, low-touch, tech-touch) com ritmo de interação definido por camada.",
+   "fatores": [
+    "Adoção do produto",
+    "Suporte ao cliente",
+    "Escores em pesquisas",
+    "Engajamento no marketing",
+    "Envolvimento na comunidade",
+    "Participação no marketing (referências, casos)",
+    "Crescimento do contrato",
+    "Autossuficiência",
+    "Histórico de pagamentos",
+    "Relacionamento executivo"
+   ],
+   "argumento": "A saúde é um previsor diário do comportamento futuro (renovar, comprar mais, sair), como o pipeline é para vendas. O escore só vale se for decomposto em componentes que mostram qual alavanca mexer, e se disparar ação: análise que não gera iniciativa é inútil. Valor do cliente e data de renovação sozinhos são critérios fracos de prioridade. A saúde não é linear, varia como uma onda: aproveitar picos e intervir nos vales. A segmentação por receita define quantas contas cada gerente aguenta (5 a 15 em high-touch, 20 a 50 em low-touch) e o ritmo mínimo de contato é mensal. O livro não prova um número ideal de componentes; diz que cada empresa monta o seu e começa pelo factível.",
+   "uso_no_wise": "Base da ideia de índice decomposto (fator Relação) e do modelo de atenção alta e baixa, com o limite de 15 parceiros em atenção alta por gerente como regra de capacidade. O limiar de 70 usado como exemplo de intervenção inspira o corte de Relação (adaptação minha).",
+   "citacoes": [
+    {
+     "trecho": "Boa saúde do cliente equivale a maior probabilidade de renovação e upsell.",
+     "pagina": "p. 122"
+    },
+    {
+     "trecho": "Como todas as empresas são diferentes, não existe um método único, mas aqui está uma lista de possíveis componentes da saúde do cliente que podem ser usados para estimar a saúde total",
+     "pagina": "p. 126"
+    },
+    {
+     "trecho": "Esses componentes da saúde total são extremamente importantes para os gerentes de customer success (GCSs), porque lhes fornecem recursos para mudar o escore total.",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Análise de dados ou insights oriundos de pesquisas ou avaliações que não deflagrem iniciativas são em grande parte inúteis.",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Compreender a onda senoidal da saúde do cliente é realmente importante, porque lhe permite aproveitar os picos e intervir nos vales.",
+     "pagina": "p. 131"
+    },
+    {
+     "trecho": "posso limitar esse tipo de intervenção apenas aos clientes com escore de saúde abaixo de 70",
+     "pagina": "p. 132"
+    },
+    {
+     "trecho": "Segmente os clientes com base na métrica mais eficaz para o negócio.",
+     "pagina": "p. 137"
+    },
+    {
+     "trecho": "a faixa de variação do número de contas high-touch sob a responsabilidade de um GCS pode variar de 5 a 15, enquanto os seus GCSs low-touch podem ser capazes de gerenciar de 20 a 50 contas ou até muito mais.",
+     "pagina": "p. 139"
+    },
+    {
+     "trecho": "Seu objetivo deve ser interagir com os clientes pelo menos a cada mês",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "O valor do cliente sozinho, ou mesmo conjugado com a data de renovação, não é bastante sofisticado como critério de priorização",
+     "pagina": "p. 230"
+    }
+   ]
+  },
+  {
+   "livro": "The Keystone Advantage (Iansiti e Levien)",
+   "modelo": "Saúde do ecossistema em três eixos: produtividade, robustez e criação de nicho. É medida do conjunto, não do parceiro individual.",
+   "fatores": [
+    "Produtividade: produtividade dos fatores (ROIC), mudança ao longo do tempo, entrega de inovações",
+    "Robustez: taxa de sobrevivência, persistência da estrutura, previsibilidade, obsolescência limitada, continuidade de uso",
+    "Criação de nicho: crescimento da variedade de empresas e de produtos e capacidades"
+   ],
+   "argumento": "Uma rede é saudável se converte inovação em ganho de forma sustentada, resiste a choques e cria novos nichos de valor, não só diversidade. Os autores alertam que a diversidade sozinha não é boa; importa a diversidade que cria valor. O livro não segmenta parceiros em tipos de relação. Serve para medir o programa como um todo, ligando a saúde de cada membro à saúde do conjunto.",
+   "uso_no_wise": "Usar como saúde do programa (carteira inteira), separada da tipologia de parceiros: produtividade (receita por parceiro ativo), robustez (retenção de parceiros em 12 meses) e criação de nicho (novos segmentos e novas jogadas). Tradução minha, não é do livro.",
+   "citacoes": [
+    {
+     "trecho": "measures of productivity should also capture the effectiveness of an ecosystem in converting innovation into lowered costs and new products and functions.",
+     "pagina": "p. 56"
+    },
+    {
+     "trecho": "Note also that we require that productivity improvements be sustained: It is not sufficient that an ecosystem provide one-time improvements to those who join it.",
+     "pagina": "p. 60"
+    },
+    {
+     "trecho": "Ecosystem participants should enjoy high survival rates, either over time or relative to other, comparable ecosystems.",
+     "pagina": "p. 61"
+    },
+    {
+     "trecho": "Not all of these measures will apply or be available in every circumstance, but as a collection they should provide an effective set of tools for assessing robustness.",
+     "pagina": "p. 63"
+    },
+    {
+     "trecho": "What matters in these systems is the capacity to increase meaningful diversity over time through the creation of new valuable functions.",
+     "pagina": "p. 65"
+    }
+   ]
+  },
+  {
+   "livro": "Give and Take (Adam Grant)",
+   "modelo": "Três estilos de reciprocidade: doador (giver), tomador (taker) e compensador (matcher), mais a distinção entre doador abnegado e doador 'otherish' e a estratégia de generous tit for tat.",
+   "fatores": [
+    "Direção da reciprocidade (dar mais, tomar mais, equilibrar)",
+    "Foco no outro versus foco em si",
+    "Sinceridade, testada ao longo do tempo",
+    "Equilíbrio entre interesse próprio e interesse no outro"
+   ],
+   "argumento": "Doadores ocupam tanto o fundo quanto o topo da escada do sucesso, e o que os separa é serem 'otherish' (ajudar sem abrir mão dos próprios objetivos). Contra tomadores, o doador inteligente passa a compensar, mas perdoa uma em cada três vezes. O estilo é primário, mas muda por papel e relação, então é um padrão de comportamento, não um rótulo fixo. Tomadores disfarçam de doadores, e a regularidade do contato revela quem é genuíno.",
+   "uso_no_wise": "Inspira o componente Equilíbrio do fator Relação: saldo entre indicações enviadas pelo parceiro e oportunidades que a Wise enviou a ele. O livro fala de pessoas; aplicar a empresas e a fluxos é inferência minha. Também sustenta confiar e verificar: reunião mensal recorrente e relatório a cada 90 dias.",
+   "citacoes": [
+    {
+     "trecho": "Takers have a distinctive signature: they like to get more than they give.",
+     "pagina": "p. 13"
+    },
+    {
+     "trecho": "We become matchers, striving to preserve an equal balance of giving and getting.",
+     "pagina": "p. 14"
+    },
+    {
+     "trecho": "at work, the vast majority of people develop a primary reciprocity style, which captures how they approach most of the people most of the time.",
+     "pagina": "p. 14"
+    },
+    {
+     "trecho": "Givers dominate the bottom and the top of the success ladder.",
+     "pagina": "p. 15"
+    },
+    {
+     "trecho": "If takers are selfish and failed givers are selfless, successful givers are otherish: they care about benefiting others, but they also have ambitious goals for advancing their own",
+     "pagina": "p. 116"
+    },
+    {
+     "trecho": "Peter decided to trust but verify: he granted Rich the autonomy to work on special projects, but held him accountable for his results, asking him to report on his progress every ninety days.",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "Generous tit for tat achieves a powerful balance of rewarding giving and discouraging taking, without being overly punitive.",
+     "pagina": "p. 142"
+    },
+    {
+     "trecho": "It's easy to fake it every six months, but not on a regular basis.",
+     "pagina": "p. 143"
+    }
+   ]
+  },
+  {
+   "livro": "The Referral Engine (John Jantsch)",
+   "modelo": "Rede de parceiros estratégicos, com duas listas (membros estratégicos que têm o mesmo cliente ideal e membros fornecedores), segmentada à parte dos clientes, com indicação 'engajada' e contato a cada trinta dias.",
+   "fatores": [
+    "Mesmo cliente ideal (aderência)",
+    "Confiança para indicar o seu melhor cliente",
+    "Participação do indicador no ato de indicar",
+    "Motivação social contra motivação de mercado",
+    "Ritmo de contato"
+   ],
+   "argumento": "A maior oportunidade de indicação não está nos clientes e sim nos parceiros estratégicos, que têm motivação própria para promover você. O filtro de entrada é se você indicaria seu melhor cliente a eles com 100% de confiança. Quanto mais engajado o indicador, maior a chance de o lead virar cliente. O autor também defende que dinheiro é motivação ruim para indicar; a recompensa é pertencimento e utilidade. Não propõe níveis nem notas para parceiros.",
+   "uso_no_wise": "Define o filtro de aderência no onboarding, a prioridade de indicação participada (apresentação a três) e o piso de contato de trinta dias que inspira o corte de Recência. Tensão: a Wise adotou comissão única, enquanto o livro diz que dinheiro motiva pouco; tratar a comissão como higiene e a atenção como motivador.",
+   "citacoes": [
+    {
+     "trecho": "the real untapped referral opportunity resides with strategic partners.",
+     "pagina": "p. 67"
+    },
+    {
+     "trecho": "Money for referrals is a crummy motivation, but a creative, on-message offer that turns referrals into a game is a great way to motivate them.",
+     "pagina": "p. 68"
+    },
+    {
+     "trecho": "You need completely different referral approaches and offers for customers and strategic partners.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "never go more than about thirty days without some form of contact.",
+     "pagina": "p. 156"
+    },
+    {
+     "trecho": "The more engaged your referral source is in the process of making a referral, the more likely it is that the lead will become a customer.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "Would I feel 100 percent confident referring my best customer to this business?",
+     "pagina": "p. 167"
+    }
+   ]
+  },
+  {
+   "livro": "Building Successful Partner Channels (Hans Peter Bech)",
+   "modelo": "Pirâmide do canal: Estrelas (5%), Potencial de Crescimento (15%) e O Resto (80%), cada uma com um estilo de gestão e um tipo de gerente.",
+   "fatores": [
+    "Ambição e capacidade de gestão para crescer sozinho",
+    "Potencial de crescimento com ajuda",
+    "Sem potencial, mas receita e cobertura de mercado"
+   ],
+   "argumento": "O critério é a capacidade de crescimento do parceiro, não o volume atual. Estrelas crescem sem apoio e pedem relação executiva; os de potencial pedem programa estruturado, com o gerente como coach; o resto não deve consumir tempo de gerente e é gerido pelo portal. A reclassificação é contínua, porque todo parceiro começa pequeno. Os percentuais descrevem a estrutura típica de canais de revenda de software, não uma regra.",
+   "uso_no_wise": "Sustenta a regra de atenção: gerente pessoal só para quem tem potencial ou valor, e portal mais comunidade para os demais. Sustenta também a reclassificação periódica. Os percentuais 5, 15 e 80 não são usados como metas.",
+   "citacoes": [
+    {
+     "trecho": "Approximately 5% of our channel partners will possess the ability to grow their businesses faster than the market without our support.",
+     "pagina": "p. 92"
+    },
+    {
+     "trecho": "Approximately 15% of our resellers are genuinely ambitious, but they lack the management skills required to grow beyond a certain volume of business.",
+     "pagina": "p. 92"
+    },
+    {
+     "trecho": "We cannot waste Partner Account Manager resources in managing channel partners who do not have any growth potential!",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "They should primarily be managed through the partner portal with opportunities for chat, call centre and email communication.",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "we need to keep an eye on their progress to decide when to reclassify them and increase the investment in their development.",
+     "pagina": "p. 93"
+    },
+    {
+     "trecho": "There is most likely daily communication and activities between the Partner Account Manager and her Stars and there will be at least an annual strategy review and planning workshop and monthly or quarterly follow up meetings.",
+     "pagina": "p. 92"
+    }
+   ]
+  },
+  {
+   "livro": "Ecosystem-Led Growth (Bob Moore)",
+   "modelo": "Matriz de priorização de parceiros de Chris Lavoie, 2 x 2: mercado servível obtenível (SOM, a sobreposição real de clientes) contra valor criado para clientes compartilhados; quatro quadrantes com ação para cada um. Mais camadas (Partner, Plus, Premier) da Intercom.",
+   "fatores": [
+    "Mercado servível obtenível (potencial, a partir de sobreposição de clientes)",
+    "Valor criado para clientes compartilhados",
+    "Camadas: parceiro, plus, premier"
+   ],
+   "argumento": "Dados de sobreposição valem mais que marca, relacionamento ou acaso ('dados duros são o básico, o resto dá textura'). Cada parceiro vira um ponto na matriz e recebe a próxima melhor ação: santo graal (atenção humana e revisões regulares), próxima melhor escolha, batalha morro acima e perda de tempo (observar e esperar, sem investir hoje). A matriz não é estática: reposiciona-se quando os dados mudam. A prova é por casos (Gong, Intercom), não por estudo controlado. O livro não numera ponto de corte.",
+   "uso_no_wise": "Modelo mais próximo do que o patrocinador pede: potencial contra valor realizado, com ação por quadrante. Entra como regra de atenção (fator Potencial contra fator Valor). O ebook não tem páginas marcadas; a citação usa o marcador de seção.",
+   "citacoes": [
+    {
+     "trecho": "His premise is that you can ultimately measure the potential of any given partnership by combining two critical data points:",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "Plot each partner of yours as a dot on this matrix, and you'll end up with a rich scatterplot through which you can better understand your ecosystem, relatively prioritize partners, and establish a next best action for each one.",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "The holy grail: Choice priority partners deserving of human attention, technical investments, and regular business reviews.",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "Waste of time: Watch and wait, but don't invest today.",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "The best thing about this matrix is that it's not static.",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "hard data is table stakes, and those other factors simply add texture.",
+     "pagina": "secao 24: c13.xhtml"
+    },
+    {
+     "trecho": "As partnerships grow and prove to be more valuable, so too do the number of go-to-market plays that get unlocked.",
+     "pagina": "secao 24: c13.xhtml"
+    }
+   ]
+  },
+  {
+   "livro": "Ecossistema de Parceiros (Tubino e Guimarães), Método Octo",
+   "modelo": "Maturidade em cinco níveis por eixo do Octo (da empresa líder, não do parceiro); programa de parceiros em três níveis com critérios de desempenho, técnicos e jurídicos; scorecard de parceiro ideal de 0, 0,5 e 1; segmentação da base por ciclo de vida e performance.",
+   "fatores": [
+    "Critérios de desempenho (o que o modelo de parceria exige)",
+    "Critérios técnicos (qualidade do trabalho)",
+    "Critérios jurídicos (regras cumpridas, fator binário)",
+    "Fit com o cliente ideal, capacidade de prospecção e de atendimento, plano de negócios",
+    "Ciclo de vida do parceiro"
+   ],
+   "argumento": "Os critérios para subir de nível devem ser os mesmos usados para recrutar e devem espelhar as métricas-chave do negócio. Três níveis são suficientes e quanto menos indicadores, melhor; a regra está clara quando um parceiro consegue explicá-la a outro. Níveis baixos recebem menos personalização. Evitar o zigue-zague de níveis. O livro lista métricas de frequência e de eficiência de vendas por parceiro, que é a ideia de frequência do RFV. A maturidade de cinco níveis serve à empresa líder (portões do programa), não para tipificar parceiros.",
+   "uso_no_wise": "Sustenta a simplicidade (poucos fatores, regra explicável), a histerese (duas leituras seguidas antes de mudar de tipo), o scorecard 0, 0,5 e 1 do fator Potencial e a regra de churn de parceiros (formalizar saída por inatividade).",
+   "citacoes": [
+    {
+     "trecho": "as organizações terão níveis de maturidade diferentes em cada eixo.",
+     "pagina": "p. 34"
+    },
+    {
+     "trecho": "em vez de olhar para o segmento fim, vale mais a pena pensar nos critérios que podem trazer maior assertividade na complementaridade da sua solução.",
+     "pagina": "p. 77"
+    },
+    {
+     "trecho": "Uma forma de avaliar os canais é atribuir uma pontuação para identificar quais potenciais parceiros estão mais preparados para entrar e performar no programa e priorizar o atendimento de forma automática ou manual.",
+     "pagina": "p. 78"
+    },
+    {
+     "trecho": "níveis mais baixos costumam ter menos personalização no atendimento comparados aos níveis mais altos.",
+     "pagina": "p. 134"
+    },
+    {
+     "trecho": "os critérios para subir de nível são os mesmos usados para recrutar novos parceiros.",
+     "pagina": "p. 135"
+    },
+    {
+     "trecho": "Você sabe que as regras do seu programa estão claras quando um parceiro consegue explicá-las para outros parceiros.",
+     "pagina": "p. 136"
+    },
+    {
+     "trecho": "Evite o zigue-zague dos parceiros nos níveis do programa",
+     "pagina": "p. 137"
+    },
+    {
+     "trecho": "Ela significa o tempo que leva para seu parceiro realizar uma nova venda.",
+     "pagina": "p. 181"
+    },
+    {
+     "trecho": "Churn de parceiros: em alguns momentos, vai ser importante desligar alguns parceiros de seu programa.",
+     "pagina": "p. 184"
+    },
+    {
+     "trecho": "segmente seus parceiros em diferentes grupos de acordo com ciclo de vida (lifetime) e performance, pois assim consegue diferenciar o processo de parceria para cada grupo",
+     "pagina": "p. 185"
+    }
+   ]
+  },
+  {
+   "livro": "Nearbound and the Who Economy (Jared Fuller)",
+   "modelo": "Os 4 Cs para qualificar parceiros (customer base, credibility, capability, commitment) e fatores de compatibilidade para avaliar aliados (sobreposição de público e de contas, alinhamento de narrativa, complementaridade, reciprocidade).",
+   "fatores": [
+    "Customer base: base de clientes relevante e acessível, aderente ao ICP",
+    "Credibility: credibilidade para representar a oferta",
+    "Capability: modelos, sistemas e tecnologia para executar",
+    "Commitment: compromisso com a parceria e as metas comuns",
+    "Reciprocidade e relação pessoal já existentes"
+   ],
+   "argumento": "Qualificar e desqualificar parceiros com quatro perguntas simples, antes de investir. Testar com pequenos gestos de baixa pressão e observar a disposição de retribuir, em vez de planejar demais. Parceria ativa quando se ajuda primeiro, entendendo a terra prometida do parceiro. O argumento vem de prática e de depoimentos de operadores; não há dado estatístico no texto sobre os 4 Cs.",
+   "uso_no_wise": "Define o fator Potencial (nota de 0 a 4, um ponto por C, usando a escala 0, 0,5 e 1 do Ecossistema de Parceiros) e a regra de atender primeiro quem já mostra reciprocidade.",
+   "citacoes": [
+    {
+     "trecho": "Customer base: Does your potential partner have a relevant and accessible customer base that matches your company's ICP?",
+     "pagina": "p. 174"
+    },
+    {
+     "trecho": "Credibility: Do they have the credibility to represent your products or services to the customer?",
+     "pagina": "p. 175"
+    },
+    {
+     "trecho": "Capability: Does the potential partner have the models, systems, and/or technology capabilities to execute?",
+     "pagina": "p. 175"
+    },
+    {
+     "trecho": "Commitment: Are they committed to the partnership and the mutual goals created together?",
+     "pagina": "p. 175"
+    },
+    {
+     "trecho": "Look for evangelists and partnerships where there is some level of reciprocity, and a personal relationship already exists.",
+     "pagina": "p. 83"
+    },
+    {
+     "trecho": "These early interactions are an evaluation mechanism to identify ideal allies worth activating at scale.",
+     "pagina": "p. 85"
+    }
+   ]
+  }
+ ],
+ "proposta": {
+  "fatores": [
+   {
+    "nome": "Valor (V)",
+    "definicao": "Quanto a relação já entregou em receita para o grupo Wise, em contratos ganhos e em pipeline ponderado.",
+    "como_medir_no_portal": "V = soma do valor contratado das oportunidades ganhas com origem no parceiro nos últimos 12 meses (ou desde a adesão, se menor) + soma do valor estimado das oportunidades abertas dele multiplicado pela probabilidade da etapa. Vale qualquer das quatro portas (indicação por link, Prateleira, cruzamento de carteiras, Base Ativa). Corte inicial: ALTO se houver pelo menos 1 contrato ganho nos 12 meses (fase com até 10 parceiros ativos); depois, ALTO se V for maior ou igual à mediana dos parceiros com ao menos 1 oportunidade registrada. Convenção de valor: a mesma da base de cálculo da comissão de cada empresa do grupo.",
+    "base": "Livro para o conceito (Value creation e Value significance, Strategic Alliances; valor criado, Lavoie, Ecosystem-Led Growth; receita gerida por parceiro, Ecossistema de Parceiros). Inferência minha: a regra de cálculo, a janela de 12 meses e o corte."
+   },
+   {
+    "nome": "Ritmo (R), a recência e a frequência juntas",
+    "definicao": "Se a relação está viva: há quanto tempo o parceiro fez algo de valor e com que frequência faz.",
+    "como_medir_no_portal": "Ação de valor = (a) indicação enviada, (b) retorno do parceiro a uma oportunidade enviada pela Wise ou a uma RFP da Prateleira em até 5 dias úteis, (c) ação de Base Ativa registrada (comunidade ou evento), (d) presença na revisão trimestral. Recência: dias desde a última ação de valor. Frequência: número de ações de valor nos últimos 90 dias. ALTO se recência menor ou igual a 30 dias E frequência maior ou igual a 2 em 90 dias. Parceiro com menos de 30 dias de adesão fica em aquecimento e não é classificado. Quando houver 30 ou mais parceiros, separar R e F e trocar o corte fixo por quintis.",
+    "base": "Livro para a ideia (Collaborative innovation, cooperação e comunicação, Strategic Alliances; frequência de vendas por parceiro, Ecossistema de Parceiros; contato no máximo a cada trinta dias, Referral Engine). Inferência minha: unir R e F num só fator binário, a lista de ações de valor e os cortes de 30 dias e 2 ações. O livro Strategic Alliances não usa recência nem frequência; a lógica RFV é inferência minha, de marketing de relacionamento."
+   },
+   {
+    "nome": "Relação (Q)",
+    "definicao": "Qualidade da relação: confiança, justiça percebida, retorno mútuo e equilíbrio entre dar e receber oportunidades.",
+    "como_medir_no_portal": "Índice de 0 a 100: Q = 0,5 x Pulso + 0,3 x Retorno mútuo + 0,2 x Equilíbrio. Pulso: três perguntas de 1 a 5 na revisão trimestral, respondidas pelo parceiro e pelo gerente sobre o outro lado: (1) você daria uma referência positiva a um cliente seu? (2) a divisão de esforço e ganho é justa? (3) sabemos o que esperar um do outro? A nota é a média das duas visões; diferença de 2 pontos ou mais gera alerta de percepção. Retorno mútuo: média de (a) percentual de oportunidades enviadas pela Wise ao parceiro com resposta em até 5 dias úteis e (b) percentual de indicações do parceiro cujo status voltou ao parceiro em até 5 dias úteis, registrado pelo gerente depois de falar com o closer. Equilíbrio: 100 menos 200 vezes a distância de 0,5, onde o saldo é indicações enviadas pelo parceiro dividido por (enviadas por ele mais enviadas a ele). ALTO se Q maior ou igual a 70. Sem pulso ainda, calcula só com os outros dois e mostra estado parcial.",
+    "base": "Livro para o conceito (Partnership quality e Reference-ability, Strategic Alliances; reciprocidade, Give and Take; ter a opinião dos dois lados, Strategic Alliances p. 155). Inferência minha: pesos, perguntas, fórmula do equilíbrio e corte de 70, que foi inspirado só no exemplo de intervenção abaixo de 70 de Customer Success."
+   },
+   {
+    "nome": "Potencial (P), o modificador de atenção, não define o tipo",
+    "definicao": "Quanto o parceiro poderia gerar: aderência de carteira ao cliente ideal da Wise e capacidade de agir.",
+    "como_medir_no_portal": "Nota de 0 a 4, um ponto por C, cada C valendo 0, 0,5 ou 1, preenchida no onboarding e revista a cada semestre com dados reais: Customer base (indústrias da carteira dentro do ICP, tamanho e acesso, incluindo Base Ativa), Credibility (reputação com as indústrias), Capability (equipe e ferramentas para operar as portas), Commitment (aceita ritual trimestral, tem dono interno, informa carteira). ALTO se nota maior ou igual a 3.",
+    "base": "Livro: 4 Cs, Nearbound; escala 0, 0,5 e 1, Ecossistema de Parceiros; potencial contra valor, Ecosystem-Led Growth; Estrelas e Potencial de Crescimento, Bech. Inferência minha: os pontos de cada C e o corte de 3."
+   }
+  ],
+  "matriz": "Regra: o tipo é lido numa tabela de três entradas, tipo = tabela[Valor][Ritmo][Relação], com cada fator em duas faixas (A = alto, B = baixo). Três fatores binários dão 2 x 2 x 2 = 8 células e cada célula é um tipo. Ordem de leitura: primeiro Valor (já entregou?), depois Ritmo (está vivo?), depois Relação (há confiança e equilíbrio?). Tabela (V, R, Q): AAA Embaixador; AAB Gerador sob tensão; ABA Âncora esfriando; ABB Valioso em risco; BAA Promissor; BAB Ativo sem tração; BBA Cordial seletivo; BBB Desertor. Por que não usar os oito tipos do livro como estão: a Tabela 8.1 é uma lista de oito perfis em escala de quatro níveis, não um cubo, e não dá para reproduzi-la com cortes alto ou baixo (testei por script). O livro também usa percepção de gestores em alianças maduras, algo que não existe num programa sem nenhum parceiro assinado. Como os tipos do livro entram: cada célula tem um análogo do livro, usado só para reaproveitar o comportamento e as ações recomendadas onde cabem. Seis dos oito tipos do livro têm célula própria (Evangelistas, Tubarões Cativos, Pragmáticos Estáveis, Pessimistas em Evolução, Catadores de Cerejas, Desertores); Adolescentes Rebeldes viram uma variante das células Embaixador e Âncora esfriando, acionada quando o item de justiça do pulso é 2 ou menos; Sem Saída não tem célula, porque no Wise a saída é livre e esse tipo tende a virar Desertor. A célula Promissor não tem tipo equivalente no livro, que só diz que Evangelistas aparecem entre os primeiros adotantes. Regra de atenção (segunda etapa, separada do tipo): atenção ALTA, com contato pessoal do gerente, se P for alto OU V for alto; atenção BAIXA, com grupo de WhatsApp e automações do portal, nos demais. Teto sugerido de 15 parceiros em atenção alta por gerente (Customer Success indica 5 a 15 em high-touch). Estabilidade: o portal recalcula os fatores toda semana, mas o tipo só muda depois de duas leituras mensais seguidas na nova célula, para evitar o zigue-zague. O livro diz que os tipos não são imutáveis, então a transição entre células é o dado mais importante. Risco: um parceiro está em risco quando cai uma faixa de Ritmo (A para B), quando a Relação perde 15 pontos ou mais num trimestre, ou quando a frequência dos últimos 90 dias é menos da metade da dos 90 dias anteriores. A ação de cada tipo muda conforme o risco e o Potencial.",
+  "tipos": [
+   {
+    "nome": "Embaixador",
+    "regra": "V alto, R alto, Q alto (AAA)",
+    "analogo_no_livro_gh": "Evangelistas (Evangelists)",
+    "aderencia_ao_livro": "Forte: todos os fatores altos na Tabela 8.1.",
+    "rfv": "Campeão do RFV: recente (30 dias ou menos), frequente (2 ou mais ações em 90 dias) e de valor alto, com relação confirmada.",
+    "acao": "Proteger e alavancar. Pedir dois movimentos por trimestre: uma indicação nova de alta qualidade e um movimento conjunto (caso de sucesso, ação na Base Ativa ou resposta a uma RFP da Prateleira). Conferir os números reais da relação: o livro alerta que muitos Evangelistas não são os mais lucrativos. Usar como piloto de novas jogadas.",
+    "abordagem": "Tom de sócio: reconhecimento, acesso antecipado às RFPs da Prateleira, co-marketing, novidades das empresas do grupo. Mensagens constantes e conservadoras, sem mudar o processo de repente, e uma iniciativa nova de tempos em tempos para não virar acomodação. Nenhuma exceção de comissão (regra única).",
+    "cadencia": "Ligação ou conversa mensal com o gerente, grupo de WhatsApp conforme a demanda, revisão trimestral conjunta com dados.",
+    "gatilho_de_risco": "Recência acima de 30 dias, Q cai 15 pontos ou mais, ou item de justiça do pulso em 2 ou menos (variante Adolescente Rebelde).",
+    "proxima_celula_alvo": "Manter. Se passar três trimestres sem valor novo, tratar como Âncora esfriando.",
+    "vem_do_livro": "Comportamento e ações vêm de Strategic Alliances p. 224 a 225 e p. 234.",
+    "inferencia_minha": "Metas de duas ações por trimestre, o piloto de jogadas e a leitura do item de justiça como variante rebelde."
+   },
+   {
+    "nome": "Gerador sob tensão",
+    "regra": "V alto, R alto, Q baixo (AAB)",
+    "analogo_no_livro_gh": "Tubarões Cativos (Captive Sharks)",
+    "aderencia_ao_livro": "Moderada: o livro descreve alta dependência e conflito, que o portal não mede direto; o portal vê a ponta (muito resultado e relação azeda).",
+    "rfv": "Campeão em risco pela relação: o RFV clássico não enxerga a tensão, por isso a relação é a quarta leitura.",
+    "acao": "Diagnosticar em 7 dias úteis a causa da tensão (lead sem retorno do closer, comissão percebida como injusta, expectativa de volume, concorrência) e fazer uma revisão conjunta extra em 30 dias, com os números das indicações, retornos, comissão paga e receita gerada. Resolver pela conversa de negócio e não pela de relacionamento.",
+    "abordagem": "Direta e baseada em dados, com o ROI dele e o que a Wise investiu; entender o modelo de negócio do parceiro antes de explicar o da Wise. Falar com o decisor dele. Não oferecer exceção de comissão. Alavancas legítimas: prioridade de retorno dos closers, acesso à Prateleira e co-marketing. Registrar tudo o que for combinado.",
+    "cadencia": "Quinzenal até Q maior ou igual a 70 por dois meses; revisão extra em 30 dias.",
+    "gatilho_de_risco": "Q abaixo de 70 com V alto e R alto já é o estado; piora se a recência passar de 30 dias.",
+    "proxima_celula_alvo": "Embaixador, subindo Q.",
+    "vem_do_livro": "Domar em vez de gerenciar, conversa direta sobre ROI e modelo de negócio, diálogo que começa pelo topo (Strategic Alliances p. 228 e 235).",
+    "inferencia_minha": "Causas prováveis no contexto Wise e a restrição de não mexer na comissão."
+   },
+   {
+    "nome": "Âncora esfriando",
+    "regra": "V alto, R baixo, Q alto (ABA)",
+    "analogo_no_livro_gh": "Pragmáticos Estáveis (Stable Pragmatists); variante Adolescentes Rebeldes quando o item de justiça do pulso é 2 ou menos",
+    "aderencia_ao_livro": "Moderada: o livro descreve retorno acima da média abaixo do potencial por falta de atenção gerencial, e o portal só vê a queda de ritmo.",
+    "rfv": "Clássico 'não pode perder' do RFV: valor alto nos 12 meses, mas recência e frequência já caíram. É o parceiro em risco mais barato de recuperar.",
+    "acao": "Reativar em 7 dias após a recência passar de 30 dias, com um motivo concreto: uma RFP da Prateleira aderente ao perfil, um cruzamento de carteiras ou uma ação na Base Ativa. Confirmar quem é o responsável do lado dele.",
+    "abordagem": "Sem cobrança, com utilidade: chegar com oportunidade pronta e reconhecer o resultado passado (ajudar primeiro). Pedir 15 minutos. Na variante rebelde: reafirmar objetivos, auditar investimentos dos dois lados e não trocar o contato-chave sem consentimento.",
+    "cadencia": "Quinzenal até duas leituras seguidas de Ritmo alto.",
+    "gatilho_de_risco": "Recência acima de 45 dias com V alto pede ligação do gerente em 48 horas.",
+    "proxima_celula_alvo": "Embaixador, subindo R.",
+    "vem_do_livro": "Falta de atenção como causa e gestão mais sistemática (Strategic Alliances p. 225 e 226); variante rebelde (p. 190 e 226).",
+    "inferencia_minha": "Gatilho de 7 dias, a oferta de oportunidade e a regra de 45 dias."
+   },
+   {
+    "nome": "Valioso em risco",
+    "regra": "V alto, R baixo, Q baixo (ABB)",
+    "analogo_no_livro_gh": "Desertores com valor (Deserters); se ainda houver conversa, Pessimistas em Evolução",
+    "aderencia_ao_livro": "Moderada: o livro trata o caso do Desertor que ainda vale a pena.",
+    "rfv": "'Não pode perder' em estado crítico: valor alto histórico, recência e frequência baixas e relação baixa. Prioridade máxima de recuperação.",
+    "acao": "Decidir em 15 dias se vale o investimento (o livro chama isso de decisão crítica). Se vale: ligação do gerente em 48 horas, ligação de cortesia de uma pessoa sênior do grupo se não houver resposta em 10 dias (gesto de relação, não aprovação), corrigir pendências (leads sem retorno, comissões em aberto) e combinar um objetivo curto e tangível.",
+    "abordagem": "Ouvir primeiro, reconhecer falhas e tratar como parceria nova, com horizonte de 6 a 12 meses. Se a queixa for com uma pessoa, oferecer outro interlocutor (por exemplo, o líder do closer). Evitar campanhas genéricas.",
+    "cadencia": "Semanal por 6 semanas, depois quinzenal; reavaliar em 90 dias.",
+    "gatilho_de_risco": "Já está em risco; encerrar a recuperação se não houver ação de valor em 90 dias.",
+    "proxima_celula_alvo": "Âncora esfriando, subindo Q, e depois Embaixador.",
+    "vem_do_livro": "Decisão crítica de valer o investimento, tratar como parceria nova, 6 a 12 meses e senioridade (Strategic Alliances p. 231 e 232).",
+    "inferencia_minha": "Prazos de 15 dias, 48 horas e 10 dias, e o uso de uma pessoa sênior do grupo, que é decisão do patrocinador."
+   },
+   {
+    "nome": "Promissor",
+    "regra": "V baixo, R alto, Q alto (BAA)",
+    "analogo_no_livro_gh": "Sem tipo próprio; o livro diz que Evangelistas aparecem entre os primeiros adotantes e que fases iniciais são ajudadas por eles",
+    "aderencia_ao_livro": "Fraca: célula que o livro não separa.",
+    "rfv": "Novo ou em aceleração no RFV: recente e frequente, valor ainda zero ou baixo. Típico dos parceiros orgânicos que chegam sem contrato.",
+    "acao": "Obter a primeira venda em 90 dias: escolher uma oportunidade concreta (RFP da Prateleira ou cruzamento de carteiras), acompanhar de perto e garantir retorno rápido do closer ao gerente e do gerente ao parceiro; fazer a indicação com a participação dele (apresentação a três).",
+    "abordagem": "Onboarding guiado: ensinar o perfil do cliente ideal, as frases-gatilho e o que acontece depois da indicação. Cuidar da expectativa para não virar impaciência de Adolescente Rebelde.",
+    "cadencia": "Semanal nas primeiras 4 semanas, depois quinzenal até a primeira venda.",
+    "gatilho_de_risco": "Ritmo cai antes do primeiro ganho; ou 90 dias sem contrato ganho.",
+    "proxima_celula_alvo": "Embaixador, subindo V.",
+    "vem_do_livro": "Evangelistas entre os primeiros adotantes (Strategic Alliances p. 17 e 223); indicação participada e ensino do cliente ideal (Referral Engine p. 160).",
+    "inferencia_minha": "A célula inteira, a meta de 90 dias e o acompanhamento de perto."
+   },
+   {
+    "nome": "Ativo sem tração",
+    "regra": "V baixo, R alto, Q baixo (BAB)",
+    "analogo_no_livro_gh": "Pessimistas em Evolução (Evolving Pessimists)",
+    "aderencia_ao_livro": "Moderada: retorno abaixo da média, vontade de cooperar, capacidade ainda ausente.",
+    "rfv": "'Precisa de atenção' do RFV: muita atividade, pouco valor e relação frustrada. Esforço que não vira receita.",
+    "acao": "Descobrir em 60 dias por que a atividade não vira receita: revisar as oportunidades recusadas ou paradas (motivo, perfil, etapa), corrigir o entendimento do cliente ideal e do que a Wise vende, e separar o que é gargalo do lado do parceiro (qualidade da indicação) do que é do lado da Wise (retorno lento).",
+    "abordagem": "Ação unilateral que quebra o impasse: consertar primeiro o que é da Wise e depois pedir o ajuste. Aproximar quem fala a mesma língua (closer e gestor técnico do parceiro, 20 minutos). Mostrar pequenas vitórias.",
+    "cadencia": "Quinzenal; checkpoint em 60 dias.",
+    "gatilho_de_risco": "Sem melhora de V ou de Q em 60 dias.",
+    "proxima_celula_alvo": "Promissor ou Embaixador, subindo V e Q; se não houver melhora em 60 dias, mover para atenção baixa.",
+    "vem_do_livro": "Ação unilateral para quebrar o impasse e apelar à facção que fala a mesma língua (Strategic Alliances p. 227).",
+    "inferencia_minha": "Revisão de oportunidades recusadas e o prazo de 60 dias."
+   },
+   {
+    "nome": "Cordial seletivo",
+    "regra": "V baixo, R baixo, Q alto (BBA)",
+    "analogo_no_livro_gh": "Catadores de Cerejas (Cherry Pickers)",
+    "aderencia_ao_livro": "Forte: boa relação, satisfação alta, compromisso baixo, retorno apenas médio.",
+    "rfv": "Hibernando com boa relação: quase inativo e simpático. O risco é a gestão confundir cordialidade com crescimento.",
+    "acao": "Recrutar de novo com foco único: uma atividade, um cliente ou uma RFP, mais um credenciamento (treinamento na oferta do grupo) que aumente o compromisso. Se P for alto, vale o esforço; se for baixo, atenção baixa.",
+    "abordagem": "Não propor rodada de reuniões executivas. Mostrar a proposta de valor e o que ele ganha, começando pelo cliente dele. Convite curto para falar de um cliente específico.",
+    "cadencia": "Mensal e leve (WhatsApp), uma jogada por trimestre; reavaliar em 90 dias.",
+    "gatilho_de_risco": "Nenhuma ação de valor em 90 dias.",
+    "proxima_celula_alvo": "Promissor, subindo R.",
+    "vem_do_livro": "Tratar como parceiro novo, concentrar numa só atividade e usar credenciamento (Strategic Alliances p. 229 e 236); ocorrem em 1 ou 2 de cada 10 parcerias (p. 203).",
+    "inferencia_minha": "A decisão pela nota de Potencial e a forma do convite."
+   },
+   {
+    "nome": "Desertor",
+    "regra": "V baixo, R baixo, Q baixo (BBB)",
+    "analogo_no_livro_gh": "Desertores (Deserters); Sem Saída tende a cair aqui",
+    "aderencia_ao_livro": "Forte: todos baixos na Tabela 8.1.",
+    "rfv": "Perdido no RFV: nenhum dos três. É o tipo para decidir, não para insistir.",
+    "acao": "Decidir. Se P alto: uma conversa de reinício, tratando como parceria nova, com 6 meses de observação. Se P baixo: atenção baixa (comunicação em grupo e automação trimestral) e, sem ação de valor em 180 dias, arquivar com saída cordial e registrar o motivo.",
+    "abordagem": "Sem pressão e sem campanha genérica, que tende a falhar. Porta aberta. Registrar o motivo da saída para alimentar o onboarding.",
+    "cadencia": "Trimestral e automatizada; se P alto, um contato pessoal por trimestre.",
+    "gatilho_de_risco": "Sem ação de valor em 180 dias.",
+    "proxima_celula_alvo": "Cordial seletivo ou Promissor, se aceitar o reinício.",
+    "vem_do_livro": "A primeira decisão é se vale o investimento, tratar como novo, marketing um a um só se o valor compensar (Strategic Alliances p. 231 e 236); formalizar o churn de parceiros (Ecossistema de Parceiros p. 184).",
+    "inferencia_minha": "Os prazos de 180 dias e 6 meses."
+   }
+  ],
+  "regra_de_atencao": "Atenção alta se Potencial alto OU Valor alto; atenção baixa nos demais. Teto sugerido de 15 parceiros em atenção alta por gerente. A atenção alta usa contato pessoal do gerente e ritual mensal; a baixa usa o grupo de WhatsApp do parceiro, automações do portal e a revisão trimestral. Fontes: Customer Success (5 a 15 contas em high-touch por gerente), Bech (o resto vai pelo portal) e Ecosystem-Led Growth (matriz de potencial contra valor).",
+  "parametros_iniciais_a_calibrar": {
+   "janela_de_valor": "12 meses móveis",
+   "corte_de_valor": "1 contrato ganho em 12 meses até 10 parceiros ativos; depois, mediana dos parceiros com oportunidade registrada",
+   "corte_de_ritmo": "recência de 30 dias ou menos E 2 ou mais ações de valor em 90 dias",
+   "corte_de_relacao": "índice de 70 ou mais",
+   "corte_de_potencial": "nota de 3 ou mais em 4",
+   "aquecimento": "menos de 30 dias de adesão: não classificar",
+   "recalculo": "fatores toda semana; tipo muda após 2 leituras mensais seguidas",
+   "observacao": "Todos os números são inferência minha e devem ser revistos na primeira revisão conjunta trimestral."
+  },
+  "saude_do_programa_inferencia_a_partir_de_keystone": {
+   "produtividade": "receita ganha por parceiro ativo e custo de comissão sobre receita",
+   "robustez": "percentual de parceiros que continuam ativos 12 meses depois e estabilidade da receita sem os dois maiores parceiros",
+   "criacao_de_nicho": "número de segmentos e de portas com pelo menos um contrato ganho no período",
+   "observacao": "Tradução minha dos três eixos de The Keystone Advantage para a carteira, separada da tipologia de parceiros."
+  },
+  "origem_do_que_e_livro_e_do_que_e_inferencia": [
+   {
+    "elemento": "Três super fatores, escala de quatro níveis e oito perfis (Tabela 8.1)",
+    "origem": "Livro (Strategic Alliances p. 159, 178, 218)."
+   },
+   {
+    "elemento": "Tipos não são imutáveis e devem ser lidos como arquétipos",
+    "origem": "Livro (p. 17, 212)."
+   },
+   {
+    "elemento": "Adaptar a abordagem ao tipo e não tratar todos de forma genérica",
+    "origem": "Livro (p. 238)."
+   },
+   {
+    "elemento": "Descrição de comportamento e ações por tipo",
+    "origem": "Livro (capítulos 7 e 8)."
+   },
+   {
+    "elemento": "Cubo 2 x 2 x 2 com oito células, regra de leitura e nomes das células",
+    "origem": "Inferência minha."
+   },
+   {
+    "elemento": "Redefinição dos fatores em Valor, Ritmo e Relação, com fórmulas e cortes",
+    "origem": "Inferência minha, com ancoragem nos livros citados em cada fator."
+   },
+   {
+    "elemento": "RFV como lente",
+    "origem": "Inferência minha; nenhum dos oito livros usa a sigla. Frequência de vendas por parceiro (Ecossistema de Parceiros p. 181) e contato a cada 30 dias (Referral Engine p. 156) são as pontes mais próximas."
+   },
+   {
+    "elemento": "Fator Potencial com 4 Cs e matriz de atenção",
+    "origem": "Livros (Nearbound, Ecosystem-Led Growth, Bech), com pontuação minha."
+   },
+   {
+    "elemento": "Pulso trimestral de três perguntas, retorno mútuo e equilíbrio",
+    "origem": "Perguntas inspiradas no livro (referência, justiça, clareza), fórmulas minhas."
+   },
+   {
+    "elemento": "Teto de 15 parceiros em atenção alta por gerente",
+    "origem": "Livro como referência (Customer Success p. 139), adaptação minha."
+   },
+   {
+    "elemento": "Histerese de duas leituras mensais",
+    "origem": "Inferência minha, apoiada em Ecossistema de Parceiros p. 137."
+   }
+  ],
+  "por_que_convence": "1) Corrige o que o patrocinador desconfiava. Os três fatores do livro medem o desempenho de um relacionamento, não o que define uma parceria. Aqui os mesmos três eixos (valor, cooperação, qualidade da relação) são mantidos, mas redefinidos em comportamentos que o portal registra, e completados por um quarto elemento (potencial) que o livro não tem e que Nearbound, Ecosystem-Led Growth e Bech tratam como decisivo. 2) É uma matriz de verdade. Três fatores binários dão oito células, e a leitura é uma tabela de três entradas que qualquer pessoa da equipe explica em um minuto, o critério de clareza que o Ecossistema de Parceiros usa para regras de programa. O livro, por contraste, não dá regra: dá oito perfis, e 22 das 64 combinações possíveis ficam empatadas entre perfis. 3) Cada célula leva a uma ação. Como a tabela é um cubo, cada tipo tem vizinhos a uma mudança de fator de distância, o que mostra qual alavanca puxar (retomar ritmo, restaurar relação, converter em valor). Isso é o que o Customer Success pede: um escore decomposto em componentes que indicam a ação, não um número único. 4) Fecha com o RFV. R e F viram o fator Ritmo, V é Valor, e a Relação acrescenta o que o RFV clássico não vê (o parceiro que produz e azedou). O livro Strategic Alliances confirma que os leading indicators de relação precedem os resultados e que os tipos mudam com as ações dos participantes; por isso os fatores são recalculados toda semana e o tipo é reavaliado todo mês. 5) É simples. São três fatores com corte binário e um modificador. Regras de quantos níveis e quantos indicadores usar seguem o Ecossistema de Parceiros (quanto menos, melhor). 6) Respeita as decisões já tomadas. Nenhuma ação altera a comissão, que segue única; as alavancas são atenção, acesso à Prateleira, retorno dos closers e co-marketing. Cabe num único gerente de parcerias, porque a atenção pessoal fica restrita a quem tem potencial ou valor e os demais são atendidos pela comunidade de WhatsApp e pelo portal. O pulso trimestral aproveita a revisão conjunta trimestral que já existe. 7) Limites que o patrocinador deve conhecer. Os cortes (12 meses, 30 dias, 2 ações, 70 pontos, nota 3) são parâmetros iniciais minhos e precisam ser calibrados na primeira revisão trimestral com dados reais; com poucos parceiros, a mediana de Valor é instável. O livro Strategic Alliances foi feito para alianças maduras com contrato; o portal não vê o lado do parceiro, a não ser pelo pulso. Tubarões Cativos e Sem Saída quase não existem num programa de saída livre, e a célula Promissor é minha, não do livro. Dois itens dependem de decisão do patrocinador: a ligação de cortesia de uma pessoa sênior do grupo para o tipo Valioso em risco e o registro, pelo gerente, do retorno que o closer deu ao parceiro, já que closers não entram no portal e não há SLA interno."
+ }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_43" transform="translate(0,15092)" data-frame="7.2 Revisar a parceria com o parceiro">
+<rect data-type="frame" x="0" y="0" width="2348" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">7.2 Revisar a parceria com o parceiro</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="7.2 Revisar a parceria com o parceiro">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Data da revisão pela cadência"]):::confirmado
+      n_t1["Montar a pauta com os dados do parceiro"]:::confirmado
+      n_g1{"Parceiro Elite?"}:::confirmado
+      n_t2["Convidar o Diretor"]:::confirmado
+      n_t3["Conduzir a revisão com o parceiro"]:::confirmado
+      n_t4["Registrar a ata e as ações"]:::confirmado
+      n_f1(["Plano do próximo período combinado"]):::confirmado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+    end
+    ext_X1[/"Parceiro"/]
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_g1
+    n_g1 --&gt;|Sim| n_t2
+    n_g1 --&gt;|Não| n_t3
+    n_t2 --&gt; n_t3
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_f1
+    n_t3 -.-&gt;|Pauta e resultados| ext_X1
+
+</foreignObject>
+</g></svg>

@@ -1,0 +1,1108 @@
+{
+ "livro": "The Referral Engine: Teaching Your Business to Market Itself",
+ "autores": "John Jantsch",
+ "slug": "referral-engine",
+ "tese": "Jantsch defende que indicação não é um truque de vendas, e sim o resultado de um sistema: um negócio com diferença que as pessoas conseguem repetir, um cliente ideal bem definido e uma confiança mantida em cada ponto de contato. As pessoas indicam por necessidade social (criar crédito, conectar-se, ser fonte de boa informação) e só o fazem quando o risco de emprestar a própria reputação é baixo. O sistema opera sobre duas redes, a de clientes e a de parceiros estratégicos que atendem o mesmo cliente ideal, e o livro vê na segunda a maior oportunidade não explorada. Quem quer receber indicação precisa ensinar o indicador (perfil, frases gatilho, processo), facilitar o gesto, tratar o lead indicado como lead especial, devolver informação a quem indicou e medir onde o sistema quebra. A recompensa que o livro defende é social (reconhecimento, participação, comunidade), não dinheiro.",
+ "principios": [
+  {
+   "principio": "Apresente a indicação como um benefício para quem indica, nunca como um favor pedido",
+   "explicacao": "Para Jantsch, o pedido de indicação só funciona quando o indicador ganha algo: ajudar um amigo, parecer bem informado, elevar o próprio status. O medo de pedir some quando o negócio acredita que entrega valor e quer levar esse valor a mais gente. A pergunta de projeto é como indicar a Wise melhora a vida do parceiro e da carteira dele.",
+   "aplicacao_wise": "O texto único de negociação e a mensagem da comunidade de WhatsApp devem abrir com o que o parceiro ganha ao apresentar a Wise a clientes que já têm o problema (resultado comercial para a carteira dele, solução complementar ao ERP, CRM ou MES), e só depois falar de comissão.",
+   "citacoes": [
+    {
+     "trecho": "Remember, you are not asking your clients for help",
+     "pagina": "p. 181"
+    },
+    {
+     "trecho": "Use your expertise to make them look good, add value, and enhance their status.",
+     "pagina": "p. 181"
+    }
+   ]
+  },
+  {
+   "principio": "Só aceite como rede quem você indicaria ao seu melhor cliente",
+   "explicacao": "O filtro de entrada da rede de parceiros é a confiança do cliente final, não o que o parceiro pode render. Indicar é emprestar confiança, então um parceiro que falha contamina quem o indicou. O livro separa parceiros estratégicos (mesmo cliente ideal) de parceiros provedores (entregam algo necessário, mas não têm acesso ao seu comprador).",
+   "aplicacao_wise": "Como a adesão deve ser simples e os parceiros chegam de forma orgânica, o teste vira uma classificação no card do parceiro (indicaria ao melhor cliente de uma indústria: sim, não sei, não), e não um portão de entrada. Parceiro marcado como não sei ou não recebe a oportunidade compartilhada só depois de uma conversa do gerente.",
+   "citacoes": [
+    {
+     "trecho": "Would I feel 100 percent confident referring my best customer to this business?",
+     "pagina": "p. 167"
+    },
+    {
+     "trecho": "If a potential strategic or referral partner can’t pass that test, then don’t even consider entering into a referral relationship.",
+     "pagina": "p. 167"
+    }
+   ]
+  },
+  {
+   "principio": "Ensine o indicador a reconhecer o cliente certo e a dizer a frase certa",
+   "explicacao": "Indicação nasce quando alguém ouve uma dor em conversa. O indicador precisa saber que frases do comprador sinalizam a necessidade e qual é o perfil ideal, caso contrário vai pedir 'conhece alguém que precise do que eu faço' e nada acontece. O livro propõe uma lista de dez frases gatilho, o perfil do cliente ideal e o processo de indicação, entregues como ferramenta.",
+   "aplicacao_wise": "Montar, por segmento de indústria, um cartão de frases gatilho que o diretor comercial ou de operações de uma indústria diz quando precisa de gestão comercial (por exemplo, falta de previsibilidade de pipeline, vendedores sem processo, CRM sem uso). Cada parceiro recebe o cartão no onboarding e na comunidade.",
+   "citacoes": [
+    {
+     "trecho": "Problem is, we don’t spend enough time teaching our customers and sources the kinds of complaints, frustrations, challenges, and situations that qualify someone as a great referral.",
+     "pagina": "p. 95"
+    },
+    {
+     "trecho": "If you want your strategic partners to generate referrals for your business, teach them how to generate more referrals for their own.",
+     "pagina": "p. 177"
+    }
+   ]
+  },
+  {
+   "principio": "Use abordagens e ofertas diferentes para clientes e para parceiros",
+   "explicacao": "A motivação do cliente é gostar do que você faz; a do parceiro é aumentar o valor da relação que ele já tem com a própria carteira. Por isso o livro manda segmentar e oferecer conteúdo cobrandado ao parceiro, não a mesma campanha de 'indique um amigo'. Também recomenda começar com uma ou duas ofertas e ampliar.",
+   "aplicacao_wise": "A regra de comissão fica única, mas a abordagem muda por tipo de parceiro: conteúdo e evento cobrandado para quem tem base ativa, indicação por link para quem só quer apresentar, cruzamento de carteiras para quem vende para as mesmas indústrias. Abrir as três portas desde o início exige que cada uma tenha uma oferta simples.",
+   "citacoes": [
+    {
+     "trecho": "You need completely different referral approaches and offers for customers and strategic partners.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "Start with one or two referral program offers and gradually build new ones to let everyone find a way to play.",
+     "pagina": "p. 69"
+    }
+   ]
+  },
+  {
+   "principio": "Recompense com reconhecimento e participação; dinheiro vira transação de mercado",
+   "explicacao": "Citando Dan Ariely, o livro afirma que quem indica por vontade de ajudar vai longe, e quem indica por dinheiro trata a indicação como transação e se motiva menos. Os campeões querem agradecimento, convite, acesso e voz. O livro admite exceções e traz casos de bônus em dinheiro, mas nunca como motor principal.",
+   "aplicacao_wise": "A comissão de 40% e 10% (ou 6% e 2%) está decidida e continua. O que o livro sugere é cercá-la de reconhecimento: agradecer cada etapa, expor o resultado que o cliente indicado obteve, convidar o parceiro para a revisão trimestral e para decisões do programa. Ver a tensão registrada.",
+   "citacoes": [
+    {
+     "trecho": "On the other hand, when the motivation is monetary, they will view it as a market transaction, and the motivation is often significantly lower",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "Your champions are often better rewarded through avenues of appreciation and participation.",
+     "pagina": "p. 157"
+    },
+    {
+     "trecho": "Money for referrals is a crummy motivation, but a creative, on-message offer that turns referrals into a game is a great way to motivate them.",
+     "pagina": "p. 68"
+    }
+   ]
+  },
+  {
+   "principio": "Torne o gesto de indicar fácil, com ferramenta pronta nas mãos do indicador",
+   "explicacao": "A maior parte do atrito está em o indicador não saber o que dizer, o que enviar e a quem. O livro recomenda ferramentas prontas (conteúdo para cobrandar, páginas dedicadas, cartões, convites) e lembra que friccionar o processo reduz a taxa de indicação. A empresa que entrega o conteúdo pronto sobe ao topo da lista de parceiros que recebem muitos pedidos.",
+   "aplicacao_wise": "Para cada parceiro, entregar no portal: link de indicação pessoal, texto de apresentação de duas linhas, um conteúdo cobrandado (relatório ou webinar) e uma página de boas vindas que cita o nome do parceiro. O link de indicação já existe; o que falta é o kit em volta dele.",
+   "citacoes": [
+    {
+     "trecho": "Put tangible referral tools in the hands of your referral sources.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "By suggesting a campaign that is very easy to employ, you’ll rise to the top of the list.",
+     "pagina": "p. 171"
+    },
+    {
+     "trecho": "friction of any kind slows the rate of referral.",
+     "pagina": "p. 144"
+    }
+   ]
+  },
+  {
+   "principio": "Feche o ciclo com quem indicou, em cada fase, não só no fechamento",
+   "explicacao": "O indicador empresta confiança e quer saber o que aconteceu com ela. O livro pede três gestos: agradecer a indicação enviada e não só a convertida, manter o indicador informado do andamento e agradecer em público quando faz sentido. O passo precisa estar escrito no plano, senão acontece por acaso.",
+   "aplicacao_wise": "Cada mudança de status de uma oportunidade compartilhada gera um aviso curto ao parceiro na comunidade de WhatsApp (recebida, em conversa com o closer, proposta, fechada, perdida com motivo). O gerente de parcerias é dono desse retorno, mesmo sem SLA interno com o closer, porque é ele quem fala pessoalmente com o closer.",
+   "citacoes": [
+    {
+     "trecho": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral.",
+     "pagina": "p. 191"
+    },
+    {
+     "trecho": "If you only say thanks for the ones you close, you will find that your referral sources will feel unappreciated before that ever occurs.",
+     "pagina": "p. 191"
+    },
+    {
+     "trecho": "This is a step that needs to be intentionally written into your referral plan",
+     "pagina": "p. 192"
+    }
+   ]
+  },
+  {
+   "principio": "Trate o lead indicado como um lead especial, sem ligação fria",
+   "explicacao": "O lead indicado chega com confiança emprestada, mas não com conhecimento nem simpatia. Jantsch avisa para não presumir que ele já foi vendido, para citar quem indicou no primeiro contato e para nunca ligar a frio para nomes recebidos de um indicador. Quanto mais o indicador participa da apresentação, maior a chance de conversão.",
+   "aplicacao_wise": "O closer abre o primeiro contato citando o parceiro e o motivo da indicação, que o gerente deixa no registro da oportunidade. Registrar também o grau de participação do indicador (apenas o nome, e-mail de apresentação, apresentação ao vivo), porque isso prediz conversão.",
+   "citacoes": [
+    {
+     "trecho": "One urge that you must resist is collecting names from your referral sources and then cold-calling them for a meeting.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "Acknowledge that you are working with a special lead.",
+     "pagina": "p. 189"
+    },
+    {
+     "trecho": "The more engaged your referral source is in the process of making a referral, the more likely it is that the lead will become a customer.",
+     "pagina": "p. 160"
+    }
+   ]
+  },
+  {
+   "principio": "Meça o número de indicação e onde o sistema vaza",
+   "explicacao": "A saúde de um negócio de indicação se lê pela proporção de clientes que indicam e pela conversão do que chega. O livro pede poucos indicadores (fonte de cada lead, conversão, custo por cliente) e avisa que o problema pode ser falta de volume ou falta de conversão, que exigem remédios diferentes. O painel deve levar a conversas com os indicadores.",
+   "aplicacao_wise": "O portal registra a fonte de toda oportunidade e calcula, por parceiro e por porta, a taxa de parceiros que indicaram ao menos uma vez e a conversão por etapa. Isso responde onde o programa vaza (poucos indicam, muitos indicam e poucos fecham) e define a pauta da revisão trimestral.",
+   "citacoes": [
+    {
+     "trecho": "So what’s your referral number? What percentage of your clients refer business?",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "You may be receiving referrals but not closing them, or you might be closing every referred lead, but there aren’t enough of them.",
+     "pagina": "p. 70"
+    }
+   ]
+  },
+  {
+   "principio": "Faça o sistema pedir, para que a coragem de pedir não seja o gargalo",
+   "explicacao": "O livro mostra que a maioria dos negócios vive de indicação acidental, sem sistema. A solução é automatizar e ritualizar o pedido (comunicações automáticas, revisão de resultados, momentos certos) e escolher o ponto de coleta, que é onde os sistemas mais falham.",
+   "aplicacao_wise": "O pedido a cada parceiro não depende da iniciativa do gerente: a agenda de rituais e a fila de tarefas por exceção disparam o contato quando o parceiro fica sem indicar por um prazo definido, e a revisão trimestral conjunta é o momento formal de coleta.",
+   "citacoes": [
+    {
+     "trecho": "The place that referral systems fail most often is in the collection phase.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "When she let her processes do the asking, she began to feel less negative about asking for referrals",
+     "pagina": "p. 14"
+    },
+    {
+     "trecho": "63.4 percent felt that over half their business came by way of referrals. But of that same group, 79.9 percent readily admitted that they had no system of any kind to generate referrals.",
+     "pagina": "p. 16"
+    }
+   ]
+  },
+  {
+   "principio": "Seja digno de indicação antes de pedir: diferença que se repete e confiança que não se perde",
+   "explicacao": "As pessoas indicam por necessidade social, mas só quando o risco é baixo. Ninguém fala de negócio comum, e a confiança é a razão mais citada para indicar (e a falta dela, a maior para não indicar). Jantsch recomenda uma diferença falável, um cliente ideal estreito e consistência de longo prazo, não truques.",
+   "aplicacao_wise": "Antes de recrutar parceiros, a Wise precisa que o gerente consiga dizer em uma frase por que indicar a Wise é seguro e interessante (a arquitetura de valor de 5 elementos da indústria é o candidato). Oportunidade passada sem retorno ou proposta fora do perfil destrói confiança mais rápido do que a comissão a recompõe.",
+   "citacoes": [
+    {
+     "trecho": "Boring people, products, and companies are hard to refer!",
+     "pagina": "p. 12"
+    },
+    {
+     "trecho": "In the business of referrals, trust is the most important reason a recommendation is made",
+     "pagina": "p. 18"
+    },
+    {
+     "trecho": "Referability is a long-term game; it’s not a drive-by event but a well-planned, precisely calculated marathon.",
+     "pagina": "p. 13"
+    }
+   ]
+  },
+  {
+   "principio": "Dê indicação para receber: o parceiro que recebe boas oportunidades indica melhor",
+   "explicacao": "A lógica do give-to-get atravessa o livro. Quem indica bem os outros, inclusive leads que não são para si, forma uma reputação de fonte confiável e recebe indicações em troca. Passar adiante o lead que não é fit, com contexto, gera boa vontade em vez de um simples não.",
+   "aplicacao_wise": "A mão dupla já está no desenho (cruzamento de carteiras). O livro reforça que a Wise deve indicar parceiros às indústrias com a mesma disciplina com que espera ser indicada, e deve devolver ao parceiro os leads que não são de gestão comercial, com uma recomendação.",
+   "citacoes": [
+    {
+     "trecho": "in the business of referrals, those who give usually get.",
+     "pagina": "p. 26"
+    },
+    {
+     "trecho": "if you take the time to find the right value for every referred lead, the payoff will be momentum.",
+     "pagina": "p. 184"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Ideal Customer Lifecycle (Ciclo de vida do cliente ideal): Know, Like, Trust, Try, Buy, Repeat, Refer",
+   "paginas": "p. 43 a 51",
+   "componentes": [
+    {
+     "nome": "Know (conhecer)",
+     "descricao": "Primeira apresentação da empresa, inclusive o momento em que um lead indicado descobre você. Exige diferença clara e cliente ideal estreito."
+    },
+    {
+     "nome": "Like (gostar)",
+     "descricao": "O lead investiga sem compromisso: site, material, presença. Sem poder espiar antes de se comprometer, ele recua."
+    },
+    {
+     "nome": "Trust (confiar)",
+     "descricao": "O ponto mais difícil. No lead indicado, a confiança é emprestada do indicador e pode ser perdida se o primeiro contato falhar."
+    },
+    {
+     "nome": "Try (experimentar)",
+     "descricao": "Oferta de baixo risco (diagnóstico, avaliação, seminário) que permite a ambos decidir com informação, para chegar a um sim ou não educado em vez de indiferença."
+    },
+    {
+     "nome": "Buy (comprar)",
+     "descricao": "Como o cliente entra (orientação, kit, passagem de vendas para serviço) é ponto de contato de indicação."
+    },
+    {
+     "nome": "Repeat (repetir)",
+     "descricao": "Ensinar o cliente a obter o máximo valor e revisar com ele o valor recebido; é daí que nascem recompra e indicação."
+    },
+    {
+     "nome": "Refer (indicar)",
+     "descricao": "O cliente vira defensor, como uma força de vendas não remunerada. Aqui se facilitam painéis, conselhos, eventos e apresentação da rede de parceiros."
+    },
+    {
+     "nome": "Mapa de pontos de contato",
+     "descricao": "Lista de todo ponto de contato e a tática correspondente, inclusive os que ainda não existem, usada como guia de desenvolvimento (p. 51)."
+    }
+   ],
+   "logica": "O cliente passa por sete estágios e cada um tem um ponto de contato que pode reforçar ou quebrar a confiança. A indicação é o último estágio, mas é produzida pelos anteriores: quem não é conhecido, gostado, confiado, testado e bem atendido não indica. No caso de lead indicado, a ordem muda: ele já confia sem conhecer nem gostar, e é preciso construir conhecer e gostar sem presumir que o indicador já vendeu.",
+   "aplicacao_wise": "Serve como espinha da jornada do parceiro no portal e da jornada da oportunidade. Para o parceiro: conhecer a Wise, gostar (ver como a Wise trata a carteira dele), confiar (primeiras indicações bem tratadas), experimentar (uma oportunidade piloto), comprar (assinar), repetir (revisão trimestral) e indicar (ativar as quatro portas). Para a indústria indicada, o diagnóstico inicial funciona como o Try, de baixo risco.",
+   "impacto_processos": [
+    {
+     "tipo": "reorganizar",
+     "nome": "Reorganizar o quadro da jornada do parceiro nos estágios conhecer, gostar, confiar, experimentar, assinar, repetir e indicar",
+     "descricao": "O card por parceiro passa a mostrar em que estágio o parceiro está e qual é o próximo ponto de contato, em vez de apenas o status comercial.",
+     "gatilho": "Entrada de parceiro no portal e mudança de estágio.",
+     "entregas": "Card com estágio, última interação, próxima ação e dono.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Desenhar o mapa de pontos de contato do parceiro",
+     "descricao": "Listar todo ponto de contato entre a Wise e o parceiro (primeiro contato, convite, onboarding, primeira indicação, retorno, revisão) e a tática de cada um, inclusive os que ainda não existem.",
+     "gatilho": "Antes da abertura dos três pilares e a cada revisão trimestral.",
+     "entregas": "Mapa de pontos de contato versionado, lacunas priorizadas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Oferecer uma oportunidade piloto de baixo risco ao parceiro novo",
+     "descricao": "Tentativa curta (uma indicação em conjunto, um diagnóstico gratuito ao cliente dele) para o parceiro ver como a Wise trabalha antes de se comprometer.",
+     "gatilho": "Parceiro aceito e sem nenhuma indicação feita ou recebida.",
+     "entregas": "Uma oportunidade piloto registrada e retornada ao parceiro.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Faixa horizontal com sete caixas em sequência (Know, Like, Trust, Try, Buy, Repeat, Refer), com uma seta de retorno de Refer para Know desenhada por baixo. Acima de cada caixa, o ponto de contato; abaixo, a métrica. Para lead indicado, marcar com um raio a entrada direta em Trust.",
+   "citacoes": [
+    {
+     "trecho": "There are seven stages of referral development and corresponding touch points along the customer life cycle.",
+     "pagina": "p. 43"
+    },
+    {
+     "trecho": "When a lead is referred to your business, you borrow some trust from the referral source, but you can easily lose that trust if your initial attempts to engage the prospect don’t connect.",
+     "pagina": "p. 46"
+    },
+    {
+     "trecho": "an educated yes or no is the answer we are after.",
+     "pagina": "p. 47"
+    },
+    {
+     "trecho": "How you orient your customer once they say yes is a referral marketing touch point.",
+     "pagina": "p. 48"
+    },
+    {
+     "trecho": "make certain that your customers are getting the most value possible from your products and services.",
+     "pagina": "p. 49"
+    },
+    {
+     "trecho": "You know you have built a Referral Engine when this type of action becomes common within your customer base.",
+     "pagina": "p. 50"
+    }
+   ]
+  },
+  {
+   "nome": "The Referral System View (Visão do sistema de indicação): estratégia, duas redes, cumprir a promessa e pontos de entrada",
+   "paginas": "p. 59 a 70",
+   "componentes": [
+    {
+     "nome": "Estratégia autêntica",
+     "descricao": "Diferença falável e cliente ideal estreitamente definido, que orientam o resto (p. 60 a 64)."
+    },
+    {
+     "nome": "Processo de indicação inbound",
+     "descricao": "Em vez de caçar, ser encontrado: conteúdo, educação e engajamento onde o cliente ideal já procura (p. 65)."
+    },
+    {
+     "nome": "Rede de clientes (rede direta)",
+     "descricao": "Clientes que viveram o resultado e podem agir como força voluntária de indicação (p. 66)."
+    },
+    {
+     "nome": "Rede de parceiros estratégicos (rede indireta)",
+     "descricao": "Outras empresas que atendem o mesmo cliente ideal e podem apresentar a você centenas de leads qualificados; o livro estima que deveriam gerar cerca de 60% das indicações (p. 67)."
+    },
+    {
+     "nome": "Cumprir a promessa",
+     "descricao": "Processos para pedir de forma consistente, envolver clientes e parceiros, criar ofertas que motivem, tratar o lead indicado com cuidado e mostrar apreço a quem indicou (p. 68)."
+    },
+    {
+     "nome": "Pontos de entrada",
+     "descricao": "Mentalidade de expectativa, segmentar clientes de parceiros, ferramentas prontas, coleta lógica, mais de um ponto de entrada criativo, medir e ajustar (p. 69 e 70)."
+    }
+   ],
+   "logica": "Primeiro se constrói algo que mereça indicação (estratégia), depois se ativam duas redes com abordagens distintas, depois se opera o sistema (pedir, motivar, converter, agradecer) e por fim se mede e ajusta. A rede de parceiros tem maior alcance e motivação própria (agregar valor à carteira deles), mas só deve ser ativada depois que os clientes estiverem encantados.",
+   "aplicacao_wise": "A Wise tem a rede de parceiros como centro do programa, o que combina com a tese do livro. O ponto a respeitar é a ordem: a promessa feita ao parceiro só se sustenta se as indústrias indicadas forem bem atendidas. O desenho de quatro portas, dois quadros e rituais já cobre a maior parte do sistema; falta o pedido sistemático, o kit do indicador e o painel de vazamento.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Operar o sistema de indicação do programa",
+     "descricao": "Macroprocesso que reúne recrutar e educar o indicador, receber a oportunidade, convertê-la, retornar ao indicador e medir. Cada etapa tem dono e indicador.",
+     "gatilho": "Início do programa e ciclo contínuo.",
+     "entregas": "Visão única do sistema no portal com as etapas e os indicadores de cada uma.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Segmentar parceiros e clientes Wise com abordagens e ofertas distintas",
+     "descricao": "Regra de que cada tipo de indicador recebe uma abordagem própria (conteúdo cobrandado para parceiro com base ativa, link simples para quem só apresenta, agradecimento e convite para campeão), mesmo com comissão única.",
+     "gatilho": "Classificação do parceiro no card.",
+     "entregas": "Matriz tipo de parceiro por abordagem em uso no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir o vazamento do sistema por etapa",
+     "descricao": "Painel que separa falta de volume (poucos indicam) de falta de conversão (indicações não fecham) e de falta de retorno (indicadores sem notícias).",
+     "gatilho": "Fechamento do mês e revisão trimestral conjunta.",
+     "entregas": "Painel de vazamento por porta e por parceiro.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Quatro blocos em coluna: estratégia (base), duas redes lado a lado (clientes à esquerda, parceiros à direita, parceiros maior), operação (pedir, motivar, converter, agradecer) e medição por cima com seta de retorno para a estratégia.",
+   "citacoes": [
+    {
+     "trecho": "A fully developed referral system targets two distinct prospect groups.",
+     "pagina": "p. 66"
+    },
+    {
+     "trecho": "the real untapped referral opportunity resides with strategic partners.",
+     "pagina": "p. 67"
+    },
+    {
+     "trecho": "respondents felt that less than 30 percent of their referrals came from strategic partners",
+     "pagina": "p. 67"
+    },
+    {
+     "trecho": "Create a dashboard of key referral indicators as a way to set goals and measure the success of your referral initiatives.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "Start with one or two referral program offers and gradually build new ones to let everyone find a way to play.",
+     "pagina": "p. 69"
+    }
+   ]
+  },
+  {
+   "nome": "The Strategic Partner Network (Rede de parceiros estratégicos): listas, convite, ativação e ensino",
+   "paginas": "p. 166 a 179",
+   "componentes": [
+    {
+     "nome": "Filtro de confiança",
+     "descricao": "Só entra quem você indicaria ao seu melhor cliente; olhar sempre pelo ponto de vista do cliente (p. 167)."
+    },
+    {
+     "nome": "Duas listas: estratégicos e provedores",
+     "descricao": "Estratégicos têm o mesmo cliente ideal e trocam indicações de igual para igual. Provedores entregam produtos necessários e servem para atender leads que não são fit e para soluções 'best of class', mas não indicam a você (p. 167)."
+    },
+    {
+     "nome": "Identificação da lista",
+     "descricao": "Começar por quem você já conhece, adicionar quem tem reputação, pedir sugestões a parceiros, fornecedores, equipe e clientes; considerar até concorrentes, com regras claras (p. 168)."
+    },
+    {
+     "nome": "Convite para entrar",
+     "descricao": "Carta dizendo que você tem clientes que podem precisar do serviço do parceiro e quer saber como apresentá-los; formulário de quatro perguntas (cliente ideal, benefícios, frases gatilho, processo após a indicação), com o seu já preenchido como exemplo (p. 169)."
+    },
+    {
+     "nome": "Ativação",
+     "descricao": "Cobranding de conteúdo, workshops (individual, combinado, evento de três ou quatro parceiros), cocriação de conteúdo, marketing conjunto, pares inesperados (p. 170 a 175)."
+    },
+    {
+     "nome": "Rede plenamente engajada",
+     "descricao": "Estrutura mais formal e plataforma pública (blog com contribuição de cada membro) (p. 176)."
+    },
+    {
+     "nome": "Ensinar a rede",
+     "descricao": "Ensinar os parceiros a gerar indicações para eles mesmos, a criar conteúdo cobrandado e a montar redes (p. 177)."
+    },
+    {
+     "nome": "Make-a-Referral Monday",
+     "descricao": "Um dia por semana em que toda a organização tem como meta dar uma indicação a alguém (p. 178)."
+    }
+   ],
+   "logica": "A rede cresce por oferta de valor ao parceiro, não por pedido. O ponto de partida é o interesse do cliente comum, o convite é uma conversa para aprender sobre o parceiro (não para pedir leads), a ativação entrega conteúdo pronto que o parceiro leva à própria carteira, e o ensino multiplica o efeito. Dar indicações é parte do mecanismo.",
+   "aplicacao_wise": "É o framework mais diretamente aplicável. A Wise recruta empresas que vendem para as mesmas indústrias, o que equivale à lista de estratégicos. Entidades (associações, feiras) e softwares complementares podem ser tratados como estratégicos ou provedores conforme o acesso ao comprador. O formulário de quatro perguntas vira o cadastro do parceiro e o ponto de partida da jornada.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Aplicar o formulário de quatro perguntas ao parceiro novo",
+     "descricao": "Perguntas: como reconhecer seu cliente ideal, como descrever seu benefício, que frases o comprador diz quando precisa de você, qual é seu processo após receber uma indicação. A Wise envia o seu preenchido como exemplo.",
+     "gatilho": "Entrada de parceiro no portal.",
+     "entregas": "Ficha do parceiro com as quatro respostas e frases gatilho da Wise entregues a ele.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Classificar o parceiro como estratégico ou provedor",
+     "descricao": "Regra lógica: se o parceiro tem acesso ao comprador da indústria que a Wise atende, é estratégico (pode indicar e receber); se não tem, é provedor (serve para receber leads que não são fit da Wise e para completar soluções).",
+     "gatilho": "Cadastro e revisão trimestral.",
+     "entregas": "Campo tipo de parceiro no card, com a justificativa.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Cobrandar um conteúdo da Wise para a carteira do parceiro",
+     "descricao": "Entregar ao parceiro um relatório, webinar ou diagnóstico pronto, com logo e contato dele, para ele apresentar à carteira.",
+     "gatilho": "Parceiro estratégico com base ativa classificado como aderente.",
+     "entregas": "Conteúdo cobrandado enviado e uso acompanhado no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Realizar semanalmente a rodada de indicações dadas pela Wise",
+     "descricao": "Inspirada no Make-a-Referral Monday: uma vez por semana, o gerente e os consultores indicam um parceiro a uma indústria ou uma indústria a um parceiro, e registram.",
+     "gatilho": "Dia fixo da semana na agenda de rituais.",
+     "entregas": "Indicações dadas registradas por parceiro.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Dois círculos concêntricos em torno da Wise: o interno com parceiros estratégicos (mesmo cliente ideal) ligados à indústria por linhas diretas, o externo com provedores (sem acesso ao comprador) ligados à Wise e aos estratégicos por linhas pontilhadas. Setas de mão dupla entre Wise e cada parceiro.",
+   "citacoes": [
+    {
+     "trecho": "A happy customer might know three or four ideal referrals, but a large, indirect network partner may have the trust of several hundred.",
+     "pagina": "p. 166"
+    },
+    {
+     "trecho": "These are people or businesses that have your same ideal customer in their sights.",
+     "pagina": "p. 167"
+    },
+    {
+     "trecho": "In many cases provider members don’t interact with or have the ability to introduce strategic relationships, but they provide necessary products and services",
+     "pagina": "p. 167"
+    },
+    {
+     "trecho": "What might prospects say to trigger me to know they need to be referred to you?",
+     "pagina": "p. 169"
+    },
+    {
+     "trecho": "This getting to know you period is not about yielding business referrals; it’s about developing a relationship and exploring ways to work together.",
+     "pagina": "p. 169"
+    },
+    {
+     "trecho": "we defined who was responsible for what; we have taken turns on who’s the contractor and who’s the sub",
+     "pagina": "p. 168"
+    }
+   ]
+  },
+  {
+   "nome": "Ready to Receive (Pronto para receber): pedir, converter e fechar o ciclo com o indicador",
+   "paginas": "p. 180 a 194",
+   "componentes": [
+    {
+     "nome": "Enquadrar o pedido",
+     "descricao": "Apresentar a indicação como benefício para quem indica (p. 181)."
+    },
+    {
+     "nome": "Quando pedir",
+     "descricao": "Seis ocasiões: elogio espontâneo, depoimento, quando o cliente indica, quando diz que você o salvou, quando um parceiro cita uma associação, ao concluir um projeto (p. 182)."
+    },
+    {
+     "nome": "O que a indicação ensina",
+     "descricao": "Ligar para o indicador e perguntar por que indicou; as palavras dele revelam a mensagem central (p. 183)."
+    },
+    {
+     "nome": "Como dar uma indicação",
+     "descricao": "Mentalidade de resolver o que o lead precisa, apresentação pessoal, acompanhamento (p. 184)."
+    },
+    {
+     "nome": "Envolver os funcionários",
+     "descricao": "Metas de indicação dadas, pontos por depoimentos, bônus por indicação convertida (p. 185)."
+    },
+    {
+     "nome": "Ajustar o acompanhamento",
+     "descricao": "Reconhecer o lead indicado no primeiro contato e dar algo especial; informar ao indicador o que a Wise faz com a indicação; reconhecer cada fase; comunicar o progresso; agradecer em público (p. 189 a 193)."
+    }
+   ],
+   "logica": "Pedir é a parte menor; o que sustenta o fluxo é o tratamento posterior. O lead indicado recebe um percurso próprio (cita quem indicou, ganha algo exclusivo), o indicador sabe sempre o que está acontecendo, leads que não são fit viram oportunidade de ensinar o indicador sobre o perfil ideal e todo estágio é reconhecido, para a torneira continuar aberta enquanto o negócio é trabalhado.",
+   "aplicacao_wise": "Responde diretamente ao desenho atual: o lead vai ao closer sem passar pelo portal e sem SLA interno, então o ciclo com o indicador precisa ser assumido por quem tem a relação com o parceiro, o gerente de parcerias, usando a comunidade de WhatsApp.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Retornar ao parceiro a cada fase da oportunidade compartilhada",
+     "descricao": "Mensagem curta na comunidade de WhatsApp quando a oportunidade é recebida, avança, fecha ou é perdida, com o motivo quando possível e respeitando confidencialidade.",
+     "gatilho": "Mudança de status da oportunidade.",
+     "entregas": "Mensagem enviada e registrada no card do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Perguntar ao indicador por que indicou",
+     "descricao": "Ligação ou mensagem pessoal logo após o primeiro contato do closer com o lead indicado, para entender a razão e ajustar a mensagem central.",
+     "gatilho": "Primeira oportunidade de um parceiro, e amostra das demais.",
+     "entregas": "Resposta registrada, frase reutilizada no kit do indicador.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Devolver ao parceiro o lead que não é fit, com explicação",
+     "descricao": "Quando a oportunidade não encaixa, o gerente explica o motivo ao parceiro, reforça o perfil ideal e, se possível, indica um provedor da rede.",
+     "gatilho": "Oportunidade descartada por falta de fit.",
+     "entregas": "Explicação enviada e indicação alternativa registrada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Definir o papel do closer no primeiro contato com lead indicado",
+     "descricao": "O closer abre citando o parceiro e o motivo da indicação, sem ligação fria, e avisa o gerente do resultado em conversa pessoal.",
+     "gatilho": "Distribuição de lead ao closer.",
+     "entregas": "Primeiro contato registrado com a referência ao parceiro.",
+     "dono": "Closer de cada empresa do grupo"
+    }
+   ],
+   "visual": "Fluxo em raia dupla: de um lado a oportunidade (recebida, primeiro contato, proposta, decisão), do outro a relação com o indicador. A cada estágio da oportunidade uma seta cruza para a raia do indicador com a mensagem correspondente (agradecer, informar, informar, agradecer).",
+   "citacoes": [
+    {
+     "trecho": "Really, the only time not to ask for a referral is during the process of making one yourself",
+     "pagina": "p. 182"
+    },
+    {
+     "trecho": "The next time someone calls you up and says, “My friend said I should contact you,” I want you to immediately call the referral source up and ask them why they did so.",
+     "pagina": "p. 183"
+    },
+    {
+     "trecho": "Tell the lead, on first contact, either in person or by way of an automated technical follow-up path, that they were referred by X.",
+     "pagina": "p. 189"
+    },
+    {
+     "trecho": "If a lead is not right for your business, don’t just ignore it",
+     "pagina": "p. 190"
+    },
+    {
+     "trecho": "keep them in the loop with regard to referrals they’ve made",
+     "pagina": "p. 192"
+    },
+    {
+     "trecho": "Where appropriate, acknowledging your referral source’s activity on your behalf publicly can be a powerful motivator.",
+     "pagina": "p. 193"
+    }
+   ]
+  },
+  {
+   "nome": "Motivação do indicador: normas sociais e de mercado, campeões e indicação engajada",
+   "paginas": "p. 157 a 160, p. 196",
+   "componentes": [
+    {
+     "nome": "Campeões",
+     "descricao": "Uma minoria de clientes gera a maior parte das indicações. Querem reconhecimento e participação (flores, brainstorming, encontros exclusivos, apresentação de parceiros, beta test) mais do que prêmios (p. 157)."
+    },
+    {
+     "nome": "Normas sociais versus normas de mercado",
+     "descricao": "Pedidos entre amigos funcionam por vínculo; trocas com preço, salário e custo funcionam por cálculo. Misturar as duas reduz a motivação (p. 159)."
+    },
+    {
+     "nome": "Indicação engajada",
+     "descricao": "Quanto mais o indicador participa (do almoço a três ao nome em um papel), maior a chance de conversão (p. 160)."
+    },
+    {
+     "nome": "Caixa de ferramentas do indicador",
+     "descricao": "Cartões personalizados que creditam quem indicou, vales com valor tangível, ofertas exclusivas por indicação, eventos 'traga um amigo', páginas personalizadas (p. 158)."
+    },
+    {
+     "nome": "Presente ao indicador para repassar",
+     "descricao": "Dar algo tangível ao indicador, que ele entrega a quem indica, e eventualmente permitir ganhos em pontos, dinheiro ou prêmios (p. 196)."
+    }
+   ],
+   "logica": "O livro separa dois mundos. No social, a recompensa é a identidade de quem ajuda; no de mercado, a transação. O desenho do programa deve apoiar o primeiro (agradecer, expor resultado, dar voz) e usar incentivo tangível como um gesto, dado ao indicador para repassar, em vez de pagamento por cabeça. O livro admite exceções e traz casos com dinheiro, mas não como motor principal.",
+   "aplicacao_wise": "A regra de comissão está decidida e é a mesma para todos. O framework mostra como cercá-la para que o parceiro não a leia como transação pura: apresentar a comissão como retorno de uma parceria, não como o motivo de indicar, e investir em reconhecimento, voz na revisão trimestral e acesso ao conhecimento da Wise.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Posicionar a comissão como retorno da parceria, não como motivo da indicação",
+     "descricao": "Regra de comunicação: a mensagem abre com o benefício ao cliente do parceiro e ao próprio parceiro, e a comissão aparece como forma de dividir o resultado.",
+     "gatilho": "Qualquer comunicação com parceiro, texto único da negociação.",
+     "entregas": "Roteiro único de comunicação aprovado.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Reconhecer campeões do programa",
+     "descricao": "Identificar os parceiros que concentram as indicações e dar-lhes participação (convite para a revisão, acesso antecipado, voz em decisões).",
+     "gatilho": "Revisão trimestral conjunta.",
+     "entregas": "Lista de campeões e plano de reconhecimento por campeão.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Registrar o grau de participação do indicador em cada oportunidade",
+     "descricao": "Três níveis: nome indicado, apresentação por escrito, apresentação pessoal. Cruzar com a conversão.",
+     "gatilho": "Criação da oportunidade.",
+     "entregas": "Campo no registro e relatório de conversão por nível.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Régua horizontal de participação do indicador: da esquerda (nome em um papel) à direita (almoço a três), com a taxa de conversão esperada subindo; sobre ela, duas pistas paralelas (social e de mercado) indicando onde cada tipo de recompensa age.",
+   "citacoes": [
+    {
+     "trecho": "In my experience, folks who are wired to be active in this fashion aren’t looking for tangible rewards.",
+     "pagina": "p. 157"
+    },
+    {
+     "trecho": "but the perfect referral motivation lies in our deep-seated human need for community.",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "Can you design a referral program that taps into people’s desire to help?",
+     "pagina": "p. 159"
+    },
+    {
+     "trecho": "a three-way lunch would lie at one end of the spectrum, while a name scribbled on a scrap of paper would lie at the other.",
+     "pagina": "p. 160"
+    },
+    {
+     "trecho": "The key is giving the gift to your referral source, so they have something tangible and valuable that they can use to give away to make the referral happen.",
+     "pagina": "p. 196"
+    }
+   ]
+  },
+  {
+   "nome": "Painel de indicação: referral number, NPS, fonte do lead, conversão e Customer Success Quotient",
+   "paginas": "p. 84, 85, 141 e 152",
+   "componentes": [
+    {
+     "nome": "Referral number",
+     "descricao": "Percentual de clientes que indicam; a meta declarada é 100% (p. 141)."
+    },
+    {
+     "nome": "Net Promoter Score",
+     "descricao": "Pergunta única sobre probabilidade de recomendar, com promotores, passivos e detratores; o livro lembra que a maioria dos detratores não era fit desde o início (p. 141)."
+    },
+    {
+     "nome": "Fonte de cada lead",
+     "descricao": "Pesquisar como o lead soube de você, usar códigos de rastreio e campos de fonte no CRM (p. 141)."
+    },
+    {
+     "nome": "Quatro indicadores de crescimento",
+     "descricao": "Geração de leads (de onde vêm os melhores), percentual de leads convertidos, custo por cliente adquirido e valor médio por cliente (p. 84 e 85)."
+    },
+    {
+     "nome": "Customer Success Quotient (CSQ)",
+     "descricao": "Valor entregue dividido pelo preço cobrado; medir o resultado do cliente fortalece venda, preço e indicação (p. 152)."
+    },
+    {
+     "nome": "Indicadores do funil de indicação",
+     "descricao": "Visualizações de página, leads indicados, reuniões e negócios fechados, para ver onde o programa falha (p. 69)."
+    }
+   ],
+   "logica": "Medir poucos números e usá-los para localizar o vazamento (pouco volume, baixa conversão, baixa satisfação). O livro sugere olhar para quem indica e para quem não indica e perguntar o motivo, e usar a revisão de resultados como momento de coleta de indicação.",
+   "aplicacao_wise": "O portal já é o centro da gestão, então a métrica nasce do registro: fonte de toda oportunidade, estágio, conversão e participação do indicador. A Wise não tem parceiros assinados ainda, portanto o painel inicial mede o funil de recrutamento e a primeira indicação; as metas de volume vêm depois.",
+   "impacto_processos": [
+    {
+     "tipo": "metrica",
+     "nome": "Calcular o referral number do programa",
+     "descricao": "Proporção de parceiros ativos que indicaram ao menos uma oportunidade em um período definido, por porta.",
+     "gatilho": "Fechamento do mês.",
+     "entregas": "Número no painel e variação mensal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Exigir a fonte em toda oportunidade criada",
+     "descricao": "Nenhuma oportunidade entra sem origem (parceiro e porta). O closer também registra como o lead soube da Wise quando não houver origem.",
+     "gatilho": "Criação da oportunidade no portal.",
+     "entregas": "Campo obrigatório de origem preenchido.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Realizar revisão mensal curta dos indicadores de indicação",
+     "descricao": "Revisão de 30 minutos do painel de vazamento antes de falar com cada parceiro.",
+     "gatilho": "Primeira semana útil do mês.",
+     "entregas": "Duas ou três ações por parceiro registradas.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Funil horizontal com quatro degraus (parceiros ativos, parceiros que indicaram, oportunidades recebidas, oportunidades fechadas), a taxa de passagem entre cada degrau e um indicador separado para a satisfação do indicador (NPS do parceiro) abaixo.",
+   "citacoes": [
+    {
+     "trecho": "Installing processes that allow you to capture the source of every lead",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "Your goal: a referral number of 100 percent.",
+     "pagina": "p. 141"
+    },
+    {
+     "trecho": "Keep it simple and build elegant processes to extract and monitor just a handful of key indicators.",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "Tripling or quadrupling your lead-conversion number is usually the easiest thing to do once you start paying attention to it.",
+     "pagina": "p. 85"
+    },
+    {
+     "trecho": "The measurement that matters over all others is something I’ve begun calling the customer success quotient (CSQ).",
+     "pagina": "p. 152"
+    }
+   ]
+  }
+ ],
+ "respostas_abertas": {
+  "fatores_e_tipos": "O livro não propõe fatores de parceria nem uma matriz formal. Ele traz, porém, uma tipologia de indicadores com regra lógica explícita e duas ou três dimensões que dá para extrair. (1) Acesso ao mesmo comprador: parceiros estratégicos são os que têm o seu cliente ideal na mira e trocam indicações de igual para igual; parceiros provedores entregam algo necessário mas não têm acesso ao comprador, então não indicam a você, e servem para receber leads que não são fit e completar soluções (p. 167). (2) Origem: rede direta de clientes versus rede indireta de parceiros, com motivações distintas (o cliente indica porque gosta; o parceiro, porque aumenta o valor da relação com a carteira dele) e alcance distinto (um cliente conhece três ou quatro bons leads, um parceiro tem a confiança de centenas) (p. 66, 69, 166). (3) Grau de engajamento: dentro de cada rede há campeões, que respondem pela maior parte das indicações (p. 157), e a participação do indicador em cada caso vai do nome em um papel ao almoço a três, e prediz a conversão (p. 160). Inferência minha para a pergunta do patrocinador: dá para montar uma matriz de dois eixos, acesso ao comprador da indústria atendida (sim ou não, regra do livro) e engajamento demonstrado (frequência e qualidade da participação, no estilo RFV). Isso gera quatro tipos: estratégico engajado (campeão), estratégico latente (tem acesso e ainda não indicou), provedor engajado (recebe e devolve leads fora de fit) e provedor latente. O filtro de confiança 'indicaria ao meu melhor cliente' (p. 167) funciona como pré-condição para as duas dimensões, não como fator de tipo. O livro não discute os três fatores de Strategic Alliances.",
+  "abordagem_por_tipo": "Campeão (estratégico engajado): reconhecimento e participação, não prêmio; convidar para decisões, apresentar a outros parceiros, dar acesso antecipado, flores e bilhetes com recado à mão (p. 157). Estratégico com base ativa: oferecer conteúdo pronto para cobrandar, workshops conjuntos com dois ou três parceiros, cocriação de conteúdo e marketing conjunto (p. 170 a 175). Estratégico que só quer apresentar: ferramenta mínima (página de indicação com nome do parceiro, texto de apresentação) e retorno rápido (p. 201). Provedor: receber os leads que a Wise não atende e, em troca, prestar atenção ao que eles indicam (p. 167, 190). Cliente comum sem vínculo: lembrete, cartão e vale de indicação (p. 158, 196). Todos: contato pelo menos a cada 30 dias, mesmo sem pedir nada (p. 156), e reconhecimento de cada fase da indicação (p. 191).",
+  "portoes_de_fase": "O livro não define fases nem portões numéricos. As pistas mais úteis são: começar com uma ou duas ofertas de indicação e ampliar aos poucos (p. 69); medir fonte, conversão e custo por cliente (p. 84 e 85); a estimativa do autor de que parceiros deveriam gerar cerca de 60% das indicações, contra menos de 30% relatados em sua pesquisa (p. 67); e a meta de referral number de 100% (p. 141). Inferência minha: usar como portões qualitativos e mensuráveis. Experimentação para tração: kit do indicador pronto, formulário de quatro perguntas preenchido por todos os parceiros ativos, ao menos uma indicação em cada direção por parceiro e retorno ao indicador funcionando. Tração para crescimento: referral number do programa medido e estável, conversão medida por etapa, parceiros representando a maior parte das oportunidades e campeões identificados. As metas numéricas devem ser calibradas com os primeiros dados do portal, porque o livro não as fornece.",
+  "simplicidade": "O livro defende simplicidade em três pontos: poucos indicadores (a handful of key indicators, p. 84), poucas ofertas no começo (p. 69) e facilidade absoluta para o indicador (friction of any kind slows the rate of referral, p. 144). Também diz que 'não existe um sistema único' e que cada negócio deve desenhar o seu (p. 14), o que não contraria a regra única de comissão, mas sim confirma que a simplicidade está em poucas regras e poucas ofertas, não em tratar todos os parceiros do mesmo modo. Manter simples: a regra de comissão, o número de indicadores e o gesto de indicar. Não simplificar: o retorno ao indicador, o tratamento do lead indicado e o reconhecimento.",
+  "citacoes": [
+   {
+    "trecho": "To keep your org chart simple, for now start with Marketing, Money, and Management at the top.",
+    "pagina": "p. 58"
+   },
+   {
+    "trecho": "Keep it simple and build elegant processes to extract and monitor just a handful of key indicators.",
+    "pagina": "p. 84"
+   },
+   {
+    "trecho": "These are people or businesses that have your same ideal customer in their sights.",
+    "pagina": "p. 167"
+   },
+   {
+    "trecho": "Start with one or two referral program offers and gradually build new ones to let everyone find a way to play.",
+    "pagina": "p. 69"
+   },
+   {
+    "trecho": "The more engaged your referral source is in the process of making a referral, the more likely it is that the lead will become a customer.",
+    "pagina": "p. 160"
+   }
+  ]
+ },
+ "recomendacoes": [
+  {
+   "tema": "Kit do indicador",
+   "recomendacao": "Criar para cada parceiro um cartão com as dez frases gatilho que um comprador de indústria diz quando precisa do que a Wise entrega, mais o perfil do cliente ideal e o passo a passo de indicar.",
+   "processo": "Criar o kit do indicador (novo subprocesso no onboarding do parceiro)",
+   "citacao": "My belief is that the best way to make it easy for people to refer business your way is to develop a list of “trigger” phrases",
+   "pagina": "p. 95",
+   "aplicabilidade": "alta",
+   "porque": "Resolve o problema mais comum: o indicador não sabe o que escutar. É baixo custo e serve às quatro portas."
+  },
+  {
+   "tema": "Formulário de quatro perguntas",
+   "recomendacao": "Usar as quatro perguntas do livro como ficha de entrada do parceiro e enviar a da Wise já preenchida como exemplo.",
+   "processo": "Aplicar o formulário de quatro perguntas (subprocesso de onboarding)",
+   "citacao": "How would I spot your ideal customer?",
+   "pagina": "p. 169",
+   "aplicabilidade": "alta",
+   "porque": "Alimenta o card do parceiro com dados reais sobre o cliente dele, e ainda funciona como primeira conversa de relacionamento."
+  },
+  {
+   "tema": "Duas listas de parceiros",
+   "recomendacao": "Classificar cada parceiro como estratégico (acesso ao comprador da indústria) ou provedor (sem acesso, mas útil para leads fora de fit), com a justificativa no card.",
+   "processo": "Classificar o tipo de parceiro (regra no cadastro)",
+   "citacao": "These are people or businesses that have your same ideal customer in their sights.",
+   "pagina": "p. 167",
+   "aplicabilidade": "alta",
+   "porque": "É a regra lógica que o patrocinador pediu como ponto de partida para os tipos de parceiro; é um critério simples e observável."
+  },
+  {
+   "tema": "Filtro de confiança sem barreira",
+   "recomendacao": "Registrar no card a resposta à pergunta 'indicaria este parceiro ao melhor cliente de uma indústria?' como sim, não sei ou não, sem barrar a adesão.",
+   "processo": "Registrar o teste de confiança do parceiro (campo no card)",
+   "citacao": "Would I feel 100 percent confident referring my best customer to this business?",
+   "pagina": "p. 167",
+   "aplicabilidade": "media",
+   "porque": "Preserva a adesão simples e ainda protege a reputação da Wise ao decidir quem recebe oportunidade compartilhada."
+  },
+  {
+   "tema": "Reconhecer cada fase",
+   "recomendacao": "Agradecer ao parceiro a indicação enviada, a qualificada e a fechada, com gestos distintos e proporcionais.",
+   "processo": "Agradecer o parceiro a cada fase da oportunidade (atividade do gerente)",
+   "citacao": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral.",
+   "pagina": "p. 191",
+   "aplicabilidade": "alta",
+   "porque": "Com a comissão paga só no fechamento, o parceiro fica sem sinal por semanas. O agradecimento mantém o fluxo enquanto o negócio é trabalhado."
+  },
+  {
+   "tema": "Retorno ao indicador",
+   "recomendacao": "Enviar ao parceiro, pela comunidade de WhatsApp, uma notícia curta a cada mudança de status da oportunidade, respeitando confidencialidade do cliente.",
+   "processo": "Retornar o status da oportunidade ao parceiro (subprocesso, disparado por mudança de status)",
+   "citacao": "keep them in the loop with regard to referrals they’ve made",
+   "pagina": "p. 192",
+   "aplicabilidade": "alta",
+   "porque": "É o principal ponto frágil do desenho (sem SLA interno com o closer). O retorno ao indicador é quem sustenta a confiança, e o gerente é o dono natural."
+  },
+  {
+   "tema": "Primeiro contato com o lead indicado",
+   "recomendacao": "Instruir o closer a abrir citando o parceiro e o motivo da indicação, e a oferecer algo exclusivo ao indicado.",
+   "processo": "Abrir contato com lead indicado (papel do closer)",
+   "citacao": "Tell the lead, on first contact, either in person or by way of an automated technical follow-up path, that they were referred by X.",
+   "pagina": "p. 189",
+   "aplicabilidade": "alta",
+   "porque": "Custa quase nada e preserva a confiança emprestada. O gerente transmite a instrução pessoalmente, o que respeita o modelo atual."
+  },
+  {
+   "tema": "Sem ligação fria",
+   "recomendacao": "Proibir contato a frio com nomes recebidos de um parceiro; o primeiro contato exige a apresentação do parceiro ou, no mínimo, contexto personalizado.",
+   "processo": "Definir a regra de contato com leads indicados",
+   "citacao": "One urge that you must resist is collecting names from your referral sources and then cold-calling them for a meeting.",
+   "pagina": "p. 160",
+   "aplicabilidade": "alta",
+   "porque": "Evita desperdiçar a indicação e a imagem do parceiro. Combina com o lead que vai direto ao closer."
+  },
+  {
+   "tema": "Grau de participação",
+   "recomendacao": "Registrar em cada oportunidade se o indicador apenas passou o nome, mandou apresentação escrita ou apresentou pessoalmente, e medir a conversão por nível.",
+   "processo": "Registrar o grau de participação do indicador (campo na oportunidade)",
+   "citacao": "The more engaged your referral source is in the process of making a referral, the more likely it is that the lead will become a customer.",
+   "pagina": "p. 160",
+   "aplicabilidade": "alta",
+   "porque": "Cria um fator observável (inferência: dá para virar um dos eixos do estilo RFV pedido pelo patrocinador) e orienta que tipo de apoio dar ao parceiro."
+  },
+  {
+   "tema": "Perguntar por que indicou",
+   "recomendacao": "Ligar ao parceiro após a primeira indicação de cada tipo para perguntar por que indicou a Wise, e usar a resposta como mensagem central.",
+   "processo": "Perguntar ao indicador por que indicou (atividade do gerente)",
+   "citacao": "So, ask already: What makes you want to refer us? What do we do that’s unique?",
+   "pagina": "p. 183",
+   "aplicabilidade": "media",
+   "porque": "Revela o que o mercado enxerga como diferença real; pode divergir do que a Wise acha. Poucas ligações dão muita informação."
+  },
+  {
+   "tema": "Cobranding",
+   "recomendacao": "Entregar ao parceiro com base ativa um relatório ou diagnóstico pronto, com logo e contato dele, para ser compartilhado com a carteira.",
+   "processo": "Cobrandar conteúdo da Wise para parceiro (atividade da Base Ativa)",
+   "citacao": "Now that’s an offer that’s hard to turn down, and it presents a very natural way for this partner to introduce you to their entire database of customers with very little effort and great mutual benefit.",
+   "pagina": "p. 171",
+   "aplicabilidade": "alta",
+   "porque": "É a oferta mais coerente com a Base Ativa (comunidade e evento na carteira do parceiro) e com 'mais fácil de indicar'."
+  },
+  {
+   "tema": "Workshops conjuntos",
+   "recomendacao": "Realizar um evento ou webinar com dois ou três parceiros, em que cada um convida a própria carteira e a Wise apresenta o conteúdo.",
+   "processo": "Organizar evento conjunto com parceiros (atividade da Base Ativa)",
+   "citacao": "Each partner is also responsible for inviting their customers and contacts for this half- or full-day event.",
+   "pagina": "p. 172",
+   "aplicabilidade": "alta",
+   "porque": "Dá aos parceiros acesso à carteira um do outro e ancora a Wise como especialista. Casa com associações e feiras."
+  },
+  {
+   "tema": "Ensinar o parceiro",
+   "recomendacao": "Incluir na revisão trimestral conjunta uma sessão curta que ensine o parceiro a gerar indicações para si mesmo (cobranding, workshops, redes).",
+   "processo": "Ensinar o parceiro a indicar (pauta da revisão trimestral)",
+   "citacao": "If you want your strategic partners to generate referrals for your business, teach them how to generate more referrals for their own.",
+   "pagina": "p. 177",
+   "aplicabilidade": "media",
+   "porque": "Aumenta a motivação do parceiro por alinhamento: ele ganha capacidade, não só comissão. Exige esforço de conteúdo."
+  },
+  {
+   "tema": "Indicações dadas pela Wise",
+   "recomendacao": "Fixar um dia da semana em que o gerente e os consultores indicam um parceiro a uma indústria ou o contrário e registram a indicação dada.",
+   "processo": "Fazer a rodada semanal de indicações dadas (ritmo)",
+   "citacao": "On Mondays, every member of the organization’s stated and charted goal is to refer someone to another business.",
+   "pagina": "p. 178",
+   "aplicabilidade": "media",
+   "porque": "Dar indicação alimenta o cruzamento de carteiras e valida a Wise como fonte confiável; custa pouco e cabe na agenda de rituais."
+  },
+  {
+   "tema": "Contato a cada 30 dias",
+   "recomendacao": "Garantir que nenhum parceiro passe mais de cerca de 30 dias sem contato do gerente, ainda que sem pedir nada.",
+   "processo": "Contatar parceiros sem indicação recente (ritmo, tarefa por exceção)",
+   "citacao": "make certain that your customers, referral sources, and hottest prospects never go more than about thirty days without some form of contact.",
+   "pagina": "p. 156",
+   "aplicabilidade": "alta",
+   "porque": "Combina com a fila de tarefas por exceção: o alerta é o parceiro que ficou sem contato por mais de 30 dias."
+  },
+  {
+   "tema": "Expectativa de indicação",
+   "recomendacao": "Registrar no texto único de negociação que a relação é de via dupla (a Wise indica e espera indicações), como condição do relacionamento.",
+   "processo": "Incluir a expectativa de indicação no texto único de negociação (regra)",
+   "citacao": "you’ve established referrals as an expectation and condition in the relationship.",
+   "pagina": "p. 69",
+   "aplicabilidade": "media",
+   "porque": "Alinha expectativas desde o início sem tocar na comissão. Não é cobrança de meta; é combinação de via dupla."
+  },
+  {
+   "tema": "Lead fora de fit",
+   "recomendacao": "Quando a oportunidade não é de gestão comercial, devolver ao parceiro com explicação e indicar um provedor da rede.",
+   "processo": "Devolver o lead fora de fit com indicação alternativa (atividade do gerente)",
+   "citacao": "instead of turning away referred leads that are not a good fit for his business, he treats the leads just like a customer and helps them get what they need from another source.",
+   "pagina": "p. 30",
+   "aplicabilidade": "media",
+   "porque": "Preserva a relação com o indicador e com o lead e gera uma indicação de volta. Usa os parceiros provedores."
+  },
+  {
+   "tema": "Reconhecimento público",
+   "recomendacao": "Destacar na comunidade de WhatsApp (com autorização) o parceiro e o resultado que a indústria indicada obteve.",
+   "processo": "Reconhecer parceiro publicamente na comunidade (atividade do gerente)",
+   "citacao": "Where appropriate, acknowledging your referral source’s activity on your behalf publicly can be a powerful motivator.",
+   "pagina": "p. 193",
+   "aplicabilidade": "media",
+   "porque": "Funciona com os grupos individuais por parceiro apenas se houver anuência; é inferência minha usar também uma vitrine coletiva. Requer cuidado com confidencialidade."
+  },
+  {
+   "tema": "Referral number do programa",
+   "recomendacao": "Calcular o percentual de parceiros ativos que indicaram ao menos uma oportunidade no período, por porta, e acompanhá-lo como o indicador principal.",
+   "processo": "Medir o referral number (métrica no painel)",
+   "citacao": "So what’s your referral number? What percentage of your clients refer business?",
+   "pagina": "p. 141",
+   "aplicabilidade": "alta",
+   "porque": "É o indicador mais simples de saúde do programa e uma base para os portões de fase, junto de conversão e fonte."
+  },
+  {
+   "tema": "Fonte de toda oportunidade",
+   "recomendacao": "Tornar obrigatória a origem (parceiro e porta) na criação da oportunidade.",
+   "processo": "Exigir a fonte da oportunidade (regra no portal)",
+   "citacao": "Installing processes that allow you to capture the source of every lead",
+   "pagina": "p. 141",
+   "aplicabilidade": "alta",
+   "porque": "Sem a fonte não há como medir, pagar nem retornar ao indicador. É regra mínima que não afeta a adesão."
+  },
+  {
+   "tema": "Painel enxuto",
+   "recomendacao": "Limitar o painel inicial a poucos indicadores: referral number, conversão por etapa, custo por cliente adquirido, participação de parceiros e satisfação do parceiro.",
+   "processo": "Definir o painel de indicação (métrica)",
+   "citacao": "Keep it simple and build elegant processes to extract and monitor just a handful of key indicators.",
+   "pagina": "p. 84",
+   "aplicabilidade": "alta",
+   "porque": "Mantém simples, como o patrocinador quer, e evita o excesso de métricas que o livro critica."
+  },
+  {
+   "tema": "Oferta de gesto tangível",
+   "recomendacao": "Dar ao parceiro algo tangível para entregar ao indicado (diagnóstico gratuito, relatório, ingresso para evento), com o crédito do parceiro.",
+   "processo": "Criar oferta exclusiva ao indicado (atividade)",
+   "citacao": "The key is giving the gift to your referral source, so they have something tangible and valuable that they can use to give away to make the referral happen.",
+   "pagina": "p. 196",
+   "aplicabilidade": "media",
+   "porque": "Muda o foco do pagamento ao parceiro para um presente que ele dá ao cliente dele; isso fortalece o lado social sem mexer na comissão."
+  },
+  {
+   "tema": "Concorrentes como parceiros",
+   "recomendacao": "Para parceiros que concorrem entre si ou com a Wise em parte do portfólio, definir papéis e regras antes de uma oportunidade conjunta.",
+   "processo": "Definir regras para oportunidade conjunta (regra no cruzamento de carteiras)",
+   "citacao": "we defined who was responsible for what; we have taken turns on who’s the contractor and who’s the sub",
+   "pagina": "p. 168",
+   "aplicabilidade": "baixa",
+   "porque": "O livro mostra que concorrentes podem virar parceiros, com regras claras. Útil para o cruzamento de carteiras entre ERPs, CRMs e outros."
+  },
+  {
+   "tema": "Clientes da Wise como segunda rede",
+   "recomendacao": "Considerar mais adiante os clientes da Wise e das empresas do grupo como rede direta de indicação, com referral number e NPS.",
+   "processo": "Avaliar a rede direta de clientes do grupo (processo futuro)",
+   "citacao": "A fully developed referral system targets two distinct prospect groups.",
+   "pagina": "p. 66",
+   "aplicabilidade": "baixa",
+   "porque": "O livro dá prioridade aos clientes encantados. Fora do escopo atual do programa, mas pode virar quinta porta; inferência minha."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Referral number",
+   "definicao": "Percentual de clientes (ou parceiros ativos) que indicam ao menos uma vez no período.",
+   "citacao": "What percentage of your clients refer business?",
+   "pagina": "p. 141"
+  },
+  {
+   "nome": "Net Promoter Score do parceiro",
+   "definicao": "Pergunta única sobre a probabilidade de recomendar a Wise, separando promotores, passivos e detratores.",
+   "citacao": "promoters, passives, and detractors",
+   "pagina": "p. 141"
+  },
+  {
+   "nome": "Fonte de cada oportunidade",
+   "definicao": "Origem registrada (parceiro, porta) de toda oportunidade, base de qualquer outra métrica.",
+   "citacao": "Installing processes that allow you to capture the source of every lead",
+   "pagina": "p. 141"
+  },
+  {
+   "nome": "Percentual de leads convertidos",
+   "definicao": "Proporção de oportunidades que fecham, por parceiro, porta e etapa.",
+   "citacao": "Tripling or quadrupling your lead-conversion number is usually the easiest thing to do once you start paying attention to it.",
+   "pagina": "p. 85"
+  },
+  {
+   "nome": "Custo por cliente adquirido",
+   "definicao": "Custo de adquirir um novo cliente, comparável ao valor dele ao longo do tempo para decidir quanto gastar.",
+   "citacao": "Every new customer comes with a cost.",
+   "pagina": "p. 85"
+  },
+  {
+   "nome": "Participação de parceiros nas indicações",
+   "definicao": "Parcela das oportunidades vindas da rede de parceiros; o autor estima que deveria ser em torno de 60%, contra menos de 30% relatados na pesquisa dele.",
+   "citacao": "I think that should be more like 60 percent.",
+   "pagina": "p. 67"
+  },
+  {
+   "nome": "Funil de indicação",
+   "definicao": "Leads indicados, reuniões e negócios fechados por fonte, para localizar onde o sistema vaza.",
+   "citacao": "Page views, referred leads, appointments, closed deals?",
+   "pagina": "p. 69"
+  },
+  {
+   "nome": "Customer Success Quotient",
+   "definicao": "Valor entregue ao cliente dividido pelo preço cobrado, usado para mostrar resultado e estimular indicação.",
+   "citacao": "In this case, we are dividing the value you offer by the price you charge.",
+   "pagina": "p. 152"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "A falta de confiança é a maior razão para não haver indicação; sobrepromessa a destrói.",
+   "citacao": "lack of trust the single greatest reason referrals don’t happen",
+   "pagina": "p. 18"
+  },
+  {
+   "alerta": "Pagar por indicação pode transformar o gesto social em transação de mercado e reduzir a motivação.",
+   "citacao": "they will view it as a market transaction, and the motivation is often significantly lower",
+   "pagina": "p. 159"
+  },
+  {
+   "alerta": "A fase de coleta é onde o sistema de indicação mais falha: todos estão satisfeitos e ninguém pede.",
+   "citacao": "The place that referral systems fail most often is in the collection phase.",
+   "pagina": "p. 69"
+  },
+  {
+   "alerta": "Ligar a frio para nomes recebidos de um indicador desperdiça a indicação e a reputação dele.",
+   "citacao": "This is a fabulous way to waste referrals.",
+   "pagina": "p. 160"
+  },
+  {
+   "alerta": "Presumir que o lead indicado já foi vendido pelo indicador é o erro mais comum de conversão.",
+   "citacao": "there is an assumption that since “Joe said I should call you,” the true value of that you have to offer has been understood fully.",
+   "pagina": "p. 189"
+  },
+  {
+   "alerta": "Agradecer só o que fecha deixa o indicador sem sinal durante todo o ciclo de venda.",
+   "citacao": "your referral sources will feel unappreciated before that ever occurs.",
+   "pagina": "p. 191"
+  },
+  {
+   "alerta": "Não misturar o pedido de indicação com o momento de dar uma indicação.",
+   "citacao": "keep these two acts separate or you run the risk of muddying your motivations.",
+   "pagina": "p. 182"
+  },
+  {
+   "alerta": "Acompanhar métricas demais impede de focar nas que importam.",
+   "citacao": "So often business owners and managers get caught up in trying to track so many metrics that it’s nearly impossible to focus on what’s truly significant.",
+   "pagina": "p. 85"
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "O livro diz que dinheiro por indicação é uma motivação fraca e que a recompensa ideal é social (p. 68, 157, 159). O desenho define comissão de 40% da primeira mensalidade mais 10% ao gerente (Wise Makers e Tríade) e 6% mais 2% (Swallow), em regra única.",
+   "como_resolver": "Manter a comissão como decidida. Reduzir o risco de leitura como transação: abrir toda a comunicação pelo benefício ao parceiro e à carteira dele, agradecer a cada fase, devolver notícias, dar voz na revisão trimestral, e oferecer um gesto tangível que o parceiro entrega ao indicado. O livro admite que há exceções e traz casos de B2B com bônus em dinheiro (p. 159, 205, 210). Se a adesão for baixa, é o primeiro ponto a investigar, antes de mexer na comissão."
+  },
+  {
+   "tensao": "O livro manda usar abordagens e ofertas diferentes por tipo de indicador (p. 69). O desenho adota regra única, sem exceção, para simplificar.",
+   "como_resolver": "Separar dinheiro de abordagem. A regra de comissão permanece única; o que varia por tipo de parceiro é o conteúdo, o apoio e o ritmo de contato. Isso preserva a simplicidade que o patrocinador quer e atende ao livro."
+  },
+  {
+   "tensao": "O livro exige acompanhamento sistemático do lead indicado e retorno ao indicador (p. 189 a 192). O desenho tem o lead indo direto ao closer, sem SLA interno e com o gerente falando pessoalmente com ele, sem registro de resposta no portal pelo closer.",
+   "como_resolver": "Sem criar SLA interno, tornar o retorno ao parceiro uma obrigação do gerente, com um gatilho simples no portal (oportunidade sem movimento há X dias gera tarefa por exceção). O livro não exige SLA formal; exige que o indicador não fique sem notícia."
+  },
+  {
+   "tensao": "O livro recomenda filtrar parceiros com a pergunta 'indicaria ao meu melhor cliente?' e criar a rede de forma proativa, começando com poucos (p. 167 a 169, 69). O desenho abre os três pilares juntos e recebe parceiros de forma orgânica, sem nenhum assinado.",
+   "como_resolver": "Manter a abertura, mas classificar em vez de barrar: o teste vira campo no card, e o gerente ativa primeiro os parceiros com resposta sim. Convém complementar a chegada orgânica com convites do gerente aos estratégicos mais aderentes, como o livro faz com a carta de introdução."
+  },
+  {
+   "tensao": "O livro pede que toda a organização participe da geração e do retorno de indicações (p. 164, 185). O desenho concentra tudo no Gerente de Parcerias e deixa consultores e closers fora do portal.",
+   "como_resolver": "Manter o gerente como dono, mas dar aos closers duas tarefas leves e pessoais: abrir citando o parceiro e avisar o gerente do resultado, sem usar o portal. Não conflita com o desenho atual, apenas acrescenta um combinado."
+  },
+  {
+   "tensao": "O livro dá prioridade à rede de clientes encantados antes da de parceiros (p. 67 e Capítulo 8). O programa foca parceiros, e a indicação por link é de parceiros.",
+   "como_resolver": "Respeitar a decisão atual. Registrar como inferência minha a possibilidade futura de uma quinta porta, a rede de clientes do grupo, medida por referral number e NPS, quando houver base de clientes do programa."
+  },
+  {
+   "tensao": "O livro vê o Diretor ou dono como contador de histórias e guardião do sistema (p. 79) e o simples 'só assina' do desenho dá pouco peso a essa função.",
+   "como_resolver": "Manter a decisão de que o Diretor só assina. O livro sugere apenas que a mensagem do programa (a diferença falável e a história) tenha um porta-voz; isso pode ser o próprio gerente, sem tirar o Diretor da assinatura."
+  }
+ ]
+}

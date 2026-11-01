@@ -1,0 +1,1369 @@
+{
+ "livro": "Customer Success: como as empresas inovadoras descobriram que a melhor forma de aumentar a receita é garantir o sucesso dos clientes",
+ "autores": "Dan Steinman, Lincoln Murphy e Nick Mehta (com dez leis escritas por executivos convidados, sob encomenda da Bessemer Venture Partners)",
+ "slug": "customer-success",
+ "tese": "Em negócios de receita recorrente o cliente decide e pode sair a qualquer momento, por isso o fornecedor precisa torná-lo bem-sucedido no resultado que ele mesmo mede, e não apenas satisfeito. O motor de crescimento é a base instalada: aquisição, retenção e expansão precisam funcionar juntas, e vender mais não compensa a evasão. A disciplina se organiza em torno de um escore de saúde desdobrado em componentes, que prevê renovação e expansão e dispara ações com dono, enquanto a atenção humana é racionada por valor do cliente (high-touch, low-touch e tech-touch). As dez leis resumem a prática, e a décima as ancora no compromisso do topo. Para o Wise, o parceiro é o cliente do programa: o livro entrega um método de gestão de carteira (saúde, segmentação, gatilhos, retenção líquida), mas não trata de parcerias, comissão nem de fases de programa, e a transposição é minha.",
+ "principios": [
+  {
+   "principio": "Deixe o parceiro definir o que é sucesso e escreva isso na unidade de medida dele.",
+   "explicacao": "O cliente não compra atributos, compra um objetivo de negócios. Sem saber como ele mede o sucesso, qual é a linha de partida e se está chegando lá, não há como provar valor nem prever renovação. A definição de sucesso vem do cliente, não do fornecedor.",
+   "aplicacao_wise": "Na adesão, registrar no card do parceiro uma ficha de uma página: o que ele quer do programa (por exemplo, oportunidades qualificadas por trimestre, receita adicional, ou valor aos associados no caso de entidades), a unidade de medida e a linha de base. Os três pilares são meios; o resultado desejado é do parceiro. Inferência minha: o livro trata de clientes pagantes, e aqui o parceiro é remunerado por comissão.",
+   "citacoes": [
+    {
+     "trecho": "Se você for realmente uma empresa centrada no cliente, a resposta a esta e a todas as outras perguntas deve ser fácil: o cliente decide.",
+     "pagina": "p. 8"
+    },
+    {
+     "trecho": "Os clientes não compram a sua solução para usar seus atributos e funções. Eles compram a sua solução (e o relacionamento com você) porque querem alcançar um objetivo de negócios.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "qual é a unidade de medida do cliente (economia de tempo, incremento de receita, redução de custos, impacto financeiro específico decorrente da melhoria da qualidade), e de que resultados o cliente precisa para declarar vitória?",
+     "pagina": "p. 109"
+    }
+   ]
+  },
+  {
+   "principio": "Gerencie a base de parceiros por um escore de saúde desdobrado em componentes, não por intuição.",
+   "explicacao": "O escore de saúde faz para o customer success o que o pipeline faz para vendas: prevê comportamento futuro (renovar, expandir, sair) antes do resultado aparecer. Desdobrado em componentes, mostra a alavanca específica a puxar. O livro não dá pesos e diz que não existe método único.",
+   "aplicacao_wise": "Escore v1 do parceiro com cinco componentes visíveis no card (fluxo de oportunidades, resultado, adoção do programa, engajamento, relacionamento), cada um com dono de ação. Os pesos são hipóteses minhas, a recalibrar com dados dos primeiros parceiros. O livro nem sugere pesos nem prescreve uma lista fechada de fatores.",
+   "citacoes": [
+    {
+     "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente.",
+     "pagina": "p. 123"
+    },
+    {
+     "trecho": "Como todas as empresas são diferentes, não existe um método único, mas aqui está uma lista de possíveis componentes da saúde do cliente que podem ser usados para estimar a saúde total",
+     "pagina": "p. 126"
+    },
+    {
+     "trecho": "Esses componentes da saúde total são extremamente importantes para os gerentes de customer success (GCSs), porque lhes fornecem recursos para mudar o escore total.",
+     "pagina": "p. 128"
+    }
+   ]
+  },
+  {
+   "principio": "Todo sinal precisa virar uma ação com dono e prazo.",
+   "explicacao": "Medir sem agir é inútil. O escore existe para disparar iniciativa: se um componente cai, uma ação específica deve nascer. A analogia é a oportunidade parada no pipeline: observar e relatar não move nada.",
+   "aplicacao_wise": "A fila de tarefas por exceção do desenho atual é exatamente isso: cada tarefa nasce de uma regra de sinal, tem o Gerente de Parcerias como dono e se fecha com resultado registrado. Tarefa sem regra de origem não entra na fila.",
+   "citacoes": [
+    {
+     "trecho": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Análise de dados ou insights oriundos de pesquisas ou avaliações que não deflagrem iniciativas são em grande parte inúteis.",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Mova-o ou perca-o",
+     "pagina": "p. 128"
+    }
+   ]
+  },
+  {
+   "principio": "Dê a cada parceiro a atenção que o valor dele justifica e use canais um-para-muitos para a cauda.",
+   "explicacao": "Existe uma hierarquia de valor do cliente e um tipo de atendimento para cada nível. O custo de pessoas só se paga nos clientes de maior valor; para a cauda, a entrega é por tecnologia, comunidade e gatilhos just-in-time. Metas de retenção descem a pirâmide.",
+   "aplicacao_wise": "Dois níveis do desenho atual (gerenciado e atendido pelo portal) cobrem o princípio; a atenção humana do gerente se concentra nos parceiros de maior potencial, e o restante recebe mensagens por gatilho e comunidade. A comissão única fica como está: a diferença entre parceiros mora no custo de atenção, não no pagamento (inferência minha).",
+   "citacoes": [
+    {
+     "trecho": "Aqui há sem dúvida uma hierarquia de valor do cliente e do correspondente tipo de atendimento para cada nível.",
+     "pagina": "p. 66"
+    },
+    {
+     "trecho": "você constatará que a melhor maneira de determinar os índices de GCS não é por número de clientes, mas por valor de contrato (ARR).",
+     "pagina": "p. 73"
+    },
+    {
+     "trecho": "suas metas de retenção/evasão para a planície dos clientes low-touch, em comparação com o planalto dos clientes high-touch, devem ser diferentes.",
+     "pagina": "p. 106"
+    }
+   ]
+  },
+  {
+   "principio": "Obceque-se pelo primeiro valor do parceiro e entregue em fatias.",
+   "explicacao": "Cliente que não vê valor não renova nem compra mais. Quanto mais cedo o primeiro resultado, melhor a retenção. A forma de chegar lá é fixar medidas concretas com o patrocinador, começar pela mais simples e adaptar em tempo real quando o valor esperado está em risco.",
+   "aplicacao_wise": "Cada parceiro entra por uma porta só (indicação, Prateleira, cruzamento de carteiras ou Base Ativa) e a primeira oportunidade útil, enviada ou recebida, é o marco da Fase 1. A meta é pequena e medida em dias desde a adesão. Os três pilares abrem juntos para o programa, mas não precisam abrir juntos para cada parceiro (ver tensões).",
+   "citacoes": [
+    {
+     "trecho": "Os clientes não renovam, nem ficam com você, nem compram mais de você a não ser que, ou até que, você realmente lhes entregue valor.",
+     "pagina": "p. 162"
+    },
+    {
+     "trecho": "Implante iterativamente para extrair valor desde cedo, atingindo primeiro a medida de sucesso mais simples e depois focando nas subsequentes.",
+     "pagina": "p. 163"
+    },
+    {
+     "trecho": "os primeiros 90 dias da vida de um cliente são muito importantes",
+     "pagina": "p. 253"
+    }
+   ]
+  },
+  {
+   "principio": "Qualifique o encaixe do parceiro na entrada, com dados e não com casos.",
+   "explicacao": "Segundo um CEO citado, quase toda a evasão é decidida na venda: cliente errado custa onboarding difícil, demandas fora do produto e resgate caro. A decisão de quem entra deve se apoiar em dados da base, e o líder de customer success pode até ter poder de veto.",
+   "aplicacao_wise": "Como os parceiros chegam de forma orgânica e ainda não há nenhum assinado, o filtro deve ser leve: três perguntas de encaixe (vende para a mesma indústria? tem carteira ou comunidade relevante? aceita compartilhar oportunidade?). O objetivo imediato é coletar dados para calibrar, não barrar adesão. Sem dados ainda, o critério é hipótese minha.",
+   "citacoes": [
+    {
+     "trecho": "Noventa e nove por cento da evasão ocorre na época da venda",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "Será que este cliente é o cliente certo para nós?",
+     "pagina": "p. 86"
+    },
+    {
+     "trecho": "Use dados, não somente casos. Se você pretende ser rigoroso quanto a quem você venderá, é preciso basear-se em dados.",
+     "pagina": "p. 94"
+    }
+   ]
+  },
+  {
+   "principio": "Assuma que parceiro e programa se afastam sozinhos e organize o contato proativo.",
+   "explicacao": "Pessoas, estratégias, produtos e lideranças mudam dos dois lados; sem alguém remando, os dois barcos derivam. Por isso a unidade de sucesso do cliente existe. O contato proativo, premeditado, é o antídoto, e deve ocorrer ao menos uma vez por mês por canais coletivos.",
+   "aplicacao_wise": "Calendário anual de macrocomunicações na comunidade de WhatsApp com contato mensal com todos, mais gatilhos por parceiro. Parceiro que não escuta nada do programa por 30 dias é sinal por si só.",
+   "citacoes": [
+    {
+     "trecho": "Os clientes e os fornecedores tendem a afastar-se, à deriva, se nenhuma das partes tomar alguma iniciativa.",
+     "pagina": "p. 33"
+    },
+    {
+     "trecho": "Somente a interação proativa e premeditada por parte de uma ou de ambas as empresas superará a deriva natural provocada pela mudança constante.",
+     "pagina": "p. 97"
+    },
+    {
+     "trecho": "Seu objetivo deve ser interagir com os clientes pelo menos a cada mês, por meio de sua estratégia de macrocomunicações",
+     "pagina": "p. 141"
+    }
+   ]
+  },
+  {
+   "principio": "Construa lealdade por valor entregue, não por relacionamento pessoal.",
+   "explicacao": "Com muitos clientes, relacionamentos individuais não escalam; a lealdade nasce do valor que o cliente extrai e de comunidades onde ele se conecta com pares. Quem não pode dar contato pessoal a todos precisa saber vencer construindo valor.",
+   "aplicacao_wise": "O gerente conversa pessoalmente com quem tem maior potencial, mas a retenção do restante se apoia em resultados visíveis no portal (oportunidades, comissão, status) e na comunidade. Reduz o risco de o programa depender de uma única pessoa.",
+   "citacoes": [
+    {
+     "trecho": "você aprende que os clientes serão leais por causa do valor que extraem de seu produto, não do relacionamento que possam ter com alguém na organização.",
+     "pagina": "p. 136"
+    },
+    {
+     "trecho": "você precisa aprender a vencer construindo valor, não relacionamentos.",
+     "pagina": "p. 146"
+    },
+    {
+     "trecho": "Os clientes são sem dúvida seu melhor veículo de marketing e sua melhor fonte de leads.",
+     "pagina": "p. 142"
+    }
+   ]
+  },
+  {
+   "principio": "Dê um dono único à retenção, com autoridade, métricas visíveis e voz no topo.",
+   "explicacao": "Quando muita gente é dona, ninguém manda nada. Quem responde pela retenção precisa ter a mesma autoridade de quem responde por vendas. Metas, incentivos e relatórios devem tornar a retenção tão visível quanto novos negócios.",
+   "aplicacao_wise": "O desenho atual já tem um dono único (Gerente de Parcerias). Falta dar a ele metas de retenção líquida de parceiros e um painel visível para o Diretor, que hoje só assina. Não implica mudar a regra de comissão.",
+   "citacoes": [
+    {
+     "trecho": "Quando muita gente é dona ninguém manda nada",
+     "pagina": "p. 52"
+    },
+    {
+     "trecho": "Atribua essa função a alguém e lhe dê a mesma autoridade conferida ao vice-presidente de vendas para alcançar os números almejados.",
+     "pagina": "p. 52"
+    },
+    {
+     "trecho": "Customer success jamais será levado a sério caso não se defina, nem se concorde quanto às métricas a serem aplicadas.",
+     "pagina": "p. 202"
+    }
+   ]
+  },
+  {
+   "principio": "Meça retenção líquida: permanência mais expansão, por parceiro e por coorte.",
+   "explicacao": "Cliente bem-sucedido faz duas coisas: continua e compra mais. A métrica que junta as duas é a retenção líquida, mas ela é retrospectiva; é preciso acompanhar indicadores antecedentes (saúde, adoção, ações concluídas). A diferença entre o crescimento do cliente e a média pode ser tratada como evasão a recuperar.",
+   "aplicacao_wise": "Retenção líquida do programa: volume de oportunidades ou receita gerada pela carteira de parceiros em um trimestre, em relação ao trimestre anterior, considerando saídas, quedas e expansões. A definição exata (oportunidades, receita comissionada ou ambas) é decisão a tomar; o livro usa receita recorrente.",
+   "citacoes": [
+    {
+     "trecho": "Meu argumento é no sentido de que a métrica-chave para determinar a qualidade de um GCS, em si, ou de toda a equipe é retenção líquida.",
+     "pagina": "p. 193"
+    },
+    {
+     "trecho": "Esse aspecto leva em conta tanto a retenção quanto o upsell.",
+     "pagina": "p. 193"
+    },
+    {
+     "trecho": "tratar o déficit de 20% em relação à média como se fosse evasão",
+     "pagina": "p. 39"
+    }
+   ]
+  },
+  {
+   "principio": "Racionalize à mão antes de automatizar.",
+   "explicacao": "Automatizar o que não foi racionalizado repete os mesmos erros mais depressa. Começar com poucos componentes factíveis, calculados manualmente, revela o que vale a pena automatizar; a dor manual é a motivação.",
+   "aplicacao_wise": "Escore v1 e regras de gatilho em planilha ou campos do card nos primeiros parceiros; só depois de rodar por dois ciclos vira cálculo automático do portal. Combina com a preferência do patrocinador por simplicidade.",
+   "citacoes": [
+    {
+     "trecho": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!",
+     "pagina": "p. 129"
+    },
+    {
+     "trecho": "Tudo bem, porque você precisa começar com algo factível e compreensível.",
+     "pagina": "p. 127"
+    },
+    {
+     "trecho": "Às vezes vale a pena sentir a dor de fazer alguma coisa manualmente, para ceder à motivação de automatizá-la.",
+     "pagina": "p. 129"
+    }
+   ]
+  },
+  {
+   "principio": "Entenda por que os parceiros ficam, e não apenas por que saem.",
+   "explicacao": "A evasão costuma ser evento isolado com razões específicas; as razões da permanência dizem mais sobre o que replicar. Isso vale sobretudo na cauda atendida por tecnologia, onde não se conversa com cada cliente.",
+   "aplicacao_wise": "Na revisão conjunta trimestral, perguntar a poucos parceiros ativos o que os mantém e a poucos dormentes o que mudou. Registrar em lista padronizada de motivos.",
+   "citacoes": [
+    {
+     "trecho": "Em todo caso, geralmente é mais importante compreender as razões da retenção ou permanência, uma vez que a evasão quase sempre é um evento isolado, com razões específicas.",
+     "pagina": "p. 107"
+    },
+    {
+     "trecho": "tanto as pesquisas quanto as experiências casuísticas indicam que a evasão não ocorre ao acaso.",
+     "pagina": "p. 98"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Hierarquia de valor do cliente e modelos de atendimento: high-touch, low-touch e tech-touch (personalizado, padronizado e automatizado), com o modelo de cobertura",
+   "paginas": "p. 65 a 79 e p. 137 a 143",
+   "componentes": [
+    {
+     "nome": "High-touch (atendimento personalizado)",
+     "descricao": "Para os clientes mais valiosos, cuja perda seria catastrófica. Interações programadas (onboarding específico, reuniões de status mensais, avaliações executivas trimestrais ou semestrais, visitas, verificações de saúde) e não programadas, disparadas por dados. Meta de retenção de 100%. Referência de 5 a 15 contas por gerente em soluções complexas e de alta receita."
+    },
+    {
+     "nome": "Low-touch (atendimento padronizado, just-in-time)",
+     "descricao": "Para os clientes intermediários, que não justificam o tratamento de luva de pelica. Entrega exatamente o que o cliente precisa na hora certa e apenas o suficiente. Mesma lista de contatos, padronizada e menos frequente (onboarding padronizado, avaliação anual, verificações automáticas, autorrenovação), com limiares de gatilho mais altos. De 20 a 50 contas ou mais por gerente. O livro admite que o nível do meio tem fronteiras indefinidas."
+    },
+    {
+     "nome": "Tech-touch (atendimento automatizado)",
+     "descricao": "Para a cauda longa de baixo valor individual. Todos os contatos são um-para-muitos: e-mail segmentado por dados, webinars, newsletters, treinamento sob demanda, comunidades, grupos de usuários, conferências. Custo marginal quase zero. Os mesmos sinais que gerariam uma ligação no high-touch geram um e-mail."
+    },
+    {
+     "nome": "Critério de segmentação",
+     "descricao": "A métrica mais eficaz para o negócio, em geral receita recorrente anual; olhar onde está o princípio de Pareto dos 80% da receita. Dimensionar a equipe por valor de contrato e não por número de clientes."
+    },
+    {
+     "nome": "Modelo de cobertura",
+     "descricao": "Não é tamanho único e evolui com a maturidade: na fase inicial a equipe usa muitos chapéus (onboarding, treinamento, suporte, renovação) e só depois se especializa."
+    },
+    {
+     "nome": "Categorias de interação e ritmo",
+     "descricao": "Diretrizes por nível (high: várias reuniões por trimestre, avaliação trimestral, plano de sucesso, reunião com executivos; low: uma reunião pessoal por trimestre e uma reunião de alto valor por mês, on-line; tech: webinars, newsletters, campanhas por dados, portal comunitário) e um calendário anual de macrocomunicações com contato ao menos mensal com todos."
+    },
+    {
+     "nome": "Comunidade e loop de feedback",
+     "descricao": "Fóruns para os clientes se conectarem entre si e canais de feedback (pesquisas, caixas de sugestão, grupos de foco, conselhos consultivos) que alimentam produto e programa."
+    },
+    {
+     "nome": "Cálculo de capacidade",
+     "descricao": "Tempo necessário por tarefa programada mais a frequência das não programadas, descontadas as horas internas, define quantos clientes cada gerente sustenta. A primeira tentativa costuma mostrar que faltam pessoas, o que abre a conversa sobre o que eliminar ou automatizar."
+    }
+   ],
+   "logica": "Quanto maior o valor do cliente, mais horas humanas se justificam; o que muda entre os níveis é o canal e o limiar, não a lógica de dados. Interações não programadas disparadas por sinal existem nos três níveis (por exemplo, subir de 10 para 20 pedidos de suporte em 30 dias o limiar de intervenção no low-touch). A meta de retenção cai conforme se desce a pirâmide, e isso deve ser aceito explicitamente para não drenar o gerente em um ou dois clientes pequenos. O dimensionamento da equipe sai do cálculo de capacidade, não de percepção.",
+   "aplicacao_wise": "O to-be v2 já tem dois segmentos de atenção, gerenciado e atendido pelo portal. Mapeamento sugerido (inferência minha): gerenciado = high-touch mais o just-in-time do low-touch por gatilho; atendido pelo portal = tech-touch via comunidade de WhatsApp, portal e mensagens por regra. Critério de segmentação do parceiro: potencial de oportunidades compartilhadas (tamanho e qualidade da carteira ou comunidade) e, para entidades, alcance de associados e eventos. Como o programa não tem receita recorrente por parceiro, o valor do parceiro é potencial e histórico de oportunidades, e não contrato. A faixa de 5 a 15 contas por gerente é referência do livro para soluções complexas, não regra para o Wise.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Classificar o parceiro por nível de atenção",
+     "descricao": "Atribuir ao parceiro o nível gerenciado ou atendido pelo portal com base em potencial de oportunidades e saúde, e rever a cada trimestre.",
+     "gatilho": "Adesão do parceiro e revisão conjunta trimestral.",
+     "entregas": "Campo de nível no card da jornada, com a justificativa em uma linha.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Limitar a carteira gerenciada pela capacidade medida do gerente",
+     "descricao": "A carteira gerenciada nasce do cálculo de tempo por tarefa programada e não programada, e não de número fixo; quando estoura, o parceiro de menor potencial migra para o portal.",
+     "gatilho": "Fechamento mensal de capacidade ou entrada de novo parceiro gerenciado.",
+     "entregas": "Teto de parceiros gerenciados registrado e revisto a cada trimestre.",
+     "dono": "Gerente de Parcerias, com validação do Diretor"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Publicar o calendário anual de macrocomunicações",
+     "descricao": "Definir conteúdo e data de mensagens, encontros e eventos para toda a base, com ao menos um contato por mês.",
+     "gatilho": "Início do ano e revisão trimestral.",
+     "entregas": "Calendário no portal e mensagens agendadas na comunidade.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Entregar atenção just-in-time ao parceiro do portal",
+     "descricao": "Quando um sinal cruza o limiar, o parceiro do portal recebe uma mensagem ou convite no momento certo, sem reunião, e só sobe para o gerente se o sinal persistir.",
+     "gatilho": "Regra de sinal disparada pelo portal.",
+     "entregas": "Mensagem enviada, resposta registrada e decisão de escalar ou encerrar.",
+     "dono": "Portal (automático), com revisão do Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir parceiros ativos por gerente ponderados por valor",
+     "descricao": "Acompanhar a razão entre parceiros e gerente por nível e por valor e correlacionar com retenção e primeiro valor.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Indicador no painel de gestão e entrada para o portão de crescimento.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Pirâmide de três faixas: topo estreito (high-touch, poucos parceiros, muito tempo humano), meio (low-touch, just-in-time), base larga (tech-touch, canais coletivos). Ao lado, duas colunas: custo de atenção por parceiro e meta de retenção, ambas decrescendo para baixo. Uma seta horizontal comum, sinais por dados, atravessa as três faixas e muda de canal em cada uma.",
+   "citacoes": [
+    {
+     "trecho": "Aqui há sem dúvida uma hierarquia de valor do cliente e do correspondente tipo de atendimento para cada nível.",
+     "pagina": "p. 66"
+    },
+    {
+     "trecho": "O modelo low-touch é para clientes híbridos (tweener customers), que não são nem bastante grandes, nem bastante estratégicos para justificar o tratamento com luvas de pelica dispensado aos clientes high-touch",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "Sucesso do cliente JIT significa fornecer exatamente o que o cliente precisa, exatamente na hora certa.",
+     "pagina": "p. 71"
+    },
+    {
+     "trecho": "Tech-touch simplesmente significa que todos os contatos com o cliente são movidos a tecnologia. Outra maneira de dizer a mesma coisa é que todos os contatos precisam ser um-para-muitos.",
+     "pagina": "p. 75"
+    },
+    {
+     "trecho": "você constatará que a melhor maneira de determinar os índices de GCS não é por número de clientes, mas por valor de contrato (ARR).",
+     "pagina": "p. 73"
+    },
+    {
+     "trecho": "o número de contas high-touch sob a responsabilidade de um GCS pode variar de 5 a 15, enquanto os seus GCSs low-touch podem ser capazes de gerenciar de 20 a 50 contas ou até muito mais.",
+     "pagina": "p. 139"
+    }
+   ]
+  },
+  {
+   "nome": "Saúde do cliente: monitore e gerencie implacavelmente (4ª Lei), o escore de saúde",
+   "paginas": "p. 122 a 133, p. 195 a 196 e p. 228 a 232",
+   "componentes": [
+    {
+     "nome": "Previsão e gestão",
+     "descricao": "A saúde do cliente é para o customer success o que o pipeline é para vendas: prevê comportamentos futuros (renovação, upsell, evasão, risco) e o momento em que ocorrem, e permite gerir a equipe sem esperar 12 meses pela taxa de retenção."
+    },
+    {
+     "nome": "Adoção do produto",
+     "descricao": "Frequência de uso, uso dos atributos mais aderentes, quantidade de pessoas, executivos entre os usuários. É a fonte que, se só houvesse uma, seria a escolhida. Exemplo do livro: 13 de 100 licenças ativas."
+    },
+    {
+     "nome": "Suporte ao cliente",
+     "descricao": "Frequência de pedidos de ajuda, tempo médio de casos abertos e prioridade. Cliente saudável pede ajuda com alguma regularidade; excesso ou casos parados são sinal de risco."
+    },
+    {
+     "nome": "Escores de pesquisas",
+     "descricao": "O que o cliente diz diretamente quando perguntado (NPS, satisfação do projeto)."
+    },
+    {
+     "nome": "Engajamento no marketing",
+     "descricao": "Reação aos e-mails: abre, clica, baixa, cancela inscrição ou o e-mail volta."
+    },
+    {
+     "nome": "Envolvimento na comunidade",
+     "descricao": "Faz ou responde perguntas, vota em propostas de outros membros."
+    },
+    {
+     "nome": "Participação no marketing",
+     "descricao": "Dá referências, participa de estudos de caso, fala em conferências."
+    },
+    {
+     "nome": "Crescimento do contrato",
+     "descricao": "Investimento crescente do cliente é indicador claro de lealdade; contrato parado ou menor após anos é sinal."
+    },
+    {
+     "nome": "Autossuficiência",
+     "descricao": "Quem não precisa de empurrão para usar melhor tende a ser mais saudável."
+    },
+    {
+     "nome": "Histórico de pagamentos",
+     "descricao": "Clientes felizes pagam em dia."
+    },
+    {
+     "nome": "Relacionamento executivo",
+     "descricao": "Qualidade do relacionamento pessoal e altura do contato na hierarquia do cliente."
+    },
+    {
+     "nome": "Escore desdobrado e gerenciado",
+     "descricao": "Escore de 0 a 100 decomposto em componentes, para que o gerente saiba qual alavanca puxar; a ação é o ponto, não o número. Os componentes entram aos poucos, começando pelo que é factível; o livro não dá pesos e afirma que não existe método único."
+    },
+    {
+     "nome": "Onda senoidal",
+     "descricao": "A saúde sobe e desce rápido; acompanhar tendência e responder no vale e no pico (pedir indicação quando está alta, corrigir quando cai)."
+    }
+   ],
+   "logica": "Escore = análise predefinida de um conjunto discreto de dados reunidos em um único número, com componentes visíveis. Regra de uso: se o escore cai por um componente, nasce uma ação específica; atividades da equipe que não melhoram o escore são candidatas a ser abandonadas. Priorização por valor do cliente e data de renovação é insuficiente: é preciso saber quem precisa de atenção urgente e quem está bem. O escore é monitorado por sistema, mas só depois de racionalizado manualmente.",
+   "aplicacao_wise": "Proposta de escore v1 do parceiro, com pesos como hipótese minha (o livro não fornece pesos): fluxo de oportunidades 30 pontos (recência e frequência de oportunidades enviadas e recebidas nos últimos 90 dias; análogo ao uso do produto, que o livro destaca como mais revelador); resultado 25 (oportunidades que viraram negócio e comissão paga; análogo a crescimento do contrato e ROI); adoção do programa 20 (quantas das quatro portas estão ativas, uso do portal, dados do card completos, status de oportunidade atualizado no prazo); engajamento 15 (resposta no grupo de WhatsApp, presença em encontros e eventos, participação em conteúdo e indicações); relacionamento 10 (patrocinador identificado e ativo no parceiro, mais de um contato, última conversa com o gerente). Faixas de exemplo do livro: intervir abaixo de 70, pedir indicação ou propor expansão acima de 85. Calibrar após os primeiros 10 parceiros ativos, usando a correlação entre componentes e permanência e expansão. Cuidado: parceiro que questiona muito não é parceiro fracassado. Cuidado: login no portal não prova resultado; o parceiro está no programa pelo objetivo dele.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Gerenciar a saúde dos parceiros",
+     "descricao": "Conjunto contínuo de calcular o escore, detectar sinais, decidir ação e acompanhar efeito, ligado ao quadro da jornada.",
+     "gatilho": "Adesão do parceiro e rotina mensal.",
+     "entregas": "Escore e componentes no card, tendência, lista de parceiros em atenção, ações em andamento.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Calcular o escore de saúde do parceiro",
+     "descricao": "Atualizar os cinco componentes com dados do portal e registros do gerente, na primeira versão manualmente.",
+     "gatilho": "Fechamento mensal.",
+     "entregas": "Escore total, componentes e tendência de 90 dias por parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Definir limiares de intervenção e de oportunidade",
+     "descricao": "Duas linhas de corte (agir abaixo de 70; propor expansão ou pedir indicação acima de 85) e uma regra de tendência (queda superior a 15 pontos em 30 dias aciona mesmo acima de 70, valor hipotético meu).",
+     "gatilho": "Calibração a cada trimestre.",
+     "entregas": "Tabela de limiares registrada no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Acompanhar a tendência do escore",
+     "descricao": "Olhar a trajetória, e não só o nível, pelo comportamento de onda do escore.",
+     "gatilho": "Revisão mensal e trimestral.",
+     "entregas": "Gráfico de linha por parceiro no card.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Atribuir dono único do escore de cada parceiro",
+     "descricao": "Cada parceiro tem uma pessoa que responde pelo escore; hoje, o Gerente de Parcerias para todos.",
+     "gatilho": "Adesão.",
+     "entregas": "Nome do dono no card.",
+     "dono": "Diretor, que assina a atribuição"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Calibrar os pesos do escore",
+     "descricao": "Comparar componentes com permanência e expansão dos parceiros e ajustar pesos ou retirar componentes que não prevêem nada.",
+     "gatilho": "Revisão conjunta trimestral.",
+     "entregas": "Pesos atualizados e justificativa curta.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Painel do parceiro: um velocímetro de 0 a 100 no centro e cinco barras horizontais dos componentes embaixo; à direita, uma linha de tendência de 90 dias com faixas colorizadas (abaixo de 70, entre 70 e 85, acima de 85); abaixo, a lista de ações abertas ligadas ao componente mais baixo.",
+   "citacoes": [
+    {
+     "trecho": "A saúde do cliente é o coração do customer success.",
+     "pagina": "p. 122"
+    },
+    {
+     "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente.",
+     "pagina": "p. 123"
+    },
+    {
+     "trecho": "Como todas as empresas são diferentes, não existe um método único, mas aqui está uma lista de possíveis componentes da saúde do cliente que podem ser usados para estimar a saúde total",
+     "pagina": "p. 126"
+    },
+    {
+     "trecho": "Nada lhe revelará mais sobre a saúde do cliente do que se eles usam e como usam o seu produto.",
+     "pagina": "p. 126"
+    },
+    {
+     "trecho": "O desenvolvimento de um escore de saúde do cliente não é um exercício acadêmico. É uma atividade com um propósito claro.",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Compreender a onda senoidal da saúde do cliente é realmente importante, porque lhe permite aproveitar os picos e intervir nos vales.",
+     "pagina": "p. 131"
+    }
+   ]
+  },
+  {
+   "nome": "Do sinal à ação: sistema de alarme avançado, gatilhos de risco e oportunidade (do Capítulo 16 e do exemplo da Wingtip)",
+   "paginas": "p. 67, p. 102, p. 128, p. 229 a 232 e p. 248 a 253",
+   "componentes": [
+    {
+     "nome": "Sinal de risco",
+     "descricao": "Queda do uso (exemplo de 25%), muitos casos de suporte em pouco tempo (cinco em sete dias), pesquisa com nota baixa, novo usuário que não avança (menos de três páginas em sete dias), fatura atrasada, patrocinador transferido, sumiço do contato, cliente que passou 60 dias sem comprar."
+    },
+    {
+     "nome": "Sinal de oportunidade",
+     "descricao": "Mais de 80% das licenças ativas, escore de saúde acima de um limite, avaliação positiva sem caso de suporte aberto, primeiro valor atingido."
+    },
+    {
+     "nome": "Regra e limiar",
+     "descricao": "Cada sinal tem limite numérico e janela de tempo. Os limiares sobem para os níveis de menor valor (de 10 para 20 casos em 30 dias)."
+    },
+    {
+     "nome": "Canal por nível",
+     "descricao": "O mesmo sinal vira telefonema no high-touch, e-mail ou campanha no low e tech-touch. Primeiras cobranças de fatura atrasada podem ser só e-mails, depois contato por pessoa de outra área."
+    },
+    {
+     "nome": "Dono, prazo e fechamento",
+     "descricao": "A ação tem responsável, é registrada e é concluída. Métricas: ações desencadeadas, ações concluídas, presteza na identificação do risco e eficácia da atenuação."
+    },
+    {
+     "nome": "Priorização",
+     "descricao": "Quem contatar primeiro combina saúde, valor, proximidade de renovação e tempo de casa, no lugar de apenas valor mais data de renovação."
+    },
+    {
+     "nome": "Sistema central e colaboração",
+     "descricao": "Informação consolidada em um lugar, visão de 360 graus do cliente, comunicação dentro do contexto do registro, e tarefas delegáveis a pessoas fora da equipe."
+    },
+    {
+     "nome": "Aprendizado",
+     "descricao": "Medir o que funcionou, testar variantes (testes A/B nas mensagens), e repetir o que funcionou."
+    }
+   ],
+   "logica": "Dados do cliente já existem espalhados; o ganho vem de reuni-los, ligar a eles regras de limiar e transformar cada disparo em ação com dono. A primeira proposta de valor de qualquer ferramenta de sucesso do cliente é um sistema de alarme avançado. Regra de ouro: não contatar quem não precisa ser contatado. Cada contato é raro e precioso e deve chegar com informação (o telefonema de checagem vira um telefonema informado pelos dados).",
+   "aplicacao_wise": "Tabela inicial de regras para o portal (limiares são hipóteses minhas): parceiro sem nenhuma oportunidade enviada ou recebida em 45 dias, ação do gerente se for gerenciado e mensagem no grupo se for do portal; oportunidade do parceiro parada na mesma etapa por mais de 14 dias, o gerente fala com o closer; troca do contato ou do patrocinador no parceiro, reforçar o relacionamento e apresentar o programa ao novo contato; escore cruza abaixo de 70, ação ligada ao componente mais baixo; escore acima de 85 sem indicação recente, pedir indicação, depoimento ou abertura de nova porta; primeiro valor atingido, comemorar e propor a próxima meta; parceiro sem resposta no grupo por 30 dias, tentativa individual. Como não há SLA interno, o tempo de parada da oportunidade com o closer vira sinal visível, não obrigação contratual. Registrar o resumo da conversa do WhatsApp no card, para que o contexto não se perca.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Disparar ação a partir de sinal de risco ou oportunidade",
+     "descricao": "O portal compara dados do parceiro com as regras e cria uma tarefa na fila por exceção, com dono, prazo e canal sugerido.",
+     "gatilho": "Regra cruzada pelo dado do parceiro.",
+     "entregas": "Tarefa na fila de exceção com sinal de origem, componente afetado e ação sugerida.",
+     "dono": "Portal (cria a tarefa), Gerente de Parcerias (executa)"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Escalonar limiares e canais por nível de atenção",
+     "descricao": "Parceiro gerenciado recebe contato humano; parceiro do portal recebe mensagem e só chega ao gerente quando o sinal persiste por dois ciclos.",
+     "gatilho": "Definição inicial e revisão trimestral.",
+     "entregas": "Tabela de regras com limiar e canal por nível.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Fechar a ação e registrar o resultado",
+     "descricao": "Toda tarefa disparada termina com resultado (resolvido, em acompanhamento, parceiro perdido, falso positivo) e aprendizado.",
+     "gatilho": "Conclusão da tarefa.",
+     "entregas": "Campo de resultado e nota curta no card.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir ações disparadas e concluídas",
+     "descricao": "Contar tarefas abertas por regra, taxa de conclusão no prazo e efeito no escore após a ação.",
+     "gatilho": "Fechamento mensal.",
+     "entregas": "Painel de tarefas por regra.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Revisar a eficácia das regras",
+     "descricao": "Eliminar regras que geram ruído e ajustar limiares com base nos falsos positivos e nos riscos que passaram sem alerta.",
+     "gatilho": "Revisão conjunta trimestral.",
+     "entregas": "Lista de regras mantidas, alteradas e retiradas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Registrar no card o resumo das conversas do WhatsApp",
+     "descricao": "Anotar decisão, compromisso e sentimento de cada conversa relevante do grupo do parceiro, para o escore e para a transição de dono.",
+     "gatilho": "Conversa com decisão ou sinal.",
+     "entregas": "Nota datada no card.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Fluxo horizontal em seis caixas: dado do parceiro, regra com limiar, sinal, tarefa com dono e prazo, canal (conversa, mensagem, grupo), resultado registrado. Uma seta de retorno do resultado volta à regra, indicando recalibração.",
+   "citacoes": [
+    {
+     "trecho": "As interações não programadas são, em geral, movidas a dados e proativas, por iniciativa do fornecedor em relação a cada cliente, com o objetivo de atenuar a percepção de risco baseada em dados",
+     "pagina": "p. 67"
+    },
+    {
+     "trecho": "O alerta de quando o cliente superou certo limite de pedidos de suporte, talvez três numa semana, desencadeia um plano de ação, como um telefonema ou uma campanha de e-mails.",
+     "pagina": "p. 102"
+    },
+    {
+     "trecho": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Temos 17 clientes cujo uso de nossos principais atributos caiu mais de 20% nos últimos seis meses e que não responderam ou nos deram uma avaliação negativa na última pesquisa.",
+     "pagina": "p. 231"
+    },
+    {
+     "trecho": "Algumas das regras se referem ao risco (25% de queda no uso) e outras tratam de oportunidades (mais de 80% das licenças da Financiality estão ativas).",
+     "pagina": "p. 251"
+    },
+    {
+     "trecho": "Informações consolidadas factíveis, reunidas em um sistema que dispara e acompanha todos os contatos com os clientes, humanos ou tecnológicos. Assim é que se priorizam as interações com os clientes e se otimiza o tempo da equipe.",
+     "pagina": "p. 232"
+    }
+   ]
+  },
+  {
+   "nome": "Resultado desejado, jornada e time-to-value (3ª e 7ª Leis)",
+   "paginas": "p. 108 a 120, p. 161 a 171 e p. 248 a 254",
+   "componentes": [
+    {
+     "nome": "Três perguntas do sucesso",
+     "descricao": "Como o cliente mede o sucesso (unidade de medida e resultado que declara vitória)? Está chegando lá, no prazo esperado? Como tem sido a experiência no caminho?"
+    },
+    {
+     "nome": "Métricas de sucesso concretas",
+     "descricao": "Definidas cedo com o patrocinador do negócio, ainda na venda, validadas na partida do onboarding e reconfirmadas a cada marco. O onboarding só começa depois delas."
+    },
+    {
+     "nome": "Linha de partida e meta",
+     "descricao": "Sem linha de partida e sem meta, o desempenho atual do cliente tem valor limitado. O ROI é uma equação, não um conceito."
+    },
+    {
+     "nome": "Primeiro valor (Fase 1)",
+     "descricao": "Marco inicial com prazo, prova de conceito simples, para evitar o vale da desilusão e dar ao patrocinador argumento interno."
+    },
+    {
+     "nome": "Implantação iterativa",
+     "descricao": "Começar pela medida mais simples ou por um grupo, divisão ou produto, e só então ampliar. Não ferver o oceano."
+    },
+    {
+     "nome": "Adaptação em tempo real",
+     "descricao": "Depois do onboarding, a prioridade máxima do gerente é garantir que o cliente alcance o valor prometido; agir no momento em que o valor esperado está em risco."
+    },
+    {
+     "nome": "Avaliação periódica do negócio",
+     "descricao": "Conversa trimestral que acompanha os objetivos definidos em conjunto e termina fixando os objetivos da próxima; pauta só de roteiro de produto e casos abertos é defensiva."
+    },
+    {
+     "nome": "Sucesso como jornada",
+     "descricao": "Depois do valor inicial, o fornecedor ajuda o cliente a definir o próximo patamar (como as melhores empresas fazem), que é também o caminho da expansão."
+    },
+    {
+     "nome": "Os primeiros 90 dias",
+     "descricao": "Roteiro de marcos automáticos e humanos (contrato, apresentação do gerente, partida, entrega, pesquisa de satisfação, NPS aos 90 dias, avaliação executiva) em que se concentra o maior risco de evasão."
+    }
+   ],
+   "logica": "Valor percebido cai depois da compra se nada for entregue; entregar uma primeira vitória cedo mantém a curva ascendente. Há correlação direta entre o prazo para o valor e a probabilidade de renovação. O cliente participa com graus diferentes de capacidade, mas o fornecedor carrega o ônus de fazer a hora. Upsell só é possível depois que o cliente extrai valor real, e é, do ponto de vista dele, ampliar o retorno do investimento.",
+   "aplicacao_wise": "Para o parceiro, o equivalente é (a) ficha de resultado desejado escrita na adesão (o que ele mede, linha de base, meta em 90 dias), (b) primeiro valor definido como a primeira oportunidade útil, enviada ou recebida, e (c) onboarding de 90 dias em fatias, uma porta por vez. A revisão conjunta trimestral do to-be v2 funciona como a avaliação periódica do negócio e deve sempre terminar fixando a meta do trimestre seguinte. O livro diz que o cliente que alcança o resultado vira o parceiro mais valioso, o advogado, que recomenda; no programa isso se liga à Base Ativa e à indicação por link. Nenhum parceiro assinado ainda, então o roteiro é hipótese a testar nos primeiros.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Definir o resultado desejado do parceiro",
+     "descricao": "Conversa de adesão que registra unidade de medida, linha de base e meta de 90 dias do parceiro, e o que seria sucesso extraordinário na visão dele.",
+     "gatilho": "Assinatura do termo de adesão.",
+     "entregas": "Ficha de resultado no card da jornada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Conduzir o onboarding de 90 dias do parceiro",
+     "descricao": "Sequência de marcos: boas-vindas, escolha da primeira porta, primeira oportunidade, revisão aos 30, 60 e 90 dias, pesquisa curta de satisfação e abertura de segunda porta.",
+     "gatilho": "Adesão.",
+     "entregas": "Checklist de marcos no card e relatório de entrada em operação.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir o time-to-first-value do parceiro",
+     "descricao": "Dias entre adesão e primeira oportunidade útil (enviada ou recebida) ou primeira comissão, conforme definido na ficha.",
+     "gatilho": "Cada parceiro novo.",
+     "entregas": "Indicador por parceiro e média por coorte.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Reconfirmar as métricas de sucesso a cada marco",
+     "descricao": "Perguntar ao parceiro, em cada marco, se o resultado combinado continua sendo o certo.",
+     "gatilho": "Marcos de 30, 60 e 90 dias.",
+     "entregas": "Ficha de resultado atualizada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Transformar a revisão conjunta trimestral em avaliação de resultado",
+     "descricao": "A pauta passa a ser o resultado contra a meta, a saúde, e a meta do próximo trimestre, e não apenas lista de oportunidades.",
+     "gatilho": "Calendário trimestral.",
+     "entregas": "Ata curta com meta do próximo trimestre e plano de ação.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Registrar patrocinador e segundo contato por parceiro",
+     "descricao": "Cada parceiro tem um patrocinador e ao menos um segundo contato conhecido, para não depender de uma pessoa.",
+     "gatilho": "Adesão e mudança de contato.",
+     "entregas": "Campos obrigatórios no card.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Linha do tempo de 0 a 90 dias com marcos (adesão, ficha de resultado, primeira porta, primeira oportunidade, revisão aos 90 dias). Sobre ela, duas curvas de valor percebido: uma que cai no vale da desilusão se nada é entregue, outra ascendente quando há marco de primeiro valor.",
+   "citacoes": [
+    {
+     "trecho": "qual é a unidade de medida do cliente (economia de tempo, incremento de receita, redução de custos, impacto financeiro específico decorrente da melhoria da qualidade), e de que resultados o cliente precisa para declarar vitória?",
+     "pagina": "p. 109"
+    },
+    {
+     "trecho": "A não ser que você comece logo a entregar valor enquanto os executivos ainda estão entusiasmados, você corre o risco de perder o impulso e despencar no que Gartner denominou vale da desilusão",
+     "pagina": "p. 110"
+    },
+    {
+     "trecho": "se a experiência deles for dolorosa e exigir mais esforço do que eles consideram necessário, você aumentou significativamente os custos deles (tanto tangíveis quanto intangíveis) para atingir o sucesso e, portanto, também aumentou a probabilidade de evasão (churn).",
+     "pagina": "p. 113"
+    },
+    {
+     "trecho": "ao fim de cada ATN, você estabeleça os objetivos para a próxima ATN.",
+     "pagina": "p. 114"
+    },
+    {
+     "trecho": "Não tente ferver o oceano. A maneira mais rápida de extrair valor é começar a cumprir os critérios mais fáceis.",
+     "pagina": "p. 165"
+    },
+    {
+     "trecho": "os primeiros 90 dias da vida de um cliente são muito importantes",
+     "pagina": "p. 253"
+    }
+   ]
+  },
+  {
+   "nome": "Evasão e retenção: causas, sinais de advertência e medição em cinco passos (2ª e 8ª Leis)",
+   "paginas": "p. 96 a 107 e p. 172 a 184",
+   "componentes": [
+    {
+     "nome": "Retorno ou valor do negócio não realizado",
+     "descricao": "Indício: queda do uso ou inatividade depois da assinatura. Providência: orientar o cliente nas fases de adoção até extrair valor cedo."
+    },
+    {
+     "nome": "Implantação paralisada ou demorada",
+     "descricao": "Indício: o cliente não consegue pôr o produto em operação. Providência: pacotes com melhor time-to-value e fases curtas."
+    },
+    {
+     "nome": "Perda do patrocinador ou do usuário avançado",
+     "descricao": "Indício: contato esquivo. Providência: treinar mais de uma pessoa e manter relacionamento de alto nível."
+    },
+    {
+     "nome": "Baixa adoção",
+     "descricao": "Quem não usa para suas necessidades volta ao método antigo. Providência: programa de avaliação de necessidades e jornada de uso, e biblioteca de histórias de retorno."
+    },
+    {
+     "nome": "Aquisição por empresa que adota outra solução",
+     "descricao": "Evasão em boa parte inevitável. Providência: expor valor aos novos líderes quando houver espaço."
+    },
+    {
+     "nome": "Falta de atributos do produto",
+     "descricao": "Indício: pedidos de novos atributos ou preço. Providência: gerente conhece o roteiro do produto e leva o feedback aos responsáveis."
+    },
+    {
+     "nome": "Novos líderes mudam o rumo",
+     "descricao": "Indício: pedem para participar de um pedido de propostas. Providência: ação proativa com o patrocinador, tomar a dianteira do processo."
+    },
+    {
+     "nome": "Qualidade ou desempenho do produto",
+     "descricao": "Indício: aumento de pedidos de suporte. Providência: alerta por limite, escalonar, atualizar sem ser cobrado."
+    },
+    {
+     "nome": "Produto não é a solução certa",
+     "descricao": "Vendas criativas forçaram um encaixe ruim. Providência: educar vendas e participar da qualificação."
+    },
+    {
+     "nome": "Fator humano",
+     "descricao": "A relação entre cliente e pessoa do fornecedor não funciona. Providência: ouvir o feedback e trocar rápido se preciso."
+    },
+    {
+     "nome": "Evasão parcial",
+     "descricao": "Perda de parte do valor sem sair: cancelar um produto, devolver licenças, pedir desconto maior."
+    },
+    {
+     "nome": "Evasão inevitável (morte e casamento)",
+     "descricao": "Falências e aquisições, separadas da evitável para priorizar a ação."
+    },
+    {
+     "nome": "Medição em cinco passos",
+     "descricao": "1) Definir o que se mede e os componentes (novos, adicionais, renovações, evasão). 2) Período e frequência (medir mais curto, reportar anualizado). 3) Valor esperado e categorias de evasão. 4) Como identificar risco: interações humanas mais sinais e dados. 5) Alinhar com a liderança um conjunto padrão de definições e relatórios por dimensão (setor, porte, tempo, canal, gerente)."
+    },
+    {
+     "nome": "Registro de motivos e entrevistas de saída",
+     "descricao": "Lista padronizada de motivos mais campo livre; preferir terceiros neutros para entrevistar os que saíram."
+    }
+   ],
+   "logica": "A evasão não é aleatória; os sinais existem antes da saída. Detectar e agir com base em dados é a solução, e entender a composição do valor (novo, adicional, renovado, perdido) mostra de onde vem a variação. A retenção líquida resume o resultado. A separação entre evitável e inevitável evita gastar energia onde não há o que fazer. Como a maior parte do risco está no início do ciclo ou na primeira renovação, a atenção deve ser mais intensa nesses períodos.",
+   "aplicacao_wise": "Tradução sugerida (inferência minha): evasão do parceiro = dormência (sem oportunidade enviada ou recebida em 90 dias), saída formal ou redução de portas ativas (evasão parcial); evasão inevitável = parceiro adquirido, mudança de estratégia, fechamento. Como o parceiro não tem contrato com data de renovação, a revisão conjunta trimestral é o evento de renovação. Medir por trimestre: parceiros ativos no início, novos, expansão (novas portas ou mais oportunidades), evasão parcial, evasão total, ativos no fim, com corte por tipo de parceiro, porta de entrada e nível. Registrar o motivo em lista padronizada. Conversas de saída com parceiros de alto potencial, feitas por quem não é o gerente (o Diretor ou outra pessoa), quando existirem parceiros que saíram.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Definir o critério de dormência do parceiro",
+     "descricao": "Parceiro sem oportunidade enviada ou recebida em 90 dias entra na lista de dormentes e recebe sequência de reengajamento; o prazo é hipótese minha.",
+     "gatilho": "Fechamento mensal.",
+     "entregas": "Marcação automática no card e lista de dormentes.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Registrar o motivo de pausa ou saída do parceiro",
+     "descricao": "Escolher motivo em lista padronizada (evitável ou inevitável) e acrescentar comentário.",
+     "gatilho": "Parceiro vira dormente, reduz portas ou sai.",
+     "entregas": "Motivo e comentário no card.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Calcular retenção bruta e líquida de parceiros por trimestre",
+     "descricao": "Aplicar o desdobramento novos, expansão, evasão parcial e evasão total ao conjunto de parceiros ativos.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Quadro de retenção no painel de gestão.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Conduzir conversa de saída com parceiro dormente de alto potencial",
+     "descricao": "Entrevista curta para entender o que mudou e o que teria evitado, preferencialmente por pessoa diferente do gerente.",
+     "gatilho": "Parceiro de alto potencial dormente ou que saiu.",
+     "entregas": "Resumo de uma página e lição aplicada.",
+     "dono": "Diretor ou pessoa indicada por ele"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Mapear sinais de risco por motivo de evasão",
+     "descricao": "Montar matriz motivo, indício e providência, partindo da lista do livro e ajustando com os dados.",
+     "gatilho": "Antes do primeiro trimestre completo.",
+     "entregas": "Matriz registrada no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Reportar evasão e retenção na revisão conjunta trimestral por dimensão",
+     "descricao": "Mostrar retenção e evasão por tipo de parceiro, porta de entrada e nível, e destacar o efeito de novos processos.",
+     "gatilho": "Calendário trimestral.",
+     "entregas": "Página de retenção no material da revisão.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Gráfico em cascata por trimestre: barra de parceiros ativos no início, degraus positivos (novos, expansão), degraus negativos (evasão parcial, evasão total, separando em evitável e inevitável) e barra final. Abaixo, uma tabela de motivos por frequência.",
+   "citacoes": [
+    {
+     "trecho": "tanto as pesquisas quanto as experiências casuísticas indicam que a evasão não ocorre ao acaso.",
+     "pagina": "p. 98"
+    },
+    {
+     "trecho": "A solução eficaz é adotar medidas para detectar os sinais de advertência e agir com base em dados ao perceber os indícios.",
+     "pagina": "p. 98"
+    },
+    {
+     "trecho": "Trata-se simplesmente da perda de parte do valor financeiro do contrato numa situação em que o cliente não deixa a empresa.",
+     "pagina": "p. 98"
+    },
+    {
+     "trecho": "Indícios: O cliente se torna esquivo. Você não consegue acessar o dono ou sponsor do projeto.",
+     "pagina": "p. 100"
+    },
+    {
+     "trecho": "Para referência, a evasão inevitável geralmente é chamada de death and marriage (morte e casamento). Em outras palavras, a evasão resultante de falências ou aquisições geralmente é aceita como inevitável.",
+     "pagina": "p. 176"
+    },
+    {
+     "trecho": "Defina o que você está medindo e os componentes da RRMC.",
+     "pagina": "p. 174"
+    }
+   ]
+  },
+  {
+   "nome": "As dez leis do Customer Success (The Ten Laws of Customer Success, Bessemer Venture Partners, 2015)",
+   "paginas": "p. 82 a 207",
+   "componentes": [
+    {
+     "nome": "1ª Lei: venda ao cliente certo",
+     "descricao": "Defina o cliente ideal com dados, qualifique no funil, dê voz e até veto ao customer success, alinhe incentivos de vendas à retenção. Quase toda a evasão nasce na venda."
+    },
+    {
+     "nome": "2ª Lei: a tendência natural de clientes e fornecedores é se afastarem",
+     "descricao": "A mudança é a inimiga; só o contato proativo e premeditado supera a deriva. Lista de causas de evasão, indícios e providências."
+    },
+    {
+     "nome": "3ª Lei: os clientes esperam que você os torne extremamente bem-sucedidos",
+     "descricao": "Entender como o cliente mede o sucesso, se está chegando lá e como é a experiência; desafiar o cliente com perguntas difíceis e elevar o nível."
+    },
+    {
+     "nome": "4ª Lei: monitore e gerencie implacavelmente a saúde do cliente",
+     "descricao": "Escore de saúde desdobrado em componentes; monitorar por sistema e gerenciar com ação."
+    },
+    {
+     "nome": "5ª Lei: não é mais possível construir a lealdade com relacionamentos pessoais",
+     "descricao": "Segmentação, modelo de cobertura, categorias de interação, ritmo, comunidade e loop de feedback; lealdade por valor."
+    },
+    {
+     "nome": "6ª Lei: o produto é o seu único diferencial escalável",
+     "descricao": "Produto fácil de usar e autossuficiência; conselhos consultivos e comunidades de prática; gerentes como gerentes de produto de campo."
+    },
+    {
+     "nome": "7ª Lei: melhore obsessivamente o time-to-value",
+     "descricao": "Medidas de sucesso concretas, implantação iterativa, adaptação em tempo real."
+    },
+    {
+     "nome": "8ª Lei: compreenda em profundidade as métricas do cliente",
+     "descricao": "Cinco passos para medir evasão e retenção, com desdobramento e registro de motivos."
+    },
+    {
+     "nome": "9ª Lei: impulsione o sucesso do cliente com métricas rigorosas",
+     "descricao": "Modelo de maturidade de cinco níveis; métricas de comportamento do cliente, atividade do gerente e resultados do negócio; retenção líquida como métrica-chave."
+    },
+    {
+     "nome": "10ª Lei: é um compromisso de cima para baixo, de toda a empresa",
+     "descricao": "Definir sucesso, alinhar áreas, ouvir e empoderar o customer success, medir, relatar, incentivar, comemorar. É o fundamento das outras leis."
+    }
+   ],
+   "logica": "As leis respondem à pergunta do que a empresa precisa fazer para ser ótima em customer success e construir um negócio de receita recorrente. Agrupamento inferido por mim para uso no Wise: entrada (1ª e 7ª), manutenção contínua (2ª, 3ª e 4ª), escala (5ª e 6ª), medição (8ª e 9ª) e base (10ª). Nem todas se aplicam igualmente; o livro indica a relevância de cada uma para tipos de empresa e para cada modelo de contato.",
+   "aplicacao_wise": "Aplicáveis diretamente ao programa: 1ª (encaixe), 2ª (contato proativo), 3ª (resultado do parceiro), 4ª (escore), 5ª (comunidade e cobertura), 7ª (primeiro valor), 8ª e 9ª (retenção líquida e processo medido) e 10ª (Diretor e a Wise inteira). A 6ª fala do produto; aqui o equivalente é o portal e a clareza da oferta ao parceiro, o que é analogia minha. Princípio de leitura: o livro aborda clientes pagantes, e os parceiros recebem comissão; a lógica econômica não se transfere sem adaptação.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Aplicar filtro leve de encaixe na adesão do parceiro",
+     "descricao": "Três perguntas de encaixe na adesão, com registro das respostas para calibrar com dados depois; não barra adesão no início.",
+     "gatilho": "Adesão.",
+     "entregas": "Respostas no card e hipótese de perfil ideal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Manter contato mensal com todos os parceiros",
+     "descricao": "Ao menos um contato por mês por canal coletivo e gatilhos por parceiro.",
+     "gatilho": "Calendário mensal.",
+     "entregas": "Mensagens enviadas e respostas registradas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Atribuir ao Gerente de Parcerias a responsabilidade pela retenção líquida de parceiros",
+     "descricao": "Meta explícita de retenção líquida e de saúde média, ao lado de novos parceiros.",
+     "gatilho": "Início do ciclo anual.",
+     "entregas": "Metas registradas e painel visível ao Diretor.",
+     "dono": "Diretor"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir retenção líquida e escore de saúde como metas principais",
+     "descricao": "Duas métricas no topo do painel, as mesmas em todos os níveis.",
+     "gatilho": "Fechamento trimestral.",
+     "entregas": "Painel de gestão.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Levar o painel de retenção ao Diretor antes da assinatura trimestral",
+     "descricao": "O Diretor recebe uma página antes de assinar, com uma pergunta de decisão.",
+     "gatilho": "Ciclo trimestral.",
+     "entregas": "Página de retenção e uma pergunta.",
+     "dono": "Diretor"
+    }
+   ],
+   "visual": "Dez cartões em cinco faixas: entrada (1 e 7), manutenção (2, 3, 4), escala (5, 6), medição (8, 9) e base (10), esta última como uma barra horizontal sob todas as outras. Cada cartão com ícone da lei e uma ação do Wise.",
+   "citacoes": [
+    {
+     "trecho": "O que minha empresa precisa fazer para ser ótima em customer success e para construir um negócio repleto de receitas recorrentes?",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "Noventa e nove por cento da evasão ocorre na época da venda",
+     "pagina": "p. 91"
+    },
+    {
+     "trecho": "Somente a interação proativa e premeditada por parte de uma ou de ambas as empresas superará a deriva natural provocada pela mudança constante.",
+     "pagina": "p. 97"
+    },
+    {
+     "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente.",
+     "pagina": "p. 123"
+    },
+    {
+     "trecho": "Os clientes não renovam, nem ficam com você, nem compram mais de você a não ser que, ou até que, você realmente lhes entregue valor.",
+     "pagina": "p. 162"
+    },
+    {
+     "trecho": "Esta é, literalmente, o fundamento de todas as outras leis.",
+     "pagina": "p. 203"
+    }
+   ]
+  }
+ ],
+ "respostas_abertas": {
+  "fatores_e_tipos": "O livro não trata de alianças ou parcerias estratégicas; trata de clientes de receita recorrente. Não existe nele uma lista de fatores que definem uma parceria. O que ele oferece é uma lógica de segmentação do cliente que pode ser transposta, e a transposição é inferência minha. Quatro variáveis decidem como tratar cada cliente: (1) encaixe (cliente certo: caso de uso, setor, porte, definido com dados e não com casos); (2) valor (receita recorrente e potencial de expansão; olhar onde está o Pareto dos 80%), que define quanta atenção humana se paga; (3) saúde (escore desdobrado em componentes, com tendência), que define quando e onde agir dentro de cada nível, pois valor sozinho, mesmo com data de renovação, não é critério sofisticado para priorizar; (4) estágio do ciclo (primeiros 90 dias e primeira renovação concentram o maior risco). Sobre a dúvida do patrocinador quanto aos três fatores de Strategic Alliances: o critério do livro para aceitar um fator é empírico. Um fator entra no escore se correlacionar com retenção e expansão, e a correlação é testada com dados. Recomendo tratar qualidade da parceria, inovação colaborativa e criação de valor como hipóteses a testar contra os primeiros parceiros, e não como regra. REGRA LÓGICA PROPOSTA (inferência minha, com base nas variáveis acima): tipo = estágio primeiro, depois valor por saúde. Tipo Em ativação: qualquer parceiro nos primeiros 90 dias, onboarding por marcos independentemente do valor. Tipo Motor: valor alto e saúde alta ou subindo, ação de expansão (nova porta, evento conjunto, indicação, depoimento) e plano trimestral. Tipo Em risco estratégico: valor alto e saúde baixa ou em queda, intervenção pessoal em prazo curto, diagnóstico por componente e plano de recuperação. Tipo Autônomo: valor baixo e saúde alta, portal, comunidade, convite a eventos e pedido de indicação. Tipo Cauda em risco: valor baixo e saúde baixa, mensagem just-in-time, nenhuma reunião, meta de retenção menor aceita. Tipo Dormente: sem atividade além do critério (por exemplo, 90 dias), sequência de reengajamento e conversa de saída apenas se o potencial for alto. Analogia com recência, frequência e valor: o livro não usa RFV, mas os componentes de uso dão recência e frequência (frequência de uso, queda de uso, alarme de 60 dias sem comprar), e o valor é o potencial ou a receita gerada.",
+  "abordagem_por_tipo": "O livro dá cadência por modelo de atendimento, e não por tipo de parceiro; o mapeamento abaixo é inferência minha. Alto toque (tipos Motor e Em risco estratégico): várias reuniões pessoais por trimestre conforme as iniciativas do cliente, avaliação trimestral do negócio, plano de sucesso, reunião com a equipe executiva; interações não programadas por gatilho; meta de retenção próxima de 100%; referência de 5 a 15 contas por gerente em soluções complexas. Toque padronizado (parte dos Motor, Autônomo valioso): uma reunião pessoal por trimestre ou conforme a necessidade e ao menos uma reunião de alto valor por mês, on-line; onboarding padronizado; verificações de saúde automáticas; avaliação anual; limiares de gatilho mais altos; de 20 a 50 contas ou mais por gerente. Toque tecnológico (Autônomo, Cauda em risco, Dormente): webinars sobre adoção, newsletters mensais ou trimestrais, campanhas por dados, treinamento sob demanda, portal comunitário; contato ao menos mensal por macrocomunicação. Em ativação: roteiro dos 90 dias do exemplo da Wingtip: apresentação do gerente, reunião de partida, marcos, pesquisa de satisfação, NPS aos 90 dias, avaliação executiva ao fim do trimestre. Para o Wise: o grupo de WhatsApp por parceiro é um canal de alto toque por construção; o livro sugere reservá-lo ao nível gerenciado e usar, para o restante, um canal coletivo e mensagens por regra (ver tensões).",
+  "portoes_de_fase": "O livro não fala de fases de programa nem de metas escalonadas de parceiros. Oferece um modelo de maturidade de processos de cinco níveis, que pode servir de régua para os portões (inferência minha): Nível 1 inicial (ações heroicas, sem repetibilidade), Nível 2 replicável (o processo repete os sucessos), Nível 3 definido (documentado e padronizado), Nível 4 gerenciado (medido) e Nível 5 otimizado (melhoria consistente). Mapeamento sugerido: experimentação = níveis 1 e 2; tração = nível 3; crescimento = níveis 4 e 5. Portões por capacidade (não pelos números, que não existem no livro): Portão 1 (de experimentação para tração): o onboarding e o ciclo sinal, ação, resultado foram executados com vários parceiros sem esforço heroico; ficha de resultado escrita para todos; escore v1 calculado à mão para todos; time-to-first-value medido para cada parceiro novo. Portão 2 (de tração para crescimento): processos documentados no portal e escore calculado pelo portal; dois níveis de atenção em operação; retenção bruta medida por pelo menos dois trimestres; a capacidade do gerente definida por métrica e não por persuasão. Condição de crescimento: contratar outra pessoa só quando a contribuição de cada gerente adicional puder ser descrita em resultado. Ordens de grandeza que eu proporia, sem respaldo do livro, para o patrocinador ajustar: de 5 a 10 parceiros ativados e metade chegando ao primeiro valor em 90 dias para sair da experimentação; retenção bruta de parceiros acima de 80% e retenção líquida acima de 100% por dois trimestres para entrar em crescimento. O exemplo fictício da Wingtip mostra uma empresa que, ao crescer, parou de vender contratos anuais inferiores a US$ 10.000, o que sugere (inferência minha) elevar o filtro de encaixe só na fase de crescimento.",
+  "simplicidade": "O livro defende simplicidade operacional em cinco pontos, que sustentam a preferência do patrocinador por um programa simples: (1) começar o escore de saúde por algo factível e compreensível, mesmo que seja um único componente; (2) racionalizar à mão antes de automatizar, para não pavimentar o caminho das vacas; (3) um único dono para a retenção, com autoridade; (4) poucos níveis de atenção, aceitando que o nível do meio tem fronteiras indefinidas; (5) implantar em fatias e começar pela medida mais simples. A regra única de comissão é compatível com isso, e a diferença entre parceiros deve morar na atenção e não no pagamento (inferência minha). O que não deve ser simplificado: a definição do resultado do parceiro, o registro de motivos e a regra de ação para cada sinal. Simples também significa poucas regras de gatilho (6 a 8) e um painel com poucos números, para que o único gerente não vire um despachante de alertas.",
+  "citacoes": [
+   {
+    "trecho": "Como todas as empresas são diferentes, não existe um método único, mas aqui está uma lista de possíveis componentes da saúde do cliente que podem ser usados para estimar a saúde total",
+    "pagina": "p. 126"
+   },
+   {
+    "trecho": "O valor do cliente sozinho, ou mesmo conjugado com a data de renovação, não é bastante sofisticado como critério de priorização",
+    "pagina": "p. 230"
+   },
+   {
+    "trecho": "O truque, evidentemente, é correlacionar métricas de uso com obtenção de valor para o negócio do cliente e determinar como essas variáveis, no final das contas, afetarão a retenção e a expansão.",
+    "pagina": "p. 188"
+   },
+   {
+    "trecho": "a transposição para o Nível 3 de maturidade (definido) se completa quando o processo já está documentado, padronizado e integrado como padrão para toda a organização.",
+    "pagina": "p. 187"
+   },
+   {
+    "trecho": "Tudo bem, porque você precisa começar com algo factível e compreensível.",
+    "pagina": "p. 127"
+   },
+   {
+    "trecho": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!",
+    "pagina": "p. 129"
+   }
+  ]
+ },
+ "recomendacoes": [
+  {
+   "tema": "Resultado desejado do parceiro",
+   "recomendacao": "Registrar na adesão uma ficha de uma página com o resultado que o parceiro quer, a unidade de medida e a linha de base, e reconfirmar a cada marco de 30, 60 e 90 dias.",
+   "processo": "Definir o resultado desejado do parceiro",
+   "citacao": "qual é a unidade de medida do cliente (economia de tempo, incremento de receita, redução de custos, impacto financeiro específico decorrente da melhoria da qualidade), e de que resultados o cliente precisa para declarar vitória?",
+   "pagina": "p. 109",
+   "aplicabilidade": "alta",
+   "porque": "Sem isso não há como provar valor, e o programa vira lista de oportunidades. É a base do escore e da revisão trimestral."
+  },
+  {
+   "tema": "Escore de saúde v1",
+   "recomendacao": "Montar um escore de saúde do parceiro com cinco componentes (fluxo de oportunidades, resultado, adoção, engajamento, relacionamento), começando pelo que o portal já registra e calculando à mão nos primeiros parceiros.",
+   "processo": "Calcular o escore de saúde do parceiro",
+   "citacao": "Tudo bem, porque você precisa começar com algo factível e compreensível.",
+   "pagina": "p. 127",
+   "aplicabilidade": "alta",
+   "porque": "O livro manda começar com algo factível e compreensível. Os pesos são hipóteses minhas, já que o livro não dá pesos."
+  },
+  {
+   "tema": "Escore desdobrado no card",
+   "recomendacao": "Exibir no card do parceiro o escore total e cada componente, de modo que a queda aponte a ação.",
+   "processo": "Gerenciar a saúde dos parceiros",
+   "citacao": "Esses componentes da saúde total são extremamente importantes para os gerentes de customer success (GCSs), porque lhes fornecem recursos para mudar o escore total.",
+   "pagina": "p. 128",
+   "aplicabilidade": "alta",
+   "porque": "Escore sem componentes obriga a ferver o oceano; com componentes, o gerente sabe qual alavanca puxar."
+  },
+  {
+   "tema": "Limiares de intervenção",
+   "recomendacao": "Adotar como ponto de partida dois limiares de exemplo do livro, 70 para agir e 85 para pedir indicação ou propor expansão, e recalibrar com dados.",
+   "processo": "Definir limiares de intervenção e de oportunidade",
+   "citacao": "ou posso limitar esse tipo de intervenção apenas aos clientes com escore de saúde abaixo de 70.",
+   "pagina": "p. 132",
+   "aplicabilidade": "media",
+   "porque": "Os números são exemplos do livro e não serão adequados sem dados; servem de ponto de partida para o primeiro ciclo."
+  },
+  {
+   "tema": "Gatilhos de sinal",
+   "recomendacao": "Escrever de 6 a 8 regras de gatilho com limite numérico e janela de tempo, para risco e para oportunidade, no estilo das regras do exemplo da Wingtip.",
+   "processo": "Disparar ação a partir de sinal de risco ou oportunidade",
+   "citacao": "Algumas das regras se referem ao risco (25% de queda no uso) e outras tratam de oportunidades (mais de 80% das licenças da Financiality estão ativas).",
+   "pagina": "p. 251",
+   "aplicabilidade": "alta",
+   "porque": "Dá concretude ao princípio sinal gera ação e alimenta a fila de exceções. Poucas regras evitam ruído."
+  },
+  {
+   "tema": "Onboarding do parceiro",
+   "recomendacao": "Tratar os primeiros 90 dias como jornada de onboarding com marcos, pesquisa curta ao fim e conversa de balanço.",
+   "processo": "Conduzir o onboarding de 90 dias do parceiro",
+   "citacao": "os primeiros 90 dias da vida de um cliente são muito importantes",
+   "pagina": "p. 253",
+   "aplicabilidade": "alta",
+   "porque": "O maior risco de evasão está no começo do ciclo; no programa, não há evento de renovação, então o começo é o momento crítico."
+  },
+  {
+   "tema": "Primeiro valor pequeno",
+   "recomendacao": "Definir a Fase 1 do parceiro como uma porta e uma primeira oportunidade útil; só depois abrir a segunda porta.",
+   "processo": "Conduzir o onboarding de 90 dias do parceiro",
+   "citacao": "Repartir o desafio em pequenas fatias factíveis e implantá-las iterativamente gera valor desde cedo e com frequência.",
+   "pagina": "p. 165",
+   "aplicabilidade": "alta",
+   "porque": "Valor desde cedo e com frequência mantém o impulso. Respeita a abertura simultânea dos três pilares no programa."
+  },
+  {
+   "tema": "Segmentação por valor",
+   "recomendacao": "Classificar parceiros por potencial de oportunidades e usar o Pareto dos 80% para decidir quantos justificam atenção gerenciada.",
+   "processo": "Classificar o parceiro por nível de atenção",
+   "citacao": "Uma abordagem para ajudar a compreender a sua segmentação (se você usar a receita anual recorrente como benchmark) é ver onde se situa o princípio de Pareto, analisando a origem de 80% da sua receita.",
+   "pagina": "p. 138",
+   "aplicabilidade": "alta",
+   "porque": "Dá critério objetivo ao segmento gerenciado versus atendido pelo portal, sem mudar a decisão de dois segmentos."
+  },
+  {
+   "tema": "Capacidade do gerente",
+   "recomendacao": "Calcular quantos parceiros um gerente sustenta somando o tempo das tarefas programadas e a frequência das não programadas, e usar de 5 a 15 apenas como ordem de grandeza para atenção alta.",
+   "processo": "Limitar a carteira gerenciada pela capacidade medida do gerente",
+   "citacao": "será possível calcular o tempo a ser dedicado pelo GCS a determinado cliente, por ano, mês ou semana, o que, por seu turno, definirá quantos clientes o GCS pode gerenciar.",
+   "pagina": "p. 73",
+   "aplicabilidade": "alta",
+   "porque": "Com um único gerente dono de todas as tarefas, a capacidade é o gargalo e deve ser medida e não suposta."
+  },
+  {
+   "tema": "Cadência por nível",
+   "recomendacao": "Definir interações diferenciadas por nível (conversa trimestral formal no gerenciado, contato mensal e gatilhos no portal) e registrá-las no portal.",
+   "processo": "Classificar o parceiro por nível de atenção",
+   "citacao": "O importante é ter interações diferenciadas, por categorias que sejam consideradas relevantes pela base de clientes e forneçam o nível certo de atenção a cada categoria.",
+   "pagina": "p. 140",
+   "aplicabilidade": "alta",
+   "porque": "Entrega a cada categoria o nível certo de atenção e evita prometer o que o gerente não consegue cumprir."
+  },
+  {
+   "tema": "Macrocomunicação mensal",
+   "recomendacao": "Montar um calendário anual de macrocomunicações na comunidade de WhatsApp, com contato com todos ao menos uma vez por mês.",
+   "processo": "Publicar o calendário anual de macrocomunicações",
+   "citacao": "Seu objetivo deve ser interagir com os clientes pelo menos a cada mês, por meio de sua estratégia de macrocomunicações",
+   "pagina": "p. 141",
+   "aplicabilidade": "alta",
+   "porque": "Aproveita a decisão de comunidade no WhatsApp e responde à tendência de afastamento natural."
+  },
+  {
+   "tema": "Encaixe do parceiro",
+   "recomendacao": "Aplicar na adesão três perguntas leves de encaixe, registrar as respostas e usar os dados para calibrar o perfil ideal depois dos primeiros parceiros; sem barrar adesão no início.",
+   "processo": "Aplicar filtro leve de encaixe na adesão do parceiro",
+   "citacao": "Noventa e nove por cento da evasão ocorre na época da venda",
+   "pagina": "p. 91",
+   "aplicabilidade": "media",
+   "porque": "A entrada orgânica sem nenhum parceiro assinado impede decisões por dados ainda; o filtro leve guarda o aprendizado sem reduzir a adesão."
+  },
+  {
+   "tema": "Revisão trimestral com meta",
+   "recomendacao": "Usar a revisão conjunta para revisitar o resultado contra a meta e fixar a meta do trimestre seguinte.",
+   "processo": "Transformar a revisão conjunta trimestral em avaliação de resultado",
+   "citacao": "ao fim de cada ATN, você estabeleça os objetivos para a próxima ATN.",
+   "pagina": "p. 114",
+   "aplicabilidade": "alta",
+   "porque": "Faz da revisão já aprovada o evento de renovação do parceiro e evita a avaliação defensiva, só de pendências."
+  },
+  {
+   "tema": "Ação com dono",
+   "recomendacao": "Exigir que toda tarefa da fila de exceção termine com resultado registrado e que nenhum alerta fique sem dono.",
+   "processo": "Fechar a ação e registrar o resultado",
+   "citacao": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!",
+   "pagina": "p. 128",
+   "aplicabilidade": "alta",
+   "porque": "Análise sem ação é inútil; medir ações concluídas dá a taxa de resposta aos sinais."
+  },
+  {
+   "tema": "Motivos de pausa e saída",
+   "recomendacao": "Criar lista padronizada de motivos de pausa, redução e saída, com campo livre e a marca de evitável ou inevitável.",
+   "processo": "Registrar o motivo de pausa ou saída do parceiro",
+   "citacao": "A melhor prática no seu sistema CRM é ter uma lista de motivos para a padronização dos relatórios, assim como um campo para a inclusão de comentários para captar opiniões pessoais.",
+   "pagina": "p. 176",
+   "aplicabilidade": "media",
+   "porque": "Sem motivos padronizados, não há como priorizar o que corrigir no programa."
+  },
+  {
+   "tema": "Retenção líquida do programa",
+   "recomendacao": "Medir, por trimestre, a retenção líquida da carteira de parceiros considerando permanência e expansão, e acompanhá-la ao lado de novos parceiros.",
+   "processo": "Calcular retenção bruta e líquida de parceiros por trimestre",
+   "citacao": "Meu argumento é no sentido de que a métrica-chave para determinar a qualidade de um GCS, em si, ou de toda a equipe é retenção líquida.",
+   "pagina": "p. 193",
+   "aplicabilidade": "alta",
+   "porque": "É a métrica que o livro propõe para a equipe de sucesso do cliente; é preciso definir antes se a base é oportunidade ou receita comissionada."
+  },
+  {
+   "tema": "Evasão parcial",
+   "recomendacao": "Registrar separadamente o parceiro que continua no programa mas reduz portas ativas ou oportunidades.",
+   "processo": "Calcular retenção bruta e líquida de parceiros por trimestre",
+   "citacao": "Trata-se simplesmente da perda de parte do valor financeiro do contrato numa situação em que o cliente não deixa a empresa.",
+   "pagina": "p. 98",
+   "aplicabilidade": "media",
+   "porque": "A queda silenciosa de atividade é mais comum do que a saída formal e só aparece se for medida."
+  },
+  {
+   "tema": "Visão única no portal",
+   "recomendacao": "Fazer do portal o lugar onde estão todas as informações do parceiro (escore, oportunidades, ações, notas), com notas de conversa no card.",
+   "processo": "Registrar no card o resumo das conversas do WhatsApp",
+   "citacao": "que possibilita a comunicação in-product, para que ela seja capturada no contexto e não fique enterrada no meio dos e-mails pessoais",
+   "pagina": "p. 239",
+   "aplicabilidade": "alta",
+   "porque": "Evita que a comunicação fique enterrada em conversas pessoais e permite a transição de dono ou de contato."
+  },
+  {
+   "tema": "Automatizar depois de racionalizar",
+   "recomendacao": "Manter regras e escore em planilha ou campos simples por dois ciclos antes de automatizar no portal.",
+   "processo": "Calcular o escore de saúde do parceiro",
+   "citacao": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!",
+   "pagina": "p. 129",
+   "aplicabilidade": "alta",
+   "porque": "Alinhado à preferência do patrocinador por simplicidade e reduz retrabalho de desenvolvimento."
+  },
+  {
+   "tema": "Metas do gerente",
+   "recomendacao": "Incluir retenção líquida e saúde média dos parceiros nas metas do Gerente de Parcerias, sem alterar a regra de comissão.",
+   "processo": "Atribuir ao Gerente de Parcerias a responsabilidade pela retenção líquida de parceiros",
+   "citacao": "Pense em incluir metas de sucesso do cliente (por exemplo, retenção líquida, NPS ou escores de saúde) no plano de bônus da empresa.",
+   "pagina": "p. 203",
+   "aplicabilidade": "media",
+   "porque": "A comissão paga a aquisição; o livro recomenda que metas alcancem a retenção. As metas podem ser de gestão, não de pagamento."
+  },
+  {
+   "tema": "Diretor e painel",
+   "recomendacao": "Levar ao Diretor, antes de cada assinatura trimestral, uma página de retenção com uma pergunta de decisão.",
+   "processo": "Levar o painel de retenção ao Diretor antes da assinatura trimestral",
+   "citacao": "Inclua um representante de customer success em todas as reuniões executivas, reuniões do Conselho e decisões estratégicas colegiadas.",
+   "pagina": "p. 202",
+   "aplicabilidade": "media",
+   "porque": "O Diretor só assina; o livro pede que o topo veja a retenção. Custa uma página e não muda a política de aprovação."
+  },
+  {
+   "tema": "Segundo contato no parceiro",
+   "recomendacao": "Registrar patrocinador e ao menos um segundo contato por parceiro e acionar regra quando houver troca.",
+   "processo": "Registrar patrocinador e segundo contato por parceiro",
+   "citacao": "Oferecer treinamento para novos usuários a fim de garantir que mais de uma pessoa na organização seja capaz de usar o produto.",
+   "pagina": "p. 100",
+   "aplicabilidade": "alta",
+   "porque": "A perda do patrocinador é causa recorrente de evasão e é invisível sem esse campo."
+  },
+  {
+   "tema": "Expectativas claras sem SLA",
+   "recomendacao": "Publicar na comunidade, em linguagem simples, o que o gerente faz e não faz e em que prazos costuma responder, como compromisso de comunicação e não como contrato.",
+   "processo": "Publicar o calendário anual de macrocomunicações",
+   "citacao": "(1) comunique-se com frequência, (2) estabeleça expectativas claras e (3) seja tão transparente quanto possível",
+   "pagina": "p. 143",
+   "aplicabilidade": "alta",
+   "porque": "Respeita a ausência de SLA e reduz expectativas falsas; para o livro, falta de clareza é o risco da camada com poucos recursos."
+  },
+  {
+   "tema": "Feedback do parceiro",
+   "recomendacao": "Na fase de tração, abrir um canal estruturado de feedback (pesquisa curta trimestral e, se houver massa crítica, um conselho consultivo de parceiros).",
+   "processo": "Reportar evasão e retenção na revisão conjunta trimestral por dimensão",
+   "citacao": "Para desenvolver relacionamentos com os clientes e fomentar a lealdade dos clientes é preciso criar um loop de feedback.",
+   "pagina": "p. 142",
+   "aplicabilidade": "media",
+   "porque": "Com poucos parceiros, a conversa individual basta; o conselho só se justifica depois."
+  },
+  {
+   "tema": "Parceiro exigente",
+   "recomendacao": "No escore, não penalizar parceiro que cobra ou questiona muito; tratar o excesso de pedidos como sinal de engajamento a ser lido junto com o resultado.",
+   "processo": "Calcular o escore de saúde do parceiro",
+   "citacao": "Não confunda cliente exigente com cliente fracassado.",
+   "pagina": "p. 98",
+   "aplicabilidade": "media",
+   "porque": "Evita falso alarme e pune o parceiro que mais usa o programa."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Retenção líquida",
+   "definicao": "Percentual do valor da base no início do período que permanece ao fim, somando expansão e descontando perdas. Para o Wise, a base precisa ser definida (oportunidades, receita comissionada ou ambas).",
+   "citacao": "Esse aspecto leva em conta tanto a retenção quanto o upsell.",
+   "pagina": "p. 193"
+  },
+  {
+   "nome": "Escore de saúde do parceiro",
+   "definicao": "Número de 0 a 100 que combina componentes antecedentes (fluxo, resultado, adoção, engajamento, relacionamento) e prevê permanência e expansão; acompanhar nível e tendência.",
+   "citacao": "Um escore de saúde exato é ótimo previsor de comportamentos futuros, como probabilidade de retenção, possibilidade de upsell, nível de risco, e assim por diante.",
+   "pagina": "p. 196"
+  },
+  {
+   "nome": "Adoção do programa",
+   "definicao": "Parcela das portas e funções do programa em uso pelo parceiro, análoga à porcentagem de licenças ativas sobre as contratadas.",
+   "citacao": "que mede a porcentagem de licenças ativas (em uso), em relação ao total de licenças compradas pelo cliente.",
+   "pagina": "p. 129"
+  },
+  {
+   "nome": "Time-to-first-value",
+   "definicao": "Dias entre a adesão do parceiro e a primeira oportunidade útil ou primeira comissão, análogo ao prazo para o valor.",
+   "citacao": "Não se trata de time-to-implementation (tempo para a implantação), é time-to-value (tempo para o valor).",
+   "pagina": "p. 169"
+  },
+  {
+   "nome": "Evasão bruta e parcial",
+   "definicao": "Parceiros que saem ou ficam dormentes (bruta) e parceiros que reduzem portas ou volume sem sair (parcial), por trimestre, separando evitável de inevitável.",
+   "citacao": "Trata-se simplesmente da perda de parte do valor financeiro do contrato numa situação em que o cliente não deixa a empresa.",
+   "pagina": "p. 98"
+  },
+  {
+   "nome": "NPS e satisfação do parceiro",
+   "definicao": "Pesquisa curta de satisfação do projeto (aos 90 dias) e NPS periódico, entrando como componente e como alarme avançado.",
+   "citacao": "crie métricas de alarme avançado, como escore de saúde, escore de adoção e NPS, para acompanhar os rumos do sucesso do cliente",
+   "pagina": "p. 202"
+  },
+  {
+   "nome": "Ações desencadeadas concluídas",
+   "definicao": "Proporção de tarefas geradas por regra de sinal que foram concluídas no prazo, com resultado registrado.",
+   "citacao": "Número de ações desencadeadas concluídas.",
+   "pagina": "p. 194"
+  },
+  {
+   "nome": "Parceiros por gerente (razão ideal de contas)",
+   "definicao": "Número de parceiros gerenciados por pessoa por nível, validado comparando resultados de coortes com cargas diferentes.",
+   "citacao": "Quer saber de quantos clientes um GCS pode cuidar (razão de conta ideal)?",
+   "pagina": "p. 189"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Sucesso do cliente não compensa falhas da oferta ou do processo. Se o portal for ruim, a oferta for confusa ou o repasse de leads falhar, a gestão do parceiro não corrige.",
+   "citacao": "É importante compreender que investir em sucesso do cliente não compensa as falhas fundamentais em outras partes da empresa.",
+   "pagina": "p. 37"
+  },
+  {
+   "alerta": "Resgatar parceiro em risco no último minuto custa caro e funciona pouco; a renovação de resgate costuma sair por desconto. O Wise tem regra única de comissão: resgatar com condição especial quebra a regra e cria precedente.",
+   "citacao": "Nessas condições, consegue-se a renovação cerca de 50% das vezes e, em geral, somente reduzindo o preço, devolvendo algum dinheiro, ou concedendo aos clientes alguns meses gratuitos",
+   "pagina": "p. 92"
+  },
+  {
+   "alerta": "Escore e painel sem ação são enfeite. O risco do gerente único é virar leitor de alertas sem fechar tarefas.",
+   "citacao": "Análise de dados ou insights oriundos de pesquisas ou avaliações que não deflagrem iniciativas são em grande parte inúteis.",
+   "pagina": "p. 128"
+  },
+  {
+   "alerta": "Automatizar o que não foi racionalizado multiplica o erro. Não construir o cálculo automático do escore antes de ter rodado manualmente.",
+   "citacao": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!",
+   "pagina": "p. 129"
+  },
+  {
+   "alerta": "Uso do portal é só aproximação do valor. O parceiro está no programa por um objetivo; o escore deve juntar dados do portal com a resposta direta do parceiro sobre o resultado.",
+   "citacao": "o comportamento dos usuários do cliente serve apenas como aproximação do valor para o negócio que o cliente está extraindo do produto.",
+   "pagina": "p. 188"
+  },
+  {
+   "alerta": "Retenção e evasão são métricas retrospectivas; esperar o fim do trimestre para saber se o parceiro ficou é tarde. É preciso acompanhar indicadores antecedentes.",
+   "citacao": "Retenção, evasão e upsell são as métricas certas no longo prazo, mas elas são métricas consequentes ou retrospectivas, não métricas antecedentes ou prospectivas.",
+   "pagina": "p. 191"
+  },
+  {
+   "alerta": "Em camadas com poucos recursos humanos, é perigoso criar a expectativa de atenção ilimitada. O gerente único tem horas finitas e o grupo por parceiro cria essa expectativa.",
+   "citacao": "O que os clientes, em geral, não compreendem é que os recursos pessoais não são ilimitados.",
+   "pagina": "p. 119"
+  },
+  {
+   "alerta": "Sucesso do cliente que nasce dentro da operação reativa vira suporte premium. Se o Gerente de Parcerias acumula tarefas de atendimento, a função proativa de gerir saúde perde espaço.",
+   "citacao": "O que geralmente acontece é que customer success torna-se um tipo de oferta de suporte premium.",
+   "pagina": "p. 47"
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "O livro defende três modelos de atendimento (high, low, tech-touch), e o desenho atual tem dois segmentos (gerenciado ou atendido pelo portal). O livro também admite que o nível do meio tem fronteiras pastosas.",
+   "como_resolver": "Manter dois segmentos. Tratar o low-touch como o just-in-time dentro do gerenciado, acionado por gatilho, e rever a necessidade de um terceiro nível apenas quando o gerente estourar a capacidade medida."
+  },
+  {
+   "tensao": "A comissão (40% da primeira mensalidade para Wise Makers e Tríade, 6% do projeto para Swallow) paga aquisição e não retenção. O livro recomenda alinhar incentivos à retenção e ao valor vitalício, não apenas a novos negócios.",
+   "como_resolver": "Não alterar a regra única. Medir retenção líquida do programa e incluí-la nas metas de gestão do gerente. Se os dados mostrarem queda de retenção, o patrocinador pode reabrir a regra na revisão conjunta; não proponho isso agora."
+  },
+  {
+   "tensao": "Sem SLA interno para a conversa entre gerente e closer, o livro pede urgência obsessiva no tempo até o primeiro valor e resposta rápida a cada sinal.",
+   "como_resolver": "Sem criar SLA, tornar o tempo de resposta e de parada da oportunidade um indicador visível no card. A cobrança é pelo dado e pelo gerente, não por contrato interno."
+  },
+  {
+   "tensao": "Um único gerente dono de todas as tarefas favorece a regra de um dono só, mas o livro mostra que atenção alta cabe a poucos clientes por gerente (5 a 15 em soluções complexas) e que sucesso do cliente deve ficar separado da operação reativa.",
+   "como_resolver": "Manter o dono único e definir um teto de parceiros gerenciados por cálculo de capacidade. O restante migra para o portal. Quando o teto for atingido, entra o portão de crescimento (contratar quando a contribuição adicional puder ser medida)."
+  },
+  {
+   "tensao": "O Diretor só assina; o livro afirma que o sucesso do cliente é compromisso de cima para baixo, com métricas visíveis ao topo e voz no nível executivo.",
+   "como_resolver": "Não mudar a política de aprovação. Acrescentar uma página de retenção antes da assinatura trimestral e uma pergunta de decisão, para o Diretor ver a saúde sem fazer aprovação criteriosa."
+  },
+  {
+   "tensao": "A comunidade de WhatsApp com um grupo por parceiro é um canal de alto toque, e o livro avisa que o contato um-para-um não escala; além disso, pede que a comunicação fique registrada no contexto do registro, não perdida em conversas pessoais.",
+   "como_resolver": "Manter o grupo por parceiro para o nível gerenciado, usar um canal coletivo e mensagens por regra para o nível do portal, e registrar no card o resumo das conversas relevantes. A decisão do patrocinador continua válida, com teto por capacidade."
+  },
+  {
+   "tensao": "Parceiros chegam de forma orgânica e ainda não há nenhum assinado; o livro diz que quase toda a evasão nasce de vender para o cliente errado e recomenda critérios de encaixe e até poder de veto.",
+   "como_resolver": "Filtro leve de encaixe com registro de dados, sem barrar adesão no início. Quando houver dados de coorte (por exemplo, 10 a 20 parceiros), calibrar o perfil ideal. Veto só no portão de crescimento, se for decisão do patrocinador."
+  },
+  {
+   "tensao": "Os três pilares abrem juntos, enquanto o livro recomenda implantar em fatias e começar pela medida mais simples para gerar valor cedo.",
+   "como_resolver": "Manter a abertura simultânea no programa. Em cada parceiro, começar por uma porta (a que ele escolher) e abrir a seguinte após o primeiro valor, o que também serve de gatilho de expansão."
+  },
+  {
+   "tensao": "Para o Wise o programa é um canal de aquisição de receita mais barato (ganho em lead e cliente novo). O livro desloca o valor para a base instalada: reter e expandir vale mais do que adquirir, e adquirir não compensa a evasão.",
+   "como_resolver": "Manter a aquisição como objetivo principal, mas acrescentar ao painel a retenção e a expansão dos parceiros como segunda perna, já que um parceiro retido continua gerando oportunidades a custo marginal baixo."
+  },
+  {
+   "tensao": "O livro trata de clientes que pagam assinatura com data de renovação. O parceiro não paga, é remunerado por comissão e não tem evento de renovação; as noções de evasão, LTV e renovação não se transferem sem adaptação.",
+   "como_resolver": "Definir evasão como dormência ou redução de atividade, usar a revisão conjunta trimestral como evento de renovação e medir permanência e expansão em oportunidades ou receita comissionada, não em contrato. Registrar claramente que a transposição é inferência."
+  }
+ ]
+}

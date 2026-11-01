@@ -5,28 +5,29 @@ flowchart TB
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph cat_gestao ["Gestão"]
     direction LR
-      P_01["1 Arquitetar o ecossistema"]:::hipotese
-      P_16["2 Gerir o programa por rituais"]:::hipotese
+      P_01["1 Arquitetar o ecossistema"]:::confirmado
+      P_08["2 Gerir o programa por rituais"]:::confirmado
+      P_15["3 Medir e aprender"]:::hipotese
     end
     subgraph cat_finalistico ["Finalísticos"]
     direction LR
-      P_29["3 Atrair e selecionar parceiros"]:::declarado
-      P_39["4 Integrar e ativar parceiro"]:::confirmado
-      P_51["5 Gerar oportunidades no ecossistema"]:::hipotese
-      P_60["6 Desenvolver o parceiro e a comunidade"]:::declarado
-      P_71["7 Reter ou encerrar a parceria"]:::declarado
-      P_29 --> P_39
-      P_39 --> P_51
-      P_51 --> P_60
-      P_60 --> P_71
+      P_21["4 Atrair e selecionar parceiros"]:::confirmado
+      P_27["5 Integrar e ativar parceiro"]:::confirmado
+      P_32["6 Gerar oportunidades no ecossistema"]:::confirmado
+      P_41["7 Desenvolver o parceiro"]:::confirmado
+      P_47["8 Cultivar a comunidade Wise Partners"]:::hipotese
+      P_52["9 Reter ou encerrar a parceria"]:::confirmado
+      P_21 --> P_27
+      P_27 --> P_32
+      P_32 --> P_41
+      P_41 --> P_47
+      P_47 --> P_52
     end
     subgraph cat_suporte ["Suporte"]
     direction LR
-      P_75["8 Manter a Prateleira de fornecedores"]:::confirmado
-      P_76["9 Gerir conteúdos e capacitação"]:::declarado
-      P_77["10 Gerir dados, atribuição e privacidade"]:::confirmado
-      P_78["11 Alinhar o ecossistema interno do grupo"]:::hipotese
-      P_79["12 Administrar o portal e os contratos"]:::declarado
+      P_56["10 Manter a Prateleira de fornecedores"]:::confirmado
+      P_57["11 Equipar o parceiro para indicar"]:::confirmado
+      P_58["12 Operar o portal no centro da gestão"]:::confirmado
     end
     cat_gestao ~~~ cat_finalistico
     cat_finalistico ~~~ cat_suporte

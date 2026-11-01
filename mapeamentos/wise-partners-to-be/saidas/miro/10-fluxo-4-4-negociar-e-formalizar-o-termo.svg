@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_25" transform="translate(3708,10758)" data-frame="4.4 Negociar e formalizar o termo">
+<rect data-type="frame" x="0" y="0" width="2868" height="1058" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">4.4 Negociar e formalizar o termo</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="4.4 Negociar e formalizar o termo">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Plano conjunto acordado no workshop"]):::confirmado
+      n_t1["Preencher o termo-quadro"]:::confirmado
+      n_t2["Enviar a minuta pedindo críticas"]:::confirmado
+      n_e1&gt;"Críticas do candidato"]:::confirmado
+      n_g1{"As duas partes aprovam?"}:::confirmado
+      n_t3["Ajustar a minuta"]:::confirmado
+      n_e2&gt;"Assinatura do parceiro"]:::confirmado
+      n_t5["Anexar o termo assinado"]:::confirmado
+      n_f1(["Termo assinado"]):::confirmado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t4["Assinar o termo"]:::confirmado
+    end
+    ext_X1[/"Empresa candidata"/]
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_e1
+    n_e1 --&gt; n_g1
+    n_g1 --&gt;|Não| n_t3
+    n_t3 --&gt; n_t2
+    n_g1 --&gt;|Sim| n_t4
+    n_t4 --&gt; n_e2
+    n_e2 --&gt; n_t5
+    n_t5 --&gt; n_f1
+    n_t2 -.-&gt;|Minuta| ext_X1
+    ext_X1 -.-&gt;|Críticas| n_e1
+    ext_X1 -.-&gt;|Termo assinado| n_e2
+
+</foreignObject>
+</g></svg>

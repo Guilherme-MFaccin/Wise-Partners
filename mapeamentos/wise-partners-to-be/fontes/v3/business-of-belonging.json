@@ -1,0 +1,1293 @@
+{
+ "livro": "The Business of Belonging: How to Make Community Your Competitive Advantage",
+ "autores": "David Spinks",
+ "slug": "business-of-belonging",
+ "tese": "A comunidade só vira vantagem competitiva quando serve ao membro e ao negócio ao mesmo tempo, e quando a empresa consegue provar o efeito em receita. Spinks organiza isso em três níveis (negócio, comunidade, tático) e em três ferramentas: o modelo SPACES (seis resultados de negócio, dos quais se escolhem um ou dois), o Ciclo de Identidade Social (identificação, participação, validação) e os 7Ps de desenho de experiências. A comunidade nasce pequena, com convite pessoal e trabalho manual, passa por sementes, crescimento, maturidade e polinização, e só então entrega valor de negócio, em seis a doze meses ou mais. O pertencimento nasce de utilidade prática, cadência previsível, status e acesso, e é medido por ações do membro ligadas ao dado de cliente, não por volume de mensagens.",
+ "principios": [
+  {
+   "principio": "Escolha um ou dois objetivos de negócio da comunidade e meça só esses primeiro.",
+   "explicacao": "O SPACES lista seis resultados possíveis (Suporte, Produto, Aquisição, Contribuição, Engajamento, Sucesso). Perseguir todos faz a equipe de comunidade fazer o trabalho de seis times e impede contar uma história clara com dados. Os outros resultados continuam aparecendo de forma orgânica, sem meta.",
+   "aplicacao_wise": "No Programa Wise Partners, o objetivo de negócio é Aquisição (lead e cliente novo para Wise Makers, Tríade e Swallow). O segundo é Contribuição, que é leitura minha: o livro a descreve para plataformas e marketplaces, e aqui o parceiro é o contribuidor que traz oportunidades compartilhadas. Suporte, Produto, Engajamento e Sucesso ficam sem meta na fase de experimentação.",
+   "citacoes": [
+    {
+     "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
+     "pagina": "p. 60"
+    },
+    {
+     "trecho": "By focusing on six objectives, the community team is essentially doing the job of six teams.",
+     "pagina": "p. 61"
+    },
+    {
+     "trecho": "the community will organically still drive value in the other areas whether or not you've made it a priority.",
+     "pagina": "p. 61"
+    }
+   ]
+  },
+  {
+   "principio": "Sirva o parceiro e a Wise ao mesmo tempo: comunidade que só vende não vira comunidade.",
+   "explicacao": "Spinks pede que todo programa priorize as duas coisas: valor, pertencimento e segurança para o membro, e resultado mensurável para o negócio. Sem o segundo, falta recurso e o programa morre. Sem o primeiro, vira uma comunidade fria e inautêntica.",
+   "aplicacao_wise": "O ganho da Wise é lead e cliente novo, e isso é legítimo. A regra de leitura é que cada ritual e cada mensagem do grupo precisa responder o que o parceiro ganha. A comissão é parte do valor, mas não é o único valor: acesso a oportunidades, a outros parceiros e a clientes da carteira do grupo também precisa existir.",
+   "citacoes": [
+    {
+     "trecho": "How it creates value, belonging, and emotional safety for members",
+     "pagina": "p. 35"
+    },
+    {
+     "trecho": "How it creates value and measurable results for the business",
+     "pagina": "p. 35"
+    },
+    {
+     "trecho": "Not everything you do needs to impact revenue. It shouldn't. If you're only connecting your members to make money, you'll end up with a cold, inauthentic community.",
+     "pagina": "p. 69"
+    },
+    {
+     "trecho": "Not lack of engagement. Lack of resources, rooted in an inability to prove the ROI.",
+     "pagina": "p. 41"
+    }
+   ]
+  },
+  {
+   "principio": "Comece pequeno, convide pessoa por pessoa e faça o que não escala.",
+   "explicacao": "Toda comunidade começa na fase semente, com poucos membros escolhidos, convite pessoal e atenção total do organizador. Os primeiros membros definem o tom de todos que vierem depois. Convidar milhares de uma vez desperdiça o período em que a cultura é criada.",
+   "aplicacao_wise": "Sem nenhum parceiro assinado, a fase semente é exatamente o momento atual. O Gerente de Parcerias convida os primeiros parceiros pessoalmente, com mensagem própria, e acompanha cada um de perto. O número de parceiros por grupo e por rodada deve ser pequeno de propósito.",
+   "citacoes": [
+    {
+     "trecho": "Every community starts at the seed stage. Take your time in this stage and don't worry about starting small! Small is a superpower.",
+     "pagina": "p. 72"
+    },
+    {
+     "trecho": "Why not invite 10,000 customers into your new forum all at once? This would be a mistake.",
+     "pagina": "p. 72"
+    },
+    {
+     "trecho": "Your first members set the tone for every new member who joins after them.",
+     "pagina": "p. 73"
+    },
+    {
+     "trecho": "If you have to call every single member at first to get them bought in, do that.",
+     "pagina": "p. 74"
+    }
+   ]
+  },
+  {
+   "principio": "Planeje crescimento manual e trate o orgânico como bônus.",
+   "explicacao": "Comunidades que crescem sozinhas desde o dia um são exceção. Quem cresce faz recrutamento ativo, divulgação e convite pessoal. O orgânico (indicação entre membros) só aparece nas fases de crescimento e maturidade.",
+   "aplicacao_wise": "A premissa atual de que os parceiros chegam de forma orgânica precisa de um plano B: uma lista de empresas-alvo (fornecedores de ERP, CRM, MES, SST e entidades) abordada pelo gerente. Registro em tensões.",
+   "citacoes": [
+    {
+     "trecho": "You should plan on no organic growth in the early days.",
+     "pagina": "p. 110"
+    },
+    {
+     "trecho": "Hope for organic growth, but plan for manual growth.",
+     "pagina": "p. 111"
+    },
+    {
+     "trecho": "Most communities start small and stay small, never expanding beyond the first group of founding members.",
+     "pagina": "p. 110"
+    }
+   ]
+  },
+  {
+   "principio": "Feche o ciclo de identificação, participação e validação e nunca deixe a validação ao acaso.",
+   "explicacao": "O membro se identifica, participa e precisa receber uma recompensa percebida (resposta, reconhecimento, resultado). Sem validação ele abandona: ninguém respondeu, ou ele não viu valor. A validação é a etapa que a maioria das comunidades deixa ao acaso.",
+   "aplicacao_wise": "Quando um parceiro compartilha uma oportunidade, o ciclo só fecha se ele receber retorno sobre o que aconteceu com ela. Inferência minha: esse retorno é a validação principal do programa e pode ser feito no grupo do parceiro, sem criar SLA interno.",
+   "citacoes": [
+    {
+     "trecho": "Validation. Participation is rewarded in some way, making them feel good about their participation, which strengthens their investment in the shared identity, and the cycle repeats.",
+     "pagina": "p. 80"
+    },
+    {
+     "trecho": "People often leave this third stage to chance, and just hope that members will feel rewarded for their contributions.",
+     "pagina": "p. 124"
+    },
+    {
+     "trecho": "They might not know how to participate, or feel scared to participate, and drop off. Or they might participate, but no one responds, or they don't feel validated in any way, and so they drop off.",
+     "pagina": "p. 84"
+    },
+    {
+     "trecho": "But people won't come back to your community at all if they don't feel validated, and experience a reward, for showing up.",
+     "pagina": "p. 124"
+    }
+   ]
+  },
+  {
+   "principio": "Peça pouco no começo e aumente o pedido conforme cresce o compromisso.",
+   "explicacao": "A curva de compromisso mostra que o membro só aceita pedidos maiores depois de aceitar os menores. Pedir uma contribuição grande logo na entrada (como hospedar um evento) faz o membro desistir.",
+   "aplicacao_wise": "O primeiro pedido ao parceiro novo deve ser pequeno (apresentar-se e dizer que tipo de cliente procura). Compartilhar a primeira oportunidade vem depois. Realizar um evento da Base Ativa é o pedido maior e vem no fim da escada.",
+   "citacoes": [
+    {
+     "trecho": "You need to make smaller asks first.",
+     "pagina": "p. 105"
+    },
+    {
+     "trecho": "As their commitment to the community increases, their willingness to make larger and larger contributions to the community goes up.",
+     "pagina": "p. 105"
+    },
+    {
+     "trecho": "you can lay out all the different actions you want your community members to take, and make sure you're asking for bigger commitments only when members are ready to make that commitment.",
+     "pagina": "p. 106"
+    }
+   ]
+  },
+  {
+   "principio": "Venha pela utilidade, fique pela unidade: ofereça primeiro a solução prática.",
+   "explicacao": "Em comunidades profissionais, as pessoas entram para resolver um problema concreto. O vínculo emocional vem depois e é ele que sustenta a retenção. A promessa de entrada deve ser o problema que a comunidade resolve.",
+   "aplicacao_wise": "A promessa ao parceiro é prática: oportunidades de RFP na Prateleira, indicação paga e acesso à carteira de outras empresas. A relação entre parceiros (unidade) é consequência dos rituais, não ponto de partida do convite.",
+   "citacoes": [
+    {
+     "trecho": "Often, people don't join communities for emotional connection to other people. They join communities to solve a practical problem or achieve a specific goal.",
+     "pagina": "p. 133"
+    },
+    {
+     "trecho": "Tell them what problems you will solve for them. That's what will get them in the door.",
+     "pagina": "p. 134"
+    },
+    {
+     "trecho": "Your customers will be less likely to switch to a competitor if they feel like your community is their community.",
+     "pagina": "p. 134"
+    }
+   ]
+  },
+  {
+   "principio": "Crie cadência e ritual: repetição constrói hábito e identidade.",
+   "explicacao": "Uma boa comunidade tem batida constante (conteúdo regular), refrão (rituais que todos sabem como seguir) e um ou dois grandes momentos por ano. Quanto menos frequente o encontro, maior a produção. Consistência faz o membro lembrar e participar sem precisar ser convocado.",
+   "aplicacao_wise": "A agenda de rituais do to-be v2 já existe. O livro sugere preenchê-la por frequência (diária, semanal, mensal, trimestral, anual) e manter o formato fixo, variando só o conteúdo. A revisão conjunta trimestral é o ritual trimestral.",
+   "citacoes": [
+    {
+     "trecho": "a steady cadence of different content and experiences for people to engage with (the beat), regular rituals where everyone knows how to participate (the chorus)",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "The key is repetition and consistency.",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "A general rule is that the less frequent the experience is hosted, the bigger the production it will be.",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "Consistency is incredibly important in communities.",
+     "pagina": "p. 146"
+    }
+   ]
+  },
+  {
+   "principio": "Distribua controle dentro de trilhos: playbook, líderes escolhidos e uma plataforma só.",
+   "explicacao": "Escalar comunidade exige passar execução a líderes locais, dentro de regras claras. O padrão é: playbook detalhado, líderes vetados, espaço para os líderes trocarem entre si e uma plataforma central para operação e dados. Sem isso a consistência e os dados se perdem.",
+   "aplicacao_wise": "É o modelo da Base Ativa: o parceiro lidera comunidade e evento na própria carteira, a Wise entrega o playbook e o portal registra o que acontece. O parceiro é o líder local, a Wise é a organizadora.",
+   "citacoes": [
+    {
+     "trecho": "The idea is to create guide rails within which members will contribute.",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "That balance of setting consistent guide rails that everyone works within, while distributing control and decision-making power to your members, is critical for your community to sustainably scale.",
+     "pagina": "p. 32"
+    },
+    {
+     "trecho": "To ensure that your leaders can be successful, you want to provide them with as much guidance and support as possible.",
+     "pagina": "p. 119"
+    },
+    {
+     "trecho": "Ideally, you can host the entire program on, and have all of your local leaders using, one platform to centralize operations.",
+     "pagina": "p. 119"
+    }
+   ]
+  },
+  {
+   "principio": "Ligue comunidade a receita pelo dado do cliente: ação de ROI e toque na jornada, não causa única.",
+   "explicacao": "Engajamento sozinho não prova valor. É preciso definir ações do membro ligadas a receita (ação de ROI) e conectar o dado de comunidade ao dado de cliente. A comunidade é um toque entre vários na jornada, e o objetivo é mostrar quando ela esteve presente, não provar que foi a causa única.",
+   "aplicacao_wise": "Cada oportunidade no portal deve carregar a porta de origem e o histórico de participação do parceiro (eventos, grupo, indicações). Isso permite dizer quanto da receita de lead novo passou pela comunidade, sem prometer causalidade.",
+   "citacoes": [
+    {
+     "trecho": "An ROI action is any action that a member takes that you know is directly correlated to revenue",
+     "pagina": "p. 139"
+    },
+    {
+     "trecho": "You do want to be able to show if and when community was a touchpoint on the journey to that outcome.",
+     "pagina": "p. 57"
+    },
+    {
+     "trecho": "Our research found that only one third of companies are able to connect their community data to their customer data.",
+     "pagina": "p. 55"
+    },
+    {
+     "trecho": "You can build community-based lead qualifications into your CRM, so your marketing and sales team can always see who's engaged in the community when prioritizing who to focus on.",
+     "pagina": "p. 65"
+    }
+   ]
+  },
+  {
+   "principio": "Não troque norma social por norma de mercado: recompense com status, rede e acesso.",
+   "explicacao": "Quando entra dinheiro ou ponto numa relação movida por favor e pertencimento, o membro passa a calcular o valor do tempo e perde a motivação intrínseca. Spinks propõe o SNAP (status, networking, acesso, perks) como alternativa, e alerta que gamificação não cria engajamento que não existe.",
+   "aplicacao_wise": "A comissão única de 40% e 6% é o contrato comercial e deve permanecer separada da vida da comunidade. Para reconhecer parceiros ativos e líderes de Base Ativa, usar status (selo de parceiro líder), rede (jantares curados) e acesso (conversa com a diretoria), não pontos nem bônus extra.",
+   "citacoes": [
+    {
+     "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation.",
+     "pagina": "p. 126"
+    },
+    {
+     "trecho": "once market norms enter our considerations, the social norms depart.",
+     "pagina": "p. 127"
+    },
+    {
+     "trecho": "SNAP! stands for Status, Networking, Access, and Perks.",
+     "pagina": "p. 128"
+    },
+    {
+     "trecho": "Bad news. If you're not seeing much engagement in your community now, adding points, badges, swag, levels, or perks won't be much help.",
+     "pagina": "p. 131"
+    }
+   ]
+  },
+  {
+   "principio": "Poucas regras, aplicadas sempre da mesma forma e com transparência.",
+   "explicacao": "Spinks recomenda no máximo dez regras, começando com poucas, e acrescenta outras conforme surgem problemas. O que importa é a aplicação consistente e explicar o motivo, para a moderação não parecer pessoal. Transparência nas decisões constrói confiança.",
+   "aplicacao_wise": "Um grupo de WhatsApp por parceiro precisa de três a seis regras visíveis, como dar mais do que pedir, autopromoção só na área própria (a Prateleira de RFP cumpre esse papel) e sigilo de informação de cliente do outro parceiro. O gerente explica mudanças de regra no próprio grupo.",
+   "citacoes": [
+    {
+     "trecho": "Keep your list of rules short and simple so that they're easy to remember. I recommend having no more than 10 rules and offer more detailed guidelines in your code of conduct.",
+     "pagina": "p. 171"
+    },
+    {
+     "trecho": "Whatever your rules are, it's incredibly important that you make it clear to your community how those rules will be enforced, and that you do so consistently.",
+     "pagina": "p. 176"
+    },
+    {
+     "trecho": "A healthy community requires that members are contributing at least as much as they're taking out.",
+     "pagina": "p. 174"
+    },
+    {
+     "trecho": "By trusting your community, you're teaching them to trust you, too.",
+     "pagina": "p. 195"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "The SPACES Model (modelo SPACES: seis resultados de negócio da comunidade) e os três níveis da estratégia de comunidade",
+   "paginas": "p. 40 a 69, p. 139 a 140",
+   "componentes": [
+    {
+     "nome": "Support (Suporte)",
+     "descricao": "Clientes respondem perguntas uns dos outros. Reduz custo de suporte e melhora satisfação. Ação de ROI: responder a pergunta de outro cliente."
+    },
+    {
+     "nome": "Product (Produto)",
+     "descricao": "Espaço para feedback e ideias que alimentam a inovação. É o objetivo mais difícil de ligar a receita. Ação de ROI: dar feedback ou ideia."
+    },
+    {
+     "nome": "Acquisition (Aquisição)",
+     "descricao": "Marca, leads e vendas por espaços online e offline e por embaixadores. Ação de ROI: indicar cliente novo ou realizar evento que gere leads."
+    },
+    {
+     "nome": "Contribution (Contribuição)",
+     "descricao": "Membros contribuem com conteúdo, produtos ou serviços para uma plataforma ou marketplace. Ação de ROI: submeter conteúdo. Métrica de tabela: receita por contribuidor bem-sucedido."
+    },
+    {
+     "nome": "Engagement (Engajamento)",
+     "descricao": "Retenção, valor do contrato e satisfação por senso de pertencimento. Ação de ROI: renovar contrato."
+    },
+    {
+     "nome": "Success (Sucesso)",
+     "descricao": "Adoção e expansão por membros que ensinam uns aos outros. Ação de ROI: ensinar uma aula para outros clientes."
+    },
+    {
+     "nome": "Três níveis da estratégia",
+     "descricao": "Nível de negócio (como a comunidade gera receita), nível de comunidade (como cresce e fica saudável) e nível tático (iniciativas). As ações de um nível viram as metas do nível seguinte."
+    }
+   ],
+   "logica": "Primeiro define-se o resultado de negócio, depois o que a comunidade precisa fazer para entregá-lo, depois as iniciativas semanais. Escolhe-se um ou dois resultados e os outros aparecem de forma orgânica. O resultado é medido por uma ação de ROI e por um funil: se são necessários 100 clientes, trabalha-se de trás para frente até o número de pessoas na audiência, de eventos e de capítulos. A comunidade deve ser tratada como um toque na jornada, e o sinal de engajamento (eventos atendidos, participação no grupo) entra na qualificação do lead (CQL, lead qualificado pela comunidade). Salesforce começou por resultado fácil de medir (suporte) para ganhar apoio e só depois abriu produto.",
+   "aplicacao_wise": "Aplicação à comunidade Wise Partners no WhatsApp: objetivo de Aquisição (lead e cliente novo para o grupo) mais Contribuição (oportunidades trazidas por parceiros). A ação de ROI do parceiro é compartilhar uma oportunidade que vira reunião com closer. Aplicação ao Base Ativa: é um programa de Aquisição por evento na carteira do parceiro, como os jantares da Ironclad que juntam clientes fiéis e prospects-alvo. Meta de nível de negócio (inferência minha): número de reuniões comerciais geradas por Base Ativa por trimestre. As portas indicação, Prateleira, cruzamento de carteiras e Base Ativa viram quatro origens de ação de ROI que o portal precisa rotular.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Definir um ou dois objetivos SPACES da fase",
+     "descricao": "O Gerente de Parcerias escolhe e registra no quadro da jornada os objetivos de comunidade da fase (Aquisição e Contribuição na experimentação). Os demais não recebem meta.",
+     "gatilho": "Início de cada fase e de cada trimestre.",
+     "entregas": "Frase de objetivo da fase, aprovada pelo Diretor na assinatura.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Calcular o funil reverso da Base Ativa",
+     "descricao": "Partir da meta de clientes novos para estimar leads, oportunidades, participantes e eventos necessários por parceiro.",
+     "gatilho": "Antes do primeiro evento de cada trimestre.",
+     "entregas": "Planilha de hipóteses (taxas de conversão, participantes por evento, eventos por parceiro).",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Registrar a ação de ROI por parceiro",
+     "descricao": "Contar por parceiro quantas oportunidades compartilhadas, indicações e eventos realizados aconteceram no período.",
+     "gatilho": "Cada oportunidade registrada no portal.",
+     "entregas": "Contagem por parceiro e por porta de origem no quadro da jornada.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Marcar o sinal de comunidade no lead entregue ao closer",
+     "descricao": "Anexar ao lead o histórico do parceiro e da empresa (participou de evento, está no grupo) para que o gerente o conte ao closer em conversa.",
+     "gatilho": "Entrega do lead ao closer.",
+     "entregas": "Campo de contexto no card da oportunidade e fala do gerente.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Relatar o impacto da comunidade na revisão conjunta trimestral",
+     "descricao": "Relatório simples: leads, oportunidades e clientes vindos da comunidade, e parceiros ativos contra o trimestre anterior.",
+     "gatilho": "Revisão conjunta trimestral.",
+     "entregas": "Uma página com 4 a 6 números, no formato do exemplo do livro.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Roda com seis caixas (S, P, A, C, E, S). Duas caixas (Aquisição e Contribuição) em destaque e as outras em cinza. Ao lado, uma escada de três degraus: negócio, comunidade, tático, com setas de 'ação vira meta' entre os degraus.",
+   "citacoes": [
+    {
+     "trecho": "All community programs will drive at least one, but often multiple, of these six business outcomes",
+     "pagina": "p. 44"
+    },
+    {
+     "trecho": "The goal is to increase brand awareness, grow market share, and drive SEO, traffic, and leads, by hosting online and offline community spaces",
+     "pagina": "p. 44"
+    },
+    {
+     "trecho": "The goal is to motivate and accelerate the contribution of content, products, and services on your platform, marketplace, or social network.",
+     "pagina": "p. 44"
+    },
+    {
+     "trecho": "you can apply the SPACES model and everything discussed in this book to any identity that a business interacts with, including users, sellers, employees, partners, alumni, volunteers, donors",
+     "pagina": "p. 45"
+    },
+    {
+     "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
+     "pagina": "p. 60"
+    },
+    {
+     "trecho": "If you need to get 100 sales, that means you need 200 opportunities, which means you need 800 leads, which means you need 8,000 people in the audience.",
+     "pagina": "p. 64"
+    }
+   ]
+  },
+  {
+   "nome": "The Community Life Cycle (ciclo de vida da comunidade: semente, crescimento, maturidade, polinização)",
+   "paginas": "p. 69 a 77",
+   "componentes": [
+    {
+     "nome": "Seed (semente)",
+     "descricao": "Comunidade recém-criada, com chance baixa de sobreviver. Pouco valor de negócio. O organizador inicia cerca de 90% das discussões, convida cada membro, testa formatos e busca o encaixe entre comunidade e mercado (community-market fit)."
+    },
+    {
+     "nome": "Growth (crescimento)",
+     "descricao": "Surge conteúdo orgânico: cerca de 50% das discussões iniciadas por membros. Começam a vir membros por indicação, regras novas, rituais, papéis informais. Já se consegue contar uma história com algum dado de receita. O papel do organizador passa de criação para facilitação."
+    },
+    {
+     "nome": "Maturity (maturidade)",
+     "descricao": "Cerca de 90% do conteúdo vem da comunidade. Existem regras, moderação, playbook, equipe e sistema de medição de engajamento e impacto. Pode haver platô de crescimento."
+    },
+    {
+     "nome": "Pollination (polinização)",
+     "descricao": "A comunidade fica grande demais e grupos menores se formam por interesse. Ou o organizador cria subespaços, ou os membros saem e criam comunidades por fora. Distribuir poder a quem assume a liderança."
+    }
+   ],
+   "logica": "O estágio define a prioridade: na semente, fundação e experimentação, sem preocupação com escala ou medição perfeita. No crescimento, estruturar processos e medir. Na maturidade, operar e delegar. Na polinização, abrir subcomunidades. Valor de negócio leva de seis a doze meses ou mais. Os sinais de mudança de fase são comportamentais (quem inicia as conversas, quem convida membros novos, que papéis existem) e não são metas numéricas de tamanho. Isso é a base natural dos portões de fase.",
+   "aplicacao_wise": "Mapeamento sugerido (inferência minha): experimentação do programa é a semente; tração é o crescimento; crescimento do programa é a maturidade, e a polinização aparece como grupos por segmento da indústria ou por região. Cada pilar tem seu próprio ciclo: o grupo de WhatsApp, a Prateleira e a Base Ativa podem estar em fases diferentes. A Base Ativa, em particular, só deve entregar playbook a parceiros depois que a Wise tiver rodado alguns eventos e achado um formato repetível.",
+   "impacto_processos": [
+    {
+     "tipo": "regra",
+     "nome": "Definir portões de fase pelos sinais do ciclo de vida",
+     "descricao": "Cada passagem de fase exige sinais observáveis: quem inicia as conversas, indicação entre parceiros, receita atribuível e papéis formais (detalhe na resposta aberta 2).",
+     "gatilho": "Fim de cada trimestre.",
+     "entregas": "Check de fase no quadro da jornada, assinado pelo Diretor.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Medir a proporção de iniciativas originadas por parceiros",
+     "descricao": "Contar quantas pautas, oportunidades e eventos foram iniciados pelo parceiro e quantos pela Wise.",
+     "gatilho": "Cada pauta, oportunidade ou evento registrado.",
+     "entregas": "Percentual mensal, comparado ao padrão 90/10, 50/50, 10/90 do livro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Formalizar o parceiro embaixador na fase de crescimento",
+     "descricao": "Quando papéis informais aparecem (parceiro que responde dúvidas dos outros), formalizar o papel com critérios.",
+     "gatilho": "Entrada na fase de tração.",
+     "entregas": "Descrição do papel, critério de entrada e benefícios (SNAP).",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Abrir subcomunidades por segmento quando o grupo pedir",
+     "descricao": "Se parceiros de um segmento (por exemplo, SST) pedirem espaço próprio, criar um grupo dedicado em vez de impedir.",
+     "gatilho": "Pedido recorrente de parceiros ou volume de conversa fora do tema.",
+     "entregas": "Grupo por segmento com seu responsável e três regras.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "ritmo",
+     "nome": "Rever a fase do programa na revisão trimestral",
+     "descricao": "Perguntar se o programa continua na fase atual, o que a fase pede e quais iniciativas mudam.",
+     "gatilho": "Revisão conjunta trimestral.",
+     "entregas": "Decisão de fase e meta escalonada do próximo trimestre.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Árvore em quatro estágios da esquerda para a direita (semente, broto, árvore, árvore com sementes novas). Embaixo de cada estágio uma barra com o percentual de conversas iniciadas pela comunidade (90/10, 50/50, 10/90).",
+   "citacoes": [
+    {
+     "trecho": "The community is first started and needs a lot of love and care to keep it alive.",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "There's community-market fit and the community starts to organically grow and engage.",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "The community becomes well-established, with clear norms and leadership structure.",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "The community becomes so large that it breaks out into peripheral or subcommunities",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "Your community won't drive much business value in the seed stage. You need a mature tree to bear fruit.",
+     "pagina": "p. 70"
+    },
+    {
+     "trecho": "Those who refuse to share power will eventually lose power.",
+     "pagina": "p. 77"
+    }
+   ]
+  },
+  {
+   "nome": "The Social Identity Cycle (ciclo da identidade social: identificação, participação, validação) e a teoria do senso de comunidade",
+   "paginas": "p. 26 a 28, p. 79 a 85, p. 122 a 139",
+   "componentes": [
+    {
+     "nome": "Identification (identificação)",
+     "descricao": "A pessoa se reconhece na identidade do grupo. Pergunta de desenho: quem somos (pessoas), em que acreditamos (propósito), o que fazemos (participação)."
+    },
+    {
+     "nome": "Participation (participação)",
+     "descricao": "A pessoa age: lê, apresenta-se, responde, comparece a um evento. Ações pequenas vêm primeiro."
+    },
+    {
+     "nome": "Validation (validação)",
+     "descricao": "A participação é recompensada (resposta, reconhecimento, resultado). Fecha o ciclo e aumenta o investimento na identidade."
+    },
+    {
+     "nome": "Quatro fatores do senso de comunidade (McMillan e Chavis)",
+     "descricao": "Pertencimento (fronteiras, segurança emocional, investimento pessoal, símbolos), influência (sentir que importa), integração e atendimento de necessidades, e conexão emocional compartilhada."
+    },
+    {
+     "nome": "SNAP (Status, Networking, Access, Perks)",
+     "descricao": "Recompensas extrínsecas: status, rede, acesso e vantagens. Gamificação aparece como prova de status, não como criadora de status."
+    },
+    {
+     "nome": "Medição do ciclo",
+     "descricao": "Identificação por pesquisa de 1 a 10; participação por usuários ativos, repetição e coorte; validação por pesquisa e NPS por camada."
+    }
+   ],
+   "logica": "Cada volta do ciclo aprofunda a identidade e o compromisso. Quem não entende como participar, ou participa e não é respondido, abandona. A validação é a etapa mais negligenciada. Em comunidades profissionais o motivo de entrada é utilidade prática, e o vínculo emocional vem depois. Rever o ciclo é a forma de medir saúde da comunidade (nível 2 da estratégia), e números de atividade devem ser lidos junto de entrevistas, porque análise sozinha engana.",
+   "aplicacao_wise": "Identidade do grupo Wise Partners (proposta minha, a confirmar com o patrocinador): pessoas são empresas e entidades que vendem para as mesmas indústrias; propósito é gerar e receber oportunidades; participação é compartilhar oportunidade, ajudar outro parceiro e, se quiser, liderar Base Ativa. A validação do parceiro vem do retorno de cada oportunidade, do reconhecimento do gerente e da conexão com outros parceiros. Para o Base Ativa, o ciclo se repete com os clientes do parceiro: o cliente se identifica com a comunidade do parceiro, participa de um evento e valida com resultado e relacionamento.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Onboarding do parceiro (saber, sentir, fazer)",
+     "descricao": "Sequência pessoal de boas-vindas: o que o parceiro precisa saber (regras e portas), sentir (acolhido, que o programa é feito para ele) e fazer (um primeiro passo pequeno).",
+     "gatilho": "Assinatura ou entrada do parceiro.",
+     "entregas": "Mensagem do gerente no grupo, roteiro de três perguntas de apresentação e primeiro passo combinado.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Devolver o resultado de cada oportunidade ao parceiro que a trouxe",
+     "descricao": "O gerente conta ao parceiro, em conversa, o que aconteceu com a oportunidade, sem prazo interno formal.",
+     "gatilho": "Mudança de status da oportunidade no portal.",
+     "entregas": "Mensagem curta no grupo do parceiro e registro no card.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Definir quem pertence e quem não pertence",
+     "descricao": "Critérios de entrada: vende para as mesmas indústrias, perfil e porte compatíveis, valores alinhados. Exclusão com respeito e indicação de alternativa.",
+     "gatilho": "Antes do convite e na triagem de parceiros orgânicos.",
+     "entregas": "Página de critérios e roteiro de recusa.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "metrica",
+     "nome": "Pesquisa de pertencimento em três afirmações",
+     "descricao": "Pergunta semestral com nota de 1 a 10: 'o programa foi feito para empresas como a minha', 'aprendi algo novo', 'o programa me ajudou a atingir meus objetivos'.",
+     "gatilho": "Fim do semestre.",
+     "entregas": "Nota por parceiro e por camada, lida junto de entrevista curta.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Reconhecer pelo SNAP em vez de dinheiro ou pontos",
+     "descricao": "Substituir qualquer bônus ou ranking de pontos por status, rede, acesso e vantagens não monetárias.",
+     "gatilho": "Definição do pacote de reconhecimento.",
+     "entregas": "Pacote com quatro itens (selo, jantar curado, conversa com diretoria, treinamento).",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Círculo com três setas (identificação, participação, validação) e uma seta externa em espiral crescente. Ao lado, as três perguntas de identidade (pessoas, propósito, participação) para o grupo Wise Partners.",
+   "citacoes": [
+    {
+     "trecho": "a feeling that members have of belonging, a feeling that members matter to one another and to the group, and a shared faith that members' needs will be met through their commitment to be together.",
+     "pagina": "p. 26"
+    },
+    {
+     "trecho": "there are four factors that contribute to a sense of community: membership, influence, integration/fulfillment of needs, and shared emotional connection.",
+     "pagina": "p. 26"
+    },
+    {
+     "trecho": "Identification. The person identifies with the community and is attracted to the social identity of the group.",
+     "pagina": "p. 80"
+    },
+    {
+     "trecho": "Participation. The person takes some sort of action to participate in a community experience.",
+     "pagina": "p. 80"
+    },
+    {
+     "trecho": "Validation. Participation is rewarded in some way, making them feel good about their participation, which strengthens their investment in the shared identity, and the cycle repeats.",
+     "pagina": "p. 80"
+    },
+    {
+     "trecho": "They might not know how to participate, or feel scared to participate, and drop off. Or they might participate, but no one responds, or they don't feel validated in any way, and so they drop off.",
+     "pagina": "p. 84"
+    }
+   ]
+  },
+  {
+   "nome": "The Commitment Curve (curva de compromisso) e os quatro níveis de participação",
+   "paginas": "p. 99 a 109, p. 113 a 120",
+   "componentes": [
+    {
+     "nome": "Passivo (passive)",
+     "descricao": "Consome conteúdo e escuta. Tem papel essencial: é a audiência que dá razão aos outros para contribuir."
+    },
+    {
+     "nome": "Ativo (active)",
+     "descricao": "Participa de discussões e cria conteúdo."
+    },
+    {
+     "nome": "Poderoso (power)",
+     "descricao": "Contribui em ritmo muito alto. Recebe identidade e status próprios (como Super Host)."
+    },
+    {
+     "nome": "Líder (leader)",
+     "descricao": "Modera, administra subgrupo ou abre um capítulo local. Exige processo seletivo e playbook."
+    },
+    {
+     "nome": "Recrutamento e barreiras",
+     "descricao": "Antes de ser membro há descoberta e decisão. Barreiras intencionais (aplicar, ganhar status) aumentam o valor dado à participação."
+    },
+    {
+     "nome": "Ativação por nível",
+     "descricao": "Entrevistar pessoas em cada nível para achar obstáculos, rodar campanhas de ativação e reintegrar a cada mudança de nível."
+    }
+   ],
+   "logica": "A comunidade é um ecossistema em que pessoas sobem e descem na curva. O pedido deve crescer só quando o compromisso cresceu. Não se consegue obrigar ninguém a participar, mas se pode remover obstáculos (falta de clareza, medo de errar). Foco nos círculos internos (a regra do 80/20 diz que 20% geram 80% do conteúdo), sem esquecer o círculo externo. Cada subida de nível é um novo onboarding. A segmentação por contribuição é uma das formas de identificar subidentidades, ao lado de indústria, localização e perfil demográfico.",
+   "aplicacao_wise": "Resposta ao interesse do patrocinador por tipos de parceiro (inferência minha): usar os quatro níveis como tipologia comportamental, com um quinto estado, o dormente, para quem já esteve ativo. A regra lógica é: recência e frequência de participação (≥1 ação em 30 dias, ≥3 ações em 30 dias) cruzadas com o valor gerado (ações de ROI). Para Base Ativa, o líder é o parceiro que roda o evento com a própria carteira. Ele deve ser escolhido por aplicação e conversa, não estar disponível a todos.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_processo",
+     "nome": "Gerir a escada de compromisso do parceiro",
+     "descricao": "Definir ações pequenas e grandes do parceiro em ordem de compromisso e classificar cada parceiro em um dos cinco estados.",
+     "gatilho": "Entrada do parceiro e fechamento de cada mês.",
+     "entregas": "Quadro da jornada com um card por parceiro e o nível atual.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Rodar campanha de ativação de parceiros passivos",
+     "descricao": "Semana de conteúdo e convites para parceiros sem ação recente: como compartilhar uma oportunidade, exemplos de casos, quem já ganhou com isso e como o gerente ajuda.",
+     "gatilho": "Parceiros passivos acima de um limite (por exemplo, mais da metade da base).",
+     "entregas": "Cinco mensagens curtas no grupo e acompanhamento de quem reagiu.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Entrevistar parceiros por nível sobre obstáculos",
+     "descricao": "Conversa curta com parceiros passivos, ativos e poderosos para entender por que não subiram de nível.",
+     "gatilho": "Trimestre, antes da revisão conjunta.",
+     "entregas": "Lista de obstáculos e ajustes ao onboarding.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "papel",
+     "nome": "Parceiro Líder da Base Ativa",
+     "descricao": "Parceiro que opera comunidade e evento na carteira, com critérios de entrada, playbook e canal com outros líderes.",
+     "gatilho": "Parceiro poderoso que pediu ou foi convidado a liderar.",
+     "entregas": "Papel formal, acordo de líder e onboarding específico.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Pedido proporcional ao nível",
+     "descricao": "Nenhum pedido de contribuição maior (evento, indicação em volume) para parceiro que ainda não fez as ações menores.",
+     "gatilho": "Antes de cada convite de nível superior.",
+     "entregas": "Lista de ações por nível no card.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Curva ascendente com cinco pontos (passivo, ativo, poderoso, líder e uma seta descendente para dormente). Abaixo de cada ponto: ação típica, ação de ROI esperada e a abordagem do gerente.",
+   "citacoes": [
+    {
+     "trecho": "Passive members are folks who are at the start of the commitment curve.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "An active member is someone who participates by joining in the discussion and creating content.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "A power member is someone who is so committed to the community, so engaged, that they contribute at very high rates.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "These are the folks who take on roles like moderating a digital space, becoming an admin of a subgroup, or launching a local community chapter.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "You'll ultimately need all four levels for a large, mature community to work: leaders, a core group of power members, a consistent group of active members, and an often-larger group of passive members.",
+     "pagina": "p. 108"
+    },
+    {
+     "trecho": "You'll grow your community a lot faster by working to get that 20 percent to double their commitment than by trying to get the other 80 percent of your community to increase their commitment by fivefold.",
+     "pagina": "p. 109"
+    }
+   ]
+  },
+  {
+   "nome": "The 7Ps of Community Experience Design (os 7Ps do desenho de experiências) e a cadência de repetição (batida, refrão, crescendo)",
+   "paginas": "p. 142 a 150, p. 163 a 176",
+   "componentes": [
+    {
+     "nome": "People (pessoas)",
+     "descricao": "Quem estamos reunindo. Começa pelo objetivo de negócio e pelas identidades da comunidade."
+    },
+    {
+     "nome": "Purpose (propósito)",
+     "descricao": "Por que reunimos. Prático (conversa técnica), de pertencimento (evento grande) ou de profundidade (círculo pequeno e privado)."
+    },
+    {
+     "nome": "Place (lugar)",
+     "descricao": "Onde reunimos. A plataforma não é a comunidade."
+    },
+    {
+     "nome": "Participation (participação)",
+     "descricao": "O que farão. Dizer como participar: mapa, perguntas, formato."
+    },
+    {
+     "nome": "Policy (política)",
+     "descricao": "Regras e diretrizes, poucas e claras."
+    },
+    {
+     "nome": "Promotion (promoção)",
+     "descricao": "Como convidar. Convite pessoal no início."
+    },
+    {
+     "nome": "Performance (desempenho)",
+     "descricao": "Como será o sucesso. Define a métrica antes."
+    },
+    {
+     "nome": "Cadência",
+     "descricao": "Experiências diárias, semanais, mensais, trimestrais e anuais, com formato fixo. Quanto mais rara, maior a produção."
+    }
+   ],
+   "logica": "Todo espaço e todo evento é desenhado pelos mesmos sete itens, começando por pessoas e propósito. Assíncrono dá amplitude e síncrono dá profundidade, e a recomendação é combinar os dois. Tamanho precisa combinar com propósito: círculos de até dez pessoas para abertura e vulnerabilidade, grupos maiores para acesso a conhecimento. Regras curtas e aplicadas igual, com sigilo quando o tema pede.",
+   "aplicacao_wise": "Para o WhatsApp, o ponto de partida é entender que ele é uma ferramenta de nível 1 (grátis, sem dado do membro, no lugar em que o parceiro já está). Isso é adequado para a fase semente, desde que o portal seja o registro. Um grupo único com muita gente fica sobrecarregado: o livro cita 150 membros como ponto inicial de fóruns e alerta contra apertar mil pessoas em um chat. O desenho por parceiro funciona como canal pessoal, e a camada de comunidade entre parceiros deve existir em formato pequeno (rituais em grupo de até dez, 90 minutos). Cada evento Base Ativa é desenhado pelos 7Ps pelo parceiro, com o gerente.",
+   "impacto_processos": [
+    {
+     "tipo": "ritmo",
+     "nome": "Montar o calendário de rituais por frequência",
+     "descricao": "Preencher diário, semanal, mensal, trimestral e anual com formato fixo (por exemplo, boas-vindas na segunda, oportunidade da semana, círculo mensal, revisão trimestral, encontro anual).",
+     "gatilho": "Início da fase.",
+     "entregas": "Agenda de rituais publicada e repetida.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Desenhar cada ritual e evento pelos 7Ps",
+     "descricao": "Ficha de uma página: pessoas, propósito, lugar, participação, política, promoção e desempenho.",
+     "gatilho": "Antes de cada novo ritual ou evento.",
+     "entregas": "Ficha 7Ps no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Regras curtas do grupo",
+     "descricao": "Três a seis regras: dar mais do que pedir, autopromoção só em área própria, sigilo sobre clientes de terceiros, crítica à ideia e não à pessoa.",
+     "gatilho": "Criação do grupo.",
+     "entregas": "Mensagem fixada e explicada no onboarding.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Conduzir círculo mensal de parceiros em grupo pequeno",
+     "descricao": "Rodada de até dez, 90 minutos, com formato fixo: chegada, alto e baixo da semana, desafio de um participante, compromisso final.",
+     "gatilho": "Mensal.",
+     "entregas": "Pauta e registro de compromissos no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "reorganizar",
+     "nome": "Separar canal pessoal de espaço de comunidade",
+     "descricao": "Manter o grupo por parceiro para o relacionamento e criar um espaço pequeno de rede entre parceiros (por segmento).",
+     "gatilho": "Quando houver parceiros suficientes por segmento.",
+     "entregas": "Mapa de grupos com finalidade e tamanho máximo.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Linha do tempo com cinco faixas (diária a anual) mostrando uma bolinha pequena no diário e uma grande no anual. Ao lado, uma ficha de sete linhas (os 7Ps).",
+   "citacoes": [
+    {
+     "trecho": "People. Who are we gathering? Purpose. Why are we gathering?",
+     "pagina": "p. 147"
+    },
+    {
+     "trecho": "Place. Where are we gathering? Participation. What will participants do? Policy. What are the rules and guidelines? Promotion. How will you invite members? Performance. What will success look and feel like?",
+     "pagina": "p. 148"
+    },
+    {
+     "trecho": "a steady cadence of different content and experiences for people to engage with (the beat), regular rituals where everyone knows how to participate (the chorus)",
+     "pagina": "p. 144"
+    },
+    {
+     "trecho": "Online, a forum with 10 people in it will feel empty, and a chat group with 1,000 in it will feel extremely overwhelming. Don't launch a forum for 10 people. And don't squeeze 1,000 into a single chat feed.",
+     "pagina": "p. 153"
+    },
+    {
+     "trecho": "Free tools on existing social platforms (Facebook, LinkedIn, Slack). They cannot be customized, and there is limited or no access to member data.",
+     "pagina": "p. 154"
+    },
+    {
+     "trecho": "I'd recommend keeping small-group discussions to 10 people or less and make sure to give people enough time.",
+     "pagina": "p. 166"
+    }
+   ]
+  },
+  {
+   "nome": "Distributed leadership: distribuir controle com trilhos (guide rails), programa de líderes locais e capítulos",
+   "paginas": "p. 29 a 32, p. 50 a 51, p. 118 a 120",
+   "componentes": [
+    {
+     "nome": "Controle distribuído",
+     "descricao": "A empresa define as regras e valores que não mudam, e deixa liberdade criativa ao líder local, que está mais perto do problema."
+    },
+    {
+     "nome": "Playbook",
+     "descricao": "Guia detalhado de como rodar o evento: requisitos, seleção de palestrantes, código de conduta. O TEDx tem mais de 80 páginas."
+    },
+    {
+     "nome": "Seleção de líderes",
+     "descricao": "Qualidade acima de quantidade, com aplicação ou entrevista e alinhamento de valores. É mais fácil vetar do que remover."
+    },
+    {
+     "nome": "Comunidade de líderes",
+     "descricao": "Espaço para organizadores trocarem lições e ajudarem os novos."
+    },
+    {
+     "nome": "Plataforma e dados únicos",
+     "descricao": "Todos os líderes na mesma ferramenta, para consistência e para saber quem confirma e quem comparece."
+    },
+    {
+     "nome": "Incentivo",
+     "descricao": "O líder pode ser voluntário, contratado ou ganhar parte do resultado (como organizadores TEDx, que ficam com o lucro)."
+    }
+   ],
+   "logica": "Escala vem de delegar a quem está perto do problema, e o gargalo some quando o fundador solta controle. A empresa mantém consistência por playbook e dados centralizados. O livro diz que a maior dificuldade de escalar programas assim é operação e dados, não motivação. Na fase semente, a empresa roda alguns eventos ela mesma para achar o formato repetível, e só depois escreve o playbook.",
+   "aplicacao_wise": "É o desenho natural da Base Ativa (comunidade e evento na carteira do parceiro): o parceiro é o líder local e a Wise fornece playbook, convidados-alvo, acompanhamento e o portal como plataforma. Atenção para duas questões: (1) a Wise tem um gerente único, então a delegação é obrigatória para escalar; (2) incentivo financeiro já existe como comissão, e o livro mostra que dar parte do resultado ao líder é um modelo legítimo (TEDx), diferente de pagar por tarefa voluntária.",
+   "impacto_processos": [
+    {
+     "tipo": "novo_macroprocesso",
+     "nome": "Operar o programa de líderes da Base Ativa",
+     "descricao": "Do convite do parceiro ao pós-evento: seleção, onboarding, playbook, calendário, evento, coleta de dados e aprendizado.",
+     "gatilho": "Parceiro aceito como líder de Base Ativa.",
+     "entregas": "Evento realizado, lista de participantes no portal, leads encaminhados e lições registradas.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_processo",
+     "nome": "Escrever e manter o playbook da Base Ativa",
+     "descricao": "Documento que cobre formato, convidados, roteiro, regras, dados a coletar e como entregar leads.",
+     "gatilho": "Depois de dois ou três eventos rodados pela Wise.",
+     "entregas": "Playbook versionado e publicado no portal.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "nova_atividade",
+     "nome": "Selecionar líderes por aplicação e conversa",
+     "descricao": "Formulário curto e conversa de 30 minutos para validar valores, carteira e disponibilidade.",
+     "gatilho": "Candidatura ou convite.",
+     "entregas": "Decisão de aceite e registro no card do parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "regra",
+     "nome": "Todo evento Base Ativa é registrado no portal",
+     "descricao": "Lista de convidados, presença e resultado entram numa única ferramenta.",
+     "gatilho": "Antes de cada evento.",
+     "entregas": "Registro completo por evento e por parceiro.",
+     "dono": "Gerente de Parcerias"
+    },
+    {
+     "tipo": "novo_subprocesso",
+     "nome": "Reunir líderes para troca entre si",
+     "descricao": "Espaço periódico de líderes de Base Ativa para dividir lições.",
+     "gatilho": "Trimestral.",
+     "entregas": "Pauta de lições e ajustes ao playbook.",
+     "dono": "Gerente de Parcerias"
+    }
+   ],
+   "visual": "Roda central (Wise: regras, playbook, portal) e raios para vários parceiros líderes, cada um com um círculo menor de clientes da carteira. Linha pontilhada entre líderes representando a comunidade de líderes.",
+   "citacoes": [
+    {
+     "trecho": "The idea is to create guide rails within which members will contribute.",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "companies will create a playbook that guides members on how to run an event, what the design requirements are, how to select speakers, the code of conduct",
+     "pagina": "p. 31"
+    },
+    {
+     "trecho": "The chapter leader gets approval to represent the brand, they're given a playbook for how to run their events, and the company supports them with resources, training, and benefits.",
+     "pagina": "p. 51"
+    },
+    {
+     "trecho": "I once reviewed the TEDx playbook that TED gives to its local organizers and it was well over 80 pages.",
+     "pagina": "p. 119"
+    },
+    {
+     "trecho": "Ideally, you can host the entire program on, and have all of your local leaders using, one platform to centralize operations.",
+     "pagina": "p. 119"
+    },
+    {
+     "trecho": "Whenever you put someone in a leadership position for your community, you'll want to focus on quality over quantity.",
+     "pagina": "p. 120"
+    }
+   ]
+  }
+ ],
+ "respostas_abertas": {
+  "fatores_e_tipos": "O livro não trata de fatores de parceria nem de tipos de parceiro, porque fala de comunidade e não de alianças. O que ele oferece é útil por analogia. (1) Os quatro fatores do senso de comunidade, que definem se um grupo é de fato uma comunidade: pertencimento, influência, atendimento de necessidades e conexão emocional compartilhada. Não são fatores de tipo, mas de força do vínculo. (2) Critérios para dividir a comunidade em subidentidades: nível de contribuição, indústria, localização e perfil demográfico. (3) Níveis de participação: passivo, ativo, poderoso e líder, definidos por comportamento. Regra lógica proposta, inferência minha a partir dessas ideias e das medidas de repetição do livro: o tipo do parceiro vem do comportamento, não do porte nem do produto. Eixo 1 é a participação (recência: pelo menos uma ação em 30 dias; frequência: pelo menos três ações em 30 dias). Eixo 2 é o valor gerado, medido por ações de ROI (oportunidades compartilhadas, indicações, eventos de Base Ativa). Matriz: baixa participação e baixo valor = passivo; alta participação e baixo valor = ativo (conversa, ainda não gera); alta participação e alto valor = poderoso; poderoso que opera Base Ativa ou mentoria = líder; baixa participação com valor alto = pontual de alto valor (manter aquecido, não pressionar); quem foi ativo e parou = dormente. Atributos como indústria, região e segmento definem em qual subcomunidade o parceiro entra, não o tipo.",
+  "abordagem_por_tipo": "Passivo: facilitar o consumo passivo (conteúdo claro e curto, sem cobrar), rodar campanha de ativação (semana dos passivos), entrevistar para achar o obstáculo e fazer apenas pedidos pequenos. Ativo: convidar de forma pessoal para a primeira ação de ROI, com mensagem direta e não pedido genérico no grupo, e oferecer o círculo pequeno mensal. Poderoso: criar identidade própria (selo de parceiro destaque), recompensar por status, rede e acesso, e perguntar se quer liderar. Líder: seleção por aplicação, playbook, espaço entre líderes, onboarding específico e o gerente por perto. Pontual de alto valor (inferência minha): manter relacionamento sem excesso de cobrança, lembrar-se dele em ritual trimestral. Dormente: perguntar por que saiu da curva e reiniciar o onboarding no nível em que ele estava. Em todos os tipos, a validação (retorno do que aconteceu com o que o parceiro trouxe) é a ação mais importante.",
+  "portoes_de_fase": "O livro não dá metas numéricas por fase, mas descreve sinais por estágio, que servem de base para portões. Mapeamento (inferência minha): experimentação = semente; tração = crescimento; crescimento do programa = maturidade; abertura de subcomunidades = polinização. Portão 1 (experimentação para tração): comunidade com encaixe (parceiros respondem e voltam), cerca de metade das pautas já vem dos parceiros, chegam parceiros por indicação, existe pelo menos um relato de receita ligado ao programa, e algum parceiro já age como informal embaixador. Portão 2 (tração para crescimento): perto de 90% do conteúdo vindo dos parceiros, regras e rituais estáveis, papéis formais (líder de Base Ativa, moderador), playbook escrito, medição de engajamento e impacto no portal e equipe além do gerente. Portão 3 (crescimento para polinização): grupos por segmento pedidos pelos parceiros e dados de coorte estáveis. Metas escalonadas sugeridas (inferência minha, a calibrar): semente com poucos parceiros escolhidos e atendidos pessoalmente; crescimento com 150 membros como ordem de grandeza para o espaço coletivo; DAU/MAU entre 8% e 10% é bom e 20% a 30% é excelente; valor de negócio só deve ser cobrado depois de seis a doze meses. Em cada trimestre, a revisão conjunta registra a proporção de iniciativas originadas por parceiros.",
+  "simplicidade": "Manter simples: (1) poucos objetivos, um ou dois, e uma ação de ROI por objetivo; (2) poucas regras, no máximo dez e começando com três a seis; (3) um espaço onde o parceiro já está (WhatsApp) e um registro único no portal; (4) formato fixo para rituais e eventos, variando só o conteúdo; (5) pedidos pequenos no começo. A razão do livro é prática: complexidade dilui a capacidade da equipe e confunde o membro. Não simplificar demais: o contato pessoal na semente, a validação do que o parceiro traz e a seleção de líderes. Sobre a regra única de comissão, o livro não opina sobre o valor, mas alerta que dinheiro muda a lógica da relação (norma de mercado), então recompensas da comunidade devem ser outras. Ver tensões. Spinks também defende barreiras intencionais de entrada para status, e isso entra em tensão com a ideia de adesão máxima.",
+  "citacoes": [
+   {
+    "trecho": "there are four factors that contribute to a sense of community: membership, influence, integration/fulfillment of needs, and shared emotional connection.",
+    "pagina": "p. 26"
+   },
+   {
+    "trecho": "Contribution level. Focus on your most active users, or most loyal customers",
+    "pagina": "p. 100"
+   },
+   {
+    "trecho": "Industry. Focus on your biggest markets, or the industries where members have the biggest need for community",
+    "pagina": "p. 100"
+   },
+   {
+    "trecho": "Location. Focus on members who live in specific regions where you have critical mass",
+    "pagina": "p. 100"
+   },
+   {
+    "trecho": "You'll ultimately need all four levels for a large, mature community to work: leaders, a core group of power members, a consistent group of active members, and an often-larger group of passive members.",
+    "pagina": "p. 108"
+   },
+   {
+    "trecho": "you can track how many members have taken at least three actions in your community in the last 30 days.",
+    "pagina": "p. 137"
+   },
+   {
+    "trecho": "look at activity rates amongst members who signed up in the last 90 days and compare it to members who signed up in the last 30 days to get an idea of your dropoff rates.",
+    "pagina": "p. 137"
+   },
+   {
+    "trecho": "it'll move closer to 50 percent of the discussions being sparked by you, and 50 percent started by community members.",
+    "pagina": "p. 74"
+   },
+   {
+    "trecho": "About 90 percent of the content is being created by the community at this point",
+    "pagina": "p. 75"
+   },
+   {
+    "trecho": "Rituals will start to take shape. New roles will form in the community, informally at first, and over time become formalized, like moderator or ambassador programs.",
+    "pagina": "p. 75"
+   },
+   {
+    "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
+    "pagina": "p. 60"
+   },
+   {
+    "trecho": "Keep your list of rules short and simple so that they're easy to remember. I recommend having no more than 10 rules and offer more detailed guidelines in your code of conduct.",
+    "pagina": "p. 171"
+   }
+  ]
+ },
+ "recomendacoes": [
+  {
+   "tema": "Foco da comunidade",
+   "recomendacao": "Declarar Aquisição como objetivo principal do programa e Contribuição como segundo. Registrar essa escolha no quadro da jornada da fase e não abrir metas para Suporte, Produto, Engajamento e Sucesso.",
+   "processo": "Definir um ou dois objetivos SPACES da fase",
+   "citacao": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
+   "pagina": "p. 60",
+   "aplicabilidade": "alta",
+   "porque": "Um objetivo claro evita que o gerente, único responsável, responda por seis objetivos."
+  },
+  {
+   "tema": "Contribuição",
+   "recomendacao": "Tratar o parceiro como contribuidor e medir: parceiros que fazem a primeira ação, ações por parceiro, retenção e receita por parceiro bem-sucedido.",
+   "processo": "Registrar a ação de ROI por parceiro",
+   "citacao": "Revenue per successful contributor",
+   "pagina": "p. 59",
+   "aplicabilidade": "alta",
+   "porque": "As métricas de Contribuição do SPACES são as que mais se parecem com o ciclo do parceiro que traz oportunidades."
+  },
+  {
+   "tema": "Três níveis",
+   "recomendacao": "Escrever a meta em três níveis: negócio (clientes novos pela comunidade), comunidade (parceiros ativos) e tático (iniciativas do mês). A ação de cada nível vira a meta do seguinte.",
+   "processo": "Definir um ou dois objetivos SPACES da fase",
+   "citacao": "The actions from your business-level strategy will become your goals for the community level of your strategy.",
+   "pagina": "p. 68",
+   "aplicabilidade": "alta",
+   "porque": "Liga o trabalho semanal do gerente ao resultado que o patrocinador cobra."
+  },
+  {
+   "tema": "Fase semente",
+   "recomendacao": "Rodar o grupo como comunidade mínima viável: poucos parceiros escolhidos, convite pessoal, formato manual, sem automação, com atenção total do gerente.",
+   "processo": "Gerir a escada de compromisso do parceiro",
+   "citacao": "you don't need a big, automated community program to validate that people actually need your community",
+   "pagina": "p. 110",
+   "aplicabilidade": "alta",
+   "porque": "É o estado atual do programa (nenhum parceiro assinado) e evita investir em estrutura antes de validar o encaixe."
+  },
+  {
+   "tema": "Recrutamento",
+   "recomendacao": "Montar uma lista de empresas-alvo e abordar pessoalmente, em vez de aguardar chegada orgânica. Escrever mensagem individual para cada uma.",
+   "processo": "Gerir a escada de compromisso do parceiro",
+   "citacao": "Hope for organic growth, but plan for manual growth.",
+   "pagina": "p. 111",
+   "aplicabilidade": "alta",
+   "porque": "O livro diz que crescimento orgânico desde o início é exceção. Isso contradiz a premissa atual, ver tensões."
+  },
+  {
+   "tema": "Convite pessoal",
+   "recomendacao": "Preferir mensagem individual a convite em massa. Limitar a primeira rodada a cerca de cem contatos escolhidos, e a eventos pequenos de cerca de vinte pessoas.",
+   "processo": "Gerir a escada de compromisso do parceiro",
+   "citacao": "Instead of sending a mass email out to 1,000 customers asking them to join your new community, take the time to personally email 100 key people to jumpstart the community.",
+   "pagina": "p. 182",
+   "aplicabilidade": "alta",
+   "porque": "O convite pessoal gera pressão social positiva e sensação de seleção."
+  },
+  {
+   "tema": "Onboarding",
+   "recomendacao": "Fazer onboarding em três perguntas (o que saber, o que sentir, o que fazer) e dar ao parceiro novo três perguntas de apresentação: quem é, para quais indústrias vende e que oportunidade procura.",
+   "processo": "Onboarding do parceiro (saber, sentir, fazer)",
+   "citacao": "So you don't want to leave your first impression to chance.",
+   "pagina": "p. 115",
+   "aplicabilidade": "alta",
+   "porque": "A primeira impressão é difícil de mudar, e o roteiro explícito reduz o medo de participar."
+  },
+  {
+   "tema": "Primeiro pedido",
+   "recomendacao": "O primeiro pedido ao parceiro deve ser pequeno e apresentado como algo que lhe traz valor, como contar uma oportunidade que procura.",
+   "processo": "Pedido proporcional ao nível",
+   "citacao": "Remember, when they first join, you don't want to make a big ask for them.",
+   "pagina": "p. 115",
+   "aplicabilidade": "alta",
+   "porque": "Pedir muito na entrada afasta, como no caso do Meetup."
+  },
+  {
+   "tema": "Pertencimento",
+   "recomendacao": "Definir por escrito quem são as pessoas, o propósito e a participação do grupo, e quem não pertence, para dar clareza aos candidatos e segurança aos membros.",
+   "processo": "Definir quem pertence e quem não pertence",
+   "citacao": "People: Who are we? Purpose: What do we believe? Participation: What do we do?",
+   "pagina": "p. 84",
+   "aplicabilidade": "media",
+   "porque": "Facilita a triagem de parceiros que chegam de forma orgânica."
+  },
+  {
+   "tema": "Validação",
+   "recomendacao": "Devolver ao parceiro o resultado de cada oportunidade que ele trouxe, mesmo sem prazo interno, e destacar o impacto das contribuições dele em outras pessoas.",
+   "processo": "Devolver o resultado de cada oportunidade ao parceiro que a trouxe",
+   "citacao": "You can also reward members by simply making sure they're aware of the positive impact their contributions have had on other members.",
+   "pagina": "p. 127",
+   "aplicabilidade": "alta",
+   "porque": "Sem retorno o parceiro abandona. É a recomendação mais barata e de maior efeito."
+  },
+  {
+   "tema": "Tipologia de parceiros",
+   "recomendacao": "Classificar parceiros em passivo, ativo, poderoso, líder e dormente por comportamento no portal (ações em 30 dias e ações de ROI), e escolher a abordagem por tipo.",
+   "processo": "Gerir a escada de compromisso do parceiro",
+   "citacao": "You'll ultimately need all four levels for a large, mature community to work: leaders, a core group of power members, a consistent group of active members, and an often-larger group of passive members.",
+   "pagina": "p. 108",
+   "aplicabilidade": "alta",
+   "porque": "Responde à pergunta do patrocinador sobre tipos de parceiro com uma regra lógica, mas é adaptação minha, não do livro."
+  },
+  {
+   "tema": "Ativação",
+   "recomendacao": "Rodar uma semana de ativação dos parceiros passivos com cinco peças curtas (como compartilhar oportunidade, exemplos, quem já ganhou, por que contribuir, como o gerente ajuda).",
+   "processo": "Rodar campanha de ativação de parceiros passivos",
+   "citacao": "Nelson was able to activate 44 percent of the lurkers in their community.",
+   "pagina": "p. 117",
+   "aplicabilidade": "media",
+   "porque": "O caso de referência ativou 44% dos silenciosos com uma semana de conteúdo."
+  },
+  {
+   "tema": "Rituais",
+   "recomendacao": "Montar a agenda de rituais por frequência com formato fixo: boas-vindas semanais, círculo mensal pequeno, revisão trimestral e um encontro anual.",
+   "processo": "Montar o calendário de rituais por frequência",
+   "citacao": "It's much easier for members to engage when they know that we welcome new members every Monday, that a meetup is going to happen on the first Tuesday of every month",
+   "pagina": "p. 146",
+   "aplicabilidade": "alta",
+   "porque": "Previsibilidade cria hábito e dispensa convocação."
+  },
+  {
+   "tema": "Círculos pequenos",
+   "recomendacao": "Realizar um círculo mensal de parceiros com até dez pessoas, 90 minutos, formato de desafio compartilhado e compromisso final.",
+   "processo": "Conduzir círculo mensal de parceiros em grupo pequeno",
+   "citacao": "I'd recommend keeping small-group discussions to 10 people or less and make sure to give people enough time.",
+   "pagina": "p. 166",
+   "aplicabilidade": "media",
+   "porque": "É o espaço de rede entre parceiros que o grupo por parceiro não oferece."
+  },
+  {
+   "tema": "Regras",
+   "recomendacao": "Fixar entre três e seis regras no grupo e explicar o motivo de cada uma: dar mais do que pedir, autopromoção só em área própria, sigilo sobre clientes de terceiros.",
+   "processo": "Regras curtas do grupo",
+   "citacao": "Keep your list of rules short and simple so that they're easy to remember. I recommend having no more than 10 rules and offer more detailed guidelines in your code of conduct.",
+   "pagina": "p. 171",
+   "aplicabilidade": "alta",
+   "porque": "Regras curtas e consistentes são mais fáceis de aplicar sem personalizar a moderação."
+  },
+  {
+   "tema": "Reconhecimento",
+   "recomendacao": "Reconhecer parceiros por status, rede, acesso e vantagens. Evitar pontos, ranking e bônus extra, pelo menos enquanto não houver engajamento espontâneo.",
+   "processo": "Reconhecer pelo SNAP em vez de dinheiro ou pontos",
+   "citacao": "SNAP! stands for Status, Networking, Access, and Perks.",
+   "pagina": "p. 128",
+   "aplicabilidade": "alta",
+   "porque": "Evita o efeito de substituir norma social por norma de mercado."
+  },
+  {
+   "tema": "Base Ativa: formato",
+   "recomendacao": "Rodar dois ou três eventos da Base Ativa com o parceiro antes de escrever o playbook, para achar um formato repetível.",
+   "processo": "Escrever e manter o playbook da Base Ativa",
+   "citacao": "You're looking for the repeatable format that you can bring to chapters around the world.",
+   "pagina": "p. 74",
+   "aplicabilidade": "alta",
+   "porque": "Escrever playbook cedo demais cristaliza um formato não testado."
+  },
+  {
+   "tema": "Base Ativa: playbook",
+   "recomendacao": "Escrever playbook detalhado com roteiro, convidados, regras, dados a coletar e entrega de leads, retirando do líder o máximo de decisão.",
+   "processo": "Escrever e manter o playbook da Base Ativa",
+   "citacao": "They key to making these programs successful is to take away as much of the work and decision making as possible for your leaders.",
+   "pagina": "p. 119",
+   "aplicabilidade": "alta",
+   "porque": "O líder precisa decidir só o que é local."
+  },
+  {
+   "tema": "Base Ativa: convidados",
+   "recomendacao": "Montar eventos que reúnam clientes fiéis do parceiro e prospects-alvo (inclusive da lista da Wise), com convite pessoal à lista de contas.",
+   "processo": "Operar o programa de líderes da Base Ativa",
+   "citacao": "organize a dinner and invite both your most loyal customers and your biggest target prospects so that they can sit and talk to each other.",
+   "pagina": "p. 150",
+   "aplicabilidade": "alta",
+   "porque": "É o desenho que a Ironclad usou para gerar mais de US$ 8 milhões de receita recorrente anual."
+  },
+  {
+   "tema": "Base Ativa: líderes",
+   "recomendacao": "Selecionar líderes por aplicação e conversa e priorizar qualidade sobre quantidade.",
+   "processo": "Selecionar líderes por aplicação e conversa",
+   "citacao": "Whenever you put someone in a leadership position for your community, you'll want to focus on quality over quantity.",
+   "pagina": "p. 120",
+   "aplicabilidade": "alta",
+   "porque": "Remover um líder depois é muito mais difícil do que vetá-lo antes."
+  },
+  {
+   "tema": "Base Ativa: dados",
+   "recomendacao": "Registrar todos os eventos e participantes no portal e não aceitar planilhas paralelas dos parceiros.",
+   "processo": "Todo evento Base Ativa é registrado no portal",
+   "citacao": "Ideally, you can host the entire program on, and have all of your local leaders using, one platform to centralize operations.",
+   "pagina": "p. 119",
+   "aplicabilidade": "alta",
+   "porque": "Operação e dados são o ponto em que programas assim costumam falhar ao escalar."
+  },
+  {
+   "tema": "Lead qualificado pela comunidade",
+   "recomendacao": "Incluir no card da oportunidade o sinal de participação do parceiro e da empresa-alvo (eventos, grupo) e entregá-lo em conversa ao closer.",
+   "processo": "Marcar o sinal de comunidade no lead entregue ao closer",
+   "citacao": "you can look at the number of events attended as a signal for how qualified a lead is.",
+   "pagina": "p. 64",
+   "aplicabilidade": "media",
+   "porque": "Closers fora do portal não verão o dado, então a fala do gerente é o canal."
+  },
+  {
+   "tema": "Funil reverso",
+   "recomendacao": "Calcular por trimestre quantos participantes, eventos e parceiros líderes são necessários para uma meta de clientes novos, como hipótese revisada a cada trimestre.",
+   "processo": "Calcular o funil reverso da Base Ativa",
+   "citacao": "If you need to get 100 sales, that means you need 200 opportunities, which means you need 800 leads, which means you need 8,000 people in the audience.",
+   "pagina": "p. 64",
+   "aplicabilidade": "alta",
+   "porque": "Transforma meta de receita em plano de atividade verificável."
+  },
+  {
+   "tema": "Medição",
+   "recomendacao": "Medir parceiros ativos em 30 dias, parceiros com três ou mais ações e coorte de 30 e 90 dias, a partir de eventos no portal.",
+   "processo": "Registrar a ação de ROI por parceiro",
+   "citacao": "you can track how many members have taken at least three actions in your community in the last 30 days.",
+   "pagina": "p. 137",
+   "aplicabilidade": "alta",
+   "porque": "O WhatsApp não entrega dado de membro, então o portal precisa ser a fonte."
+  },
+  {
+   "tema": "Portões de fase",
+   "recomendacao": "Usar quem inicia as conversas (90/10, 50/50, 10/90), indicação entre membros e papéis formais como sinais de passagem de fase.",
+   "processo": "Definir portões de fase pelos sinais do ciclo de vida",
+   "citacao": "it'll move closer to 50 percent of the discussions being sparked by you, and 50 percent started by community members.",
+   "pagina": "p. 74",
+   "aplicabilidade": "alta",
+   "porque": "São os únicos limiares que o livro fornece para mudança de fase."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Aderência diária sobre mensal (stickiness)",
+   "definicao": "Parceiros com ao menos uma ação no dia dividido pelos parceiros com ao menos uma ação em 30 dias. No portal, ação é abrir ou atualizar oportunidade, responder no grupo registrado ou ir a ritual. Referência do livro: 30% é excelente.",
+   "citacao": "To find your ratio, divide your Daily Active Users (DAU's) by Monthly Active Users (MAU's).",
+   "pagina": "p. 136"
+  },
+  {
+   "nome": "Repetição de uso",
+   "definicao": "Parceiros com três ou mais ações nos últimos 30 dias, para separar quem volta de quem apareceu uma vez.",
+   "citacao": "you can track how many members have taken at least three actions in your community in the last 30 days.",
+   "pagina": "p. 137"
+  },
+  {
+   "nome": "Retenção por coorte",
+   "definicao": "Atividade de parceiros que entraram nos últimos 30 dias comparada com os dos últimos 90 dias, para medir perda após o onboarding.",
+   "citacao": "look at activity rates amongst members who signed up in the last 90 days and compare it to members who signed up in the last 30 days to get an idea of your dropoff rates.",
+   "pagina": "p. 137"
+  },
+  {
+   "nome": "Ações de ROI por parceiro",
+   "definicao": "Contagem por parceiro de oportunidades compartilhadas, indicações e eventos de Base Ativa que geram lead.",
+   "citacao": "Refer a new customer or host an event that drives leads.",
+   "pagina": "p. 140"
+  },
+  {
+   "nome": "NPS por camada de participação",
+   "definicao": "Pergunta única de recomendação, quebrada por passivo, ativo, poderoso e líder. Mostra se a base nova recebe valor.",
+   "citacao": "They can also break down the responses into groups, so they could get an NPS score for each layer of social identity or activity.",
+   "pagina": "p. 138"
+  },
+  {
+   "nome": "Receita por parceiro ativo",
+   "definicao": "Receita atribuída ao parceiro por período dividida pelo número de parceiros com ao menos uma ação de ROI.",
+   "citacao": "Revenue per successful contributor",
+   "pagina": "p. 59"
+  },
+  {
+   "nome": "Pipeline vindo da comunidade",
+   "definicao": "Leads, oportunidades e clientes cuja origem ou toque inclui a comunidade, em relatório trimestral simples como o do livro.",
+   "citacao": "This quarter the community brought in 300 new leads, which led to 75 opportunities and 40 sales, a total of $800,000 in annual revenue.",
+   "pagina": "p. 65"
+  },
+  {
+   "nome": "Proporção de iniciativas originadas pelos parceiros",
+   "definicao": "Parte das pautas, oportunidades e eventos iniciados pelo parceiro, usada como indicador de fase (90/10, 50/50, 10/90).",
+   "citacao": "it'll move closer to 50 percent of the discussions being sparked by you, and 50 percent started by community members.",
+   "pagina": "p. 74"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Gamificação (pontos, selos, ranking) não cria engajamento que não existe e pode ser manipulada. Só usar depois de haver participação espontânea.",
+   "citacao": "Bad news. If you're not seeing much engagement in your community now, adding points, badges, swag, levels, or perks won't be much help.",
+   "pagina": "p. 131"
+  },
+  {
+   "alerta": "Dinheiro e bônus trocam a norma social pela norma de mercado e reduzem a motivação intrínseca. Vale para recompensas de comunidade e de líderes de Base Ativa.",
+   "citacao": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation.",
+   "pagina": "p. 126"
+  },
+  {
+   "alerta": "Perseguir muitos objetivos ao mesmo tempo faz o gerente responder por muitos times e impede contar uma história clara.",
+   "citacao": "By focusing on six objectives, the community team is essentially doing the job of six teams.",
+   "pagina": "p. 61"
+  },
+  {
+   "alerta": "Convidar toda a base de uma vez desperdiça a fase em que a cultura e o tom são definidos.",
+   "citacao": "Why not invite 10,000 customers into your new forum all at once? This would be a mistake.",
+   "pagina": "p. 72"
+  },
+  {
+   "alerta": "Plataforma não é comunidade, e o WhatsApp não entrega dado do membro. O portal precisa ser o registro, senão a ligação com receita fica impossível.",
+   "citacao": "But it comes at the cost of ownership of any member data that could help you improve your community experience and connect community engagement back to your business's systems of record.",
+   "pagina": "p. 113"
+  },
+  {
+   "alerta": "Pesquisa de satisfação sofre viés de seleção: quem responde não representa quem não responde. Cruzar com dados de comportamento.",
+   "citacao": "One thing to be mindful of in any community member surveying is selection bias.",
+   "pagina": "p. 139"
+  },
+  {
+   "alerta": "Autopromoção livre mata o grupo e o transforma num cemitério de links. Dar uma área própria e proibir no restante.",
+   "citacao": "There's no quicker way to let a community die than to just let everyone promote themselves and their products.",
+   "pagina": "p. 174"
+  },
+  {
+   "alerta": "Comunidade leva tempo para dar retorno de negócio. Cobrar receita cedo demais empurra o programa a virar canal de venda e a perder confiança.",
+   "citacao": "Community takes time to build, which can be a concern for companies who like to move fast and want to get results right away.",
+   "pagina": "p. 34"
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "Os parceiros chegam de forma orgânica, e o livro diz que o crescimento orgânico desde o início é exceção ('Hope for organic growth, but plan for manual growth', p. 111).",
+   "como_resolver": "Manter a porta orgânica aberta, mas incluir um processo ativo de recrutamento pessoal pelo gerente, com lista de empresas-alvo e convites individuais, nas três primeiras fases."
+  },
+  {
+   "tensao": "A comunicação é um grupo de WhatsApp por parceiro. Para o livro, comunidade é de muitos para muitos e nasce da relação entre membros, e o WhatsApp não entrega dado do membro (p. 24, p. 154). Um grupo por parceiro é um canal pessoal, não uma comunidade entre parceiros.",
+   "como_resolver": "Manter os grupos por parceiro como canal de relacionamento e criar um espaço pequeno entre parceiros, em círculos mensais de até dez pessoas ou grupos por segmento. O portal registra as ações, e o WhatsApp é só o ponto de contato."
+  },
+  {
+   "tensao": "A regra única de comissão (40% e 6%, mais 10% e 2% ao gerente) é uma recompensa de mercado. O livro mostra que dinheiro desloca a lógica de favor e pertencimento (p. 126).",
+   "como_resolver": "Tratar a comissão como contrato comercial, fora da vida da comunidade. Para reconhecer parceiros e líderes da Base Ativa, usar status, rede, acesso e vantagens não monetárias, e nunca pontos. O livro admite incentivo financeiro quando o líder fica com parte do resultado do evento, como no TEDx (p. 32)."
+  },
+  {
+   "tensao": "Um Gerente de Parcerias é dono de todas as tarefas. O livro diz que distribuir controle é o que viabiliza escala e que uma pessoa fazendo o trabalho de várias equipes fica sobrecarregada (p. 30, p. 61).",
+   "como_resolver": "Aceitar o gerente único na fase semente, que é a fase de fazer o que não escala. A passagem para tração exige o papel de parceiro embaixador e de líder de Base Ativa, que assumem parte da execução com playbook."
+  },
+  {
+   "tensao": "Consultores e closers não entram no portal, e o gerente fala com eles pessoalmente, sem SLA interno. O livro afirma que a comunidade é tarefa de todos e que o time comercial ganha quando vê o sinal de engajamento do lead (p. 38, p. 52). Também diz que participar e não ser respondido leva ao abandono (p. 84).",
+   "como_resolver": "Manter closers fora do portal, mas o gerente leva o contexto do parceiro e da empresa-alvo na conversa de entrega. A validação do parceiro (retorno do que aconteceu com a oportunidade) é combinada como prática do gerente, sem criar SLA interno entre pessoas."
+  },
+  {
+   "tensao": "O sponsor quer a regra de adesão simples para não reduzir a adesão. O livro defende barreiras de entrada intencionais, que fazem o membro valorizar a participação (p. 114, p. 114), e defende dizer quem não pertence (p. 88).",
+   "como_resolver": "Manter a entrada simples (conversa e assinatura) e colocar as barreiras nos status: aplicação e conversa para ser parceiro líder da Base Ativa, critérios para selo de parceiro destaque. A regra de comissão continua única."
+  },
+  {
+   "tensao": "Os três pilares abrem juntos. O livro recomenda focar um ou dois objetivos e começar pequeno (p. 60, p. 72).",
+   "como_resolver": "Abrir os três pilares, mas medir só Aquisição e Contribuição. Limitar a Base Ativa a poucos parceiros-piloto até existir formato repetível e playbook. A abertura em paralelo continua válida como decisão comercial."
+  },
+  {
+   "tensao": "O ganho para a Wise é lead e cliente novo, a baixo custo. O livro diz que a comunidade só entrega valor de negócio depois de seis a doze meses ou mais, e que quem vende de forma direta perde a confiança (p. 34, p. 70, p. 99).",
+   "como_resolver": "Escalonar metas: na experimentação, medir fundação (parceiros ativos, primeiras oportunidades, retorno devolvido), e cobrar receita a partir da tração. Não usar o grupo de parceiros como canal de venda da Wise, e sim como espaço de oportunidades para todos."
+  },
+  {
+   "tensao": "A Wise lidera onde tem legitimidade e segue onde o parceiro tem programa próprio. O livro orienta a comunidade a ser objetiva e aceitar que haja concorrentes dentro dela, se quer ser a comunidade da indústria (p. 99).",
+   "como_resolver": "Nos ambientes em que a Wise é a organizadora, aceitar parceiros que se sobrepõem entre si, com regras claras sobre sigilo e autopromoção. Nos programas de terceiros, seguir o formato deles sem exigir exclusividade."
+  }
+ ]
+}
