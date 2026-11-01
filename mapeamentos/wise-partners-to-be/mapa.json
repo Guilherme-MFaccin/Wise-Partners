@@ -7338,6 +7338,150 @@
       "data": "2026-11-01",
       "trecho": "service provider platforms that want to capture and monetize interactions must create tools and services that benefit both parties by removing friction, mitigate risk, and otherwise facilitate interactions.",
       "local": "p. 115 (Monetization: capturing the value created by network effects)"
+    },
+    {
+      "id": "EV-0213",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Atualizei com mais livros. Pode ser que acabe não mudando muito, mas preciso que você refatore todos os conceitos para que considere tudo de uma vez e traga todos os princípios de maneira ordenada no mapeamento de processos do wise makers, levando em consideração o web app no centro da gestão.",
+      "local": "FO-02/Q-0001"
+    },
+    {
+      "id": "EV-0214",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está",
+      "local": "FO-02/Q-0002"
+    },
+    {
+      "id": "EV-0215",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está",
+      "local": "FO-02/Q-0003"
+    },
+    {
+      "id": "EV-0216",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está",
+      "local": "FO-02/Q-0004"
+    },
+    {
+      "id": "EV-0217",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Manter a regra única, sem exceção por parceiro",
+      "local": "FO-02/Q-0005"
+    },
+    {
+      "id": "EV-0218",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está",
+      "local": "FO-02/Q-0006"
+    },
+    {
+      "id": "EV-0219",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está",
+      "local": "FO-02/Q-0007"
+    },
+    {
+      "id": "EV-0220",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Perfeito. A única coisa que peço é para revisar as 3 perguntas para o diretor se são suficientes e necessárias. Não quero me ater a isso, necessáriamente. Rever o princípio.",
+      "local": "FO-02/Q-0008"
+    },
+    {
+      "id": "EV-0221",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Os três fatores e os oito tipos. Vamos rever os 3 fatores. Não estou convencido de que eles compreendam tudo o que pode se definir uma parceria. Quero me convencer, apenas se algum livro recomenda com bons argumentos, caso contrário, vamos ter que rever e mudar os fatores-chave. É ideal que consigamos fazer uma regra lógica para que os fatores-chave nos levem para os 8 tipos, como se fosse uma matriz. Digo isso sem ter lido o livro na íntegra, talvez o autor tenha colocado os tipo de maneira bem objetiva.",
+      "local": "FO-02/Q-0009"
+    },
+    {
+      "id": "EV-0222",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "A lista de candidatos é tabela, não quadro: o candidato só vira card depois da primeira reunião; Ficha de jogo do candidato antes do workshop (papéis na rede de valor, quem ganha com a entrada dele); Estimativa de sobreposição de carteiras antes de investir horas; Caso de negócio do parceiro no workshop: quantos negócios saem da carteira dele, quanto ganha, que demanda recebe de volta",
+      "local": "FO-02/Q-0010"
+    },
+    {
+      "id": "EV-0223",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está. Gostei da parte de eu propor uma minuta, rascunho ou proposta pedindo críticas e ela ir sendo trabalhada até ser aprovada pelas duas partes. É uma forma mais orgânica e funcional do que um contrato padrão único e travado. A única coisa é que isso toma tempo e, se for através de e-mail pode levar semanas. Não vou me opor de fazer assim, pois realmente é o melhor encaixe, até porque, imagino que serão excessões que pedirão ajustes constantes. A única coisa que quero pontuar é a aprovação final do diretor. Nem eu nem ele queremos que ele faça uma efetiva aprovação criteriosa. Ele não tem tempo para isso e me dá autonomia para negociar com o parceiro e encontrar o melhor dos dois lados. A única coisa que ele faz é assinar. Claro que ele pode revisar etc, mas tem que ser um processo simples da parte dele.",
+      "local": "FO-02/Q-0011"
+    },
+    {
+      "id": "EV-0224",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo como está. O único comentário é que teremos poucos concorrentes, mas pode ocorrer, então concordo.",
+      "local": "FO-02/Q-0012"
+    },
+    {
+      "id": "EV-0225",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Aprovo, mas os ajustes são meus mesmo. O que podemos olhar de maneira mais madura é abrir os três pilares de uma vez. Concordo que temos que ver a perspectiva macro estratégica do wise partners de maneira escalonada com metas bem estabalecidas e as etapas adaptadas para seu tempo, assim como recomendam os livros. Vamos seguir as recomendações dos livros. Precisamos definir os portões baseado no que mais faz sentido para a Wise Makers e o grupo tríade. Faça uma recomendação você mesmo analisando a conjuntura e também o que os livros recomendam.",
+      "local": "FO-02/Q-0013"
+    },
+    {
+      "id": "EV-0226",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Vamos fazer de maneira simples, cara. Simplesmente o lead que vem, vai para o closer de cada respectiva empresa do grupo. O próprio gerente de parcerias conversa com o closer diretamente (até pessoalmente) para que ele atenda no tempo que melhor funcionar. O closer nunca vai atrasar. Vamos manter simples. O SLA pode funcionar, mas é uma regra que só pesa o sistema e não serve efetivamente para nada. Siga o que eu falei e será sucesso.",
+      "local": "FO-02/Q-0014"
+    },
+    {
+      "id": "EV-0227",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Contrapartida não financeira para entrar num pedido da Prateleira (ação conjunta, condição comercial para a indústria). Não vamos complicar o que não precisa. Parceria para a Wise Makers é um canal de aquisição de receita mais barato do que os canais ativos agora. O nosso benefício são leads e novos clientes. Comissão da parte do parceiro pode vir só para baratear ainda mais o CAC, mas não pode ser um fator de tornar o programa mais complexo e diminuir a taxa de aderência, o que diminuiria a quantidade de parceiros, por consequência a quantidade de empresas indicadas e, por fim, o CAC.\nVamos manter simples nessa parte que é sucesso.",
+      "local": "FO-02/Q-0015"
+    },
+    {
+      "id": "EV-0228",
+      "tipo": "validacao",
+      "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
+      "pessoa": "PE-01",
+      "data": "2026-11-01",
+      "trecho": "Aprovo com ajustes (comente). Aprovo, mas vejo que temos que adaptar a abordagem para cada um dos 8 tipos de parceiros. Temos que fazer como se fosse uma matriz RFV dos parceiros para definir isso e definir uma tomada de ação e abordagem para cada tipo de parceiro respectivo",
+      "local": "FO-02/Q-0016"
     }
   ],
   "perguntas": [
@@ -7359,9 +7503,11 @@
       ],
       "rodada": 2,
       "bloco": "A nova arquitetura",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0213"
+      ],
       "chave": "hap",
       "contexto": [
         "A primeira versão do to-be organizava o programa pelos processos que o web app já tinha. Esta versão parte dos modelos dos livros. O Método Octo divide a construção de um ecossistema em três movimentos: arquitetar, conduzir a jornada do parceiro e gerir para escalar. Strategic Alliances diz que a governança cobre o começo, a operação e o fim da relação.",
@@ -7398,9 +7544,11 @@
       ],
       "rodada": 2,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0214"
+      ],
       "chave": "interacao",
       "contexto": [
         "Platform Revolution diz que toda plataforma bem-sucedida começa por uma única interação central, que gera valor alto e repetido. Ela tem três partes: participantes, unidade de valor e filtro. No Wise Partners, a interação é esta: uma indústria com uma necessidade conhecida encontra, com contexto, quem resolve. Ou o parceiro traz ao grupo uma indústria que precisa de gestão comercial.",
@@ -7439,9 +7587,11 @@
       ],
       "rodada": 2,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0215"
+      ],
       "chave": "papel",
       "contexto": [
         "The Ecosystem Economy divide os papéis em orquestrador e participante e avisa que muitas empresas não conseguem orquestrar. Por isso a escolha precisa ser realista. Winning the Right Game acrescenta que liderança num ecossistema é papel, não resultado, e depende de os outros aceitarem você como líder. Com grandes ERPs que já têm programa de canais, a Wise faz melhor como seguidora inteligente.",
@@ -7475,9 +7625,11 @@
       ],
       "rodada": 2,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0216"
+      ],
       "chave": "arquitetura",
       "contexto": [
         "Winning the Right Game separa modelo de negócio (como você é pago) de arquitetura de valor (como o valor que o cliente recebe é construído). A arquitetura é feita de elementos, e cada parceiro preenche um ou mais deles. Quando um elemento muda, o jogo inteiro pode mudar.",
@@ -7513,9 +7665,11 @@
       ],
       "rodada": 2,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0217"
+      ],
       "chave": "comissao",
       "contexto": [
         "Os livros não trazem um número único. The Channel Advantage cita 5 a 15% da venda para quem só gera lead, mas o exemplo é de varejo digital (afiliados da Amazon), longe do caso Wise. O Método Octo não fixa percentual: manda calibrar a comissão pelo trabalho que fica com quem vende, pela qualidade do lead, e escolher entre pagamento único e recorrente. Bech chama a margem de fator de higiene: a falta dela incomoda, mas ela sozinha não muda comportamento.",
@@ -7553,9 +7707,11 @@
       ],
       "rodada": 2,
       "bloco": "Funis e tarefas",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0218"
+      ],
       "chave": "quadros",
       "contexto": [
         "Você disse que um card por parceiro em cada funil vira coisa demais para gerir. As cinco frentes de leitura chegaram, por caminhos diferentes, à mesma resposta.",
@@ -7589,9 +7745,11 @@
       ],
       "rodada": 2,
       "bloco": "Funis e tarefas",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0219"
+      ],
       "chave": "atencao",
       "contexto": [
         "Bech chama isso de pirâmide do canal: cerca de 5% dos parceiros crescem sozinhos, 15% crescem se ajudados e 80% não têm potencial de crescimento. O tempo do gerente vai para os dois primeiros grupos. Os demais são atendidos pelo portal, com chat e e-mail.",
@@ -7626,9 +7784,11 @@
       ],
       "rodada": 2,
       "bloco": "Funis e tarefas",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0220"
+      ],
       "chave": "rituais",
       "contexto": [
         "Nearbound diz que cultura é o que se promove e o que se tolera, mais as cadências e os rituais que fazem isso valer. Strategic Alliances recomenda uma revisão operacional regular, provavelmente mensal, em toda relação importante. The Ecosystem Economy mostra check-ins semanais, e às vezes mais frequentes, focados em remover obstáculos.",
@@ -7663,9 +7823,11 @@
       ],
       "rodada": 2,
       "bloco": "Funis e tarefas",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0221"
+      ],
       "chave": "saude",
       "contexto": [
         "Strategic Alliances diz que as empresas medem entradas e saídas, mas quase nunca o processo da parceria. Por isso os problemas aparecem tarde demais. O livro propõe três fatores como indicadores que antecipam o sucesso ou o fracasso, e três perguntas simples: o parceiro nos recomendaria a um cliente? A parceria melhorou a satisfação dos clientes? Houve ganho real?",
@@ -7703,9 +7865,11 @@
       ],
       "rodada": 2,
       "bloco": "Atrair e selecionar",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0222"
+      ],
       "chave": "recrutamento",
       "contexto": [
         "Bech compara recrutar parceiros com contratar por headhunter. A lista longa deve ter pelo menos dez vezes o número de parceiros que se quer assinar, e o recrutamento num território novo leva de 6 a 9 meses. Ele recomenda fazer o workshop estratégico antes de assinar e montar o P&L do parceiro: quanto ele ganha com a parceria, vendendo primeiro para a base que já tem.",
@@ -7740,9 +7904,11 @@
       ],
       "rodada": 2,
       "bloco": "Atrair e selecionar",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0223"
+      ],
       "chave": "texto_unico",
       "contexto": [
         "Getting to Yes conta o procedimento de Camp David: um mediador redige um texto único, as partes só criticam e ele revisa até não conseguir melhorar. Fazer concessões é difícil, criticar é fácil. No fim, cada parte tem uma única decisão a tomar: sim ou não.",
@@ -7778,9 +7944,11 @@
       ],
       "rodada": 2,
       "bloco": "Desenvolver o parceiro",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0224"
+      ],
       "chave": "comunidade",
       "contexto": [
         "Você decidiu que a conversa com os parceiros fica na comunidade do WhatsApp, e Nearbound concorda: o parceiro nunca vai entrar no portal tanto quanto você gostaria. Com os principais, é preciso mandar mensagem e ligar com frequência, sem depender de portal.",
@@ -7815,9 +7983,11 @@
       ],
       "rodada": 2,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0225"
+      ],
       "chave": "fase",
       "contexto": [
         "Você pediu para não fixar metas agora, só a capacidade de defini-las. Os livros dizem o que medir em cada fase. Platform Revolution: na partida, as métricas são liquidez, qualidade da combinação e confiança, e o que conta é compromisso e uso, não cadastro. The Ecosystem Economy: no começo, o único objetivo que importa é entregar o básico e chegar aos clientes; mais tarde, a medida principal vira o valor criado para todos.",
@@ -7853,9 +8023,11 @@
       ],
       "rodada": 2,
       "bloco": "Gestão do programa",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0226"
+      ],
       "chave": "interno",
       "contexto": [
         "Winning the Right Game conta casos em que o ecossistema foi dobrado para funcionar, mas não realinhado para virar rotina, e por isso falhou. Wise Makers, Tríade e Swallow são um ecossistema interno. Se o comercial de cada empresa não tiver SLA e incentivo para tratar a oportunidade do parceiro, o retorno ao parceiro atrasa e a confiança cai.",
@@ -7888,9 +8060,11 @@
       ],
       "rodada": 2,
       "bloco": "Modelo de negócio",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0227"
+      ],
       "chave": "monetizacao",
       "contexto": [
         "Platform Revolution recomenda subsidiar a entrada em vez de cobrar para participar, e cobrar só na conclusão, quando a interação gerou valor para os dois lados. O livro lembra também que quem se encontra pela plataforma tem incentivo para fechar por fora. A captura de valor depende de a plataforma resolver problemas para as duas partes.",
@@ -7923,9 +8097,11 @@
       ],
       "rodada": 2,
       "bloco": "Reter ou encerrar",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-01",
-      "respostas": [],
+      "respostas": [
+        "EV-0228"
+      ],
       "chave": "retencao",
       "contexto": [
         "Strategic Alliances diz que o parceiro passivo, o catador de cerejas, deve ser abordado como se estivesse sendo recrutado pela primeira vez, em torno de uma oportunidade concreta. Para o desertor, a decisão crítica é se a relação vale o tempo e a energia.",
@@ -7970,7 +8146,7 @@
       ],
       "introducao": "Cada pergunta traz o contexto, a lógica, o que os livros dizem e um visual.",
       "link": "https://claude.ai/artifact/ErCdBFw4dwso4pcz9RbUEw",
-      "status": "enviado",
+      "status": "respondido",
       "enviado_em": "2026-11-01",
       "prazo": "",
       "identificacao": false
@@ -8117,6 +8293,10 @@
     {
       "data": "2026-11-01",
       "evento": "To-be v2 refeito do zero a partir da segunda leitura dos livros; formulário FO-02 com contexto e visuais"
+    },
+    {
+      "data": "2026-11-01",
+      "evento": "16 respostas do patrocinador à Rodada 2; pedido de nova curadoria com 8 livros novos"
     }
   ]
 }
