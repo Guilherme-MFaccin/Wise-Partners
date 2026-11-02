@@ -9,7 +9,7 @@
     <bpmn:messageFlow id="P-35_M3" name="Aviso de contato" sourceRef="P-35_t6" targetRef="Ext_P-35_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-35" name="6.4 Atender necessidade do cliente pela Prateleira" isExecutable="false">
-    <bpmn:documentation>O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente; o fornecedor que entra no pedido dá uma contrapartida não financeira. No portal: recomenda parceiros por categoria, monta a página e registra a contrapartida combinada. [status do fluxo: Confirmado; evidências: EV-0213, EV-0021]</bpmn:documentation>
+    <bpmn:documentation>O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente; o fornecedor que entra no pedido dá uma contrapartida não financeira. No portal: recomenda parceiros por categoria, monta a página e registra a contrapartida combinada. [status do fluxo: Confirmado; evidências: EV-0230, EV-0023]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-35">
       <bpmn:lane id="Lane_P-35_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-35_t1</bpmn:flowNodeRef>

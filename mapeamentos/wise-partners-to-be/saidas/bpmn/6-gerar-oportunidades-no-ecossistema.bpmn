@@ -9,7 +9,7 @@
     <bpmn:messageFlow id="P-31_M4" name="Comissão" sourceRef="P-31_s4" targetRef="Ext_P-31_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-31" name="6 Gerar oportunidades no ecossistema" isExecutable="false">
-    <bpmn:documentation>A interação central: cada oportunidade compartilhada percorre uma esteira única até o cliente fechado, a comissão paga e a checagem do cliente. No portal: um card por oportunidade, com a porta como etiqueta; registra cada etapa e prepara a mensagem de retorno ao parceiro. [status do fluxo: Confirmado; evidências: EV-0035, EV-0009, EV-0036, EV-0056, EV-0231]</bpmn:documentation>
+    <bpmn:documentation>A interação central: cada oportunidade compartilhada percorre uma esteira única até o cliente fechado, a comissão paga e a checagem do cliente. No portal: um card por oportunidade, com a porta como etiqueta; registra cada etapa e prepara a mensagem de retorno ao parceiro. [status do fluxo: Confirmado; evidências: EV-0044, EV-0009, EV-0045, EV-0065, EV-0229]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-31">
       <bpmn:lane id="Lane_P-31_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-31_i1</bpmn:flowNodeRef>

@@ -1,0 +1,216 @@
+<title>Perguntas ao patrocinador</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@0;1&display=swap">
+<style>
+/* Coluna de leitura longa: cada decisão é um capítulo com figura, contexto, lógica, citações e a escolha no fim */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-soft: #e6eefb; --accent-fg: #ffffff; --ok: #1d7a46; --warn: #9a5b00; --soft2: #eef1f5; --barra2: #8fb3ea;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --serif: "IBM Plex Serif", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px; }
+.barra-in { max-width: 780px; margin: 0 auto; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.trilho { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.trilho i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.cont, .salvo { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+main { max-width: 780px; margin: 0 auto; display: grid; gap: 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+h2 { font-size: 21px; line-height: 1.35; margin: 4px 0 0; text-wrap: balance; }
+h3 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 66ch; }
+.aviso { border: 1px solid var(--line); border-left: 4px solid var(--warn); background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px; display: grid; gap: 14px; min-width: 0; }
+.q.feita { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.num { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 700; margin-right: 8px; }
+.fig { overflow-x: auto; background: var(--soft2); border-radius: 10px; padding: 14px; }
+.fig svg { display: block; width: 100%; height: auto; }
+.fig .b { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.fig .b.hi { fill: var(--accent-soft); stroke: var(--accent); }
+.fig .b2 { fill: var(--bg); stroke: var(--line); stroke-width: 1; }
+.fig .card { fill: var(--accent-soft); stroke: var(--accent); stroke-width: .8; }
+.fig .tx { fill: var(--fg); } .fig .mu { fill: var(--muted); } .fig .inv { fill: var(--accent-fg); font-weight: 600; }
+.fig .ln { stroke: var(--muted); stroke-width: 1.4; } .fig .ln.fino { stroke: var(--line); stroke-width: 1; } .fig .dash { stroke-dasharray: 5 4; }
+.fig .pt { fill: var(--accent); } .fig .vazio { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.fig .barra1 { fill: var(--accent); } .fig .barra2 { fill: var(--barra2); } .fig .faixa { fill: var(--accent-soft); opacity: .7; }
+.ctx { display: grid; gap: 10px; max-width: 70ch; }
+.logica { background: var(--accent-soft); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+.cits { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cits li { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.cits q { font-family: var(--serif); font-style: italic; quotes: "\201C" "\201D"; overflow-wrap: anywhere; }
+.cits small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+details.ver { font-size: 15px; } details.ver summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+.dica { font-size: 13px; color: var(--muted); }
+.op { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.op:hover { border-color: var(--accent); }
+.op input { margin: 3px 0 0; accent-color: var(--accent); flex: none; width: 18px; height: 18px; }
+.op:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.op.ns { border-style: dashed; color: var(--muted); }
+textarea { width: 100%; box-sizing: border-box; min-height: 80px; font: 15px/1.5 var(--sans); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+.comentar { justify-self: start; background: none; border: 0; color: var(--accent); font: 500 14px var(--sans); cursor: pointer; padding: 2px 0; }
+button.principal { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 20px; font: 600 16px var(--sans); cursor: pointer; }
+button.sec { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 8px; padding: 10px 16px; font: 600 15px var(--sans); cursor: pointer; }
+button:focus-visible, .op:focus-within, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.fim { display: grid; gap: 12px; justify-items: start; }
+.estado { font-weight: 600; color: var(--ok); } .estado.erro { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { .trilho i { transition: none; } }
+</style>
+<div class="barra"><div class="barra-in">
+  <div class="trilho" aria-hidden="true"><i id="trilho"></i></div>
+  <span class="cont" id="cont">0 de __TOTAL__</span>
+  <span class="salvo" id="salvo" role="status"></span>
+</div></div>
+<main>
+  <header>
+    <p class="eyebrow">Mapeamento de processos · Rodada 5 · Validação final</p>
+    <h1>Validação final do to-be</h1>
+    <p class="lead">As sete divergências foram resolvidas com as suas respostas, e o mapa tem 93 processos sem nenhuma hipótese aberta. Faltam só 19 itens que vieram da especificação, do Playbook ou dos livros e que você nunca confirmou de forma explícita: 17 processos e dois passos a passos. Cada item é uma frase; marque sim ou peça correção. Com o seu sim, o item passa a confirmado.</p>
+  </header>
+  <div class="aviso" id="aviso" hidden></div>
+  <form id="form" novalidate></form>
+  <section class="fim">
+    <button type="button" class="principal" id="enviar">Enviar respostas</button>
+    <span class="estado" id="estado" role="status"></span>
+    <button type="button" class="sec" id="copiar" hidden>Copiar respostas</button>
+  </section>
+</main>
+<script type="application/json" id="dados">__DADOS__</script>
+<script>
+const ITENS = JSON.parse(document.getElementById('dados').textContent);
+const COL = 'fo10_itens', META = 'respostas/FO-10', CHAVE = 'fo10-rascunho';
+let estado = { respostas: {} };
+let db = null; const pend = new Set(); let timer = null;
+const $ = (id) => document.getElementById(id);
+const agora = () => new Date().toISOString();
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+
+function montar() {
+  const form = $('form'); let n = 0;
+  for (const it of ITENS) {
+    n++;
+    const card = el('article', 'q'); card.id = 'c-' + it.id;
+    const eb = el('p', 'eyebrow', it.bloco); card.appendChild(eb);
+    const h = el('h2'); h.append(el('span', 'num', String(n).padStart(2, '0')), document.createTextNode(it.texto)); card.appendChild(h);
+    const fig = el('div', 'fig'); fig.innerHTML = it.visual; card.appendChild(fig);
+    card.appendChild(el('h3', null, 'Contexto'));
+    const ctx = el('div', 'ctx'); it.contexto.forEach(t => ctx.appendChild(el('p', null, t))); card.appendChild(ctx);
+    card.appendChild(el('h3', null, 'A lógica'));
+    card.appendChild(el('p', 'logica', it.logica));
+    if (it.citacoes.length) {
+      const det = el('details', 'ver'); det.open = true;
+      det.appendChild(el('summary', null, 'O que os livros dizem (' + it.citacoes.length + ' trechos)'));
+      const ul = el('ul', 'cits');
+      it.citacoes.forEach(c => { const li = el('li'); li.appendChild(el('q', null, c.trecho)); li.appendChild(el('small', null, c.livro + ', ' + c.pagina)); ul.appendChild(li); });
+      det.appendChild(ul); card.appendChild(det);
+    }
+    const fs = el('fieldset'); fs.appendChild(el('legend', null, 'Sua decisão'));
+    if (it.tipo === 'multipla') fs.appendChild(el('span', 'dica', 'Pode marcar mais de uma.'));
+    it.opcoes.forEach((op, i) => {
+      const lab = el('label', 'op' + (op.startsWith('Não sei') ? ' ns' : ''));
+      const inp = el('input'); inp.type = it.tipo === 'multipla' ? 'checkbox' : 'radio'; inp.name = it.id; inp.value = op; inp.id = it.id + '-' + i;
+      inp.addEventListener('change', () => mudou(it)); lab.append(inp, el('span', null, op)); fs.appendChild(lab);
+    });
+    card.appendChild(fs);
+    const b = el('button', 'comentar', 'Comentar'); b.type = 'button';
+    const obs = el('textarea'); obs.id = it.id + '-obs'; obs.hidden = true; obs.placeholder = 'Ajuste, exceção ou outra resposta';
+    obs.setAttribute('aria-label', 'Comentário sobre a pergunta ' + n);
+    b.addEventListener('click', () => { obs.hidden = false; b.hidden = true; obs.focus(); });
+    obs.addEventListener('input', () => mudou(it));
+    card.append(b, obs);
+    form.appendChild(card);
+  }
+}
+function ler(it) {
+  const marc = [...document.querySelectorAll('input[name="' + it.id + '"]:checked')].map(i => i.value);
+  const obs = $(it.id + '-obs').value.trim();
+  if (!marc.length && !obs) return null;
+  const r = { valor: it.tipo === 'multipla' ? marc : (marc[0] || '') }; if (obs) r.obs = obs; return r;
+}
+function aplicar() {
+  for (const it of ITENS) {
+    const r = estado.respostas[it.id];
+    const vals = r ? (Array.isArray(r.valor) ? r.valor : [r.valor]) : [];
+    document.querySelectorAll('input[name="' + it.id + '"]').forEach(i => { i.checked = vals.includes(i.value); });
+    if (r && r.obs) { const o = $(it.id + '-obs'); o.value = r.obs; o.hidden = false; o.previousElementSibling.hidden = true; }
+  }
+  progresso();
+}
+function progresso() {
+  let feitas = 0;
+  for (const it of ITENS) { const ok = !!estado.respostas[it.id]; if (ok) feitas++; $('c-' + it.id).classList.toggle('feita', ok); }
+  $('cont').textContent = feitas + ' de ' + ITENS.length;
+  $('trilho').style.width = (100 * feitas / ITENS.length) + '%';
+}
+function guardarLocal() { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} }
+function mudou(it) {
+  const r = ler(it);
+  if (r) estado.respostas[it.id] = { ...r, em: agora() }; else delete estado.respostas[it.id];
+  progresso(); guardarLocal(); $('salvo').textContent = 'Salvando...';
+  pend.add(it.id); clearTimeout(timer); timer = setTimeout(gravar, 700);
+}
+// cada resposta é um registro próprio: uma aba antiga nunca apaga o que outra gravou
+async function gravar() {
+  if (!db) { $('salvo').textContent = 'Só neste navegador'; return false; }
+  const ids = [...pend]; pend.clear(); let ok = true;
+  for (const id of ids) {
+    const r = estado.respostas[id];
+    try { if (r) await db.collection(COL).doc(id).set(r); else await db.collection(COL).doc(id).delete(); }
+    catch (e) { ok = false; pend.add(id); }
+  }
+  $('salvo').textContent = ok ? 'Salvo' : 'Não salvou';
+  return ok;
+}
+$('enviar').addEventListener('click', async () => {
+  clearTimeout(timer);
+  for (const id of Object.keys(estado.respostas)) pend.add(id);
+  let ok = await gravar();
+  if (ok) {
+    try { const m = await db.doc(META).get(); const base = m.exists ? m.data() : {};
+          await db.doc(META).set({ ...base, enviado: true, enviado_em: agora(), decisoes: Object.keys(estado.respostas).length }); }
+    catch (e) { ok = false; }
+  }
+  const e = $('estado');
+  if (ok) { e.className = 'estado'; e.textContent = 'Enviado: ' + Object.keys(estado.respostas).length + ' respostas gravadas. Volte ao chat e escreva "respondi". Dá para mudar depois: é só editar e enviar de novo.'; }
+  else { e.className = 'estado erro'; e.textContent = 'Não consegui gravar. Clique em Copiar respostas e cole no chat.'; $('copiar').hidden = false; }
+});
+$('copiar').addEventListener('click', async () => {
+  const txt = JSON.stringify(estado.respostas, null, 1);
+  try { await navigator.clipboard.writeText(txt); $('estado').textContent = 'Respostas copiadas: cole no chat.'; }
+  catch (e) { const t = el('textarea'); t.value = txt; $('copiar').after(t); t.select(); $('estado').textContent = 'Selecione e copie o texto abaixo.'; }
+});
+function semBanco(msg) { const a = $('aviso'); a.hidden = false; a.textContent = msg; $('copiar').hidden = false; }
+
+montar();
+const validos = new Set(ITENS.map(i => i.id));
+let local = {};
+try { const r = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+      if (r && r.respostas) for (const [k, v] of Object.entries(r.respostas)) if (v && validos.has(k)) local[k] = { ...v, em: v.em || '' }; } catch (e) {}
+estado.respostas = { ...local }; aplicar();
+$('salvo').textContent = 'Carregando...';
+const espera = setTimeout(() => { if (!db) { $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui conectar ao armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); } }, 10000);
+(async () => {
+  const c = window.claude && await window.claude.use('db');
+  if (!c) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Esta página não consegue salvar aqui. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); return; }
+  try {
+    const snap = await c.collection(COL).get(); db = c; clearTimeout(espera);
+    const servidor = {}; snap.docs.forEach(d => { if (d.exists && validos.has(d.id)) servidor[d.id] = d.data(); });
+    const junto = { ...servidor };
+    for (const [k, v] of Object.entries(local)) { const s = servidor[k]; if (!s || (v.em || '') > (s.em || '')) { junto[k] = v; pend.add(k); } }
+    estado.respostas = junto; aplicar(); guardarLocal();
+    if (pend.size) await gravar(); else $('salvo').textContent = 'Salvo';
+  } catch (e) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui ler o armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); }
+})();
+</script>

@@ -1,0 +1,377 @@
+[
+ {
+  "id": "R5-Q-0026",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "1.3 Definir o perfil de parceiro ideal: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Escrever o perfil comercial e o institucional a partir do ICP, com critérios do scorecard e a regra de só aceitar quem a Wise indicaria ao seu melhor cliente. No portal: guarda o perfil e o scorecard usados na qualificação.",
+   "Começa quando: Planejamento anual. Dono: Gerente de Parcerias.",
+   "Entrega: Perfil e scorecard, para Time de parcerias.",
+   "De onde veio: Especificação 002, The Referral Engine, Ecossistema de Parceiros."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Definir o perfil de parceiro ideal\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Planejamento anual</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Definir o perfil de</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">parceiro ideal</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Perfil e scorecard</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0027",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "1.4.1 Definir níveis, pacotes e contrapartidas: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Três níveis com os mesmos critérios do recrutamento; pacotes com contrapartidas dos dois lados. No portal: guarda a tabela e carrega as contrapartidas no card do parceiro.",
+   "Começa quando: Revisão anual das regras. Dono: Gerente de Parcerias, com Diretor.",
+   "Entrega: Tabela de níveis e pacotes, para Parceiros.",
+   "De onde veio: Especificação 002, FO-04."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Definir níveis, pacotes e contrapartidas\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Revisão anual das regras</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Definir níveis, pacotes</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">e contrapartidas</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Tabela de níveis e</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">pacotes</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0028",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "2.4 Conduzir o fechamento trimestral: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões.",
+   "Começa quando: Primeiro dia útil de janeiro, abril, julho e outubro. Dono: Gerente de Parcerias, com Diretor.",
+   "Entrega: Trimestre fechado, para Diretor e parceiros. Frequência: Trimestral.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Conduzir o fechamento trimestral\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"46.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Primeiro dia útil de</text><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">janeiro, abril, julho e</text><text x=\"101.0\" y=\"75.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">outubro</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Conduzir o fechamento</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">trimestral</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Trimestre fechado</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0029",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "3.1 Apurar o CAC e o valor devolvido: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos divididos pelos clientes fechados vindos de parceiros, com receita e LTV atribuídos ao Wise Partners. Valor devolvido: desfechos devolvidos, oportunidades enviadas de volta aos parceiros, apresentações feitas e acessos dados. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa.",
+   "Começa quando: Fechamento do mês. Dono: Gerente de Parcerias.",
+   "Entrega: CAC e valor devolvido, para Diretor. Frequência: Mensal.",
+   "De onde veio: Especificação 002, FO-02, FO-03."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Apurar o CAC e o valor devolvido\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Fechamento do mês</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Apurar o CAC e o valor</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">devolvido</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">CAC e valor devolvido</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0030",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "4.5 Nutrir candidato: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Pausa com data de retomada e cadência, com gestos de valor sem pedido. No portal: lembra a data de retomada e sugere um gesto (conteúdo, convite, oportunidade).",
+   "Começa quando: Candidato pede para retomar depois. Dono: Gerente de Parcerias.",
+   "Entrega: Candidato retomado, para Candidato.",
+   "De onde veio: Especificação 002, FO-06, Give and Take."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Nutrir candidato\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Candidato pede para</text><text x=\"101.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">retomar depois</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Nutrir candidato</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Candidato retomado</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0031",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "5.1.3 Publicar a ficha na Prateleira e entregar o link: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Ficha verificada na Prateleira, link exclusivo e acessos. No portal: publica e gera o link.",
+   "Começa quando: Termo assinado. Dono: Gerente de Parcerias, com Responsável nomeado no parceiro.",
+   "Entrega: Ficha e link, para Empresa parceira.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Publicar a ficha na Prateleira e entregar o link\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Termo assinado</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"46.3\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Publicar a ficha na</text><text x=\"330.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Prateleira e entregar o</text><text x=\"330.0\" y=\"75.3\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">link</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Ficha e link</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0032",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "5.4 Declarar a ativação ou estender o plano: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Ativado na primeira indicação no ICP que virou reunião; sem ativação em 90 dias, extensão até 120; depois, não ativado. No portal: marca a ativação sozinho e avisa os marcos de 90 e 120 dias.",
+   "Começa quando: Primeira reunião gerada ou marco de 90 dias. Dono: Gerente de Parcerias.",
+   "Entrega: Parceiro ativado ou não ativado, para Empresa parceira.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Declarar a ativação ou estender o plano\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Primeira reunião gerada</text><text x=\"101.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">ou marco de 90 dias</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Declarar a ativação ou</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">estender o plano</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Parceiro ativado ou não</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">ativado</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0033",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "6.1 Receber e qualificar a oportunidade: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Registrar com a porta de origem, agradecer e confirmar ao parceiro, validar duplicidade, ICP e proteção. No portal: registra pelo link, pelo cruzamento ou à mão, envia a confirmação e calcula a nota de qualidade.",
+   "Começa quando: Oportunidade chega por uma das portas. Dono: Gerente de Parcerias.",
+   "Entrega: Oportunidade qualificada ou recusada, para Parceiro.",
+   "De onde veio: Especificação 002, The Referral Engine."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Receber e qualificar a oportunidade\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Oportunidade chega por</text><text x=\"101.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">uma das portas</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Receber e qualificar a</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">oportunidade</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Oportunidade qualificada</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">ou recusada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0034",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "6.1.1 Registrar a oportunidade com a porta de origem: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Link, cruzamento, Base Ativa, Prateleira ou registro à mão, sempre com o parceiro de origem. No portal: registra e protege por 180 dias.",
+   "Começa quando: Oportunidade chega. Dono: Gerente de Parcerias, com Responsável nomeado no parceiro.",
+   "Entrega: Oportunidade registrada, para Parceiro.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Registrar a oportunidade com a porta de origem\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Oportunidade chega</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Registrar a oportunidade</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">com a porta de origem</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Oportunidade registrada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0035",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "6.1.3 Validar duplicidade e ICP: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Checar se a empresa já está com o grupo e se está no ICP; calcular a nota de qualidade. No portal: checa duplicidade e calcula a nota.",
+   "Começa quando: Parceiro confirmado. Dono: Gerente de Parcerias, com Responsável nomeado no parceiro.",
+   "Entrega: Oportunidade qualificada ou recusada, para Parceiro.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Validar duplicidade e ICP\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Parceiro confirmado</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Validar duplicidade e</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">ICP</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Oportunidade qualificada</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">ou recusada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0036",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "6.5 Indicar cliente do grupo ao parceiro: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Demanda de volta: o parceiro que recebe boas oportunidades indica melhor. No portal: registra a indicação de volta e conta no equilíbrio de dar e receber.",
+   "Começa quando: Cliente do grupo precisa de uma solução do parceiro. Dono: Gerente de Parcerias.",
+   "Entrega: Resultado registrado, para Parceiro.",
+   "De onde veio: Especificação 001, The Referral Engine."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Indicar cliente do grupo ao parceiro\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"46.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Cliente do grupo precisa</text><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">de uma solução do</text><text x=\"101.0\" y=\"75.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">parceiro</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Indicar cliente do grupo</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">ao parceiro</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Resultado registrado</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0037",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "7.3 Planejar e executar ações conjuntas: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Plano de ações dos dois lados, com data, responsável, comprovação e resultado. No portal: mostra o plano em calendário e conta cada ação como ação de valor no Ritmo.",
+   "Começa quando: Revisão conjunta ou data da ação. Dono: Gerente de Parcerias, com Responsável nomeado no parceiro.",
+   "Entrega: Ação comprovada, para Empresa parceira.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Planejar e executar ações conjuntas\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Revisão conjunta ou data</text><text x=\"101.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">da ação</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Planejar e executar</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">ações conjuntas</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Ação comprovada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0038",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "7.5 Evoluir o nível e o pacote: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Subida na hora em que os requisitos do nível acima são cumpridos; o pacote acompanha. No portal: detecta e avisa os dois lados.",
+   "Começa quando: Requisitos cumpridos. Dono: Gerente de Parcerias.",
+   "Entrega: Nível e pacote novos, para Parceiro.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Evoluir o nível e o pacote\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Requisitos cumpridos</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Evoluir o nível e o</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">pacote</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Nível e pacote novos</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0039",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "8.2.3 Abrir a mentoria mensal à carteira dos parceiros: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Calendário da mentoria mensal da Wise aberto às carteiras de pacote B e A. No portal: envia os convites.",
+   "Começa quando: Calendário mensal. Dono: Gerente de Parcerias, com Responsável nomeado no parceiro.",
+   "Entrega: Convites enviados, para Parceiros. Frequência: Mensal.",
+   "De onde veio: Especificação 001."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Abrir a mentoria mensal à carteira dos parceiros\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Calendário mensal</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Abrir a mentoria mensal</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">à carteira dos parceiros</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Convites enviados</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0040",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "9.3 Encerrar a parceria a pedido: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Saída por decisão de qualquer das partes, com aviso de 30 dias, registrada como encerramento amigável e com o motivo para aprender. No portal: registra o motivo da saída.",
+   "Começa quando: Pedido de saída. Dono: Gerente de Parcerias.",
+   "Entrega: Parceria encerrada de forma amigável, para Empresa parceira.",
+   "De onde veio: Playbook Wise Partners v3.1, Customer Success."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Encerrar a parceria a pedido\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Pedido de saída</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Encerrar a parceria a</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">pedido</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Parceria encerrada de</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">forma amigável</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0041",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "11.1 Manter trilhas e certificação: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Trilhas por empresa do grupo com teste e certificado. No portal: entrega a trilha e emite o certificado.",
+   "Começa quando: Material novo. Dono: Gerente de Parcerias.",
+   "Entrega: Trilha publicada, para Pessoas do parceiro.",
+   "De onde veio: Especificação 002."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Manter trilhas e certificação\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Material novo</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Manter trilhas e</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">certificação</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Trilha publicada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0042",
+  "bloco": "Processos que vieram da especificação e dos livros",
+  "texto": "12.3 Registrar contrato, versão ou acesso novo: está correto como descrito?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O que é: Versões do termo, vigência, usuários e permissões. No portal: guarda as versões e controla os acessos.",
+   "Começa quando: Contrato ou pessoa nova. Dono: Gerente de Parcerias.",
+   "Entrega: Contratos e acessos em ordem, para Time de parcerias.",
+   "De onde veio: Especificação 001."
+  ],
+  "logica": "Você é o dono de todos os processos do programa. Com o seu sim, o processo passa de declarado para confirmado.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Registrar contrato, versão ou acesso novo\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Contrato ou pessoa nova</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Registrar contrato,</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">versão ou acesso novo</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Contratos e acessos em</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">ordem</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0043",
+  "bloco": "Passo a passo que veio da especificação",
+  "texto": "2.4 Conduzir o fechamento trimestral: o passo a passo está correto?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O processo começa quando: Primeiro dia útil do trimestre.",
+   "1. Gerente de Parcerias: Revisar o nível dos parceiros.",
+   "2. Gerente de Parcerias: Ouvir o pulso da relação.",
+   "3. Gerente de Parcerias: Medir a saúde do ecossistema e os portões.",
+   "4. Gerente de Parcerias: Agendar as revisões conjuntas do trimestre (usa Portal Wise Partners).",
+   "5. Gerente de Parcerias: Enviar ao Diretor o resumo do trimestre (usa Portal Wise Partners).",
+   "Termina em: Trimestre fechado.",
+   "De onde veio: Especificação 002, The Keystone Advantage."
+  ],
+  "logica": "O passo a passo só vira confirmado com a validação do dono. Se algum passo estiver diferente do que você quer, diga qual no comentário.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Conduzir o fechamento trimestral\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"46.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Primeiro dia útil de</text><text x=\"101.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">janeiro, abril, julho e</text><text x=\"101.0\" y=\"75.3\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">outubro</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Conduzir o fechamento</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">trimestral</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"60.8\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Trimestre fechado</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ },
+ {
+  "id": "R5-Q-0044",
+  "bloco": "Passo a passo que veio da especificação",
+  "texto": "7.4 Conduzir o ciclo do Base Ativa: o passo a passo está correto?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, está correto",
+   "Corrigir (comente)"
+  ],
+  "contexto": [
+   "O processo começa quando: Parceiro de pacote A assinado.",
+   "1. Gerente de Parcerias confere: Há horas disponíveis? Se \"Sim\", segue para passo 2 (Diagnosticar a base do parceiro). Se \"Não\", segue para passo 10 (Colocar o parceiro na fila com a data prevista).",
+   "2. Gerente de Parcerias: Diagnosticar a base do parceiro.",
+   "3. Responsável nomeado no parceiro: Categorizar a carteira.",
+   "4. Gerente de Parcerias: Definir estrutura e anúncio da comunidade.",
+   "5. Gerente de Parcerias: Definir oferta e nutrição (usa Wise Hub).",
+   "6. Gerente de Parcerias: Planejar formação e evento.",
+   "7. Gerente de Parcerias: Preparar roteiro, divulgação e logística do evento.",
+   "8. Responsável nomeado no parceiro: Promover o evento da comunidade.",
+   "9. Gerente de Parcerias: Emitir o certificado metodológico (usa Portal Wise Partners). Depois segue para o fim \"Comunidade validada\".",
+   "10. Gerente de Parcerias: Colocar o parceiro na fila com a data prevista (usa Portal Wise Partners).",
+   "11. Aguarda: Vez do parceiro na fila. Depois segue para passo 2 (Diagnosticar a base do parceiro).",
+   "Termina em: Comunidade validada.",
+   "De onde veio: Especificação 001, Playbook Wise Partners v3.1."
+  ],
+  "logica": "O passo a passo só vira confirmado com a validação do dono. Se algum passo estiver diferente do que você quer, diga qual no comentário.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 132\" role=\"img\" aria-label=\"Conduzir o ciclo do Base Ativa\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"6\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"101.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Parceiro de pacote A com</text><text x=\"101.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">horas disponíveis</text><line x1=\"196\" y1=\"57\" x2=\"232\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"234\" y=\"14\" width=\"192\" height=\"86\" rx=\"8\" class=\"b hi\"/><text x=\"330.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Conduzir o ciclo do Base</text><text x=\"330.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"600\" class=\"tx\">Ativa</text><line x1=\"426\" y1=\"57\" x2=\"462\" y2=\"57\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"464\" y=\"14\" width=\"190\" height=\"86\" rx=\"8\" class=\"b2\"/><text x=\"559.0\" y=\"53.6\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">Comunidade do parceiro</text><text x=\"559.0\" y=\"68.1\" text-anchor=\"middle\" font-size=\"11.5\" class=\"tx\">validada</text><text x=\"101\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">começa quando</text><text x=\"330\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">processo</text><text x=\"559\" y=\"122\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">entrega</text></svg>"
+ }
+]

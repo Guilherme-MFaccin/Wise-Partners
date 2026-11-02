@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_54" transform="translate(0,16546)" data-frame="9 Reter ou encerrar a parceria">
-<rect data-type="frame" x="0" y="0" width="3448" height="1258" fill="#ffffff" />
+<g id="f_P_54" transform="translate(0,19102)" data-frame="9 Reter ou encerrar a parceria">
+<rect data-type="frame" x="0" y="0" width="4168" height="1458" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">9 Reter ou encerrar a parceria</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="9 Reter ou encerrar a parceria">
 flowchart LR
@@ -23,9 +23,13 @@ flowchart LR
       n_t7["Comunicar o encerramento em conversa e por escrito"]:::confirmado
       n_e2&gt;"30 dias de aviso"]:::confirmado
       n_t8["Encerrar a parceria e revogar acessos"]:::confirmado
+      n_t9["Manter o ex-parceiro na lista de contato anual"]:::confirmado
       n_f1(["Parceiro retomado"]):::confirmado
       n_f2(["Parceiro mantido em observação"]):::confirmado
       n_f3(["Parceria encerrada"]):::confirmado
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t6b["Assinar o aviso formal"]:::confirmado
     end
     ext_X1[/"Parceiro"/]
     n_i1 --&gt; n_g1
@@ -43,13 +47,15 @@ flowchart LR
     n_t5 --&gt; n_t6
     n_t6 --&gt; n_g3
     n_g3 --&gt;|Não| n_f2
-    n_g3 --&gt;|Sim| n_t7
+    n_g3 --&gt;|Sim| n_t6b
+    n_t6b --&gt; n_t7
     n_t7 --&gt; n_e2
     n_e2 --&gt; n_t8
-    n_t8 --&gt; n_f3
+    n_t8 --&gt; n_t9
+    n_t9 --&gt; n_f3
     n_t1 -.-&gt;|Oportunidade| ext_X1
     n_t3 -.-&gt;|Convite com foco único| ext_X1
-    n_t7 -.-&gt;|Aviso formal| ext_X1
+    n_t7 -.-&gt;|Aviso formal assinado| ext_X1
 
 </foreignObject>
 </g></svg>

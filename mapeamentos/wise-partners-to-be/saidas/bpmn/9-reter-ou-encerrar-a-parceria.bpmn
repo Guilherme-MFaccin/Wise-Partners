@@ -5,10 +5,10 @@
     <bpmn:participant id="Ext_P-54_X1" name="Parceiro" />
     <bpmn:messageFlow id="P-54_M1" name="Oportunidade" sourceRef="P-54_t1" targetRef="Ext_P-54_X1" />
     <bpmn:messageFlow id="P-54_M2" name="Convite com foco único" sourceRef="P-54_t3" targetRef="Ext_P-54_X1" />
-    <bpmn:messageFlow id="P-54_M3" name="Aviso formal" sourceRef="P-54_t7" targetRef="Ext_P-54_X1" />
+    <bpmn:messageFlow id="P-54_M3" name="Aviso formal assinado" sourceRef="P-54_t7" targetRef="Ext_P-54_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-54" name="9 Reter ou encerrar a parceria" isExecutable="false">
-    <bpmn:documentation>Parceiro em risco recebe a abordagem do seu tipo; sem resposta, desligamento formal e amigável, com o cliente passando sem atrito. No portal: detecta o risco pela mudança de tipo e pelos critérios da especificação, e gera o aviso formal. [status do fluxo: Confirmado; evidências: EV-0143, EV-0173, EV-0222, EV-0118]</bpmn:documentation>
+    <bpmn:documentation>Parceiro em risco recebe a abordagem do seu tipo; sem resposta, desligamento formal e amigável, com o cliente passando sem atrito. No portal: detecta o risco pela mudança de tipo e pelos critérios da especificação, e gera o aviso formal. [status do fluxo: Confirmado; evidências: EV-0155, EV-0034, EV-0239, EV-0186, EV-0240, EV-0130]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-54">
       <bpmn:lane id="Lane_P-54_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-54_i1</bpmn:flowNodeRef>
@@ -25,9 +25,13 @@
         <bpmn:flowNodeRef>P-54_t7</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-54_e2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-54_t8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-54_t9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-54_f1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-54_f2</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-54_f3</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-54_PA-02" name="Diretor">
+        <bpmn:flowNodeRef>P-54_t6b</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="P-54_i1" name="Parceiro entra num tipo de risco"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-54_F1</bpmn:outgoing></bpmn:startEvent>
@@ -41,12 +45,14 @@
     <bpmn:serviceTask id="P-54_t5" name="Sugerir o desligamento"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F9</bpmn:incoming><bpmn:incoming>P-54_F12</bpmn:incoming><bpmn:outgoing>P-54_F13</bpmn:outgoing></bpmn:serviceTask>
     <bpmn:userTask id="P-54_t6" name="Decidir o desligamento com motivo"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F13</bpmn:incoming><bpmn:outgoing>P-54_F14</bpmn:outgoing></bpmn:userTask>
     <bpmn:exclusiveGateway id="P-54_g3" name="Desligar?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F14</bpmn:incoming><bpmn:outgoing>P-54_F15</bpmn:outgoing><bpmn:outgoing>P-54_F16</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:task id="P-54_t7" name="Comunicar o encerramento em conversa e por escrito"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F16</bpmn:incoming><bpmn:outgoing>P-54_F17</bpmn:outgoing></bpmn:task>
-    <bpmn:intermediateCatchEvent id="P-54_e2" name="30 dias de aviso"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F17</bpmn:incoming><bpmn:outgoing>P-54_F18</bpmn:outgoing><bpmn:timerEventDefinition id="P-54_e2_def" /></bpmn:intermediateCatchEvent>
-    <bpmn:serviceTask id="P-54_t8" name="Encerrar a parceria e revogar acessos"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F18</bpmn:incoming><bpmn:outgoing>P-54_F19</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:userTask id="P-54_t6b" name="Assinar o aviso formal"><bpmn:documentation>sistema: Autentique; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F16</bpmn:incoming><bpmn:outgoing>P-54_F17</bpmn:outgoing></bpmn:userTask>
+    <bpmn:task id="P-54_t7" name="Comunicar o encerramento em conversa e por escrito"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F17</bpmn:incoming><bpmn:outgoing>P-54_F18</bpmn:outgoing></bpmn:task>
+    <bpmn:intermediateCatchEvent id="P-54_e2" name="30 dias de aviso"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F18</bpmn:incoming><bpmn:outgoing>P-54_F19</bpmn:outgoing><bpmn:timerEventDefinition id="P-54_e2_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:serviceTask id="P-54_t8" name="Encerrar a parceria e revogar acessos"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F19</bpmn:incoming><bpmn:outgoing>P-54_F20</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:userTask id="P-54_t9" name="Manter o ex-parceiro na lista de contato anual"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F20</bpmn:incoming><bpmn:outgoing>P-54_F21</bpmn:outgoing></bpmn:userTask>
     <bpmn:endEvent id="P-54_f1" name="Parceiro retomado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F11</bpmn:incoming></bpmn:endEvent>
     <bpmn:endEvent id="P-54_f2" name="Parceiro mantido em observação"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F15</bpmn:incoming></bpmn:endEvent>
-    <bpmn:endEvent id="P-54_f3" name="Parceria encerrada"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F19</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-54_f3" name="Parceria encerrada"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-54_F21</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-54_F1" name="" sourceRef="P-54_i1" targetRef="P-54_g1" />
     <bpmn:sequenceFlow id="P-54_F2" name="Âncora esfriando" sourceRef="P-54_g1" targetRef="P-54_t1" />
     <bpmn:sequenceFlow id="P-54_F3" name="Valioso em risco" sourceRef="P-54_g1" targetRef="P-54_t2" />
@@ -62,16 +68,19 @@
     <bpmn:sequenceFlow id="P-54_F13" name="" sourceRef="P-54_t5" targetRef="P-54_t6" />
     <bpmn:sequenceFlow id="P-54_F14" name="" sourceRef="P-54_t6" targetRef="P-54_g3" />
     <bpmn:sequenceFlow id="P-54_F15" name="Não" sourceRef="P-54_g3" targetRef="P-54_f2" />
-    <bpmn:sequenceFlow id="P-54_F16" name="Sim" sourceRef="P-54_g3" targetRef="P-54_t7" />
-    <bpmn:sequenceFlow id="P-54_F17" name="" sourceRef="P-54_t7" targetRef="P-54_e2" />
-    <bpmn:sequenceFlow id="P-54_F18" name="" sourceRef="P-54_e2" targetRef="P-54_t8" />
-    <bpmn:sequenceFlow id="P-54_F19" name="" sourceRef="P-54_t8" targetRef="P-54_f3" />
+    <bpmn:sequenceFlow id="P-54_F16" name="Sim" sourceRef="P-54_g3" targetRef="P-54_t6b" />
+    <bpmn:sequenceFlow id="P-54_F17" name="" sourceRef="P-54_t6b" targetRef="P-54_t7" />
+    <bpmn:sequenceFlow id="P-54_F18" name="" sourceRef="P-54_t7" targetRef="P-54_e2" />
+    <bpmn:sequenceFlow id="P-54_F19" name="" sourceRef="P-54_e2" targetRef="P-54_t8" />
+    <bpmn:sequenceFlow id="P-54_F20" name="" sourceRef="P-54_t8" targetRef="P-54_t9" />
+    <bpmn:sequenceFlow id="P-54_F21" name="" sourceRef="P-54_t9" targetRef="P-54_f3" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_P-54">
     <bpmndi:BPMNPlane id="BPMNPlane_P-54" bpmnElement="Collaboration_P-54">
-      <bpmndi:BPMNShape id="Participant_P-54_di" bpmnElement="Participant_P-54" isHorizontal="true"><dc:Bounds x="0" y="100" width="2232" height="460" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_P-54_PA-01_di" bpmnElement="Lane_P-54_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="2202" height="460" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Ext_P-54_X1_di" bpmnElement="Ext_P-54_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="2232" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_P-54_di" bpmnElement="Participant_P-54" isHorizontal="true"><dc:Bounds x="0" y="100" width="2584" height="608" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-54_PA-01_di" bpmnElement="Lane_P-54_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="2554" height="460" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-54_PA-02_di" bpmnElement="Lane_P-54_PA-02" isHorizontal="true"><dc:Bounds x="30" y="560" width="2554" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-54_X1_di" bpmnElement="Ext_P-54_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="2584" height="60" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_i1_di" bpmnElement="P-54_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_g1_di" bpmnElement="P-54_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="329" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="299" y="129" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_t1_di" bpmnElement="P-54_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="138" width="128" height="72" /></bpmndi:BPMNShape>
@@ -83,12 +92,14 @@
       <bpmndi:BPMNShape id="P-54_t5_di" bpmnElement="P-54_t5" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="242" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_t6_di" bpmnElement="P-54_t6" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1170" y="138" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_g3_di" bpmnElement="P-54_g3" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1385" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="129" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-54_t7_di" bpmnElement="P-54_t7" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1522" y="242" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-54_e2_di" bpmnElement="P-54_e2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1744" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1707" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-54_t8_di" bpmnElement="P-54_t8" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1874" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_t6b_di" bpmnElement="P-54_t6b" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1522" y="598" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_t7_di" bpmnElement="P-54_t7" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1698" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_e2_di" bpmnElement="P-54_e2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1920" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1883" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_t8_di" bpmnElement="P-54_t8" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2050" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_t9_di" bpmnElement="P-54_t9" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2226" y="138" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_f1_di" bpmnElement="P-54_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1040" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-54_f2_di" bpmnElement="P-54_f2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1568" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1531" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-54_f3_di" bpmnElement="P-54_f3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2096" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="2059" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-54_f3_di" bpmnElement="P-54_f3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2448" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="2411" y="198" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-54_F1_di" bpmnElement="P-54_F1"><di:waypoint x="196" y="174" /><di:waypoint x="329" y="174" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_F2_di" bpmnElement="P-54_F2"><di:waypoint x="379" y="174" /><di:waypoint x="466" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="385" y="154" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_F3_di" bpmnElement="P-54_F3"><di:waypoint x="354" y="199" /><di:waypoint x="354" y="278" /><di:waypoint x="466" y="278" /><bpmndi:BPMNLabel><dc:Bounds x="362" y="258" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
@@ -104,13 +115,15 @@
       <bpmndi:BPMNEdge id="P-54_F13_di" bpmnElement="P-54_F13"><di:waypoint x="1122" y="278" /><di:waypoint x="1146" y="278" /><di:waypoint x="1146" y="174" /><di:waypoint x="1170" y="174" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_F14_di" bpmnElement="P-54_F14"><di:waypoint x="1298" y="174" /><di:waypoint x="1385" y="174" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_F15_di" bpmnElement="P-54_F15"><di:waypoint x="1435" y="174" /><di:waypoint x="1568" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="1441" y="154" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-54_F16_di" bpmnElement="P-54_F16"><di:waypoint x="1410" y="199" /><di:waypoint x="1410" y="278" /><di:waypoint x="1522" y="278" /><bpmndi:BPMNLabel><dc:Bounds x="1418" y="258" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-54_F17_di" bpmnElement="P-54_F17"><di:waypoint x="1650" y="278" /><di:waypoint x="1720" y="278" /><di:waypoint x="1720" y="174" /><di:waypoint x="1744" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-54_F18_di" bpmnElement="P-54_F18"><di:waypoint x="1780" y="174" /><di:waypoint x="1874" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-54_F19_di" bpmnElement="P-54_F19"><di:waypoint x="2002" y="174" /><di:waypoint x="2096" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F16_di" bpmnElement="P-54_F16"><di:waypoint x="1410" y="199" /><di:waypoint x="1410" y="634" /><di:waypoint x="1522" y="634" /><bpmndi:BPMNLabel><dc:Bounds x="1418" y="614" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F17_di" bpmnElement="P-54_F17"><di:waypoint x="1650" y="634" /><di:waypoint x="1674" y="634" /><di:waypoint x="1674" y="174" /><di:waypoint x="1698" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F18_di" bpmnElement="P-54_F18"><di:waypoint x="1826" y="174" /><di:waypoint x="1920" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F19_di" bpmnElement="P-54_F19"><di:waypoint x="1956" y="174" /><di:waypoint x="2050" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F20_di" bpmnElement="P-54_F20"><di:waypoint x="2178" y="174" /><di:waypoint x="2226" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_F21_di" bpmnElement="P-54_F21"><di:waypoint x="2354" y="174" /><di:waypoint x="2448" y="174" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_M1_di" bpmnElement="P-54_M1"><di:waypoint x="530" y="138" /><di:waypoint x="530" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="536" y="73" width="84" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-54_M2_di" bpmnElement="P-54_M2"><di:waypoint x="530" y="346" /><di:waypoint x="530" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="536" y="73" width="154" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-54_M3_di" bpmnElement="P-54_M3"><di:waypoint x="1586" y="242" /><di:waypoint x="1586" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="1592" y="73" width="84" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-54_M3_di" bpmnElement="P-54_M3"><di:waypoint x="1762" y="138" /><di:waypoint x="1762" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="1768" y="73" width="147" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

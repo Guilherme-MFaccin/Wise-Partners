@@ -3,56 +3,69 @@
   <bpmn:collaboration id="Collaboration_P-34">
     <bpmn:participant id="Participant_P-34" name="6.3 Fechar o ciclo com o parceiro" processRef="Process_P-34" />
     <bpmn:participant id="Ext_P-34_X1" name="Parceiro" />
-    <bpmn:messageFlow id="P-34_M1" name="Retorno da etapa" sourceRef="P-34_t2" targetRef="Ext_P-34_X1" />
-    <bpmn:messageFlow id="P-34_M2" name="Desfecho e impacto" sourceRef="P-34_t3" targetRef="Ext_P-34_X1" />
+    <bpmn:messageFlow id="P-34_M1" name="Retorno da etapa" sourceRef="P-34_t3" targetRef="Ext_P-34_X1" />
+    <bpmn:messageFlow id="P-34_M2" name="Desfecho e impacto" sourceRef="P-34_t4" targetRef="Ext_P-34_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-34" name="6.3 Fechar o ciclo com o parceiro" isExecutable="false">
-    <bpmn:documentation>Devolver ao parceiro cada mudança de etapa (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. No portal: detecta a mudança de etapa e prepara a mensagem para o Gerente mandar no grupo do parceiro. [status do fluxo: Confirmado; evidências: EV-0056, EV-0057, EV-0058, EV-0231]</bpmn:documentation>
+    <bpmn:documentation>O closer avisa o Gerente por WhatsApp a cada mudança de etapa; o Gerente registra a etapa e devolve ao parceiro (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. No portal: registra a etapa informada pelo Gerente, prepara a mensagem para ele personalizar e mandar no grupo do parceiro, e mostra no painel da semana as oportunidades paradas há mais de 15 dias. [status do fluxo: Confirmado; evidências: EV-0026, EV-0229, EV-0065, EV-0068]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-34">
-      <bpmn:lane id="Lane_P-34_PA-01" name="Gerente de Parcerias">
+      <bpmn:lane id="Lane_P-34_PA-03" name="Closer da empresa do grupo">
         <bpmn:flowNodeRef>P-34_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-34_t0</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-34_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-34_t1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-34_t2</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>P-34_g1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-34_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-34_g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-34_t4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-34_f1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-34_f2</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="P-34_i1" name="Oportunidade muda de etapa"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-34_F1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:serviceTask id="P-34_t1" name="Preparar a mensagem de retorno"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F1</bpmn:incoming><bpmn:outgoing>P-34_F2</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:userTask id="P-34_t2" name="Enviar o retorno no grupo do parceiro"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F2</bpmn:incoming><bpmn:outgoing>P-34_F3</bpmn:outgoing></bpmn:userTask>
-    <bpmn:exclusiveGateway id="P-34_g1" name="A oportunidade terminou?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F3</bpmn:incoming><bpmn:outgoing>P-34_F4</bpmn:outgoing><bpmn:outgoing>P-34_F5</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:userTask id="P-34_t3" name="Mostrar ao parceiro o impacto gerado"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F5</bpmn:incoming><bpmn:outgoing>P-34_F6</bpmn:outgoing></bpmn:userTask>
-    <bpmn:endEvent id="P-34_f1" name="Parceiro informado da etapa"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F4</bpmn:incoming></bpmn:endEvent>
-    <bpmn:endEvent id="P-34_f2" name="Parceiro informado do desfecho e do impacto"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F6</bpmn:incoming></bpmn:endEvent>
-    <bpmn:sequenceFlow id="P-34_F1" name="" sourceRef="P-34_i1" targetRef="P-34_t1" />
-    <bpmn:sequenceFlow id="P-34_F2" name="" sourceRef="P-34_t1" targetRef="P-34_t2" />
-    <bpmn:sequenceFlow id="P-34_F3" name="" sourceRef="P-34_t2" targetRef="P-34_g1" />
-    <bpmn:sequenceFlow id="P-34_F4" name="Não" sourceRef="P-34_g1" targetRef="P-34_f1" />
-    <bpmn:sequenceFlow id="P-34_F5" name="Sim" sourceRef="P-34_g1" targetRef="P-34_t3" />
-    <bpmn:sequenceFlow id="P-34_F6" name="" sourceRef="P-34_t3" targetRef="P-34_f2" />
+    <bpmn:userTask id="P-34_t0" name="Avisar o Gerente por WhatsApp"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F1</bpmn:incoming><bpmn:outgoing>P-34_F2</bpmn:outgoing></bpmn:userTask>
+    <bpmn:userTask id="P-34_t1" name="Registrar a etapa no portal"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F2</bpmn:incoming><bpmn:outgoing>P-34_F3</bpmn:outgoing></bpmn:userTask>
+    <bpmn:serviceTask id="P-34_t2" name="Preparar a mensagem de retorno"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F3</bpmn:incoming><bpmn:outgoing>P-34_F4</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:userTask id="P-34_t3" name="Personalizar e enviar o retorno no grupo do parceiro"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F4</bpmn:incoming><bpmn:outgoing>P-34_F5</bpmn:outgoing></bpmn:userTask>
+    <bpmn:exclusiveGateway id="P-34_g1" name="A oportunidade terminou?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F5</bpmn:incoming><bpmn:outgoing>P-34_F6</bpmn:outgoing><bpmn:outgoing>P-34_F7</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:userTask id="P-34_t4" name="Mostrar ao parceiro o impacto gerado"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F7</bpmn:incoming><bpmn:outgoing>P-34_F8</bpmn:outgoing></bpmn:userTask>
+    <bpmn:endEvent id="P-34_f1" name="Parceiro informado da etapa"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-34_f2" name="Parceiro informado do desfecho e do impacto"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-34_F8</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-34_F1" name="" sourceRef="P-34_i1" targetRef="P-34_t0" />
+    <bpmn:sequenceFlow id="P-34_F2" name="" sourceRef="P-34_t0" targetRef="P-34_t1" />
+    <bpmn:sequenceFlow id="P-34_F3" name="" sourceRef="P-34_t1" targetRef="P-34_t2" />
+    <bpmn:sequenceFlow id="P-34_F4" name="" sourceRef="P-34_t2" targetRef="P-34_t3" />
+    <bpmn:sequenceFlow id="P-34_F5" name="" sourceRef="P-34_t3" targetRef="P-34_g1" />
+    <bpmn:sequenceFlow id="P-34_F6" name="Não" sourceRef="P-34_g1" targetRef="P-34_f1" />
+    <bpmn:sequenceFlow id="P-34_F7" name="Sim" sourceRef="P-34_g1" targetRef="P-34_t4" />
+    <bpmn:sequenceFlow id="P-34_F8" name="" sourceRef="P-34_t4" targetRef="P-34_f2" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_P-34">
     <bpmndi:BPMNPlane id="BPMNPlane_P-34" bpmnElement="Collaboration_P-34">
-      <bpmndi:BPMNShape id="Participant_P-34_di" bpmnElement="Participant_P-34" isHorizontal="true"><dc:Bounds x="0" y="100" width="1176" height="252" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_P-34_PA-01_di" bpmnElement="Lane_P-34_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="1146" height="252" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Ext_P-34_X1_di" bpmnElement="Ext_P-34_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="1176" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_P-34_di" bpmnElement="Participant_P-34" isHorizontal="true"><dc:Bounds x="0" y="100" width="1528" height="400" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-34_PA-03_di" bpmnElement="Lane_P-34_PA-03" isHorizontal="true"><dc:Bounds x="30" y="100" width="1498" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-34_PA-01_di" bpmnElement="Lane_P-34_PA-01" isHorizontal="true"><dc:Bounds x="30" y="248" width="1498" height="252" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-34_X1_di" bpmnElement="Ext_P-34_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="1528" height="60" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-34_i1_di" bpmnElement="P-34_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_t1_di" bpmnElement="P-34_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="138" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_t2_di" bpmnElement="P-34_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="138" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_g1_di" bpmnElement="P-34_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="681" y="149" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="115" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_t3_di" bpmnElement="P-34_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="242" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_f1_di" bpmnElement="P-34_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="864" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-34_f2_di" bpmnElement="P-34_f2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1040" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="198" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_t0_di" bpmnElement="P-34_t0" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_t1_di" bpmnElement="P-34_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_t2_di" bpmnElement="P-34_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_t3_di" bpmnElement="P-34_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_g1_di" bpmnElement="P-34_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1033" y="297" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="263" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_t4_di" bpmnElement="P-34_t4" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1170" y="390" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_f1_di" bpmnElement="P-34_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1216" y="304" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="346" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-34_f2_di" bpmnElement="P-34_f2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1392" y="304" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="346" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-34_F1_di" bpmnElement="P-34_F1"><di:waypoint x="196" y="174" /><di:waypoint x="290" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_F2_di" bpmnElement="P-34_F2"><di:waypoint x="418" y="174" /><di:waypoint x="466" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_F3_di" bpmnElement="P-34_F3"><di:waypoint x="594" y="174" /><di:waypoint x="681" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_F4_di" bpmnElement="P-34_F4"><di:waypoint x="731" y="174" /><di:waypoint x="864" y="174" /><bpmndi:BPMNLabel><dc:Bounds x="737" y="154" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_F5_di" bpmnElement="P-34_F5"><di:waypoint x="706" y="199" /><di:waypoint x="706" y="278" /><di:waypoint x="818" y="278" /><bpmndi:BPMNLabel><dc:Bounds x="714" y="258" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_F6_di" bpmnElement="P-34_F6"><di:waypoint x="946" y="278" /><di:waypoint x="1016" y="278" /><di:waypoint x="1016" y="174" /><di:waypoint x="1040" y="174" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_M1_di" bpmnElement="P-34_M1"><di:waypoint x="530" y="138" /><di:waypoint x="530" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="536" y="73" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-34_M2_di" bpmnElement="P-34_M2"><di:waypoint x="882" y="242" /><di:waypoint x="882" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="73" width="126" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F2_di" bpmnElement="P-34_F2"><di:waypoint x="418" y="174" /><di:waypoint x="442" y="174" /><di:waypoint x="442" y="322" /><di:waypoint x="466" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F3_di" bpmnElement="P-34_F3"><di:waypoint x="594" y="322" /><di:waypoint x="642" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F4_di" bpmnElement="P-34_F4"><di:waypoint x="770" y="322" /><di:waypoint x="818" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F5_di" bpmnElement="P-34_F5"><di:waypoint x="946" y="322" /><di:waypoint x="1033" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F6_di" bpmnElement="P-34_F6"><di:waypoint x="1083" y="322" /><di:waypoint x="1216" y="322" /><bpmndi:BPMNLabel><dc:Bounds x="1089" y="302" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F7_di" bpmnElement="P-34_F7"><di:waypoint x="1058" y="347" /><di:waypoint x="1058" y="426" /><di:waypoint x="1170" y="426" /><bpmndi:BPMNLabel><dc:Bounds x="1066" y="406" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_F8_di" bpmnElement="P-34_F8"><di:waypoint x="1298" y="426" /><di:waypoint x="1368" y="426" /><di:waypoint x="1368" y="322" /><di:waypoint x="1392" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_M1_di" bpmnElement="P-34_M1"><di:waypoint x="882" y="286" /><di:waypoint x="882" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="73" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-34_M2_di" bpmnElement="P-34_M2"><di:waypoint x="1234" y="390" /><di:waypoint x="1234" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="1240" y="73" width="126" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

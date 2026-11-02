@@ -1,0 +1,23 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Reunião com parceiro ou candidato realizada"]):::confirmado
+      n_i2(["Cadência de contato vencida"]):::confirmado
+      n_t1["Enviar o retorno da reunião em até 24 horas"]:::confirmado
+      n_t2["Escolher o que levar: oportunidade, conteúdo ou apresentação"]:::confirmado
+      n_t3["Ligar ou escrever pessoalmente, sem mensagem em massa"]:::confirmado
+      n_t4["Registrar o contato e a próxima data"]:::confirmado
+      n_f1(["Relação em dia"]):::confirmado
+    end
+    ext_X1[/"Parceiro, candidato ou ex-parceiro"/]
+    n_i1 --> n_t1
+    n_t1 --> n_t4
+    n_i2 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_t4
+    n_t4 --> n_f1
+    n_t1 -.->|Retorno da reunião| ext_X1
+    n_t3 -.->|Contato com algo de valor| ext_X1

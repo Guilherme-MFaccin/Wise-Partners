@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-26" name="5 Integrar e ativar parceiro" processRef="Process_P-26" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-26" name="5 Integrar e ativar parceiro" isExecutable="false">
-    <bpmn:documentation>Do termo assinado à ativação em até 90 dias (extensão até 120), entregando o primeiro valor em fatias. No portal: cria o plano de 90 dias com marcos dentro do card do parceiro e marca a ativação sozinho quando a primeira indicação no ICP vira reunião. [status do fluxo: Confirmado; evidências: EV-0016, EV-0054, EV-0148, EV-0232]</bpmn:documentation>
+    <bpmn:documentation>Do termo assinado à ativação em até 90 dias (extensão até 120), entregando o primeiro valor em fatias. No portal: cria o plano de 90 dias com marcos dentro do card do parceiro e marca a ativação sozinho quando a primeira indicação no ICP vira reunião. [status do fluxo: Confirmado; evidências: EV-0016, EV-0063, EV-0160, EV-0250]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-26">
       <bpmn:lane id="Lane_P-26_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-26_i1</bpmn:flowNodeRef>

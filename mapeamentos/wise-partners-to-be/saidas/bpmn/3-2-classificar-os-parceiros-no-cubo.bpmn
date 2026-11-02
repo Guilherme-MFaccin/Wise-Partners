@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-16" name="3.2 Classificar os parceiros no cubo" processRef="Process_P-16" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-16" name="3.2 Classificar os parceiros no cubo" isExecutable="false">
-    <bpmn:documentation>Ler cada parceiro em Valor (receita e pipeline ponderado em 12 meses), Ritmo (recência e frequência de ações de valor) e Relação (pulso trimestral, retorno mútuo e equilíbrio entre dar e receber); o tipo sai da tabela de oito células. No portal: calcula Valor e Ritmo todo dia, Relação a cada trimestre, e avisa quando um parceiro muda de tipo. [status do fluxo: Confirmado; evidências: EV-0119, EV-0073, EV-0142, EV-0074, EV-0143, EV-0117]</bpmn:documentation>
+    <bpmn:documentation>Ler cada parceiro em Valor (receita e pipeline ponderado em 12 meses), Ritmo (recência e frequência de ações de valor) e Relação (pulso trimestral, retorno mútuo e equilíbrio entre dar e receber); o tipo sai da tabela de oito células. No portal: calcula Valor e Ritmo todo dia, Relação a cada trimestre, e avisa quando um parceiro muda de tipo. [status do fluxo: Confirmado; evidências: EV-0131, EV-0082, EV-0154, EV-0083, EV-0155, EV-0129]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-16">
       <bpmn:lane id="Lane_P-16_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-16_i1</bpmn:flowNodeRef>

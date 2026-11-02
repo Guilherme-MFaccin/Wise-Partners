@@ -8,7 +8,7 @@
     <bpmn:messageFlow id="P-24_M3" name="Termo assinado" sourceRef="Ext_P-24_X1" targetRef="P-24_e2" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-24" name="4.4 Negociar e formalizar o termo" isExecutable="false">
-    <bpmn:documentation>Texto único: o Gerente propõe a minuta como rascunho, recebe críticas e ajusta até as duas partes aprovarem; o Diretor assina; assinatura digital. No portal: gera a minuta a partir do termo-quadro, guarda as versões e anexa o termo assinado. [status do fluxo: Confirmado; evidências: EV-0007, EV-0083, EV-0155, EV-0013]</bpmn:documentation>
+    <bpmn:documentation>Texto único: o Gerente propõe a minuta como rascunho, recebe críticas e ajusta até as duas partes aprovarem; o Diretor assina; assinatura digital. No portal: gera a minuta a partir do termo-quadro, guarda as versões e anexa o termo assinado. [status do fluxo: Confirmado; evidências: EV-0007, EV-0092, EV-0167, EV-0013]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-24">
       <bpmn:lane id="Lane_P-24_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-24_i1</bpmn:flowNodeRef>

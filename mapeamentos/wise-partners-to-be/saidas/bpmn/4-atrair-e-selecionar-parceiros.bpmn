@@ -7,7 +7,7 @@
     <bpmn:messageFlow id="P-20_M2" name="Resposta" sourceRef="Ext_P-20_X1" targetRef="P-20_e1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-20" name="4 Atrair e selecionar parceiros" isExecutable="false">
-    <bpmn:documentation>Do candidato na lista ao termo assinado. No portal: mantém a lista, transforma o candidato em card na primeira reunião e guarda a ficha, o scorecard e o texto único. [status do fluxo: Confirmado; evidências: EV-0147, EV-0148, EV-0149]</bpmn:documentation>
+    <bpmn:documentation>Do candidato na lista ao termo assinado. No portal: mantém a lista, transforma o candidato em card na primeira reunião e guarda a ficha, o scorecard e o texto único. [status do fluxo: Confirmado; evidências: EV-0159, EV-0160, EV-0161]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-20">
       <bpmn:lane id="Lane_P-20_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-20_i1</bpmn:flowNodeRef>
