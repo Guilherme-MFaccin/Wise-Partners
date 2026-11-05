@@ -8,7 +8,7 @@
     <bpmn:messageFlow id="P-54_M3" name="Aviso formal assinado" sourceRef="P-54_t7" targetRef="Ext_P-54_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-54" name="9 Reter ou encerrar a parceria" isExecutable="false">
-    <bpmn:documentation>Parceiro em risco recebe a abordagem do seu tipo; sem resposta, desligamento formal e amigável, com o cliente passando sem atrito. No portal: detecta o risco pela mudança de tipo e pelos critérios da especificação, e gera o aviso formal. [status do fluxo: Confirmado; evidências: EV-0155, EV-0034, EV-0239, EV-0186, EV-0240, EV-0130]</bpmn:documentation>
+    <bpmn:documentation>Parceiro em risco recebe a abordagem do seu tipo; sem resposta, desligamento formal e amigável, com o cliente passando sem atrito. No portal: detecta o risco pela mudança de tipo e pelos critérios da especificação, e gera o aviso formal. [status do fluxo: Confirmado; evidências: EV-0163, EV-0034, EV-0247, EV-0194, EV-0248, EV-0138]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-54">
       <bpmn:lane id="Lane_P-54_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-54_i1</bpmn:flowNodeRef>

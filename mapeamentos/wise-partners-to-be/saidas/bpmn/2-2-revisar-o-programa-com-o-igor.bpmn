@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-10" name="2.2 Revisar o programa com o Igor" processRef="Process_P-10" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-10" name="2.2 Revisar o programa com o Igor" isExecutable="false">
-    <bpmn:documentation>Toda semana, o Gerente e o Igor passam pelo painel da semana (poucos números estratégicos) e pela lista de casos, parceiro a parceiro, e decidem o próximo passo de cada caso. No portal: monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso. [status do fluxo: Confirmado; evidências: EV-0025, EV-0031, EV-0091]</bpmn:documentation>
+    <bpmn:documentation>Toda semana, o Gerente e o Igor passam pelo painel da semana (poucos números estratégicos) e pela lista de casos, parceiro a parceiro, e decidem o próximo passo de cada caso. No portal: monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso. O Igor vê o painel e os casos no portal, só para leitura. [status do fluxo: Confirmado; evidências: EV-0025, EV-0031, EV-0099]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-10">
       <bpmn:lane id="Lane_P-10_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-10_i1</bpmn:flowNodeRef>

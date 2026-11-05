@@ -11,7 +11,7 @@
     <bpmn:messageFlow id="P-53_M5" name="Confirmações" sourceRef="Ext_P-53_X1" targetRef="P-53_e1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-53" name="8.6 Receber parceiros em encontros pequenos" isExecutable="false">
-    <bpmn:documentation>Encontros presenciais de seis a dez pessoas, com um convidado âncora que atrai os demais, misturando parceiros, clientes do grupo e gente que o parceiro quer conhecer, sem pauta de venda; também dentro de feiras e eventos do setor, organizados pela Wise. As entidades da Parceria Institucional atuam como conectoras e convidam. No portal: sugere a lista de convidados pelo cubo e pelas categorias e registra presença. [status do fluxo: Confirmado; evidências: EV-0242, EV-0204, EV-0101, EV-0206]</bpmn:documentation>
+    <bpmn:documentation>Encontros presenciais de seis a dez pessoas, com um convidado âncora que atrai os demais, misturando parceiros, clientes do grupo e gente que o parceiro quer conhecer, sem pauta de venda; também dentro de feiras e eventos do setor, organizados pela Wise. As entidades da Parceria Institucional atuam como conectoras e convidam. No portal: sugere a lista de convidados pelo cubo e pelas categorias e registra presença. [status do fluxo: Confirmado; evidências: EV-0250, EV-0212, EV-0109, EV-0214]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-53">
       <bpmn:lane id="Lane_P-53_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-53_i1</bpmn:flowNodeRef>

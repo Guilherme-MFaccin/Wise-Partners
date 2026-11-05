@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-44" name="7.4 Conduzir o ciclo do Base Ativa" processRef="Process_P-44" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-44" name="7.4 Conduzir o ciclo do Base Ativa" isExecutable="false">
-    <bpmn:documentation>Fila por horas disponíveis, 12 semanas com 6 encontros e evento da comunidade do parceiro. No portal: controla a fila, a agenda dos encontros e o evento. [status do fluxo: Confirmado; evidências: EV-0191, EV-0231, EV-0232, EV-0233, EV-0234, EV-0235, EV-0236, EV-0237, EV-0238, EV-0289]</bpmn:documentation>
+    <bpmn:documentation>Fila por horas disponíveis, 12 semanas com 6 encontros e evento da comunidade do parceiro. No portal: controla a fila, a agenda dos encontros e o evento. [status do fluxo: Confirmado; evidências: EV-0199, EV-0239, EV-0240, EV-0241, EV-0242, EV-0243, EV-0244, EV-0245, EV-0246, EV-0297]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-44">
       <bpmn:lane id="Lane_P-44_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-44_i1</bpmn:flowNodeRef>

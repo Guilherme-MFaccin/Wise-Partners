@@ -7,7 +7,7 @@
     <bpmn:messageFlow id="P-46_M2" name="Contato com algo de valor" sourceRef="P-46_t3" targetRef="Ext_P-46_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-46" name="7.6 Manter a cadência de contato com o parceiro" isExecutable="false">
-    <bpmn:documentation>Contato curto e frequente, com ritmo pela importância: mensal para quem tem atenção alta, trimestral para os demais ativos, duas a três vezes por ano para candidatos em nutrição e ex-parceiros. Cada contato leva algo de valor (oportunidade, conteúdo ou apresentação); depois de cada encontro, retorno em até 24 horas. No portal: lembra quem passou da cadência sem contato e sugere o que levar; a lembrança entra na fila como exceção. [status do fluxo: Confirmado; evidências: EV-0239, EV-0095, EV-0097, EV-0096]</bpmn:documentation>
+    <bpmn:documentation>Contato curto e frequente, com ritmo pela importância: mensal para quem tem atenção alta, trimestral para os demais ativos, duas a três vezes por ano para candidatos em nutrição e ex-parceiros. Cada contato leva algo de valor (oportunidade, conteúdo ou apresentação); depois de cada encontro, retorno em até 24 horas. No portal: lembra quem passou da cadência sem contato e sugere o que levar; a lembrança entra na fila como exceção. [status do fluxo: Confirmado; evidências: EV-0247, EV-0103, EV-0105, EV-0104]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-46">
       <bpmn:lane id="Lane_P-46_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-46_i1</bpmn:flowNodeRef>

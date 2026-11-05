@@ -7,7 +7,7 @@
     <bpmn:messageFlow id="P-18_M2" name="Aviso de nível" sourceRef="P-18_t4" targetRef="Ext_P-18_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-18" name="3.4 Revisar o nível dos parceiros" isExecutable="false">
-    <bpmn:documentation>Apurar requisitos, colocar em observação ou propor descida; a subida acontece na hora. No portal: apura os requisitos, avisa o parceiro do que falta e registra a decisão do Gerente com motivo. [status do fluxo: Confirmado; evidências: EV-0241, EV-0015]</bpmn:documentation>
+    <bpmn:documentation>Apurar requisitos, colocar em observação ou propor descida; a subida acontece na hora. No portal: apura os requisitos, avisa o parceiro do que falta e registra a decisão do Gerente com motivo. [status do fluxo: Confirmado; evidências: EV-0249, EV-0015]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-18">
       <bpmn:lane id="Lane_P-18_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-18_i1</bpmn:flowNodeRef>

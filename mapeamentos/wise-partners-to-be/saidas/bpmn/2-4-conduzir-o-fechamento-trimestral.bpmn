@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-12" name="2.4 Conduzir o fechamento trimestral" processRef="Process_P-12" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-12" name="2.4 Conduzir o fechamento trimestral" isExecutable="false">
-    <bpmn:documentation>Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões. [status do fluxo: Confirmado; evidências: EV-0150, EV-0126, EV-0288]</bpmn:documentation>
+    <bpmn:documentation>Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões. [status do fluxo: Confirmado; evidências: EV-0158, EV-0134, EV-0296]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-12">
       <bpmn:lane id="Lane_P-12_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-12_i1</bpmn:flowNodeRef>
