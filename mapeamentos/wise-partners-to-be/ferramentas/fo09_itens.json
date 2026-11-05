@@ -1,0 +1,450 @@
+[
+ {
+  "id": "LP-cta",
+  "bloco": "A ação principal",
+  "texto": "O que acontece quando o dono do SaaS clica no botão principal?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Formulário curto na própria página, que cria o acesso ao portal e manda o login por e-mail",
+   "Botão que leva para a tela de cadastro do portal",
+   "Formulário na página só com nome, e-mail e WhatsApp; o resto do cadastro fica no portal"
+  ],
+  "contexto": [
+   "A página tem uma ação só. Você decidiu que a entrada é pelo portal Wise Partners, sem conversa. Falta saber se o cadastro acontece na própria página ou se o botão leva para o portal.",
+   "O formulário na própria página costuma converter mais, porque o lead não troca de tela; o portal recebe os dados e cria o acesso."
+  ],
+  "logica": "Minha recomendação: formulário curto na própria página, com o resto do cadastro dentro do portal.",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "one offer → one audience → one primary action"
+   },
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Too many form fields"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-campos",
+  "bloco": "A ação principal",
+  "texto": "Quais campos o cadastro pede na página?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Nome",
+   "E-mail",
+   "WhatsApp",
+   "Nome da empresa",
+   "CNPJ",
+   "Tipo de software (CRM, ERP, outro)",
+   "Quantos clientes ativos na base",
+   "Site da empresa",
+   "Cargo"
+  ],
+  "contexto": [
+   "Cada campo a mais derruba conversão; cada campo a menos deixa entrar quem não é o perfil. Marque só o que precisa estar ali."
+  ],
+  "logica": "Minha recomendação: nome, e-mail, WhatsApp, empresa e tipo de software. CNPJ e tamanho da base ficam para o portal.",
+  "citacoes": [
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Required information that shouldn't be required"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-filtro",
+  "bloco": "A ação principal",
+  "texto": "Quem não é CRM ou ERP e se cadastra, o que acontece?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Entra no portal igual, sem filtro",
+   "Entra numa lista de espera, e você aprova ou recusa no portal",
+   "Recebe uma mensagem de que o programa, por enquanto, é só para CRM e ERP"
+  ],
+  "contexto": [
+   "Agências ficaram de fora do foco; outros softwares de gestão podem aparecer pelos anúncios."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-termo",
+  "bloco": "A ação principal",
+  "texto": "Como o parceiro aceita o termo de parceria?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Aceite eletrônico do termo padrão no cadastro, com link para ler",
+   "Aceite eletrônico no primeiro acesso ao portal",
+   "Assinatura no Autentique, enviada automaticamente depois do cadastro"
+  ],
+  "contexto": [
+   "Sem conversa e sem assinatura do Igor caso a caso, o termo precisa ser aceito no próprio cadastro ou no primeiro acesso."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-anuncios",
+  "bloco": "A mensagem",
+  "texto": "Quais são as frases de abertura dos 5 vídeos de anúncio?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "O título da página precisa repetir a promessa do anúncio que a pessoa acabou de ver. Cole a primeira frase de cada vídeo e, se tiver, o texto do anúncio."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "mirror the ad headline in the hero"
+   },
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Does it match the traffic source's messaging?"
+   }
+  ],
+  "visual": "",
+  "placeholder": "Vídeo 1: ...\nVídeo 2: ...\nVídeo 3: ...\nVídeo 4: ...\nVídeo 5: ...\nTexto dos anúncios, se houver"
+ },
+ {
+  "id": "LP-titulo",
+  "bloco": "A mensagem",
+  "texto": "Qual linha de título você prefere para a página?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Venda o seu software com consultoria comercial incluída. Sem custo para você.",
+   "O seu CRM com consultoria comercial incluída: o argumento que o concorrente não tem.",
+   "Pare de competir por preço: inclua consultoria comercial no seu software, sem custo.",
+   "Outra (comente)"
+  ],
+  "contexto": [
+   "As três dizem a mesma promessa do vídeo. Depois de ler os anúncios, ajusto a palavra exata."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "Headline (outcome + audience)"
+   },
+   {
+    "livro": "Skill copywriting",
+    "pagina": "SKILL.md",
+    "trecho": "Clarity Over Cleverness"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-tom",
+  "bloco": "A mensagem",
+  "texto": "Como a página fala com o dono do software?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Você, direto e profissional, como o Igor no vídeo",
+   "Você, mais informal, como conversa de WhatsApp",
+   "Mais formal, em terceira pessoa (a sua empresa)"
+  ],
+  "contexto": [
+   "Vale para o texto inteiro e para os botões."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-video",
+  "bloco": "A mensagem",
+  "texto": "Onde fica o vídeo do Igor?",
+  "tipo": "escolha",
+  "opcoes": [
+   "No topo, ao lado do título e do botão",
+   "Logo abaixo do título, antes de qualquer outra seção",
+   "No meio da página, depois dos três passos"
+  ],
+  "contexto": [
+   "O vídeo carrega a explicação; o título e o botão carregam a decisão."
+  ],
+  "logica": "Minha recomendação: no topo, ao lado do título no computador e logo abaixo dele no celular.",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "Hero visual (product screenshot/video)"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-tamanho",
+  "bloco": "A mensagem",
+  "texto": "Qual formato de página?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Clássica, mais enxuta",
+   "Longa, para tráfego frio",
+   "Mínima: título, vídeo e cadastro"
+  ],
+  "contexto": [
+   "Página clássica: topo, resultados, três passos, prova, perguntas frequentes e chamada final.",
+   "Página longa: as mesmas seções, com mais explicação, para quem chega frio e desconfiado de oferta gratuita."
+  ],
+  "logica": "Minha recomendação: clássica. Tráfego de anúncio é frio, mas o vídeo já faz a explicação longa.",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "you need to educate + overcome skepticism"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-objecoes",
+  "bloco": "Prova e objeções",
+  "texto": "Quais dúvidas o dono do software vai ter antes de se cadastrar?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Por que é de graça? Qual é o porém?",
+   "A Wise vai vender outra coisa para o meu cliente?",
+   "A Wise vai concorrer com o meu time de implantação ou de sucesso do cliente?",
+   "Vai dar trabalho para o meu time?",
+   "Quais dados dos meus clientes a Wise vê?",
+   "Meu cliente não é indústria: serve para ele?",
+   "Como e quando recebo a comissão?",
+   "Posso sair quando quiser?"
+  ],
+  "contexto": [
+   "Cada objeção marcada vira uma pergunta frequente ou uma linha perto do botão. Comente outras que você já ouviu."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Will this work for my situation?"
+   },
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "Objection handling is a section, not a footer"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-respostas",
+  "bloco": "Prova e objeções",
+  "texto": "Escreva a resposta curta da Wise para as dúvidas que você marcou.",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Só o que a Wise sustenta. Eu reescrevo no tom da página."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Por que é de graça: ...\nA Wise vende outra coisa ao meu cliente: ...\nComissão: ..."
+ },
+ {
+  "id": "LP-risco",
+  "bloco": "Prova e objeções",
+  "texto": "Quais garantias aparecem perto do botão?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Sem custo para você e para o seu cliente",
+   "Sem exclusividade",
+   "Sem meta mínima de indicação",
+   "Sai quando quiser",
+   "A Wise nunca recebe a sua lista de clientes"
+  ],
+  "contexto": [
+   "Uma linha logo abaixo do botão reduz o risco percebido."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "Reduce risk"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-logos",
+  "bloco": "Prova e objeções",
+  "texto": "Que logos de clientes da Wise Makers podem aparecer?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Logos conhecidos perto do topo funcionam como prova rápida. Só com autorização de cada empresa."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Customer logos (especially recognizable ones)"
+   }
+  ],
+  "visual": "",
+  "placeholder": "Protectpool, Fusion Alumínios e outros. Quem já autorizou?"
+ },
+ {
+  "id": "LP-visual",
+  "bloco": "Visual e onde a página fica",
+  "texto": "Qual direção visual a página segue?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Identidade Wise do portal: fundo quase preto, verde menta só no botão e nos destaques",
+   "Identidade do site e dos anúncios da Wise Makers (mande o link ou o manual)",
+   "Clara, com fundo branco e o verde menta como destaque"
+  ],
+  "contexto": [
+   "A regra do projeto diz que a identidade Wise prevalece sobre qualquer estilo sugerido por outra skill: fundo quase preto, texto branco e o verde menta usado só no que importa, como o botão.",
+   "Se a Wise Makers tiver outra identidade no site ou nos anúncios, a página precisa seguir a dos anúncios."
+  ],
+  "logica": "Minha recomendação: a mesma identidade dos 5 vídeos de anúncio, para a página parecer a continuação deles.",
+  "citacoes": [
+   {
+    "livro": "Skill visual-style-presets",
+    "pagina": "SKILL.md",
+    "trecho": "Do not blend two presets in one interface."
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-ativos",
+  "bloco": "Visual e onde a página fica",
+  "texto": "Onde estão os arquivos da marca e as imagens?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Logo em vetor, fotos do Igor, os vídeos e as três imagens que vamos produzir (telas do Hub, mapa de exemplo, foto de diagnóstico ou aula)."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Link do Drive ou do manual da marca\nLogo em SVG ou PNG\nFotos do Igor\nVídeo final do Igor (quando estiver pronto)"
+ },
+ {
+  "id": "LP-endereco",
+  "bloco": "Visual e onde a página fica",
+  "texto": "Onde a página fica?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Dentro do portal Wise Partners (ex.: portal-wise-partners.netlify.app/parceiros)",
+   "Num subdomínio da Wise Makers (ex.: parceiros.wisemakers.com.br)",
+   "Na ferramenta de páginas que a Wise já usa (comente qual)"
+  ],
+  "contexto": [
+   "Dentro do portal, o cadastro e o login ficam no mesmo lugar. Num domínio da Wise Makers, a página ganha a marca no endereço."
+  ],
+  "logica": "Minha recomendação: subdomínio da Wise Makers apontando para o portal, que junta as duas vantagens.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-pixel",
+  "bloco": "Medição e regras",
+  "texto": "Que medição a página precisa ter?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Pixel do Meta com o evento de cadastro",
+   "API de Conversões do Meta (servidor)",
+   "Google Analytics 4",
+   "Parâmetros UTM gravados junto com o cadastro, para saber qual dos 5 vídeos trouxe cada parceiro"
+  ],
+  "contexto": [
+   "Sem o pixel do Meta registrando o cadastro, o anúncio não aprende quem converte."
+  ],
+  "logica": "Minha recomendação: as quatro. Diga no comentário quem tem acesso ao Gerenciador de Negócios do Meta e o ID do pixel, sem colar senha ou token.",
+  "citacoes": [
+   {
+    "livro": "Skill analytics-tracking",
+    "pagina": "SKILL.md",
+    "trecho": "Document all UTMs in a spreadsheet"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-indexar",
+  "bloco": "Medição e regras",
+  "texto": "A página aparece no Google?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Não: só para quem vem dos anúncios",
+   "Sim: quero que apareça na busca também"
+  ],
+  "contexto": [
+   "Página só de anúncio costuma ficar fora da busca."
+  ],
+  "logica": "Minha recomendação: não, por enquanto.",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "ad-only campaigns"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-legal",
+  "bloco": "Medição e regras",
+  "texto": "A Wise Makers já tem política de privacidade publicada?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim (cole o link no comentário)",
+   "Não: preciso de uma"
+  ],
+  "contexto": [
+   "O formulário coleta dados pessoais, e a página precisa do link da política e de uma linha de consentimento."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LP-prazo",
+  "bloco": "Medição e regras",
+  "texto": "Quando os anúncios começam a rodar?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "A página e o cadastro no portal precisam estar prontos antes. Isso define o que entra na primeira versão."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Data prevista"
+ }
+]
