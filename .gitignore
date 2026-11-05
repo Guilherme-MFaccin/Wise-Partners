@@ -10,3 +10,6 @@ supabase/.temp
 dados-reais/
 deploy-sql/
 __pycache__/
+
+# Transcrições de reuniões internas (o mapa guarda só trechos curtos como evidência)
+mapeamentos/*/fontes/reunioes/

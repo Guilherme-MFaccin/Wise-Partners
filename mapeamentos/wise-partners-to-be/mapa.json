@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-02",
-    "atualizado_em": "2026-11-02"
+    "criado_em": "2026-11-05",
+    "atualizado_em": "2026-11-05"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -521,6 +521,97 @@
         "EV-0038",
         "EV-0135",
         "EV-0136"
+      ]
+    },
+    {
+      "id": "F-040",
+      "tema": "proposta_de_valor",
+      "texto": "Para parceiros de software de gestão (CRM, ERP e afins), o valor central da Wise é a retenção da base deles: o cliente com processo comercial bom usa melhor o software e continua pagando. Por isso a entrega da Wise passa a fazer parte do processo do parceiro, e não fica só como indicação.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0290",
+        "EV-0291",
+        "EV-0037",
+        "EV-0042"
+      ]
+    },
+    {
+      "id": "F-041",
+      "tema": "oferta",
+      "texto": "Entregável padrão para o parceiro oferecer aos clientes dele: reunião de diagnóstico comercial gratuita, de 40 a 60 minutos, que termina com um mapa de planejamento; depois do diagnóstico, o cliente ganha acesso ao Wise Hub. O diagnóstico é a quinta porta de oportunidade do programa.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0292",
+        "EV-0293",
+        "EV-0063",
+        "EV-0294"
+      ]
+    },
+    {
+      "id": "F-042",
+      "tema": "oferta",
+      "texto": "O Wise Hub não é oferecido sozinho, como publicidade: plataforma de aulas sem contato gera pouco engajamento e perde valor. O acesso vem depois de um contato com a Wise (o diagnóstico ou o pacote B).",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0295",
+        "EV-0296",
+        "EV-0109"
+      ]
+    },
+    {
+      "id": "F-043",
+      "tema": "estrategia",
+      "texto": "Campanha de lançamento até março: o diagnóstico é ligado ao projeto de pesquisa do Gerente sobre maturidade comercial e CRM, que precisa de 50 entrevistas de cerca de 40 minutos, e os parceiros convidam os clientes deles a participar, com o diagnóstico e o acesso ao Wise Hub como retorno.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0297",
+        "EV-0298",
+        "EV-0299"
+      ]
+    },
+    {
+      "id": "F-044",
+      "tema": "receita",
+      "texto": "Cliente que contrata a Wise depois de um diagnóstico oferecido pelo parceiro conta como indicação do parceiro e gera a comissão da regra única.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0300",
+        "EV-0024",
+        "EV-0301"
+      ]
+    },
+    {
+      "id": "F-045",
+      "tema": "parceiro",
+      "texto": "Na fase de Experimentação, o recrutamento foca num segmento só: software de gestão para empresas (CRM e ERP à frente). Agências ficam fora porque concorrem com a Wise. O ecossistema continua pequeno: não é para milhares de parceiros.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0302",
+        "EV-0303",
+        "EV-0304",
+        "EV-0305",
+        "EV-0306"
+      ]
+    },
+    {
+      "id": "F-046",
+      "tema": "parceiro",
+      "texto": "Categorias de parceiro e da Prateleira citadas na conversa. Comerciais: ERP, CRM, PCP, SST, ESG, EPM, consultoria de gestão, design, tecnologia digital, infraestrutura e data center, dados e ciência de dados, software de gestão de manutenção, automação industrial, qualidade e laboratório, eficiência energética, segurança da informação, comércio exterior e logística internacional, jurídico, tributário, contabilidade consultiva e RH. Institucionais: federações e confederações, Sistema S, institutos, associações comerciais e empresariais, associações setoriais, secretarias de indústria e comércio, sindicatos patronais, parques tecnológicos e universidades.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0307",
+        "EV-0308"
+      ]
+    },
+    {
+      "id": "F-047",
+      "tema": "recurso",
+      "texto": "Primeira entrega do portal com o to-be: o núcleo pequeno que sustenta a operação, e o resto entra conforme o programa ganha liquidez.",
+      "status": "hipotese",
+      "evidencias": [
+        "EV-0084",
+        "EV-0309",
+        "EV-0055"
       ]
     }
   ],
@@ -1048,12 +1139,13 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0141",
         "EV-0142",
-        "EV-0143"
+        "EV-0143",
+        "EV-0271"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -1469,7 +1561,9 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [],
+      "hipoteses": [
+        "acesso_do_diretor"
+      ],
       "evidencias": [
         "EV-0025",
         "EV-0091",
@@ -1677,10 +1771,11 @@
       "frequencia": "Trimestral",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0150"
+        "EV-0150",
+        "EV-0273"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1691,10 +1786,11 @@
       "portal": "roda as apurações, mostra o resultado e agenda as revisões.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "declarado",
+        "status": "confirmado",
         "evidencias": [
           "EV-0150",
-          "EV-0126"
+          "EV-0126",
+          "EV-0288"
         ],
         "raias": [
           "PA-01",
@@ -1902,13 +1998,14 @@
       "frequencia": "Mensal",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0153",
         "EV-0023",
         "EV-0027",
-        "EV-0028"
+        "EV-0028",
+        "EV-0274"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3007,12 +3104,13 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0168",
         "EV-0169",
-        "EV-0170"
+        "EV-0170",
+        "EV-0275"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3359,6 +3457,10 @@
         {
           "nome": "Gesto sem atrito",
           "de": "P-78"
+        },
+        {
+          "nome": "Parceiro com o primeiro valor recebido",
+          "de": "P-94"
         }
       ],
       "saidas": [
@@ -3375,10 +3477,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0176"
+        "EV-0176",
+        "EV-0277"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3637,11 +3740,12 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0178",
-        "EV-0065"
+        "EV-0065",
+        "EV-0278"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4122,11 +4226,12 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0181",
-        "EV-0042"
+        "EV-0042",
+        "EV-0281"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -4529,10 +4634,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0190"
+        "EV-0190",
+        "EV-0282"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -4579,7 +4685,7 @@
       "portal": "controla a fila, a agenda dos encontros e o evento.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "declarado",
+        "status": "confirmado",
         "evidencias": [
           "EV-0191",
           "EV-0231",
@@ -4589,7 +4695,8 @@
           "EV-0235",
           "EV-0236",
           "EV-0237",
-          "EV-0238"
+          "EV-0238",
+          "EV-0289"
         ],
         "raias": [
           "PA-01",
@@ -4766,10 +4873,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0192"
+        "EV-0192",
+        "EV-0283"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -5985,11 +6093,12 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0209",
-        "EV-0210"
+        "EV-0210",
+        "EV-0285"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6147,11 +6256,12 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
         "EV-0214",
-        "EV-0032"
+        "EV-0032",
+        "EV-0272"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6791,10 +6901,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0218"
+        "EV-0218",
+        "EV-0276"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6975,10 +7086,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0220"
+        "EV-0220",
+        "EV-0279"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7058,10 +7170,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0178"
+        "EV-0178",
+        "EV-0280"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7186,10 +7299,11 @@
       "frequencia": "Mensal",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0198"
+        "EV-0198",
+        "EV-0284"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7337,10 +7451,11 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0226"
+        "EV-0226",
+        "EV-0286"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7510,15 +7625,141 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "declarado",
+      "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0228"
+        "EV-0228",
+        "EV-0287"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-21: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
       "principios": [],
       "portal": "guarda as versões e controla os acessos."
+    },
+    {
+      "id": "P-94",
+      "nome": "Executar o plano de ativação de 90 dias",
+      "pai": "P-26",
+      "ordem": 5,
+      "descricao": "Ação de início logo depois do termo, para o parceiro sentir o valor antes de indicar: anúncio conjunto da parceria nos dois lados, treinamento curto de gestão comercial para o time dele e diagnóstico dos primeiros clientes dele; no segundo mês, divulgação à base do parceiro; no terceiro, encontro com a base e as primeiras oportunidades. No portal: monta o plano de 90 dias pelo pacote, cria as tarefas de cada mês e mostra ao parceiro o que já foi feito.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Termo assinado",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Parceiro com o primeiro valor recebido",
+          "para": "P-30"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01",
+        "SI-02"
+      ],
+      "indicadores": [],
+      "frequencia": "Uma vez por parceiro",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0310",
+        "EV-0311",
+        "EV-0312",
+        "EV-0063"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-21: hipótese da conversa de 04/11; o passo a passo vem depois da Rodada 6",
+      "principios": [
+        "F-009",
+        "F-002"
+      ],
+      "portal": "monta o plano de 90 dias pelo pacote, cria as tarefas de cada mês e mostra ao parceiro o que já foi feito."
+    },
+    {
+      "id": "P-95",
+      "nome": "Conduzir o diagnóstico do cliente do parceiro",
+      "pai": "P-31",
+      "ordem": 9,
+      "descricao": "O cliente do parceiro marca pelo link do parceiro; a Wise faz a reunião de diagnóstico comercial, entrega o mapa de planejamento e libera o acesso ao Wise Hub; se o cliente quiser seguir, vira oportunidade com a origem no parceiro. No portal: recebe o agendamento pelo link do parceiro, registra o diagnóstico, libera o Hub e cria a oportunidade quando há interesse.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Cliente do parceiro marca o diagnóstico",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Mapa de planejamento entregue",
+          "para": "EXT:Cliente do parceiro"
+        }
+      ],
+      "cliente": "Cliente do parceiro e parceiro",
+      "sistemas": [
+        "SI-01",
+        "SI-04"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [
+        "regras"
+      ],
+      "evidencias": [
+        "EV-0293",
+        "EV-0313",
+        "EV-0294"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-21: hipótese da conversa de 04/11; o passo a passo vem depois da Rodada 6",
+      "principios": [
+        "F-002",
+        "F-003"
+      ],
+      "portal": "recebe o agendamento pelo link do parceiro, registra o diagnóstico, libera o Hub e cria a oportunidade quando há interesse."
+    },
+    {
+      "id": "P-96",
+      "nome": "Manter o kit de convite ao diagnóstico",
+      "pai": "P-59",
+      "ordem": 4,
+      "descricao": "Página com vídeo explicando o diagnóstico gratuito, mensagem pronta para o parceiro enviar e agenda para o cliente marcar sozinho, sempre com o link do parceiro. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Parceiro novo ou mudança na oferta",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Kit de convite publicado",
+          "para": "EXT:Parceiros"
+        }
+      ],
+      "cliente": "Parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "",
+      "dores": [],
+      "regras": [],
+      "status": "hipotese",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0314",
+        "EV-0315",
+        "EV-0070"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": "DE-21: hipótese da conversa de 04/11; o passo a passo vem depois da Rodada 6",
+      "principios": [
+        "F-011"
+      ],
+      "portal": "gera a página e a mensagem com o link exclusivo do parceiro."
     }
   ],
   "evidencias": [
@@ -7527,7 +7768,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Hoje só o Gerente de Parcerias está no time; a estrutura já serve para quando houver mais pessoas.",
       "local": "User Story 15"
     },
@@ -7536,7 +7777,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Igor aprova no portal.",
       "local": "User Story 4"
     },
@@ -7545,7 +7786,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "ele fala com o consultor ou o gerente de conta, que registra o pedido",
       "local": "User Story 9"
     },
@@ -7554,7 +7795,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "avisa o financeiro por e-mail quando há comissão a pagar",
       "local": "User Story 6"
     },
@@ -7563,7 +7804,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O consultor que atende o cliente, com tarefa gerada pelo portal (recomendado). A tarefa no portal deve ser feita par ao gerente de parcerias. Não quero que o consultor ou a equipe comercial, ou CS tenham a necessidade de acessar o portal para ver isso (eles não o farão e deixarão as tarefas lá sem fazer). Quem tem responsabilidade para com o portal e a governança das tarefas de lá, mesmo que devam ser executadas por terceiros, deve ser o gerente de parcerias.",
       "local": "FO-01/Q-0013"
     },
@@ -7572,7 +7813,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O Igor",
       "local": "FO-01/Q-0021"
     },
@@ -7581,7 +7822,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. Gostei da parte de eu propor uma minuta, rascunho ou proposta pedindo críticas e ela ir sendo trabalhada até ser aprovada pelas duas partes. É uma forma mais orgânica e funcional do que um contrato padrão único e travado. A única coisa é que isso toma tempo e, se for através de e-mail pode levar semanas. Não vou me opor de fazer assim, pois realmente é o melhor encaixe, até porque, imagino que serão excessões que pedirão ajustes constantes. A única coisa que quero pontuar é a aprovação final do diretor. Nem eu nem ele queremos que ele faça uma efetiva aprovação criteriosa. Ele não tem tempo para isso e me dá autonomia para negociar com o parceiro e encontrar o melhor dos dois lados. A única coisa que ele faz é assinar. Claro que ele pode revisar etc, mas tem que ser um processo simples da parte dele.",
       "local": "FO-02/Q-0011"
     },
@@ -7590,7 +7831,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O consultor ou comercial da empresa que vai atender (recomendado: quem fecha é dono da conta)",
       "local": "FO-01/Q-0014"
     },
@@ -7599,7 +7840,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Vamos fazer de maneira simples, cara. Simplesmente o lead que vem, vai para o closer de cada respectiva empresa do grupo. O próprio gerente de parcerias conversa com o closer diretamente (até pessoalmente) para que ele atenda no tempo que melhor funcionar. O closer nunca vai atrasar. Vamos manter simples. O SLA pode funcionar, mas é uma regra que só pesa o sistema e não serve efetivamente para nada. Siga o que eu falei e será sucesso.",
       "local": "FO-02/Q-0014"
     },
@@ -7608,7 +7849,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Responsável nomeado com 2 horas ou mais por semana no primeiro mês",
       "local": "Apêndice A"
     },
@@ -7617,7 +7858,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A versão 1 do portal está construída e testada com dados fictícios.",
       "local": "Contexto"
     },
@@ -7626,7 +7867,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Não agora. Não precisamos fazer com que o portal seja uma forma de comunicação entre o parceiro e a Wise Makers / grupo tríade, porque já temos grupos de whatsapp para cada respectivo parceiro dentro de uma comunidade da wise partners. Vamos manter a comunicação por lá. Ao mesmo tempo, precisamos deixar alguma parte no perfil do parceiro para que tenha a possibilidade de eu resgatar a apresentação de vendas dele. Ao mesmo tempo precisamos deixar disponível uma seção do portal wise partners para que o parceiro possa aprender a vender a wise makers e as outras empresas do grupo, tendo acesso a material de vendas de cada um e também entendendo quanto pode ganhar de comissão para cada indicação.",
       "local": "FO-01/Q-0012"
     },
@@ -7635,7 +7876,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O contrato é enviado para assinatura no Autentique fora do portal, e o PDF assinado é anexado.",
       "local": "User Story 4"
     },
@@ -7644,7 +7885,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "As trilhas ficam só no portal, nunca no Wise Hub, porque o Hub é aberto à carteira do parceiro.",
       "local": "User Story 10"
     },
@@ -7671,7 +7912,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Vejo que a atualização que fizemos depois da leitura dos livros foi só para incluir citações dos livros em alguns processos. Não vejo que conseguimos extrair conceitos importantes e novas perspectivas de modelo de negócio para trazer como melhoria essencial no mapeamento dos processos e modelo de negócio do programa Wise Partners. Preciso que você reveja os livros e traga novas soluções, mesmo que venham a fazer grandes alterações. Precisamos rever tudo do zero, mesmo que venhamos a fazer uma alteração para mudar 100% dos processos como estão agora. Tente fazer o conhecimentos dos livros para a realidade do Wise Partners em uma perspectiva estruturada de mapeamento de processos. Além disso, preciso de mais detalhe nos processos e mais processos",
       "local": "FO-01/Q-0001"
     },
@@ -7680,7 +7921,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Os três pilares desde o primeiro parceiro",
       "local": "FO-01/Q-0002"
     },
@@ -7689,7 +7930,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Vamos seguir o que está no playbook V3: A entrega varia de acordo com a capacidade do parceiro de poder entregar de volta. Se o parceiro é muito pequeno, não faz sentido abrirmos o wise hub, nem chamarmos para os nossos treinamentos, muito menos focarmos em uma consultoria de base ativa por 12 semanas para um evento da Wise Makers para o Parceiro. Temos que fazer escalonado assim como já descrevi no playbook v3. Pode ser que possamos melhorar também com o tempo, à medida que o parceiro tem mais relacionamento, podemos abrir para mais coisas, mas isso tem que ser orgânico e fica difícil registrar na fase que estamos agora.",
       "local": "FO-04/Q-0017"
     },
@@ -7707,7 +7948,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "10 assinados e também uma meta de ativados (recomendado). Gosto da meta, mas não podemos nos ater às metas agora, mas sim para o mapeamento dos processos e do modelo de negócio. A meta, por enquanto, será apenas a capacidade de estupilarmos as metas e a relação da meta no modelo de negócio. Veremos efetivamente qual será a meta em um segundo momento",
       "local": "FO-01/Q-0003"
     },
@@ -7716,7 +7957,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Outra regra (comente). As horas semanais não vão interferir agora. Este momento é para refletirmos sobre mapeamento de processos e modelo de negócio. Não quero que nos atamos em detalhes agora. Deixe apenas a capacidade de podermos fazer a gestão de tempo e recursos de tempo gasto com o programa, nada mais.",
       "local": "FO-01/Q-0004"
     },
@@ -7725,7 +7966,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Contrapartida não financeira para entrar num pedido da Prateleira (ação conjunta, condição comercial para a indústria). Não vamos complicar o que não precisa. Parceria para a Wise Makers é um canal de aquisição de receita mais barato do que os canais ativos agora. O nosso benefício são leads e novos clientes. Comissão da parte do parceiro pode vir só para baratear ainda mais o CAC, mas não pode ser um fator de tornar o programa mais complexo e diminuir a taxa de aderência, o que diminuiria a quantidade de parceiros, por consequência a quantidade de empresas indicadas e, por fim, o CAC.\nVamos manter simples nessa parte que é sucesso.",
       "local": "FO-02/Q-0015"
     },
@@ -7734,7 +7975,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Manter a regra única, sem exceção por parceiro",
       "local": "FO-02/Q-0005"
     },
@@ -7743,7 +7984,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Não aprovo (comente). Não sei se vou ter tantas oportunidades recorrentes assim para falar com os closers toda a semana. Vou conversar com eles esporadicamente quando houverem propostas / indicações novas. Por outro lado, preciso conversar toda a semana com o Igor para falar sobre os parceiros, como está o andamento, etc. Preciso de um dashboard relativamente simples e fácil de se basear com informações estratégicas e ao mesmo tempo, que eu tenha a possibilidade de falar sobre cada caso.",
       "local": "FO-03/Q-0008"
     },
@@ -7752,7 +7993,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Combino com cada closer um aviso curto por WhatsApp a cada etapa, sem portal. ",
       "local": "FO-04/Q-0016"
     },
@@ -7761,7 +8002,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Ninguém precisa informar o cac de outros canais no portal do wise partners. Só temos que ver qual o CAC do wise partners e ponto final",
       "local": "FO-03/Q-0005"
     },
@@ -7770,7 +8011,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Seguir os livros: valor devolvido ao parceiro e CAC lado a lado no painel, com o mesmo peso, em todas as fases. ",
       "local": "FO-04/Q-0014"
     },
@@ -7779,7 +8020,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Meio-termo: dinheiro igual para todos, e o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio), revendo a regra depois de dois trimestres com dados de permanência. ",
       "local": "FO-04/Q-0015"
     },
@@ -7788,7 +8029,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Manter: eu sou dono de tudo, sem teto. ",
       "local": "FO-04/Q-0018"
     },
@@ -7797,7 +8038,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "CAC do Wise Partners no trimestre e a tendência; Parceiros ativos, novos e em risco; Oportunidades abertas por etapa e as paradas há mais de 15 dias; Clientes fechados e receita vinda de parceiros no trimestre; Parceiros que mudaram de tipo no cubo nesta semana; Distância do próximo portão de fase; Desfechos devolvidos aos parceiros (quantas oportunidades tiveram retorno); Horas dedicadas ao programa na semana. ",
       "local": "FO-04/Q-0020"
     },
@@ -7806,7 +8047,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Manter a especificação: nível de entrada pela faixa de clientes no ICP. ",
       "local": "FO-04/Q-0019"
     },
@@ -7815,7 +8056,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Meio-termo: o portal mede o equilíbrio só para a leitura interna do cubo, e o parceiro nunca vê placar; na comunidade aparece o dar, não a conta. ",
       "local": "FO-04/Q-0023"
     },
@@ -7824,7 +8065,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Eu decido e o Igor assina o aviso formal. ",
       "local": "FO-03/Q-0009"
     },
@@ -7833,7 +8074,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). As minhas aprovações não podem ser consideradas lei e não devem ter um peso maior do que a dos livros. Preciso que na próxima resposta você atualize reconsiderando isso.",
       "local": "FO-03/Q-0001"
     },
@@ -7851,7 +8092,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Broadly speaking, there are two foundational components of an effective keystone strategy. The first is to create value within the ecosystem.",
       "local": "p. 100 (princípio: Crie valor antes de capturar valor e compartilhe o que criar.)"
     },
@@ -7860,7 +8101,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Being a giver is not good for a 100-yard dash, but it’s valuable in a marathon",
       "local": "p. 20 (princípio: Tratar o dar como maratona e evitar relações de soma zero.)"
     },
@@ -7869,7 +8110,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A relação entre critério e benefício é muito semelhante à relação de CAC versus LTV.",
       "local": "p. 137 (Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e nív)"
     },
@@ -7878,7 +8119,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Being otherish means being willing to give more than you receive, but still keeping your own interests in sight",
       "local": "p. 117 (princípio: Dar mais do que receber, mantendo o próprio interesse à vista (postura)"
     },
@@ -7887,7 +8128,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Bottom line: It's better to give before you receive. And never keep score.",
       "local": "p. 33 (princípio: Dar primeiro e não manter placar de favores.)"
     },
@@ -7896,7 +8137,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "in the business of referrals, those who give usually get.",
       "local": "p. 26 (princípio: Dê indicação para receber: o parceiro que recebe boas oportunidades in)"
     },
@@ -7905,7 +8146,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Pair every ask for a nearbound “I” of intel, influence, or intro with a give of the same.",
       "local": "p. 179 (Who Economy)"
     },
@@ -7914,7 +8155,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está",
       "local": "FO-02/Q-0002"
     },
@@ -7923,7 +8164,7 @@
       "tipo": "documento",
       "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "successful platforms begin with a single core interaction that consistently generates high value for users.",
       "local": "p. 48 (Core Interaction: Participants, Value Unit and Filter, com os quatro efeitos de )"
     },
@@ -7932,7 +8173,7 @@
       "tipo": "documento",
       "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Participants + Value Unit + Filter → Core Interaction",
       "local": "p. 47 (Core Interaction: Participants, Value Unit and Filter, com os quatro efeitos de )"
     },
@@ -7941,7 +8182,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está",
       "local": "FO-02/Q-0003"
     },
@@ -7950,7 +8191,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Good keystones ought to avoid taking over the activities of their ecosystems, leaving room for a wide variety of other participants to grow and thrive.",
       "local": "p. 116 (princípio: Ocupe pouco do ecossistema e deixe o resto aos parceiros.)"
     },
@@ -7959,7 +8200,7 @@
       "tipo": "documento",
       "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "In ecosystems, leadership is not an outcome but a role.",
       "local": "p. 142 (Ego-System Trap)"
     },
@@ -7968,7 +8209,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Platform interfaces are the visible embodiment of the solutions achieved in the implementation.",
       "local": "p. 156 (princípio: Mantenha a interface com o parceiro simples e estável, e mude a operaç)"
     },
@@ -7977,7 +8218,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Keep your list of rules short and simple so that they're easy to remember. I recommend having no more than 10 rules and offer more detailed guidelines in your code of conduct.",
       "local": "p. 171 (princípio: Poucas regras, aplicadas sempre da mesma forma e com transparência.)"
     },
@@ -7986,7 +8227,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Você sabe que as regras do seu programa estão claras quando um parceiro consegue explicá-las para outros parceiros.",
       "local": "p. 136 (Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e nív)"
     },
@@ -7995,7 +8236,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Atualizei com mais livros. Pode ser que acabe não mudando muito, mas preciso que você refatore todos os conceitos para que considere tudo de uma vez e traga todos os princípios de maneira ordenada no mapeamento de processos do wise makers, levando em consideração o web app no centro da gestão.",
       "local": "FO-02/Q-0001"
     },
@@ -8004,7 +8245,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The key to creating leverage is to make sure that the value of these assets divided by the cost of creating, maintaining, and sharing them increases rapidly with the number of ecosystem members that share them.",
       "local": "p. 100 (princípio: Faça o custo de compartilhar valor cair a cada novo parceiro.)"
     },
@@ -8013,7 +8254,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Não faz sentido, porém, tentar automatizar alguma coisa que não tenha passado por um mínimo de racionalização prévia. Você acabará cometendo os mesmos erros, com mais rapidez. É como pavimentar o caminho das vacas!",
       "local": "p. 129 (princípio: Racionalize à mão antes de automatizar.)"
     },
@@ -8022,7 +8263,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The PRM supports the channel partner relationship management processes, thus we must define these first and then implement the system afterwards.",
       "local": "p. 94 (Pirâmide do canal)"
     },
@@ -8031,7 +8272,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está",
       "local": "FO-02/Q-0007"
     },
@@ -8040,7 +8281,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aqui há sem dúvida uma hierarquia de valor do cliente e do correspondente tipo de atendimento para cada nível.",
       "local": "p. 66 (princípio: Dê a cada parceiro a atenção que o valor dele justifica e use canais u)"
     },
@@ -8049,7 +8290,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "5% of our partners will grow by themselves, 15% will grow if helped and 80% has no growth potential whatsoever.",
       "local": "p. 91 (Pirâmide do canal)"
     },
@@ -8058,7 +8299,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está",
       "local": "FO-02/Q-0006"
     },
@@ -8067,7 +8308,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Parta para a ação! Não se limite a observar e a refletir. Faça alguma coisa!",
       "local": "p. 128 (princípio: Todo sinal precisa virar uma ação com dono e prazo.)"
     },
@@ -8076,7 +8317,7 @@
       "tipo": "documento",
       "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "As soon as an opportunity in Salesforce hits the “Solution Review” sales stage, the partner manager will get an alert in a Slack channel called #no-partner-attached.",
       "local": "secao 26 (Partner Prioritization Matrix)"
     },
@@ -8085,7 +8326,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Os clientes não renovam, nem ficam com você, nem compram mais de você a não ser que, ou até que, você realmente lhes entregue valor.",
       "local": "p. 162 (princípio: Obceque-se pelo primeiro valor do parceiro e entregue em fatias.)"
     },
@@ -8094,7 +8335,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "o onboarding deve ser considerado finalizado depois da ativação do primeiro cliente e não apenas após o consumo de determinado volume de treinamentos",
       "local": "p. 46 (Jornada do Parceiro em sete etapas e onboarding por marcos de 30, 60, 90 e 120 d)"
     },
@@ -8103,7 +8344,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It’s as important to acknowledge the sent referral as it is to acknowledge the converted referral.",
       "local": "p. 191 (princípio: Feche o ciclo com quem indicou, em cada fase, não só no fechamento)"
     },
@@ -8112,7 +8353,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "it has less to do with the amount of giving and more with the amount of feedback about the impact of that giving",
       "local": "p. 121 (princípio: Mostrar o impacto do dar a quem dá, porque o esgotamento vem do vazio )"
     },
@@ -8121,7 +8362,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Validation. Participation is rewarded in some way, making them feel good about their participation, which strengthens their investment in the shared identity, and the cycle repeats.",
       "local": "p. 80 (princípio: Feche o ciclo de identificação, participação e validação e nunca deixe)"
     },
@@ -8130,7 +8371,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Let the original referrer know how the conversation went, and express your appreciation for their help.",
       "local": "p. 119 (princípio: Reconhecer quem abriu a porta e proteger a rede dos outros.)"
     },
@@ -8139,7 +8380,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Problem is, we don’t spend enough time teaching our customers and sources the kinds of complaints, frustrations, challenges, and situations that qualify someone as a great referral.",
       "local": "p. 95 (princípio: Ensine o indicador a reconhecer o cliente certo e a dizer a frase cert)"
     },
@@ -8148,7 +8389,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Put tangible referral tools in the hands of your referral sources.",
       "local": "p. 69 (princípio: Torne o gesto de indicar fácil, com ferramenta pronta nas mãos do indi)"
     },
@@ -8157,7 +8398,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "When you bring market norms and extrinsic rewards into a situation that was driven by social norms, the market norm tends to replace the intrinsic motivation.",
       "local": "p. 126 (princípio: Não troque norma social por norma de mercado: recompense com status, r)"
     },
@@ -8166,7 +8407,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "On the other hand, when the motivation is monetary, they will view it as a market transaction, and the motivation is often significantly lower",
       "local": "p. 159 (princípio: Recompense com reconhecimento e participação; dinheiro vira transação )"
     },
@@ -8175,7 +8416,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Say thank you. Create loyalty by rewarding it.",
       "local": "p. 140 (Added Values)"
     },
@@ -8184,7 +8425,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Research shows that at work, the vast majority of giving that occurs between people is in response to direct requests for help",
       "local": "p. 173 (princípio: Fazer o pedido explícito e deixar o dar visível, porque a maior parte )"
     },
@@ -8193,7 +8434,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Giving and taking are based on our motives and values, and they’re choices that we make regardless of whether our personalities trend agreeable or disagreeable",
       "local": "p. 138 (princípio: Julgar tomadores pelo comportamento e pela reputação, e nunca pela sim)"
     },
@@ -8202,7 +8443,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "a steady cadence of different content and experiences for people to engage with (the beat), regular rituals where everyone knows how to participate (the chorus)",
       "local": "p. 144 (princípio: Crie cadência e ritual: repetição constrói hábito e identidade.)"
     },
@@ -8211,7 +8452,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Every community starts at the seed stage. Take your time in this stage and don't worry about starting small! Small is a superpower.",
       "local": "p. 72 (princípio: Comece pequeno, convide pessoa por pessoa e faça o que não escala.)"
     },
@@ -8220,7 +8461,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "You should plan on no organic growth in the early days.",
       "local": "p. 110 (princípio: Planeje crescimento manual e trate o orgânico como bônus.)"
     },
@@ -8229,7 +8470,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. O único comentário é que teremos poucos concorrentes, mas pode ocorrer, então concordo.",
       "local": "FO-02/Q-0012"
     },
@@ -8238,7 +8479,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains.",
       "local": "p. 54 (princípio: Meça a saúde do ecossistema inteiro, não só o resultado do próprio fun)"
     },
@@ -8247,7 +8488,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente.",
       "local": "p. 123 (princípio: Gerencie a base de parceiros por um escore de saúde desdobrado em comp)"
     },
@@ -8256,7 +8497,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "This will help you to very roughly position a particular relationship within a G+H Type using Table 8.1.",
       "local": "p. 218 (tipologia e fatores)"
     },
@@ -8265,7 +8506,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Os três fatores e os oito tipos. Vamos rever os 3 fatores. Não estou convencido de que eles compreendam tudo o que pode se definir uma parceria. Quero me convencer, apenas se algum livro recomenda com bons argumentos, caso contrário, vamos ter que rever e mudar os fatores-chave. É ideal que consigamos fazer uma regra lógica para que os fatores-chave nos levem para os 8 tipos, como se fosse uma matriz. Digo isso sem ter lido o livro na íntegra, talvez o autor tenha colocado os tipo de maneira bem objetiva.",
       "local": "FO-02/Q-0009"
     },
@@ -8274,7 +8515,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up.",
       "local": "p. 206 (princípio: Alcance liquidez em escala pequena antes de investir para escalar.)"
     },
@@ -8283,7 +8524,7 @@
       "tipo": "documento",
       "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
       "local": "p. 83 (Ecosystem Construction)"
     },
@@ -8292,7 +8533,7 @@
       "tipo": "documento",
       "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Note that user commitment and active usage of the platform are the vital metrics of platform adoption, not sign-ups.",
       "local": "p. 177 (Metrics across the platform life cycle: liquidity, matching quality and trust)"
     },
@@ -8301,7 +8542,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Aprovo, mas os ajustes são meus mesmo. O que podemos olhar de maneira mais madura é abrir os três pilares de uma vez. Concordo que temos que ver a perspectiva macro estratégica do wise partners de maneira escalonada com metas bem estabalecidas e as etapas adaptadas para seu tempo, assim como recomendam os livros. Vamos seguir as recomendações dos livros. Precisamos definir os portões baseado no que mais faz sentido para a Wise Makers e o grupo tríade. Faça uma recomendação você mesmo analisando a conjuntura e também o que os livros recomendam.",
       "local": "FO-02/Q-0013"
     },
@@ -8310,7 +8551,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Perfeito. A única coisa que peço é para revisar as 3 perguntas para o diretor se são suficientes e necessárias. Não quero me ater a isso, necessáriamente. Rever o princípio.",
       "local": "FO-02/Q-0008"
     },
@@ -8319,7 +8560,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Well, that was only half the definition. The second half is the cadences and rituals to enforce them.",
       "local": "p. 191 (Nearbound Rhythm of Business)"
     },
@@ -8328,7 +8569,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Although both extremes work, what seem not to work are intermediate models.",
       "local": "p. 210 (princípio: Defina governança clara, com dono único e regras visíveis.)"
     },
@@ -8337,7 +8578,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Quando muita gente é dona ninguém manda nada",
       "local": "p. 52 (princípio: Dê um dono único à retenção, com autoridade, métricas visíveis e voz n)"
     },
@@ -8346,7 +8587,7 @@
       "tipo": "documento",
       "fonte": "Getting to Yes: Negotiating Agreement Without Giving In (Roger Fisher, William Ury e Bruce Patton)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It is hard to make concessions, but it is easy to criticize.",
       "local": "p. 120 (Texto único, acordo-quadro, jiu-jitsu de negociação e conversas difíceis)"
     },
@@ -8355,7 +8596,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "In reality, people who have the largest circle of contacts, mentors, and friends know that you must reach out to others long before you need anything at all.",
       "local": "p. 53 (princípio: Construir a rede antes de precisar dela.)"
     },
@@ -8364,7 +8605,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "If 80 percent of success is, as Woody Allen once said, just showing up, then 80 percent of building and maintaining relationships is just staying in touch.",
       "local": "p. 192 (princípio: Manter contato por repetição organizada (o ping), com ritmo proporcion)"
     },
@@ -8373,7 +8614,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Once you have gained some early recognition, you need to nurture a developing relationship with a phone call or e-mail at least once a month.",
       "local": "p. 193 (Pinging, Manter Contato o Tempo Todo)"
     },
@@ -8382,7 +8623,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Give yourself between twelve and twenty-four hours after you meet someone to follow up.",
       "local": "p. 117 (Pinging, Manter Contato o Tempo Todo)"
     },
@@ -8391,7 +8632,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "For people important to my career or business, I tend to favor the value-add ping.",
       "local": "p. 197 (Pinging, Manter Contato o Tempo Todo)"
     },
@@ -8400,7 +8641,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Real power comes from being indispensable. Indispensability comes from being a switchboard, parceling out as much information, contacts, and goodwill to as many people",
       "local": "p. 185 (princípio: Ser o ponto de ligação entre mundos, sem esperar pedido.)"
     },
@@ -8409,7 +8650,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "And the first key is, don't wait to be asked. Just do it.",
       "local": "p. 183 (princípio: Ser o ponto de ligação entre mundos, sem esperar pedido.)"
     },
@@ -8418,7 +8659,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Often, creating your own forum is the best way to assure that people you're looking to meet will be in the same place at the same time.",
       "local": "p. 129 (princípio: Reunir as pessoas: ser o anfitrião e criar o clube que não existe.)"
     },
@@ -8427,7 +8668,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Six to ten guests, I've found, is the optimal number to invite to a dinner.",
       "local": "p. 205 (Anchor Tenants e Anfitrião, Âncoras e Jantar, Conferência dentro da Co)"
     },
@@ -8436,7 +8677,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Exchanging contacts should take place around specific events, functions, or causes.",
       "local": "p. 153 (princípio: Reconhecer quem abriu a porta e proteger a rede dos outros.)"
     },
@@ -8445,7 +8686,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Nothing comes off as less sincere than receiving a mass e-mail addressed to a long list of recipients.",
       "local": "p. 71 (princípio: Não ser eficiente demais: personalizar em vez de disparar em massa.)"
     },
@@ -8454,7 +8695,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "I learned that commitments weren't commitments unless everyone involved knew what was on the table with absolute clarity.",
       "local": "p. 283 (princípio: Construir confiança com transparência, vulnerabilidade e compromissos )"
     },
@@ -8463,7 +8704,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "People he no longer needed he treated with indifference, or worse.",
       "local": "p. 71 (princípio: Tratar todos com respeito, de cima a baixo, inclusive quem deixou de s)"
     },
@@ -8472,7 +8713,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "o portal gera a minuta do contrato (Parceria Comercial ou Parceria Institucional) em PDF e em Word",
       "local": "User Story 4"
     },
@@ -8481,7 +8722,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Parceria institucional não usa scorecard nem nível por resultado nesta versão.",
       "local": "Apêndice A"
     },
@@ -8490,7 +8731,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O usuário escolhe o pacote disponível para o nível, e o sistema carrega as contrapartidas do pacote, com periodicidade e forma de comprovação.",
       "local": "User Story 5"
     },
@@ -8508,7 +8749,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "You need to make smaller asks first.",
       "local": "p. 105 (princípio: Peça pouco no começo e aumente o pedido conforme cresce o compromisso.)"
     },
@@ -8517,7 +8758,7 @@
       "tipo": "documento",
       "fonte": "The Ecosystem Economy (Venkat Atluri, Miklós Dietz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "As the orchestrator, you typically have the responsibility to lead, organize, and evolve the ecosystem in order to make it as effective and efficient as possible.",
       "local": "p. 138 (Orchestrators and Participants: the spectrum of ecosystem roles)"
     },
@@ -8526,7 +8767,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está",
       "local": "FO-02/Q-0004"
     },
@@ -8535,7 +8776,7 @@
       "tipo": "documento",
       "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A value architecture is defined by the elements that are brought together to create the value proposition.",
       "local": "p. 26 (Value Architecture)"
     },
@@ -8544,7 +8785,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "modelos de parceria que são baseados apenas em comissionamento podem ser limitantes",
       "local": "p. 128 (Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e nív)"
     },
@@ -8553,7 +8794,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A player is your complementor if customers value your product more when they have the other player’s product than when they have your product alone.",
       "local": "p. 31 (Value Net)"
     },
@@ -8562,7 +8803,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It’s counterproductive to typecast someone as just a customer or just a supplier or just a competitor or just a complementor.",
       "local": "p. 41 (Value Net)"
     },
@@ -8571,7 +8812,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Today’s buyers ask, “Who do I know that has solved this problem?”",
       "local": "p. 17 (Who Economy)"
     },
@@ -8580,7 +8821,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Manter 40% da primeira mensalidade, como no contrato. Qual é o parâmetro que os livros recomendam? Temos que considerar todo o LTV do cliente e, quando o fazemos, o percentual do que damos de comissão fica dentro dos 5% a 15%",
       "local": "FO-01/Q-0006"
     },
@@ -8589,7 +8830,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Sim, igual nas três; a venda é livre (recomendado). Sim, igual, a pesar da comissão vir a ser um pouco diferente para a swallow, já que é por projeto. Fica a regra que estipulei antes (6% para quem indica e 2% para o gerente de parceria)",
       "local": "FO-01/Q-0005"
     },
@@ -8598,7 +8839,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "You need completely different referral approaches and offers for customers and strategic partners.",
       "local": "p. 69 (princípio: Use abordagens e ofertas diferentes para clientes e para parceiros)"
     },
@@ -8607,7 +8848,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Keep it simple and don’t change it too frequently.",
       "local": "p. 71"
     },
@@ -8616,7 +8857,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Competition is valuable. Don’t give it away. Get paid to play.",
       "local": "p. 91 (PARTS)"
     },
@@ -8625,7 +8866,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "So what’s your referral number? What percentage of your clients refer business?",
       "local": "p. 141 (princípio: Meça o número de indicação e onde o sistema vaza)"
     },
@@ -8634,7 +8875,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "They should primarily be managed through the partner portal with opportunities for chat, call centre and email communication.",
       "local": "p. 93 (Pirâmide do canal)"
     },
@@ -8643,7 +8884,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0006"
     },
@@ -8652,7 +8893,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "What we seek are measures of the extent to which an ecosystem as a whole is durably creating opportunities for each of its domains.",
       "local": "p. 54 (The Three Measures of Ecosystem Health: Productivity, Robustness, Nich)"
     },
@@ -8661,7 +8902,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "measures of productivity should also capture the effectiveness of an ecosystem in converting innovation into lowered costs and new products and functions.",
       "local": "p. 56 (The Three Measures of Ecosystem Health: Productivity, Robustness, Nich)"
     },
@@ -8670,7 +8911,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "the plummeting ROIC numbers precede by more than three years the actual collapse of the Internet sector.",
       "local": "p. 58 (The Three Measures of Ecosystem Health: Productivity, Robustness, Nich)"
     },
@@ -8679,7 +8920,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0003"
     },
@@ -8688,7 +8929,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0004"
     },
@@ -8697,7 +8938,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "To make it easier to carry out a self-assessment, each partnership can be considered in terms of three factors:",
       "local": "p. 217 (tipologia e fatores)"
     },
@@ -8706,7 +8947,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A saúde do cliente é o coração do customer success.",
       "local": "p. 122 (Saúde do cliente: monitore e gerencie implacavelmente)"
     },
@@ -8715,7 +8956,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Takers have a distinctive signature: they like to get more than they give",
       "local": "p. 13 (Reciprocity styles: giver, taker e matcher)"
     },
@@ -8724,7 +8965,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0007"
     },
@@ -8733,7 +8974,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
       "local": "p. 60 (princípio: Escolha um ou dois objetivos de negócio da comunidade e meça só esses )"
     },
@@ -8742,7 +8983,7 @@
       "tipo": "documento",
       "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The most successful markets in our study were cautious. They achieved liquidity first, tweaking their market designs with minimal investment in technology and operating infrastructure, and then scaled up.",
       "local": "p. 206 (N-Sided Markets: Liquidity First, Pricing, Operations and Governance)"
     },
@@ -8751,7 +8992,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Nós defendemos que há oito eixos que você deve implementar para construir uma relação de cooperação com outras empresas",
       "local": "p. 32 (Método Octo: oito eixos, três movimentos e cinco níveis de maturidade)"
     },
@@ -8760,7 +9001,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "implementar uma operação via canais exige pensar a relação com parceiros de maneira 360º",
       "local": "p. 34 (Método Octo: oito eixos, três movimentos e cinco níveis de maturidade)"
     },
@@ -8769,7 +9010,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Customers, suppliers, and competitors. And one more category: people who provide complements.",
       "local": "p. 29 (Value Net)"
     },
@@ -8778,7 +9019,7 @@
       "tipo": "documento",
       "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "will your existing partners continue to accept their current role?",
       "local": "p. 150 (Ego-System Trap)"
     },
@@ -8787,7 +9028,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Antes da proposta, o time de parcerias preenche o scorecard do parceiro: sete critérios (Apêndice A), cada um com nota 0, 0,5 ou 1 por uma régua descrita na tela.",
       "local": "User Story 3"
     },
@@ -8796,7 +9037,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Would I feel 100 percent confident referring my best customer to this business?",
       "local": "p. 167 (princípio: Só aceite como rede quem você indicaria ao seu melhor cliente)"
     },
@@ -8805,7 +9046,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Se o parceiro não estiver diretamente interessado no mesmo público que sua empresa, as prioridades vão se desalinhar em algum momento",
       "local": "p. 76 (Perfil de Parceiro Ideal, scorecard e funil de recrutamento de cinco etapas)"
     },
@@ -8814,7 +9055,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Sim, como está",
       "local": "FO-01/Q-0020"
     },
@@ -8823,7 +9064,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "sugerimos que inicie as projeções do seu modelo operacional de canais em uma página em branco, independente.",
       "local": "p. 170 (Time de Parceiros e Gestão do Ecossistema: funções, DRE do canal, fases e painel)"
     },
@@ -8832,7 +9073,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A fase do programa fica registrada e o portal mostra quando os critérios da próxima fase foram atingidos.",
       "local": "User Story 7"
     },
@@ -8841,7 +9082,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Crie uma estrutura de métricas sólida, mas não sobrecarregue a equipe com um grande número delas.",
       "local": "p. 192 (Time de Parceiros e Gestão do Ecossistema: funções, DRE do canal, fases e painel)"
     },
@@ -8850,7 +9091,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "o time elencou uma versão resumida com os 6 principais indicadores de cada fase da jornada do parceiro, que geram o maior impacto nos outros objetivos.",
       "local": "p. 191 (Time de Parceiros e Gestão do Ecossistema: funções, DRE do canal, fases e painel)"
     },
@@ -8859,7 +9100,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aqui há sem dúvida uma hierarquia de valor do cliente e do correspondente tipo de atendimento para cada nível.",
       "local": "p. 66 (Hierarquia de valor do cliente e modelos de atendimento: high-touch, l)"
     },
@@ -8868,7 +9109,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Revisão: primeiro dia útil de janeiro, abril, julho e outubro. Quem não cumpre o nível atual fica em observação por um trimestre.",
       "local": "Apêndice B"
     },
@@ -8877,7 +9118,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Eu, com aprovação do Igor",
       "local": "FO-01/Q-0022"
     },
@@ -8886,7 +9127,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Mudança de regra que afeta parceiros tem data de vigência de no mínimo 30 dias e gera um comunicado.",
       "local": "User Story 13"
     },
@@ -8895,7 +9136,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "clientes fechados no ICP via parceiros, receita atribuída ao canal, custo total do canal separado em comissões, horas da equipe e custos diretos, ROI",
       "local": "User Story 1"
     },
@@ -8904,7 +9145,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Portanto, da mesma maneira como o VP de vendas gerencia por meio do pipeline, as equipes de customer success devem gerenciar por meio da saúde do cliente.",
       "local": "p. 123 (Saúde do cliente: monitore e gerencie implacavelmente)"
     },
@@ -8913,7 +9154,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo com ajustes (comente). Aprovo, mas vejo que temos que adaptar a abordagem para cada um dos 8 tipos de parceiros. Temos que fazer como se fosse uma matriz RFV dos parceiros para definir isso e definir uma tomada de ação e abordagem para cada tipo de parceiro respectivo",
       "local": "FO-02/Q-0016"
     },
@@ -8922,7 +9163,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The more positive symptoms that are observable the more likely it is that the relationship is performing at a higher level of satisfaction to the partner.",
       "local": "p. 219 (tipologia e fatores)"
     },
@@ -8931,7 +9172,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Uma pesquisa trimestral de satisfação dos parceiros (nota de 0 a 10 e comentário) é enviada a cada pessoa do parceiro pelo portal e por e-mail.",
       "local": "User Story 7"
     },
@@ -8940,7 +9181,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Na revisão seguinte, se ainda não cumprir, o portal propõe descer um nível; a decisão é de uma pessoa, com motivo.",
       "local": "Apêndice B"
     },
@@ -8949,7 +9190,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Análoga à jornada do cliente, a jornada do parceiro é a evolução da empresa ao longo da parceria.",
       "local": "p. 45 (Jornada do Parceiro em sete etapas e onboarding por marcos de 30, 60, 90 e 120 d)"
     },
@@ -8958,7 +9199,7 @@
       "tipo": "validacao",
       "fonte": "FO-02: Rodada 2, to-be refeito a partir dos livros",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A lista de candidatos é tabela, não quadro: o candidato só vira card depois da primeira reunião; Ficha de jogo do candidato antes do workshop (papéis na rede de valor, quem ganha com a entrada dele); Estimativa de sobreposição de carteiras antes de investir horas; Caso de negócio do parceiro no workshop: quantos negócios saem da carteira dele, quanto ganha, que demanda recebe de volta",
       "local": "FO-02/Q-0010"
     },
@@ -8967,7 +9208,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Perguntando aos clientes do grupo quais sistemas e fornecedores usam e confiam (pergunta fixa no diagnóstico dos consultores); Fornecedores que já aparecem nas indústrias atendidas pelo grupo; Categorias pedidas na prateleira sem fornecedor; Eventos e Expo+Indústria; Prospecção ativa por perfil. Atualmente não precisamos de um volume muito grande de parceiros e, portanto, todos os que estão vindo, é de maneira orgânica, mas todas estas formas são legítimas para conseguirmos novas parcerias, sim.",
       "local": "FO-01/Q-0008"
     },
@@ -8976,7 +9217,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Dormant ties are the neglected value in our networks",
       "local": "p. 45 (princípio: Reativar laços dormentes antes de caçar contatos novos.)"
     },
@@ -8985,7 +9226,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Nota de potencial = soma ponderada ÷ 10, em porcentagem.",
       "local": "Apêndice A"
     },
@@ -8994,7 +9235,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Registrar interesses e quem decide no candidato; Registrar a melhor alternativa de cada lado e um pacote gatilho que exige o Diretor; Circular a minuta como texto único, pedindo críticas e não concessões; Workshop curto de alinhamento com a diretoria do candidato antes de assinar. Não sei o que é o workshop curto de alinhamento, mas se for o que estou pensando, que é uma conversa um pouco mais longa para revermos o que o parceiro pode fazer e o que fazemos para que consigamos alinhar melhor, ok. Preciso que no próximo formulário, você dê um contexto melhor, citando o livro e a lógica por trás de cada sugestão, mesmo que fique muito longo e mesmo que você precise usar gráficos ou outras formas visuais para explicar cada uma das perguntas.",
       "local": "FO-01/Q-0009"
     },
@@ -9003,7 +9244,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Se você for realmente uma empresa centrada no cliente, a resposta a esta e a todas as outras perguntas deve ser fácil: o cliente decide.",
       "local": "p. 8 (princípio: Deixe o parceiro definir o que é sucesso e escreva isso na unidade de )"
     },
@@ -9012,7 +9253,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It is recommended that this workshop be run before signing the channel partner agreement.",
       "local": "p. 55 (Recrutamento de parceiros como headhunting, workshop estratégico e P&L do parcei)"
     },
@@ -9030,7 +9271,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "o estado \"nutrição\" para quem ainda não é a hora, com data de retomada e cadência de contato",
       "local": "User Story 9"
     },
@@ -9048,7 +9289,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "You should be willing to do something that will take you five minutes or less for anybody",
       "local": "p. 47 (princípio: Transformar o dar em favores de cinco minutos, baratos para quem dá e )"
     },
@@ -9057,7 +9298,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "trace um processo que cubra ao menos os primeiros 30, 60, 90 e 120 dias",
       "local": "p. 90 (Jornada do Parceiro em sete etapas e onboarding por marcos de 30, 60, 90 e 120 d)"
     },
@@ -9066,7 +9307,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "| Até 2 dias úteis | Tarefas do pacote (v1) | Prateleira, grupo, dados, Hub, certificado e selo conforme o pacote |",
       "local": "Apêndice F"
     },
@@ -9084,7 +9325,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "No encontro de alinhamento do onboarding, para dar ao parceiro uma primeira vitória cedo (recomendado)",
       "local": "FO-01/Q-0011"
     },
@@ -9093,7 +9334,7 @@
       "tipo": "documento",
       "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Only company-level information is shared, such as business name, funnel stage, or firmographic data.",
       "local": "secao 20 (Account Mapping Matrix, matriz 3x3 de mapeamento de contas, e regras de comparti)"
     },
@@ -9102,7 +9343,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Sem ativação em 90 dias, o responsável recebe alerta e o plano ganha uma extensão até 120 dias; sem ativação em 120 dias, o parceiro fica marcado como \"não ativado\".",
       "local": "User Story 5"
     },
@@ -9111,7 +9352,7 @@
       "tipo": "documento",
       "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "a lead-generating partner channel should report all leads to a central management system for routing to an appropriate sales resource.",
       "local": "p. 115 (Seven best practices of partner channel design)"
     },
@@ -9120,7 +9361,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Toda indicação ganha uma nota de qualidade (Apêndice E) e passa por validação da Wise, que confirma a aderência ao ICP.",
       "local": "User Story 6"
     },
@@ -9129,7 +9370,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "One urge that you must resist is collecting names from your referral sources and then cold-calling them for a meeting.",
       "local": "p. 160 (princípio: Trate o lead indicado como um lead especial, sem ligação fria)"
     },
@@ -9138,7 +9379,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O cliente nunca faz o pedido sozinho. Quando precisa de um fornecedor fora do escopo da Wise, ele fala com o consultor ou o gerente de conta, que registra o pedido",
       "local": "User Story 9"
     },
@@ -9147,7 +9388,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Quando a indicação vai da Wise para o parceiro, qualquer um dos dois pode atualizar o resultado, mas a responsabilidade de manter o registro é da Wise.",
       "local": "User Story 6"
     },
@@ -9156,7 +9397,7 @@
       "tipo": "documento",
       "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The best way to think of this opportunity space is as a simple three-by-three account mapping matrix",
       "local": "secao 21 (Account Mapping Matrix, matriz 3x3 de mapeamento de contas, e regras de comparti)"
     },
@@ -9165,7 +9406,7 @@
       "tipo": "documento",
       "fonte": "Ecosystem-Led Growth: A Blueprint for Sales and Marketing Success Using the Power of Partnerships (Bob Moore)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "it's a map of the many ELG playbooks that exist at the intersection of you and the partners in your ecosystem, with each square representing a play that sits somewhere in your revenue funnel",
       "local": "secao 21 (Account Mapping Matrix, matriz 3x3 de mapeamento de contas, e regras de comparti)"
     },
@@ -9174,7 +9415,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O sistema calcula a comissão devida ao parceiro e a do responsável pela parceria conforme a regra de cada empresa, avisa o financeiro por e-mail quando há comissão a pagar",
       "local": "User Story 6"
     },
@@ -9183,7 +9424,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "By evaluating performance jointly using the following dynamic drivers you can easily locate your partnerships in the appropriate partnership type",
       "local": "p. 21 (tipologia e fatores)"
     },
@@ -9192,7 +9433,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "they are not immutable; they can and do change, depending on the actions and behaviours of the participants.",
       "local": "p. 17 (tipologia e fatores)"
     },
@@ -9201,7 +9442,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Todos os parceiros ativos, trimestral; mensal para os destaques (recomendado)",
       "local": "FO-01/Q-0017"
     },
@@ -9210,7 +9451,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Só dos parceiros Elite",
       "local": "FO-01/Q-0018"
     },
@@ -9219,7 +9460,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Every important relationship should invest in a regular (probably monthly) operational review meeting",
       "local": "p. 100 (Governança de ciclo completo e ciclo de gestão do relacionamento)"
     },
@@ -9228,7 +9469,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Cada ação tem lado, tipo, data prevista, responsável, estado, comprovação, resultado (alcance, inscritos, indicações geradas) e custo direto, quando houver.",
       "local": "User Story 11"
     },
@@ -9237,7 +9478,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Para parceiros do pacote A, o portal controla a fila do Base Ativa e o ciclo de 12 semanas, com 6 encontros e o evento final.",
       "local": "User Story 7"
     },
@@ -9246,7 +9487,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Quando o parceiro cumpre todos os requisitos de um nível acima, sobe na hora, com aviso a ele e ao responsável.",
       "local": "User Story 4"
     },
@@ -9255,7 +9496,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Maintaining a secondary relationship requires two to three pings a year.",
       "local": "p. 193 (Pinging, Manter Contato o Tempo Todo)"
     },
@@ -9264,7 +9505,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Os clientes e os fornecedores tendem a afastar-se, à deriva, se nenhuma das partes tomar alguma iniciativa.",
       "local": "p. 33 (princípio: Assuma que parceiro e programa se afastam sozinhos e organize o contat)"
     },
@@ -9273,7 +9514,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "All community programs will drive at least one, but often multiple, of these six business outcomes",
       "local": "p. 44 (The SPACES Model)"
     },
@@ -9282,7 +9523,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Often, people don't join communities for emotional connection to other people. They join communities to solve a practical problem or achieve a specific goal.",
       "local": "p. 133 (princípio: Venha pela utilidade, fique pela unidade: ofereça primeiro a solução p)"
     },
@@ -9291,7 +9532,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It's important to focus on just one or two primary objectives for your community program when you're first getting started and your community team is small.",
       "local": "p. 60 (The SPACES Model)"
     },
@@ -9300,7 +9541,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "calendário da mentoria mensal e dos eventos",
       "local": "User Story 8"
     },
@@ -9309,7 +9550,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "In generalized giving, on the other hand, the community is the source of the gifts you receive",
       "local": "p. 161 (Reciprocity Ring e generalized reciprocity)"
     },
@@ -9318,7 +9559,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Save the best thank-you for your best customers.",
       "local": "p. 141 (Added Values)"
     },
@@ -9327,7 +9568,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "When someone mentions a problem, try to think of solutions.",
       "local": "p. 183 (Connecting with Connectors e Social Arbitrage, Conectar com os Conecto)"
     },
@@ -9336,7 +9577,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "never give any one person complete access to your entire list of contacts.",
       "local": "p. 153 (princípio: Reconhecer quem abriu a porta e proteger a rede dos outros.)"
     },
@@ -9345,7 +9586,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "club (preferably a club you've started) will lead to friendships that will last for years.",
       "local": "p. 275 (princípio: Reunir as pessoas: ser o anfitrião e criar o clube que não existe.)"
     },
@@ -9354,7 +9595,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "But an anchor allows you to reach out beyond your circle in subsequent invitations and pull in people who wouldn't otherwise attend.",
       "local": "p. 203 (Anchor Tenants e Anfitrião, Âncoras e Jantar, Conferência dentro da Co)"
     },
@@ -9363,7 +9604,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "be careful not to include too many business associates on the invite list or business agendas in the discussion.",
       "local": "p. 204 (Anchor Tenants e Anfitrião, Âncoras e Jantar, Conferência dentro da Co)"
     },
@@ -9372,7 +9613,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Who says you can't arrange your own dinner while at the conference, or put together an informal discussion on a particular topic that matters to you?",
       "local": "p. 128 (Anchor Tenants e Anfitrião, Âncoras e Jantar, Conferência dentro da Co)"
     },
@@ -9381,7 +9622,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Parceiros que cumprem os critérios de risco (Apêndice D) entram no fluxo de desligamento",
       "local": "User Story 12"
     },
@@ -9390,7 +9631,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aviso formal: texto gerado pelo portal, enviado pelo responsável, com encerramento em 30 dias (cláusula 13.4 do contrato).",
       "local": "Apêndice D"
     },
@@ -9408,7 +9649,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Em todo caso, geralmente é mais importante compreender as razões da retenção ou permanência, uma vez que a evasão quase sempre é um evento isolado, com razões específicas.",
       "local": "p. 107 (princípio: Entenda por que os parceiros ficam, e não apenas por que saem.)"
     },
@@ -9417,7 +9658,7 @@
       "tipo": "validacao",
       "fonte": "FO-01: To-be, decisões do patrocinador",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Permanência depende da nota de qualidade e do retorno dos clientes; Sem limite por categoria",
       "local": "FO-01/Q-0019"
     },
@@ -9426,7 +9667,7 @@
       "tipo": "documento",
       "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Screening decides who to let in, while feedback encourages desirable behavior on the part of those who have been granted entry.",
       "local": "p. 144 (Governance: market failures and the four tools of control, with openness and cur)"
     },
@@ -9435,7 +9676,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O portal do parceiro ganha a área de capacitação, com trilhas criadas pela Wise.",
       "local": "User Story 10"
     },
@@ -9444,7 +9685,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Cada nível tem requisitos em três grupos (Apêndice B): resultado (indicações qualificadas ou clientes fechados no ICP em 180 dias), capacitação (pessoas certificadas) e regras",
       "local": "User Story 4"
     },
@@ -9453,7 +9694,7 @@
       "tipo": "documento",
       "fonte": "Co-opetition (Adam M. Brandenburger e Barry J. Nalebuff)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A prospective player should always ask Cicero’s question: Cui bono? Who stands to gain?",
       "local": "p. 90 (PARTS)"
     },
@@ -9462,7 +9703,7 @@
       "tipo": "documento",
       "fonte": "The Ecosystem Economy (Venkat Atluri, Miklós Dietz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Will their customer base complement your existing customer base in terms of specific targets and segments?",
       "local": "p. 154 (Ecosystem necessities analysis, build-acquire-partner grid and partnership matri)"
     },
@@ -9480,7 +9721,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Cada parceiro comercial assinado recebe um link exclusivo de indicação (e um QR Code) para usar com os próprios clientes.",
       "local": "User Story 6"
     },
@@ -9489,7 +9730,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A fully developed referral system targets two distinct prospect groups.",
       "local": "p. 66 (The Referral System View)"
     },
@@ -9498,7 +9739,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "A indicação fica protegida por 180 dias desde a última interação",
       "local": "User Story 6"
     },
@@ -9507,7 +9748,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Exchanging best business practices, ideas for new approaches, products and services and bringing channel partners together who can benefit from cooperating often plays a much more important role than margin, MDF and SPIF.",
       "local": "p. 73"
     },
@@ -9516,7 +9757,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Sim, ele grava uma mensagem por trimestre. ",
       "local": "FO-04/Q-0021"
     },
@@ -9525,7 +9766,7 @@
       "tipo": "documento",
       "fonte": "The Referral Engine (John Jantsch)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Boring people, products, and companies are hard to refer!",
       "local": "p. 12 (princípio: Seja digno de indicação antes de pedir: diferença que se repete e conf)"
     },
@@ -9534,7 +9775,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Um ou dois objetivos por fase (nesta, trazer parceiros e trazer oportunidades), medidos pelo portal; Rituais de formato fixo: comunicado do mês, encontro trimestral de parceiros e mentoria mensal; Um grupo geral da comunidade, além dos grupos por parceiro, com pedidos e contribuições à vista; Reconhecimento por status, rede e acesso (destaque, acesso antecipado à Prateleira, palco), separado da comissão. Além disso, vamos convidar os parceiros a participarem das formações internas do grupo tríade.",
       "local": "FO-03/Q-0012"
     },
@@ -9543,7 +9784,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Acesso de reconhecimento: só para os destaques e os níveis de cima. ",
       "local": "FO-04/Q-0022"
     },
@@ -9552,7 +9793,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Cada pessoa do parceiro faz a trilha com o próprio login e, ao passar no teste, recebe o próprio certificado em PDF e o selo de capacitação.",
       "local": "User Story 10"
     },
@@ -9561,7 +9802,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O servidor compara com a base da Wise, descarta a lista do parceiro no mesmo processamento e guarda só as coincidências por 180 dias.",
       "local": "User Story 14"
     },
@@ -9570,7 +9811,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Antes do uso, o administrador importa os parceiros atuais (planilha), os documentos já produzidos",
       "local": "User Story 10"
     },
@@ -9579,7 +9820,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0010"
     },
@@ -9588,7 +9829,7 @@
       "tipo": "documento",
       "fonte": "Especificação 001: Portal Wise Partners",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Given a página publicada, When salva, Then o sistema cria uma indicação da empresa do consultor para cada parceiro apresentado, com origem \"pedido de RFP\"",
       "local": "User Story 9, cenário 6"
     },
@@ -9669,7 +9910,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Cadência de contato por importância: mensal para atenção alta, trimestral para os demais ativos, duas a três vezes por ano para candidatos e ex-parceiros; Cada contato leva algo de valor (oportunidade, conteúdo ou apresentação), nunca só o \"como vai\"; Retorno em até 24 horas depois de cada reunião com parceiro ou candidato; Quem sai da parceria continua na lista, com contato duas a três vezes por ano; As mensagens que o portal prepara sempre saem personalizadas por mim, nunca em massa. ",
       "local": "FO-04/Q-0024"
     },
@@ -9678,7 +9919,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Sugestão de desligamento: 30 dias depois da segunda tentativa sem resposta ou sem nova atividade do parceiro.",
       "local": "Apêndice D"
     },
@@ -9687,7 +9928,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Isentos: assinados há menos de 180 dias e pausados.",
       "local": "Apêndice B"
     },
@@ -9696,7 +9937,7 @@
       "tipo": "validacao",
       "fonte": "FO-04: Rodada 4, onde os livros discordam das decisões",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Apresentar parceiros entre si sem esperar pedido, sempre em torno de uma oportunidade específica; Avisar quem apresentou de como foi a conversa; Encontro presencial pequeno (seis a dez pessoas) por trimestre, com um convidado âncora e sem pauta de venda; Encontros dentro de feiras e eventos do setor, organizados pela Wise; Usar as entidades da Parceria Institucional como conectoras, com o papel de convidar para os encontros. ",
       "local": "FO-04/Q-0025"
     },
@@ -9705,7 +9946,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "governance is a multidimensional phenomenon that encompasses the beginning, ending and ongoing relationship management between a set of parties",
       "local": "p. 88 (Governança de ciclo completo e ciclo de gestão do relacionamento)"
     },
@@ -9714,7 +9955,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Who Economy (Jared Fuller)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Customer base: Does your potential partner have a relevant and accessible customer base that matches your company's ICP?",
       "local": "p. 174 (tipologia e fatores)"
     },
@@ -9723,7 +9964,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "There are doubtless other types, but these are unlikely to be generic or widely applicable.",
       "local": "p. 212 (tipologia e fatores)"
     },
@@ -9732,7 +9973,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Os clientes não renovam, nem ficam com você, nem compram mais de você a não ser que, ou até que, você realmente lhes entregue valor.",
       "local": "p. 162 (As dez leis do Customer Success)"
     },
@@ -9741,7 +9982,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The community is first started and needs a lot of love and care to keep it alive.",
       "local": "p. 70 (The Community Life Cycle)"
     },
@@ -9750,7 +9991,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "It’s one revenue number, not direct and indirect.",
       "local": "p. 197 (Nearbound Rhythm of Business)"
     },
@@ -9759,7 +10000,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0002"
     },
@@ -9768,7 +10009,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Perfil do cliente ideal de cada empresa do grupo em uma página; Frases-gatilho: o que o cliente diz quando precisa da Wise, da Tríade ou da Swallow; Mensagem pronta de indicação para o parceiro enviar ao cliente dele; Encontro curto de prática na integração. ",
       "local": "FO-03/Q-0011"
     },
@@ -9777,7 +10018,7 @@
       "tipo": "validacao",
       "fonte": "FO-03: Rodada 3, princípios e to-be refatorado",
       "pessoa": "PE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Aprovo como está. ",
       "local": "FO-03/Q-0013"
     },
@@ -9786,7 +10027,7 @@
       "tipo": "documento",
       "fonte": "Strategic Alliances and Marketing Partnerships (Richard Gibbs, Andrew Humphries)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "various behavioural incentives were put in place including partner retention, breadth of portfolio sold by a partner and frequency of purchase",
       "local": "p. 121"
     },
@@ -9795,7 +10036,7 @@
       "tipo": "documento",
       "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The problem is that price effects are evanescent. They disappear the moment the discounts end or another firm offers a better price.",
       "local": "p. 31"
     },
@@ -9804,7 +10045,7 @@
       "tipo": "documento",
       "fonte": "The Channel Advantage (Lawrence G. Friedman e Timothy R. Furey)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Documented, specific hand-off procedures are a must in an integrated channel system.",
       "local": "p. 187"
     },
@@ -9813,7 +10054,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "a primeira versão do programa será o seu MVP e deve ser um teste controlado, com um número reduzido de participantes",
       "local": "p. 127 (Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e nív)"
     },
@@ -9822,7 +10063,7 @@
       "tipo": "documento",
       "fonte": "Winning the Right Game: How to Disrupt, Defend, and Deliver in a Changing World (Ron Adner)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The MVE is the smallest configuration of activities that can create enough evidence of value creation to attract new partners.",
       "local": "p. 83"
     },
@@ -9831,7 +10072,7 @@
       "tipo": "documento",
       "fonte": "Nearbound and the Rise of the Who Economy (Jared Fuller, Jill Rowley)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Resist the temptation to activate all potential evangelists at once. This can strain resources and disappoint early partners.",
       "local": "p. 90"
     },
@@ -9840,7 +10081,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "No início do programa, é preferível que atividades-chave estejam centralizadas em poucas pessoas para encurtar o ciclo de feedback e facilitar o progresso da operação.",
       "local": "p. 158 (Time de Parceiros e Gestão do Ecossistema: funções, DRE do canal, fases e painel)"
     },
@@ -9849,7 +10090,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "The idea is to create guide rails within which members will contribute.",
       "local": "p. 31 (princípio: Distribua controle dentro de trilhos: playbook, líderes escolhidos e u)"
     },
@@ -9858,7 +10099,7 @@
       "tipo": "documento",
       "fonte": "Give and Take (Adam Grant)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "She proposed that instead of sprinkling their giving, they could chunk it",
       "local": "p. 126 (princípio: Concentrar o dar em blocos e proteger o tempo de quem dá.)"
     },
@@ -9867,7 +10108,7 @@
       "tipo": "documento",
       "fonte": "Especificação 002: Portal Wise Partners 2.0 (23/10/2026)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "O nível de entrada continua definido pela faixa de clientes no ICP (Elite 50 ou mais, Premium 15 a 49, Select menos de 15)",
       "local": "User Story 3"
     },
@@ -9876,7 +10117,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Start with a simple channel partner structure and then differentiate later as the partners actually prove to perform very differently.",
       "local": "p. 73"
     },
@@ -9885,7 +10126,7 @@
       "tipo": "documento",
       "fonte": "Building Successful Partner Channels in the software industry (Hans Peter Bech)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "leaves us with the challenge of downgrading the channel partners as they fail to deliver to the thresholds.",
       "local": "p. 73"
     },
@@ -9894,7 +10135,7 @@
       "tipo": "documento",
       "fonte": "Customer Success (Dan Steinman, Lincoln Murphy e Nick Mehta)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "você aprende que os clientes serão leais por causa do valor que extraem de seu produto, não do relacionamento que possam ter com alguém na organização.",
       "local": "p. 136 (princípio: Construa lealdade por valor entregue, não por relacionamento pessoal.)"
     },
@@ -9903,7 +10144,7 @@
       "tipo": "documento",
       "fonte": "The Business of Belonging (David Spinks)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "How it creates value, belonging, and emotional safety for members",
       "local": "p. 35 (princípio: Sirva o parceiro e a Wise ao mesmo tempo: comunidade que só vende não )"
     },
@@ -9912,7 +10153,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "In other words, the currency of real networking is not greed but generosity.",
       "local": "p. 32 (princípio: Dar primeiro e não manter placar de favores.)"
     },
@@ -9921,7 +10162,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "You and the person you are sharing contacts with must be equal partners that give as much as they get.",
       "local": "p. 153 (Expanding Your Circle, Troca de Redes)"
     },
@@ -9930,7 +10171,7 @@
       "tipo": "documento",
       "fonte": "Ecossistema de Parceiros: Método Octo (Juliana Tubino e Nara Vaz Guimarães)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "uma forma simples e eficiente de operar essa estratégia é utilizar três níveis",
       "local": "p. 134 (Programa de Parceiros: programa mínimo viável, canvas de proposta de valor e nív)"
     },
@@ -9939,7 +10180,7 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "People you're contacting to create a new relationship need to see or hear your name in at least three modes of communication",
       "local": "p. 193 (Pinging, Manter Contato o Tempo Todo)"
     },
@@ -9948,9 +10189,432 @@
       "tipo": "documento",
       "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
       "pessoa": null,
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "trecho": "Reaching out to others is not a numbers game.",
       "local": "p. 71 (princípio: Não ser eficiente demais: personalizar em vez de disparar em massa.)"
+    },
+    {
+      "id": "EV-0271",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0026"
+    },
+    {
+      "id": "EV-0272",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0027"
+    },
+    {
+      "id": "EV-0273",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0028"
+    },
+    {
+      "id": "EV-0274",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0029"
+    },
+    {
+      "id": "EV-0275",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0030"
+    },
+    {
+      "id": "EV-0276",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0031"
+    },
+    {
+      "id": "EV-0277",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0032"
+    },
+    {
+      "id": "EV-0278",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0033"
+    },
+    {
+      "id": "EV-0279",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0034"
+    },
+    {
+      "id": "EV-0280",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0035"
+    },
+    {
+      "id": "EV-0281",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0036"
+    },
+    {
+      "id": "EV-0282",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0037"
+    },
+    {
+      "id": "EV-0283",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0038"
+    },
+    {
+      "id": "EV-0284",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0039"
+    },
+    {
+      "id": "EV-0285",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0040"
+    },
+    {
+      "id": "EV-0286",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0041"
+    },
+    {
+      "id": "EV-0287",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0042"
+    },
+    {
+      "id": "EV-0288",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0043"
+    },
+    {
+      "id": "EV-0289",
+      "tipo": "validacao",
+      "fonte": "FO-05: Rodada 5, validação final do to-be",
+      "pessoa": "PE-01",
+      "data": "2026-11-05",
+      "trecho": "Sim, está correto",
+      "local": "FO-05/Q-0044"
+    },
+    {
+      "id": "EV-0290",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "O problema que a gente resolve para o nosso parceiro é ele ter uma base de clientes que depende do software dele, mas para que eles mantenham o contrato com o software deles, eles precisam de uma eficiência comercial.",
+      "local": "Gravação 2, 07:20"
+    },
+    {
+      "id": "EV-0291",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "O que a gente entrega tem que fazer parte do processo dele.",
+      "local": "Gravação 2, 08:48"
+    },
+    {
+      "id": "EV-0292",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Todo cliente dele fazendo diagnóstico conosco para poder fazer uma avaliação da operação.",
+      "local": "Gravação 2, 10:31"
+    },
+    {
+      "id": "EV-0293",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "A gente oferecer uma reunião de diagnóstico de graça pra cada cliente.",
+      "local": "Gravação 2, 14:50"
+    },
+    {
+      "id": "EV-0294",
+      "tipo": "documento",
+      "fonte": "The Referral Engine (John Jantsch)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Remember, you are not asking your clients for help",
+      "local": "p. 181 (princípio: Apresente a indicação como um benefício para quem indica, nunca como u)"
+    },
+    {
+      "id": "EV-0295",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Será que não ia desvalorizar demais o próprio Wise e Hammer se a gente fizesse isso para todo mundo?",
+      "local": "Gravação 2, 12:42"
+    },
+    {
+      "id": "EV-0296",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "só que eu acho que se ter só ela pra oferecer, eu acho que ele não vai gerar o nível de engajamento nos meus casos.",
+      "local": "Gravação 2, 17:31"
+    },
+    {
+      "id": "EV-0297",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Eu preciso, daqui até mais ou menos março, entrevistar 50 empresas para o meu projeto de pesquisa",
+      "local": "Gravação 2, 17:31"
+    },
+    {
+      "id": "EV-0298",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Uma por dia, em dois meses eu mato tudo.",
+      "local": "Gravação 2, 23:47"
+    },
+    {
+      "id": "EV-0299",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "eles tão ávidos, eles querem mesmo poder oferecer os nossos serviços pra eles",
+      "local": "Gravação 2, 23:47"
+    },
+    {
+      "id": "EV-0300",
+      "tipo": "documento",
+      "fonte": "Playbook Wise Partners v3.1 (24/09/2026)",
+      "pessoa": null,
+      "data": "2026-10-29",
+      "trecho": "Comissiona quem gerou o primeiro contato registrado, identificado pela página do parceiro no Hub ou pela indicação nominal no grupo de WhatsApp. A própria mensagem no grupo é o registro de origem.",
+      "local": "Seção 6.5 (mapa as-is, EV-0033)"
+    },
+    {
+      "id": "EV-0301",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "porque é um possível cliente também pra gente",
+      "local": "Gravação 2, 25:41"
+    },
+    {
+      "id": "EV-0302",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "O SaaS, eu acho que é melhor. O SaaS de CRM.",
+      "local": "Gravação 2, 03:12"
+    },
+    {
+      "id": "EV-0303",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Agência, Saqueagência, ProAge T11... eu acho que acaba concorrendo demais.",
+      "local": "Gravação 2, 03:12"
+    },
+    {
+      "id": "EV-0304",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Aí a gente foca, sei lá, ou agora pegar só, sei lá, software de gestão de manutenção.",
+      "local": "Gravação 1, 29:46"
+    },
+    {
+      "id": "EV-0305",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "O nosso talvez não vai ser escalado para 5 mil parceiros.",
+      "local": "Gravação 2, 09:49"
+    },
+    {
+      "id": "EV-0306",
+      "tipo": "documento",
+      "fonte": "The Ecosystem Economy (Venkat Atluri, Miklós Dietz)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "It is much better to achieve a significant improvement of experience for a portion of your customers than a marginal improvement of experience for a large portion of your customers.",
+      "local": "p. 135"
+    },
+    {
+      "id": "EV-0307",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "ERP, CRM, PCP, SST, ESG, EPM, Consultoria de Gestão.",
+      "local": "Gravação 2, 03:12"
+    },
+    {
+      "id": "EV-0308",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Secretaria de Indústria e Comércio de Desenvolvimento.",
+      "local": "Gravação 2, 04:40"
+    },
+    {
+      "id": "EV-0309",
+      "tipo": "documento",
+      "fonte": "Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You (Geoffrey G. Parker, Marshall W. Van Alstyne e Sangeet Paul Choudary)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Only the highest-volume, highest-value features that cut across apps should become part of the core platform.",
+      "local": "p. 58"
+    },
+    {
+      "id": "EV-0310",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "uma vez o onboard, é fazer o cara ganhar um dinheiro rápido.",
+      "local": "Gravação 1, 00:03"
+    },
+    {
+      "id": "EV-0311",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Na vez de esperar 2, 3 meses, já conseguia pregar valor colocado desde o início.",
+      "local": "Gravação 1, 02:45"
+    },
+    {
+      "id": "EV-0312",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "fazer uma postagem conjunto que começou a parceria, fazer umas publicações sobre a parceria, sobre a Wise.",
+      "local": "Gravação 1, 03:50"
+    },
+    {
+      "id": "EV-0313",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Pro próprio cara do time de CS",
+      "local": "Gravação 2, 24:48"
+    },
+    {
+      "id": "EV-0314",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "A LP é uma oferta talvez bem agressiva.",
+      "local": "Gravação 2, 21:04"
+    },
+    {
+      "id": "EV-0315",
+      "tipo": "entrevista",
+      "fonte": "Reunião Guilherme e Igor, 04/11/2026 (transcrição automática parcial)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "fazer o vídeo com o canal LP pro David e eles são mandando link",
+      "local": "Gravação 2, 22:50"
+    },
+    {
+      "id": "EV-0316",
+      "tipo": "documento",
+      "fonte": "Never Eat Alone (Keith Ferrazzi, Tahl Raz)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "People respond with trust when they know you're dealing straight with them.",
+      "local": "p. 71 (princípio: Construir confiança com transparência, vulnerabilidade e compromissos )"
+    },
+    {
+      "id": "EV-0317",
+      "tipo": "documento",
+      "fonte": "The Keystone Advantage (Marco Iansiti, Roy Levien)",
+      "pessoa": null,
+      "data": "2026-11-05",
+      "trecho": "Both parties know the same information, so the discussion centers around actions.",
+      "local": "p. 110 (princípio: Dê informação comum e padrões de desempenho aos dois lados: confiança )"
     }
   ],
   "perguntas": [
@@ -11055,9 +11719,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0271"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_1.3",
       "contexto": [
         "O que é: Escrever o perfil comercial e o institucional a partir do ICP, com critérios do scorecard e a regra de só aceitar quem a Wise indicaria ao seu melhor cliente. No portal: guarda o perfil e o scorecard usados na qualificação.",
@@ -11085,9 +11754,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0272"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_1.4.1",
       "contexto": [
         "O que é: Três níveis com os mesmos critérios do recrutamento; pacotes com contrapartidas dos dois lados. No portal: guarda a tabela e carrega as contrapartidas no card do parceiro.",
@@ -11115,9 +11789,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0273"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_2.4",
       "contexto": [
         "O que é: Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões.",
@@ -11145,9 +11824,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0274"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_3.1",
       "contexto": [
         "O que é: As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos divididos pelos clientes fechados vindos de parceiros, com receita e LTV atribuídos ao Wise Partners. Valor devolvido: desfechos devolvidos, oportunidades enviadas de volta aos parceiros, apresentações feitas e acessos dados. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa.",
@@ -11175,9 +11859,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0275"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_4.5",
       "contexto": [
         "O que é: Pausa com data de retomada e cadência, com gestos de valor sem pedido. No portal: lembra a data de retomada e sugere um gesto (conteúdo, convite, oportunidade).",
@@ -11205,9 +11894,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0276"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_5.1.3",
       "contexto": [
         "O que é: Ficha verificada na Prateleira, link exclusivo e acessos. No portal: publica e gera o link.",
@@ -11235,9 +11929,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0277"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_5.4",
       "contexto": [
         "O que é: Ativado na primeira indicação no ICP que virou reunião; sem ativação em 90 dias, extensão até 120; depois, não ativado. No portal: marca a ativação sozinho e avisa os marcos de 90 e 120 dias.",
@@ -11265,9 +11964,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0278"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_6.1",
       "contexto": [
         "O que é: Registrar com a porta de origem, agradecer e confirmar ao parceiro, validar duplicidade, ICP e proteção. No portal: registra pelo link, pelo cruzamento ou à mão, envia a confirmação e calcula a nota de qualidade.",
@@ -11295,9 +11999,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0279"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_6.1.1",
       "contexto": [
         "O que é: Link, cruzamento, Base Ativa, Prateleira ou registro à mão, sempre com o parceiro de origem. No portal: registra e protege por 180 dias.",
@@ -11325,9 +12034,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0280"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_6.1.3",
       "contexto": [
         "O que é: Checar se a empresa já está com o grupo e se está no ICP; calcular a nota de qualidade. No portal: checa duplicidade e calcula a nota.",
@@ -11355,9 +12069,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0281"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_6.5",
       "contexto": [
         "O que é: Demanda de volta: o parceiro que recebe boas oportunidades indica melhor. No portal: registra a indicação de volta e conta no equilíbrio de dar e receber.",
@@ -11385,9 +12104,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0282"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_7.3",
       "contexto": [
         "O que é: Plano de ações dos dois lados, com data, responsável, comprovação e resultado. No portal: mostra o plano em calendário e conta cada ação como ação de valor no Ritmo.",
@@ -11415,9 +12139,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0283"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_7.5",
       "contexto": [
         "O que é: Subida na hora em que os requisitos do nível acima são cumpridos; o pacote acompanha. No portal: detecta e avisa os dois lados.",
@@ -11445,9 +12174,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0284"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_8.2.3",
       "contexto": [
         "O que é: Calendário da mentoria mensal da Wise aberto às carteiras de pacote B e A. No portal: envia os convites.",
@@ -11475,9 +12209,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0285"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_9.3",
       "contexto": [
         "O que é: Saída por decisão de qualquer das partes, com aviso de 30 dias, registrada como encerramento amigável e com o motivo para aprender. No portal: registra o motivo da saída.",
@@ -11505,9 +12244,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0286"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_11.1",
       "contexto": [
         "O que é: Trilhas por empresa do grupo com teste e certificado. No portal: entrega a trilha e emite o certificado.",
@@ -11535,9 +12279,14 @@
       ],
       "rodada": 5,
       "bloco": "Processos que vieram da especificação e dos livros",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0287"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_12.3",
       "contexto": [
         "O que é: Versões do termo, vigência, usuários e permissões. No portal: guarda as versões e controla os acessos.",
@@ -11565,9 +12314,14 @@
       ],
       "rodada": 5,
       "bloco": "Passo a passo que veio da especificação",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0288"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_fluxo_2.4",
       "contexto": [
         "De onde veio: Especificação 002, The Keystone Advantage."
@@ -11592,9 +12346,14 @@
       ],
       "rodada": 5,
       "bloco": "Passo a passo que veio da especificação",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-03",
-      "respostas": [],
+      "respostas": [
+        "EV-0289"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "val_fluxo_7.4",
       "contexto": [
         "De onde veio: Especificação 001, Playbook Wise Partners v3.1."
@@ -11602,6 +12361,469 @@
       "logica": "O passo a passo só vira confirmado com a validação do dono. Se algum passo estiver diferente do que você quer, diga qual no comentário.",
       "citacoes": [],
       "visual": "fluxo:P-44"
+    },
+    {
+      "id": "Q-0045",
+      "texto": "Para parceiros de software de gestão, o valor central da Wise passa a ser a retenção da base deles, com a entrega da Wise dentro do processo do parceiro. Você aprova?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "F-040"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "A nova proposta de valor",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "valor_saas",
+      "contexto": [
+        "Na conversa com o Igor apareceu a ideia que mais muda o modelo de negócio desde a Rodada 1. Até aqui, o valor para o parceiro era receber demanda de volta, conhecimento para indicar, comunidade e comissão. A conversa trouxe um valor mais forte para um tipo específico de parceiro: o software de gestão (CRM, ERP e afins).",
+        "O raciocínio da conversa: a base de clientes do software depende de eficiência comercial para continuar pagando. Muitos clientes não usam a ferramenta inteira porque não têm processo de gestão. A Wise resolve exatamente isso. Então a Wise ajuda o parceiro a reter a própria base, e não só a ganhar comissão.",
+        "A frase-chave foi: o que a gente entrega tem que fazer parte do processo dele. Isso converge com Keystone (criar valor antes de capturar) e com Referral Engine (o parceiro que recebe valor indica melhor). Também foi citado que dois parceiros com quem você conversou na semana passada estão ávidos por isso."
+      ],
+      "logica": "Se a entrega da Wise vira parte do processo do parceiro, a indicação deixa de depender de lembrança ou boa vontade: ela acontece toda vez que o parceiro ganha um cliente. É o mesmo efeito que os softwares conseguem com programas de milhares de parceiros, numa escala que cabe na Wise.",
+      "citacoes": [
+        "EV-0290",
+        "EV-0291",
+        "EV-0037",
+        "EV-0042"
+      ],
+      "visual": "valor_saas",
+      "recomendo": "Aprovo"
+    },
+    {
+      "id": "Q-0046",
+      "texto": "O diagnóstico comercial gratuito para cada cliente novo do parceiro vira a entrega padrão do programa?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, para todos os parceiros, desde já",
+        "Sim, só para parceiros de software de gestão",
+        "Primeiro como piloto com 2 ou 3 parceiros, depois padroniza",
+        "Não (comente)"
+      ],
+      "alvo": [
+        "F-041",
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "diagnostico",
+      "contexto": [
+        "A proposta da conversa: todo cliente novo do parceiro recebe a oferta de uma reunião de diagnóstico com a Wise, de 40 a 60 minutos, que termina com um mapa de planejamento. Depois do diagnóstico, o cliente ganha acesso ao Wise Hub. Se ele quiser seguir, vira oportunidade.",
+        "No mapa, isso vira a quinta porta de oportunidade (junto com link, Prateleira, cruzamento de carteiras e Base Ativa) e um processo novo: 6.9 Conduzir o diagnóstico do cliente do parceiro.",
+        "A conversa também levantou o limite: a Wise não escala como um software, e cada diagnóstico custa uma hora de alguém. Uma por dia dá cerca de 20 por mês. Os livros que você seguiu na Rodada 4 pedem começar pequeno e provar antes de abrir para todos."
+      ],
+      "logica": "Um piloto com os dois ou três parceiros que já estão ávidos mostra, em poucas semanas, quantos clientes aceitam o diagnóstico, quantos viram oportunidade e quanto tempo isso consome. Com esses números, padronizar fica seguro.",
+      "citacoes": [
+        "EV-0292",
+        "EV-0293",
+        "EV-0305",
+        "EV-0084",
+        "EV-0063"
+      ],
+      "visual": "diagnostico",
+      "recomendo": "Primeiro como piloto"
+    },
+    {
+      "id": "Q-0047",
+      "texto": "Quem conduz os diagnósticos, e com que limite?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Eu, no máximo um por dia",
+        "Eu e os consultores da Wise, com o meu roteiro",
+        "Os consultores, e eu acompanho pela fila",
+        "Não sei: decidir com o Igor"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "quem_diagnostica",
+      "contexto": [
+        "Na conversa, o cálculo foi seu: uma entrevista de 40 minutos por dia fecha 50 em dois meses. Isso funciona enquanto o diagnóstico serve também à pesquisa. Se ele virar entrega padrão do programa, a demanda pode passar disso.",
+        "Customer Success chama atenção para o mesmo ponto: atenção de alta intensidade cabe a poucos por pessoa, e o resto precisa de um formato um para muitos. Você manteve, na Rodada 4, ser dono de tudo sem teto. O diagnóstico é a primeira entrega que pode passar desse limite, porque não depende só de você."
+      ],
+      "logica": "Definir agora quem conduz e qual é o limite evita prometer ao parceiro uma oferta que a agenda não sustenta.",
+      "citacoes": [
+        "EV-0298",
+        "EV-0058",
+        "EV-0258"
+      ],
+      "visual": "quem_diagnostica",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0048",
+      "texto": "Como fica o acesso ao Wise Hub?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Só depois de um contato com a Wise: diagnóstico para o cliente do parceiro, pacote B para a base do parceiro",
+        "Hub aberto a toda a base do parceiro, como benefício solto",
+        "Só pelo pacote B, como no Playbook v3.1 (sem acesso pelo diagnóstico)"
+      ],
+      "alvo": [
+        "F-042"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "hub",
+      "contexto": [
+        "Hoje o Playbook v3.1 põe o Wise Hub com as duas marcas no pacote B, para a base de Premium e Elite que divulgam. A conversa trouxe uma preocupação: oferecer o Hub para todo mundo, como publicidade, pode desvalorizar a plataforma.",
+        "E trouxe uma observação de mercado: plataforma de aulas sozinha gera pouco engajamento. O que engaja é o contato antes: o cliente faz o diagnóstico, vê o que está errado no negócio dele, e aí recebe as aulas que resolvem aquilo."
+      ],
+      "logica": "O acesso depois do contato preserva o valor do Hub e aumenta o uso, porque o cliente chega à plataforma sabendo o que procurar.",
+      "citacoes": [
+        "EV-0295",
+        "EV-0296",
+        "EV-0109"
+      ],
+      "visual": "hub",
+      "recomendo": "Só depois de um contato"
+    },
+    {
+      "id": "Q-0049",
+      "texto": "O diagnóstico do programa fica ligado ao seu projeto de pesquisa sobre maturidade comercial e CRM?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como campanha de lançamento até março, se a universidade aprovar o formato",
+        "Sim, mas a pesquisa usa só o roteiro: o retorno comercial fica separado e opcional",
+        "Não ligar as duas coisas"
+      ],
+      "alvo": [
+        "F-043"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "pesquisa",
+      "contexto": [
+        "Você contou ao Igor que precisa entrevistar 50 empresas até março para o projeto de pesquisa, e que já tem o roteiro de diagnóstico. A ideia foi juntar as duas coisas: os parceiros convidam os clientes deles, o cliente recebe o diagnóstico e o acesso ao Hub, a pesquisa ganha as entrevistas e a Wise ganha contato com empresas no ICP.",
+        "Há um cuidado que a conversa já começou a tratar: você ia confirmar com a universidade se o vínculo pode ser apresentado assim. Quando a mesma conversa serve à pesquisa e à venda, o participante precisa saber disso desde o convite. Isso pede um termo de consentimento que separe o uso científico dos dados do contato comercial, e o direito de participar da pesquisa sem receber contato comercial depois."
+      ],
+      "logica": "Ligar as duas coisas resolve o seu problema de agenda e dá ao programa uma campanha de lançamento com motivo claro. Separar o retorno comercial protege a pesquisa e a confiança do cliente do parceiro.",
+      "citacoes": [
+        "EV-0297",
+        "EV-0299",
+        "EV-0316"
+      ],
+      "visual": "pesquisa",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0050",
+      "texto": "O parceiro recebe o resultado do diagnóstico do cliente dele?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, só com autorização escrita do cliente, dada no próprio agendamento",
+        "Só um resumo agregado da base dele, sem identificar nenhum cliente",
+        "Não: o resultado é só do cliente"
+      ],
+      "alvo": [
+        "P-95.regras"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "resumo_parceiro",
+      "contexto": [
+        "Na conversa apareceu a ideia de dar ao time de sucesso do cliente do parceiro um resumo do diagnóstico: quem usa pouco o sistema, quem tem dificuldade. Para o parceiro de software, isso vale muito, porque mostra onde a base dele está em risco.",
+        "A regra de dados que você já aprovou no programa é: só dados de empresa, cruzamento com consentimento e só as coincidências reveladas. O diagnóstico é uma conversa do cliente com a Wise. Passar o conteúdo ao parceiro sem autorização quebra a confiança que o próprio diagnóstico cria."
+      ],
+      "logica": "O resumo agregado dá ao parceiro o padrão da base sem expor ninguém. A autorização individual permite o detalhe quando o cliente quer ajuda do parceiro.",
+      "citacoes": [
+        "EV-0313",
+        "EV-0202",
+        "EV-0317"
+      ],
+      "visual": "resumo_parceiro",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0051",
+      "texto": "Se o cliente contrata a Wise depois do diagnóstico oferecido pelo parceiro, isso gera comissão para o parceiro?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como indicação normal, quando o cliente marcou pelo link do parceiro",
+        "Sim, mas com uma regra própria (comente)",
+        "Não: o diagnóstico já é o valor que a Wise entrega ao parceiro"
+      ],
+      "alvo": [
+        "F-044"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "comissao_diag",
+      "contexto": [
+        "O Playbook v3.1 diz que comissiona quem gerou o primeiro contato registrado. Se o cliente chega ao diagnóstico pelo link do parceiro, o primeiro contato é do parceiro. A conversa também lembrou que os clientes menores dos parceiros, de sistemas mais simples, são possíveis clientes da Wise.",
+        "Você decidiu que a comissão é regra única, sem exceção. A dúvida aqui é só se o diagnóstico conta como indicação. Se não contar, o parceiro passa a mandar clientes para a Wise sem ganhar nada quando eles fecham."
+      ],
+      "logica": "A regra mais simples e coerente com a sua decisão é tratar o link do parceiro como o registro de origem, como já acontece com a indicação.",
+      "citacoes": [
+        "EV-0300",
+        "EV-0301",
+        "EV-0072"
+      ],
+      "visual": "comissao_diag",
+      "recomendo": "Sim, pelo link"
+    },
+    {
+      "id": "Q-0052",
+      "texto": "Para o parceiro convidar os clientes dele ao diagnóstico, o que entra no kit?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Página com vídeo da Wise explicando o diagnóstico gratuito e o que o cliente leva",
+        "Mensagem pronta para o parceiro enviar, já com o link dele",
+        "Agenda online para o cliente marcar sozinho",
+        "Vídeo curto gravado junto com o parceiro",
+        "Texto padrão para o parceiro incluir no processo de entrada do cliente dele"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "O diagnóstico como entrega padrão",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "convite_kit",
+      "contexto": [
+        "A conversa terminou com a pergunta prática: como o parceiro convida o cliente? Manda uma página? Um vídeo? Marca uma reunião? A resposta que surgiu foi uma página com vídeo e um link que o parceiro envia.",
+        "Referral Engine diz que o gesto de indicar precisa ser fácil, com a ferramenta pronta na mão de quem indica. O último item da lista leva a ideia central da conversa ao fim: o convite entra no processo de entrada de todo cliente novo do parceiro."
+      ],
+      "logica": "Quanto menos o parceiro precisa explicar, mais clientes chegam ao diagnóstico.",
+      "citacoes": [
+        "EV-0314",
+        "EV-0315",
+        "EV-0070"
+      ],
+      "visual": "convite_kit",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0053",
+      "texto": "No plano de ativação de 90 dias, o que o parceiro recebe logo no começo?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Semana 1: anúncio conjunto da parceria, com postagem dos dois lados",
+        "Mês 1: treinamento curto de gestão comercial para o time do parceiro",
+        "Mês 1: diagnóstico dos dois ou três primeiros clientes do parceiro",
+        "Mês 2: divulgação do diagnóstico e do treinamento para a base do parceiro",
+        "Mês 3: encontro com a base do parceiro e as primeiras oportunidades"
+      ],
+      "alvo": [
+        "P-94"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "Foco e ativação",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "ativacao",
+      "contexto": [
+        "A conversa abriu com um exemplo de outro programa: na entrada, o objetivo é fazer o parceiro ganhar dinheiro rápido, com um plano de 30 dias semana a semana. A conclusão foi que a Wise precisa de uma ação de início que agregue valor desde o primeiro mês, em vez de esperar dois ou três meses.",
+        "O mapa já tinha o princípio (primeiro valor em até 90 dias, entregue em fatias), mas não tinha as fatias. Esta pergunta as define. O processo novo é o 5.5 Executar o plano de ativação de 90 dias, que vale para todos os pacotes. A escada do Playbook continua valendo: o que exige mais horas, como a Base Ativa, segue só para o pacote A."
+      ],
+      "logica": "Uma ação concreta na primeira semana dá ao parceiro uma razão para falar da Wise antes de ter qualquer indicação, e o treinamento faz o time dele sentir o valor que depois vai indicar.",
+      "citacoes": [
+        "EV-0310",
+        "EV-0311",
+        "EV-0312",
+        "EV-0063"
+      ],
+      "visual": "ativacao",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0054",
+      "texto": "Na fase de Experimentação, em que segmento de parceiro o programa foca?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Software de gestão, com CRM e ERP à frente",
+        "Só software de CRM",
+        "Software de gestão de manutenção",
+        "Sem foco: todas as categorias ao mesmo tempo"
+      ],
+      "alvo": [
+        "F-045"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "Foco e ativação",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "foco",
+      "contexto": [
+        "A conversa passou pela lista inteira de categorias e chegou a duas opiniões. Agências concorrem demais com a Wise. Software, sobretudo de CRM, é melhor, porque a dor do cliente dele é a mesma que a Wise resolve. Também apareceu, de passagem, o software de gestão de manutenção como exemplo de foco.",
+        "Ecosystem Economy recomenda focar num segmento de parceiro por vez e entregar uma melhora forte a poucos, em vez de uma oferta rasa para todos. Keystone diz para provar a liquidez num recorte pequeno antes de ampliar. O foco não fecha a porta para os outros: só decide onde vão as horas de recrutamento agora."
+      ],
+      "logica": "Com um segmento só, o diagnóstico, o kit e o discurso ficam iguais para todos os parceiros da fase, e os resultados ficam comparáveis.",
+      "citacoes": [
+        "EV-0302",
+        "EV-0303",
+        "EV-0304",
+        "EV-0306",
+        "EV-0084"
+      ],
+      "visual": "foco",
+      "recomendo": "Software de gestão"
+    },
+    {
+      "id": "Q-0055",
+      "texto": "A lista de categorias citada na conversa vira a lista oficial do portal (Prateleira e cadastro de parceiros)?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "F-046"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "Foco e ativação",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "categorias",
+      "contexto": [
+        "Comerciais: ERP, CRM, PCP, SST, ESG, EPM, consultoria de gestão, design, tecnologia digital, infraestrutura e data center, dados e ciência de dados, software de gestão de manutenção, automação industrial, qualidade e laboratório, eficiência energética, segurança da informação, comércio exterior e logística internacional, jurídico, tributário, contabilidade consultiva e RH.",
+        "Institucionais: federações e confederações, Sistema S, institutos, associações comerciais e empresariais, associações setoriais, secretarias de indústria e comércio, sindicatos patronais, parques tecnológicos e universidades.",
+        "A transcrição é automática e alguns nomes saíram truncados. Se faltou ou sobrou alguma categoria, escreva no comentário."
+      ],
+      "logica": "O portal precisa de uma lista fechada para a Prateleira recomendar parceiros por categoria e para o painel mostrar a cobertura de cada uma.",
+      "citacoes": [
+        "EV-0307",
+        "EV-0308"
+      ],
+      "visual": "categorias",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0056",
+      "texto": "Este é o último formulário antes de levar o to-be ao portal. O que entra na primeira entrega?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Núcleo: card do parceiro, jornada, oportunidades com as cinco portas e fila única de exceções",
+        "Painel da semana com o Igor, com os oito números e a lista de casos",
+        "Área do parceiro: kit, link exclusivo, simulador de ganho, oportunidades e regras",
+        "Diagnóstico: agendamento pelo link do parceiro, registro e liberação do Hub",
+        "Plano de ativação de 90 dias, com as tarefas de cada mês",
+        "Cubo e tipos, com a jogada sugerida",
+        "Cadência de contato e lembretes",
+        "Comunidade: comunicado do mês, encontros e reconhecimento"
+      ],
+      "alvo": [
+        "F-047"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "Para levar ao portal",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "portal_escopo",
+      "contexto": [
+        "O portal atual foi construído antes das cinco rodadas, e quase todo o to-be muda alguma coisa nele. Levar tudo de uma vez é o erro que Keystone descreve como o mais comum nos ecossistemas que falharam: investir grande em tecnologia antes da liquidez. Platform Revolution diz o mesmo de outro jeito: o núcleo da plataforma é pequeno, e o que serve a poucos fica na borda até provar valor.",
+        "Customer Success acrescenta: racionalizar à mão antes de automatizar. O que você ainda vai testar (o diagnóstico em piloto, por exemplo) pode começar com registro simples e ganhar automação depois."
+      ],
+      "logica": "Marque o que precisa estar no portal no dia em que o primeiro parceiro do to-be entrar. O resto entra em entregas seguintes, na ordem que o uso mostrar.",
+      "citacoes": [
+        "EV-0084",
+        "EV-0309",
+        "EV-0055"
+      ],
+      "visual": "portal_escopo",
+      "recomendo": "Núcleo, painel da semana, área do parceiro e diagnóstico"
+    },
+    {
+      "id": "Q-0057",
+      "texto": "O Igor entra no portal?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, para ver o painel da semana e os casos",
+        "Sim, para ver o painel e assinar termos e avisos pelo portal",
+        "Não: eu mostro o painel na conversa semanal"
+      ],
+      "alvo": [
+        "P-10.acesso_do_diretor"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 6,
+      "bloco": "Para levar ao portal",
+      "status": "em_formulario",
+      "formulario": "FO-04",
+      "respostas": [],
+      "chave": "igor_portal",
+      "contexto": [
+        "Você decidiu que toda semana revê o programa com o Igor, apoiado no painel, e que ele assina o termo e o aviso formal. Para levar isso ao portal, falta saber se ele acessa o portal ou se o painel só aparece na sua tela durante a conversa.",
+        "Customer Success pede métricas visíveis para quem decide, mas não exige que o diretor opere o sistema. A assinatura continua no Autentique em qualquer opção."
+      ],
+      "logica": "Isso define as permissões do portal: quem vê o quê. Com acesso só de leitura, o Igor pode olhar os números antes da conversa, sem mudar nada.",
+      "citacoes": [
+        "EV-0025",
+        "EV-0034",
+        "EV-0091"
+      ],
+      "visual": "igor_portal",
+      "recomendo": ""
     }
   ],
   "formularios": [
@@ -11635,7 +12857,7 @@
         "PE-01"
       ],
       "respostas_recebidas": 1,
-      "enviado_em": "2026-11-02",
+      "enviado_em": "2026-11-05",
       "prazo": "",
       "identificacao": false
     },
@@ -11703,8 +12925,42 @@
       ],
       "introducao": "Uma frase por item; sim ou corrigir.",
       "link": "https://claude.ai/artifact/ErCdBFw4dwso4pcz9RbUEw",
-      "status": "enviado",
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
       "enviado_em": "2026-11-02",
+      "prazo": "",
+      "identificacao": false
+    },
+    {
+      "id": "FO-04",
+      "titulo": "Rodada 6: a conversa com o Igor e a primeira entrega do portal",
+      "rodada": 6,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0045",
+        "Q-0046",
+        "Q-0047",
+        "Q-0048",
+        "Q-0049",
+        "Q-0050",
+        "Q-0051",
+        "Q-0052",
+        "Q-0053",
+        "Q-0054",
+        "Q-0055",
+        "Q-0056",
+        "Q-0057"
+      ],
+      "introducao": "Último formulário antes de levar o to-be ao portal.",
+      "link": "https://claude.ai/artifact/ErCdBFw4dwso4pcz9RbUEw",
+      "status": "enviado",
+      "enviado_em": "2026-11-05",
       "prazo": "",
       "identificacao": false
     }
@@ -11917,7 +13173,7 @@
   "decisoes": [
     {
       "id": "DE-01",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "A especificação e o web app prevalecem sobre o Playbook v3.1, que está desatualizado.",
       "por": "PE-01",
       "provisoria": false,
@@ -11928,7 +13184,7 @@
     },
     {
       "id": "DE-02",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O to-be é refeito do zero a partir dos modelos conceituais dos livros, com mais processos e mais detalhe, mesmo que mude 100% do desenho anterior.",
       "por": "PE-01",
       "provisoria": false,
@@ -11938,7 +13194,7 @@
     },
     {
       "id": "DE-03",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Os três pilares existem desde o primeiro parceiro, mas a entrega a cada um segue a escada de pacotes do Playbook v3.1: o que o parceiro recebe acompanha o que ele consegue devolver, e abrir mais é orgânico.",
       "por": "PE-01",
       "provisoria": false,
@@ -11950,7 +13206,7 @@
     },
     {
       "id": "DE-04",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Metas e horas não são fixadas agora: o desenho guarda só a capacidade de definir metas e de gerir o tempo dedicado ao programa.",
       "por": "PE-01",
       "provisoria": false,
@@ -11961,7 +13217,7 @@
     },
     {
       "id": "DE-05",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "A comunicação com os parceiros fica na comunidade Wise Partners no WhatsApp; o portal não vira canal de conversa.",
       "por": "PE-01",
       "provisoria": false,
@@ -11971,7 +13227,7 @@
     },
     {
       "id": "DE-06",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Todas as tarefas do portal têm o Gerente de Parcerias como dono, mesmo quando outra pessoa executa; consultores e comercial não entram no portal.",
       "por": "PE-01",
       "provisoria": false,
@@ -11981,7 +13237,7 @@
     },
     {
       "id": "DE-07",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O programa é um canal de aquisição de receita mais barato que os canais ativos; a comissão só barateia ainda mais o CAC e nada deve complicar o programa a ponto de reduzir a adesão.",
       "por": "PE-01",
       "provisoria": false,
@@ -11991,7 +13247,7 @@
     },
     {
       "id": "DE-08",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "A comissão é regra única, sem exceção por parceiro.",
       "por": "PE-01",
       "provisoria": false,
@@ -12001,7 +13257,7 @@
     },
     {
       "id": "DE-09",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O lead vai direto ao closer da empresa do grupo; o Gerente conversa com o closer quando há indicação ou proposta nova, sem SLA interno, e combina com cada closer um aviso curto por WhatsApp a cada mudança de etapa.",
       "por": "PE-01",
       "provisoria": false,
@@ -12013,7 +13269,7 @@
     },
     {
       "id": "DE-10",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Toda semana, o Gerente conversa com o Igor sobre os parceiros, apoiado num painel simples e estratégico que permite discutir caso a caso.",
       "por": "PE-01",
       "provisoria": false,
@@ -12023,7 +13279,7 @@
     },
     {
       "id": "DE-11",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O CAC acompanhado é só o do Wise Partners; ninguém informa o CAC de outros canais no portal.",
       "por": "PE-01",
       "provisoria": false,
@@ -12033,7 +13289,7 @@
     },
     {
       "id": "DE-12",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O CAC do Wise Partners e o valor devolvido ao parceiro ficam lado a lado no painel, com o mesmo peso, em todas as fases.",
       "por": "PE-01",
       "provisoria": false,
@@ -12043,7 +13299,7 @@
     },
     {
       "id": "DE-13",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "A comissão em dinheiro é igual para todos; o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio); a regra é revista depois de dois trimestres com dados de permanência.",
       "por": "PE-01",
       "provisoria": false,
@@ -12053,7 +13309,7 @@
     },
     {
       "id": "DE-14",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O Gerente continua dono de todas as tarefas, sem teto; as horas dedicadas aparecem no painel da semana.",
       "por": "PE-01",
       "provisoria": false,
@@ -12064,7 +13320,7 @@
     },
     {
       "id": "DE-15",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O nível de entrada segue a especificação: faixa de clientes no ICP.",
       "por": "PE-01",
       "provisoria": false,
@@ -12074,7 +13330,7 @@
     },
     {
       "id": "DE-16",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O equilíbrio entre dar e receber é medido só por dentro, para o cubo; o parceiro nunca vê placar, e na comunidade aparece o dar.",
       "por": "PE-01",
       "provisoria": false,
@@ -12084,7 +13340,7 @@
     },
     {
       "id": "DE-17",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O Gerente decide o desligamento e o Igor assina o aviso formal.",
       "por": "PE-01",
       "provisoria": false,
@@ -12094,7 +13350,7 @@
     },
     {
       "id": "DE-18",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "As decisões do patrocinador não pesam mais que os livros: onde divergem, a divergência é registrada e conciliada.",
       "por": "PE-01",
       "provisoria": false,
@@ -12104,7 +13360,7 @@
     },
     {
       "id": "DE-19",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "O Diretor só assina o termo; o Gerente de Parcerias negocia com autonomia.",
       "por": "PE-01",
       "provisoria": false,
@@ -12114,7 +13370,7 @@
     },
     {
       "id": "DE-20",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "A Prateleira pede ao fornecedor só contrapartida não financeira (ação conjunta ou condição comercial para a indústria).",
       "por": "PE-01",
       "provisoria": false,
@@ -12124,7 +13380,7 @@
     },
     {
       "id": "DE-21",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Passo a passo detalhado só para os processos que viram quadro, fila ou ritual; os demais ficam no nível de dono, gatilho e entregas.",
       "por": "PE-01",
       "provisoria": false,
@@ -12134,7 +13390,7 @@
     },
     {
       "id": "DE-22",
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "texto": "Os subprocessos de cálculo do cubo (Valor, Ritmo, Relação e leitura do tipo) rodam no portal, sem outro papel além do dono.",
       "por": "PE-01",
       "provisoria": false,
@@ -12334,20 +13590,24 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "evento": "Mapeamento iniciado"
     },
     {
-      "data": "2026-11-02",
-      "evento": "Rodada 3 respondida pelo patrocinador (13 perguntas); respostas ligadas como evidência no to-be v5"
+      "data": "2026-11-05",
+      "evento": "Rodada 3 respondida pelo patrocinador (13 perguntas); respostas ligadas como evidência no to-be v6"
     },
     {
-      "data": "2026-11-02",
+      "data": "2026-11-05",
       "evento": "Rodada 4 respondida: sete divergências entre livros e decisões resolvidas; painel da semana, voz do Igor, formações da Tríade e práticas de Never Eat Alone confirmados"
     },
     {
-      "data": "2026-11-02",
-      "evento": "To-be v5: Rodada 4 aplicada e passo a passo dos processos novos; Rodada 5 de validação final enviada (19 itens)"
+      "data": "2026-11-05",
+      "evento": "Rodada 5 respondida: 19 itens validados pelo dono; to-be inteiro confirmado"
+    },
+    {
+      "data": "2026-11-05",
+      "evento": "To-be v6: conversa com o Igor de 04/11 registrada como hipóteses (diagnóstico como entrega padrão, foco em software de gestão, ativação de 90 dias); Rodada 6 enviada"
     }
   ]
 }

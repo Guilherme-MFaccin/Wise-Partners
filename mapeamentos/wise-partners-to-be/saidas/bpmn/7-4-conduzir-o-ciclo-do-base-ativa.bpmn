@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-44" name="7.4 Conduzir o ciclo do Base Ativa" processRef="Process_P-44" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-44" name="7.4 Conduzir o ciclo do Base Ativa" isExecutable="false">
-    <bpmn:documentation>Fila por horas disponíveis, 12 semanas com 6 encontros e evento da comunidade do parceiro. No portal: controla a fila, a agenda dos encontros e o evento. [status do fluxo: Declarado; evidências: EV-0191, EV-0231, EV-0232, EV-0233, EV-0234, EV-0235, EV-0236, EV-0237, EV-0238]</bpmn:documentation>
+    <bpmn:documentation>Fila por horas disponíveis, 12 semanas com 6 encontros e evento da comunidade do parceiro. No portal: controla a fila, a agenda dos encontros e o evento. [status do fluxo: Confirmado; evidências: EV-0191, EV-0231, EV-0232, EV-0233, EV-0234, EV-0235, EV-0236, EV-0237, EV-0238, EV-0289]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-44">
       <bpmn:lane id="Lane_P-44_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-44_i1</bpmn:flowNodeRef>
@@ -24,19 +24,19 @@
         <bpmn:flowNodeRef>P-44_t8</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-44_i1" name="Parceiro de pacote A assinado"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:outgoing>P-44_F1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:exclusiveGateway id="P-44_g1" name="Há horas disponíveis?"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F1</bpmn:incoming><bpmn:outgoing>P-44_F2</bpmn:outgoing><bpmn:outgoing>P-44_F3</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:userTask id="P-44_t1" name="Colocar o parceiro na fila com a data prevista"><bpmn:documentation>sistema: Portal Wise Partners; status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F3</bpmn:incoming><bpmn:outgoing>P-44_F4</bpmn:outgoing></bpmn:userTask>
-    <bpmn:intermediateCatchEvent id="P-44_e1" name="Vez do parceiro na fila"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F4</bpmn:incoming><bpmn:outgoing>P-44_F5</bpmn:outgoing><bpmn:timerEventDefinition id="P-44_e1_def" /></bpmn:intermediateCatchEvent>
-    <bpmn:task id="P-44_t2" name="Diagnosticar a base do parceiro"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F2</bpmn:incoming><bpmn:incoming>P-44_F5</bpmn:incoming><bpmn:outgoing>P-44_F6</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-44_t3" name="Categorizar a carteira"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F6</bpmn:incoming><bpmn:outgoing>P-44_F7</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-44_t4" name="Definir estrutura e anúncio da comunidade"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F7</bpmn:incoming><bpmn:outgoing>P-44_F8</bpmn:outgoing></bpmn:task>
-    <bpmn:userTask id="P-44_t5" name="Definir oferta e nutrição"><bpmn:documentation>sistema: Wise Hub; status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F8</bpmn:incoming><bpmn:outgoing>P-44_F9</bpmn:outgoing></bpmn:userTask>
-    <bpmn:task id="P-44_t6" name="Planejar formação e evento"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F9</bpmn:incoming><bpmn:outgoing>P-44_F10</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-44_t7" name="Preparar roteiro, divulgação e logística do evento"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F10</bpmn:incoming><bpmn:outgoing>P-44_F11</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-44_t8" name="Promover o evento da comunidade"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F11</bpmn:incoming><bpmn:outgoing>P-44_F12</bpmn:outgoing></bpmn:task>
-    <bpmn:userTask id="P-44_t9" name="Emitir o certificado metodológico"><bpmn:documentation>sistema: Portal Wise Partners; status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F12</bpmn:incoming><bpmn:outgoing>P-44_F13</bpmn:outgoing></bpmn:userTask>
-    <bpmn:endEvent id="P-44_f1" name="Comunidade validada"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-44_F13</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="P-44_i1" name="Parceiro de pacote A assinado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-44_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:exclusiveGateway id="P-44_g1" name="Há horas disponíveis?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F1</bpmn:incoming><bpmn:outgoing>P-44_F2</bpmn:outgoing><bpmn:outgoing>P-44_F3</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:userTask id="P-44_t1" name="Colocar o parceiro na fila com a data prevista"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F3</bpmn:incoming><bpmn:outgoing>P-44_F4</bpmn:outgoing></bpmn:userTask>
+    <bpmn:intermediateCatchEvent id="P-44_e1" name="Vez do parceiro na fila"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F4</bpmn:incoming><bpmn:outgoing>P-44_F5</bpmn:outgoing><bpmn:timerEventDefinition id="P-44_e1_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:task id="P-44_t2" name="Diagnosticar a base do parceiro"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F2</bpmn:incoming><bpmn:incoming>P-44_F5</bpmn:incoming><bpmn:outgoing>P-44_F6</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-44_t3" name="Categorizar a carteira"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F6</bpmn:incoming><bpmn:outgoing>P-44_F7</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-44_t4" name="Definir estrutura e anúncio da comunidade"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F7</bpmn:incoming><bpmn:outgoing>P-44_F8</bpmn:outgoing></bpmn:task>
+    <bpmn:userTask id="P-44_t5" name="Definir oferta e nutrição"><bpmn:documentation>sistema: Wise Hub; status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F8</bpmn:incoming><bpmn:outgoing>P-44_F9</bpmn:outgoing></bpmn:userTask>
+    <bpmn:task id="P-44_t6" name="Planejar formação e evento"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F9</bpmn:incoming><bpmn:outgoing>P-44_F10</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-44_t7" name="Preparar roteiro, divulgação e logística do evento"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F10</bpmn:incoming><bpmn:outgoing>P-44_F11</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-44_t8" name="Promover o evento da comunidade"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F11</bpmn:incoming><bpmn:outgoing>P-44_F12</bpmn:outgoing></bpmn:task>
+    <bpmn:userTask id="P-44_t9" name="Emitir o certificado metodológico"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F12</bpmn:incoming><bpmn:outgoing>P-44_F13</bpmn:outgoing></bpmn:userTask>
+    <bpmn:endEvent id="P-44_f1" name="Comunidade validada"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-44_F13</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-44_F1" name="" sourceRef="P-44_i1" targetRef="P-44_g1" />
     <bpmn:sequenceFlow id="P-44_F2" name="Sim" sourceRef="P-44_g1" targetRef="P-44_t2" />
     <bpmn:sequenceFlow id="P-44_F3" name="Não" sourceRef="P-44_g1" targetRef="P-44_t1" />
@@ -56,19 +56,19 @@
       <bpmndi:BPMNShape id="Participant_P-44_di" bpmnElement="Participant_P-44" isHorizontal="true"><dc:Bounds x="0" y="0" width="2408" height="296" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-44_PA-01_di" bpmnElement="Lane_P-44_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="2378" height="148" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-44_PA-05_di" bpmnElement="Lane_P-44_PA-05" isHorizontal="true"><dc:Bounds x="30" y="148" width="2378" height="148" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_i1_di" bpmnElement="P-44_i1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_g1_di" bpmnElement="P-44_g1" isMarkerVisible="true" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="329" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="299" y="105" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t1_di" bpmnElement="P-44_t1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_e1_di" bpmnElement="P-44_e1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="688" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t2_di" bpmnElement="P-44_t2" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t3_di" bpmnElement="P-44_t3" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="994" y="186" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t4_di" bpmnElement="P-44_t4" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1170" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t5_di" bpmnElement="P-44_t5" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1346" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t6_di" bpmnElement="P-44_t6" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1522" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t7_di" bpmnElement="P-44_t7" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1698" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t8_di" bpmnElement="P-44_t8" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1874" y="186" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_t9_di" bpmnElement="P-44_t9" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="2050" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-44_f1_di" bpmnElement="P-44_f1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="2272" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="2235" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_i1_di" bpmnElement="P-44_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_g1_di" bpmnElement="P-44_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="329" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="299" y="105" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t1_di" bpmnElement="P-44_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_e1_di" bpmnElement="P-44_e1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="688" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t2_di" bpmnElement="P-44_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t3_di" bpmnElement="P-44_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="186" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t4_di" bpmnElement="P-44_t4" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1170" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t5_di" bpmnElement="P-44_t5" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1346" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t6_di" bpmnElement="P-44_t6" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1522" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t7_di" bpmnElement="P-44_t7" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1698" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t8_di" bpmnElement="P-44_t8" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1874" y="186" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_t9_di" bpmnElement="P-44_t9" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2050" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-44_f1_di" bpmnElement="P-44_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="2272" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="2235" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-44_F1_di" bpmnElement="P-44_F1"><di:waypoint x="196" y="74" /><di:waypoint x="329" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-44_F2_di" bpmnElement="P-44_F2"><di:waypoint x="354" y="49" /><di:waypoint x="354" y="24" /><di:waypoint x="882" y="24" /><di:waypoint x="882" y="38" /><bpmndi:BPMNLabel><dc:Bounds x="362" y="8" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-44_F3_di" bpmnElement="P-44_F3"><di:waypoint x="379" y="74" /><di:waypoint x="466" y="74" /><bpmndi:BPMNLabel><dc:Bounds x="385" y="54" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>

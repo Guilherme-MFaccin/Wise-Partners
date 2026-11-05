@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-12" name="2.4 Conduzir o fechamento trimestral" processRef="Process_P-12" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-12" name="2.4 Conduzir o fechamento trimestral" isExecutable="false">
-    <bpmn:documentation>Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões. [status do fluxo: Declarado; evidências: EV-0150, EV-0126]</bpmn:documentation>
+    <bpmn:documentation>Revisar níveis, pulso da relação, saúde do ecossistema e portões, e agendar as revisões conjuntas do trimestre. No portal: roda as apurações, mostra o resultado e agenda as revisões. [status do fluxo: Confirmado; evidências: EV-0150, EV-0126, EV-0288]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-12">
       <bpmn:lane id="Lane_P-12_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-12_i1</bpmn:flowNodeRef>
@@ -18,13 +18,13 @@
       <bpmn:lane id="Lane_P-12_PA-02" name="Diretor">
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-12_i1" name="Primeiro dia útil do trimestre"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:outgoing>P-12_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-12_i1_def" /></bpmn:startEvent>
-    <bpmn:subProcess id="P-12_s1" name="Revisar o nível dos parceiros"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-12_F1</bpmn:incoming><bpmn:outgoing>P-12_F2</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:startEvent id="P-12_i1" name="Primeiro dia útil do trimestre"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-12_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-12_i1_def" /></bpmn:startEvent>
+    <bpmn:subProcess id="P-12_s1" name="Revisar o nível dos parceiros"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-12_F1</bpmn:incoming><bpmn:outgoing>P-12_F2</bpmn:outgoing></bpmn:subProcess>
     <bpmn:subProcess id="P-12_s2" name="Ouvir o pulso da relação"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-12_F2</bpmn:incoming><bpmn:outgoing>P-12_F3</bpmn:outgoing></bpmn:subProcess>
     <bpmn:subProcess id="P-12_s3" name="Medir a saúde do ecossistema e os portões"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-12_F3</bpmn:incoming><bpmn:outgoing>P-12_F4</bpmn:outgoing></bpmn:subProcess>
-    <bpmn:userTask id="P-12_t1" name="Agendar as revisões conjuntas do trimestre"><bpmn:documentation>sistema: Portal Wise Partners; status: Declarado</bpmn:documentation><bpmn:incoming>P-12_F4</bpmn:incoming><bpmn:outgoing>P-12_F5</bpmn:outgoing></bpmn:userTask>
-    <bpmn:userTask id="P-12_t2" name="Enviar ao Diretor o resumo do trimestre"><bpmn:documentation>sistema: Portal Wise Partners; status: Declarado</bpmn:documentation><bpmn:incoming>P-12_F5</bpmn:incoming><bpmn:outgoing>P-12_F6</bpmn:outgoing></bpmn:userTask>
-    <bpmn:endEvent id="P-12_f1" name="Trimestre fechado"><bpmn:documentation>status: Declarado</bpmn:documentation><bpmn:incoming>P-12_F6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:userTask id="P-12_t1" name="Agendar as revisões conjuntas do trimestre"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-12_F4</bpmn:incoming><bpmn:outgoing>P-12_F5</bpmn:outgoing></bpmn:userTask>
+    <bpmn:userTask id="P-12_t2" name="Enviar ao Diretor o resumo do trimestre"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-12_F5</bpmn:incoming><bpmn:outgoing>P-12_F6</bpmn:outgoing></bpmn:userTask>
+    <bpmn:endEvent id="P-12_f1" name="Trimestre fechado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-12_F6</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-12_F1" name="" sourceRef="P-12_i1" targetRef="P-12_s1" />
     <bpmn:sequenceFlow id="P-12_F2" name="" sourceRef="P-12_s1" targetRef="P-12_s2" />
     <bpmn:sequenceFlow id="P-12_F3" name="" sourceRef="P-12_s2" targetRef="P-12_s3" />
@@ -37,13 +37,13 @@
       <bpmndi:BPMNShape id="Participant_P-12_di" bpmnElement="Participant_P-12" isHorizontal="true"><dc:Bounds x="0" y="0" width="1352" height="296" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-12_PA-01_di" bpmnElement="Lane_P-12_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1322" height="148" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-12_PA-02_di" bpmnElement="Lane_P-12_PA-02" isHorizontal="true"><dc:Bounds x="30" y="148" width="1322" height="148" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-12_i1_di" bpmnElement="P-12_i1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-12_s1_di" bpmnElement="P-12_s1" isExpanded="false" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-12_i1_di" bpmnElement="P-12_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-12_s1_di" bpmnElement="P-12_s1" isExpanded="false" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-12_s2_di" bpmnElement="P-12_s2" isExpanded="false" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-12_s3_di" bpmnElement="P-12_s3" isExpanded="false" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-12_t1_di" bpmnElement="P-12_t1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-12_t2_di" bpmnElement="P-12_t2" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="994" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-12_f1_di" bpmnElement="P-12_f1" color:background-color="#FFF3C4" color:border-color="#B8860B"><dc:Bounds x="1216" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-12_t1_di" bpmnElement="P-12_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-12_t2_di" bpmnElement="P-12_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-12_f1_di" bpmnElement="P-12_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1216" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-12_F1_di" bpmnElement="P-12_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-12_F2_di" bpmnElement="P-12_F2"><di:waypoint x="418" y="74" /><di:waypoint x="466" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-12_F3_di" bpmnElement="P-12_F3"><di:waypoint x="594" y="74" /><di:waypoint x="642" y="74" /></bpmndi:BPMNEdge>
