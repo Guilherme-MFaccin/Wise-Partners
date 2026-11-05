@@ -1,0 +1,291 @@
+[
+ {
+  "id": "V2-numeros",
+  "bloco": "Números e prova",
+  "texto": "Quantos anos tem a Wise Makers e quantas empresas ela já atendeu?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "O Igor diz isso no bloco \"O que a Wise viu\". Só entra número que a Wise consiga mostrar se alguém perguntar."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Ex.: 8 anos, 120 empresas atendidas. De onde vem o número (contratos, CRM, estimativa)?"
+ },
+ {
+  "id": "V2-dep_tipos",
+  "bloco": "Números e prova",
+  "texto": "Que depoimentos você tem?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Cliente da Wise Makers com resultado",
+   "Empresa de software (CRM ou ERP) que já conversou ou já é parceira",
+   "Cliente de um parceiro que fez o diagnóstico",
+   "Outro (comente)"
+  ],
+  "contexto": [
+   "Depoimento de parceiro de software fala direto com quem assiste; o de cliente com resultado prova o método."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-dep1",
+  "bloco": "Números e prova",
+  "texto": "Depoimento 1: conte os detalhes.",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Com esses dados eu escrevo o trecho do roteiro e a legenda. Se for vídeo já gravado, diga a frase mais forte e a duração."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Nome, cargo e empresa\nQual era o problema antes\nO que mudou, com número e prazo\nFormato: vídeo, áudio, texto ou print\nAutoriza nome, rosto e logo? (sim ou não)"
+ },
+ {
+  "id": "V2-dep2",
+  "bloco": "Números e prova",
+  "texto": "Depoimento 2, se houver.",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Deixe em branco se só houver um."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Nome, cargo e empresa\nO que mudou, com número e prazo\nFormato\nAutoriza nome, rosto e logo?"
+ },
+ {
+  "id": "V2-dep_onde",
+  "bloco": "Números e prova",
+  "texto": "Onde os depoimentos entram?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Dentro do vídeo, no bloco da prova, e também na página",
+   "Só na página, logo abaixo do vídeo",
+   "Só dentro do vídeo"
+  ],
+  "contexto": [
+   "Um trecho de 10 a 15 segundos dentro do vídeo dá prova na hora; na página, abaixo do vídeo, sustenta quem rola a tela."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-caso",
+  "bloco": "Números e prova",
+  "texto": "Qual caso o Igor conta em uma frase no bloco da prova?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Pode ser o mesmo de um depoimento. A frase segue o modelo: cliente, como estava, o que mudou e em quanto tempo."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Ex.: uma indústria de embalagens que saiu de 60% para 95% da meta em 6 meses depois de montar funil e rotina com a Wise."
+ },
+ {
+  "id": "V2-diagnostico",
+  "bloco": "O que é a consultoria incluída",
+  "texto": "O diagnóstico está descrito certo: 40 a 60 minutos, conduzido pelo Guilherme, olhando meta, funil, time e rotina comercial?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Está certo",
+   "Ajustar (comente)"
+  ],
+  "contexto": [
+   "É o passo 1 do vídeo. Se algo mudou (duração, quem conduz, o que é avaliado), comente."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-mapa",
+  "bloco": "O que é a consultoria incluída",
+  "texto": "O que o cliente recebe no mapa de planejamento?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "No vídeo, o Igor diz \"o que fazer e em que ordem para vender mais\". Preciso saber o que o documento traz de fato, para a página e para a tela do vídeo."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Ex.: nota de maturidade por área, as 5 prioridades, um plano de 90 dias, metas sugeridas. Formato: PDF, planilha, apresentação?"
+ },
+ {
+  "id": "V2-hub",
+  "bloco": "O que é a consultoria incluída",
+  "texto": "O que existe hoje dentro do Wise Hub?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "É o passo 3 do vídeo e o motor do ciclo de valor. Números concretos (quantas aulas, quais ferramentas) tornam a promessa crível."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Quantas aulas ou trilhas, sobre quais temas\nFerramentas e modelos (planilhas, roteiros, playbooks)\nAulas ao vivo? Com que frequência?\nAcesso por quanto tempo?"
+ },
+ {
+  "id": "V2-imagens",
+  "bloco": "O que é a consultoria incluída",
+  "texto": "Que imagens reais existem para mostrar no vídeo?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Telas do Wise Hub",
+   "Exemplo de mapa de planejamento sem dados de cliente",
+   "Fotos ou vídeos de diagnóstico, aula ou evento",
+   "Nenhuma ainda: precisa produzir"
+  ],
+  "contexto": [
+   "Os três passos ganham força com imagem real. Mapa só sem dados de cliente, ou com autorização."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-formato",
+  "bloco": "Decisões que estavam no documento",
+  "texto": "Como a consultoria chega à base inteira do parceiro, com um diagnóstico individual por dia?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Autodiagnóstico online com mapa na hora e acesso ao Hub; reunião individual para quem está no perfil e pede",
+   "Diagnóstico em turma, até 10 empresas por encontro, no lançamento de cada parceiro",
+   "Os dois: turma no lançamento e autodiagnóstico depois",
+   "Ondas por parceiro, um de cada vez"
+  ],
+  "contexto": [
+   "Um parceiro com 200 clientes, 30% no perfil, gera uns 60 diagnósticos: três meses da sua agenda só para ele. Por isso o formato decide se a frase \"vale para a sua base de hoje\" se sustenta.",
+   "O autodiagnóstico online pode nascer do roteiro da sua pesquisa, que já tem as perguntas."
+  ],
+  "logica": "Minha recomendação: os dois, turma no lançamento e autodiagnóstico depois.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-beneficio_video",
+  "bloco": "Decisões que estavam no documento",
+  "texto": "Qual benefício entra no vídeo, no bloco \"O que muda para você\"?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Selo Wise Makers para o site e a proposta",
+   "Relatório trimestral da maturidade comercial da sua base, sem identificar clientes",
+   "Treinamento de gestão comercial para o seu time",
+   "Outro (comente)"
+  ],
+  "contexto": [
+   "Uma frase só, depois de \"o seu cliente usa mais e renova\" e \"um argumento que o concorrente não tem\"."
+  ],
+  "logica": "Minha recomendação: o treinamento do time, porque fala ao dono do software como benefício para ele e já está aprovado.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-beneficios_pagina",
+  "bloco": "Decisões que estavam no documento",
+  "texto": "Quais benefícios entram na página? Marque os que a Wise consegue cumprir desde o primeiro parceiro.",
+  "tipo": "multipla",
+  "opcoes": [
+   "Selo Wise Makers para o site e a proposta",
+   "Material de venda assinado pelos dois",
+   "Caso publicado em conjunto",
+   "Relatório trimestral da base",
+   "Aviso de cliente em risco, com autorização do cliente",
+   "Trilha no Wise Hub sobre o uso do sistema na gestão comercial",
+   "Aula ao vivo trimestral para a base do parceiro",
+   "Treinamento do time comercial do parceiro",
+   "Diagnóstico do comercial do próprio parceiro",
+   "Acesso do time do parceiro ao Wise Hub",
+   "Clientes da Wise apresentados à solução do parceiro",
+   "Apresentações a outros parceiros",
+   "Encontros pequenos e presenciais",
+   "Destaque e palco nos eventos da Wise"
+  ],
+  "contexto": [
+   "São os do brainstorm. Marque só o que já dá para entregar; o resto pode entrar depois."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-selo",
+  "bloco": "Decisões que estavam no documento",
+  "texto": "Quem recebe o selo Wise Makers?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Todo SaaS que assina o termo",
+   "Só quem chega ao pacote B",
+   "Sem selo por enquanto"
+  ],
+  "contexto": [
+   "No Playbook v3.1, certificado e selo são do pacote B (Premium e Elite que divulgam a mentoria e o Hub para a própria base)."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-agenda",
+  "bloco": "Página e chamada",
+  "texto": "Como o lead marca a conversa de 45 minutos?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Agenda online (Google Agenda, Calendly ou similar)",
+   "Formulário curto e retorno por WhatsApp",
+   "Botão direto para o WhatsApp"
+  ],
+  "contexto": [
+   "O botão abaixo do vídeo precisa levar a um lugar só. Se já existe link, cole no comentário."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "V2-nomes",
+  "bloco": "Página e chamada",
+  "texto": "Como apresentar o Igor e o Guilherme no vídeo e na página?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Nome e cargo exatos para a legenda do Igor e para a frase da chamada, que cita o Guilherme."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Ex.: Igor Makoto, diretor e fundador da Wise Makers\nGuilherme Faccin, gerente de parcerias"
+ },
+ {
+  "id": "V2-evitar",
+  "bloco": "Página e chamada",
+  "texto": "Algo que o vídeo precisa dizer ou evitar?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Palavras, promessas ou comparações que a Wise não usa, ou um ponto que ficou de fora."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Opcional"
+ }
+]
