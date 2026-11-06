@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowUpRight, Check, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -96,6 +96,7 @@ export function Video({ url, formato = "auto" }: { url: string | null; formato?:
     );
   }
   const quadro = QUADRO[formato === "auto" ? (fonte.vertical ? "vertical" : "horizontal") : formato];
+  if (fonte.youtube) return <VideoYoutube id={fonte.youtube} quadro={quadro} />;
   if (fonte.tipo === "iframe") {
     return (
       <div className={`${quadro} overflow-hidden rounded-[14px] border border-white/10 bg-black`}>
@@ -105,6 +106,87 @@ export function Video({ url, formato = "auto" }: { url: string | null; formato?:
     );
   }
   return <video src={fonte.src} poster={CAPA_VIDEO} controls playsInline preload="metadata" className={`${quadro} block rounded-[14px] border border-white/10 bg-black object-contain`} />;
+}
+
+// ---------------------------------------------------------------------------
+// Player do YouTube sem nada além de assistir e pausar: capa própria com play, vídeo sem controles do YouTube,
+// clique pausa e a capa volta na pausa e no fim (cobre título, logo e sugestões do YouTube).
+// ---------------------------------------------------------------------------
+type PlayerYT = { playVideo(): void; pauseVideo(): void; seekTo(s: number, a: boolean): void; destroy(): void };
+type ApiYT = { Player: new (el: HTMLElement, o: Record<string, unknown>) => PlayerYT };
+let apiYT: Promise<ApiYT> | null = null;
+function carregarApiYT(): Promise<ApiYT> {
+  const w = window as unknown as { YT?: ApiYT & { Player?: unknown }; onYouTubeIframeAPIReady?: () => void };
+  if (w.YT?.Player) return Promise.resolve(w.YT as ApiYT);
+  if (!apiYT) {
+    apiYT = new Promise((ok) => {
+      const antes = w.onYouTubeIframeAPIReady;
+      w.onYouTubeIframeAPIReady = () => { antes?.(); ok(w.YT as ApiYT); };
+      const s = document.createElement("script");
+      s.src = "https://www.youtube.com/iframe_api";
+      s.async = true;
+      document.head.appendChild(s);
+    });
+  }
+  return apiYT;
+}
+
+function VideoYoutube({ id, quadro }: { id: string; quadro: string }) {
+  const caixa = useRef<HTMLDivElement>(null);
+  const estadoAtual = useRef("capa");
+  const player = useRef<PlayerYT | null>(null);
+  const [estado, setEstado] = useState<"capa" | "carregando" | "tocando" | "pausado">("capa");
+  const [livre, setLivre] = useState(false); // se o navegador não deixar começar sozinho, libera o toque no próprio player
+  const [capa, setCapa] = useState(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`);
+
+  useEffect(() => { estadoAtual.current = estado; }, [estado]);
+  useEffect(() => () => player.current?.destroy(), []);
+
+  async function assistir() {
+    if (player.current) { player.current.playVideo(); return; }
+    setEstado("carregando");
+    const YT = await carregarApiYT();
+    if (!caixa.current) return;
+    // O YouTube troca este elemento por um iframe: ele é criado fora do React para não confundir a árvore
+    const el = document.createElement("div");
+    caixa.current.appendChild(el);
+    player.current = new YT.Player(el, {
+      host: "https://www.youtube-nocookie.com",
+      videoId: id,
+      width: "100%",
+      height: "100%",
+      playerVars: { autoplay: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0 },
+      events: {
+        onReady: (e: { target: PlayerYT }) => e.target.playVideo(),
+        onStateChange: (e: { data: number; target: PlayerYT }) => {
+          if (e.data === 1) { setEstado("tocando"); setLivre(false); }
+          if (e.data === 2) setEstado("pausado");
+          if (e.data === 0) { e.target.seekTo(0, false); e.target.pauseVideo(); setEstado("capa"); }
+        },
+      },
+    });
+    window.setTimeout(() => { if (estadoAtual.current === "carregando") setLivre(true); }, 2500);
+  }
+
+  const coberto = estado !== "tocando" && !livre;
+  return (
+    <div className={`${quadro} relative overflow-hidden rounded-[14px] border border-white/10 bg-black`}>
+      <div ref={caixa} className="absolute inset-0 [&_iframe]:h-full [&_iframe]:w-full" />
+      {estado === "tocando" && (
+        <button type="button" onClick={() => player.current?.pauseVideo()} aria-label="Pausar o vídeo" className="absolute inset-0 cursor-pointer" />
+      )}
+      {coberto && (
+        <button type="button" onClick={assistir} aria-label="Assistir ao vídeo" className="group absolute inset-0 cursor-pointer">
+          <img src={capa} alt="" onError={() => setCapa(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)} decoding="async"
+            className="absolute inset-0 h-full w-full object-cover" />
+          <span className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/20" aria-hidden />
+          <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-menta-500 text-primary-foreground shadow-lg transition-transform duration-150 ease-out group-hover:scale-105 motion-reduce:transition-none sm:h-20 sm:w-20" aria-hidden>
+            {estado === "carregando" ? <span className="h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent" /> : <Play className="ml-1 h-7 w-7 fill-current sm:h-8 sm:w-8" />}
+          </span>
+        </button>
+      )}
+    </div>
+  );
 }
 
 // Caso completo: a página de celular só aparece em tela pequena, a de computador nas demais

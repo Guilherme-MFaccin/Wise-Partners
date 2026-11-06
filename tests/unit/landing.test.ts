@@ -19,7 +19,7 @@ describe("landing", () => {
     expect(fonteVideo("https://youtu.be/abcdefgh123")?.src).toContain("youtube-nocookie.com/embed/abcdefgh123");
     expect(fonteVideo("https://www.youtube.com/watch?v=abcdefgh123")?.tipo).toBe("iframe");
     expect(fonteVideo("https://www.youtube.com/watch?v=abcdefgh123")?.vertical).toBe(false);
-    expect(fonteVideo("https://www.youtube.com/shorts/8ts8Mc5wjyI")).toMatchObject({ vertical: true, src: "https://www.youtube-nocookie.com/embed/8ts8Mc5wjyI?rel=0" });
+    expect(fonteVideo("https://www.youtube.com/shorts/8ts8Mc5wjyI")).toMatchObject({ vertical: true, youtube: "8ts8Mc5wjyI", src: "https://www.youtube-nocookie.com/embed/8ts8Mc5wjyI?rel=0" });
     expect(fonteVideo("https://vimeo.com/123456")?.src).toBe("https://player.vimeo.com/video/123456");
     expect(fonteVideo("https://cdn.exemplo.com/video.mp4")?.tipo).toBe("arquivo");
     expect(fonteVideo("javascript:alert(1)")).toBeNull();
