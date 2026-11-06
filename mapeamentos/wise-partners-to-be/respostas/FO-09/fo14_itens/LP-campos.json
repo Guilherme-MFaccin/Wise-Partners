@@ -1,0 +1,15 @@
+{
+  "em": "2026-11-05T23:31:50.844Z",
+  "obs": "Precisa ter um dropdown em tipo de software para acrescentar todos os tipos possíveis registráveis e mapeados pelo portal Wise Partners. ERP e CRM têm que estar no topo. Depois decidimos o que fazemos se o parceiro tem outro tipo de sistema, mas não vamos excluir.",
+  "valor": [
+    "Nome",
+    "E-mail",
+    "WhatsApp",
+    "Nome da empresa",
+    "CNPJ",
+    "Tipo de software (CRM, ERP, outro)",
+    "Quantos clientes ativos na base",
+    "Site da empresa",
+    "Cargo"
+  ]
+}

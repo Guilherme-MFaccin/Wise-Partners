@@ -17,6 +17,7 @@ import { ModelosContrato } from "@/components/config/ModelosContrato";
 import { SecaoMetas } from "@/components/config/Metas";
 import { Parametros } from "@/components/config/Parametros";
 import { Backup } from "@/components/config/Backup";
+import { SecaoLandingPage } from "@/components/config/LandingPage";
 
 // Ordem alfabética na navegação (NavegacaoSecoes). `admin`: aba só aparece para administradores (custos e remunerações)
 const ABAS: (Secao & { admin?: boolean })[] = [
@@ -40,6 +41,7 @@ const ABAS: (Secao & { admin?: boolean })[] = [
   { id: "etapas", rotulo: "Etapas e motivos de perda" },
   { id: "icp", rotulo: "Critérios do ICP" },
   { id: "cruzamento", rotulo: "Termo do cruzamento" },
+  { id: "landing", rotulo: "Landing page dos parceiros" },
   { id: "modelos", rotulo: "Modelos de contrato" },
   { id: "parametros", rotulo: "Parâmetros" },
   { id: "feriados", rotulo: "Feriados" },
@@ -78,6 +80,7 @@ export default function Configuracoes() {
     etapas: <SecaoEtapas somenteLeitura={leitura} />,
     icp: <SecaoIcp somenteLeitura={leitura} />,
     cruzamento: <SecaoCruzamento somenteLeitura={leitura} />,
+    landing: <SecaoLandingPage somenteLeitura={leitura} />,
     modelos: <ModelosContrato somenteLeitura={leitura} />,
     parametros: <Parametros somenteLeitura={leitura} excluir={CHAVES_AGRUPADAS} />,
     feriados: <SecaoFeriados somenteLeitura={leitura} />,

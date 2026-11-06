@@ -32,6 +32,9 @@ verify_jwt = false
 [functions.indicacao-publica]
 verify_jwt = false
 
+[functions.cadastro-parceiro]
+verify_jwt = false
+
 [functions.cruzamento-carteiras]
 verify_jwt = true
 

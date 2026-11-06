@@ -1,0 +1,10 @@
+{
+  "em": "2026-11-06T13:46:10.622Z",
+  "obs": "Por enquanto nada vamos fazer um gerenciador da página / admin da página, que quem tenha o administrador no portal do wise partners terá acesso. No administrado de landing page, o administrado poderá gerenciar este tipo de coisa. Isso se replicará quando formos fazer todo o portal wise partners no lovable.",
+  "valor": [
+    "Pixel do Meta com o evento de cadastro",
+    "API de Conversões do Meta (servidor)",
+    "Google Analytics 4",
+    "Parâmetros UTM gravados junto com o cadastro, para saber qual dos 5 vídeos trouxe cada parceiro"
+  ]
+}
