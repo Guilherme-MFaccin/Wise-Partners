@@ -2,11 +2,12 @@ import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } 
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
-  ArrowDown, ArrowUpRight, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
+  ArrowDown, ArrowUpRight, Check, CheckCircle2, Loader2, Play, RefreshCcw, ShieldCheck, Timer, X, Zap,
 } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -26,7 +27,7 @@ const CLIENTE_RECEBE = [
   { titulo: "Diagnóstico de maturidade comercial", texto: "Cinco frentes do comercial: posicionamento, aquisição de clientes, conversão, retenção e governança do time." },
   { titulo: "Mapa de planejamento", texto: "Onde ele está, o que priorizar e um plano de 30, 60 e 90 dias, com indicadores pra acompanhar." },
   { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, treinamentos curtos, diagnósticos, calculadoras, planilhas e checklists." },
-  { titulo: "Reunião individual com a equipe da Wise", texto: "Para empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial." },
+  { titulo: "Reunião individual com a equipe da Wise", texto: "Para empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial." },
 ];
 
 // O que o parceiro recebe ao entrar
@@ -78,7 +79,7 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "A Wise concorre com o meu time de implantação ou de sucesso do cliente?", r: "Não. A Wise trata o processo comercial do cliente: meta, funil, rotina e time. Implantação, suporte e uso do seu sistema continuam com você. Na prática, o cliente chega mais preparado pra usar o seu software." },
   { p: "Vai dar trabalho pro meu time?", r: "O cadastro leva uns 2 minutos. Depois, o trabalho é mandar o seu link: a página de convite, a mensagem pronta e o treinamento ficam no portal." },
   { p: "Quais dados dos meus clientes a Wise vê?", r: "Só o que o próprio cliente informa no diagnóstico. A Wise nunca recebe a sua lista de clientes, e o resultado individual só é compartilhado com você se o cliente autorizar." },
-  { p: "Meu cliente não é indústria. Serve pra ele?", r: "Serve. O autodiagnóstico do Wise Hub é aberto a qualquer empresa com time comercial. A reunião individual com a equipe da Wise é para empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial." },
+  { p: "Meu cliente não é indústria. Serve pra ele?", r: "Serve. O autodiagnóstico do Wise Hub é aberto a qualquer empresa com time comercial. A reunião individual com a equipe da Wise é para empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial." },
   { p: "Como e quando recebo a comissão?", r: "Você recebe 40% da primeira mensalidade da consultoria, depois que o primeiro pagamento do cliente compensar. O pagamento vai pro CNPJ da sua empresa, com nota fiscal. Vale uma vez por cliente novo; o Wise Hub não gera comissão." },
   { p: "Tem exclusividade ou meta de indicação?", r: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
   { p: "Posso sair quando quiser?", r: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
@@ -106,6 +107,43 @@ const CASOS = {
     celular: "https://triade-emails.vercel.app/uploads/02-caso-fusion-aluminios-mobile-260821-1124",
   },
 };
+
+// Wise Hub: o que cada entrega custaria contratada à parte (valores da página do Wise Hub)
+const HUB_VALOR = [
+  { titulo: "Imersão Wise Makers, +20h", texto: "Quatro módulos: atrair clientes, recrutar vendedores, vender mais pra base e planejamento comercial.", valor: "R$ 3.000" },
+  { titulo: "Diagnóstico de maturidade comercial", texto: "O nível real da operação, com pontos fortes e riscos.", valor: "R$ 1.400" },
+  { titulo: "Plano comercial de 30, 60 e 90 dias", texto: "20 perguntas viram um PDF com gargalos priorizados, ações e responsáveis.", valor: "R$ 3.300" },
+  { titulo: "Calculadoras, planilhas e checklists", texto: "Receita esquecida na base, meta necessária, custo de improdutividade.", valor: "R$ 2.300" },
+  { titulo: "Reunião individual com a equipe da Wise", texto: "Para empresas a partir de R$ 250 mil por mês e duas pessoas no comercial.", valor: "R$ 5.000" },
+];
+
+// Depoimentos em vídeo (os mesmos da plataformawise.com) e os números de cada caso
+type Depoimento = {
+  video: string; capa: string; empresa: string; segmento: string; numero: string; legenda: string; texto: string;
+  detalhe?: string; caso?: { desktop: string; celular: string; nome: string };
+};
+const DEPOIMENTOS: Depoimento[] = [
+  {
+    video: "8trnyTsn6RY", capa: "/landing/depoimento-protectpool.webp", empresa: "Grupo Protectpool",
+    segmento: "Indústria líder em proteção para piscinas, com mais de 200 parceiros e franqueados",
+    numero: "+54,83%", legenda: "de faturamento em julho, mês recorde",
+    texto: "Já estava no topo do setor. Estruturou o CRM e o processo comercial da rede e bateu o recorde de faturamento seis meses antes do planejado.",
+    detalhe: "Antes do recorde: +35,56% em maio e +26,65% em junho.",
+    caso: { ...CASOS.protectpool, nome: "do Grupo Protectpool" },
+  },
+  {
+    video: "rw0lCWnnQ9Q", capa: "/landing/depoimento-fusion.webp", empresa: "Fusion Alumínios",
+    segmento: "Indústria do ramo moveleiro, 18 anos de mercado",
+    numero: "+30%", legenda: "de faturamento em 8 meses",
+    texto: "Análise dos dados comerciais, treinamento do time e ajuste do processo, com a operação rodando com uma equipe mais enxuta.",
+    caso: { ...CASOS.fusion, nome: "da Fusion Alumínios" },
+  },
+  {
+    video: "4DtnNtCxlac", capa: "/landing/depoimento-cristal.webp", empresa: "Cristal Móveis",
+    segmento: "Loja de móveis", numero: "2x", legenda: "o faturamento",
+    texto: "Dobrou o faturamento depois de estruturar o comercial com a Wise Makers. No vídeo, ela conta como foi.",
+  },
+];
 
 const VAZIO = {
   nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "", senha: "",
@@ -150,10 +188,37 @@ function LinkCaso({ caso, nome }: { caso: { desktop: string; celular: string }; 
   const classe = "items-center gap-1 font-semibold text-menta-300 underline-offset-4 hover:underline";
   const texto = <>Ver o caso completo <ArrowUpRight className="h-4 w-4" aria-hidden /><span className="sr-only"> {nome} (abre em outra aba)</span></>;
   return (
-    <p className="mt-6">
+    <p className="mt-4 text-sm sm:mt-5">
       <a href={caso.desktop} target="_blank" rel="noopener noreferrer" className={`hidden sm:inline-flex ${classe}`}>{texto}</a>
       <a href={caso.celular} target="_blank" rel="noopener noreferrer" className={`inline-flex sm:hidden ${classe}`}>{texto}</a>
     </p>
+  );
+}
+
+// Depoimento: a capa é local; o vídeo do YouTube só carrega quando a pessoa clica
+function CartaoDepoimento({ d, aoAssistir }: { d: Depoimento; aoAssistir: () => void }) {
+  return (
+    <article className="grid grid-cols-[112px_1fr] gap-4 rounded-[14px] border border-white/10 bg-card p-4 sm:flex sm:flex-col sm:p-5">
+      <button type="button" onClick={aoAssistir} aria-label={`Assistir ao depoimento ${d.caso?.nome ?? "da " + d.empresa}`}
+        className="group relative block self-start overflow-hidden rounded-[10px] border border-white/10 bg-black">
+        <img src={d.capa} alt="" width={360} height={640} loading="lazy" decoding="async"
+          className="aspect-[3/4] h-auto w-full object-cover object-[50%_25%] transition-transform duration-300 ease-out group-hover:scale-[1.03] motion-reduce:transition-none sm:aspect-[4/3]" />
+        <span className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" aria-hidden />
+        <span className="absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-lg sm:h-14 sm:w-14" aria-hidden>
+          <Play className="ml-0.5 h-5 w-5 fill-current sm:h-6 sm:w-6" />
+        </span>
+        <span className="absolute bottom-2 left-2 hidden text-xs font-semibold text-white sm:block" aria-hidden>Assistir ao depoimento</span>
+      </button>
+      <div className="min-w-0 sm:mt-5 sm:flex sm:flex-1 sm:flex-col">
+        <h3 className="font-semibold">{d.empresa}</h3>
+        <p className="mt-0.5 text-xs text-neutro-300">{d.segmento}</p>
+        <p className="mt-3 text-[28px] font-bold leading-none tabular-nums text-menta-400 sm:mt-4 sm:text-[36px]">{d.numero}</p>
+        <p className="mt-1 text-sm text-neutro-300">{d.legenda}</p>
+        <p className="mt-3 text-sm text-neutro-100">{d.texto}</p>
+        {d.detalhe && <p className="mt-2 text-sm text-neutro-300">{d.detalhe}</p>}
+        {d.caso && <div className="sm:mt-auto"><LinkCaso caso={d.caso} nome={d.caso.nome} /></div>}
+      </div>
+    </article>
   );
 }
 
@@ -232,6 +297,7 @@ export default function LandingParceiros() {
   const ctaTopo = useRef<HTMLButtonElement>(null);
   const fimRef = useRef<HTMLElement>(null);
   const [fixoVisivel, setFixoVisivel] = useState(false);
+  const [videoAberto, setVideoAberto] = useState<Depoimento | null>(null);
   const set = (k: keyof typeof VAZIO, v: string | boolean) => setF((x) => ({ ...x, [k]: v }));
 
   useEffect(() => {
@@ -469,51 +535,70 @@ export default function LandingParceiros() {
             ))}
           </div>
           <p className="mt-4 text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo. O diagnóstico online é aberto a qualquer cliente seu.</p>
-          <figure className="mt-10 grid items-center gap-6 lg:grid-cols-[1fr_1.6fr] lg:gap-10">
-            <figcaption>
-              <h3 className="text-[22px] font-semibold leading-snug">O Wise Hub, por dentro</h3>
-              <p className="mt-3 text-neutro-100">É aqui que o seu cliente faz o diagnóstico, segue o Método Wise passo a passo e encontra os treinamentos, o planejador comercial e as ferramentas.</p>
-            </figcaption>
-            <img src="/landing/wise-hub.webp" width={1200} height={519} loading="lazy" decoding="async"
-              alt="Tela inicial do Wise Hub com o painel de evolução, o vídeo de boas-vindas e a próxima etapa do Método Wise"
-              className="h-auto w-full rounded-[14px] border border-white/10" />
+        </Secao>
+
+        {/* 6b. Wise Hub: o valor do que o cliente recebe */}
+        <div className="border-y border-white/10 bg-neutro-800/40">
+          <Secao eyebrow="Wise Hub" titulo="O que o seu cliente recebe vale mais de R$ 15.000. Pra ele, sai de graça.">
+            <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
+              Não é área de curso. É onde o seu cliente diagnostica a operação, monta o plano e estrutura o comercial, com o método aplicado em mais de 300 empresas.
+            </p>
+            <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-10">
+              <div className="rounded-[14px] border border-white/10 bg-card">
+                <ul className="divide-y divide-white/10">
+                  {HUB_VALOR.map((h) => (
+                    <li key={h.titulo} className="flex items-start justify-between gap-4 px-5 py-4">
+                      <span><span className="block font-semibold">{h.titulo}</span><span className="text-sm text-neutro-300">{h.texto}</span></span>
+                      <span className="shrink-0 pt-0.5 text-sm tabular-nums text-neutro-300">{h.valor}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-end justify-between gap-4 rounded-b-[14px] border-t border-white/10 bg-white/[0.03] px-5 py-4">
+                  <span className="text-sm text-neutro-300">Valor contratado à parte<span className="block text-base tabular-nums line-through decoration-neutro-500">R$&nbsp;15.000</span></span>
+                  <span className="text-right text-sm text-neutro-300">Pro seu cliente<span className="block text-[28px] font-bold leading-none tabular-nums text-menta-400">R$&nbsp;0</span></span>
+                </div>
+              </div>
+              <div>
+                <img src="/landing/wise-hub.webp" width={1200} height={519} loading="lazy" decoding="async"
+                  alt="Tela inicial do Wise Hub com o painel de evolução, o vídeo de boas-vindas e a próxima etapa do Método Wise"
+                  className="h-auto w-full rounded-[14px] border border-white/10" />
+                <ul className="mt-5 grid gap-2 text-sm text-neutro-100 sm:grid-cols-2">
+                  {["Sem cartão e sem instalação", "No navegador ou no celular", "Plano de ação no mesmo dia", "Aulas com cases reais de indústrias"].map((t) => (
+                    <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t}</li>
+                  ))}
+                </ul>
+                <p className="mt-6 border-l-2 border-menta-500/60 pl-4 text-lg font-semibold leading-snug">
+                  Na próxima negociação, em vez de dar desconto, você entrega R$&nbsp;15.000 em método.
+                </p>
+              </div>
+            </div>
+          </Secao>
+        </div>
+
+        {/* 7. Prova */}
+        <Secao eyebrow="Depoimentos" titulo="Quem aplicou o método conta o resultado.">
+          <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">Empresários e gestores que estruturaram o comercial com a Wise Makers. É esse método que vai pro seu cliente.</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {DEPOIMENTOS.map((d) => <CartaoDepoimento key={d.video} d={d} aoAssistir={() => setVideoAberto(d)} />)}
+          </div>
+          <figure className="mt-6 rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">
+            <blockquote className="text-lg text-neutro-100 sm:text-[22px] sm:leading-snug">"Loucura é esperar resultados diferentes fazendo sempre as mesmas coisas."</blockquote>
+            <figcaption className="mt-2 text-sm text-neutro-300">João Vitor, sócio e gerente comercial do Grupo Protectpool</figcaption>
           </figure>
         </Secao>
 
-        {/* 7. Prova */}
-        <Secao eyebrow="Resultados da Wise Makers" titulo="O método que vai pro seu cliente já funciona em empresas líderes.">
-          <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-            <article className="rounded-[14px] border border-white/10 bg-card p-6">
-              <p className="text-sm font-semibold text-neutro-300">Grupo Protectpool · indústria líder em proteção para piscinas, com mais de 200 parceiros e franqueados</p>
-              <p className="mt-3 text-neutro-100">
-                Já estava no topo do setor. Com a Wise Makers, estruturou o CRM e o processo comercial da rede e bateu o recorde de faturamento seis meses antes do planejado.
-              </p>
-              <dl className="mt-5 grid grid-cols-3 gap-3">
-                {[["+35,56%", "maio"], ["+26,65%", "junho"], ["+54,83%", "julho, recorde"]].map(([n, m]) => (
-                  <div key={m}>
-                    <dt className="sr-only">Crescimento do faturamento em {m}</dt>
-                    <dd className="text-xl font-bold tabular-nums text-menta-400 sm:text-3xl">{n}</dd>
-                    <dd className="text-xs text-neutro-300">{m}</dd>
-                  </div>
-                ))}
-              </dl>
-              <figure className="mt-6">
-                <blockquote className="border-l-2 border-menta-500/60 pl-4 text-neutro-100">
-                  "Loucura é esperar resultados diferentes fazendo sempre as mesmas coisas."
-                </blockquote>
-                <figcaption className="mt-2 pl-4 text-sm text-neutro-300">João Vitor, sócio e gerente comercial do Grupo Protectpool</figcaption>
-              </figure>
-              <LinkCaso caso={CASOS.protectpool} nome="do Grupo Protectpool" />
-            </article>
-            <article className="rounded-[14px] border border-white/10 bg-card p-6">
-              <p className="text-sm font-semibold text-neutro-300">Fusion Alumínios · indústria do ramo moveleiro, 18 anos de mercado</p>
-              <p className="mt-5 text-[36px] font-bold tabular-nums text-menta-400">+30%</p>
-              <p className="text-sm text-neutro-300">de faturamento em 8 meses</p>
-              <p className="mt-4 text-neutro-100">Análise de dados comerciais, treinamento do time e ajuste do processo, com a operação rodando com uma equipe mais enxuta.</p>
-              <LinkCaso caso={CASOS.fusion} nome="da Fusion Alumínios" />
-            </article>
-          </div>
-        </Secao>
+        <Dialog open={!!videoAberto} onOpenChange={(v) => !v && setVideoAberto(null)}>
+          <DialogContent className="w-[min(400px,calc(100vw-2rem))] max-w-none gap-0 overflow-hidden rounded-[14px] border-white/10 bg-black p-0">
+            <div className="px-4 py-3 pr-12">
+              <DialogTitle className="text-sm font-semibold">Depoimento {videoAberto?.empresa}</DialogTitle>
+              <DialogDescription className="text-xs text-neutro-300">{videoAberto?.numero} {videoAberto?.legenda}</DialogDescription>
+            </div>
+            {videoAberto && (
+              <iframe src={`https://www.youtube-nocookie.com/embed/${videoAberto.video}?autoplay=1&rel=0&playsinline=1`} title={`Depoimento ${videoAberto.empresa}`}
+                className="aspect-[9/16] max-h-[78vh] w-full" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen />
+            )}
+          </DialogContent>
+        </Dialog>
 
         {/* 9. Comparação */}
         <div className="border-y border-white/10 bg-neutro-800/40">

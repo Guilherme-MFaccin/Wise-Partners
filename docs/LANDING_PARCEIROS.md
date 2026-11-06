@@ -27,6 +27,9 @@ Em `public/landing/`, tiradas do material enviado pelo usuário:
 
 Os casos da Protectpool e da Fusion têm o botão "Ver o caso completo": a página de celular abre em telas até 639 px, a de computador nas demais.
 
+* Seção "Wise Hub": quanto custaria cada entrega contratada à parte (R$ 15.000 no total, valores da página wisemakershub.com) e quanto custa pro cliente do parceiro (R$ 0).
+* Seção "Depoimentos": os três vídeos da plataformawise.com (Protectpool, Fusion e Cristal Móveis). As capas ficam em `public/landing/depoimento-*.webp`; o vídeo do YouTube (youtube-nocookie) só carrega quando a pessoa clica e abre numa janela.
+
 ## Diferença em relação ao pedido
 
 O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem SMTP próprio (Resend), e sem ele a Supabase só envia e-mail para a equipe do projeto. Por isso a pessoa cria a própria senha no formulário e entra direto no portal. Com o Resend configurado, a função também manda um e-mail de boas-vindas. O e-mail não é verificado: alguém poderia se cadastrar com o e-mail de outra pessoa. Com o Resend, dá para passar a exigir confirmação.
@@ -50,6 +53,8 @@ O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem
 
 - Vídeo final do Igor (a página mostra um espaço reservado até lá).
 - Vídeo: até ele entrar, a capa do Igor tem o ícone de play, mas não toca.
+- Cristal Móveis: o número "2x o faturamento" veio só do título do vídeo; confirmar e, se houver, trazer o caso completo.
+- Reunião individual: a página do Wise Hub diz "empresas com +3 vendedores"; esta página segue o FO-09 (a partir de R$ 250 mil por mês e duas pessoas no comercial).
 - Logos de clientes: confirmar se todas as 28 empresas autorizam o uso do logo em anúncio pago.
 - Revisão jurídica do termo de adesão e da política de privacidade (minutas na migração 23, editáveis no portal).
 - Autorização da Protectpool e da Fusion Alumínios para nome, números e a frase do João Vitor em anúncio pago.
