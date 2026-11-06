@@ -112,7 +112,17 @@ export function Video({ url, formato = "auto" }: { url: string | null; formato?:
 // Player do YouTube sem nada além de assistir e pausar: capa própria com play, vídeo sem controles do YouTube,
 // clique pausa e a capa volta na pausa e no fim (cobre título, logo e sugestões do YouTube).
 // ---------------------------------------------------------------------------
-type PlayerYT = { playVideo(): void; pauseVideo(): void; seekTo(s: number, a: boolean): void; destroy(): void };
+type PlayerYT = { playVideo(): void; pauseVideo(): void; seekTo(s: number, a: boolean): void; destroy(): void; unloadModule?(m: string): void };
+
+// Desliga as legendas do YouTube (automáticas ou não): o vídeo aparece sem nada por cima
+function semLegenda(p: PlayerYT) {
+  try {
+    p.unloadModule?.("captions");
+    p.unloadModule?.("cc");
+  } catch {
+    // player sem o módulo: nada a desligar
+  }
+}
 type ApiYT = { Player: new (el: HTMLElement, o: Record<string, unknown>) => PlayerYT };
 let apiYT: Promise<ApiYT> | null = null;
 function carregarApiYT(): Promise<ApiYT> {
@@ -155,11 +165,12 @@ function VideoYoutube({ id, quadro }: { id: string; quadro: string }) {
       videoId: id,
       width: "100%",
       height: "100%",
-      playerVars: { autoplay: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0 },
+      playerVars: { autoplay: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, disablekb: 1, fs: 0, cc_load_policy: 0 },
       events: {
-        onReady: (e: { target: PlayerYT }) => e.target.playVideo(),
+        onReady: (e: { target: PlayerYT }) => { semLegenda(e.target); e.target.playVideo(); },
+        onApiChange: (e: { target: PlayerYT }) => semLegenda(e.target),
         onStateChange: (e: { data: number; target: PlayerYT }) => {
-          if (e.data === 1) { setEstado("tocando"); setLivre(false); }
+          if (e.data === 1) { semLegenda(e.target); setEstado("tocando"); setLivre(false); }
           if (e.data === 2) setEstado("pausado");
           if (e.data === 0) { e.target.seekTo(0, false); e.target.pauseVideo(); setEstado("capa"); }
         },
