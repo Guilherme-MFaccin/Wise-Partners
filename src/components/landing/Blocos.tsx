@@ -88,6 +88,15 @@ export function Video({ url }: { url: string | null }) {
         className="h-auto w-full rounded-[14px] border border-white/10 bg-black" />
     );
   }
+  // YouTube Shorts: vídeo vertical, num quadro 9:16 de largura limitada
+  if (fonte.tipo === "iframe" && fonte.vertical) {
+    return (
+      <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-[14px] border border-white/10 bg-black">
+        <iframe src={fonte.src} title="Vídeo do Programa Wise Partners" className="h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+      </div>
+    );
+  }
   if (fonte.tipo === "iframe") {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-[14px] border border-white/10 bg-black">

@@ -148,10 +148,10 @@ export function mascaraTelefone(v: string) {
 }
 
 // Vídeo do YouTube, do Vimeo ou arquivo direto
-export function fonteVideo(url: string | null): { tipo: "iframe" | "arquivo"; src: string } | null {
+export function fonteVideo(url: string | null): { tipo: "iframe" | "arquivo"; src: string; vertical?: boolean } | null {
   if (!url) return null;
   const yt = url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{6,})/);
-  if (yt) return { tipo: "iframe", src: `https://www.youtube-nocookie.com/embed/${yt[1]}?rel=0` };
+  if (yt) return { tipo: "iframe", src: `https://www.youtube-nocookie.com/embed/${yt[1]}?rel=0`, vertical: /youtube\.com\/shorts\//.test(url) };
   const vm = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
   if (vm) return { tipo: "iframe", src: `https://player.vimeo.com/video/${vm[1]}` };
   if (/^https:\/\//.test(url)) return { tipo: "arquivo", src: url };
