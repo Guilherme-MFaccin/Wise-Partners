@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } 
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
-  ArrowDown, BadgePercent, CheckCircle2, ClipboardList, Gauge, Loader2, Map, PlayCircle, RefreshCcw, Repeat, ShieldCheck, Timer, Zap,
+  ArrowDown, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
 } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
@@ -21,26 +21,54 @@ import {
 
 const GARANTIAS = ["Sem custo para você e para o seu cliente", "Sem exclusividade", "Sem meta mínima de indicação", "Sai quando quiser"];
 
-const PASSOS_CLIENTE = [
-  { icone: Gauge, titulo: "Diagnóstico de maturidade comercial", texto: "Seu cliente passa por um diagnóstico que olha cinco frentes do comercial: posicionamento, aquisição de clientes, conversão, retenção e governança do time." },
-  { icone: Map, titulo: "Mapa de planejamento", texto: "Ele recebe onde está, o que priorizar e um plano de 30, 60 e 90 dias, com indicadores para acompanhar." },
-  { icone: PlayCircle, titulo: "Acesso ao Wise Hub", texto: "Mais de 20 horas de formação, diagnósticos e ferramentas de gestão comercial para colocar o plano em prática." },
+// O que o cliente do parceiro recebe (a consultoria incluída)
+const CLIENTE_RECEBE = [
+  { titulo: "Diagnóstico de maturidade comercial", texto: "Cinco frentes do comercial: posicionamento, aquisição de clientes, conversão, retenção e governança do time." },
+  { titulo: "Mapa de planejamento", texto: "Onde ele está, o que priorizar e um plano de 30, 60 e 90 dias, com indicadores pra acompanhar." },
+  { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, treinamentos curtos, diagnósticos, calculadoras, planilhas e checklists." },
+  { titulo: "Reunião individual com a equipe da Wise", texto: "Para empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial." },
 ];
 
-const RESULTADOS = [
-  { icone: BadgePercent, titulo: "Consultoria no lugar do desconto", texto: "Na negociação apertada, em vez de baixar o preço, você inclui consultoria. Protege ticket e margem." },
-  { icone: ClipboardList, titulo: "Raio-x da sua base", texto: "Os diagnósticos mostram a maturidade comercial dos seus clientes e onde eles travam. Por cliente, só com autorização dele." },
-  { icone: Repeat, titulo: "Mais uso, mais renovação", texto: "Com processo, o time inteiro do cliente trabalha dentro do sistema. Quem vê resultado no seu software tem motivo pra renovar." },
-  { icone: Timer, titulo: "Implantação mais rápida", texto: "O cliente chega à implantação com funil, metas e rotina definidos. Menos horas de implantação e menos chamados." },
-  { icone: Zap, titulo: "Venda mais rápida", texto: "Quando o cliente está entre você e um concorrente parecido, você tem um argumento concreto que o outro não tem." },
-  { icone: RefreshCcw, titulo: "Motivo pra falar com quem sumiu", texto: "Seu time de sucesso do cliente liga pra quem usa pouco oferecendo o diagnóstico gratuito, e não cobrando." },
+// O que o parceiro recebe ao entrar
+const PARCEIRO_RECEBE = [
+  { titulo: "Acesso ao portal Wise Partners na hora", texto: "Tudo do programa num lugar só, sem esperar contato." },
+  { titulo: "Seu link exclusivo", texto: "Cada cliente que entra por ele fica registrado como seu." },
+  { titulo: "Mensagem pronta e página de convite", texto: "É só mandar pros clientes de hoje e incluir na entrada dos novos." },
+  { titulo: "Treinamento curto", texto: "Como apresentar a consultoria incluída na venda e no sucesso do cliente." },
+  { titulo: "Acompanhamento no portal", texto: "Quem entrou pelo seu link e em que pé está." },
+  { titulo: "Comissão quando um cliente contrata a Wise", texto: "40% da primeira mensalidade da consultoria, pago ao CNPJ da sua empresa." },
 ];
 
+// Transformação: o caminho do parceiro em três passos
 const PASSOS_PARCEIRO = [
   { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos e o acesso ao portal sai na hora." },
-  { titulo: "Pegue o seu link", texto: "No portal ficam o seu link exclusivo, a mensagem pronta e um treinamento curto de como apresentar a consultoria." },
-  { titulo: "Ofereça à sua base", texto: "Mande pros clientes de hoje e inclua no processo de entrada de cada cliente novo." },
-  { titulo: "Acompanhe e receba", texto: "Se um cliente que veio pelo seu link contratar a consultoria da Wise Makers, você recebe 40% da primeira mensalidade." },
+  { titulo: "Pegue o seu link", texto: "No portal ficam o link exclusivo, a mensagem pronta e um treinamento curto." },
+  { titulo: "Ofereça à sua base", texto: "Pros clientes de hoje e pra cada cliente novo. O resto você acompanha pelo portal." },
+];
+
+// Benefícios em profundidade: cada um com um visual
+const BENEFICIOS = [
+  { titulo: "Consultoria no lugar do desconto", texto: "Na negociação apertada, em vez de baixar o preço, você inclui um diagnóstico comercial e o Wise Hub. O cliente leva mais, e você protege ticket e margem.", visual: "desconto" },
+  { titulo: "Um raio-x da sua base, sem custo", texto: "Os diagnósticos mostram a maturidade comercial dos seus clientes e onde eles travam. Você sabe quem precisa de atenção antes da renovação. Por cliente, só com autorização dele.", visual: "raiox" },
+  { titulo: "Mais uso, mais renovação", texto: "Com processo, o time inteiro do cliente passa a trabalhar dentro do sistema. Quem vê resultado no seu software tem motivo pra continuar com você.", visual: "renovacao" },
+] as const;
+
+// Camada pra quem só escaneia
+const MAIS = [
+  { icone: Timer, titulo: "Implantação mais rápida", texto: "O cliente chega com funil, metas e rotina definidos." },
+  { icone: Zap, titulo: "Venda mais rápida", texto: "Um argumento concreto quando o concorrente parece igual." },
+  { icone: RefreshCcw, titulo: "Motivo pra falar com quem sumiu", texto: "Seu time liga oferecendo o diagnóstico, e não cobrando." },
+];
+
+// Comparação: vender só o software contra vender com a consultoria incluída
+const COMPARACAO: [string, boolean, boolean][] = [
+  ["Argumento na negociação além do preço", false, true],
+  ["Diagnóstico de maturidade comercial pro cliente", false, true],
+  ["Plano de 30, 60 e 90 dias pro cliente", false, true],
+  ["Formação e ferramentas de gestão comercial (Wise Hub)", false, true],
+  ["Visão da maturidade comercial da sua base", false, true],
+  ["Motivo pro seu time falar com quem usa pouco", false, true],
+  ["Comissão quando o cliente contrata a Wise", false, true],
 ];
 
 const PERGUNTAS: { p: string; r: ReactNode }[] = [
@@ -96,6 +124,57 @@ function Campo({ id, rotulo, opcional, erro, children }: { id: string; rotulo: s
       {children}
       {erro && <p id={`${id}-erro`} className="text-xs text-destructive">{erro}</p>}
     </div>
+  );
+}
+
+// Visuais dos benefícios: desenhos de interface, sem números inventados
+function VisualBeneficio({ tipo }: { tipo: "desconto" | "raiox" | "renovacao" }) {
+  if (tipo === "desconto") {
+    return (
+      <div className="space-y-3 rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+        <p className="w-fit max-w-[85%] rounded-[14px] rounded-bl-[4px] bg-white/5 px-4 py-2.5 text-sm">Gostei do sistema, mas o outro tá mais barato. Consegue um desconto?</p>
+        <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-white/10 px-4 py-2.5 text-sm text-neutro-300 line-through decoration-neutro-500">Vou ver o que consigo fazer no preço.</div>
+        <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-menta-500/40 bg-menta-500/10 px-4 py-2.5 text-sm">
+          Melhor: o seu time ganha um diagnóstico comercial da Wise Makers, um plano de 90 dias e acesso ao Wise Hub. Sem custo.
+        </div>
+      </div>
+    );
+  }
+  if (tipo === "raiox") {
+    const frentes: [string, string][] = [
+      ["Posicionamento", "w-[72%]"], ["Aquisição de clientes", "w-[48%]"], ["Conversão", "w-[60%]"], ["Retenção", "w-[34%]"], ["Governança do time", "w-[40%]"],
+    ];
+    return (
+      <div className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+        <div className="flex items-baseline justify-between gap-3">
+          <p className="text-sm font-semibold">Maturidade comercial da sua base</p>
+          <p className="text-xs text-neutro-300">Exemplo ilustrativo</p>
+        </div>
+        <ul className="mt-4 space-y-3">
+          {frentes.map(([n, w]) => (
+            <li key={n} className="text-xs">
+              <span className="text-neutro-300">{n}</span>
+              <div className="mt-1 h-2 rounded-full bg-white/5"><div className={`h-2 rounded-full bg-neutro-300 ${w}`} /></div>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 rounded-[10px] bg-white/5 px-3 py-2 text-xs text-neutro-100">Onde a base mais trava: retenção e governança do time.</p>
+      </div>
+    );
+  }
+  const etapas = ["Cliente assina o seu sistema", "Faz o diagnóstico comercial", "Segue o plano de 30, 60 e 90 dias", "O time inteiro trabalha no sistema", "Renova com você"];
+  return (
+    <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+      {etapas.map((e, i) => (
+        <li key={e} className="relative flex items-center gap-3 pb-4 last:pb-0">
+          {i < etapas.length - 1 && <span className="absolute left-[11px] top-6 h-[calc(100%-12px)] w-px bg-white/10" />}
+          <span className={`relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[11px] font-bold ${i === etapas.length - 1 ? "border-menta-500 bg-menta-500 text-primary-foreground" : "border-white/20 text-neutro-300"}`}>
+            {i === etapas.length - 1 ? <Check className="h-3.5 w-3.5" /> : i + 1}
+          </span>
+          <span className={`text-sm ${i === etapas.length - 1 ? "font-semibold" : "text-neutro-100"}`}>{e}</span>
+        </li>
+      ))}
+    </ol>
   );
 }
 
@@ -261,60 +340,82 @@ export default function LandingParceiros() {
           </div>
         </section>
 
-        {/* O problema */}
+        {/* 2. Transformação: o caminho do parceiro em três passos */}
         <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="O problema" titulo="Seu software é bom. O do concorrente também parece.">
-            <div className="grid gap-4 md:grid-cols-3">
-              {[
-                ["O cliente compara pelo preço", "Com tanta opção parecida, a decisão vira desconto, e a margem vai junto."],
-                ["Ele usa só uma parte do sistema", "O time continua na planilha e no WhatsApp, porque falta processo, meta e rotina de gestão."],
-                ["E a renovação fica em risco", "Quem não vê resultado no sistema começa a procurar outro na renovação."],
-              ].map(([t, d]) => (
-                <div key={t} className="rounded-[14px] border border-white/10 bg-card p-5">
-                  <p className="font-semibold">{t}</p>
-                  <p className="mt-2 text-sm text-neutro-300">{d}</p>
-                </div>
+          <Secao eyebrow="Como funciona" titulo="Três passos, e o seu software passa a vir com consultoria.">
+            <ol className="grid gap-4 md:grid-cols-3">
+              {PASSOS_PARCEIRO.map((p, i) => (
+                <li key={p.titulo} className="relative rounded-[14px] border border-white/10 bg-card p-5">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-menta-500/40 text-sm font-bold tabular-nums text-menta-400">{i + 1}</span>
+                  <p className="mt-4 font-semibold">{p.titulo}</p>
+                  <p className="mt-2 text-sm text-neutro-300">{p.texto}</p>
+                </li>
               ))}
-            </div>
-            <p className="mt-6 max-w-[68ch] text-neutro-100">
-              Nenhum sistema entrega o que poderia sem processo comercial por trás. É exatamente isso que a Wise Makers faz há quatro anos.
-            </p>
+            </ol>
           </Secao>
         </div>
 
-        {/* A consultoria incluída */}
-        <Secao eyebrow="A solução" titulo="Consultoria comercial incluída, em três passos.">
-          <ol className="grid gap-4 md:grid-cols-3">
-            {PASSOS_CLIENTE.map((p, i) => (
-              <li key={p.titulo} className="rounded-[14px] border border-white/10 bg-card p-5">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-menta-500/40 text-sm font-bold tabular-nums text-menta-400">{i + 1}</span>
-                  <p.icone className="h-5 w-5 text-neutro-300" aria-hidden />
+        {/* 3. Benefícios em profundidade, alternando texto e visual */}
+        <Secao eyebrow="O que muda pro seu negócio" titulo="Você para de disputar preço e começa a entregar resultado.">
+          <div className="space-y-12 sm:space-y-16">
+            {BENEFICIOS.map((b, i) => (
+              <div key={b.titulo} className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
+                <div className={i % 2 === 1 ? "md:order-2" : ""}>
+                  <p className="text-sm font-bold tabular-nums text-neutro-300">0{i + 1}</p>
+                  <h3 className="mt-2 text-[22px] font-semibold leading-snug sm:text-[28px]">{b.titulo}</h3>
+                  <p className="mt-3 max-w-[56ch] text-neutro-100">{b.texto}</p>
                 </div>
-                <p className="mt-4 font-semibold">{p.titulo}</p>
-                <p className="mt-2 text-sm text-neutro-300">{p.texto}</p>
+                <div className={i % 2 === 1 ? "md:order-1" : ""}><VisualBeneficio tipo={b.visual} /></div>
+              </div>
+            ))}
+          </div>
+
+          {/* 4. Camada pra quem só escaneia */}
+          <ul className="mt-14 grid gap-4 border-t border-white/10 pt-10 sm:grid-cols-3">
+            {MAIS.map((m) => (
+              <li key={m.titulo} className="flex items-start gap-3">
+                <m.icone className="mt-0.5 h-5 w-5 shrink-0 text-neutro-300" aria-hidden />
+                <span><span className="block font-semibold">{m.titulo}</span><span className="text-sm text-neutro-300">{m.texto}</span></span>
               </li>
             ))}
-          </ol>
-          <p className="mt-6 max-w-[68ch] text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo que você fechar. O diagnóstico online é aberto a qualquer cliente seu; empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial também ganham uma reunião individual com a equipe da Wise.</p>
+          </ul>
         </Secao>
 
-        {/* Resultados para o SaaS */}
-        <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="O que muda pra você" titulo="O que a consultoria incluída faz pelo seu negócio.">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {RESULTADOS.map((r) => (
-                <div key={r.titulo} className="rounded-[14px] border border-white/10 bg-card p-5">
-                  <r.icone className="h-5 w-5 text-neutro-300" aria-hidden />
-                  <p className="mt-3 font-semibold">{r.titulo}</p>
-                  <p className="mt-2 text-sm text-neutro-300">{r.texto}</p>
-                </div>
-              ))}
+        {/* 5. Chamada do meio, com prova */}
+        <section className="border-y border-white/10 bg-card">
+          <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-lg font-semibold">Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers.</p>
+              <p className="mt-1 text-sm text-neutro-300">Agora esse método pode ir junto com o seu software, sem custo.</p>
             </div>
-          </Secao>
-        </div>
+            <div className="flex flex-col items-start gap-2 lg:items-end">
+              <Button size="lg" onClick={irParaCadastro} className="h-12 px-6 text-base">Quero ser parceiro</Button>
+              <p className="text-xs text-neutro-300">Sem custo · Sem exclusividade · Sai quando quiser</p>
+            </div>
+          </div>
+        </section>
 
-        {/* Prova */}
+        {/* 6. O que está incluído, dos dois lados */}
+        <Secao eyebrow="O que está incluído" titulo="Sem letra miúda: o que o seu cliente recebe e o que você recebe.">
+          <div className="grid gap-4 lg:grid-cols-2">
+            {[["Seu cliente recebe", CLIENTE_RECEBE], ["Você recebe", PARCEIRO_RECEBE]].map(([t, lista]) => (
+              <div key={t as string} className="rounded-[14px] border border-white/10 bg-card p-6">
+                <h3 className="text-lg font-semibold">{t as string}</h3>
+                <ul className="mt-4 space-y-4">
+                  {(lista as { titulo: string; texto: string }[]).map((x) => (
+                    <li key={x.titulo} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-menta-400" aria-hidden />
+                      <span><span className="block font-semibold">{x.titulo}</span><span className="text-sm text-neutro-300">{x.texto}</span></span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo. O diagnóstico online é aberto a qualquer cliente seu.</p>
+        </Secao>
+
+        {/* 7. Prova */}
         <Secao eyebrow="Resultados da Wise Makers" titulo="O método que vai pro seu cliente já funciona em empresas líderes.">
           <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
             <figure className="rounded-[14px] border border-white/10 bg-card p-6">
@@ -345,37 +446,72 @@ export default function LandingParceiros() {
           </div>
         </Secao>
 
-        {/* Como funciona para o parceiro */}
+        {/* 9. Comparação */}
         <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Como você participa" titulo="Do cadastro ao primeiro cliente, sem conversa e sem burocracia.">
-            <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {PASSOS_PARCEIRO.map((p, i) => (
-                <li key={p.titulo} className="rounded-[14px] border border-white/10 bg-card p-5">
-                  <span className="text-sm font-bold tabular-nums text-neutro-300">Passo {i + 1}</span>
-                  <p className="mt-2 font-semibold">{p.titulo}</p>
-                  <p className="mt-2 text-sm text-neutro-300">{p.texto}</p>
-                </li>
-              ))}
-            </ol>
+          <Secao eyebrow="Lado a lado" titulo="Vender só o software, ou vender com consultoria incluída.">
+            <div className="overflow-hidden rounded-[14px] border border-white/10 bg-card">
+              <table className="w-full text-left text-sm">
+                <caption className="sr-only">Comparação entre vender só o software e vender com a consultoria incluída do Wise Partners</caption>
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th scope="col" className="px-4 py-3 font-medium text-neutro-300 sm:px-5"><span className="sr-only">O que entra</span></th>
+                    <th scope="col" className="w-[4.5rem] px-1 py-3 text-center text-xs font-medium text-neutro-300 sm:w-40 sm:px-2 sm:text-sm">Só o software</th>
+                    <th scope="col" className="w-[5.5rem] px-1 py-3 text-center text-xs font-semibold sm:w-48 sm:px-2 sm:text-sm">Com o Wise Partners</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARACAO.map(([item, sem, com]) => (
+                    <tr key={item} className="border-b border-white/10 last:border-0">
+                      <th scope="row" className="px-4 py-3 font-normal sm:px-5">{item}</th>
+                      {[sem, com].map((v, k) => (
+                        <td key={k} className="px-2 py-3 text-center">
+                          {v ? <Check className="mx-auto h-5 w-5 text-menta-400" aria-label="Sim" /> : <X className="mx-auto h-5 w-5 text-neutro-500" aria-label="Não" />}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                  <tr>
+                    <th scope="row" className="px-4 py-3 font-normal sm:px-5">Custo a mais pra você</th>
+                    <td className="px-2 py-3 text-center text-neutro-300">Nenhum</td>
+                    <td className="px-2 py-3 text-center font-semibold">Nenhum</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </Secao>
         </div>
 
-        {/* Cadastro */}
-        <div ref={formRef} id="cadastro" className="scroll-mt-16">
-          <Secao eyebrow="Cadastro" titulo="Cadastre sua empresa e comece hoje.">
-            <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr]">
-              <div className="space-y-4 text-neutro-100">
-                <p>Assim que você termina, já entra no portal Wise Partners com o e-mail e a senha que escolheu aqui.</p>
-                <ul className="space-y-2 text-sm">
-                  {["Seu link exclusivo pra oferecer a consultoria", "Mensagem pronta pra mandar aos clientes", "Treinamento curto de como apresentar a Wise", "Acompanhamento de quem entrou pelo seu link"].map((t) => (
-                    <li key={t} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t}</li>
-                  ))}
-                </ul>
-                <ul className="space-y-2 border-t border-white/10 pt-4 text-sm text-neutro-300">
-                  {GARANTIAS.map((g) => <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0" aria-hidden />{g}</li>)}
-                </ul>
-              </div>
+        {/* 10. Perguntas frequentes */}
+        <div>
+          <Secao eyebrow="Perguntas frequentes" titulo="O que todo dono de software pergunta antes de entrar.">
+            <div className="divide-y divide-white/10 rounded-[14px] border border-white/10 bg-card">
+              {PERGUNTAS.map((q) => (
+                <details key={q.p} className="group px-5 py-4 [&_summary::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
+                    {q.p}
+                    <span className="text-xl leading-none text-neutro-300 transition-transform group-open:rotate-45" aria-hidden>+</span>
+                  </summary>
+                  <p className="mt-3 max-w-[68ch] text-sm text-neutro-300">{q.r}</p>
+                </details>
+              ))}
+            </div>
+          </Secao>
+        </div>
 
+        {/* Fechamento: frase emocional, cadastro e garantias embaixo */}
+        <div ref={formRef} id="cadastro" className="scroll-mt-16">
+          <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Cadastro</p>
+            <h2 className="mt-2 max-w-3xl text-balance font-display text-[32px] font-extrabold leading-tight sm:text-[44px]">
+              Seu cliente não precisa escolher pelo preço. Dá pra ele um motivo pra escolher você.
+            </h2>
+            <p className="mt-4 max-w-[62ch] text-neutro-100">Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui.</p>
+            <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
+              <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
+                {PARCEIRO_RECEBE.slice(0, 5).map((t) => (
+                  <li key={t.titulo} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t.titulo}</li>
+                ))}
+              </ul>
               <div className="rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">
                 {isLoading ? (
                   <div className="space-y-4" aria-busy="true" aria-label="Carregando o formulário">
@@ -471,37 +607,14 @@ export default function LandingParceiros() {
                 )}
               </div>
             </div>
-          </Secao>
+            <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutro-300">
+              {GARANTIAS.map((g) => <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0" aria-hidden />{g}</li>)}
+            </ul>
+          </section>
         </div>
-
-        {/* Perguntas frequentes */}
-        <div className="border-t border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Perguntas frequentes" titulo="O que todo dono de software pergunta antes de entrar.">
-            <div className="divide-y divide-white/10 rounded-[14px] border border-white/10 bg-card">
-              {PERGUNTAS.map((q) => (
-                <details key={q.p} className="group px-5 py-4 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                    {q.p}
-                    <span className="text-xl leading-none text-neutro-300 transition-transform group-open:rotate-45" aria-hidden>+</span>
-                  </summary>
-                  <p className="mt-3 max-w-[68ch] text-sm text-neutro-300">{q.r}</p>
-                </details>
-              ))}
-            </div>
-          </Secao>
-        </div>
-
-        {/* Chamada final */}
-        <section ref={fimRef} className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-20">
-          <h2 className="mx-auto max-w-3xl text-balance font-display text-[32px] font-extrabold leading-tight sm:text-[44px]">
-            Venda o seu software com consultoria comercial incluída.
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-neutro-300">O argumento que o seu concorrente não tem, sem custo pra você e pro seu cliente.</p>
-          <Button size="lg" onClick={irParaCadastro} className="mt-7 h-12 px-6 text-base">Quero ser parceiro</Button>
-        </section>
       </main>
 
-      <footer className="border-t border-white/10">
+      <footer ref={fimRef} className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-neutro-300 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>Wise Makers · Estrutura e gestão comercial · Maringá, Paraná</p>
           <nav className="flex gap-4" aria-label="Documentos">
