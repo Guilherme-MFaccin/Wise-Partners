@@ -8,13 +8,14 @@ import { fonteVideo, type FormatoVideo } from "@/lib/landing";
 // Blocos das landing pages públicas (parceiros e clientes dos parceiros): prova, vídeo, Wise Hub e campos.
 // Os números e casos vêm dos materiais da Wise Makers; mudar aqui muda nas duas páginas.
 
-// Logos de clientes da Wise Makers (apresentação de parceria, slide 5). Os primeiros 12 aparecem também no celular.
+// Logos de clientes da Wise Makers (grade original da apresentação de parceria, recortada e ampliada).
+// Fora: Havan, Bayer, Implemar e Café Jandaia, que são clientes do grupo Tríade, não da Wise Makers.
 // Sem nome: logos que não trazem o nome escrito; ficam como decoração para leitor de tela.
 export const CLIENTES: [number, string][] = [
-  [14, "Havan"], [21, "Bayer"], [18, "Café Jandaia"], [6, "Fusion Alumínios"], [5, "Telhaço"], [27, "Beckhauser"],
-  [1, "Giannini"], [3, "Gelaboca"], [19, "Polifest"], [17, "Natural Produtos"], [10, "Implemar"], [13, "Magro"],
-  [2, "Nicopel"], [7, "Colli"], [8, "Chamego Bandeiras"], [9, "Powerfit"], [12, "Aggi"], [15, "Glück"], [16, "Heck"],
-  [20, "Dates"], [23, "Ostellato"], [25, "F.A. Colchões"], [26, "Karams"], [4, ""], [11, ""], [22, ""], [24, ""], [28, ""],
+  [6, "Fusion Alumínios"], [5, "Telhaço"], [27, "Beckhauser"], [1, "Giannini"], [3, "Gelaboca"], [19, "Polifest"],
+  [17, "Natural Produtos"], [13, "Magro"], [2, "Nicopel"], [7, "Colli"], [8, "Chamego Bandeiras"], [9, "Powerfit"],
+  [12, "Aggi"], [15, "Glück"], [16, "Heck"], [20, "Dates"], [23, "Ostellato"], [25, "F.A. Colchões"], [26, "Karams"],
+  [4, ""], [11, ""], [22, ""], [24, ""], [28, ""],
 ];
 
 // Casos completos: a versão de celular é outra página, então cada caso tem os dois endereços
@@ -251,19 +252,25 @@ export function Campo({ id, rotulo, opcional, erro, children }: { id: string; ro
   );
 }
 
-// Faixa de logos logo abaixo do topo
+// Faixa de logos logo abaixo do topo: carrossel contínuo, pausa ao passar o mouse.
+// Com "reduzir movimento" ligado, vira uma faixa parada que rola com o dedo.
 export function FaixaLogos() {
+  // Espaço como padding de cada item (e não gap): as duas cópias ficam com a mesma largura e o loop não dá salto
+  const item = (n: number, nome: string, copia: boolean) => (
+    <li key={`${copia ? "c" : "o"}${n}`} className={`shrink-0 pr-4 sm:pr-5 ${copia ? "motion-reduce:hidden" : ""}`} aria-hidden={copia || undefined}>
+      <img src={`/landing/cliente-${String(n).padStart(2, "0")}.webp`} alt={copia ? "" : nome} width={424} height={424} loading="lazy" decoding="async"
+        className="h-24 w-24 rounded-[14px] sm:h-28 sm:w-28" />
+    </li>
+  );
   return (
-    <section aria-labelledby="clientes-titulo" className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 lg:pb-20">
-      <h2 id="clientes-titulo" className="text-center text-sm font-medium text-neutro-300">Empresas que estruturaram o comercial com a Wise Makers</h2>
-      <ul className="mt-5 grid grid-cols-6 gap-2 sm:grid-cols-[repeat(14,minmax(0,1fr))] sm:gap-3">
-        {CLIENTES.map(([n, nome], i) => (
-          <li key={n} className={i >= 12 ? "hidden sm:block" : ""}>
-            <img src={`/landing/cliente-${String(n).padStart(2, "0")}.webp`} alt={nome} width={128} height={128} loading="lazy" decoding="async"
-              className="aspect-square h-auto w-full rounded-[8px] bg-white/5 sm:rounded-[10px]" />
-          </li>
-        ))}
-      </ul>
+    <section aria-labelledby="clientes-titulo" className="w-full pb-14 lg:pb-20">
+      <h2 id="clientes-titulo" className="mx-auto max-w-6xl px-4 text-center text-sm font-medium text-neutro-300 sm:px-6">Empresas que estruturaram o comercial com a Wise Makers</h2>
+      <div className="group mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] motion-reduce:overflow-x-auto">
+        <ul className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:pl-4">
+          {CLIENTES.map(([n, nome]) => item(n, nome, false))}
+          {CLIENTES.map(([n, nome]) => item(n, nome, true))}
+        </ul>
+      </div>
     </section>
   );
 }
