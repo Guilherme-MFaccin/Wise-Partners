@@ -1,0 +1,479 @@
+[
+ {
+  "id": "LC-canais",
+  "bloco": "Quem chega e de onde",
+  "texto": "Por onde o cliente do parceiro chega a esta página?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Mensagem no WhatsApp que o parceiro manda para a base",
+   "E-mail do parceiro para a base",
+   "Na implantação de cliente novo, apresentado pelo time do parceiro",
+   "Aviso ou banner dentro do software do parceiro",
+   "Na proposta comercial do parceiro, como argumento de venda",
+   "Redes sociais do parceiro"
+  ],
+  "contexto": [
+   "Na página dos parceiros prometemos ao parceiro um link exclusivo, uma mensagem pronta e uma página de convite. Esta é a página de convite: quem chega aqui é cliente de um CRM ou ERP parceiro, não lead de anúncio.",
+   "Você disse no FO-07 que a consultoria vai para toda a base de hoje e que o parceiro pode oferecer nos próximos fechamentos. Os canais definem o tom: quem chega por um WhatsApp do fornecedor chega morno e com contexto; quem clica num aviso dentro do sistema chega frio."
+  ],
+  "logica": "Minha recomendação: WhatsApp, e-mail e implantação de cliente novo no começo. São os canais que a mensagem pronta do portal já cobre.",
+  "citacoes": [
+   {
+    "livro": "FO-07, pergunta do como funciona",
+    "pagina": "resposta sua",
+    "trecho": "Vamos oferecer a consultoria gratuita (que é o diagnóstico e depois o wise hub) para todos os clientes da base e deixar que o parceiro possa oferecer isso para os próximos fechamentos dele."
+   },
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Message match with traffic source"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 308\" role=\"img\" aria-label=\"Canais do parceiro levando à página do cliente\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"120\" width=\"120\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"70.0\" y=\"141.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Parceiro</text><text x=\"70.0\" y=\"157.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">(seu software)</text><line x1=\"130\" y1=\"145\" x2=\"196\" y2=\"30\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"200\" y=\"10\" width=\"180\" height=\"40\" rx=\"8\" class=\"b\"/><text x=\"290.0\" y=\"34.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Mensagem no WhatsApp</text><line x1=\"380\" y1=\"30\" x2=\"446\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"130\" y1=\"145\" x2=\"196\" y2=\"86\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"200\" y=\"66\" width=\"180\" height=\"40\" rx=\"8\" class=\"b\"/><text x=\"290.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">E-mail para a base</text><line x1=\"380\" y1=\"86\" x2=\"446\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"130\" y1=\"145\" x2=\"196\" y2=\"142\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"200\" y=\"122\" width=\"180\" height=\"40\" rx=\"8\" class=\"b\"/><text x=\"290.0\" y=\"146.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Implantação de cliente novo</text><line x1=\"380\" y1=\"142\" x2=\"446\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"130\" y1=\"145\" x2=\"196\" y2=\"198\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"200\" y=\"178\" width=\"180\" height=\"40\" rx=\"8\" class=\"b\"/><text x=\"290.0\" y=\"202.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Aviso dentro do sistema</text><line x1=\"380\" y1=\"198\" x2=\"446\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"130\" y1=\"145\" x2=\"196\" y2=\"254\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"200\" y=\"234\" width=\"180\" height=\"40\" rx=\"8\" class=\"b\"/><text x=\"290.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Proposta comercial</text><line x1=\"380\" y1=\"254\" x2=\"446\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"450\" y=\"115\" width=\"110\" height=\"60\" rx=\"8\" class=\"b hi\"/><text x=\"505.0\" y=\"141.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Página do</text><text x=\"505.0\" y=\"157.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">cliente</text><line x1=\"560\" y1=\"145\" x2=\"586\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"590\" y=\"120\" width=\"64\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"622.0\" y=\"149.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Ação</text><text x=\"330\" y=\"300\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Cada canal leva ao mesmo link exclusivo do parceiro.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-acao",
+  "bloco": "O que o cliente faz na página",
+  "texto": "O que o cliente faz quando clica no botão principal?",
+  "tipo": "escolha",
+  "opcoes": [
+   "A: o botão leva ao Wise Hub, e o cadastro e o diagnóstico acontecem lá",
+   "B: o autodiagnóstico fica na própria página, com o mapa na hora, e a conta do Hub vem junto",
+   "C: cadastro curto na página, que cria a conta no Hub com a origem do parceiro; o diagnóstico acontece lá dentro"
+  ],
+  "contexto": [
+   "No FO-08 você escolheu: autodiagnóstico online com mapa na hora e acesso ao Hub; reunião individual para quem está no perfil e pede.",
+   "O Wise Hub já tem o diagnóstico de maturidade, o plano de 30, 60 e 90 dias em PDF, as calculadoras e a imersão. Refazer o diagnóstico nesta página duplicaria o Hub; mandar direto para o Hub perde a marca do parceiro e a origem do cadastro."
+  ],
+  "logica": "Minha recomendação: C. A página guarda a origem e o parceiro acompanha pelo portal; o Hub continua sendo o lugar do diagnóstico e do plano, sem duplicar nada.",
+  "citacoes": [
+   {
+    "livro": "FO-08, formato",
+    "pagina": "resposta sua",
+    "trecho": "Autodiagnóstico online com mapa na hora e acesso ao Hub; reunião individual para quem está no perfil e pede"
+   },
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "one offer → one audience → one primary action"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 680 312\" role=\"img\" aria-label=\"Três caminhos para a ação principal\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"120\" width=\"110\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"65.0\" y=\"141.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">Página do</text><text x=\"65.0\" y=\"157.3\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"600\" class=\"tx\">cliente</text><line x1=\"120\" y1=\"145\" x2=\"176\" y2=\"45\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"180\" y=\"20\" width=\"170\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"265.0\" y=\"41.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Botão leva ao</text><text x=\"265.0\" y=\"56.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Wise Hub</text><text x=\"170\" y=\"18\" font-size=\"12\" text-anchor=\"end\" class=\"tx\" font-weight=\"600\">A</text><line x1=\"350\" y1=\"45\" x2=\"396\" y2=\"45\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"20\" width=\"180\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"490.0\" y=\"41.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Cadastro e diagnóstico</text><text x=\"490.0\" y=\"56.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">acontecem no Hub</text><line x1=\"120\" y1=\"145\" x2=\"176\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"180\" y=\"120\" width=\"170\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"265.0\" y=\"141.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Diagnóstico na</text><text x=\"265.0\" y=\"156.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">própria página</text><text x=\"170\" y=\"118\" font-size=\"12\" text-anchor=\"end\" class=\"tx\" font-weight=\"600\">B</text><line x1=\"350\" y1=\"145\" x2=\"396\" y2=\"145\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"120\" width=\"180\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"490.0\" y=\"141.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Mapa na hora;</text><text x=\"490.0\" y=\"156.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">conta do Hub junto</text><line x1=\"120\" y1=\"145\" x2=\"176\" y2=\"245\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"180\" y=\"220\" width=\"170\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"265.0\" y=\"241.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Cadastro curto</text><text x=\"265.0\" y=\"256.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">na página</text><text x=\"170\" y=\"218\" font-size=\"12\" text-anchor=\"end\" class=\"tx\" font-weight=\"600\">C</text><line x1=\"350\" y1=\"245\" x2=\"396\" y2=\"245\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"220\" width=\"180\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"490.0\" y=\"241.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Conta no Hub criada;</text><text x=\"490.0\" y=\"256.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">diagnóstico lá dentro</text><text x=\"590\" y=\"52\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Mais simples</text><text x=\"590\" y=\"152\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Mais trabalho</text><text x=\"590\" y=\"252\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Recomendado</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-hub_integracao",
+  "bloco": "O que o cliente faz na página",
+  "texto": "Como o cadastro chega ao Wise Hub marcado com o parceiro?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O Hub já aceita um código de parceiro no link de cadastro",
+   "O Hub tem uma API e o portal pode criar a conta por ela",
+   "Ainda não existe: precisa ser construído no Hub",
+   "Não sei (comente quem mantém o Hub)"
+  ],
+  "contexto": [
+   "O Wise Hub (wisemakershub.com) é um sistema separado do portal. Para o parceiro ver no portal quem entrou pelo link dele, o Hub precisa receber o código do parceiro no cadastro e, de preferência, devolver o andamento.",
+   "A apresentação de parceria (slide 12) promete \"Origem marcada: cada cadastro fica marcado com a origem de vocês\". Não sei se isso já existe no Hub."
+  ],
+  "logica": "Se ainda não existir, a primeira versão pode gravar o cadastro no portal e mandar a pessoa ao Hub com o código no link; o andamento volta numa segunda etapa.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 192\" role=\"img\" aria-label=\"Fluxo de dados entre o portal e o Wise Hub\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"20\" y=\"40\" width=\"180\" height=\"110\" rx=\"8\" class=\"b hi\"/><text x=\"110.0\" y=\"76.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Portal Wise Partners</text><text x=\"110.0\" y=\"91.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\"></text><text x=\"110.0\" y=\"106.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">link exclusivo</text><text x=\"110.0\" y=\"121.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">do parceiro</text><rect x=\"460\" y=\"40\" width=\"180\" height=\"110\" rx=\"8\" class=\"b\"/><text x=\"550.0\" y=\"76.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Wise Hub</text><text x=\"550.0\" y=\"91.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">wisemakershub.com</text><text x=\"550.0\" y=\"106.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\"></text><text x=\"550.0\" y=\"121.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">conta do cliente</text><line x1=\"200\" y1=\"75\" x2=\"456\" y2=\"75\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"330\" y=\"66\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">1. cadastro com o código do parceiro</text><line x1=\"456\" y1=\"120\" x2=\"204\" y2=\"120\" class=\"ln dash\" marker-end=\"url(#ponta)\"/><text x=\"330\" y=\"112\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">2. andamento: diagnóstico feito, reunião pedida</text><text x=\"330\" y=\"180\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Hoje são dois sistemas separados. A seta 1 é o mínimo para a origem ficar marcada.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-hub_marca",
+  "bloco": "O que o cliente faz na página",
+  "texto": "O Wise Hub aparece com a marca do parceiro para o cliente?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, já funciona hoje",
+   "Sim, mas ainda precisa ser construído",
+   "Não por enquanto: só a marca da Wise no Hub"
+  ],
+  "contexto": [
+   "O mesmo slide 12 promete \"Duas marcas: logo de vocês no cabeçalho e nos certificados\" e \"Exclusivo de parceiro: o Wise Hub não é vendido avulso\".",
+   "Na página dos parceiros eu não coloquei essa promessa, porque não sei se o Hub já faz isso. Se fizer, ela entra aqui e na página dos parceiros."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 202\" role=\"img\" aria-label=\"Wise Hub com o selo de parceria no canto superior\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"20\" y=\"20\" width=\"620\" height=\"150\" rx=\"4\" class=\"b\"/><rect x=\"20\" y=\"20\" width=\"150\" height=\"150\" rx=\"8\" class=\"b hi\"/><text x=\"36\" y=\"42\" font-size=\"9\" text-anchor=\"start\" class=\"tx\">EM PARCERIA COM</text><rect x=\"36\" y=\"50\" width=\"52\" height=\"26\" rx=\"6\" class=\"b2\"/><text x=\"62\" y=\"67\" font-size=\"9\" text-anchor=\"middle\" class=\"mu\">parceiro</text><rect x=\"96\" y=\"50\" width=\"52\" height=\"26\" rx=\"6\" class=\"b2\"/><text x=\"122\" y=\"67\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Wise</text><text x=\"36\" y=\"104\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Início</text><text x=\"36\" y=\"124\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Método Wise</text><text x=\"36\" y=\"144\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">Ferramentas</text><text x=\"190\" y=\"56\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Olá, Ana. Vamos avançar na estrutura comercial da sua empresa?</text><rect x=\"190\" y=\"76\" width=\"430\" height=\"70\" rx=\"8\" class=\"b2\"/><text x=\"206\" y=\"104\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Seu diagnóstico de maturidade</text><text x=\"206\" y=\"124\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">1 de 3 etapas concluídas</text><text x=\"330\" y=\"192\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">O slide 12 da apresentação mostra o logo do parceiro no canto do Hub e nos certificados.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-reuniao",
+  "bloco": "O que o cliente faz na página",
+  "texto": "Como o cliente que está no perfil chega à reunião individual?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O cadastro pergunta o faturamento e o tamanho do time; quem está no perfil vê o convite para agendar na hora",
+   "Só depois do autodiagnóstico, dentro do Hub, quem está no perfil recebe o convite",
+   "A equipe da Wise liga ou manda mensagem para quem está no perfil",
+   "A agenda fica aberta para todos, e a equipe filtra depois"
+  ],
+  "contexto": [
+   "Você definiu o perfil no FO-07: empresas que faturam pelo menos R$ 250 mil por mês, têm time comercial com pelo menos duas pessoas e querem crescer. No FO-08: a reunião é para quem está no perfil e pede, mesmo que sejam 10 diagnósticos por dia.",
+   "A página precisa saber se a pessoa está no perfil antes de mostrar a agenda; senão, enche a agenda de quem não está."
+  ],
+  "logica": "Minha recomendação: a primeira. Duas perguntas no cadastro bastam e o cliente no perfil não espera ninguém.",
+  "citacoes": [
+   {
+    "livro": "FO-07, perfil",
+    "pagina": "resposta sua",
+    "trecho": "Empresas que faturem pelo menos R$250.000,00 mensais, tenham time comercial com pelo menos duas pessoas e que queiram crescer."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 214\" role=\"img\" aria-label=\"Quem vê a reunião individual\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"70\" width=\"120\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"70.0\" y=\"91.5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Cliente se</text><text x=\"70.0\" y=\"106.5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">cadastra</text><line x1=\"130\" y1=\"95\" x2=\"176\" y2=\"95\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"180\" y=\"60\" width=\"200\" height=\"70\" rx=\"8\" class=\"b\"/><text x=\"280.0\" y=\"84.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Fatura R$ 250 mil por mês</text><text x=\"280.0\" y=\"99.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">e tem 2 ou mais pessoas</text><text x=\"280.0\" y=\"114.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">no comercial?</text><line x1=\"380\" y1=\"80\" x2=\"436\" y2=\"40\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"400\" y=\"50\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">sim</text><rect x=\"440\" y=\"14\" width=\"210\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"545.0\" y=\"35.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Vê o convite para a</text><text x=\"545.0\" y=\"50.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">reunião individual</text><line x1=\"380\" y1=\"110\" x2=\"436\" y2=\"150\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"400\" y=\"146\" font-size=\"11\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">não</text><rect x=\"440\" y=\"126\" width=\"210\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"545.0\" y=\"147.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Segue no Hub com o</text><text x=\"545.0\" y=\"162.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">autodiagnóstico e as trilhas</text><text x=\"330\" y=\"206\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Os dois caminhos ficam visíveis para o parceiro no portal.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-criterio",
+  "bloco": "O que o cliente faz na página",
+  "texto": "Qual critério vale para a reunião individual?",
+  "tipo": "escolha",
+  "opcoes": [
+   "R$ 250 mil por mês e pelo menos duas pessoas no comercial (como no FO-07)",
+   "Mais de 3 vendedores (como no Hub)",
+   "Outro (comente)"
+  ],
+  "contexto": [
+   "A página do Wise Hub diz \"para empresas com +3 vendedores\". A página dos parceiros segue o que você escreveu no FO-07: R$ 250 mil por mês e duas pessoas no comercial. As duas precisam dizer a mesma coisa."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-agenda",
+  "bloco": "O que o cliente faz na página",
+  "texto": "Onde a reunião é marcada?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Página de agendamento do Google Agenda",
+   "Calendly ou ferramenta parecida (comente qual)",
+   "Agenda dentro do próprio portal (precisa ser construída)",
+   "WhatsApp da equipe"
+  ],
+  "contexto": [
+   "Agendar na hora, sem troca de mensagens, é o que mantém o processo sem conversa manual. Se mais pessoas além de você fizerem diagnósticos, a agenda precisa distribuir entre elas."
+  ],
+  "logica": "Minha recomendação: página de agendamento do Google Agenda na primeira versão, com a reunião registrada no portal pelo próprio cadastro.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-quem_oferece",
+  "bloco": "A mensagem",
+  "texto": "Como o parceiro aparece no topo da página?",
+  "tipo": "escolha",
+  "opcoes": [
+   "A: logo do parceiro e logo da Wise Makers lado a lado",
+   "B: \"Convite de [nome do parceiro]\" em texto, com a marca da Wise",
+   "C: só a Wise Makers, com o parceiro no rodapé"
+  ],
+  "contexto": [
+   "O cliente confia no fornecedor de software dele, não na Wise Makers, que ele talvez nunca tenha ouvido falar. Ver a marca do fornecedor no topo é o que faz a página parecer um presente, e não um anúncio.",
+   "Para mostrar o logo, o parceiro sobe o logo no portal; sem logo, a página mostra o nome em texto."
+  ],
+  "logica": "Minha recomendação: A, com B como reserva enquanto o parceiro não sobe o logo.",
+  "citacoes": [
+   {
+    "livro": "Skill copywriting",
+    "pagina": "SKILL.md",
+    "trecho": "Use words your customers use."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 182\" role=\"img\" aria-label=\"Três formas de mostrar o parceiro no topo\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"36\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">A</text><rect x=\"30\" y=\"10\" width=\"600\" height=\"40\" rx=\"4\" class=\"b\"/><rect x=\"44\" y=\"18\" width=\"120\" height=\"24\" rx=\"6\" class=\"b hi\"/><text x=\"104.0\" y=\"34\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">logo do parceiro</text><rect x=\"174\" y=\"18\" width=\"24\" height=\"24\" rx=\"6\" class=\"b2\"/><text x=\"186.0\" y=\"34\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">+</text><rect x=\"208\" y=\"18\" width=\"96\" height=\"24\" rx=\"6\" class=\"b2\"/><text x=\"256.0\" y=\"34\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">Wise Makers</text><text x=\"640\" y=\"36\" font-size=\"11\" text-anchor=\"end\" class=\"mu\">duas marcas</text><text x=\"10\" y=\"96\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">B</text><rect x=\"30\" y=\"70\" width=\"600\" height=\"40\" rx=\"4\" class=\"b\"/><rect x=\"44\" y=\"78\" width=\"190\" height=\"24\" rx=\"6\" class=\"b2\"/><text x=\"139.0\" y=\"94\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">Convite de Fulano Software</text><rect x=\"244\" y=\"78\" width=\"96\" height=\"24\" rx=\"6\" class=\"b2\"/><text x=\"292.0\" y=\"94\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">Wise Makers</text><text x=\"640\" y=\"96\" font-size=\"11\" text-anchor=\"end\" class=\"mu\">nome em texto</text><text x=\"10\" y=\"156\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">C</text><rect x=\"30\" y=\"130\" width=\"600\" height=\"40\" rx=\"4\" class=\"b\"/><rect x=\"44\" y=\"138\" width=\"96\" height=\"24\" rx=\"6\" class=\"b2\"/><text x=\"92.0\" y=\"154\" font-size=\"11\" text-anchor=\"middle\" class=\"tx\">Wise Makers</text><text x=\"640\" y=\"156\" font-size=\"11\" text-anchor=\"end\" class=\"mu\">parceiro só no rodapé</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-titulo",
+  "bloco": "A mensagem",
+  "texto": "Qual linha de título você prefere?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Diagnóstico comercial da Wise Makers, sem custo para clientes [Parceiro].",
+   "A [Parceiro] incluiu consultoria comercial no seu sistema. Comece pelo diagnóstico.",
+   "Descubra onde o seu comercial trava. Sem custo, por ser cliente [Parceiro].",
+   "Outra (comente)"
+  ],
+  "contexto": [
+   "O título é a primeira coisa que o cliente lê depois de clicar no link do fornecedor. Os três dizem a mesma oferta: consultoria comercial incluída, sem custo, por conta do parceiro. [Parceiro] vira o nome do parceiro."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page",
+    "pagina": "SKILL.md",
+    "trecho": "Headline (outcome + audience)"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-valor",
+  "bloco": "A mensagem",
+  "texto": "A página mostra quanto vale o que o cliente recebe?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, com o quadro de valor completo, como na página dos parceiros",
+   "Sim, só o número (mais de R$ 15.000 em método) no topo",
+   "Não mostra valor"
+  ],
+  "contexto": [
+   "Na página dos parceiros mostramos o quadro de valor do Wise Hub: R$ 15.000 contratado à parte, R$ 0 para o cliente do parceiro. Para o cliente, o valor mostra que não é um material qualquer; o risco é parecer oferta de internet."
+  ],
+  "logica": "Minha recomendação: o quadro completo, mais abaixo na página, depois do que o cliente recebe.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 188\" role=\"img\" aria-label=\"Valor de cada entrega do Wise Hub\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"180\" y=\"25\" font-size=\"12\" text-anchor=\"end\" class=\"tx\">Imersão +20h</text><rect x=\"190\" y=\"13\" width=\"240\" height=\"16\" rx=\"3\" class=\"barra2\"/><text x=\"438.0\" y=\"26\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">R$ 3.000</text><text x=\"180\" y=\"55\" font-size=\"12\" text-anchor=\"end\" class=\"tx\">Diagnóstico</text><rect x=\"190\" y=\"43\" width=\"112\" height=\"16\" rx=\"3\" class=\"barra2\"/><text x=\"310.0\" y=\"56\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">R$ 1.400</text><text x=\"180\" y=\"85\" font-size=\"12\" text-anchor=\"end\" class=\"tx\">Plano 30, 60 e 90 dias</text><rect x=\"190\" y=\"73\" width=\"264\" height=\"16\" rx=\"3\" class=\"barra2\"/><text x=\"462.0\" y=\"86\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">R$ 3.300</text><text x=\"180\" y=\"115\" font-size=\"12\" text-anchor=\"end\" class=\"tx\">Ferramentas</text><rect x=\"190\" y=\"103\" width=\"184\" height=\"16\" rx=\"3\" class=\"barra2\"/><text x=\"382.0\" y=\"116\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">R$ 2.300</text><text x=\"180\" y=\"145\" font-size=\"12\" text-anchor=\"end\" class=\"tx\">Reunião individual</text><rect x=\"190\" y=\"133\" width=\"400\" height=\"16\" rx=\"3\" class=\"barra2\"/><text x=\"598.0\" y=\"146\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">R$ 5.000</text><text x=\"180\" y=\"176\" font-size=\"12\" text-anchor=\"end\" class=\"tx\" font-weight=\"600\">Total</text><text x=\"190\" y=\"177\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">R$ 15.000 contratado à parte; R$ 0 para o cliente do parceiro</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-prazo_hub",
+  "bloco": "A mensagem",
+  "texto": "O acesso do cliente do parceiro tem prazo?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sem prazo para o cliente do parceiro",
+   "O mesmo prazo do Hub público (comente qual)",
+   "Prazo próprio para o cliente do parceiro (comente)"
+  ],
+  "contexto": [
+   "A página pública do Wise Hub diz que o acesso gratuito é \"por tempo limitado\". A página dos parceiros promete o Hub sem custo para o cliente, sem falar em prazo. Ficou pendente na entrega anterior."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-video",
+  "bloco": "A mensagem",
+  "texto": "Como é o vídeo desta página?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O Igor, como no vídeo dos parceiros",
+   "O Igor, com um trecho de depoimento de cliente",
+   "Sem vídeo na primeira versão: imagem e texto",
+   "Outro (comente)"
+  ],
+  "contexto": [
+   "No FO-08 você disse que esta página terá um vídeo próprio. Enquanto ele não existir, uso uma capa, como fizemos com o Igor na página dos parceiros.",
+   "O vídeo explica a oferta; o título e o botão carregam a decisão. Abaixo, a estrutura que eu sugiro para um vídeo de 2 minutos."
+  ],
+  "logica": "Minha recomendação: o Igor, com um trecho de depoimento perto do fim. Depois das respostas, escrevo o roteiro.",
+  "citacoes": [
+   {
+    "livro": "FO-08, agenda",
+    "pagina": "resposta sua",
+    "trecho": "terão acesso ao link deles próprios da landing page de divulgação da consultoria (é uma outra landing page que teremos que fazer, com um vídeo próprio)"
+   },
+   {
+    "livro": "Skill landing-page-anatomy",
+    "pagina": "SKILL.md",
+    "trecho": "Video proof konsekwentnie outperformuje statyczny."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 146\" role=\"img\" aria-label=\"Estrutura sugerida do vídeo\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"120\" height=\"70\" rx=\"8\" class=\"b hi\"/><text x=\"70.0\" y=\"44.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Gancho</text><text x=\"70.0\" y=\"59.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">seu fornecedor</text><text x=\"70.0\" y=\"74.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">te deu isto</text><text x=\"10\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">0:00</text><line x1=\"130\" y1=\"55\" x2=\"140\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"20\" width=\"120\" height=\"70\" rx=\"8\" class=\"b\"/><text x=\"200.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">O que você</text><text x=\"200.0\" y=\"66.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">recebe</text><text x=\"140\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">0:20</text><line x1=\"260\" y1=\"55\" x2=\"270\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"20\" width=\"120\" height=\"70\" rx=\"8\" class=\"b\"/><text x=\"330.0\" y=\"44.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Como</text><text x=\"330.0\" y=\"59.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">funciona</text><text x=\"330.0\" y=\"74.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">3 passos</text><text x=\"270\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">0:50</text><line x1=\"390\" y1=\"55\" x2=\"400\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"20\" width=\"120\" height=\"70\" rx=\"8\" class=\"b\"/><text x=\"460.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Prova</text><text x=\"460.0\" y=\"66.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">um caso</text><text x=\"400\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">1:30</text><line x1=\"520\" y1=\"55\" x2=\"530\" y2=\"55\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"20\" width=\"120\" height=\"70\" rx=\"8\" class=\"b hi\"/><text x=\"590.0\" y=\"51.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Chamada</text><text x=\"590.0\" y=\"66.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">cadastre-se</text><text x=\"530\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">2:00</text><text x=\"330\" y=\"136\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Estrutura sugerida, cerca de 2 minutos; o texto final sai depois das respostas.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-formato",
+  "bloco": "A mensagem",
+  "texto": "Qual tamanho de página?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Curta: topo com vídeo, o que você recebe e cadastro",
+   "Média: mais como funciona, depoimentos e perguntas frequentes",
+   "Longa, no mesmo padrão da página dos parceiros"
+  ],
+  "contexto": [
+   "Na página dos parceiros você escolheu a longa, porque o tráfego vem frio dos anúncios. Aqui o cliente chega pelo fornecedor, com mais confiança. Uma página longa demais pode atrasar quem já veio decidido."
+  ],
+  "logica": "Minha recomendação: média.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 230\" role=\"img\" aria-label=\"Três tamanhos de página\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"95\" y=\"14\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Curta</text><rect x=\"10\" y=\"22\" width=\"170\" height=\"88\" rx=\"8\" class=\"b\"/><rect x=\"20\" y=\"32\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"95\" y=\"44\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Topo com vídeo</text><rect x=\"20\" y=\"54\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"95\" y=\"66\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">O que você recebe</text><rect x=\"20\" y=\"76\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"95\" y=\"88\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Cadastro</text><text x=\"330\" y=\"14\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Média</text><rect x=\"245\" y=\"22\" width=\"170\" height=\"154\" rx=\"8\" class=\"b\"/><rect x=\"255\" y=\"32\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"330\" y=\"44\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Topo com vídeo</text><rect x=\"255\" y=\"54\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"330\" y=\"66\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">O que você recebe</text><rect x=\"255\" y=\"76\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"330\" y=\"88\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Como funciona</text><rect x=\"255\" y=\"98\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"330\" y=\"110\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Depoimentos</text><rect x=\"255\" y=\"120\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"330\" y=\"132\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Perguntas</text><rect x=\"255\" y=\"142\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"330\" y=\"154\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Cadastro</text><text x=\"565\" y=\"14\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Longa</text><rect x=\"480\" y=\"22\" width=\"170\" height=\"198\" rx=\"8\" class=\"b\"/><rect x=\"490\" y=\"32\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"565\" y=\"44\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Topo com vídeo</text><rect x=\"490\" y=\"54\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"66\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Logos</text><rect x=\"490\" y=\"76\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"88\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">O que você recebe</text><rect x=\"490\" y=\"98\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"110\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Valor R$ 15.000</text><rect x=\"490\" y=\"120\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"132\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Como funciona</text><rect x=\"490\" y=\"142\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"154\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Depoimentos</text><rect x=\"490\" y=\"164\" width=\"150\" height=\"16\" rx=\"4\" class=\"b2\"/><text x=\"565\" y=\"176\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Perguntas</text><rect x=\"490\" y=\"186\" width=\"150\" height=\"16\" rx=\"4\" class=\"b hi\"/><text x=\"565\" y=\"198\" font-size=\"10\" text-anchor=\"middle\" class=\"tx\">Cadastro</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-objecoes",
+  "bloco": "Confiança, dados e prova",
+  "texto": "Quais dúvidas o cliente vai ter antes de se cadastrar?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Por que é de graça? Qual é o porém?",
+   "Vão me ligar insistindo?",
+   "Meu fornecedor de software vai ver os meus dados?",
+   "Serve para a minha empresa (porte, setor)?",
+   "Quanto tempo leva?",
+   "É curso? Vou ter que assistir 20 horas?",
+   "Depois vão me cobrar alguma coisa?",
+   "Quem é a Wise Makers?"
+  ],
+  "contexto": [
+   "Cada dúvida marcada vira uma pergunta frequente ou uma linha perto do botão. Comente outras que você já ouviu de clientes."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Will this work for my situation?"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-dados",
+  "bloco": "Confiança, dados e prova",
+  "texto": "O que o parceiro vê de cada cliente que entrou pelo link?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Só que o cliente se cadastrou (empresa e data)",
+   "Cadastro e andamento, sem o resultado do diagnóstico",
+   "Cadastro e andamento; o resultado só se o cliente marcar uma caixa de autorização no cadastro"
+  ],
+  "contexto": [
+   "A página dos parceiros já promete: \"A Wise nunca recebe a sua lista de clientes, e o resultado individual só é compartilhado com você se o cliente autorizar\".",
+   "Falta decidir o meio: se o parceiro vê o andamento (fez o diagnóstico, pediu a reunião) e como o cliente autoriza mostrar o resultado."
+  ],
+  "logica": "Minha recomendação: a terceira, com a caixa desmarcada por padrão.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 206\" role=\"img\" aria-label=\"Quem vê cada dado do cliente\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Dado</text><text x=\"330\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Cliente</text><text x=\"430\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Wise</text><text x=\"560\" y=\"18\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Parceiro</text><line x1=\"10\" y1=\"30\" x2=\"650\" y2=\"30\" class=\"ln fino\"/><text x=\"10\" y=\"50\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Nome da empresa e data do cadastro</text><text x=\"330\" y=\"50\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"430\" y=\"50\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"560\" y=\"50\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><line x1=\"10\" y1=\"60\" x2=\"650\" y2=\"60\" class=\"ln fino\"/><text x=\"10\" y=\"80\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Fez o diagnóstico, pediu reunião</text><text x=\"330\" y=\"80\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"430\" y=\"80\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"560\" y=\"80\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">?</text><line x1=\"10\" y1=\"90\" x2=\"650\" y2=\"90\" class=\"ln fino\"/><text x=\"10\" y=\"110\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Resultado do diagnóstico</text><text x=\"330\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"430\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"560\" y=\"110\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">só com autorização</text><line x1=\"10\" y1=\"120\" x2=\"650\" y2=\"120\" class=\"ln fino\"/><text x=\"10\" y=\"140\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Respostas e números do comercial</text><text x=\"330\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"430\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">sim</text><text x=\"560\" y=\"140\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">não</text><line x1=\"10\" y1=\"150\" x2=\"650\" y2=\"150\" class=\"ln fino\"/><text x=\"10\" y=\"170\" font-size=\"12\" text-anchor=\"start\" class=\"tx\">Lista de clientes do parceiro</text><text x=\"330\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">não</text><text x=\"430\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">não</text><text x=\"560\" y=\"170\" font-size=\"12\" text-anchor=\"middle\" class=\"mu\">é dele</text><text x=\"10\" y=\"196\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">A pergunta é a linha do ponto de interrogação. A página do parceiro já promete o resultado só com autorização.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-prova",
+  "bloco": "Confiança, dados e prova",
+  "texto": "Que provas entram na página?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Logos de clientes da Wise Makers",
+   "Os três depoimentos em vídeo",
+   "Números da Wise (4 anos, +300 empresas, +1.500 vendedores)",
+   "Tela do Wise Hub",
+   "Depoimento de um cliente que veio por um parceiro (quando existir)"
+  ],
+  "contexto": [
+   "Na página dos parceiros já temos os logos, os três depoimentos em vídeo (Protectpool, Fusion e Cristal Móveis) e os números da Wise."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "Skill landing-page-anatomy",
+    "pagina": "SKILL.md",
+    "trecho": "Social proof musi być layered"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-campos",
+  "bloco": "Cadastro, link e acompanhamento",
+  "texto": "Quais campos o cadastro pede?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Nome",
+   "E-mail",
+   "WhatsApp",
+   "Empresa",
+   "CNPJ",
+   "Cargo",
+   "Faturamento por mês (faixa)",
+   "Pessoas no comercial",
+   "Segmento",
+   "Principal desafio comercial",
+   "Senha para entrar no Hub"
+  ],
+  "contexto": [
+   "Se a ação for a C (cadastro curto que cria a conta no Hub), estes campos vão para o Hub e para o portal. Faturamento e pessoas no comercial decidem quem vê a reunião.",
+   "Senha: se o cadastro já cria a conta no Hub, a pessoa escolhe a senha aqui, como na página dos parceiros."
+  ],
+  "logica": "Minha recomendação: nome, e-mail, WhatsApp, empresa, faturamento por faixa e pessoas no comercial; senha se o Hub permitir criar a conta.",
+  "citacoes": [
+   {
+    "livro": "Skill page-cro",
+    "pagina": "SKILL.md",
+    "trecho": "Too many form fields"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 238\" role=\"img\" aria-label=\"Campos sugeridos para o cadastro\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"300\" height=\"228\" rx=\"10\" class=\"b\"/><rect x=\"24\" y=\"22\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"36\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Nome</text><rect x=\"24\" y=\"48\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"62\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">E-mail</text><rect x=\"24\" y=\"74\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"88\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">WhatsApp</text><rect x=\"24\" y=\"100\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"114\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Empresa</text><rect x=\"24\" y=\"126\" width=\"272\" height=\"20\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"140\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Cargo</text><rect x=\"24\" y=\"152\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"166\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Faturamento por mês (faixa)</text><rect x=\"24\" y=\"178\" width=\"272\" height=\"20\" rx=\"5\" class=\"b hi\"/><text x=\"34\" y=\"192\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Pessoas no comercial</text><rect x=\"24\" y=\"204\" width=\"272\" height=\"20\" rx=\"5\" class=\"b2\"/><text x=\"34\" y=\"218\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Senha do Hub</text><text x=\"330\" y=\"40\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Em destaque, a sugestão mínima.</text><text x=\"330\" y=\"62\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Faturamento e pessoas no comercial definem</text><text x=\"330\" y=\"80\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">quem vê a reunião individual.</text><text x=\"330\" y=\"110\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">Cada campo a mais pesa na conversão;</text><text x=\"330\" y=\"128\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">cada campo a menos tira informação do parceiro</text><text x=\"330\" y=\"146\" font-size=\"12\" text-anchor=\"start\" class=\"mu\">e da equipe da Wise.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-link",
+  "bloco": "Cadastro, link e acompanhamento",
+  "texto": "O que acontece com o link exclusivo que já existe?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O mesmo link passa a abrir esta página, com \"quero falar com a Wise agora\" como caminho secundário",
+   "Dois links: o atual para indicação de projeto e um novo para esta página",
+   "Esta página só para parceiros SaaS; os outros parceiros continuam com o link atual"
+  ],
+  "contexto": [
+   "Hoje o link exclusivo (/i/código) abre um formulário \"Fale com a Wise Makers\", que manda a indicação para o comercial e deixa escolher entre as empresas do grupo.",
+   "Para os parceiros SaaS, a oferta mudou: o cliente entra pela consultoria incluída, não por uma conversa com o comercial."
+  ],
+  "logica": "Minha recomendação: a terceira. Mantém o que já funciona para os outros parceiros e dá aos SaaS a página nova no mesmo link.",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 228\" role=\"img\" aria-label=\"O link exclusivo hoje e na proposta\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"200\" height=\"60\" rx=\"8\" class=\"b\"/><text x=\"110.0\" y=\"46.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">/i/código do parceiro</text><text x=\"110.0\" y=\"61.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">hoje</text><line x1=\"210\" y1=\"50\" x2=\"256\" y2=\"50\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"260\" y=\"10\" width=\"200\" height=\"80\" rx=\"8\" class=\"b2\"/><text x=\"360.0\" y=\"39.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Fale com a Wise Makers</text><text x=\"360.0\" y=\"54.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">formulário de indicação</text><text x=\"360.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">vai para o comercial</text><rect x=\"10\" y=\"120\" width=\"200\" height=\"60\" rx=\"8\" class=\"b hi\"/><text x=\"110.0\" y=\"146.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">mesmo link</text><text x=\"110.0\" y=\"161.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">proposta</text><line x1=\"210\" y1=\"150\" x2=\"256\" y2=\"150\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"260\" y=\"110\" width=\"200\" height=\"80\" rx=\"8\" class=\"b hi\"/><text x=\"360.0\" y=\"139.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Página do cliente</text><text x=\"360.0\" y=\"154.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">consultoria incluída</text><text x=\"360.0\" y=\"169.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">cadastro no Hub</text><line x1=\"460\" y1=\"175\" x2=\"496\" y2=\"175\" class=\"ln dash\" marker-end=\"url(#ponta)\"/><rect x=\"500\" y=\"150\" width=\"150\" height=\"50\" rx=\"8\" class=\"b2\"/><text x=\"575.0\" y=\"171.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Quero falar com</text><text x=\"575.0\" y=\"185.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">a Wise agora</text><text x=\"500\" y=\"220\" font-size=\"11\" text-anchor=\"start\" class=\"mu\">caminho secundário</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-aviso",
+  "bloco": "Cadastro, link e acompanhamento",
+  "texto": "Como o parceiro fica sabendo quando um cliente se cadastra?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Aparece no portal, na lista de quem entrou pelo link",
+   "E-mail para o parceiro na hora",
+   "Resumo semanal por e-mail",
+   "Mensagem no WhatsApp"
+  ],
+  "contexto": [
+   "O portal ainda não manda e-mail (falta configurar o Resend). Aparecer no portal funciona desde o primeiro dia."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "<svg viewBox=\"0 0 660 170\" role=\"img\" aria-label=\"Como o parceiro fica sabendo de um cadastro\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"50\" width=\"130\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"75.0\" y=\"71.5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">Cliente se</text><text x=\"75.0\" y=\"86.5\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"600\" class=\"tx\">cadastra</text><line x1=\"140\" y1=\"75\" x2=\"186\" y2=\"75\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"190\" y=\"50\" width=\"130\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"255.0\" y=\"71.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Portal registra</text><text x=\"255.0\" y=\"86.5\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">a origem</text><line x1=\"320\" y1=\"75\" x2=\"386\" y2=\"21\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"390\" y=\"6\" width=\"160\" height=\"30\" rx=\"8\" class=\"b\"/><text x=\"470.0\" y=\"25.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Aparece no portal</text><line x1=\"320\" y1=\"75\" x2=\"386\" y2=\"57\" class=\"ln dash\" marker-end=\"url(#ponta)\"/><rect x=\"390\" y=\"42\" width=\"160\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"470.0\" y=\"61.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">E-mail na hora</text><line x1=\"320\" y1=\"75\" x2=\"386\" y2=\"93\" class=\"ln dash\" marker-end=\"url(#ponta)\"/><rect x=\"390\" y=\"78\" width=\"160\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"470.0\" y=\"97.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Resumo semanal</text><line x1=\"320\" y1=\"75\" x2=\"386\" y2=\"129\" class=\"ln dash\" marker-end=\"url(#ponta)\"/><rect x=\"390\" y=\"114\" width=\"160\" height=\"30\" rx=\"8\" class=\"b2\"/><text x=\"470.0\" y=\"133.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">WhatsApp</text><text x=\"330\" y=\"160\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Tracejado: depende do Resend (e-mail) ou de outra integração, que o portal ainda não tem.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-medicao",
+  "bloco": "Cadastro, link e acompanhamento",
+  "texto": "Que medição a página tem?",
+  "tipo": "escolha",
+  "opcoes": [
+   "A mesma administração da Wise (pixel do Meta e GA4), sem nada do parceiro",
+   "A da Wise e também o pixel do próprio parceiro, que ele coloca no portal",
+   "Nenhuma por enquanto: só a origem do parceiro no cadastro"
+  ],
+  "contexto": [
+   "Na página dos parceiros a medição fica na administração da landing page, no portal. Aqui o tráfego vem do parceiro, não de anúncio da Wise."
+  ],
+  "logica": "Minha recomendação: a primeira. A origem do parceiro já sai do link; o pixel do parceiro pode vir depois.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "LC-mais",
+  "bloco": "Cadastro, link e acompanhamento",
+  "texto": "Quando os parceiros começam a mandar o link, e algo importante que eu não perguntei?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "A página precisa estar pronta antes da primeira mensagem dos parceiros. Se houver material para esta página (vídeo, fotos, textos de clientes, casos de clientes que vieram de parceiros), diga onde está."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Data prevista:\nMateriais:\nOutras observações:"
+ }
+]
