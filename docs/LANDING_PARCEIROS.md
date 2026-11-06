@@ -20,7 +20,14 @@ Quem se cadastra entra como parceiro comercial, origem `landing_saas`, nível Se
 
 O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem SMTP próprio (Resend), e sem ele a Supabase só envia e-mail para a equipe do projeto. Por isso a pessoa cria a própria senha no formulário e entra direto no portal. Com o Resend configurado, a função também manda um e-mail de boas-vindas. O e-mail não é verificado: alguém poderia se cadastrar com o e-mail de outra pessoa. Com o Resend, dá para passar a exigir confirmação.
 
-## Publicar (exige as chaves da Supabase e da Netlify no ambiente)
+## Estado em 06/11/2026: publicada
+
+* Migração 23 aplicada no projeto `eiozuvnzvqlqslihyooz` e registrada em `supabase_migrations.schema_migrations`.
+* Função `cadastro-parceiro` publicada (sem verificação de JWT); responde com os 24 tipos de software do banco.
+* Site novo na Netlify: https://portal-wise-partners.netlify.app/parceiros. O deploy também corrigiu o "Page not found" das rotas abertas direto (`/entrar`, `/app`), que o deploy anterior tinha sem `_redirects`.
+* Não testado com cadastro real, para não criar parceiro de teste em produção; o caminho de erro (sem aceite) respondeu certo.
+
+## Publicar de novo (exige as chaves da Supabase e da Netlify)
 
 1. Aplicar a migração 23 pela API de gestão, como em `docs/DEPLOY_PROVISORIO.md`, e registrá-la em `supabase_migrations.schema_migrations`.
 2. Publicar a função `cadastro-parceiro` com `verify_jwt = false` (já em `supabase/config.toml`).
