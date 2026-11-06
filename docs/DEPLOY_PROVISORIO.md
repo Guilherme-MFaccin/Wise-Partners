@@ -60,7 +60,7 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 ## Site novo na conta da Wise (06/11/2026)
 
 * Conta da Netlify: Ferramentas Wise Makers (time `ferramentas-wise-makers`, plano Personal, 1.000 créditos por mês; cada publicação gasta 15).
-* Site: `wisepartners` (id `abb92cdb-272e-490c-9851-86a4fa684ea1`), em https://wisepartners.netlify.app. Domínio previsto: wisepartners.com.br.
+* Site: `wisepartners` (id `693c7fd2-ae91-4168-bae7-726591407213`), em https://wisepartners.netlify.app, com o domínio partners.wisemakers.com.br (CNAME `partners` na Hostinger apontando para wisepartners.netlify.app). O primeiro site com esse nome foi recriado porque ficou preso tentando emitir certificado para wisepartners.com.br, que não chegou a existir.
 * Sites novos da Netlify nascem privados (`sso_login`): o acesso público foi liberado pela API, e o selo "Powered by Netlify" está desligado.
 * O site antigo (portal-wise-partners.netlify.app, na conta pessoal) fica como está até o domínio novo funcionar; depois recebe só um redirecionamento para o domínio novo.
 * Publicação: build com `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` e envio da pasta `dist` em zip para `POST /api/v1/sites/<id>/deploys`, com o token da conta nova guardado no ambiente como `NETLIFY_AUTH_TOKEN` (nunca no chat nem no repositório).
