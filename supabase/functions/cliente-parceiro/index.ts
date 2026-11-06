@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
       if (excedeuLimite(`lcl:${ip}`, 60)) return erro("Muitas requisições. Tente de novo em instantes.", 429);
       const codigo = texto(new URL(req.url).searchParams.get("codigo"), 40).toLowerCase();
       const [{ data: cfg }, { data: med }, { data: link }] = await Promise.all([
-        sb.from("config_landing_cliente").select("publicada, video_url").eq("id", 1).maybeSingle(),
+        sb.from("config_landing_cliente").select("publicada, video_url, video_formato").eq("id", 1).maybeSingle(),
         sb.from("config_landing").select("pixel_meta_id, ga4_id, privacidade_versao").eq("id", 1).maybeSingle(),
         sb.from("links_cliente").select("parceiro_id, ativo, liberado_sem_contrato").eq("codigo", codigo).maybeSingle(),
       ]);
@@ -35,7 +35,7 @@ Deno.serve(async (req) => {
         }
       }
       return json({
-        publicada: !!cfg?.publicada, parceiro, video_url: cfg?.video_url ?? null,
+        publicada: !!cfg?.publicada, parceiro, video_url: cfg?.video_url ?? null, video_formato: cfg?.video_formato ?? "auto",
         pixel_meta_id: med?.pixel_meta_id ?? null, ga4_id: med?.ga4_id ?? null, privacidade_versao: med?.privacidade_versao ?? null,
       }, 200, SEM_CACHE);
     }

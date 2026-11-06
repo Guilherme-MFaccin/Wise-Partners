@@ -3,7 +3,7 @@ import { ArrowUpRight, Check, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { fonteVideo } from "@/lib/landing";
+import { fonteVideo, type FormatoVideo } from "@/lib/landing";
 
 // Blocos das landing pages públicas (parceiros e clientes dos parceiros): prova, vídeo, Wise Hub e campos.
 // Os números e casos vêm dos materiais da Wise Makers; mudar aqui muda nas duas páginas.
@@ -78,8 +78,15 @@ export function Secao({ id, eyebrow, titulo, children, className = "" }: { id?: 
 
 export const CAPA_VIDEO = "/landing/igor-capa.webp";
 
-// Sem vídeo configurado, mostra a capa com o Igor no lugar do vídeo que ainda vai ser gravado
-export function Video({ url }: { url: string | null }) {
+// Sem vídeo configurado, mostra a capa com o Igor no lugar do vídeo que ainda vai ser gravado.
+// O quadro segue o formato escolhido em Configurações; no automático, Shorts do YouTube ficam em 9:16 e o resto em 16:9.
+const QUADRO: Record<Exclude<FormatoVideo, "auto">, string> = {
+  horizontal: "aspect-video w-full",
+  vertical: "mx-auto aspect-[9/16] w-full max-w-[320px]",
+  quadrado: "mx-auto aspect-square w-full max-w-[520px]",
+};
+
+export function Video({ url, formato = "auto" }: { url: string | null; formato?: FormatoVideo }) {
   const fonte = fonteVideo(url);
   if (!fonte) {
     return (
@@ -88,24 +95,16 @@ export function Video({ url }: { url: string | null }) {
         className="h-auto w-full rounded-[14px] border border-white/10 bg-black" />
     );
   }
-  // YouTube Shorts: vídeo vertical, num quadro 9:16 de largura limitada
-  if (fonte.tipo === "iframe" && fonte.vertical) {
+  const quadro = QUADRO[formato === "auto" ? (fonte.vertical ? "vertical" : "horizontal") : formato];
+  if (fonte.tipo === "iframe") {
     return (
-      <div className="mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden rounded-[14px] border border-white/10 bg-black">
+      <div className={`${quadro} overflow-hidden rounded-[14px] border border-white/10 bg-black`}>
         <iframe src={fonte.src} title="Vídeo do Programa Wise Partners" className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
       </div>
     );
   }
-  if (fonte.tipo === "iframe") {
-    return (
-      <div className="aspect-video w-full overflow-hidden rounded-[14px] border border-white/10 bg-black">
-        <iframe src={fonte.src} title="Vídeo do Programa Wise Partners" className="h-full w-full" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-      </div>
-    );
-  }
-  return <video src={fonte.src} poster={CAPA_VIDEO} controls playsInline preload="metadata" className="aspect-video w-full rounded-[14px] border border-white/10 bg-black" />;
+  return <video src={fonte.src} poster={CAPA_VIDEO} controls playsInline preload="metadata" className={`${quadro} block rounded-[14px] border border-white/10 bg-black object-contain`} />;
 }
 
 // Caso completo: a página de celular só aparece em tela pequena, a de computador nas demais

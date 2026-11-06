@@ -62,7 +62,7 @@ Deno.serve(async (req) => {
       const { data: cats } = await sb.from("categorias").select("id, nome, ordem").eq("tipo", "comercial").eq("ativa", true)
         .order("ordem").order("nome");
       return json({
-        publicada: cfg.publicada, video_url: cfg.video_url, pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
+        publicada: cfg.publicada, video_url: cfg.video_url, video_formato: cfg.video_formato ?? "auto", pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
         termo_versao: cfg.termo_versao, categorias: (cats ?? []).map((c) => ({ id: c.id, nome: c.nome })),
       }, 200, SEM_CACHE);
     }

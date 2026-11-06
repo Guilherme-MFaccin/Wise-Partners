@@ -5,9 +5,12 @@ export const URL_CADASTRO = `${import.meta.env.VITE_SUPABASE_URL ?? "http://loca
 const CHAVE = (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? import.meta.env.VITE_SUPABASE_ANON_KEY ?? "anon") as string;
 export const CABECALHOS = { apikey: CHAVE, Authorization: `Bearer ${CHAVE}` };
 
+export type FormatoVideo = "auto" | "horizontal" | "vertical" | "quadrado";
+
 export type ConfigLanding = {
   publicada: boolean;
   video_url: string | null;
+  video_formato?: FormatoVideo;
   pixel_meta_id: string | null;
   ga4_id: string | null;
   termo_versao: string;
@@ -167,6 +170,7 @@ export type PaginaCliente = {
   publicada: boolean;
   parceiro: { nome: string; logo_url: string | null } | null;
   video_url: string | null;
+  video_formato?: FormatoVideo;
   pixel_meta_id: string | null;
   ga4_id: string | null;
   privacidade_versao: string | null;

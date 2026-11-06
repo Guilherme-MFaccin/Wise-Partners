@@ -15,7 +15,7 @@ import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
 import { FAIXAS_FATURAMENTO, NIVEIS, nomePilar } from "@/lib/diagnostico";
 
 type Config = {
-  publicada: boolean; video_url: string | null; agenda_url: string | null; hub_url: string;
+  publicada: boolean; video_url: string | null; video_formato: "auto" | "horizontal" | "vertical" | "quadrado"; agenda_url: string | null; hub_url: string;
   icp_min_vendedores: number; icp_faturamento_min: string | null;
 };
 type Cadastro = {
@@ -63,7 +63,7 @@ export function SecaoLandingCliente({ somenteLeitura }: { somenteLeitura: boolea
     if (!f) return;
     setSalvando(true);
     const { error } = await supabase.from("config_landing_cliente").update({
-      publicada: f.publicada, video_url: f.video_url?.trim() || null, agenda_url: f.agenda_url?.trim() || null,
+      publicada: f.publicada, video_url: f.video_url?.trim() || null, video_formato: f.video_formato, agenda_url: f.agenda_url?.trim() || null,
       hub_url: f.hub_url.trim(), icp_min_vendedores: f.icp_min_vendedores, icp_faturamento_min: f.icp_faturamento_min || null,
     }).eq("id", 1);
     setSalvando(false);
@@ -99,6 +99,18 @@ export function SecaoLandingCliente({ somenteLeitura }: { somenteLeitura: boolea
             <Label htmlFor="lc-video">Endereço do vídeo</Label>
             <Input id="lc-video" placeholder="https://youtu.be/..." value={f.video_url ?? ""} onChange={(e) => set("video_url", e.target.value)} disabled={desligado} />
             <p className="text-xs text-neutro-300">Vazio, a página mostra a capa com o Igor.</p>
+          </div>
+          <div className="space-y-1.5">
+            <Label htmlFor="lc-formato">Formato do vídeo</Label>
+            <Select value={f.video_formato} onValueChange={(v) => set("video_formato", v as Config["video_formato"])} disabled={desligado}>
+              <SelectTrigger id="lc-formato"><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="auto">Automático (Shorts em pé, os demais 16:9)</SelectItem>
+                <SelectItem value="horizontal">Horizontal 16:9</SelectItem>
+                <SelectItem value="vertical">Vertical 9:16</SelectItem>
+                <SelectItem value="quadrado">Quadrado 1:1</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="lc-agenda">Página de agendamento do Google Agenda</Label>

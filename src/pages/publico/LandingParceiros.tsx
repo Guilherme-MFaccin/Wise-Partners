@@ -281,7 +281,7 @@ export default function LandingParceiros() {
             </p>
           </div>
           <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
-            <Video url={cfg?.video_url ?? null} />
+            <Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} />
           </div>
           <div className="lg:col-start-1 lg:row-start-2">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-8">

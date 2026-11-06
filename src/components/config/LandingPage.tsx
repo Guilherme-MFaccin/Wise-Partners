@@ -10,11 +10,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
 
 type Config = {
-  publicada: boolean; video_url: string | null; pixel_meta_id: string | null; capi_ativa: boolean; ga4_id: string | null;
+  publicada: boolean; video_url: string | null; video_formato: "auto" | "horizontal" | "vertical" | "quadrado"; pixel_meta_id: string | null; capi_ativa: boolean; ga4_id: string | null;
   termo_versao: string; termo_texto: string; privacidade_versao: string; privacidade_texto: string; contato_privacidade: string;
 };
 type Cadastro = {
@@ -57,7 +58,7 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
     if (!f) return;
     setSalvando(true);
     const { error } = await supabase.from("config_landing").update({
-      publicada: f.publicada, video_url: f.video_url?.trim() || null, pixel_meta_id: f.pixel_meta_id?.trim() || null, capi_ativa: f.capi_ativa,
+      publicada: f.publicada, video_url: f.video_url?.trim() || null, video_formato: f.video_formato, pixel_meta_id: f.pixel_meta_id?.trim() || null, capi_ativa: f.capi_ativa,
       ga4_id: f.ga4_id?.trim().toUpperCase() || null, termo_versao: f.termo_versao, termo_texto: f.termo_texto,
       privacidade_versao: f.privacidade_versao, privacidade_texto: f.privacidade_texto, contato_privacidade: f.contato_privacidade,
     }).eq("id", 1);
@@ -87,7 +88,19 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
         <div className="space-y-1.5">
           <Label htmlFor="lp-video">Endereço do vídeo</Label>
           <Input id="lp-video" placeholder="https://youtu.be/... ou https://vimeo.com/..." value={f.video_url ?? ""} onChange={(e) => set("video_url", e.target.value)} disabled={desligado} />
-          <p className="text-xs text-neutro-300">YouTube, Vimeo ou arquivo de vídeo. Vazio, a página mostra um espaço reservado.</p>
+          <p className="text-xs text-neutro-300">YouTube, Vimeo ou arquivo de vídeo. Vazio, a página mostra a capa com o Igor.</p>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="lp-formato">Formato do vídeo</Label>
+          <Select value={f.video_formato} onValueChange={(v) => set("video_formato", v as Config["video_formato"])} disabled={desligado}>
+            <SelectTrigger id="lp-formato"><SelectValue /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="auto">Automático (Shorts em pé, os demais 16:9)</SelectItem>
+              <SelectItem value="horizontal">Horizontal 16:9</SelectItem>
+              <SelectItem value="vertical">Vertical 9:16</SelectItem>
+              <SelectItem value="quadrado">Quadrado 1:1</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </Bloco>
 
