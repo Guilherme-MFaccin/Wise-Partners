@@ -8,7 +8,7 @@ export const PILARES = [
   { chave: "demanda", nome: "Demanda e aquisição", dica: "De onde vêm os clientes novos, com que ritmo e a que custo." },
   { chave: "conversao", nome: "Conversão e experiência", dica: "Como uma oportunidade vira venda, etapa por etapa." },
   { chave: "expansao", nome: "Expansão e retenção", dica: "Quanto você vende de novo para quem já é cliente." },
-  { chave: "governanca", nome: "Governança e integração", dica: "Metas, rotina de gestão e o CRM como registro único." },
+  { chave: "governanca", nome: "Governança e integração", dica: "Metas, rotina de gestão e o sistema como registro único." },
 ] as const;
 
 export const CRITERIOS = [
@@ -28,35 +28,35 @@ export const AFIRMACOES: Record<ChavePilar, Record<ChaveCriterio, string>> = {
     estrategia: "Temos por escrito quem é o nosso cliente ideal e por que ele compra de nós, e não do concorrente.",
     processo: "O time apresenta a empresa e a proposta de valor do mesmo jeito, seguindo um roteiro.",
     dados: "Sabemos de quais segmentos e regiões vem a maior parte do faturamento e da margem.",
-    tecnologia: "O perfil de cliente ideal está registrado no CRM e é usado para separar a carteira.",
+    tecnologia: "O perfil de cliente ideal está registrado no sistema e é usado para separar a carteira.",
     pessoas: "Todo vendedor sabe explicar em uma frase por que um cliente deve escolher a gente.",
   },
   demanda: {
     estrategia: "Temos uma meta de clientes novos por mês e sabemos de quais canais eles vão vir.",
     processo: "A prospecção acontece numa rotina semanal, com tempo reservado na agenda do time.",
     dados: "Sabemos quantos contatos novos geramos por mês e quanto custa conquistar um cliente.",
-    tecnologia: "Todo contato novo entra no CRM, com a origem registrada.",
+    tecnologia: "Todo contato novo entra no sistema, com a origem registrada.",
     pessoas: "O time prospecta mesmo quando a carteira está cheia de pedidos.",
   },
   conversao: {
     estrategia: "As etapas da venda estão definidas, com o que precisa acontecer para passar de uma para a outra.",
     processo: "Toda proposta segue um padrão e tem um próximo passo combinado com o cliente.",
     dados: "Sabemos a taxa de conversão de cada etapa e o motivo das vendas perdidas.",
-    tecnologia: "As negociações em andamento estão no CRM, e não em planilhas ou só no WhatsApp.",
+    tecnologia: "As negociações em andamento estão no sistema, e não em planilhas ou só no WhatsApp.",
     pessoas: "Vendedores novos aprendem o processo com material e treinamento, e não só acompanhando alguém.",
   },
   expansao: {
     estrategia: "Temos um plano para vender mais para quem já é cliente e para recuperar quem parou de comprar.",
     processo: "Existe uma rotina de contato com a carteira atual, além de atender os pedidos que chegam.",
     dados: "Sabemos quanto da receita vem de clientes recorrentes e quais clientes estão comprando menos.",
-    tecnologia: "O CRM avisa quando um cliente fica tempo demais sem comprar ou sem contato.",
+    tecnologia: "O sistema avisa quando um cliente fica tempo demais sem comprar ou sem contato.",
     pessoas: "O time é cobrado e reconhecido pela carteira que mantém, e não só pelas vendas novas.",
   },
   governanca: {
     estrategia: "As metas comerciais saem de dados e são desdobradas por vendedor.",
     processo: "Existe uma reunião comercial com pauta fixa, em que os números são acompanhados.",
-    dados: "Os indicadores comerciais saem do CRM, sem montar planilha à mão.",
-    tecnologia: "O CRM é o registro obrigatório de todas as conversas e negociações com clientes.",
+    dados: "Os indicadores comerciais saem do sistema, sem montar planilha à mão.",
+    tecnologia: "O sistema é o registro obrigatório de todas as conversas e negociações com clientes.",
     pessoas: "O comercial funciona mesmo quando o dono ou o gestor não está por perto.",
   },
 };

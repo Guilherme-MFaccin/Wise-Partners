@@ -42,7 +42,7 @@ function perguntas(p: string) {
 }
 
 const RECEBE = [
-  { icone: ClipboardList, titulo: "Diagnóstico de maturidade comercial", texto: "Cinco pilares do seu comercial, de quem é o cliente ideal até a rotina de gestão e o uso do CRM." },
+  { icone: ClipboardList, titulo: "Diagnóstico de maturidade comercial", texto: "Cinco pilares do seu comercial, de quem é o cliente ideal até a rotina de gestão e o uso do sistema no dia a dia." },
   { icone: MapaIcone, titulo: "Plano de 30, 60 e 90 dias", texto: "O que priorizar primeiro, com ações e indicadores pra acompanhar." },
   { icone: Sparkles, titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas, treinamentos curtos, calculadoras, planilhas e checklists." },
   { icone: CalendarCheck, titulo: "Reunião individual de diagnóstico", texto: "Para empresas com mais de 3 vendedores, online, com a equipe da Wise Makers." },
@@ -58,7 +58,7 @@ const PASSOS = [
 function beneficios(p: string) {
   return [
     { visual: "travas" as const, titulo: "Saiba onde o seu comercial mais trava", texto: "O diagnóstico olha os cinco pilares e aponta o mais frágil. Você para de tentar resolver tudo ao mesmo tempo e começa pelo que mais pesa no faturamento." },
-    { visual: "sistema" as const, titulo: "Use de verdade o sistema que você já paga", texto: `Com processo e rotina definidos, o time passa a registrar tudo no sistema da ${p}, e não em planilha e WhatsApp. Você enxerga o funil e decide com dado.` },
+    { visual: "sistema" as const, titulo: "Use de verdade o sistema que você já paga", texto: `Com processo e rotina definidos, o time passa a usar o sistema da ${p} no dia a dia, no lugar de planilhas paralelas e anotações soltas. A informação fica num lugar só, e você decide com dado.` },
     { visual: "plano" as const, titulo: "Um comercial que depende menos de você", texto: "O plano de 30, 60 e 90 dias diz o que fazer primeiro, quem faz e como medir. A meta deixa de sair no achismo e o time sabe o que fazer sem esperar o dono." },
   ];
 }
@@ -108,7 +108,7 @@ function VisualBeneficio({ tipo, parceiro }: { tipo: "travas" | "sistema" | "pla
         <div className="rounded-[14px] border border-white/10 bg-card p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutro-300">Hoje</p>
           <ul className="mt-3 space-y-2 text-sm text-neutro-300">
-            {["Planilha do vendedor", "Conversas só no WhatsApp", "Meta na cabeça do dono"].map((t) => (
+            {["Planilhas paralelas", "Informação espalhada no WhatsApp", "Decisão no achismo"].map((t) => (
               <li key={t} className="flex items-center gap-2"><X className="h-4 w-4 shrink-0 text-neutro-500" />{t}</li>
             ))}
           </ul>
@@ -116,7 +116,7 @@ function VisualBeneficio({ tipo, parceiro }: { tipo: "travas" | "sistema" | "pla
         <div className="rounded-[14px] border border-menta-500/40 bg-menta-500/10 p-5">
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-300">Com processo</p>
           <ul className="mt-3 space-y-2 text-sm">
-            {["Funil e histórico no sistema", `Tudo registrado na ${parceiro}`, "Meta por vendedor, com número"].map((t) => (
+            {[`Tudo no sistema da ${parceiro}`, "Informação num lugar só", "Decisão com número"].map((t) => (
               <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-menta-400" />{t}</li>
             ))}
           </ul>
@@ -127,7 +127,7 @@ function VisualBeneficio({ tipo, parceiro }: { tipo: "travas" | "sistema" | "pla
   const fases: [string, string][] = [
     ["30 dias", "Definir o cliente ideal e as etapas da venda"],
     ["60 dias", "Rotina semanal de prospecção e reunião de números"],
-    ["90 dias", "Metas por vendedor a partir do que está no sistema"],
+    ["90 dias", "Metas por vendedor acompanhadas com dados do sistema"],
   ];
   return (
     <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
@@ -514,7 +514,7 @@ export default function LandingCliente() {
                       </Campo>
                       <div className="sm:col-span-2">
                         <Campo id="desafio" rotulo="Seu principal desafio no comercial hoje" erro={mostra("desafio")}>
-                          <Textarea className="min-h-[72px] border-white/40" id="desafio" rows={2} maxLength={600} placeholder="Ex.: o time não prospecta, a meta não fecha, o CRM não é usado"
+                          <Textarea className="min-h-[72px] border-white/40" id="desafio" rows={2} maxLength={600} placeholder="Ex.: o time não prospecta, a meta não fecha, o sistema não é usado como deveria"
                             value={f.desafio} onChange={(e) => set("desafio", e.target.value)} aria-invalid={!!mostra("desafio")} aria-describedby={mostra("desafio") ? "desafio-erro" : undefined} />
                         </Campo>
                       </div>
