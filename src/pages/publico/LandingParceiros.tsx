@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } 
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
-  ArrowDown, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
+  ArrowDown, ArrowUpRight, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
 } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
@@ -86,6 +86,27 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "Quando eu começo?", r: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." },
 ];
 
+// Logos de clientes da Wise Makers (apresentação de parceria, slide 5). Os primeiros 12 aparecem também no celular.
+// Sem nome: logos que não trazem o nome escrito; ficam como decoração para leitor de tela.
+const CLIENTES: [number, string][] = [
+  [14, "Havan"], [21, "Bayer"], [18, "Café Jandaia"], [6, "Fusion Alumínios"], [5, "Telhaço"], [27, "Beckhauser"],
+  [1, "Giannini"], [3, "Gelaboca"], [19, "Polifest"], [17, "Natural Produtos"], [10, "Implemar"], [13, "Magro"],
+  [2, "Nicopel"], [7, "Colli"], [8, "Chamego Bandeiras"], [9, "Powerfit"], [12, "Aggi"], [15, "Glück"], [16, "Heck"],
+  [20, "Dates"], [23, "Ostellato"], [25, "F.A. Colchões"], [26, "Karams"], [4, ""], [11, ""], [22, ""], [24, ""], [28, ""],
+];
+
+// Casos completos: a versão de celular é outra página, então cada caso tem os dois endereços
+const CASOS = {
+  protectpool: {
+    desktop: "https://triade-emails.vercel.app/uploads/03-caso-grupo-protectpool-260821-1125",
+    celular: "https://triade-emails.vercel.app/uploads/03-caso-grupo-protectpool-mobile-260821-1125",
+  },
+  fusion: {
+    desktop: "https://triade-emails.vercel.app/uploads/02-caso-fusion-aluminios-260821-1124",
+    celular: "https://triade-emails.vercel.app/uploads/02-caso-fusion-aluminios-mobile-260821-1124",
+  },
+};
+
 const VAZIO = {
   nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "", senha: "",
   aceite_termo: false, aceite_privacidade: false, website: "",
@@ -101,9 +122,18 @@ function Secao({ id, eyebrow, titulo, children, className = "" }: { id?: string;
   );
 }
 
+const CAPA_VIDEO = "/landing/igor-capa.webp";
+
+// Sem vídeo configurado, mostra a capa com o Igor no lugar do vídeo que ainda vai ser gravado
 function Video({ url }: { url: string | null }) {
   const fonte = fonteVideo(url);
-  if (!fonte) return null;
+  if (!fonte) {
+    return (
+      <img src={CAPA_VIDEO} width={670} height={514} decoding="async"
+        alt="Igor, da Wise Makers, na capa do vídeo de apresentação do Programa Wise Partners"
+        className="h-auto w-full rounded-[14px] border border-white/10 bg-black" />
+    );
+  }
   if (fonte.tipo === "iframe") {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-[14px] border border-white/10 bg-black">
@@ -112,7 +142,19 @@ function Video({ url }: { url: string | null }) {
       </div>
     );
   }
-  return <video src={fonte.src} controls playsInline preload="metadata" className="aspect-video w-full rounded-[14px] border border-white/10 bg-black" />;
+  return <video src={fonte.src} poster={CAPA_VIDEO} controls playsInline preload="metadata" className="aspect-video w-full rounded-[14px] border border-white/10 bg-black" />;
+}
+
+// Caso completo: a página de celular só aparece em tela pequena, a de computador nas demais
+function LinkCaso({ caso, nome }: { caso: { desktop: string; celular: string }; nome: string }) {
+  const classe = "items-center gap-1 font-semibold text-menta-300 underline-offset-4 hover:underline";
+  const texto = <>Ver o caso completo <ArrowUpRight className="h-4 w-4" aria-hidden /><span className="sr-only"> {nome} (abre em outra aba)</span></>;
+  return (
+    <p className="mt-6">
+      <a href={caso.desktop} target="_blank" rel="noopener noreferrer" className={`hidden sm:inline-flex ${classe}`}>{texto}</a>
+      <a href={caso.celular} target="_blank" rel="noopener noreferrer" className={`inline-flex sm:hidden ${classe}`}>{texto}</a>
+    </p>
+  );
 }
 
 function Campo({ id, rotulo, opcional, erro, children }: { id: string; rotulo: string; opcional?: boolean; erro?: string; children: ReactNode }) {
@@ -340,6 +382,19 @@ export default function LandingParceiros() {
           </div>
         </section>
 
+        {/* 1b. Faixa de prova: logos de clientes da Wise Makers */}
+        <section aria-labelledby="clientes-titulo" className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 lg:pb-20">
+          <h2 id="clientes-titulo" className="text-center text-sm font-medium text-neutro-300">Empresas que estruturaram o comercial com a Wise Makers</h2>
+          <ul className="mt-5 grid grid-cols-6 gap-2 sm:grid-cols-[repeat(14,minmax(0,1fr))] sm:gap-3">
+            {CLIENTES.map(([n, nome], i) => (
+              <li key={n} className={i >= 12 ? "hidden sm:block" : ""}>
+                <img src={`/landing/cliente-${String(n).padStart(2, "0")}.webp`} alt={nome} width={128} height={128} loading="lazy" decoding="async"
+                  className="aspect-square h-auto w-full rounded-[8px] bg-white/5 sm:rounded-[10px]" />
+              </li>
+            ))}
+          </ul>
+        </section>
+
         {/* 2. Transformação: o caminho do parceiro em três passos */}
         <div className="border-y border-white/10 bg-neutro-800/40">
           <Secao eyebrow="Como funciona" titulo="Três passos, e o seu software passa a vir com consultoria.">
@@ -383,14 +438,15 @@ export default function LandingParceiros() {
 
         {/* 5. Chamada do meio, com prova */}
         <section className="border-y border-white/10 bg-card">
-          <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mx-auto grid max-w-6xl items-center gap-6 px-4 py-10 sm:px-6 md:grid-cols-[1fr_1.1fr] md:gap-10 lg:py-12">
+            <img src="/landing/evento.webp" width={1200} height={868} loading="lazy" decoding="async"
+              alt="Equipe da Wise Makers com dezenas de profissionais de vendas de clientes num encontro presencial"
+              className="h-auto w-full rounded-[14px] border border-white/10" />
             <div>
-              <p className="text-lg font-semibold">Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers.</p>
-              <p className="mt-1 text-sm text-neutro-300">Agora esse método pode ir junto com o seu software, sem custo.</p>
-            </div>
-            <div className="flex flex-col items-start gap-2 lg:items-end">
-              <Button size="lg" onClick={irParaCadastro} className="h-12 px-6 text-base">Quero ser parceiro</Button>
-              <p className="text-xs text-neutro-300">Sem custo · Sem exclusividade · Sai quando quiser</p>
+              <p className="text-[22px] font-semibold leading-snug">Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers.</p>
+              <p className="mt-2 text-neutro-300">Agora esse método pode ir junto com o seu software, sem custo.</p>
+              <Button size="lg" onClick={irParaCadastro} className="mt-6 h-12 px-6 text-base">Quero ser parceiro</Button>
+              <p className="mt-2 text-xs text-neutro-300">Sem custo · Sem exclusividade · Sai quando quiser</p>
             </div>
           </div>
         </section>
@@ -413,12 +469,21 @@ export default function LandingParceiros() {
             ))}
           </div>
           <p className="mt-4 text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo. O diagnóstico online é aberto a qualquer cliente seu.</p>
+          <figure className="mt-10 grid items-center gap-6 lg:grid-cols-[1fr_1.6fr] lg:gap-10">
+            <figcaption>
+              <h3 className="text-[22px] font-semibold leading-snug">O Wise Hub, por dentro</h3>
+              <p className="mt-3 text-neutro-100">É aqui que o seu cliente faz o diagnóstico, segue o Método Wise passo a passo e encontra os treinamentos, o planejador comercial e as ferramentas.</p>
+            </figcaption>
+            <img src="/landing/wise-hub.webp" width={1200} height={519} loading="lazy" decoding="async"
+              alt="Tela inicial do Wise Hub com o painel de evolução, o vídeo de boas-vindas e a próxima etapa do Método Wise"
+              className="h-auto w-full rounded-[14px] border border-white/10" />
+          </figure>
         </Secao>
 
         {/* 7. Prova */}
         <Secao eyebrow="Resultados da Wise Makers" titulo="O método que vai pro seu cliente já funciona em empresas líderes.">
           <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-            <figure className="rounded-[14px] border border-white/10 bg-card p-6">
+            <article className="rounded-[14px] border border-white/10 bg-card p-6">
               <p className="text-sm font-semibold text-neutro-300">Grupo Protectpool · indústria líder em proteção para piscinas, com mais de 200 parceiros e franqueados</p>
               <p className="mt-3 text-neutro-100">
                 Já estava no topo do setor. Com a Wise Makers, estruturou o CRM e o processo comercial da rede e bateu o recorde de faturamento seis meses antes do planejado.
@@ -427,22 +492,26 @@ export default function LandingParceiros() {
                 {[["+35,56%", "maio"], ["+26,65%", "junho"], ["+54,83%", "julho, recorde"]].map(([n, m]) => (
                   <div key={m}>
                     <dt className="sr-only">Crescimento do faturamento em {m}</dt>
-                    <dd className="text-2xl font-bold tabular-nums text-menta-400 sm:text-3xl">{n}</dd>
+                    <dd className="text-xl font-bold tabular-nums text-menta-400 sm:text-3xl">{n}</dd>
                     <dd className="text-xs text-neutro-300">{m}</dd>
                   </div>
                 ))}
               </dl>
-              <blockquote className="mt-6 border-l-2 border-menta-500/60 pl-4 text-neutro-100">
-                "Loucura é esperar resultados diferentes fazendo sempre as mesmas coisas."
-              </blockquote>
-              <figcaption className="mt-2 pl-4 text-sm text-neutro-300">João Vitor, sócio e gerente comercial do Grupo Protectpool</figcaption>
-            </figure>
-            <div className="rounded-[14px] border border-white/10 bg-card p-6">
+              <figure className="mt-6">
+                <blockquote className="border-l-2 border-menta-500/60 pl-4 text-neutro-100">
+                  "Loucura é esperar resultados diferentes fazendo sempre as mesmas coisas."
+                </blockquote>
+                <figcaption className="mt-2 pl-4 text-sm text-neutro-300">João Vitor, sócio e gerente comercial do Grupo Protectpool</figcaption>
+              </figure>
+              <LinkCaso caso={CASOS.protectpool} nome="do Grupo Protectpool" />
+            </article>
+            <article className="rounded-[14px] border border-white/10 bg-card p-6">
               <p className="text-sm font-semibold text-neutro-300">Fusion Alumínios · indústria do ramo moveleiro, 18 anos de mercado</p>
               <p className="mt-5 text-[36px] font-bold tabular-nums text-menta-400">+30%</p>
               <p className="text-sm text-neutro-300">de faturamento em 8 meses</p>
               <p className="mt-4 text-neutro-100">Análise de dados comerciais, treinamento do time e ajuste do processo, com a operação rodando com uma equipe mais enxuta.</p>
-            </div>
+              <LinkCaso caso={CASOS.fusion} nome="da Fusion Alumínios" />
+            </article>
           </div>
         </Secao>
 

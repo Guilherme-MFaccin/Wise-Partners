@@ -16,6 +16,17 @@ Página pública `/parceiros` do portal, para quem chega dos anúncios do Meta. 
 
 Quem se cadastra entra como parceiro comercial, origem `landing_saas`, nível Select e pacote Prateleira (a confirmar pelo time), já em onboarding, com o contato como responsável da parceria. Sem filtro: quem não é CRM nem ERP entra na categoria que escolheu.
 
+## Imagens (06/11/2026)
+
+Em `public/landing/`, tiradas do material enviado pelo usuário:
+
+* `igor-capa.webp`: capa com o Igor no lugar do vídeo que ainda vai ser gravado. Aparece enquanto o endereço do vídeo estiver vazio em Configurações; com vídeo em arquivo, vira a capa do player.
+* `cliente-01.webp` a `cliente-28.webp`: logos de clientes, recortados do slide 5 da apresentação de parceria. Faixa logo abaixo do topo (12 no celular, 28 a partir de 640 px).
+* `evento.webp`: foto do slide 4, na chamada do meio.
+* `wise-hub.webp`: tela do Wise Hub do slide 12, em "O que está incluído".
+
+Os casos da Protectpool e da Fusion têm o botão "Ver o caso completo": a página de celular abre em telas até 639 px, a de computador nas demais.
+
 ## Diferença em relação ao pedido
 
 O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem SMTP próprio (Resend), e sem ele a Supabase só envia e-mail para a equipe do projeto. Por isso a pessoa cria a própria senha no formulário e entra direto no portal. Com o Resend configurado, a função também manda um e-mail de boas-vindas. O e-mail não é verificado: alguém poderia se cadastrar com o e-mail de outra pessoa. Com o Resend, dá para passar a exigir confirmação.
@@ -38,7 +49,8 @@ O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem
 ## Antes de rodar os anúncios
 
 - Vídeo final do Igor (a página mostra um espaço reservado até lá).
-- Logos de clientes: a página ainda não tem a faixa de logos; entram quando os arquivos chegarem.
+- Vídeo: até ele entrar, a capa do Igor tem o ícone de play, mas não toca.
+- Logos de clientes: confirmar se todas as 28 empresas autorizam o uso do logo em anúncio pago.
 - Revisão jurídica do termo de adesão e da política de privacidade (minutas na migração 23, editáveis no portal).
 - Autorização da Protectpool e da Fusion Alumínios para nome, números e a frase do João Vitor em anúncio pago.
 - Links dos anúncios com UTM, um `utm_content` por vídeo (ex.: `video-1` a `video-5`), para a lista de cadastros mostrar qual vídeo trouxe cada parceiro.
