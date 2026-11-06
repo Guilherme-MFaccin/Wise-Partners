@@ -56,3 +56,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * E-mails de acesso pelo SMTP padrão da Supabase: poucos por hora e só para a equipe do projeto. Para convidar o Igor e parceiros, configure o SMTP do Resend (README, Implantação, passo 3).
 * Endereço `*.netlify.app`. Um domínio da Wise (por exemplo `parceiros.wisemakers.com.br`) pode ser ligado depois na Netlify ou no Lovable.
 * Plano gratuito da Supabase: o projeto pausa depois de uma semana sem uso e volta ao abrir o painel.
+
+## Site novo na conta da Wise (06/11/2026)
+
+* Conta da Netlify: Ferramentas Wise Makers (time `ferramentas-wise-makers`, plano Personal, 1.000 créditos por mês; cada publicação gasta 15).
+* Site: `wisepartners` (id `abb92cdb-272e-490c-9851-86a4fa684ea1`), em https://wisepartners.netlify.app. Domínio previsto: wisepartners.com.br.
+* Sites novos da Netlify nascem privados (`sso_login`): o acesso público foi liberado pela API, e o selo "Powered by Netlify" está desligado.
+* O site antigo (portal-wise-partners.netlify.app, na conta pessoal) fica como está até o domínio novo funcionar; depois recebe só um redirecionamento para o domínio novo.
+* Publicação: build com `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` e envio da pasta `dist` em zip para `POST /api/v1/sites/<id>/deploys`, com o token da conta nova guardado no ambiente como `NETLIFY_AUTH_TOKEN` (nunca no chat nem no repositório).
