@@ -33,6 +33,12 @@ O link de indicação de projeto (`/i/código`) continua como estava (FO-10: doi
 * Função `cliente-parceiro` publicada; link inexistente responde "Link inválido." sem gravar nada.
 * Site publicado na Netlify. Nenhum cadastro real foi feito, para não criar cliente de teste em produção; o link de cada parceiro nasce quando ele abre Indicar no portal.
 
+## Teste com a PluggMe Hub (06/11/2026)
+
+* Migração 25: `links_cliente.liberado_sem_contrato` abre a página de um parceiro que ainda não tem contrato. Hoje só a PluggMe Hub tem a marca (link `/c/dpqyk0qcql`).
+* Cliente teste feito pela página publicada: "Cliente Teste PluggMe (apagar)", fora do ICP, autodiagnóstico 40% (Em estruturação), mais frágil: expansão e retenção. Para apagar: `delete from public.cadastros_cliente where id = 'ab69592d-df65-4b36-90d6-8f7c7967c7e6';`
+* Para tirar a exceção: `update public.links_cliente set liberado_sem_contrato = false where codigo = 'dpqyk0qcql';`
+
 ## Mudanças na página dos parceiros
 
 * Reunião individual: "mais de 3 vendedores" no lugar de "R$ 250 mil por mês e duas pessoas" (FO-10).

@@ -107,6 +107,16 @@ describe("Página do cliente do parceiro", () => {
       await q.falha("select chave from public.cadastros_cliente");
     }));
 
+  it("link liberado sem contrato funciona só para o parceiro marcado", () =>
+    transacao(async (q) => {
+      await q.sistema();
+      await q.sql("insert into public.links_cliente (parceiro_id, codigo) values ($1, 'deltasem01')", [P.D]);
+      await q.falha("select public.cadastrar_cliente_parceiro($1::jsonb)", [JSON.stringify(dados("deltasem01"))]);
+      await q.sql("update public.links_cliente set liberado_sem_contrato = true where codigo = 'deltasem01'");
+      const r = (await q.um("select public.cadastrar_cliente_parceiro($1::jsonb) as r", [JSON.stringify(dados("deltasem01"))])).r;
+      expect(r.parceiro).toBe("Parceiro Delta");
+    }));
+
   it("logo: o parceiro grava só na própria pasta", () =>
     transacao(async (q) => {
       await q.como(U.parceiroA);

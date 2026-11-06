@@ -23,13 +23,13 @@ Deno.serve(async (req) => {
       const [{ data: cfg }, { data: med }, { data: link }] = await Promise.all([
         sb.from("config_landing_cliente").select("publicada, video_url").eq("id", 1).maybeSingle(),
         sb.from("config_landing").select("pixel_meta_id, ga4_id, privacidade_versao").eq("id", 1).maybeSingle(),
-        sb.from("links_cliente").select("parceiro_id, ativo").eq("codigo", codigo).maybeSingle(),
+        sb.from("links_cliente").select("parceiro_id, ativo, liberado_sem_contrato").eq("codigo", codigo).maybeSingle(),
       ]);
       let parceiro: { nome: string; logo_url: string | null } | null = null;
       if (link?.ativo) {
         const { data: p } = await sb.from("parceiros").select("nome_fantasia, logo_caminho, data_encerramento").eq("id", link.parceiro_id).maybeSingle();
         const { data: assinado } = await sb.rpc("parceiro_assinado", { p_id: link.parceiro_id });
-        if (p && assinado && !p.data_encerramento) {
+        if (p && (assinado || link.liberado_sem_contrato) && !p.data_encerramento) {
           const logo = p.logo_caminho ? sb.storage.from("logos").getPublicUrl(p.logo_caminho).data.publicUrl : null;
           parceiro = { nome: p.nome_fantasia, logo_url: logo };
         }
