@@ -34,7 +34,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body { @apply bg-background text-foreground font-sans antialiased; }
   h1, h2, h3 { @apply font-semibold tracking-tight; }
-  :focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(0, 225, 147, 0.18); }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
 }
 
 @media print {

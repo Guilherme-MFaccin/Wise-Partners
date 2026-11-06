@@ -75,15 +75,7 @@ function Secao({ id, eyebrow, titulo, children, className = "" }: { id?: string;
 
 function Video({ url }: { url: string | null }) {
   const fonte = fonteVideo(url);
-  if (!fonte) {
-    return (
-      <div className="flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-[14px] border border-white/10 bg-card px-6 text-center">
-        <PlayCircle className="h-10 w-10 text-menta-400" aria-hidden />
-        <p className="font-semibold">Vídeo do Igor, diretor da Wise Makers</p>
-        <p className="max-w-xs text-sm text-neutro-300">Em menos de 3 minutos, como o programa funciona e o que muda pro seu software.</p>
-      </div>
-    );
-  }
+  if (!fonte) return null;
   if (fonte.tipo === "iframe") {
     return (
       <div className="aspect-video w-full overflow-hidden rounded-[14px] border border-white/10 bg-black">
@@ -117,6 +109,7 @@ export default function LandingParceiros() {
   const [criado, setCriado] = useState<string | null>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const ctaTopo = useRef<HTMLButtonElement>(null);
+  const fimRef = useRef<HTMLElement>(null);
   const [fixoVisivel, setFixoVisivel] = useState(false);
   const set = (k: keyof typeof VAZIO, v: string | boolean) => setF((x) => ({ ...x, [k]: v }));
 
@@ -143,16 +136,18 @@ export default function LandingParceiros() {
 
   // Botão fixo no celular: aparece quando o botão do topo sai da tela e some quando o cadastro aparece
   useEffect(() => {
-    const vistos = { topo: true, cadastro: false };
+    const vistos = { topo: true, cadastro: false, fim: false };
     const obs = new IntersectionObserver((itens) => {
       for (const i of itens) {
         if (i.target === ctaTopo.current) vistos.topo = i.isIntersecting;
         if (i.target === formRef.current) vistos.cadastro = i.isIntersecting;
+        if (i.target === fimRef.current) vistos.fim = i.isIntersecting;
       }
-      setFixoVisivel(!vistos.topo && !vistos.cadastro);
+      setFixoVisivel(!vistos.topo && !vistos.cadastro && !vistos.fim);
     });
     if (ctaTopo.current) obs.observe(ctaTopo.current);
     if (formRef.current) obs.observe(formRef.current);
+    if (fimRef.current) obs.observe(fimRef.current);
     return () => obs.disconnect();
   }, []);
 
@@ -232,7 +227,7 @@ export default function LandingParceiros() {
         <section className="mx-auto grid w-full max-w-6xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-x-12 lg:gap-y-0 lg:pb-20 lg:pt-16">
           <div className="lg:col-start-1 lg:row-start-1">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Wise Partners · para empresas de CRM e ERP</p>
-            <h1 className="mt-3 text-balance font-display text-[38px] font-extrabold leading-[1.06] sm:text-[48px]">
+            <h1 className="mt-3 text-balance font-display text-[36px] font-extrabold leading-[1.06] sm:text-[48px]">
               Pare de competir por preço: inclua consultoria comercial no seu software, sem custo.
             </h1>
             <p className="mt-5 max-w-[62ch] text-base text-neutro-100 sm:text-lg">
@@ -245,7 +240,7 @@ export default function LandingParceiros() {
               {[["4 anos", "de Wise Makers"], ["+300", "empresas estruturadas"], ["+1.500", "vendedores capacitados"]].map(([n, r]) => (
                 <div key={r} className="rounded-[10px] border border-white/10 bg-card px-2 py-3">
                   <dt className="sr-only">{r}</dt>
-                  <dd className="font-display text-2xl font-bold tabular-nums">{n}</dd>
+                  <dd className="text-2xl font-bold tabular-nums">{n}</dd>
                   <dd className="text-xs text-neutro-300">{r}</dd>
                 </div>
               ))}
@@ -260,7 +255,7 @@ export default function LandingParceiros() {
             </div>
             <ul className="mt-6 grid gap-2 text-sm text-neutro-100 sm:grid-cols-2">
               {GARANTIAS.map((g) => (
-                <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0 text-menta-400" aria-hidden />{g}</li>
+                <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0 text-neutro-300" aria-hidden />{g}</li>
               ))}
             </ul>
           </div>
@@ -301,7 +296,7 @@ export default function LandingParceiros() {
               </li>
             ))}
           </ol>
-          <p className="mt-6 text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo que você fechar.</p>
+          <p className="mt-6 max-w-[68ch] text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo que você fechar. O diagnóstico online é aberto a qualquer cliente seu; empresas que faturam a partir de R$ 250 mil por mês e têm pelo menos duas pessoas no comercial também ganham uma reunião individual com a equipe da Wise.</p>
         </Secao>
 
         {/* Resultados para o SaaS */}
@@ -310,7 +305,7 @@ export default function LandingParceiros() {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {RESULTADOS.map((r) => (
                 <div key={r.titulo} className="rounded-[14px] border border-white/10 bg-card p-5">
-                  <r.icone className="h-5 w-5 text-menta-400" aria-hidden />
+                  <r.icone className="h-5 w-5 text-neutro-300" aria-hidden />
                   <p className="mt-3 font-semibold">{r.titulo}</p>
                   <p className="mt-2 text-sm text-neutro-300">{r.texto}</p>
                 </div>
@@ -331,7 +326,7 @@ export default function LandingParceiros() {
                 {[["+35,56%", "maio"], ["+26,65%", "junho"], ["+54,83%", "julho, recorde"]].map(([n, m]) => (
                   <div key={m}>
                     <dt className="sr-only">Crescimento do faturamento em {m}</dt>
-                    <dd className="font-display text-2xl font-bold tabular-nums text-menta-400 sm:text-3xl">{n}</dd>
+                    <dd className="text-2xl font-bold tabular-nums text-menta-400 sm:text-3xl">{n}</dd>
                     <dd className="text-xs text-neutro-300">{m}</dd>
                   </div>
                 ))}
@@ -343,7 +338,7 @@ export default function LandingParceiros() {
             </figure>
             <div className="rounded-[14px] border border-white/10 bg-card p-6">
               <p className="text-sm font-semibold text-neutro-300">Fusion Alumínios · indústria do ramo moveleiro, 18 anos de mercado</p>
-              <p className="mt-5 font-display text-4xl font-bold tabular-nums text-menta-400">+30%</p>
+              <p className="mt-5 text-[36px] font-bold tabular-nums text-menta-400">+30%</p>
               <p className="text-sm text-neutro-300">de faturamento em 8 meses</p>
               <p className="mt-4 text-neutro-100">Análise de dados comerciais, treinamento do time e ajuste do processo, com a operação rodando com uma equipe mais enxuta.</p>
             </div>
@@ -356,7 +351,7 @@ export default function LandingParceiros() {
             <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {PASSOS_PARCEIRO.map((p, i) => (
                 <li key={p.titulo} className="rounded-[14px] border border-white/10 bg-card p-5">
-                  <span className="text-sm font-bold tabular-nums text-menta-400">Passo {i + 1}</span>
+                  <span className="text-sm font-bold tabular-nums text-neutro-300">Passo {i + 1}</span>
                   <p className="mt-2 font-semibold">{p.titulo}</p>
                   <p className="mt-2 text-sm text-neutro-300">{p.texto}</p>
                 </li>
@@ -407,42 +402,42 @@ export default function LandingParceiros() {
                   <form onSubmit={enviar} noValidate className="space-y-4">
                     <div className="grid gap-4 sm:grid-cols-2">
                       <Campo id="nome" rotulo="Seu nome" erro={mostra("nome")}>
-                        <Input id="nome" autoComplete="name" value={f.nome} onChange={(e) => set("nome", e.target.value)} aria-invalid={!!mostra("nome")} />
+                        <Input className="border-white/40" id="nome" autoComplete="name" value={f.nome} onChange={(e) => set("nome", e.target.value)} aria-invalid={!!mostra("nome")} aria-describedby={mostra("nome") ? "nome-erro" : undefined} />
                       </Campo>
                       <Campo id="cargo" rotulo="Cargo" erro={mostra("cargo")}>
-                        <Input id="cargo" autoComplete="organization-title" value={f.cargo} onChange={(e) => set("cargo", e.target.value)} aria-invalid={!!mostra("cargo")} />
+                        <Input className="border-white/40" id="cargo" autoComplete="organization-title" value={f.cargo} onChange={(e) => set("cargo", e.target.value)} aria-invalid={!!mostra("cargo")} aria-describedby={mostra("cargo") ? "cargo-erro" : undefined} />
                       </Campo>
                       <Campo id="email" rotulo="E-mail de trabalho" erro={mostra("email")}>
-                        <Input id="email" type="email" inputMode="email" autoComplete="email" value={f.email} onChange={(e) => set("email", e.target.value)} aria-invalid={!!mostra("email")} />
+                        <Input className="border-white/40" id="email" type="email" inputMode="email" autoComplete="email" value={f.email} onChange={(e) => set("email", e.target.value)} aria-invalid={!!mostra("email")} aria-describedby={mostra("email") ? "email-erro" : undefined} />
                       </Campo>
                       <Campo id="whatsapp" rotulo="WhatsApp" erro={mostra("whatsapp")}>
-                        <Input id="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(44) 99999-0000" value={f.whatsapp}
-                          onChange={(e) => set("whatsapp", mascaraTelefone(e.target.value))} aria-invalid={!!mostra("whatsapp")} />
+                        <Input className="border-white/40" id="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(44) 99999-0000" value={f.whatsapp}
+                          onChange={(e) => set("whatsapp", mascaraTelefone(e.target.value))} aria-invalid={!!mostra("whatsapp")} aria-describedby={mostra("whatsapp") ? "whatsapp-erro" : undefined} />
                       </Campo>
                       <Campo id="empresa" rotulo="Empresa" erro={mostra("empresa")}>
-                        <Input id="empresa" autoComplete="organization" value={f.empresa} onChange={(e) => set("empresa", e.target.value)} aria-invalid={!!mostra("empresa")} />
+                        <Input className="border-white/40" id="empresa" autoComplete="organization" value={f.empresa} onChange={(e) => set("empresa", e.target.value)} aria-invalid={!!mostra("empresa")} aria-describedby={mostra("empresa") ? "empresa-erro" : undefined} />
                       </Campo>
                       <Campo id="cnpj" rotulo="CNPJ" erro={mostra("cnpj")}>
-                        <Input id="cnpj" inputMode="numeric" placeholder="00.000.000/0000-00" value={f.cnpj}
-                          onChange={(e) => set("cnpj", mascaraCnpj(e.target.value))} aria-invalid={!!mostra("cnpj")} />
+                        <Input className="border-white/40" id="cnpj" inputMode="numeric" placeholder="00.000.000/0000-00" value={f.cnpj}
+                          onChange={(e) => set("cnpj", mascaraCnpj(e.target.value))} aria-invalid={!!mostra("cnpj")} aria-describedby={mostra("cnpj") ? "cnpj-erro" : undefined} />
                       </Campo>
                       <Campo id="categoria" rotulo="Tipo de software" erro={mostra("categoria_id")}>
                         <Select value={f.categoria_id} onValueChange={(v) => set("categoria_id", v)}>
-                          <SelectTrigger id="categoria" aria-invalid={!!mostra("categoria_id")}><SelectValue placeholder="Escolha" /></SelectTrigger>
+                          <SelectTrigger id="categoria" className="border-white/40" aria-invalid={!!mostra("categoria_id")} aria-describedby={mostra("categoria_id") ? "categoria-erro" : undefined}><SelectValue placeholder="Escolha" /></SelectTrigger>
                           <SelectContent>
                             {(cfg?.categorias ?? []).map((c) => <SelectItem key={c.id} value={c.id}>{c.nome}</SelectItem>)}
                           </SelectContent>
                         </Select>
                       </Campo>
                       <Campo id="clientes" rotulo="Clientes ativos na base" erro={mostra("clientes_ativos")}>
-                        <Input id="clientes" inputMode="numeric" placeholder="Ex.: 150" value={f.clientes_ativos}
-                          onChange={(e) => set("clientes_ativos", somenteDigitos(e.target.value).slice(0, 7))} aria-invalid={!!mostra("clientes_ativos")} />
+                        <Input className="border-white/40" id="clientes" inputMode="numeric" placeholder="Ex.: 150" value={f.clientes_ativos}
+                          onChange={(e) => set("clientes_ativos", somenteDigitos(e.target.value).slice(0, 7))} aria-invalid={!!mostra("clientes_ativos")} aria-describedby={mostra("clientes_ativos") ? "clientes-erro" : undefined} />
                       </Campo>
                       <Campo id="site" rotulo="Site da empresa" opcional>
-                        <Input id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
+                        <Input className="border-white/40" id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
                       </Campo>
                       <Campo id="senha" rotulo="Crie uma senha pro portal" erro={mostra("senha")}>
-                        <Input id="senha" type="password" autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} aria-invalid={!!mostra("senha")} />
+                        <Input className="border-white/40" id="senha" type="password" autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} aria-invalid={!!mostra("senha")} aria-describedby={mostra("senha") ? "senha-erro" : undefined} />
                       </Campo>
                     </div>
 
@@ -454,14 +449,16 @@ export default function LandingParceiros() {
 
                     <div className="space-y-3 border-t border-white/10 pt-4 text-sm">
                       <label className="flex items-start gap-3">
-                        <Checkbox checked={f.aceite_termo} onCheckedChange={(v) => set("aceite_termo", v === true)} className="mt-0.5" />
+                        <Checkbox checked={f.aceite_termo} onCheckedChange={(v) => set("aceite_termo", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
+                          aria-invalid={!!mostra("aceites") && !f.aceite_termo} aria-describedby={mostra("aceites") ? "aceites-erro" : undefined} />
                         <span>Li e aceito o <Link to="/parceiros/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de adesão ao programa</Link>.</span>
                       </label>
                       <label className="flex items-start gap-3">
-                        <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5" />
+                        <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
+                          aria-invalid={!!mostra("aceites") && !f.aceite_privacidade} aria-describedby={mostra("aceites") ? "aceites-erro" : undefined} />
                         <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade</Link> e com o uso dos meus dados pra criar o acesso e falar sobre a parceria.</span>
                       </label>
-                      {mostra("aceites") && <p className="text-xs text-destructive">{erros.aceites}</p>}
+                      {mostra("aceites") && <p id="aceites-erro" role="alert" className="text-xs text-destructive">{erros.aceites}</p>}
                     </div>
 
                     {falha && <p role="alert" className="rounded-[10px] border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">{falha}</p>}
@@ -485,7 +482,7 @@ export default function LandingParceiros() {
                 <details key={q.p} className="group px-5 py-4 [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
                     {q.p}
-                    <span className="text-xl leading-none text-menta-400 transition-transform group-open:rotate-45" aria-hidden>+</span>
+                    <span className="text-xl leading-none text-neutro-300 transition-transform group-open:rotate-45" aria-hidden>+</span>
                   </summary>
                   <p className="mt-3 max-w-[68ch] text-sm text-neutro-300">{q.r}</p>
                 </details>
@@ -495,7 +492,7 @@ export default function LandingParceiros() {
         </div>
 
         {/* Chamada final */}
-        <section className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-20">
+        <section ref={fimRef} className="mx-auto w-full max-w-6xl px-4 py-16 text-center sm:px-6 sm:py-20">
           <h2 className="mx-auto max-w-3xl text-balance font-display text-[32px] font-extrabold leading-tight sm:text-[44px]">
             Venda o seu software com consultoria comercial incluída.
           </h2>
