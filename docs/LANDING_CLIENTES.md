@@ -39,6 +39,10 @@ O link de indicação de projeto (`/i/código`) continua como estava (FO-10: doi
 * Cliente teste feito pela página publicada: "Cliente Teste PluggMe (apagar)", fora do ICP, autodiagnóstico 40% (Em estruturação), mais frágil: expansão e retenção. Para apagar: `delete from public.cadastros_cliente where id = 'ab69592d-df65-4b36-90d6-8f7c7967c7e6';`
 * Para tirar a exceção: `update public.links_cliente set liberado_sem_contrato = false where codigo = 'dpqyk0qcql';`
 
+## Revisão com a skill landing-page-anatomy (06/11/2026)
+
+Ordem das 12 seções: topo, logos, três passos, benefícios em profundidade (onde trava, uso do sistema do parceiro, plano de 90 dias, com visuais ilustrativos), cinco pilares, chamada do meio com a foto do evento, o que está incluído (quatro entregas e o quadro de R$ 15.000 do Hub), depoimentos em vídeo, comparação (sozinho, contratando à parte, incluído pelo parceiro), perguntas frequentes, faixa de fotos (time, aula de BANT e Igor, do site do Wise Hub) e o cadastro.
+
 ## Mudanças na página dos parceiros
 
 * Reunião individual: "mais de 3 vendedores" no lugar de "R$ 250 mil por mês e duas pessoas" (FO-10).

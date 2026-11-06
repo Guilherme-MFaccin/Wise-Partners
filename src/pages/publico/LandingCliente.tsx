@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowDown, CalendarCheck, CheckCircle2, ClipboardList, ExternalLink, Loader2, Map as MapaIcone, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown, CalendarCheck, Check, CheckCircle2, ClipboardList, ExternalLink, Loader2, Map as MapaIcone, ShieldCheck, Sparkles, X } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -53,6 +53,95 @@ const PASSOS = [
   { titulo: "Faça o diagnóstico", texto: "Com mais de 3 vendedores, numa reunião online com a Wise. Com menos, online e na hora." },
   { titulo: "Receba o plano e entre no Hub", texto: "Você sai com as prioridades e acesso ao Wise Hub pra colocar o plano em prática." },
 ];
+
+// Benefícios em profundidade: o que muda no comercial do cliente, cada um com um visual (exemplos, sem números inventados)
+function beneficios(p: string) {
+  return [
+    { visual: "travas" as const, titulo: "Saiba onde o seu comercial mais trava", texto: "O diagnóstico olha os cinco pilares e aponta o mais frágil. Você para de tentar resolver tudo ao mesmo tempo e começa pelo que mais pesa no faturamento." },
+    { visual: "sistema" as const, titulo: "Use de verdade o sistema que você já paga", texto: `Com processo e rotina definidos, o time passa a registrar tudo no sistema da ${p}, e não em planilha e WhatsApp. Você enxerga o funil e decide com dado.` },
+    { visual: "plano" as const, titulo: "Um comercial que depende menos de você", texto: "O plano de 30, 60 e 90 dias diz o que fazer primeiro, quem faz e como medir. A meta deixa de sair no achismo e o time sabe o que fazer sem esperar o dono." },
+  ];
+}
+
+// Comparação: resolver sozinho, contratar à parte (valores do Wise Hub) e a consultoria incluída pelo parceiro
+const COMPARACAO: [string, boolean, boolean, boolean][] = [
+  ["Saber onde o comercial mais trava", false, true, true],
+  ["Plano de 30, 60 e 90 dias com prioridades", false, true, true],
+  ["Formação pra você e o time, mais de 20 horas", false, true, true],
+  ["Calculadoras, planilhas e checklists prontos", false, true, true],
+  ["Método aplicado em mais de 300 empresas", false, true, true],
+  ["Reunião com a equipe da Wise (mais de 3 vendedores)", false, true, true],
+];
+
+const FOTOS = [
+  { src: "/landing/equipe.webp", alt: "Equipe da Wise Makers reunida no palco de uma imersão", legenda: "O time da Wise Makers", posicao: "object-center" },
+  { src: "/landing/aula-bant.webp", alt: "Consultor da Wise Makers dando aula sobre qualificação de leads com a metodologia BANT", legenda: "Aula da imersão: qualificação de leads", posicao: "object-center" },
+  { src: "/landing/igor-retrato.webp", alt: "Igor, diretor da Wise Makers", legenda: "Igor, diretor da Wise Makers", posicao: "object-[50%_22%]" },
+];
+
+function VisualBeneficio({ tipo, parceiro }: { tipo: "travas" | "sistema" | "plano"; parceiro: string }) {
+  if (tipo === "travas") {
+    const barras: [string, string, boolean][] = [
+      ["Identidade e posicionamento", "w-[70%]", false], ["Demanda e aquisição", "w-[45%]", false], ["Conversão e experiência", "w-[60%]", false],
+      ["Expansão e retenção", "w-[20%]", true], ["Governança e integração", "w-[40%]", false],
+    ];
+    return (
+      <div className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+        <div className="flex items-baseline justify-between gap-3">
+          <p className="text-sm font-semibold">Seu resultado</p>
+          <p className="text-xs text-neutro-300">Exemplo ilustrativo</p>
+        </div>
+        <ul className="mt-4 space-y-3">
+          {barras.map(([n, w, fragil]) => (
+            <li key={n} className="text-xs">
+              <span className={fragil ? "font-semibold text-foreground" : "text-neutro-300"}>{n}{fragil && <span className="ml-2 font-normal text-menta-300">comece por aqui</span>}</span>
+              <div className="mt-1 h-2 rounded-full bg-white/5"><div className={`h-2 rounded-full ${fragil ? "bg-menta-500" : "bg-neutro-300"} ${w}`} /></div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+  if (tipo === "sistema") {
+    return (
+      <div className="grid gap-3 sm:grid-cols-2" aria-hidden>
+        <div className="rounded-[14px] border border-white/10 bg-card p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutro-300">Hoje</p>
+          <ul className="mt-3 space-y-2 text-sm text-neutro-300">
+            {["Planilha do vendedor", "Conversas só no WhatsApp", "Meta na cabeça do dono"].map((t) => (
+              <li key={t} className="flex items-center gap-2"><X className="h-4 w-4 shrink-0 text-neutro-500" />{t}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-[14px] border border-menta-500/40 bg-menta-500/10 p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-300">Com processo</p>
+          <ul className="mt-3 space-y-2 text-sm">
+            {["Funil e histórico no sistema", `Tudo registrado na ${parceiro}`, "Meta por vendedor, com número"].map((t) => (
+              <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-menta-400" />{t}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+  const fases: [string, string][] = [
+    ["30 dias", "Definir o cliente ideal e as etapas da venda"],
+    ["60 dias", "Rotina semanal de prospecção e reunião de números"],
+    ["90 dias", "Metas por vendedor a partir do que está no sistema"],
+  ];
+  return (
+    <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+      <li className="mb-4 flex items-baseline justify-between gap-3"><span className="text-sm font-semibold">Seu plano</span><span className="text-xs text-neutro-300">Exemplo ilustrativo</span></li>
+      {fases.map(([t, d], i) => (
+        <li key={t} className="relative flex gap-4 pb-5 last:pb-0">
+          {i < fases.length - 1 && <span className="absolute left-[27px] top-9 h-[calc(100%-28px)] w-px bg-white/10" />}
+          <span className={`relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full border text-center text-[11px] font-bold leading-tight ${i === 0 ? "border-menta-500 text-menta-300" : "border-white/20 text-neutro-300"}`}>{t}</span>
+          <span className="self-center text-sm text-neutro-100">{d}</span>
+        </li>
+      ))}
+    </ol>
+  );
+}
 
 type Etapa = { tipo: "form" } | { tipo: "agenda"; url: string | null } | { tipo: "diagnostico"; id: string; chave: string; email: string };
 
@@ -211,21 +300,7 @@ export default function LandingCliente() {
 
         <FaixaLogos />
 
-        {/* O que você recebe */}
-        <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="O que você recebe" titulo={`A consultoria que a ${parceiro} incluiu pra você.`}>
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {RECEBE.map((x) => (
-                <li key={x.titulo} className="flex items-start gap-4 rounded-[14px] border border-white/10 bg-card p-5">
-                  <x.icone className="mt-0.5 h-5 w-5 shrink-0 text-menta-400" aria-hidden />
-                  <span><span className="block font-semibold">{x.titulo}</span><span className="mt-1 block text-sm text-neutro-300">{x.texto}</span></span>
-                </li>
-              ))}
-            </ul>
-          </Secao>
-        </div>
-
-        {/* Como funciona */}
+        {/* 2. Transformação: três passos logo depois do topo */}
         <Secao eyebrow="Como funciona" titulo="Três passos até o seu plano.">
           <ol className="grid gap-4 md:grid-cols-3">
             {PASSOS.map((p, i) => (
@@ -238,45 +313,108 @@ export default function LandingCliente() {
           </ol>
         </Secao>
 
-        {/* O que o diagnóstico olha: a Matriz 5x5 */}
+        {/* 3. Benefícios em profundidade, alternando texto e visual */}
         <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="O diagnóstico" titulo="Cinco pilares do seu comercial, vistos de cinco ângulos.">
-            <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
-              O diagnóstico usa a Matriz de Governança Comercial 5x5: cada pilar do comercial é avaliado por cinco critérios, pra mostrar onde a operação trava e por onde começar.
-            </p>
-            <ol className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-              {PILARES.map((p, i) => (
-                <li key={p.chave} className="rounded-[14px] border border-white/10 bg-card p-4">
-                  <p className="text-xs font-bold tabular-nums text-neutro-300">Pilar {i + 1}</p>
-                  <p className="mt-1 font-semibold leading-snug">{p.nome}</p>
-                  <p className="mt-2 text-sm text-neutro-300">{p.dica}</p>
-                </li>
+          <Secao eyebrow="O que muda no seu comercial" titulo="Menos achismo, mais método. Começando pelo que mais pesa.">
+            <div className="space-y-12 sm:space-y-16">
+              {beneficios(parceiro).map((b, i) => (
+                <div key={b.visual} className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
+                  <div className={i % 2 === 1 ? "md:order-2" : ""}>
+                    <h3 className="text-[22px] font-semibold leading-snug sm:text-[28px]">{b.titulo}</h3>
+                    <p className="mt-3 max-w-[56ch] text-neutro-100">{b.texto}</p>
+                  </div>
+                  <div className={i % 2 === 1 ? "md:order-1" : ""}><VisualBeneficio tipo={b.visual} parceiro={parceiro} /></div>
+                </div>
               ))}
-            </ol>
-            <p className="mt-5 text-sm text-neutro-300">
-              Em cada pilar: {CRITERIOS.map((c) => c.nome.toLowerCase()).join(", ").replace(/, ([^,]*)$/, " e $1")}.
-            </p>
+            </div>
           </Secao>
         </div>
 
+        {/* 4. Camada pra quem escaneia: o que o diagnóstico olha */}
+        <Secao eyebrow="O diagnóstico" titulo="Cinco pilares do seu comercial, vistos de cinco ângulos.">
+          <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
+            O diagnóstico usa a Matriz de Governança Comercial 5x5: cada pilar do comercial é avaliado por cinco critérios, pra mostrar onde a operação trava e por onde começar.
+          </p>
+          <ol className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {PILARES.map((p, i) => (
+              <li key={p.chave} className="rounded-[14px] border border-white/10 bg-card p-4">
+                <p className="text-xs font-bold tabular-nums text-neutro-300">Pilar {i + 1}</p>
+                <p className="mt-1 font-semibold leading-snug">{p.nome}</p>
+                <p className="mt-2 text-sm text-neutro-300">{p.dica}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-5 text-sm text-neutro-300">
+            Em cada pilar: {CRITERIOS.map((c) => c.nome.toLowerCase()).join(", ").replace(/, ([^,]*)$/, " e $1")}.
+          </p>
+        </Secao>
+
+        {/* 5. Chamada do meio, com prova */}
         <FaixaEvento titulo="Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers."
           texto={`Agora a ${parceiro} traz esse método pra você, sem custo.`} botao="Quero meu diagnóstico" aoClicar={irParaCadastro}
           nota="Sem custo · Sem cartão · Sem ligação insistente" />
 
-        {/* Wise Hub */}
-        <Secao eyebrow="Wise Hub" titulo={"O Wise Hub vale mais de R$\u00a015.000. Pra você, sai de graça."}>
-          <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
+        {/* 6. O que está incluído: as quatro entregas e o valor do Wise Hub */}
+        <Secao eyebrow="O que você recebe" titulo={`A consultoria que a ${parceiro} incluiu pra você.`}>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {RECEBE.map((x) => (
+              <li key={x.titulo} className="flex items-start gap-4 rounded-[14px] border border-white/10 bg-card p-5">
+                <x.icone className="mt-0.5 h-5 w-5 shrink-0 text-menta-400" aria-hidden />
+                <span><span className="block font-semibold">{x.titulo}</span><span className="mt-1 block text-sm text-neutro-300">{x.texto}</span></span>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-14 max-w-3xl text-balance text-[22px] font-semibold leading-snug sm:text-[28px]">{"O Wise Hub vale mais de R$\u00a015.000. Pra você, sai de graça."}</h3>
+          <p className="mt-3 max-w-[64ch] text-neutro-100">
             Não é área de curso. É onde você monta o plano, segue o Método Wise passo a passo e usa as ferramentas na rotina do seu time.
           </p>
           <QuadroValorHub paraQuem="Pra você"
             vantagens={[`Com a marca da ${parceiro}`, "Sem cartão e sem instalação", "No navegador ou no celular", "Aulas com cases reais de indústrias"]} />
         </Secao>
 
+        {/* 7 e 8. Prova em camadas: números, citação e vídeos */}
         <div className="border-t border-white/10">
           <SecaoDepoimentos subtitulo="Empresários e gestores que estruturaram o comercial com a Wise Makers." />
         </div>
 
-        {/* Perguntas frequentes */}
+        {/* 9. Comparação */}
+        <div className="border-y border-white/10 bg-neutro-800/40">
+          <Secao eyebrow="Lado a lado" titulo="Resolver sozinho, contratar à parte ou usar o que o seu fornecedor incluiu.">
+            <div className="overflow-hidden rounded-[14px] border border-white/10 bg-card">
+              <table className="w-full text-left text-sm">
+                <caption className="sr-only">Comparação entre resolver sozinho, contratar uma consultoria à parte e usar a consultoria incluída pela {parceiro}</caption>
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th scope="col" className="px-3 py-3 sm:px-5"><span className="sr-only">O que entra</span></th>
+                    <th scope="col" className="w-[3.75rem] px-1 py-3 text-center text-xs font-medium text-neutro-300 sm:w-32 sm:text-sm">Sozinho</th>
+                    <th scope="col" className="w-[4.25rem] px-1 py-3 text-center text-xs font-medium text-neutro-300 sm:w-36 sm:text-sm">Contratando à parte</th>
+                    <th scope="col" className="w-[4.5rem] px-1 py-3 text-center text-xs font-semibold sm:w-40 sm:text-sm">Incluído pela {parceiro}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARACAO.map(([item, a, b, c]) => (
+                    <tr key={item} className="border-b border-white/10 last:border-0">
+                      <th scope="row" className="px-3 py-3 font-normal sm:px-5">{item}</th>
+                      {[a, b, c].map((v, k) => (
+                        <td key={k} className="px-1 py-3 text-center">
+                          {v ? <Check className="mx-auto h-5 w-5 text-menta-400" aria-label="Sim" /> : <X className="mx-auto h-5 w-5 text-neutro-500" aria-label="Não" />}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                  <tr>
+                    <th scope="row" className="px-3 py-3 font-normal sm:px-5">Quanto custa pra você</th>
+                    <td className="px-1 py-3 text-center text-xs text-neutro-300 sm:text-sm">Seu tempo</td>
+                    <td className="px-1 py-3 text-center text-xs text-neutro-300 sm:text-sm">Mais de R$&nbsp;15.000</td>
+                    <td className="px-1 py-3 text-center text-xs font-semibold text-menta-400 sm:text-sm">R$&nbsp;0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Secao>
+        </div>
+
+        {/* 10. Perguntas frequentes */}
         <Secao eyebrow="Perguntas frequentes" titulo="O que todo mundo pergunta antes de começar.">
           <div className="divide-y divide-white/10 rounded-[14px] border border-white/10 bg-card">
             {perguntas(parceiro).map((q) => (
@@ -290,6 +428,22 @@ export default function LandingCliente() {
             ))}
           </div>
         </Secao>
+
+        {/* 11. Faixa de imagens: quem está por trás do diagnóstico */}
+        <section aria-labelledby="equipe-titulo" className="mx-auto w-full max-w-6xl px-4 pb-4 sm:px-6">
+          <h2 id="equipe-titulo" className="text-sm font-medium text-neutro-300">Quem está por trás do seu diagnóstico</h2>
+          <ul className="-mx-4 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:pb-0">
+            {FOTOS.map((f) => (
+              <li key={f.src} className="w-[78%] shrink-0 snap-start sm:w-auto">
+                <figure>
+                  <img src={f.src} alt={f.alt} width={900} height={600} loading="lazy" decoding="async"
+                    className={`aspect-[4/3] h-auto w-full rounded-[14px] border border-white/10 object-cover ${f.posicao}`} />
+                  <figcaption className="mt-2 text-xs text-neutro-300">{f.legenda}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         {/* Cadastro, agenda ou autodiagnóstico */}
         <div ref={formRef} id="cadastro" className="scroll-mt-16 border-t border-white/10">
