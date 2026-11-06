@@ -13,6 +13,7 @@ import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga } from "@/components/comum/Estados";
 import { useMeuParceiro, useParametro } from "@/components/portal/dados";
 import { NovaIndicacaoDialog } from "@/components/portal/NovaIndicacaoDialog";
+import { LinkClientes } from "@/components/portal/LinkClientes";
 
 type LinkIndicacao = { token: string; empresas: string[]; envios: number };
 
@@ -76,6 +77,8 @@ export default function Indicar() {
     <div className="space-y-6">
       <Cabecalho titulo="Indicar" descricao="Indique clientes para a Wise pelo seu link exclusivo ou pelo formulário."
         acoes={<Button onClick={() => setNova(true)}><Plus /> Registrar indicação</Button>} />
+
+      {pid && parceiroQ.data?.tipo_parceria !== "institucional" && <LinkClientes parceiroId={pid} nome={parceiroQ.data?.nome_fantasia ?? "sua empresa"} />}
 
       {!url ? (
         <section className="rounded-[14px] border border-white/10 bg-card p-4 text-sm sm:p-5">

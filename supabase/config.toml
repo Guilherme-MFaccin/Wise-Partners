@@ -35,6 +35,9 @@ verify_jwt = false
 [functions.cadastro-parceiro]
 verify_jwt = false
 
+[functions.cliente-parceiro]
+verify_jwt = false
+
 [functions.cruzamento-carteiras]
 verify_jwt = true
 

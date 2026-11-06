@@ -157,3 +157,37 @@ export function fonteVideo(url: string | null): { tipo: "iframe" | "arquivo"; sr
   if (/^https:\/\//.test(url)) return { tipo: "arquivo", src: url };
   return null;
 }
+
+// ---------------------------------------------------------------------------
+// Página do cliente do parceiro (/c/:codigo)
+// ---------------------------------------------------------------------------
+export const URL_CLIENTE = `${import.meta.env.VITE_SUPABASE_URL ?? "http://localhost:54321"}/functions/v1/cliente-parceiro`;
+
+export type PaginaCliente = {
+  publicada: boolean;
+  parceiro: { nome: string; logo_url: string | null } | null;
+  video_url: string | null;
+  pixel_meta_id: string | null;
+  ga4_id: string | null;
+  privacidade_versao: string | null;
+};
+
+export type RespostaCadastroCliente = { id: string; chave: string; icp: boolean; agenda_url: string | null; parceiro: string };
+
+export async function carregarPaginaCliente(codigo: string): Promise<PaginaCliente> {
+  const r = await fetch(`${URL_CLIENTE}?codigo=${encodeURIComponent(codigo)}`, { headers: CABECALHOS });
+  if (!r.ok) throw new Error("Não foi possível carregar a página agora.");
+  return r.json();
+}
+
+export async function enviarCliente<T>(corpo: Record<string, unknown>): Promise<T> {
+  const r = await fetch(URL_CLIENTE, { method: "POST", headers: { ...CABECALHOS, "Content-Type": "application/json" }, body: JSON.stringify(corpo) });
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d?.erro ?? "Não foi possível enviar agora. Tente de novo.");
+  return d as T;
+}
+
+export function registrarLead(icp: boolean) {
+  window.fbq?.("track", "Lead", { content_category: icp ? "icp" : "autodiagnostico" });
+  window.gtag?.("event", "generate_lead", { method: "landing_cliente", icp });
+}

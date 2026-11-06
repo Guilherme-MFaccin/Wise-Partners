@@ -59,6 +59,7 @@ const PCruzamento = lazy(() => import("@/pages/parceiro/Cruzamento"));
 const PaginaRfp = lazy(() => import("@/pages/publico/PaginaRfp"));
 const IndicacaoLink = lazy(() => import("@/pages/publico/IndicacaoLink"));
 const LandingParceiros = lazy(() => import("@/pages/publico/LandingParceiros"));
+const LandingCliente = lazy(() => import("@/pages/publico/LandingCliente"));
 const TextoLegalParceiros = lazy(() => import("@/pages/publico/TextoLegalParceiros"));
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 30_000, retry: 1, refetchOnWindowFocus: false } } });
@@ -96,6 +97,7 @@ export default function App() {
                 <Route path="/r/:token" element={<PaginaRfp />} />
                 <Route path="/i/:token" element={<IndicacaoLink />} />
                 <Route path="/parceiros" element={<LandingParceiros />} />
+                <Route path="/c/:codigo" element={<LandingCliente />} />
                 <Route path="/parceiros/termo" element={<TextoLegalParceiros qual="termo" />} />
                 <Route path="/parceiros/privacidade" element={<TextoLegalParceiros qual="privacidade" />} />
                 <Route path="/app" element={<Protegida publico="interno"><AppLayout /></Protegida>}>
