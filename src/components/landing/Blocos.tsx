@@ -87,8 +87,12 @@ const QUADRO: Record<Exclude<FormatoVideo, "auto">, string> = {
   quadrado: "mx-auto aspect-square w-full max-w-[520px]",
 };
 
-export function Video({ url, formato = "auto" }: { url: string | null; formato?: FormatoVideo }) {
+export function Video({ url, formato = "auto", carregando = false }: { url: string | null; formato?: FormatoVideo; carregando?: boolean }) {
   const fonte = fonteVideo(url);
+  // Enquanto a configuração não chega, um quadro vazio no formato do vídeo (e não a capa provisória, que pisca e troca)
+  if (carregando) {
+    return <div aria-hidden className={`${QUADRO[formato === "auto" ? "quadrado" : formato]} animate-pulse rounded-[14px] border border-white/10 bg-white/5 motion-reduce:animate-none`} />;
+  }
   if (!fonte) {
     return (
       <img src={CAPA_VIDEO} width={670} height={514} decoding="async"

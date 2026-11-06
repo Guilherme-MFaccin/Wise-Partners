@@ -88,6 +88,26 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "Quando eu começo?", r: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." },
 ];
 
+// Última configuração recebida, guardada no navegador (só o que a página pública já mostra)
+const CHAVE_CFG = "wp_cfg_landing";
+function lerConfigGuardada(): ConfigLanding | undefined {
+  try {
+    const t = localStorage.getItem(CHAVE_CFG);
+    return t ? (JSON.parse(t) as ConfigLanding) : undefined;
+  } catch {
+    return undefined;
+  }
+}
+async function carregarConfigGuardando(): Promise<ConfigLanding> {
+  const cfg = await carregarConfig();
+  try {
+    localStorage.setItem(CHAVE_CFG, JSON.stringify(cfg));
+  } catch {
+    // sem armazenamento: segue sem guardar
+  }
+  return cfg;
+}
+
 const VAZIO = {
   nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "", senha: "",
   aceite_termo: false, aceite_privacidade: false, website: "",
@@ -173,7 +193,9 @@ export default function LandingParceiros() {
   }, []);
 
   const { data: cfg, isLoading, isError, refetch } = useQuery<ConfigLanding>({
-    queryKey: ["landing-parceiros"], queryFn: carregarConfig, retry: 1, staleTime: 5 * 60_000,
+    queryKey: ["landing-parceiros"], queryFn: carregarConfigGuardando, retry: 1, staleTime: 5 * 60_000,
+    // Quem já visitou abre com o vídeo da última visita; a configuração nova chega por cima
+    placeholderData: lerConfigGuardada,
   });
 
   useEffect(() => {
@@ -281,7 +303,7 @@ export default function LandingParceiros() {
             </p>
           </div>
           <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
-            <Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} />
+            <Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} carregando={!cfg} />
           </div>
           <div className="lg:col-start-1 lg:row-start-2">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-8">
