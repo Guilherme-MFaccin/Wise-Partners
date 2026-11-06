@@ -410,41 +410,27 @@ export default function LandingParceiros() {
       </header>
 
       <main>
-        {/* Topo: promessa, prova rápida, vídeo e ação */}
+        {/* Topo: promessa, vídeo e ação */}
         <section className="mx-auto grid w-full max-w-6xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-x-12 lg:gap-y-0 lg:pb-20 lg:pt-16">
-          <div className="lg:col-start-1 lg:row-start-1">
+          <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Wise Partners · para empresas de CRM e ERP</p>
             <h1 className="mt-3 text-balance font-display text-[36px] font-extrabold leading-[1.06] sm:text-[48px]">
               Pare de competir por preço: inclua consultoria comercial no seu software, sem custo.
             </h1>
-            <p className="mt-5 max-w-[62ch] text-base text-neutro-100 sm:text-lg">
-              Seu cliente faz um diagnóstico de maturidade comercial com a Wise Makers, recebe um plano de 30, 60 e 90 dias e ganha acesso ao Wise Hub. Você ganha um argumento que o concorrente não tem.
+            <p className="mt-5 max-w-[48ch] text-base text-neutro-300 sm:text-lg">
+              Diagnóstico, plano de 90 dias e Wise Hub pro seu cliente. Um argumento que o concorrente não tem.
             </p>
           </div>
-          <div className="lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center">
+          <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
             <Video url={cfg?.video_url ?? null} />
-            <dl className="mt-4 grid grid-cols-3 gap-3 text-center">
-              {[["4 anos", "de Wise Makers"], ["+300", "empresas estruturadas"], ["+1.500", "vendedores capacitados"]].map(([n, r]) => (
-                <div key={r} className="rounded-[10px] border border-white/10 bg-card px-2 py-3">
-                  <dt className="sr-only">{r}</dt>
-                  <dd className="text-2xl font-bold tabular-nums">{n}</dd>
-                  <dd className="text-xs text-neutro-300">{r}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
           <div className="lg:col-start-1 lg:row-start-2">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-7">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-8">
               <Button ref={ctaTopo} size="lg" onClick={irParaCadastro} className="h-12 px-6 text-base">
                 Quero ser parceiro <ArrowDown className="ml-1 h-4 w-4" aria-hidden />
               </Button>
               <p className="text-sm text-neutro-300">Cadastro em 2 minutos, acesso na hora.</p>
             </div>
-            <ul className="mt-6 grid gap-2 text-sm text-neutro-100 sm:grid-cols-2">
-              {GARANTIAS.map((g) => (
-                <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0 text-neutro-300" aria-hidden />{g}</li>
-              ))}
-            </ul>
           </div>
         </section>
 
