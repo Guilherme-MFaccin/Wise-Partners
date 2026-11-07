@@ -32,7 +32,7 @@ const CLIENTE_RECEBE = [
 
 // O que o parceiro recebe ao entrar
 const PARCEIRO_RECEBE = [
-  { titulo: "Acesso ao portal Wise Partners na hora", texto: "Tudo do programa num lugar só, sem esperar contato." },
+  { titulo: "Acesso ao portal Wise Partners", texto: "Tudo do programa num lugar só: link, mensagem pronta e treinamento." },
   { titulo: "Seu link exclusivo", texto: "Cada cliente que entra por ele fica registrado como seu." },
   { titulo: "Mensagem pronta e página de convite", texto: "É só mandar pros clientes de hoje e incluir na entrada dos novos." },
   { titulo: "O Wise Hub com a sua marca", texto: "Seu logo aparece no Hub e nos certificados dos seus clientes." },
@@ -43,7 +43,7 @@ const PARCEIRO_RECEBE = [
 
 // Transformação: o caminho do parceiro em três passos
 const PASSOS_PARCEIRO = [
-  { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos e o acesso ao portal sai na hora." },
+  { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos. Depois, o Igor, diretor da Wise Makers, fala com você pelo WhatsApp." },
   { titulo: "Pegue o seu link", texto: "No portal ficam o link exclusivo, a mensagem pronta e um treinamento curto." },
   { titulo: "Ofereça à sua base", texto: "Pros clientes de hoje e pra cada cliente novo. O resto você acompanha pelo portal." },
 ];
@@ -85,7 +85,7 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "Tem exclusividade ou meta de indicação?", r: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
   { p: "Posso sair quando quiser?", r: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
   { p: "Quem é a Wise Makers?", r: "Uma consultoria de estrutura e gestão comercial. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
-  { p: "Quando eu começo?", r: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." },
+  { p: "Quando eu começo?", r: "Logo depois do cadastro, o Igor, diretor da Wise Makers, fala com você pelo WhatsApp para combinar o início. Depois dessa conversa, você recebe o acesso ao portal e o seu link." },
 ];
 
 // Última configuração recebida, guardada no navegador (só o que a página pública já mostra)
@@ -173,6 +173,7 @@ export default function LandingParceiros() {
   const [enviando, setEnviando] = useState(false);
   const [falha, setFalha] = useState<string | null>(null);
   const [criado, setCriado] = useState<string | null>(null);
+  const [naFila, setNaFila] = useState<string | null>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const ctaTopo = useRef<HTMLButtonElement>(null);
   const fimRef = useRef<HTMLElement>(null);
@@ -197,6 +198,9 @@ export default function LandingParceiros() {
     // Quem já visitou abre com o vídeo da última visita; a configuração nova chega por cima
     placeholderData: lerConfigGuardada,
   });
+
+  // Desde 07/11/2026 o padrão é a fila de espera: o Igor fala com cada parceiro antes de liberar o acesso
+  const fila = cfg?.modo_cadastro !== "acesso_direto";
 
   useEffect(() => {
     if (cfg) iniciarMedicao(cfg);
@@ -228,7 +232,7 @@ export default function LandingParceiros() {
     cnpj: !cnpjValido(f.cnpj) ? "Informe um CNPJ válido." : "",
     categoria_id: !f.categoria_id ? "Escolha o tipo de software." : "",
     clientes_ativos: !/^\d{1,7}$/.test(f.clientes_ativos) ? "Informe um número aproximado." : "",
-    senha: f.senha.length < 8 ? "Use pelo menos 8 caracteres." : "",
+    senha: fila || f.senha.length >= 8 ? "" : "Use pelo menos 8 caracteres.",
     aceites: !(f.aceite_termo && f.aceite_privacidade) ? "Marque as duas caixas pra continuar." : "",
   };
   const valido = Object.values(erros).every((e) => !e);
@@ -263,6 +267,10 @@ export default function LandingParceiros() {
         return;
       }
       registrarCadastro(eventId);
+      if (d?.fila) {
+        setNaFila(f.whatsapp);
+        return;
+      }
       const { error } = await supabase.auth.signInWithPassword({ email, password: f.senha });
       if (error) {
         setCriado(email);
@@ -310,7 +318,7 @@ export default function LandingParceiros() {
               <Button ref={ctaTopo} size="lg" onClick={irParaCadastro} className="h-12 px-6 text-base">
                 Quero ser parceiro <ArrowDown className="ml-1 h-4 w-4" aria-hidden />
               </Button>
-              <p className="text-sm text-neutro-300">Cadastro em 2 minutos, acesso na hora.</p>
+              <p className="text-sm text-neutro-300">{fila ? "Cadastro em 2 minutos. A gente fala com você pelo WhatsApp." : "Cadastro em 2 minutos, acesso na hora."}</p>
             </div>
           </div>
         </section>
@@ -438,7 +446,7 @@ export default function LandingParceiros() {
         <div>
           <Secao eyebrow="Perguntas frequentes" titulo="O que todo dono de software pergunta antes de entrar.">
             <div className="divide-y divide-white/10 rounded-[14px] border border-white/10 bg-card">
-              {PERGUNTAS.map((q) => (
+              {PERGUNTAS.map((q) => (q.p === "Quando eu começo?" && !fila ? { ...q, r: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." } : q)).map((q) => (
                 <details key={q.p} className="group px-5 py-4 [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
                     {q.p}
@@ -458,7 +466,9 @@ export default function LandingParceiros() {
             <h2 className="mt-2 max-w-3xl text-balance font-display text-[32px] font-extrabold leading-tight sm:text-[44px]">
               Seu cliente não precisa escolher pelo preço. Dá pra ele um motivo pra escolher você.
             </h2>
-            <p className="mt-4 max-w-[62ch] text-neutro-100">Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui.</p>
+            <p className="mt-4 max-w-[62ch] text-neutro-100">{fila
+              ? "Cadastre sua empresa em 2 minutos. O Igor, diretor da Wise Makers, fala com você pelo WhatsApp para combinar os próximos passos."
+              : "Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui."}</p>
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
               <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
                 {PARCEIRO_RECEBE.slice(0, 5).map((t) => (
@@ -480,6 +490,12 @@ export default function LandingParceiros() {
                   <div className="space-y-2 text-sm">
                     <p className="font-semibold">O cadastro pela página está pausado.</p>
                     <p className="text-neutro-300">Volte em breve ou fale com a Wise Makers pelo e-mail contato@wisemakers.com.br.</p>
+                  </div>
+                ) : naFila ? (
+                  <div className="space-y-3 text-sm" role="status">
+                    <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
+                    <p className="text-neutro-100">O Igor, diretor da Wise Makers, vai falar com você pelo WhatsApp {naFila} para combinar os próximos passos. Fique de olho nas mensagens.</p>
+                    <p className="text-neutro-300">Depois dessa conversa, você recebe o acesso ao portal com o seu link exclusivo.</p>
                   </div>
                 ) : criado ? (
                   <div className="space-y-3 text-sm" role="status">
@@ -525,9 +541,11 @@ export default function LandingParceiros() {
                       <Campo id="site" rotulo="Site da empresa" opcional>
                         <Input className="border-white/40" id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
                       </Campo>
-                      <Campo id="senha" rotulo="Crie uma senha pro portal" erro={mostra("senha")}>
-                        <Input className="border-white/40" id="senha" type="password" autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} aria-invalid={!!mostra("senha")} aria-describedby={mostra("senha") ? "senha-erro" : undefined} />
-                      </Campo>
+                      {!fila && (
+                        <Campo id="senha" rotulo="Crie uma senha pro portal" erro={mostra("senha")}>
+                          <Input className="border-white/40" id="senha" type="password" autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} aria-invalid={!!mostra("senha")} aria-describedby={mostra("senha") ? "senha-erro" : undefined} />
+                        </Campo>
+                      )}
                     </div>
 
                     {/* Campo oculto contra robôs */}
@@ -553,7 +571,7 @@ export default function LandingParceiros() {
                     {falha && <p role="alert" className="rounded-[10px] border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">{falha}</p>}
 
                     <Button type="submit" size="lg" className="h-12 w-full text-base" disabled={enviando}>
-                      {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Criando o seu acesso...</> : "Criar meu acesso de parceiro"}
+                      {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />{fila ? "Enviando..." : "Criando o seu acesso..."}</> : fila ? "Quero ser parceiro" : "Criar meu acesso de parceiro"}
                     </Button>
                     <p className="text-center text-xs text-neutro-300">Sem custo, sem exclusividade e sem meta mínima. Sai quando quiser.</p>
                   </form>

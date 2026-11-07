@@ -11,18 +11,13 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
+import { FilaParceiros } from "@/components/config/FilaParceiros";
 
 type Config = {
-  publicada: boolean; video_url: string | null; video_formato: "auto" | "horizontal" | "vertical" | "quadrado"; pixel_meta_id: string | null; capi_ativa: boolean; ga4_id: string | null;
+  publicada: boolean; modo_cadastro: "fila" | "acesso_direto"; agenda_url: string | null; video_url: string | null; video_formato: "auto" | "horizontal" | "vertical" | "quadrado"; pixel_meta_id: string | null; capi_ativa: boolean; ga4_id: string | null;
   termo_versao: string; termo_texto: string; privacidade_versao: string; privacidade_texto: string; contato_privacidade: string;
 };
-type Cadastro = {
-  id: string; created_at: string; parceiro_id: string | null; empresa: string; nome: string; email: string; categoria_nome: string | null;
-  clientes_ativos: number | null; utm_campaign: string | null; utm_content: string | null; utm_source: string | null; status: string;
-};
-
 function Bloco({ titulo, descricao, children }: { titulo: string; descricao?: string; children: ReactNode }) {
   return (
     <section className="rounded-[14px] border border-white/10 bg-card p-5">
@@ -33,8 +28,6 @@ function Bloco({ titulo, descricao, children }: { titulo: string; descricao?: st
   );
 }
 
-const data = (s: string) => new Date(s).toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" }).replace(".", "");
-
 // Landing page dos parceiros SaaS (/parceiros): publicação, vídeo, medição, textos legais e os cadastros com a origem do anúncio.
 // Administrador edita; time de parcerias só consulta (RLS).
 export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }) {
@@ -42,10 +35,6 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
   const cfg = useQuery({
     queryKey: ["config", "landing"],
     queryFn: async () => ok<any>(await supabase.from("config_landing").select("*").eq("id", 1).maybeSingle()) as Config | null,
-  });
-  const cad = useQuery({
-    queryKey: ["config", "landing", "cadastros"],
-    queryFn: async () => ok<any>(await supabase.from("cadastros_landing").select("*").order("created_at", { ascending: false }).limit(200)) as Cadastro[],
   });
   const [f, setF] = useState<Config | null>(null);
   const [salvando, setSalvando] = useState(false);
@@ -58,7 +47,7 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
     if (!f) return;
     setSalvando(true);
     const { error } = await supabase.from("config_landing").update({
-      publicada: f.publicada, video_url: f.video_url?.trim() || null, video_formato: f.video_formato, pixel_meta_id: f.pixel_meta_id?.trim() || null, capi_ativa: f.capi_ativa,
+      publicada: f.publicada, modo_cadastro: f.modo_cadastro, agenda_url: f.agenda_url?.trim() || null, video_url: f.video_url?.trim() || null, video_formato: f.video_formato, pixel_meta_id: f.pixel_meta_id?.trim() || null, capi_ativa: f.capi_ativa,
       ga4_id: f.ga4_id?.trim().toUpperCase() || null, termo_versao: f.termo_versao, termo_texto: f.termo_texto,
       privacidade_versao: f.privacidade_versao, privacidade_texto: f.privacidade_texto, contato_privacidade: f.contato_privacidade,
     }).eq("id", 1);
@@ -79,6 +68,22 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
         <p className="text-sm text-neutro-300">Página dos parceiros SaaS de CRM e ERP, fora dos buscadores.</p>
         <Button asChild variant="outline" size="sm"><Link to="/parceiros" target="_blank"><ExternalLink className="mr-1 h-4 w-4" aria-hidden />Abrir a página</Link></Button>
       </div>
+
+      <Bloco titulo="Fila de espera" descricao="Quem se cadastrou pela página e aguarda contato. Chame no WhatsApp, mande a agenda e, depois da conversa, aprove: o parceiro e o acesso são criados na hora.">
+        <FilaParceiros agendaUrl={cfg.data?.agenda_url ?? null} />
+      </Bloco>
+
+      <Bloco titulo="Cadastro na página">
+        <label className="flex items-center justify-between gap-4">
+          <span className="text-sm">Fila de espera<span className="block text-xs text-neutro-300">Ligada, quem se cadastra entra na fila acima e recebe o acesso depois da conversa. Desligada, o acesso sai na hora, com a senha que a pessoa escolhe.</span></span>
+          <Switch checked={f.modo_cadastro === "fila"} onCheckedChange={(v) => set("modo_cadastro", v ? "fila" : "acesso_direto")} disabled={desligado} />
+        </label>
+        <div className="space-y-1.5">
+          <Label htmlFor="lp-agenda">Agenda para os parceiros</Label>
+          <Input id="lp-agenda" placeholder="https://calendar.app.google/..." value={f.agenda_url ?? ""} onChange={(e) => set("agenda_url", e.target.value)} disabled={desligado} />
+          <p className="text-xs text-neutro-300">Página de agendamento do Google Agenda. Aparece no botão "Mandar a agenda" da fila.</p>
+        </div>
+      </Bloco>
 
       <Bloco titulo="Publicação e vídeo">
         <label className="flex items-center justify-between gap-4">
@@ -151,36 +156,6 @@ export function SecaoLandingPage({ somenteLeitura }: { somenteLeitura: boolean }
         </div>
       )}
 
-      <Bloco titulo="Cadastros pela página" descricao="Os 200 mais recentes, com o anúncio que trouxe cada empresa (UTM).">
-        {cad.isLoading ? <Carregando /> : cad.error ? <ErroCarga erro={cad.error} /> : !cad.data?.length ? (
-          <p className="text-sm text-neutro-300">Nenhum cadastro ainda. Os cadastros aparecem aqui assim que alguém conclui o formulário da página.</p>
-        ) : (
-          <div className="overflow-x-auto">
-            <Table className="text-[13px]">
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Data</TableHead><TableHead>Empresa</TableHead><TableHead>Contato</TableHead><TableHead>Tipo</TableHead>
-                  <TableHead className="text-right">Clientes</TableHead><TableHead>Campanha</TableHead><TableHead>Anúncio</TableHead><TableHead>Situação</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {cad.data.map((c) => (
-                  <TableRow key={c.id}>
-                    <TableCell className="whitespace-nowrap tabular-nums">{data(c.created_at)}</TableCell>
-                    <TableCell>{c.parceiro_id ? <Link className="text-menta-300 hover:underline" to={`/app/parceiros/${c.parceiro_id}`}>{c.empresa}</Link> : c.empresa}</TableCell>
-                    <TableCell>{c.nome}<span className="block text-xs text-neutro-300">{c.email}</span></TableCell>
-                    <TableCell>{c.categoria_nome ?? "Sem tipo"}</TableCell>
-                    <TableCell className="text-right tabular-nums">{c.clientes_ativos ?? <span className="text-neutro-300">0</span>}</TableCell>
-                    <TableCell>{c.utm_campaign ?? <span className="text-neutro-300">Sem campanha</span>}</TableCell>
-                    <TableCell>{c.utm_content ?? <span className="text-neutro-300">Sem anúncio</span>}</TableCell>
-                    <TableCell>{c.status === "criado" ? "Acesso criado" : <span className="text-destructive">Falhou</span>}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-        )}
-      </Bloco>
     </div>
   );
 }

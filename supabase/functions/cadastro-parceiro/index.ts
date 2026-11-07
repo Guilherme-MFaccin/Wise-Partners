@@ -1,6 +1,7 @@
 // Cadastro de parceiros SaaS pela landing page (/parceiros). Sem login.
 // GET: o que a página precisa (tipos de software, vídeo, IDs de medição) ou, com ?texto=termo|privacidade, o texto vigente.
-// POST: cria parceiro, aceite eletrônico, onboarding e conta de acesso com a senha que a pessoa escolheu.
+// POST, modo "fila" (padrão desde 07/11/2026): o cadastro entra na fila de espera; o Igor fala com a pessoa pelo WhatsApp
+// e aprova no portal. Modo "acesso_direto": cria parceiro, aceite eletrônico, onboarding e conta com a senha escolhida.
 // A conta nasce confirmada: sem SMTP próprio, o portal não consegue mandar e-mail de confirmação.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin, urlDoApp } from "../_shared/supabase.ts";
@@ -62,7 +63,7 @@ Deno.serve(async (req) => {
       const { data: cats } = await sb.from("categorias").select("id, nome, ordem").eq("tipo", "comercial").eq("ativa", true)
         .order("ordem").order("nome");
       return json({
-        publicada: cfg.publicada, video_url: cfg.video_url, video_formato: cfg.video_formato ?? "auto", pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
+        publicada: cfg.publicada, video_url: cfg.video_url, video_formato: cfg.video_formato ?? "auto", modo_cadastro: cfg.modo_cadastro ?? "fila", pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
         termo_versao: cfg.termo_versao, categorias: (cats ?? []).map((c) => ({ id: c.id, nome: c.nome })),
       }, 200, SEM_CACHE);
     }
@@ -70,9 +71,11 @@ Deno.serve(async (req) => {
     if (excedeuLimite(`lpc:${ip}`, 8, 3_600_000)) return erro("Muitas tentativas a partir desta conexão. Tente de novo mais tarde.", 429);
 
     const b = await req.json().catch(() => ({}));
-    if (texto(b?.website, 200)) return json({ ok: true }); // campo oculto preenchido: robô
+    if (texto(b?.website, 200)) return json({ ok: true, fila: true }); // campo oculto preenchido: robô
+    const { data: modo } = await sb.from("config_landing").select("modo_cadastro").eq("id", 1).maybeSingle();
+    const fila = (modo?.modo_cadastro ?? "fila") !== "acesso_direto";
     const senha = String(b?.senha ?? "");
-    if (senha.length < 8) return erro("A senha precisa de pelo menos 8 caracteres.");
+    if (!fila && senha.length < 8) return erro("A senha precisa de pelo menos 8 caracteres.");
     const email = texto(b?.email, 160).toLowerCase();
     const whatsapp = texto(b?.whatsapp, 40);
     const dados = {
@@ -83,6 +86,14 @@ Deno.serve(async (req) => {
       utm_content: texto(b?.utm_content, 120), utm_term: texto(b?.utm_term, 120), fbclid: texto(b?.fbclid, 300),
       referencia: texto(b?.referencia, 300), aceite_termo: b?.aceite_termo === true, aceite_privacidade: b?.aceite_privacidade === true,
     };
+
+    if (fila) {
+      const { error: e } = await sb.rpc("entrar_fila_landing", { p: dados });
+      if (e) return erro(e.message.replace(/^.*?: /, ""), e.code === "23505" ? 409 : 400);
+      const { data: c } = await sb.from("config_landing").select("pixel_meta_id, capi_ativa").eq("id", 1).maybeSingle();
+      if (c?.capi_ativa && c.pixel_meta_id) await eventoMeta(c.pixel_meta_id, b, email, whatsapp, req);
+      return json({ ok: true, fila: true });
+    }
 
     const { data: r, error } = await sb.rpc("cadastrar_parceiro_landing", { p: dados });
     if (error) return erro(error.message.replace(/^.*?: /, ""), error.code === "23505" ? 409 : 400);

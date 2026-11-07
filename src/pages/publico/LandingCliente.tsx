@@ -279,7 +279,7 @@ export default function LandingCliente() {
           <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Para clientes {parceiro}</p>
             <h1 className="mt-3 text-balance font-display text-[34px] font-extrabold leading-[1.08] sm:text-[44px]">
-              A {parceiro} está oferecendo uma consultoria de gestão comercial de graça pra você, por tempo limitado.
+              A {parceiro} está oferecendo uma consultoria de gestão comercial de graça pra você.
             </h1>
             <p className="mt-5 max-w-[48ch] text-base text-neutro-300 sm:text-lg">
               Comece pelo diagnóstico do seu comercial. Você sai com um plano de 90 dias e acesso ao Wise Hub.

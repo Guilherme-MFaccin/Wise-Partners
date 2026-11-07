@@ -11,6 +11,7 @@ export type ConfigLanding = {
   publicada: boolean;
   video_url: string | null;
   video_formato?: FormatoVideo;
+  modo_cadastro?: "fila" | "acesso_direto";
   pixel_meta_id: string | null;
   ga4_id: string | null;
   termo_versao: string;

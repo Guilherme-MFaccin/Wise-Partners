@@ -60,3 +60,15 @@ O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem
 - Autorização da Protectpool e da Fusion Alumínios para nome, números e a frase do João Vitor em anúncio pago.
 - Links dos anúncios com UTM, um `utm_content` por vídeo (ex.: `video-1` a `video-5`), para a lista de cadastros mostrar qual vídeo trouxe cada parceiro.
 - Portal do parceiro: link exclusivo da consultoria, mensagem pronta e treinamento de como apresentar a Wise. A página promete isso, e hoje o portal ainda não tem a segunda landing page nem o treinamento.
+
+## Fila de espera (07/11/2026, pedido do Igor)
+
+* Padrão novo: quem se cadastra na página entra numa fila (`cadastros_landing.status = 'fila'`), sem criar parceiro nem acesso. Os administradores recebem um aviso no portal.
+* Em Configurações, aba "Landing page dos parceiros", bloco "Fila de espera": botão de WhatsApp com mensagem pronta (marca o cadastro como contatado), botão "Mandar a agenda" (com o link do campo "Agenda para os parceiros"), situação, observação e "Aprovar e criar acesso".
+* A aprovação (`aprovar_cadastro_landing`) cria o parceiro em onboarding, com o aceite eletrônico feito na página; a conta sai pela função `convidar-usuario` com senha provisória, mostrada uma vez, com a mensagem pronta para o WhatsApp.
+* A chave "Fila de espera" (`config_landing.modo_cadastro`) volta ao acesso na hora, se um dia for preciso.
+* Migração 27, testes em `tests/db/fila_landing.test.ts`.
+
+## Textos legais 2026-11-07
+
+Termo e política atualizados (fila de espera, página do cliente do parceiro, compartilhamento com o parceiro, pesquisa acadêmica com consentimento próprio e anonimização, fornecedores). Cópias em `docs/textos-legais/`. Revisão jurídica com o Bruno pendente.
