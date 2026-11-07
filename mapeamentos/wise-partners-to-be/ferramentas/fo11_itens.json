@@ -2,23 +2,23 @@
  {
   "id": "PR-entrada",
   "bloco": "Entrada de parceiros (P-20)",
-  "texto": "Quem entra pelo autosserviço, e quem continua com reunião e workshop?",
+  "texto": "A fila de espera vale só para empresas de software, ou para todos os perfis?",
   "tipo": "escolha",
   "opcoes": [
-   "Dois caminhos: autosserviço para empresas de software, reunião e workshop para os demais perfis",
-   "Autosserviço para todos; reunião só para candidatos estratégicos (os que podem virar nível A)",
-   "Autosserviço para todos, sem exceção"
+   "Fila para empresas de software; caminho completo do P-20 (com workshop e negociação) para os demais perfis",
+   "Fila para todos; workshop e negociação só para candidatos estratégicos (os que podem virar nível A)",
+   "Fila para todos, sem exceção"
   ],
   "contexto": [
-   "O P-20 do to-be tem cinco passos: lista de candidatos, primeira reunião, qualificação, workshop e negociação do termo. No FO-08 você decidiu que, para SaaS, a entrada é toda pelo portal, sem conversa de 45 minutos. A landing page já faz isso: cadastro, aceite eletrônico do termo e acesso na hora.",
-   "Falta decidir se os outros perfis (consultorias, agências, institucionais, parceiros estratégicos) também entram assim."
+   "O P-20 do to-be tem cinco passos: lista de candidatos, primeira reunião, qualificação, workshop e negociação do termo. No FO-08 você tirou a conversa para os SaaS; em 07/11 o Igor pediu a fila: o cadastro entra numa fila no portal, ele fala com cada um pelo WhatsApp, manda a agenda e só depois da conversa libera o acesso.",
+   "Falta decidir se outros perfis (consultorias, agências, institucionais, parceiros estratégicos) também entram pela fila ou continuam no caminho completo do P-20."
   ],
-  "logica": "Minha recomendação: dois caminhos. O P-20 continua valendo para parcerias que pedem negociação (institucionais, grandes integradores), e o autosserviço vira um processo novo, curto, ao lado dele.",
+  "logica": "Minha recomendação: a segunda. A conversa do Igor já faz a qualificação; workshop e negociação ficam para quem justifica o esforço.",
   "citacoes": [
    {
-    "livro": "FO-08, agenda",
+    "livro": "Pedido do Igor, 07/11",
     "pagina": "resposta sua",
-    "trecho": "Não haverá conversa de 45 minutos. Precisamos sistematizar a entrada de parceiros desta categoria e o contato com eles também. Vamos tentar fazer tudo via portal wise partners."
+    "trecho": "Os leads parceiros das campanhas do Meta entram na landing page, se inscrevem e entram em uma fila de espera visualizável pelos administradores no portal, para entrar em contato via WhatsApp um a um e, somente então, enviar o link do Google Calendar."
    },
    {
     "livro": "To-be v7, P-20",
@@ -26,8 +26,92 @@
     "trecho": "Candidato identificado > Manter a lista de candidatos > Agendar a primeira reunião > Qualificar candidato > Conduzir o workshop de alinhamento > Negociar e formalizar o termo"
    }
   ],
-  "visual": "<svg viewBox=\"0 0 660 206\" role=\"img\" aria-label=\"Entrada de parceiros: antes e depois da landing page\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Hoje no to-be (P-20)</text><rect x=\"10\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"68.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Candidato identificado</text><line x1=\"126\" y1=\"52\" x2=\"138\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"198.0\" y=\"48.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Primeira</text><text x=\"198.0\" y=\"62.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">reunião</text><line x1=\"256\" y1=\"52\" x2=\"268\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"328.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Qualificar</text><line x1=\"386\" y1=\"52\" x2=\"398\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"458.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Workshop</text><line x1=\"516\" y1=\"52\" x2=\"528\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b hi\"/><text x=\"588.0\" y=\"48.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Negociar e</text><text x=\"588.0\" y=\"62.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">assinar termo</text><text x=\"10\" y=\"112\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Pela landing page (já no ar)</text><rect x=\"10\" y=\"122\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"80.0\" y=\"142.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio</text><text x=\"80.0\" y=\"156.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">no Meta</text><line x1=\"150\" y1=\"146\" x2=\"172\" y2=\"146\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"174\" y=\"122\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"244.0\" y=\"142.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Landing</text><text x=\"244.0\" y=\"156.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">page</text><line x1=\"314\" y1=\"146\" x2=\"336\" y2=\"146\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"338\" y=\"122\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"408.0\" y=\"142.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cadastro com</text><text x=\"408.0\" y=\"156.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">aceite do termo</text><line x1=\"478\" y1=\"146\" x2=\"500\" y2=\"146\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"502\" y=\"122\" width=\"140\" height=\"48\" rx=\"8\" class=\"b hi\"/><text x=\"572.0\" y=\"142.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Acesso ao</text><text x=\"572.0\" y=\"156.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">portal na hora</text><text x=\"330\" y=\"196\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Para SaaS, qualificação, workshop e negociação saíram. A pergunta é o que vale para os outros perfis.</text></svg>",
+  "visual": "<svg viewBox=\"0 0 660 292\" role=\"img\" aria-label=\"Entrada de parceiros: to-be, acesso na hora e fila de espera\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><text x=\"10\" y=\"18\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Hoje no to-be (P-20)</text><rect x=\"10\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"68.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Candidato identificado</text><line x1=\"126\" y1=\"52\" x2=\"138\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"198.0\" y=\"48.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Primeira</text><text x=\"198.0\" y=\"62.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">reunião</text><line x1=\"256\" y1=\"52\" x2=\"268\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"328.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Qualificar</text><line x1=\"386\" y1=\"52\" x2=\"398\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"458.0\" y=\"55.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Workshop</text><line x1=\"516\" y1=\"52\" x2=\"528\" y2=\"52\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"28\" width=\"116\" height=\"48\" rx=\"8\" class=\"b hi\"/><text x=\"588.0\" y=\"48.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Negociar e</text><text x=\"588.0\" y=\"62.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">assinar termo</text><text x=\"10\" y=\"108\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Página, 06/11: acesso na hora</text><rect x=\"10\" y=\"118\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"80.0\" y=\"138.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio</text><text x=\"80.0\" y=\"152.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">no Meta</text><line x1=\"150\" y1=\"142\" x2=\"172\" y2=\"142\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"174\" y=\"118\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"244.0\" y=\"138.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Landing</text><text x=\"244.0\" y=\"152.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">page</text><line x1=\"314\" y1=\"142\" x2=\"336\" y2=\"142\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"338\" y=\"118\" width=\"140\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"408.0\" y=\"138.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cadastro com</text><text x=\"408.0\" y=\"152.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">aceite do termo</text><line x1=\"478\" y1=\"142\" x2=\"500\" y2=\"142\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"502\" y=\"118\" width=\"140\" height=\"48\" rx=\"8\" class=\"b hi\"/><text x=\"572.0\" y=\"138.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Acesso ao</text><text x=\"572.0\" y=\"152.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">portal na hora</text><text x=\"10\" y=\"198\" font-size=\"12\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Página com fila de espera, 07/11 (pedido do Igor)</text><rect x=\"10\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"58.0\" y=\"228.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cadastro com</text><text x=\"58.0\" y=\"242.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">aceite</text><line x1=\"106\" y1=\"232\" x2=\"117\" y2=\"232\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"119\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"167.0\" y=\"228.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Fila no</text><text x=\"167.0\" y=\"242.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">portal</text><line x1=\"215\" y1=\"232\" x2=\"226\" y2=\"232\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"228\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"276.0\" y=\"228.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">WhatsApp</text><text x=\"276.0\" y=\"242.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">do Igor</text><line x1=\"324\" y1=\"232\" x2=\"335\" y2=\"232\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"337\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"385.0\" y=\"228.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Link da</text><text x=\"385.0\" y=\"242.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">agenda</text><line x1=\"433\" y1=\"232\" x2=\"444\" y2=\"232\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"446\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b\"/><text x=\"494.0\" y=\"235.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Conversa</text><line x1=\"542\" y1=\"232\" x2=\"553\" y2=\"232\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"555\" y=\"208\" width=\"96\" height=\"48\" rx=\"8\" class=\"b hi\"/><text x=\"603.0\" y=\"228.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Aprovação</text><text x=\"603.0\" y=\"242.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">e acesso</text><text x=\"330\" y=\"282\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">A fila devolve uma conversa por parceiro, mas sem qualificação formal, workshop nem negociação do termo.</text></svg>",
   "placeholder": ""
+ },
+ {
+  "id": "PR-fila_prazo",
+  "bloco": "Entrada de parceiros (P-20)",
+  "texto": "Em quanto tempo quem entrou na fila recebe a primeira mensagem do Igor?",
+  "tipo": "escolha",
+  "opcoes": [
+   "No mesmo dia útil",
+   "Em até 24 horas úteis",
+   "Em até 48 horas úteis",
+   "Outro prazo (comente)"
+  ],
+  "contexto": [
+   "Quem vem do anúncio está quente nas primeiras horas. O portal avisa os administradores a cada cadastro e mostra a fila com a data de entrada."
+  ],
+  "logica": "Minha recomendação: no mesmo dia útil. Se o prazo virar regra, o portal pode marcar quem passou dele na fila diária de exceções (P-09).",
+  "citacoes": [
+   {
+    "livro": "To-be v7, P-09",
+    "pagina": "mapa.json",
+    "trecho": "Tratar a fila diária de exceções"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "PR-fila_quem",
+  "bloco": "Entrada de parceiros (P-20)",
+  "texto": "Quem cuida da fila quando o Igor não puder?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Só o Igor, sempre",
+   "Eu (Guilherme) cubro quando o Igor não puder",
+   "O Gerente de Parcerias, com o Igor só nas conversas",
+   "Outra pessoa (comente)"
+  ],
+  "contexto": [
+   "Hoje os botões da fila (WhatsApp, agenda e aprovar) estão para administradores e para o time de parcerias."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "PR-fila_criterio",
+  "bloco": "Entrada de parceiros (P-20)",
+  "texto": "O que decide aprovar ou descartar alguém da fila?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Ser empresa de software com clientes empresariais",
+   "Ter um número mínimo de clientes ativos (comente quantos)",
+   "A conversa mostrar interesse real em oferecer a consultoria aos clientes",
+   "Não ser concorrente da Wise Makers (consultoria comercial)",
+   "Ter um responsável na empresa para cuidar da parceria"
+  ],
+  "contexto": [
+   "Hoje a aprovação é livre: quem estiver na fila pode ser aprovado. Marque o que pesa; o que for regra fixa pode virar aviso na fila."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "To-be v7, P-22",
+    "pagina": "mapa.json",
+    "trecho": "Qualificar candidato"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "PR-fila_conversa",
+  "bloco": "Entrada de parceiros (P-20)",
+  "texto": "O que a conversa do Igor com o parceiro cobre?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "A conversa fica no lugar da qualificação e, talvez, do encontro de alinhamento. Descreva o roteiro e a duração, para virar o passo a passo do processo."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Duração:\nO que é apresentado:\nO que é perguntado ao parceiro:\nO que é combinado no fim:"
  },
  {
   "id": "PR-nivel",
@@ -83,16 +167,17 @@
   "texto": "O encontro de alinhamento (P-28) continua para quem entra pela página?",
   "tipo": "escolha",
   "opcoes": [
+   "A conversa do Igor na fila substitui o encontro de alinhamento",
    "Substituído pelo treinamento gravado no portal, sem encontro",
    "Encontro coletivo de boas-vindas, uma vez por mês, para todos os novos",
    "Encontro individual só para quem tem mais de um número de clientes ativos (comente o corte)",
    "Continua individual para todos"
   ],
   "contexto": [
-   "O P-28 prevê um encontro individual em até 7 dias da assinatura, para escolher a primeira oportunidade. Com centenas de SaaS entrando sozinhos, um encontro por parceiro não cabe na agenda.",
+   "O P-28 prevê um encontro individual em até 7 dias da assinatura, para escolher a primeira oportunidade. Com a fila, o Igor já conversa com cada parceiro antes de aprovar.",
    "A página promete: link exclusivo, mensagem pronta e treinamento curto no portal."
   ],
-  "logica": "Minha recomendação: treinamento gravado mais um encontro coletivo mensal. Mantém um contato humano sem ocupar a agenda por parceiro.",
+  "logica": "Minha recomendação: a conversa do Igor faz o papel do encontro, e o treinamento gravado entrega o resto. Assim não há duas reuniões por parceiro.",
   "citacoes": [
    {
     "livro": "To-be v7, P-28",

@@ -41,13 +41,15 @@ A, B, C, D, E, F = ("Entrada de parceiros (P-20)", "Integração e ativação (P
                     "Oportunidade e comissão (P-31, P-38)", "Relação contínua (P-40, P-46, P-47)", "Portal e governança (P-60)")
 
 V = {}
-# entrada: antes e depois
+# entrada: to-be, página com acesso na hora e a fila de espera do Igor
 c = [txt(10, 18, "Hoje no to-be (P-20)", 12, cls="tx", bold=True)]
 c += fila(28, ["Candidato identificado", ["Primeira", "reunião"], "Qualificar", "Workshop", ["Negociar e", "assinar termo"]], w=116)
-c += [txt(10, 112, "Pela landing page (já no ar)", 12, cls="tx", bold=True)]
-c += fila(122, [["Anúncio", "no Meta"], ["Landing", "page"], ["Cadastro com", "aceite do termo"], ["Acesso ao", "portal na hora"]], w=140, gap=24)
-c.append(txt(330, 196, "Para SaaS, qualificação, workshop e negociação saíram. A pergunta é o que vale para os outros perfis.", 11, "middle"))
-V["entrada"] = svg(660, 206, "".join(c), "Entrada de parceiros: antes e depois da landing page")
+c += [txt(10, 108, "Página, 06/11: acesso na hora", 12, cls="tx", bold=True)]
+c += fila(118, [["Anúncio", "no Meta"], ["Landing", "page"], ["Cadastro com", "aceite do termo"], ["Acesso ao", "portal na hora"]], w=140, gap=24)
+c += [txt(10, 198, "Página com fila de espera, 07/11 (pedido do Igor)", 12, cls="tx", bold=True)]
+c += fila(208, [["Cadastro com", "aceite"], ["Fila no", "portal"], ["WhatsApp", "do Igor"], ["Link da", "agenda"], "Conversa", ["Aprovação", "e acesso"]], w=96, gap=13)
+c.append(txt(330, 282, "A fila devolve uma conversa por parceiro, mas sem qualificação formal, workshop nem negociação do termo.", 11, "middle"))
+V["entrada"] = svg(660, 292, "".join(c), "Entrada de parceiros: to-be, acesso na hora e fila de espera")
 
 # revisão do nível
 c = [box(10, 50, 140, 50, ["Cadastro pela", "landing page"], "b hi", 12), seta(150, 75, 196, 75),
@@ -117,16 +119,36 @@ c.append(txt(10, 176, "Cada contato leva algo de valor; depois de cada encontro,
 V["cadencia"] = svg(660, 186, "".join(c), "Cadência de contato por perfil")
 
 # ---------------- Perguntas ----------------
-Q("entrada", A, "Quem entra pelo autosserviço, e quem continua com reunião e workshop?", "escolha",
-  ["O P-20 do to-be tem cinco passos: lista de candidatos, primeira reunião, qualificação, workshop e negociação do termo. No FO-08 você decidiu que, para SaaS, a entrada é toda pelo portal, sem conversa de 45 minutos. A landing page já faz isso: cadastro, aceite eletrônico do termo e acesso na hora.",
-   "Falta decidir se os outros perfis (consultorias, agências, institucionais, parceiros estratégicos) também entram assim."],
-  ["Dois caminhos: autosserviço para empresas de software, reunião e workshop para os demais perfis",
-   "Autosserviço para todos; reunião só para candidatos estratégicos (os que podem virar nível A)",
-   "Autosserviço para todos, sem exceção"],
-  logica="Minha recomendação: dois caminhos. O P-20 continua valendo para parcerias que pedem negociação (institucionais, grandes integradores), e o autosserviço vira um processo novo, curto, ao lado dele.",
-  cits=[DEC("FO-08, agenda", "Não haverá conversa de 45 minutos. Precisamos sistematizar a entrada de parceiros desta categoria e o contato com eles também. Vamos tentar fazer tudo via portal wise partners."),
+Q("entrada", A, "A fila de espera vale só para empresas de software, ou para todos os perfis?", "escolha",
+  ["O P-20 do to-be tem cinco passos: lista de candidatos, primeira reunião, qualificação, workshop e negociação do termo. No FO-08 você tirou a conversa para os SaaS; em 07/11 o Igor pediu a fila: o cadastro entra numa fila no portal, ele fala com cada um pelo WhatsApp, manda a agenda e só depois da conversa libera o acesso.",
+   "Falta decidir se outros perfis (consultorias, agências, institucionais, parceiros estratégicos) também entram pela fila ou continuam no caminho completo do P-20."],
+  ["Fila para empresas de software; caminho completo do P-20 (com workshop e negociação) para os demais perfis",
+   "Fila para todos; workshop e negociação só para candidatos estratégicos (os que podem virar nível A)",
+   "Fila para todos, sem exceção"],
+  logica="Minha recomendação: a segunda. A conversa do Igor já faz a qualificação; workshop e negociação ficam para quem justifica o esforço.",
+  cits=[DEC("Pedido do Igor, 07/11", "Os leads parceiros das campanhas do Meta entram na landing page, se inscrevem e entram em uma fila de espera visualizável pelos administradores no portal, para entrar em contato via WhatsApp um a um e, somente então, enviar o link do Google Calendar."),
         TOBE("P-20", "Candidato identificado > Manter a lista de candidatos > Agendar a primeira reunião > Qualificar candidato > Conduzir o workshop de alinhamento > Negociar e formalizar o termo")],
   visual=V["entrada"])
+
+Q("fila_prazo", A, "Em quanto tempo quem entrou na fila recebe a primeira mensagem do Igor?", "escolha",
+  "Quem vem do anúncio está quente nas primeiras horas. O portal avisa os administradores a cada cadastro e mostra a fila com a data de entrada.",
+  ["No mesmo dia útil", "Em até 24 horas úteis", "Em até 48 horas úteis", "Outro prazo (comente)"],
+  logica="Minha recomendação: no mesmo dia útil. Se o prazo virar regra, o portal pode marcar quem passou dele na fila diária de exceções (P-09).",
+  cits=[TOBE("P-09", "Tratar a fila diária de exceções")])
+
+Q("fila_quem", A, "Quem cuida da fila quando o Igor não puder?", "escolha",
+  "Hoje os botões da fila (WhatsApp, agenda e aprovar) estão para administradores e para o time de parcerias.",
+  ["Só o Igor, sempre", "Eu (Guilherme) cubro quando o Igor não puder", "O Gerente de Parcerias, com o Igor só nas conversas", "Outra pessoa (comente)"])
+
+Q("fila_criterio", A, "O que decide aprovar ou descartar alguém da fila?", "multipla",
+  "Hoje a aprovação é livre: quem estiver na fila pode ser aprovado. Marque o que pesa; o que for regra fixa pode virar aviso na fila.",
+  ["Ser empresa de software com clientes empresariais", "Ter um número mínimo de clientes ativos (comente quantos)", "A conversa mostrar interesse real em oferecer a consultoria aos clientes",
+   "Não ser concorrente da Wise Makers (consultoria comercial)", "Ter um responsável na empresa para cuidar da parceria"],
+  cits=[TOBE("P-22", "Qualificar candidato")])
+
+Q("fila_conversa", A, "O que a conversa do Igor com o parceiro cobre?", "texto",
+  "A conversa fica no lugar da qualificação e, talvez, do encontro de alinhamento. Descreva o roteiro e a duração, para virar o passo a passo do processo.",
+  placeholder="Duração:\nO que é apresentado:\nO que é perguntado ao parceiro:\nO que é combinado no fim:")
 
 Q("nivel", A, "Quem confirma o nível e o pacote de quem entra pela página, e quando?", "escolha",
   ["Hoje o cadastro coloca todo mundo no nível C (Select), pacote Prateleira, em onboarding, com a nota \"nível a confirmar pela carteira no ICP\". O P-18 revisa o nível no fechamento trimestral."],
@@ -144,13 +166,14 @@ Q("outros_softwares", A, "Empresa de software que não é CRM nem ERP: segue o m
   cits=[DEC("FO-09, filtro", "Entra no portal e é colocado na categoria correta.")])
 
 Q("encontro", B, "O encontro de alinhamento (P-28) continua para quem entra pela página?", "escolha",
-  ["O P-28 prevê um encontro individual em até 7 dias da assinatura, para escolher a primeira oportunidade. Com centenas de SaaS entrando sozinhos, um encontro por parceiro não cabe na agenda.",
+  ["O P-28 prevê um encontro individual em até 7 dias da assinatura, para escolher a primeira oportunidade. Com a fila, o Igor já conversa com cada parceiro antes de aprovar.",
    "A página promete: link exclusivo, mensagem pronta e treinamento curto no portal."],
-  ["Substituído pelo treinamento gravado no portal, sem encontro",
+  ["A conversa do Igor na fila substitui o encontro de alinhamento",
+   "Substituído pelo treinamento gravado no portal, sem encontro",
    "Encontro coletivo de boas-vindas, uma vez por mês, para todos os novos",
    "Encontro individual só para quem tem mais de um número de clientes ativos (comente o corte)",
    "Continua individual para todos"],
-  logica="Minha recomendação: treinamento gravado mais um encontro coletivo mensal. Mantém um contato humano sem ocupar a agenda por parceiro.",
+  logica="Minha recomendação: a conversa do Igor faz o papel do encontro, e o treinamento gravado entrega o resto. Assim não há duas reuniões por parceiro.",
   cits=[TOBE("P-28", "Gatilho: até 7 dias da assinatura. Saída: primeira oportunidade escolhida.")])
 
 Q("plano90", B, "Quais passos do plano de 90 dias (P-94) continuam para quem entra pela página?", "multipla",
@@ -271,7 +294,7 @@ i = pagina.index("<header>"); j = pagina.index("</header>") + len("</header>")
 pagina = pagina[:i] + """<header>
     <p class="eyebrow">FO-11 · Processos do Wise Partners</p>
     <h1>O que muda nos processos com as duas landing pages</h1>
-    <p class="lead">O to-be v7 foi validado antes da entrada pelo portal: ainda tem reunião, workshop e negociação do termo para todo parceiro, encontro individual de alinhamento, plano de 90 dias acompanhado de perto e diagnóstico só por reunião. Aqui ficam as decisões que conciliam o to-be com o que já está no ar. Cada pergunta cita o processo que muda e o que você já decidiu. As respostas são salvas enquanto você marca.</p>
+    <p class="lead">O to-be v7 foi validado antes da entrada pelo portal e da fila de espera: ainda tem reunião, workshop e negociação do termo para todo parceiro, encontro individual de alinhamento, plano de 90 dias acompanhado de perto e diagnóstico só por reunião. Aqui ficam as decisões que conciliam o to-be com o que já está no ar. Cada pergunta cita o processo que muda e o que você já decidiu. As respostas são salvas enquanto você marca.</p>
   </header>""" + pagina[j:]
 pagina = pagina.replace("__DADOS__", json.dumps(ITENS, ensure_ascii=False).replace("</", "<\\/")).replace("__TOTAL__", str(len(ITENS)))
 assert "—" not in pagina and "–" not in pagina
