@@ -1,0 +1,387 @@
+[
+ {
+  "id": "NV-aceite",
+  "bloco": "Entrada pela fila (P-20, P-22)",
+  "texto": "Onde o parceiro aceita o termo de adesão e a política de privacidade?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Página só informa a política (sem caixa de aceite); o termo é aceito no primeiro acesso ao portal, antes de usar",
+   "Página só informa a política; o termo é enviado para assinatura eletrônica depois da conversa",
+   "Os dois aceites continuam na página, como está hoje"
+  ],
+  "contexto": [
+   "No FO-11 você descreveu o cadastro pela página sem aceite. Hoje a página pede os dois aceites antes de enviar.",
+   "A política de privacidade precisa ao menos ser informada na página, porque o formulário coleta nome, e-mail e WhatsApp (LGPD). O termo de adesão é o contrato da parceria."
+  ],
+  "logica": "Minha recomendação: a primeira. O formulário fica mais curto, quem não passar da conversa não assina nada, e o aceite no portal fica registrado com data, versão e usuário.",
+  "citacoes": [
+   {
+    "livro": "FO-11, entrada",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "anúncio do meta > Landing Page > Cadastro Através do Formulário (sem aceite) > Fila no Portal > Através do meu Whatsapp vou entrar em contato [...] Conversamos e apresento o acesso."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 232\" role=\"img\" aria-label=\"Entrada pela fila como descrita no FO-11\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"66.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio</text><text x=\"66.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">no Meta</text><line x1=\"122\" y1=\"35\" x2=\"138\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"196.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Landing</text><text x=\"196.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">page</text><line x1=\"252\" y1=\"35\" x2=\"268\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"326.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cadastro</text><text x=\"326.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">(sem aceite)</text><line x1=\"382\" y1=\"35\" x2=\"398\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"456.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Fila no</text><text x=\"456.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">portal</text><line x1=\"512\" y1=\"35\" x2=\"528\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"586.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">WhatsApp do</text><text x=\"586.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Guilherme</text><rect x=\"10\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"66.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Qualificar</text><text x=\"66.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">pela mensagem</text><line x1=\"122\" y1=\"121\" x2=\"138\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"196.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Link da</text><text x=\"196.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">agenda</text><line x1=\"252\" y1=\"121\" x2=\"268\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"326.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Parceiro</text><text x=\"326.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">marca</text><line x1=\"382\" y1=\"121\" x2=\"398\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"456.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Confirmar na</text><text x=\"456.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">véspera e no dia</text><line x1=\"512\" y1=\"121\" x2=\"528\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"586.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Conversa e</text><text x=\"586.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">acesso criado</text><path d=\"M 576 60 L 576 73 L 66 73 L 66 92\" class=\"ln\" fill=\"none\" marker-end=\"url(#ponta)\"/><rect x=\"10\" y=\"168\" width=\"632\" height=\"34\" rx=\"8\" class=\"b2\"/><text x=\"326.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Onde fica o aceite do termo e da política de privacidade?</text><text x=\"326\" y=\"222\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Fluxo que você descreveu no FO-11. A pergunta é só onde entra o aceite.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-nome_pagina",
+  "bloco": "Entrada pela fila (P-20, P-22)",
+  "texto": "Quem a página diz que vai entrar em contato?",
+  "tipo": "escolha",
+  "opcoes": [
+   "\"O Guilherme, da Wise Makers, vai falar com você pelo WhatsApp em até 24 horas úteis\"",
+   "\"Nossa equipe vai falar com você pelo WhatsApp em até 24 horas úteis\", sem nome",
+   "Outro texto (comente)"
+  ],
+  "contexto": [
+   "Depois do cadastro, a página mostra hoje: \"O Igor, diretor da Wise Makers, vai falar com você pelo WhatsApp\". No FO-11 você disse que a fila e as conversas são suas, sempre."
+  ],
+  "logica": "Minha recomendação: com o seu nome. Quem recebe a mensagem reconhece o remetente e responde mais.",
+  "citacoes": [
+   {
+    "livro": "FO-11, fila_quem",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "Sou eu que cuidarei da fila, sempre"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-link_afiliado",
+  "bloco": "Entrada pela fila (P-20, P-22)",
+  "texto": "Qual link o parceiro manda para os clientes dele?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O link da página do cliente no portal Wise Partners; escrevi Wise Hub por engano",
+   "Um link de afiliado dentro do Wise Hub, que ainda não existe no portal (comente como funciona)",
+   "Os dois, cada um para uma coisa (comente)"
+  ],
+  "contexto": [
+   "No FO-11 você escreveu que indicar é só enviar o link de afiliado que está no portal Wise Hub, onde o parceiro entra com o login dele.",
+   "O que existe hoje é o link da página do cliente no portal Wise Partners (partners.wisemakers.com.br/c/código), na tela Indicar do parceiro, com mensagem pronta. É esse link que registra a origem por 180 dias e leva ao diagnóstico."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "FO-11, fila_conversa",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "devo mostrar como é fácil indicar a Wise (apenas enviar o link de afiliado que está no portal wise hub, que o parceiro entra com o próprio login dele)"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-criterio_geral",
+  "bloco": "Entrada pela fila (P-20, P-22)",
+  "texto": "Com o processo servindo para qualquer tipo de parceiro, como fica o critério \"ser empresa de software\"?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Vira \"ter clientes empresariais que podem estar no ICP da Wise\", para qualquer tipo de parceiro",
+   "Cada campanha define o tipo de empresa que aceita; esta campanha aceita só software",
+   "Outro (comente)"
+  ],
+  "contexto": [
+   "No FO-11 você marcou \"ser empresa de software com clientes empresariais\" como critério da fila, e também disse que o processo deve servir para qualquer tipo de parceiro, mudando só a campanha de aquisição."
+  ],
+  "logica": "Minha recomendação: a primeira. O critério de processo fica fixo e a campanha só muda quem chega.",
+  "citacoes": [
+   {
+    "livro": "FO-11, outros_softwares",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "o processo tem que ser desenvolvido em modo que possamos fazer a aquisição de qualquer tipo de parceiro."
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-escada",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "A escada de níveis fica assim?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, como no esquema",
+   "Sim, com ajustes (comente)"
+  ],
+  "contexto": [
+   "Resumo do que você escreveu no FO-11: o nível C é a entrada de todos, mais comercial, com a consultoria gratuita para os clientes da carteira que estão no ICP e a comissão; a troca de indicações da Prateleira deixa de valer para ele. O B passa a ser recomendado pela Wise nas consultorias, depois do encontro de alinhamento (P-28). O A entra no Base Ativa.",
+   "No to-be v7, o nível de entrada vinha da quantidade de clientes no ICP (Elite, Premium e Select) e o pacote C era Prateleira, indicação e grupo."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "FO-11, encontro",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "vamos fazer com que a categoria de parceiro C seja esta mais comercial [...] A categoria B vamos poder indicar também o parceiro, mas, para isso, preciso fazer o proceso de alinhamento. Por fim, a categoria A entra o programa base ativa."
+   },
+   {
+    "livro": "FO-11, nivel",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "o que entregávamos na categoria C, que era a troca de prateleira de indicações, não vale mais para estes tipos de parceiros"
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 238\" role=\"img\" aria-label=\"Escada de níveis C, B e A\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"46\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"112\" y=\"64\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível C: entrada</text><rect x=\"10\" y=\"80\" width=\"204\" height=\"128\" rx=\"6\" class=\"b\"/><text x=\"22\" y=\"102\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Todos entram aqui</text><text x=\"22\" y=\"124\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Consultoria gratuita à base</text><text x=\"22\" y=\"146\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Comissão por regra única</text><text x=\"22\" y=\"168\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Grupo e comunidade</text><text x=\"22\" y=\"190\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Minicurso de como vender</text><rect x=\"226\" y=\"28\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"328\" y=\"46\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível B: recomendado</text><rect x=\"226\" y=\"62\" width=\"204\" height=\"146\" rx=\"6\" class=\"b\"/><text x=\"238\" y=\"84\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Encontro de alinhamento (P-28)</text><text x=\"238\" y=\"106\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Recomendado pela Wise nas</text><text x=\"238\" y=\"128\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">consultorias e na Prateleira</text><text x=\"238\" y=\"150\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">O que mais? (próxima pergunta)</text><rect x=\"442\" y=\"10\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"544\" y=\"28\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível A: Base Ativa</text><rect x=\"442\" y=\"44\" width=\"204\" height=\"164\" rx=\"6\" class=\"b\"/><text x=\"454\" y=\"66\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Evento de formação gratuita</text><text x=\"454\" y=\"88\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">e exclusiva para a base</text><text x=\"454\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">do parceiro, organizado</text><text x=\"454\" y=\"132\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">pela Wise</text><line x1=\"214\" y1=\"120\" x2=\"226\" y2=\"120\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"430\" y1=\"120\" x2=\"442\" y2=\"120\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"326\" y=\"228\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">O que você escreveu no FO-11. Faltam os critérios de cada degrau e quem decide.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-itens_b",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "Além de ser recomendado nas consultorias, o que mais o nível B recebe?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Certificado de parceiro Wise",
+   "Wise Hub com as duas marcas para a base do parceiro",
+   "Mentoria mensal aberta à carteira do parceiro (P-84)",
+   "Convite a eventos e formações da Wise",
+   "Apresentação a outros parceiros da comunidade (P-52)"
+  ],
+  "contexto": [
+   "O pacote B do to-be v7 tinha estes itens. O que não for marcado sai do B; comente se algum vai para o C ou para o A."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "To-be v7, oferta",
+    "pagina": "mapa.json",
+    "trecho": "o B (certificado, Hub, mentoria, eventos e formações) para Premium e Elite que divulgam à própria base"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-c_para_b",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "O que um parceiro C precisa mostrar para virar B?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Tempo mínimo no programa (comente quanto)",
+   "Clientes cadastrados pelo link (comente quantos)",
+   "Diagnósticos feitos na base dele (comente quantos)",
+   "Clientes fechados com a Wise vindos dele (comente quantos)",
+   "Presença no encontro trimestral e na comunidade",
+   "Produto bem avaliado por clientes da Wise que já usam o software dele",
+   "Avaliação da relação por você e pelo Igor, sem número fixo"
+  ],
+  "contexto": [
+   "No FO-11 você escreveu que, para cogitar indicar um parceiro aos clientes da Wise, ele precisa ter entrega de valor e tempo com a Wise. Marque o que conta e comente os números, se houver."
+  ],
+  "logica": "Minha recomendação: pelo menos um cliente fechado vindo dele, produto bem avaliado e a sua avaliação da relação. Recomendar um parceiro é emprestar a confiança da Wise; o resultado com clientes mostra se ele merece.",
+  "citacoes": [
+   {
+    "livro": "FO-11, nivel",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "o parceiro tem que ter algum tipo de entrega de valor, tempo conosco, dentre outros tipos de entrega para que possamos cogitar a possibilidade de indicá-los no RFP para nossos clientes."
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-quem_sobe",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "Como a subida de C para B acontece?",
+  "tipo": "escolha",
+  "opcoes": [
+   "No fechamento trimestral, o portal lista quem bateu os critérios; você convida para o encontro de alinhamento e o parceiro sobe depois dele",
+   "O parceiro pede pelo portal; você avalia e marca o encontro de alinhamento",
+   "Os dois caminhos: convite no trimestre e pedido do parceiro"
+  ],
+  "contexto": [
+   "O P-18 revisa o nível no fechamento trimestral. O encontro de alinhamento (P-28) passa a ser a porta do B."
+  ],
+  "logica": "Minha recomendação: a primeira. A Wise decide quem recomendar; o parceiro não fica esperando uma resposta a um pedido.",
+  "citacoes": [
+   {
+    "livro": "To-be v7, P-18",
+    "pagina": "mapa.json",
+    "trecho": "Revisar o nível dos parceiros"
+   },
+   {
+    "livro": "To-be v7, P-28",
+    "pagina": "mapa.json",
+    "trecho": "Conduzir o encontro de alinhamento"
+   }
+  ],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-b_para_a",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "O que um parceiro B precisa para entrar no Base Ativa (nível A)?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Carteira com um mínimo de clientes no ICP da Wise (comente quantos)",
+   "Tempo mínimo no nível B (comente quanto)",
+   "Clientes fechados com a Wise vindos dele (comente quantos)",
+   "Base engajada: diagnósticos feitos pelo link (comente quantos)",
+   "Agenda da Wise com horas livres no trimestre",
+   "Decisão do Igor, caso a caso"
+  ],
+  "contexto": [
+   "O evento do Base Ativa custa horas da Wise. Marque o que conta e comente os números, se houver."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-descer",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "Um parceiro pode descer de nível?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Não, o nível só sobe",
+   "Sim, no fechamento trimestral, quando deixa de cumprir os critérios, sempre com uma conversa antes",
+   "Só do B para o C, quando um cliente da Wise tem problema sério com ele"
+  ],
+  "contexto": [
+   "Com parceiros sendo recomendados aos clientes da Wise, um problema com o produto ou com o atendimento dele recai sobre a Wise."
+  ],
+  "logica": "Minha recomendação: a segunda. Sem descida, o B vira um título permanente e a recomendação perde o valor.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-grandes",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "Uma empresa grande (por exemplo, um ERP com centenas de clientes no ICP) também entra pelo C?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Sim, todos entram pelo C, sem exceção",
+   "Entra pelo C, mas você pode marcar o encontro de alinhamento logo depois e subir direto para o B",
+   "Decisão caso a caso do Igor"
+  ],
+  "contexto": [
+   "Nesta campanha você não distingue o tamanho da carteira. Mas um parceiro grande pode valer o encontro de alinhamento logo no começo."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-atuais",
+  "bloco": "Escada de níveis (P-18, P-28)",
+  "texto": "E os parceiros que já estão no programa, com o nível do desenho antigo?",
+  "tipo": "escolha",
+  "opcoes": [
+   "Mantêm o nível atual; a escada nova vale para quem entra daqui em diante",
+   "São reclassificados pela escada nova no próximo fechamento trimestral",
+   "Todos voltam para o C e sobem pelos critérios novos"
+  ],
+  "contexto": [
+   "Hoje o portal tem parceiros com nível A, B ou C dados pela carteira no ICP e pacotes ligados a esse nível."
+  ],
+  "logica": "Minha recomendação: a segunda, com conversa individual antes com quem desceria. Quem já tem relação com a Wise provavelmente já cumpre o B.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-onb_c",
+  "bloco": "Onboarding por nível (P-94, P-30)",
+  "texto": "Quais são as etapas do onboarding do nível C, na ordem?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Acesso criado na conversa e primeiro login",
+   "Minicurso de como vender a Wise assistido",
+   "Anúncio conjunto da parceria publicado",
+   "Link e mensagem pronta enviados para a base",
+   "Primeiro cliente cadastrado pelo link (ativado, P-30)",
+   "Primeiro diagnóstico feito na base dele"
+  ],
+  "contexto": [
+   "No FO-11 você pediu um onboarding por etapas e metas, sem prazo em dias, porque o tempo varia de caso a caso. No P-94 só o anúncio conjunto continuou, e a ativação passou a ser o primeiro cliente cadastrado pelo link.",
+   "Marque as etapas; comente se a ordem muda ou se falta alguma."
+  ],
+  "logica": "",
+  "citacoes": [
+   {
+    "livro": "FO-11, plano90",
+    "pagina": "resposta sua, 09/11",
+    "trecho": "Temos que ter um processo de onboarding e uma série de metas pré estabelecidas e atividades em conjunto, mas não definir temporalmente."
+   }
+  ],
+  "visual": "<svg viewBox=\"0 0 660 114\" role=\"img\" aria-label=\"Onboarding do nível C por etapas\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"10\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"68.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Acesso criado na</text><text x=\"68.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">conversa</text><line x1=\"126\" y1=\"48\" x2=\"138\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"198.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Minicurso</text><text x=\"198.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">assistido</text><line x1=\"256\" y1=\"48\" x2=\"268\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"328.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio conjunto</text><text x=\"328.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">publicado</text><line x1=\"386\" y1=\"48\" x2=\"398\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"458.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Link enviado à</text><text x=\"458.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">base</text><line x1=\"516\" y1=\"48\" x2=\"528\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b hi\"/><text x=\"588.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Primeiro cliente</text><text x=\"588.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">pelo link (ativado)</text><text x=\"326\" y=\"104\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Etapas e metas, sem contar dias. O portal mostra em que etapa cada parceiro está.</text></svg>",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-parado",
+  "bloco": "Onboarding por nível (P-94, P-30)",
+  "texto": "Sem prazo, como a Wise percebe um parceiro parado numa etapa, e o que faz?",
+  "tipo": "escolha",
+  "opcoes": [
+   "O portal mostra quantos dias o parceiro está na mesma etapa; você manda uma mensagem quando achar que vale",
+   "O portal manda um lembrete automático por e-mail depois de um tempo na mesma etapa (comente quanto), e você só entra se ele continuar parado",
+   "Só no encontro trimestral (P-83), sem contato individual"
+  ],
+  "contexto": [
+   "Sem dias definidos, o processo não estoura prazo. Mas, com volume, alguém precisa notar quem parou, sem virar cobrança."
+  ],
+  "logica": "Minha recomendação: a segunda. O prazo vira lembrete, não regra do processo, e a sua agenda fica para quem precisa de conversa.",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-onb_b",
+  "bloco": "Onboarding por nível (P-94, P-30)",
+  "texto": "O que acontece quando o parceiro sobe para o B?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Encontro de alinhamento (P-28)",
+   "Perfil do parceiro revisado para aparecer nas recomendações e na Prateleira",
+   "Avisar os consultores da Wise de que ele pode ser recomendado",
+   "Certificado e anúncio do novo nível",
+   "Primeira recomendação a um cliente da Wise"
+  ],
+  "contexto": [
+   "Marque as etapas do onboarding do B; o que faltar, comente."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-onb_a",
+  "bloco": "Onboarding por nível (P-94, P-30)",
+  "texto": "Quais são as etapas do Base Ativa (nível A)?",
+  "tipo": "multipla",
+  "opcoes": [
+   "Definir com o parceiro o tema e a data do evento",
+   "O parceiro convida a própria base, com o material da Wise",
+   "A Wise conduz a formação",
+   "Diagnósticos oferecidos aos participantes depois do evento",
+   "Relatório para o parceiro com presença e resultados"
+  ],
+  "contexto": [
+   "O evento de formação gratuita e exclusiva para a base do parceiro. Marque as etapas; o que faltar, comente."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": ""
+ },
+ {
+  "id": "NV-mais",
+  "bloco": "Onboarding por nível (P-94, P-30)",
+  "texto": "Algo mais sobre a escada de níveis ou o onboarding?",
+  "tipo": "texto",
+  "opcoes": [],
+  "contexto": [
+   "Qualquer regra, benefício ou mudança que você já combinou com o Igor e que não apareceu aqui."
+  ],
+  "logica": "",
+  "citacoes": [],
+  "visual": "",
+  "placeholder": "Escreva aqui"
+ }
+]

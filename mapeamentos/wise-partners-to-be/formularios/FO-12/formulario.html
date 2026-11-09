@@ -1,0 +1,216 @@
+<title>Níveis e onboarding</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@0;1&display=swap">
+<style>
+/* Coluna de leitura longa: cada decisão é um capítulo com figura, contexto, lógica, citações e a escolha no fim */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-soft: #e6eefb; --accent-fg: #ffffff; --ok: #1d7a46; --warn: #9a5b00; --soft2: #eef1f5; --barra2: #8fb3ea;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --serif: "IBM Plex Serif", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px; }
+.barra-in { max-width: 780px; margin: 0 auto; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.trilho { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.trilho i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.cont, .salvo { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+main { max-width: 780px; margin: 0 auto; display: grid; gap: 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+h2 { font-size: 21px; line-height: 1.35; margin: 4px 0 0; text-wrap: balance; }
+h3 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 66ch; }
+.aviso { border: 1px solid var(--line); border-left: 4px solid var(--warn); background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px; display: grid; gap: 14px; min-width: 0; }
+.q.feita { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.num { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 700; margin-right: 8px; }
+.fig { overflow-x: auto; background: var(--soft2); border-radius: 10px; padding: 14px; }
+.fig svg { display: block; width: 100%; height: auto; }
+.fig .b { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.fig .b.hi { fill: var(--accent-soft); stroke: var(--accent); }
+.fig .b2 { fill: var(--bg); stroke: var(--line); stroke-width: 1; }
+.fig .card { fill: var(--accent-soft); stroke: var(--accent); stroke-width: .8; }
+.fig .tx { fill: var(--fg); } .fig .mu { fill: var(--muted); } .fig .inv { fill: var(--accent-fg); font-weight: 600; }
+.fig .ln { stroke: var(--muted); stroke-width: 1.4; } .fig .ln.fino { stroke: var(--line); stroke-width: 1; } .fig .dash { stroke-dasharray: 5 4; }
+.fig .pt { fill: var(--accent); } .fig .vazio { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.fig .barra1 { fill: var(--accent); } .fig .barra2 { fill: var(--barra2); } .fig .faixa { fill: var(--accent-soft); opacity: .7; }
+.ctx { display: grid; gap: 10px; max-width: 70ch; }
+.logica { background: var(--accent-soft); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+.cits { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cits li { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.cits q { font-family: var(--serif); font-style: italic; quotes: "\201C" "\201D"; overflow-wrap: anywhere; }
+.cits small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+details.ver { font-size: 15px; } details.ver summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+.dica { font-size: 13px; color: var(--muted); }
+.op { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.op:hover { border-color: var(--accent); }
+.op input { margin: 3px 0 0; accent-color: var(--accent); flex: none; width: 18px; height: 18px; }
+.op:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.op.ns { border-style: dashed; color: var(--muted); }
+textarea { width: 100%; box-sizing: border-box; min-height: 80px; font: 15px/1.5 var(--sans); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+.comentar { justify-self: start; background: none; border: 0; color: var(--accent); font: 500 14px var(--sans); cursor: pointer; padding: 2px 0; }
+button.principal { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 20px; font: 600 16px var(--sans); cursor: pointer; }
+button.sec { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 8px; padding: 10px 16px; font: 600 15px var(--sans); cursor: pointer; }
+button:focus-visible, .op:focus-within, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.fim { display: grid; gap: 12px; justify-items: start; }
+.estado { font-weight: 600; color: var(--ok); } .estado.erro { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { .trilho i { transition: none; } }
+</style>
+<div class="barra"><div class="barra-in">
+  <div class="trilho" aria-hidden="true"><i id="trilho"></i></div>
+  <span class="cont" id="cont">0 de 17</span>
+  <span class="salvo" id="salvo" role="status"></span>
+</div></div>
+<main>
+  <header>
+    <p class="eyebrow">FO-12 · Processos do Wise Partners</p>
+    <h1>Escada de níveis e onboarding por etapas</h1>
+    <p class="lead">As respostas do FO-11 mudaram o desenho dos níveis: todo parceiro entra pelo C, sobe para o B pelo encontro de alinhamento e chega ao A com o Base Ativa, e o onboarding passa a ser por etapas, sem prazo em dias. Faltam os critérios de cada degrau, o que cada nível recebe e três pontos da entrada pela fila. As respostas são salvas enquanto você marca.</p>
+  </header>
+  <div class="aviso" id="aviso" hidden></div>
+  <form id="form" novalidate></form>
+  <section class="fim">
+    <button type="button" class="principal" id="enviar">Enviar respostas</button>
+    <span class="estado" id="estado" role="status"></span>
+    <button type="button" class="sec" id="copiar" hidden>Copiar respostas</button>
+  </section>
+</main>
+<script type="application/json" id="dados">[{"id": "NV-aceite", "bloco": "Entrada pela fila (P-20, P-22)", "texto": "Onde o parceiro aceita o termo de adesão e a política de privacidade?", "tipo": "escolha", "opcoes": ["Página só informa a política (sem caixa de aceite); o termo é aceito no primeiro acesso ao portal, antes de usar", "Página só informa a política; o termo é enviado para assinatura eletrônica depois da conversa", "Os dois aceites continuam na página, como está hoje"], "contexto": ["No FO-11 você descreveu o cadastro pela página sem aceite. Hoje a página pede os dois aceites antes de enviar.", "A política de privacidade precisa ao menos ser informada na página, porque o formulário coleta nome, e-mail e WhatsApp (LGPD). O termo de adesão é o contrato da parceria."], "logica": "Minha recomendação: a primeira. O formulário fica mais curto, quem não passar da conversa não assina nada, e o aceite no portal fica registrado com data, versão e usuário.", "citacoes": [{"livro": "FO-11, entrada", "pagina": "resposta sua, 09/11", "trecho": "anúncio do meta > Landing Page > Cadastro Através do Formulário (sem aceite) > Fila no Portal > Através do meu Whatsapp vou entrar em contato [...] Conversamos e apresento o acesso."}], "visual": "<svg viewBox=\"0 0 660 232\" role=\"img\" aria-label=\"Entrada pela fila como descrita no FO-11\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/><\/marker><\/defs><rect x=\"10\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"66.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio<\/text><text x=\"66.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">no Meta<\/text><line x1=\"122\" y1=\"35\" x2=\"138\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"196.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Landing<\/text><text x=\"196.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">page<\/text><line x1=\"252\" y1=\"35\" x2=\"268\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"326.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Cadastro<\/text><text x=\"326.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">(sem aceite)<\/text><line x1=\"382\" y1=\"35\" x2=\"398\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"456.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Fila no<\/text><text x=\"456.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">portal<\/text><line x1=\"512\" y1=\"35\" x2=\"528\" y2=\"35\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"10\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"586.0\" y=\"31.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">WhatsApp do<\/text><text x=\"586.0\" y=\"45.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Guilherme<\/text><rect x=\"10\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"66.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Qualificar<\/text><text x=\"66.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">pela mensagem<\/text><line x1=\"122\" y1=\"121\" x2=\"138\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"196.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Link da<\/text><text x=\"196.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">agenda<\/text><line x1=\"252\" y1=\"121\" x2=\"268\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"326.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Parceiro<\/text><text x=\"326.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">marca<\/text><line x1=\"382\" y1=\"121\" x2=\"398\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b\"/><text x=\"456.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Confirmar na<\/text><text x=\"456.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">véspera e no dia<\/text><line x1=\"512\" y1=\"121\" x2=\"528\" y2=\"121\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"96\" width=\"112\" height=\"50\" rx=\"8\" class=\"b hi\"/><text x=\"586.0\" y=\"117.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Conversa e<\/text><text x=\"586.0\" y=\"131.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">acesso criado<\/text><path d=\"M 576 60 L 576 73 L 66 73 L 66 92\" class=\"ln\" fill=\"none\" marker-end=\"url(#ponta)\"/><rect x=\"10\" y=\"168\" width=\"632\" height=\"34\" rx=\"8\" class=\"b2\"/><text x=\"326.0\" y=\"189.0\" text-anchor=\"middle\" font-size=\"12\" class=\"tx\">Onde fica o aceite do termo e da política de privacidade?<\/text><text x=\"326\" y=\"222\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Fluxo que você descreveu no FO-11. A pergunta é só onde entra o aceite.<\/text><\/svg>", "placeholder": ""}, {"id": "NV-nome_pagina", "bloco": "Entrada pela fila (P-20, P-22)", "texto": "Quem a página diz que vai entrar em contato?", "tipo": "escolha", "opcoes": ["\"O Guilherme, da Wise Makers, vai falar com você pelo WhatsApp em até 24 horas úteis\"", "\"Nossa equipe vai falar com você pelo WhatsApp em até 24 horas úteis\", sem nome", "Outro texto (comente)"], "contexto": ["Depois do cadastro, a página mostra hoje: \"O Igor, diretor da Wise Makers, vai falar com você pelo WhatsApp\". No FO-11 você disse que a fila e as conversas são suas, sempre."], "logica": "Minha recomendação: com o seu nome. Quem recebe a mensagem reconhece o remetente e responde mais.", "citacoes": [{"livro": "FO-11, fila_quem", "pagina": "resposta sua, 09/11", "trecho": "Sou eu que cuidarei da fila, sempre"}], "visual": "", "placeholder": ""}, {"id": "NV-link_afiliado", "bloco": "Entrada pela fila (P-20, P-22)", "texto": "Qual link o parceiro manda para os clientes dele?", "tipo": "escolha", "opcoes": ["O link da página do cliente no portal Wise Partners; escrevi Wise Hub por engano", "Um link de afiliado dentro do Wise Hub, que ainda não existe no portal (comente como funciona)", "Os dois, cada um para uma coisa (comente)"], "contexto": ["No FO-11 você escreveu que indicar é só enviar o link de afiliado que está no portal Wise Hub, onde o parceiro entra com o login dele.", "O que existe hoje é o link da página do cliente no portal Wise Partners (partners.wisemakers.com.br/c/código), na tela Indicar do parceiro, com mensagem pronta. É esse link que registra a origem por 180 dias e leva ao diagnóstico."], "logica": "", "citacoes": [{"livro": "FO-11, fila_conversa", "pagina": "resposta sua, 09/11", "trecho": "devo mostrar como é fácil indicar a Wise (apenas enviar o link de afiliado que está no portal wise hub, que o parceiro entra com o próprio login dele)"}], "visual": "", "placeholder": ""}, {"id": "NV-criterio_geral", "bloco": "Entrada pela fila (P-20, P-22)", "texto": "Com o processo servindo para qualquer tipo de parceiro, como fica o critério \"ser empresa de software\"?", "tipo": "escolha", "opcoes": ["Vira \"ter clientes empresariais que podem estar no ICP da Wise\", para qualquer tipo de parceiro", "Cada campanha define o tipo de empresa que aceita; esta campanha aceita só software", "Outro (comente)"], "contexto": ["No FO-11 você marcou \"ser empresa de software com clientes empresariais\" como critério da fila, e também disse que o processo deve servir para qualquer tipo de parceiro, mudando só a campanha de aquisição."], "logica": "Minha recomendação: a primeira. O critério de processo fica fixo e a campanha só muda quem chega.", "citacoes": [{"livro": "FO-11, outros_softwares", "pagina": "resposta sua, 09/11", "trecho": "o processo tem que ser desenvolvido em modo que possamos fazer a aquisição de qualquer tipo de parceiro."}], "visual": "", "placeholder": ""}, {"id": "NV-escada", "bloco": "Escada de níveis (P-18, P-28)", "texto": "A escada de níveis fica assim?", "tipo": "escolha", "opcoes": ["Sim, como no esquema", "Sim, com ajustes (comente)"], "contexto": ["Resumo do que você escreveu no FO-11: o nível C é a entrada de todos, mais comercial, com a consultoria gratuita para os clientes da carteira que estão no ICP e a comissão; a troca de indicações da Prateleira deixa de valer para ele. O B passa a ser recomendado pela Wise nas consultorias, depois do encontro de alinhamento (P-28). O A entra no Base Ativa.", "No to-be v7, o nível de entrada vinha da quantidade de clientes no ICP (Elite, Premium e Select) e o pacote C era Prateleira, indicação e grupo."], "logica": "", "citacoes": [{"livro": "FO-11, encontro", "pagina": "resposta sua, 09/11", "trecho": "vamos fazer com que a categoria de parceiro C seja esta mais comercial [...] A categoria B vamos poder indicar também o parceiro, mas, para isso, preciso fazer o proceso de alinhamento. Por fim, a categoria A entra o programa base ativa."}, {"livro": "FO-11, nivel", "pagina": "resposta sua, 09/11", "trecho": "o que entregávamos na categoria C, que era a troca de prateleira de indicações, não vale mais para estes tipos de parceiros"}], "visual": "<svg viewBox=\"0 0 660 238\" role=\"img\" aria-label=\"Escada de níveis C, B e A\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/><\/marker><\/defs><rect x=\"10\" y=\"46\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"112\" y=\"64\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível C: entrada<\/text><rect x=\"10\" y=\"80\" width=\"204\" height=\"128\" rx=\"6\" class=\"b\"/><text x=\"22\" y=\"102\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Todos entram aqui<\/text><text x=\"22\" y=\"124\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Consultoria gratuita à base<\/text><text x=\"22\" y=\"146\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Comissão por regra única<\/text><text x=\"22\" y=\"168\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Grupo e comunidade<\/text><text x=\"22\" y=\"190\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Minicurso de como vender<\/text><rect x=\"226\" y=\"28\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"328\" y=\"46\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível B: recomendado<\/text><rect x=\"226\" y=\"62\" width=\"204\" height=\"146\" rx=\"6\" class=\"b\"/><text x=\"238\" y=\"84\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Encontro de alinhamento (P-28)<\/text><text x=\"238\" y=\"106\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Recomendado pela Wise nas<\/text><text x=\"238\" y=\"128\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">consultorias e na Prateleira<\/text><text x=\"238\" y=\"150\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">O que mais? (próxima pergunta)<\/text><rect x=\"442\" y=\"10\" width=\"204\" height=\"26\" rx=\"6\" class=\"b hi\"/><text x=\"544\" y=\"28\" font-size=\"12\" text-anchor=\"middle\" class=\"tx\" font-weight=\"600\">Nível A: Base Ativa<\/text><rect x=\"442\" y=\"44\" width=\"204\" height=\"164\" rx=\"6\" class=\"b\"/><text x=\"454\" y=\"66\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">Evento de formação gratuita<\/text><text x=\"454\" y=\"88\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">e exclusiva para a base<\/text><text x=\"454\" y=\"110\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">do parceiro, organizado<\/text><text x=\"454\" y=\"132\" font-size=\"11\" text-anchor=\"start\" class=\"tx\">pela Wise<\/text><line x1=\"214\" y1=\"120\" x2=\"226\" y2=\"120\" class=\"ln\" marker-end=\"url(#ponta)\"/><line x1=\"430\" y1=\"120\" x2=\"442\" y2=\"120\" class=\"ln\" marker-end=\"url(#ponta)\"/><text x=\"326\" y=\"228\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">O que você escreveu no FO-11. Faltam os critérios de cada degrau e quem decide.<\/text><\/svg>", "placeholder": ""}, {"id": "NV-itens_b", "bloco": "Escada de níveis (P-18, P-28)", "texto": "Além de ser recomendado nas consultorias, o que mais o nível B recebe?", "tipo": "multipla", "opcoes": ["Certificado de parceiro Wise", "Wise Hub com as duas marcas para a base do parceiro", "Mentoria mensal aberta à carteira do parceiro (P-84)", "Convite a eventos e formações da Wise", "Apresentação a outros parceiros da comunidade (P-52)"], "contexto": ["O pacote B do to-be v7 tinha estes itens. O que não for marcado sai do B; comente se algum vai para o C ou para o A."], "logica": "", "citacoes": [{"livro": "To-be v7, oferta", "pagina": "mapa.json", "trecho": "o B (certificado, Hub, mentoria, eventos e formações) para Premium e Elite que divulgam à própria base"}], "visual": "", "placeholder": ""}, {"id": "NV-c_para_b", "bloco": "Escada de níveis (P-18, P-28)", "texto": "O que um parceiro C precisa mostrar para virar B?", "tipo": "multipla", "opcoes": ["Tempo mínimo no programa (comente quanto)", "Clientes cadastrados pelo link (comente quantos)", "Diagnósticos feitos na base dele (comente quantos)", "Clientes fechados com a Wise vindos dele (comente quantos)", "Presença no encontro trimestral e na comunidade", "Produto bem avaliado por clientes da Wise que já usam o software dele", "Avaliação da relação por você e pelo Igor, sem número fixo"], "contexto": ["No FO-11 você escreveu que, para cogitar indicar um parceiro aos clientes da Wise, ele precisa ter entrega de valor e tempo com a Wise. Marque o que conta e comente os números, se houver."], "logica": "Minha recomendação: pelo menos um cliente fechado vindo dele, produto bem avaliado e a sua avaliação da relação. Recomendar um parceiro é emprestar a confiança da Wise; o resultado com clientes mostra se ele merece.", "citacoes": [{"livro": "FO-11, nivel", "pagina": "resposta sua, 09/11", "trecho": "o parceiro tem que ter algum tipo de entrega de valor, tempo conosco, dentre outros tipos de entrega para que possamos cogitar a possibilidade de indicá-los no RFP para nossos clientes."}], "visual": "", "placeholder": ""}, {"id": "NV-quem_sobe", "bloco": "Escada de níveis (P-18, P-28)", "texto": "Como a subida de C para B acontece?", "tipo": "escolha", "opcoes": ["No fechamento trimestral, o portal lista quem bateu os critérios; você convida para o encontro de alinhamento e o parceiro sobe depois dele", "O parceiro pede pelo portal; você avalia e marca o encontro de alinhamento", "Os dois caminhos: convite no trimestre e pedido do parceiro"], "contexto": ["O P-18 revisa o nível no fechamento trimestral. O encontro de alinhamento (P-28) passa a ser a porta do B."], "logica": "Minha recomendação: a primeira. A Wise decide quem recomendar; o parceiro não fica esperando uma resposta a um pedido.", "citacoes": [{"livro": "To-be v7, P-18", "pagina": "mapa.json", "trecho": "Revisar o nível dos parceiros"}, {"livro": "To-be v7, P-28", "pagina": "mapa.json", "trecho": "Conduzir o encontro de alinhamento"}], "visual": "", "placeholder": ""}, {"id": "NV-b_para_a", "bloco": "Escada de níveis (P-18, P-28)", "texto": "O que um parceiro B precisa para entrar no Base Ativa (nível A)?", "tipo": "multipla", "opcoes": ["Carteira com um mínimo de clientes no ICP da Wise (comente quantos)", "Tempo mínimo no nível B (comente quanto)", "Clientes fechados com a Wise vindos dele (comente quantos)", "Base engajada: diagnósticos feitos pelo link (comente quantos)", "Agenda da Wise com horas livres no trimestre", "Decisão do Igor, caso a caso"], "contexto": ["O evento do Base Ativa custa horas da Wise. Marque o que conta e comente os números, se houver."], "logica": "", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-descer", "bloco": "Escada de níveis (P-18, P-28)", "texto": "Um parceiro pode descer de nível?", "tipo": "escolha", "opcoes": ["Não, o nível só sobe", "Sim, no fechamento trimestral, quando deixa de cumprir os critérios, sempre com uma conversa antes", "Só do B para o C, quando um cliente da Wise tem problema sério com ele"], "contexto": ["Com parceiros sendo recomendados aos clientes da Wise, um problema com o produto ou com o atendimento dele recai sobre a Wise."], "logica": "Minha recomendação: a segunda. Sem descida, o B vira um título permanente e a recomendação perde o valor.", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-grandes", "bloco": "Escada de níveis (P-18, P-28)", "texto": "Uma empresa grande (por exemplo, um ERP com centenas de clientes no ICP) também entra pelo C?", "tipo": "escolha", "opcoes": ["Sim, todos entram pelo C, sem exceção", "Entra pelo C, mas você pode marcar o encontro de alinhamento logo depois e subir direto para o B", "Decisão caso a caso do Igor"], "contexto": ["Nesta campanha você não distingue o tamanho da carteira. Mas um parceiro grande pode valer o encontro de alinhamento logo no começo."], "logica": "", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-atuais", "bloco": "Escada de níveis (P-18, P-28)", "texto": "E os parceiros que já estão no programa, com o nível do desenho antigo?", "tipo": "escolha", "opcoes": ["Mantêm o nível atual; a escada nova vale para quem entra daqui em diante", "São reclassificados pela escada nova no próximo fechamento trimestral", "Todos voltam para o C e sobem pelos critérios novos"], "contexto": ["Hoje o portal tem parceiros com nível A, B ou C dados pela carteira no ICP e pacotes ligados a esse nível."], "logica": "Minha recomendação: a segunda, com conversa individual antes com quem desceria. Quem já tem relação com a Wise provavelmente já cumpre o B.", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-onb_c", "bloco": "Onboarding por nível (P-94, P-30)", "texto": "Quais são as etapas do onboarding do nível C, na ordem?", "tipo": "multipla", "opcoes": ["Acesso criado na conversa e primeiro login", "Minicurso de como vender a Wise assistido", "Anúncio conjunto da parceria publicado", "Link e mensagem pronta enviados para a base", "Primeiro cliente cadastrado pelo link (ativado, P-30)", "Primeiro diagnóstico feito na base dele"], "contexto": ["No FO-11 você pediu um onboarding por etapas e metas, sem prazo em dias, porque o tempo varia de caso a caso. No P-94 só o anúncio conjunto continuou, e a ativação passou a ser o primeiro cliente cadastrado pelo link.", "Marque as etapas; comente se a ordem muda ou se falta alguma."], "logica": "", "citacoes": [{"livro": "FO-11, plano90", "pagina": "resposta sua, 09/11", "trecho": "Temos que ter um processo de onboarding e uma série de metas pré estabelecidas e atividades em conjunto, mas não definir temporalmente."}], "visual": "<svg viewBox=\"0 0 660 114\" role=\"img\" aria-label=\"Onboarding do nível C por etapas\" style=\"min-width:560px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/><\/marker><\/defs><rect x=\"10\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"68.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Acesso criado na<\/text><text x=\"68.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">conversa<\/text><line x1=\"126\" y1=\"48\" x2=\"138\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"140\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"198.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Minicurso<\/text><text x=\"198.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">assistido<\/text><line x1=\"256\" y1=\"48\" x2=\"268\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"270\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"328.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Anúncio conjunto<\/text><text x=\"328.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">publicado<\/text><line x1=\"386\" y1=\"48\" x2=\"398\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"400\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b\"/><text x=\"458.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Link enviado à<\/text><text x=\"458.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">base<\/text><line x1=\"516\" y1=\"48\" x2=\"528\" y2=\"48\" class=\"ln\" marker-end=\"url(#ponta)\"/><rect x=\"530\" y=\"20\" width=\"116\" height=\"56\" rx=\"8\" class=\"b hi\"/><text x=\"588.0\" y=\"44.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">Primeiro cliente<\/text><text x=\"588.0\" y=\"58.7\" text-anchor=\"middle\" font-size=\"11\" class=\"tx\">pelo link (ativado)<\/text><text x=\"326\" y=\"104\" font-size=\"11\" text-anchor=\"middle\" class=\"mu\">Etapas e metas, sem contar dias. O portal mostra em que etapa cada parceiro está.<\/text><\/svg>", "placeholder": ""}, {"id": "NV-parado", "bloco": "Onboarding por nível (P-94, P-30)", "texto": "Sem prazo, como a Wise percebe um parceiro parado numa etapa, e o que faz?", "tipo": "escolha", "opcoes": ["O portal mostra quantos dias o parceiro está na mesma etapa; você manda uma mensagem quando achar que vale", "O portal manda um lembrete automático por e-mail depois de um tempo na mesma etapa (comente quanto), e você só entra se ele continuar parado", "Só no encontro trimestral (P-83), sem contato individual"], "contexto": ["Sem dias definidos, o processo não estoura prazo. Mas, com volume, alguém precisa notar quem parou, sem virar cobrança."], "logica": "Minha recomendação: a segunda. O prazo vira lembrete, não regra do processo, e a sua agenda fica para quem precisa de conversa.", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-onb_b", "bloco": "Onboarding por nível (P-94, P-30)", "texto": "O que acontece quando o parceiro sobe para o B?", "tipo": "multipla", "opcoes": ["Encontro de alinhamento (P-28)", "Perfil do parceiro revisado para aparecer nas recomendações e na Prateleira", "Avisar os consultores da Wise de que ele pode ser recomendado", "Certificado e anúncio do novo nível", "Primeira recomendação a um cliente da Wise"], "contexto": ["Marque as etapas do onboarding do B; o que faltar, comente."], "logica": "", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-onb_a", "bloco": "Onboarding por nível (P-94, P-30)", "texto": "Quais são as etapas do Base Ativa (nível A)?", "tipo": "multipla", "opcoes": ["Definir com o parceiro o tema e a data do evento", "O parceiro convida a própria base, com o material da Wise", "A Wise conduz a formação", "Diagnósticos oferecidos aos participantes depois do evento", "Relatório para o parceiro com presença e resultados"], "contexto": ["O evento de formação gratuita e exclusiva para a base do parceiro. Marque as etapas; o que faltar, comente."], "logica": "", "citacoes": [], "visual": "", "placeholder": ""}, {"id": "NV-mais", "bloco": "Onboarding por nível (P-94, P-30)", "texto": "Algo mais sobre a escada de níveis ou o onboarding?", "tipo": "texto", "opcoes": [], "contexto": ["Qualquer regra, benefício ou mudança que você já combinou com o Igor e que não apareceu aqui."], "logica": "", "citacoes": [], "visual": "", "placeholder": "Escreva aqui"}]</script>
+<script>
+const ITENS = JSON.parse(document.getElementById('dados').textContent);
+const COL = 'fo17_itens', META = 'respostas/FO-17', CHAVE = 'fo17-rascunho';
+let estado = { respostas: {} };
+let db = null; const pend = new Set(); let timer = null;
+const $ = (id) => document.getElementById(id);
+const agora = () => new Date().toISOString();
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+
+function montar() {
+  const form = $('form'); let n = 0;
+  for (const it of ITENS) {
+    n++;
+    const card = el('article', 'q'); card.id = 'c-' + it.id;
+    const eb = el('p', 'eyebrow', it.bloco); card.appendChild(eb);
+    const h = el('h2'); h.append(el('span', 'num', String(n).padStart(2, '0')), document.createTextNode(it.texto)); card.appendChild(h);
+    if (it.visual) { const fig = el('div', 'fig'); fig.innerHTML = it.visual; card.appendChild(fig); }
+    card.appendChild(el('h3', null, 'Contexto'));
+    const ctx = el('div', 'ctx'); it.contexto.forEach(t => ctx.appendChild(el('p', null, t))); card.appendChild(ctx);
+    if (it.logica) { card.appendChild(el('h3', null, 'A lógica')); card.appendChild(el('p', 'logica', it.logica)); }
+    if (it.citacoes.length) {
+      const det = el('details', 'ver'); det.open = true;
+      det.appendChild(el('summary', null, 'O que a skill diz (' + it.citacoes.length + ' trechos)'));
+      const ul = el('ul', 'cits');
+      it.citacoes.forEach(c => { const li = el('li'); li.appendChild(el('q', null, c.trecho)); li.appendChild(el('small', null, c.livro + ', ' + c.pagina)); ul.appendChild(li); });
+      det.appendChild(ul); card.appendChild(det);
+    }
+    const fs = el('fieldset'); fs.appendChild(el('legend', null, it.tipo === 'texto' ? 'Sua resposta' : 'Sua decisão'));
+    if (it.tipo === 'multipla') fs.appendChild(el('span', 'dica', 'Pode marcar mais de uma.'));
+    it.opcoes.forEach((op, i) => {
+      const lab = el('label', 'op' + (op.startsWith('Não sei') ? ' ns' : ''));
+      const inp = el('input'); inp.type = it.tipo === 'multipla' ? 'checkbox' : 'radio'; inp.name = it.id; inp.value = op; inp.id = it.id + '-' + i;
+      inp.addEventListener('change', () => mudou(it)); lab.append(inp, el('span', null, op)); fs.appendChild(lab);
+    });
+    card.appendChild(fs);
+    const b = el('button', 'comentar', 'Comentar'); b.type = 'button';
+    const obs = el('textarea'); obs.id = it.id + '-obs'; obs.hidden = true; obs.placeholder = 'Ajuste, exceção ou outra resposta';
+    obs.setAttribute('aria-label', 'Comentário sobre a pergunta ' + n);
+    b.addEventListener('click', () => { obs.hidden = false; b.hidden = true; obs.focus(); });
+    obs.addEventListener('input', () => mudou(it));
+    if (it.tipo === 'texto') { obs.hidden = false; b.hidden = true; obs.placeholder = it.placeholder || 'Escreva aqui'; obs.rows = 6; obs.setAttribute('aria-label', 'Resposta da pergunta ' + n); }
+    card.append(b, obs);
+    form.appendChild(card);
+  }
+}
+function ler(it) {
+  const marc = [...document.querySelectorAll('input[name="' + it.id + '"]:checked')].map(i => i.value);
+  const obs = $(it.id + '-obs').value.trim();
+  if (!marc.length && !obs) return null;
+  const r = { valor: it.tipo === 'multipla' ? marc : (marc[0] || '') }; if (obs) r.obs = obs; return r;
+}
+function aplicar() {
+  for (const it of ITENS) {
+    const r = estado.respostas[it.id];
+    const vals = r ? (Array.isArray(r.valor) ? r.valor : [r.valor]) : [];
+    document.querySelectorAll('input[name="' + it.id + '"]').forEach(i => { i.checked = vals.includes(i.value); });
+    if (r && r.obs) { const o = $(it.id + '-obs'); o.value = r.obs; o.hidden = false; o.previousElementSibling.hidden = true; } else if (it.tipo !== 'texto') { const o = $(it.id + '-obs'); o.value = ''; }
+  }
+  progresso();
+}
+function progresso() {
+  let feitas = 0;
+  for (const it of ITENS) { const ok = !!estado.respostas[it.id]; if (ok) feitas++; $('c-' + it.id).classList.toggle('feita', ok); }
+  $('cont').textContent = feitas + ' de ' + ITENS.length;
+  $('trilho').style.width = (100 * feitas / ITENS.length) + '%';
+}
+function guardarLocal() { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} }
+function mudou(it) {
+  const r = ler(it);
+  if (r) estado.respostas[it.id] = { ...r, em: agora() }; else delete estado.respostas[it.id];
+  progresso(); guardarLocal(); $('salvo').textContent = 'Salvando...';
+  pend.add(it.id); clearTimeout(timer); timer = setTimeout(gravar, 700);
+}
+// cada resposta é um registro próprio: uma aba antiga nunca apaga o que outra gravou
+async function gravar() {
+  if (!db) { $('salvo').textContent = 'Só neste navegador'; return false; }
+  const ids = [...pend]; pend.clear(); let ok = true;
+  for (const id of ids) {
+    const r = estado.respostas[id];
+    try { if (r) await db.collection(COL).doc(id).set(r); else await db.collection(COL).doc(id).delete(); }
+    catch (e) { ok = false; pend.add(id); }
+  }
+  $('salvo').textContent = ok ? 'Salvo' : 'Não salvou';
+  return ok;
+}
+$('enviar').addEventListener('click', async () => {
+  clearTimeout(timer);
+  for (const id of Object.keys(estado.respostas)) pend.add(id);
+  let ok = await gravar();
+  if (ok) {
+    try { const m = await db.doc(META).get(); const base = m.exists ? m.data() : {};
+          await db.doc(META).set({ ...base, enviado: true, enviado_em: agora(), decisoes: Object.keys(estado.respostas).length }); }
+    catch (e) { ok = false; }
+  }
+  const e = $('estado');
+  if (ok) { e.className = 'estado'; e.textContent = 'Enviado: ' + Object.keys(estado.respostas).length + ' respostas gravadas. Volte ao chat e escreva "respondi". Dá para mudar depois: é só editar e enviar de novo.'; }
+  else { e.className = 'estado erro'; e.textContent = 'Não consegui gravar. Clique em Copiar respostas e cole no chat.'; $('copiar').hidden = false; }
+});
+$('copiar').addEventListener('click', async () => {
+  const txt = JSON.stringify(estado.respostas, null, 1);
+  try { await navigator.clipboard.writeText(txt); $('estado').textContent = 'Respostas copiadas: cole no chat.'; }
+  catch (e) { const t = el('textarea'); t.value = txt; $('copiar').after(t); t.select(); $('estado').textContent = 'Selecione e copie o texto abaixo.'; }
+});
+function semBanco(msg) { const a = $('aviso'); a.hidden = false; a.textContent = msg; $('copiar').hidden = false; }
+
+montar();
+const validos = new Set(ITENS.map(i => i.id));
+let local = {};
+try { const r = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+      if (r && r.respostas) for (const [k, v] of Object.entries(r.respostas)) if (v && validos.has(k)) local[k] = { ...v, em: v.em || '' }; } catch (e) {}
+estado.respostas = { ...local }; aplicar();
+$('salvo').textContent = 'Carregando...';
+const espera = setTimeout(() => { if (!db) { $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui conectar ao armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); } }, 10000);
+(async () => {
+  const c = window.claude && await window.claude.use('db');
+  if (!c) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Esta página não consegue salvar aqui. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); return; }
+  try {
+    const snap = await c.collection(COL).get(); db = c; clearTimeout(espera);
+    const servidor = {}; snap.docs.forEach(d => { if (d.exists && validos.has(d.id)) servidor[d.id] = d.data(); });
+    const junto = { ...servidor };
+    for (const [k, v] of Object.entries(local)) { const s = servidor[k]; if (!s || (v.em || '') > (s.em || '')) { junto[k] = v; pend.add(k); } }
+    estado.respostas = junto; aplicar(); guardarLocal();
+    if (pend.size) await gravar(); else $('salvo').textContent = 'Salvo';
+  } catch (e) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui ler o armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); }
+})();
+</script>
