@@ -4,50 +4,28 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro entra num tipo de risco"]):::confirmado
-      n_g1{"Qual é o tipo?"}:::confirmado
-      n_t1["Levar uma oportunidade pronta ao parceiro"]:::confirmado
-      n_t2["Ouvir o parceiro e decidir em 15 dias se vale"]:::confirmado
-      n_t3["Recrutar de novo com um foco único"]:::confirmado
-      n_t4["Decidir sem insistir"]:::confirmado
-      n_e1>"30 dias"]:::confirmado
-      n_g2{"O Ritmo voltou a ser alto?"}:::confirmado
-      n_t5["Sugerir o desligamento"]:::confirmado
-      n_t6["Decidir o desligamento com motivo"]:::confirmado
-      n_g3{"Desligar?"}:::confirmado
-      n_t7["Comunicar o encerramento em conversa e por escrito"]:::confirmado
-      n_e2>"30 dias de aviso"]:::confirmado
-      n_t8["Encerrar a parceria e revogar acessos"]:::confirmado
-      n_t9["Manter o ex-parceiro na lista de contato anual"]:::confirmado
-      n_f1(["Parceiro retomado"]):::confirmado
-      n_f2(["Parceiro mantido em observação"]):::confirmado
-      n_f3(["Parceria encerrada"]):::confirmado
+      n_i1(["Parceiro entra num tipo de risco"]):::hipotese
+      n_i2(["Descumprimento do termo ou dano a um cliente"]):::hipotese
+      n_s1[["Retomar parceiro em risco pela abordagem do tipo"]]:::hipotese
+      n_g1{"O parceiro foi retomado?"}:::hipotese
+      n_s2[["Desligar parceiro"]]:::hipotese
+      n_g2{"A parceria foi encerrada?"}:::hipotese
+      n_s3[["Encerrar a parceria a pedido"]]:::hipotese
+      n_f1(["Parceiro retomado"]):::hipotese
+      n_f2(["Parceria encerrada pela Wise"]):::hipotese
+      n_f3(["Parceiro mantido em observação"]):::hipotese
+      n_f4(["Parceria encerrada a pedido"]):::hipotese
     end
-    subgraph raia_PA_02 ["Diretor"]
-      n_t6b["Assinar o aviso formal"]:::confirmado
+    subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
+      n_i3(["Parceiro pede para sair"]):::hipotese
     end
-    ext_X1[/"Parceiro"/]
-    n_i1 --> n_g1
-    n_g1 -->|Âncora esfriando| n_t1
-    n_g1 -->|Valioso em risco| n_t2
-    n_g1 -->|Cordial seletivo| n_t3
-    n_g1 -->|Desertor| n_t4
-    n_t1 --> n_e1
-    n_t2 --> n_e1
-    n_t3 --> n_e1
-    n_t4 --> n_t5
-    n_e1 --> n_g2
-    n_g2 -->|Sim| n_f1
-    n_g2 -->|Não| n_t5
-    n_t5 --> n_t6
-    n_t6 --> n_g3
-    n_g3 -->|Não| n_f2
-    n_g3 -->|Sim| n_t6b
-    n_t6b --> n_t7
-    n_t7 --> n_e2
-    n_e2 --> n_t8
-    n_t8 --> n_t9
-    n_t9 --> n_f3
-    n_t1 -.->|Oportunidade| ext_X1
-    n_t3 -.->|Convite com foco único| ext_X1
-    n_t7 -.->|Aviso formal assinado| ext_X1
+    n_i1 --> n_s1
+    n_s1 --> n_g1
+    n_g1 -->|Sim| n_f1
+    n_g1 -->|Não| n_s2
+    n_i2 --> n_s2
+    n_s2 --> n_g2
+    n_g2 -->|Sim| n_f2
+    n_g2 -->|Não| n_f3
+    n_i3 --> n_s3
+    n_s3 --> n_f4

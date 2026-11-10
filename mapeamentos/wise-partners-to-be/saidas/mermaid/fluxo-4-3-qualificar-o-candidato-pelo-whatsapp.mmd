@@ -1,0 +1,20 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Candidato respondeu ao primeiro contato"]):::hipotese
+      n_t1["Confirmar com o candidato os dados do cadastro"]:::hipotese
+      n_t2["Perguntar sobre os clientes, o responsável e o interesse"]:::hipotese
+      n_t3["Registrar a observação e marcar como contatado"]:::hipotese
+      n_g1{"Cumpre os critérios da fila?"}:::hipotese
+      n_f1(["Candidato não elegível"]):::hipotese
+      n_f2(["Candidato qualificado"]):::hipotese
+    end
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_g1
+    n_g1 -->|Não| n_f1
+    n_g1 -->|Sim| n_f2

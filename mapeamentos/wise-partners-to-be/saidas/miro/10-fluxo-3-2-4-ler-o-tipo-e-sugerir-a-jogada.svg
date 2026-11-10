@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_68" transform="translate(0,42008)" data-frame="3.2.4 Ler o tipo e sugerir a jogada">
+<rect data-type="frame" x="0" y="0" width="1628" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">3.2.4 Ler o tipo e sugerir a jogada</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="3.2.4 Ler o tipo e sugerir a jogada">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Fator recalculado"]):::hipotese
+      n_t1["Ler o tipo na tabela de oito células"]:::hipotese
+      n_g1{"O tipo mudou?"}:::hipotese
+      n_t2["Criar a tarefa da jogada do novo tipo"]:::hipotese
+      n_f1(["Tipo mantido"]):::hipotese
+      n_f2(["Tipo atualizado e jogada criada"]):::hipotese
+    end
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_g1
+    n_g1 --&gt;|Não| n_f1
+    n_g1 --&gt;|Sim| n_t2
+    n_t2 --&gt; n_f2
+
+</foreignObject>
+</g></svg>

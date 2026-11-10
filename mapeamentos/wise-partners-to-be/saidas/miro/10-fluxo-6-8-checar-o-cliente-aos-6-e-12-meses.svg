@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_39" transform="translate(3648,27072)" data-frame="6.8 Checar o cliente aos 6 e 12 meses">
+<rect data-type="frame" x="0" y="0" width="2348" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">6.8 Checar o cliente aos 6 e 12 meses</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="6.8 Checar o cliente aos 6 e 12 meses">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["6 ou 12 meses do fechamento"]):::hipotese
+      n_t1["Criar a tarefa de checagem"]:::hipotese
+      n_t2["Perguntar ao consultor como está o cliente"]:::hipotese
+      n_t4["Registrar a checagem"]:::hipotese
+      n_t5["Contar ao parceiro como está o cliente que ele indicou"]:::hipotese
+      n_f1(["Checagem registrada e parceiro informado"]):::hipotese
+    end
+    subgraph raia_PA_07 ["Consultor da Wise Makers"]
+      n_t3["Informar se o cliente continua e o resultado obtido"]:::hipotese
+    end
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_t3
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_t5
+    n_t5 --&gt; n_f1
+
+</foreignObject>
+</g></svg>

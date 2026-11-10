@@ -1,0 +1,73 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Cliente se cadastra pelo link do parceiro"]):::hipotese
+      n_t1["Registrar o cadastro com a origem no parceiro e avisar o parceiro"]:::hipotese
+      n_g1{"A empresa está no ICP da Wise?"}:::hipotese
+      n_t2["Liberar o autodiagnóstico na hora"]:::hipotese
+      n_t3["Mostrar o resultado e o link do Wise Hub"]:::hipotese
+      n_t4["Enviar o resultado e um próximo passo por e-mail"]:::hipotese
+      n_t5["Liberar a agenda para a reunião"]:::hipotese
+      n_e1>"Cliente marca o horário"]:::hipotese
+      n_t6["Conferir a agenda da semana"]:::hipotese
+      n_g2{"Passou de 10 reuniões na semana?"}:::hipotese
+      n_t7["Passar a reunião a um consultor da Wise"]:::hipotese
+      n_t8["Abrir a reunião no horário marcado (Gerente ou consultor)"]:::hipotese
+      n_g0{"O cliente compareceu?"}:::hipotese
+      n_t9["Oferecer um novo horário ou o autodiagnóstico"]:::hipotese
+      n_ta["Conduzir o diagnóstico pela Matriz 5x5"]:::hipotese
+      n_g3{"Pesquisa aprovada pelo CEP e consentida pelo cliente?"}:::hipotese
+      n_tb["Aplicar a pesquisa"]:::hipotese
+      n_tc["Enviar o mapa da reunião em até 2 dias úteis"]:::hipotese
+      n_td["Liberar o acesso ao Wise Hub"]:::hipotese
+      n_g4{"O cliente autorizou mostrar o resultado ao parceiro?"}:::hipotese
+      n_te["Liberar o resultado ao parceiro no portal"]:::hipotese
+      n_g5{"O cliente pediu para contratar a consultoria?"}:::hipotese
+      n_tf["Abrir a oportunidade com a origem no parceiro"]:::hipotese
+      n_f0(["Reunião não realizada"]):::hipotese
+      n_f1(["Autodiagnóstico entregue"]):::hipotese
+      n_f2(["Diagnóstico entregue"]):::hipotese
+      n_f3(["Oportunidade aberta"]):::hipotese
+    end
+    ext_X1[/"Parceiro"/]
+    ext_X2[/"Cliente do parceiro"/]
+    n_i1 --> n_t1
+    n_t1 --> n_g1
+    n_g1 -->|Não| n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_t4
+    n_t4 --> n_f1
+    n_g1 -->|Sim| n_t5
+    n_t5 --> n_e1
+    n_e1 --> n_t6
+    n_t6 --> n_g2
+    n_g2 -->|Sim| n_t7
+    n_t7 --> n_t8
+    n_g2 -->|Não| n_t8
+    n_t8 --> n_g0
+    n_g0 -->|Não| n_t9
+    n_t9 --> n_f0
+    n_g0 -->|Sim| n_ta
+    n_ta --> n_g3
+    n_g3 -->|Sim| n_tb
+    n_tb --> n_tc
+    n_g3 -->|Não| n_tc
+    n_tc --> n_td
+    n_td --> n_g4
+    n_g4 -->|Sim| n_te
+    n_te --> n_g5
+    n_g4 -->|Não| n_g5
+    n_g5 -->|Sim| n_tf
+    n_tf --> n_f3
+    n_g5 -->|Não| n_f2
+    ext_X2 -.->|Cadastro de qualificação| n_i1
+    n_t1 -.->|Aviso de novo cliente| ext_X1
+    n_t3 -.->|Resultado e link do Hub| ext_X2
+    n_t4 -.->|E-mail do resultado| ext_X2
+    ext_X2 -.->|Horário marcado| n_e1
+    n_tc -.->|Mapa da reunião| ext_X2
+    n_td -.->|Acesso ao Hub| ext_X2
+    n_te -.->|Resultado autorizado| ext_X1

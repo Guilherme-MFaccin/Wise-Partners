@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_61" transform="translate(2668,37496)" data-frame="1.4.1 Definir níveis, benefícios e critérios de subida">
+<rect data-type="frame" x="0" y="0" width="2088" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">1.4.1 Definir níveis, benefícios e critérios de subida</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="1.4.1 Definir níveis, benefícios e critérios de subida">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Revisão anual das regras"]):::hipotese
+      n_t1["Rever os benefícios de cada nível com os resultados do ano"]:::hipotese
+      n_t2["Rever os critérios de subida"]:::hipotese
+      n_t4["Atualizar a tabela no portal"]:::hipotese
+      n_f1(["Tabela de níveis publicada"]):::hipotese
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t3["Aprovar a tabela de níveis"]:::hipotese
+    end
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_t3
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_f1
+
+</foreignObject>
+</g></svg>

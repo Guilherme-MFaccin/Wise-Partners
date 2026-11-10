@@ -10,5 +10,5 @@
 <textArea x="310" y="378" width="820" font-family="noto_sans" font-size="22" fill="#595959">suposição ainda não confirmada; existe pergunta pendente</textArea>
 <rect x="64" y="446" width="220" height="64" rx="12" fill="#ffc6c6" stroke="#bd0a0a" stroke-width="2" data-text-color="#1a1a1a" data-font-family="noto_sans" data-content="&lt;b&gt;Contestado&lt;/b&gt;" data-font-size="22" />
 <textArea x="310" y="462" width="820" font-family="noto_sans" font-size="22" fill="#595959">fontes discordam; aguardando resolução</textArea>
-<textArea x="64" y="550" width="1070" font-family="noto_sans" font-size="22" fill="#595959"><b>Completude: 99.1% · Validação: 92.8% · Perguntas pendentes: 1 · Contradições abertas: 0</b><br/><br/><b>Lacunas ainda sem pergunta</b><br/>Nenhuma lacuna sem pergunta.</textArea>
+<textArea x="64" y="550" width="1070" font-family="noto_sans" font-size="22" fill="#595959"><b>Completude: 67.2% · Validação: 91.2% · Perguntas pendentes: 119 · Contradições abertas: 0</b><br/><br/><b>Lacunas ainda sem pergunta</b><br/>Nenhuma lacuna sem pergunta.</textArea>
 </g></svg>

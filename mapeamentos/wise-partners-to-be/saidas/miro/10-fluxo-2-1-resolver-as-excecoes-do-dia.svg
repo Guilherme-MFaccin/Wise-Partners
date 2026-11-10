@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_09" transform="translate(2408,10558)" data-frame="2.1 Resolver as exceções do dia">
+<rect data-type="frame" x="0" y="0" width="2668" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">2.1 Resolver as exceções do dia</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="2.1 Resolver as exceções do dia">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Início do dia de trabalho no programa"]):::hipotese
+      n_t1["Abrir a fila ordenada por prazo"]:::hipotese
+      n_t0["Pegar a próxima tarefa da fila"]:::hipotese
+      n_g1{"Quem executa a tarefa?"}:::hipotese
+      n_t2["Concluir a tarefa e registrar o resultado"]:::hipotese
+      n_t3["Combinar com quem executa, pessoalmente ou por mensagem"]:::hipotese
+      n_e1&gt;"Retorno de quem executa"]:::hipotese
+      n_t4["Registrar o retorno na tarefa"]:::hipotese
+      n_g2{"Ainda há tarefa vencendo hoje?"}:::hipotese
+      n_f1(["Fila do dia resolvida"]):::hipotese
+    end
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t0
+    n_t0 --&gt; n_g1
+    n_g1 --&gt;|O Gerente| n_t2
+    n_g1 --&gt;|Closer, consultor, financeiro ou parceiro| n_t3
+    n_t3 --&gt; n_e1
+    n_e1 --&gt; n_t4
+    n_t2 --&gt; n_g2
+    n_t4 --&gt; n_g2
+    n_g2 --&gt;|Sim| n_t0
+    n_g2 --&gt;|Não| n_f1
+
+</foreignObject>
+</g></svg>

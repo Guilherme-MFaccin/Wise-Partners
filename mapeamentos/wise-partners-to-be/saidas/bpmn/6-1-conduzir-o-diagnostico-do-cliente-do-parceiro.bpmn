@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-95" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-95">
+    <bpmn:participant id="Participant_P-95" name="6.1 Conduzir o diagnóstico do cliente do parceiro" processRef="Process_P-95" />
+    <bpmn:participant id="Ext_P-95_X1" name="Parceiro" />
+    <bpmn:participant id="Ext_P-95_X2" name="Cliente do parceiro" />
+    <bpmn:messageFlow id="P-95_M1" name="Cadastro de qualificação" sourceRef="Ext_P-95_X2" targetRef="P-95_i1" />
+    <bpmn:messageFlow id="P-95_M2" name="Aviso de novo cliente" sourceRef="P-95_t1" targetRef="Ext_P-95_X1" />
+    <bpmn:messageFlow id="P-95_M3" name="Resultado e link do Hub" sourceRef="P-95_t3" targetRef="Ext_P-95_X2" />
+    <bpmn:messageFlow id="P-95_M4" name="E-mail do resultado" sourceRef="P-95_t4" targetRef="Ext_P-95_X2" />
+    <bpmn:messageFlow id="P-95_M5" name="Horário marcado" sourceRef="Ext_P-95_X2" targetRef="P-95_e1" />
+    <bpmn:messageFlow id="P-95_M6" name="Mapa da reunião" sourceRef="P-95_tc" targetRef="Ext_P-95_X2" />
+    <bpmn:messageFlow id="P-95_M7" name="Acesso ao Hub" sourceRef="P-95_td" targetRef="Ext_P-95_X2" />
+    <bpmn:messageFlow id="P-95_M8" name="Resultado autorizado" sourceRef="P-95_te" targetRef="Ext_P-95_X1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-95" name="6.1 Conduzir o diagnóstico do cliente do parceiro" isExecutable="false">
+    <bpmn:documentation>O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP (mais de 3 vendedores, com faturamento mínimo opcional); o parceiro é avisado. No ICP: agenda do Google, reunião pela Matriz 5x5 conduzida pelo Gerente (acima de 10 por semana, um consultor da Wise assume), mapa próprio da reunião em até 2 dias úteis e acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade, que segue pela esteira. No portal: registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-95">
+      <bpmn:lane id="Lane_P-95_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-95_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_e1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t7</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t8</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_t9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_ta</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_tb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_tc</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_td</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_te</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_g5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_tf</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_f0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_f1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_f2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-95_f3</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-95_i1" name="Cliente se cadastra pelo link do parceiro"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-95_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-95_t1" name="Registrar o cadastro com a origem no parceiro e avisar o parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F1</bpmn:incoming><bpmn:outgoing>P-95_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="P-95_g1" name="A empresa está no ICP da Wise?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F2</bpmn:incoming><bpmn:outgoing>P-95_F3</bpmn:outgoing><bpmn:outgoing>P-95_F7</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="P-95_t2" name="Liberar o autodiagnóstico na hora"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F3</bpmn:incoming><bpmn:outgoing>P-95_F4</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:serviceTask id="P-95_t3" name="Mostrar o resultado e o link do Wise Hub"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F4</bpmn:incoming><bpmn:outgoing>P-95_F5</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:serviceTask id="P-95_t4" name="Enviar o resultado e um próximo passo por e-mail"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F5</bpmn:incoming><bpmn:outgoing>P-95_F6</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:serviceTask id="P-95_t5" name="Liberar a agenda para a reunião"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F7</bpmn:incoming><bpmn:outgoing>P-95_F8</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:intermediateCatchEvent id="P-95_e1" name="Cliente marca o horário"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F8</bpmn:incoming><bpmn:outgoing>P-95_F9</bpmn:outgoing><bpmn:messageEventDefinition id="P-95_e1_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:userTask id="P-95_t6" name="Conferir a agenda da semana"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F9</bpmn:incoming><bpmn:outgoing>P-95_F10</bpmn:outgoing></bpmn:userTask>
+    <bpmn:exclusiveGateway id="P-95_g2" name="Passou de 10 reuniões na semana?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F10</bpmn:incoming><bpmn:outgoing>P-95_F11</bpmn:outgoing><bpmn:outgoing>P-95_F13</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="P-95_t7" name="Passar a reunião a um consultor da Wise"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F11</bpmn:incoming><bpmn:outgoing>P-95_F12</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-95_t8" name="Abrir a reunião no horário marcado (Gerente ou consultor)"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F12</bpmn:incoming><bpmn:incoming>P-95_F13</bpmn:incoming><bpmn:outgoing>P-95_F14</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="P-95_g0" name="O cliente compareceu?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F14</bpmn:incoming><bpmn:outgoing>P-95_F15</bpmn:outgoing><bpmn:outgoing>P-95_F17</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="P-95_t9" name="Oferecer um novo horário ou o autodiagnóstico"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F15</bpmn:incoming><bpmn:outgoing>P-95_F16</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-95_ta" name="Conduzir o diagnóstico pela Matriz 5x5"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F17</bpmn:incoming><bpmn:outgoing>P-95_F18</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="P-95_g3" name="Pesquisa aprovada pelo CEP e consentida pelo cliente?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F18</bpmn:incoming><bpmn:outgoing>P-95_F19</bpmn:outgoing><bpmn:outgoing>P-95_F21</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="P-95_tb" name="Aplicar a pesquisa"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F19</bpmn:incoming><bpmn:outgoing>P-95_F20</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-95_tc" name="Enviar o mapa da reunião em até 2 dias úteis"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F20</bpmn:incoming><bpmn:incoming>P-95_F21</bpmn:incoming><bpmn:outgoing>P-95_F22</bpmn:outgoing></bpmn:task>
+    <bpmn:userTask id="P-95_td" name="Liberar o acesso ao Wise Hub"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F22</bpmn:incoming><bpmn:outgoing>P-95_F23</bpmn:outgoing></bpmn:userTask>
+    <bpmn:exclusiveGateway id="P-95_g4" name="O cliente autorizou mostrar o resultado ao parceiro?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F23</bpmn:incoming><bpmn:outgoing>P-95_F24</bpmn:outgoing><bpmn:outgoing>P-95_F26</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="P-95_te" name="Liberar o resultado ao parceiro no portal"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F24</bpmn:incoming><bpmn:outgoing>P-95_F25</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="P-95_g5" name="O cliente pediu para contratar a consultoria?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F25</bpmn:incoming><bpmn:incoming>P-95_F26</bpmn:incoming><bpmn:outgoing>P-95_F27</bpmn:outgoing><bpmn:outgoing>P-95_F29</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:userTask id="P-95_tf" name="Abrir a oportunidade com a origem no parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F27</bpmn:incoming><bpmn:outgoing>P-95_F28</bpmn:outgoing></bpmn:userTask>
+    <bpmn:endEvent id="P-95_f0" name="Reunião não realizada"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F16</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-95_f1" name="Autodiagnóstico entregue"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-95_f2" name="Diagnóstico entregue"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F29</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-95_f3" name="Oportunidade aberta"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-95_F28</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-95_F1" name="" sourceRef="P-95_i1" targetRef="P-95_t1" />
+    <bpmn:sequenceFlow id="P-95_F2" name="" sourceRef="P-95_t1" targetRef="P-95_g1" />
+    <bpmn:sequenceFlow id="P-95_F3" name="Não" sourceRef="P-95_g1" targetRef="P-95_t2" />
+    <bpmn:sequenceFlow id="P-95_F4" name="" sourceRef="P-95_t2" targetRef="P-95_t3" />
+    <bpmn:sequenceFlow id="P-95_F5" name="" sourceRef="P-95_t3" targetRef="P-95_t4" />
+    <bpmn:sequenceFlow id="P-95_F6" name="" sourceRef="P-95_t4" targetRef="P-95_f1" />
+    <bpmn:sequenceFlow id="P-95_F7" name="Sim" sourceRef="P-95_g1" targetRef="P-95_t5" />
+    <bpmn:sequenceFlow id="P-95_F8" name="" sourceRef="P-95_t5" targetRef="P-95_e1" />
+    <bpmn:sequenceFlow id="P-95_F9" name="" sourceRef="P-95_e1" targetRef="P-95_t6" />
+    <bpmn:sequenceFlow id="P-95_F10" name="" sourceRef="P-95_t6" targetRef="P-95_g2" />
+    <bpmn:sequenceFlow id="P-95_F11" name="Sim" sourceRef="P-95_g2" targetRef="P-95_t7" />
+    <bpmn:sequenceFlow id="P-95_F12" name="" sourceRef="P-95_t7" targetRef="P-95_t8" />
+    <bpmn:sequenceFlow id="P-95_F13" name="Não" sourceRef="P-95_g2" targetRef="P-95_t8" />
+    <bpmn:sequenceFlow id="P-95_F14" name="" sourceRef="P-95_t8" targetRef="P-95_g0" />
+    <bpmn:sequenceFlow id="P-95_F15" name="Não" sourceRef="P-95_g0" targetRef="P-95_t9" />
+    <bpmn:sequenceFlow id="P-95_F16" name="" sourceRef="P-95_t9" targetRef="P-95_f0" />
+    <bpmn:sequenceFlow id="P-95_F17" name="Sim" sourceRef="P-95_g0" targetRef="P-95_ta" />
+    <bpmn:sequenceFlow id="P-95_F18" name="" sourceRef="P-95_ta" targetRef="P-95_g3" />
+    <bpmn:sequenceFlow id="P-95_F19" name="Sim" sourceRef="P-95_g3" targetRef="P-95_tb" />
+    <bpmn:sequenceFlow id="P-95_F20" name="" sourceRef="P-95_tb" targetRef="P-95_tc" />
+    <bpmn:sequenceFlow id="P-95_F21" name="Não" sourceRef="P-95_g3" targetRef="P-95_tc" />
+    <bpmn:sequenceFlow id="P-95_F22" name="" sourceRef="P-95_tc" targetRef="P-95_td" />
+    <bpmn:sequenceFlow id="P-95_F23" name="" sourceRef="P-95_td" targetRef="P-95_g4" />
+    <bpmn:sequenceFlow id="P-95_F24" name="Sim" sourceRef="P-95_g4" targetRef="P-95_te" />
+    <bpmn:sequenceFlow id="P-95_F25" name="" sourceRef="P-95_te" targetRef="P-95_g5" />
+    <bpmn:sequenceFlow id="P-95_F26" name="Não" sourceRef="P-95_g4" targetRef="P-95_g5" />
+    <bpmn:sequenceFlow id="P-95_F27" name="Sim" sourceRef="P-95_g5" targetRef="P-95_tf" />
+    <bpmn:sequenceFlow id="P-95_F28" name="" sourceRef="P-95_tf" targetRef="P-95_f3" />
+    <bpmn:sequenceFlow id="P-95_F29" name="Não" sourceRef="P-95_g5" targetRef="P-95_f2" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-95">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-95" bpmnElement="Collaboration_P-95">
+      <bpmndi:BPMNShape id="Participant_P-95_di" bpmnElement="Participant_P-95" isHorizontal="true"><dc:Bounds x="0" y="200" width="3640" height="252" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-95_PA-01_di" bpmnElement="Lane_P-95_PA-01" isHorizontal="true"><dc:Bounds x="30" y="200" width="3610" height="252" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-95_X1_di" bpmnElement="Ext_P-95_X1" isHorizontal="true"><dc:Bounds x="0" y="0" width="3640" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-95_X2_di" bpmnElement="Ext_P-95_X2" isHorizontal="true"><dc:Bounds x="0" y="100" width="3640" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_i1_di" bpmnElement="P-95_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="256" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="298" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t1_di" bpmnElement="P-95_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g1_di" bpmnElement="P-95_g1" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="505" y="249" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="215" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t2_di" bpmnElement="P-95_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t3_di" bpmnElement="P-95_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="818" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t4_di" bpmnElement="P-95_t4" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="994" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t5_di" bpmnElement="P-95_t5" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="342" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_e1_di" bpmnElement="P-95_e1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="864" y="360" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="402" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t6_di" bpmnElement="P-95_t6" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="994" y="342" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g2_di" bpmnElement="P-95_g2" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1209" y="353" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="409" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t7_di" bpmnElement="P-95_t7" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1346" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t8_di" bpmnElement="P-95_t8" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1522" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g0_di" bpmnElement="P-95_g0" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1737" y="249" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1707" y="215" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_t9_di" bpmnElement="P-95_t9" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1874" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_ta_di" bpmnElement="P-95_ta" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1874" y="342" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g3_di" bpmnElement="P-95_g3" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2089" y="353" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="2059" y="409" width="110" height="56" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_tb_di" bpmnElement="P-95_tb" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2226" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_tc_di" bpmnElement="P-95_tc" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2402" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_td_di" bpmnElement="P-95_td" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2578" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g4_di" bpmnElement="P-95_g4" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2793" y="249" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="2763" y="305" width="110" height="56" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_te_di" bpmnElement="P-95_te" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2930" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_g5_di" bpmnElement="P-95_g5" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="3145" y="249" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="3115" y="201" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_tf_di" bpmnElement="P-95_tf" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="3282" y="238" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_f0_di" bpmnElement="P-95_f0" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="2096" y="256" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="2059" y="298" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_f1_di" bpmnElement="P-95_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1216" y="256" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="298" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_f2_di" bpmnElement="P-95_f2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="3328" y="360" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="3291" y="402" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-95_f3_di" bpmnElement="P-95_f3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="3504" y="256" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="3467" y="298" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-95_F1_di" bpmnElement="P-95_F1"><di:waypoint x="196" y="274" /><di:waypoint x="290" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F2_di" bpmnElement="P-95_F2"><di:waypoint x="418" y="274" /><di:waypoint x="505" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F3_di" bpmnElement="P-95_F3"><di:waypoint x="555" y="274" /><di:waypoint x="642" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="561" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F4_di" bpmnElement="P-95_F4"><di:waypoint x="770" y="274" /><di:waypoint x="818" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F5_di" bpmnElement="P-95_F5"><di:waypoint x="946" y="274" /><di:waypoint x="994" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F6_di" bpmnElement="P-95_F6"><di:waypoint x="1122" y="274" /><di:waypoint x="1216" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F7_di" bpmnElement="P-95_F7"><di:waypoint x="530" y="299" /><di:waypoint x="530" y="378" /><di:waypoint x="642" y="378" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="358" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F8_di" bpmnElement="P-95_F8"><di:waypoint x="770" y="378" /><di:waypoint x="864" y="378" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F9_di" bpmnElement="P-95_F9"><di:waypoint x="900" y="378" /><di:waypoint x="994" y="378" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F10_di" bpmnElement="P-95_F10"><di:waypoint x="1122" y="378" /><di:waypoint x="1209" y="378" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F11_di" bpmnElement="P-95_F11"><di:waypoint x="1234" y="353" /><di:waypoint x="1234" y="274" /><di:waypoint x="1346" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="1242" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F12_di" bpmnElement="P-95_F12"><di:waypoint x="1474" y="274" /><di:waypoint x="1522" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F13_di" bpmnElement="P-95_F13"><di:waypoint x="1234" y="353" /><di:waypoint x="1234" y="274" /><di:waypoint x="1522" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="1242" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F14_di" bpmnElement="P-95_F14"><di:waypoint x="1650" y="274" /><di:waypoint x="1737" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F15_di" bpmnElement="P-95_F15"><di:waypoint x="1787" y="274" /><di:waypoint x="1874" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="1793" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F16_di" bpmnElement="P-95_F16"><di:waypoint x="2002" y="274" /><di:waypoint x="2096" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F17_di" bpmnElement="P-95_F17"><di:waypoint x="1762" y="299" /><di:waypoint x="1762" y="378" /><di:waypoint x="1874" y="378" /><bpmndi:BPMNLabel><dc:Bounds x="1770" y="358" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F18_di" bpmnElement="P-95_F18"><di:waypoint x="2002" y="378" /><di:waypoint x="2089" y="378" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F19_di" bpmnElement="P-95_F19"><di:waypoint x="2114" y="353" /><di:waypoint x="2114" y="274" /><di:waypoint x="2226" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="2122" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F20_di" bpmnElement="P-95_F20"><di:waypoint x="2354" y="274" /><di:waypoint x="2402" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F21_di" bpmnElement="P-95_F21"><di:waypoint x="2114" y="353" /><di:waypoint x="2114" y="274" /><di:waypoint x="2402" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="2122" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F22_di" bpmnElement="P-95_F22"><di:waypoint x="2530" y="274" /><di:waypoint x="2578" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F23_di" bpmnElement="P-95_F23"><di:waypoint x="2706" y="274" /><di:waypoint x="2793" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F24_di" bpmnElement="P-95_F24"><di:waypoint x="2843" y="274" /><di:waypoint x="2930" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="2849" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F25_di" bpmnElement="P-95_F25"><di:waypoint x="3058" y="274" /><di:waypoint x="3145" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F26_di" bpmnElement="P-95_F26"><di:waypoint x="2818" y="249" /><di:waypoint x="2818" y="224" /><di:waypoint x="3170" y="224" /><di:waypoint x="3170" y="249" /><bpmndi:BPMNLabel><dc:Bounds x="2826" y="208" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F27_di" bpmnElement="P-95_F27"><di:waypoint x="3195" y="274" /><di:waypoint x="3282" y="274" /><bpmndi:BPMNLabel><dc:Bounds x="3201" y="254" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F28_di" bpmnElement="P-95_F28"><di:waypoint x="3410" y="274" /><di:waypoint x="3504" y="274" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_F29_di" bpmnElement="P-95_F29"><di:waypoint x="3170" y="299" /><di:waypoint x="3170" y="378" /><di:waypoint x="3328" y="378" /><bpmndi:BPMNLabel><dc:Bounds x="3178" y="358" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M1_di" bpmnElement="P-95_M1"><di:waypoint x="178" y="160" /><di:waypoint x="178" y="256" /><bpmndi:BPMNLabel><dc:Bounds x="184" y="173" width="168" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M2_di" bpmnElement="P-95_M2"><di:waypoint x="354" y="238" /><di:waypoint x="354" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="360" y="73" width="147" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M3_di" bpmnElement="P-95_M3"><di:waypoint x="882" y="238" /><di:waypoint x="882" y="160" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="173" width="161" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M4_di" bpmnElement="P-95_M4"><di:waypoint x="1058" y="238" /><di:waypoint x="1058" y="160" /><bpmndi:BPMNLabel><dc:Bounds x="1064" y="173" width="133" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M5_di" bpmnElement="P-95_M5"><di:waypoint x="882" y="160" /><di:waypoint x="882" y="360" /><bpmndi:BPMNLabel><dc:Bounds x="888" y="173" width="105" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M6_di" bpmnElement="P-95_M6"><di:waypoint x="2466" y="238" /><di:waypoint x="2466" y="160" /><bpmndi:BPMNLabel><dc:Bounds x="2472" y="173" width="105" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M7_di" bpmnElement="P-95_M7"><di:waypoint x="2642" y="238" /><di:waypoint x="2642" y="160" /><bpmndi:BPMNLabel><dc:Bounds x="2648" y="173" width="91" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-95_M8_di" bpmnElement="P-95_M8"><di:waypoint x="2994" y="238" /><di:waypoint x="2994" y="60" /><bpmndi:BPMNLabel><dc:Bounds x="3000" y="73" width="140" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-75" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-75">
+    <bpmn:participant id="Participant_P-75" name="5.1.2 Entregar o link da página do cliente e a mensagem pronta" processRef="Process_P-75" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-75" name="5.1.2 Entregar o link da página do cliente e a mensagem pronta" isExecutable="false">
+    <bpmn:documentation>O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. No portal: gera o link e a mensagem na tela Indicar do parceiro. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-75">
+      <bpmn:lane id="Lane_P-75_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-75_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-75_t1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-75_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-75_f1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-75_PA-05" name="Responsável nomeado no parceiro">
+        <bpmn:flowNodeRef>P-75_t2</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-75_i1" name="Acesso criado na conversa de entrada"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-75_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-75_t1" name="Gerar o link exclusivo e a mensagem pronta"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-75_F1</bpmn:incoming><bpmn:outgoing>P-75_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:task id="P-75_t2" name="Subir a logo da empresa"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-75_F2</bpmn:incoming><bpmn:outgoing>P-75_F3</bpmn:outgoing></bpmn:task>
+    <bpmn:serviceTask id="P-75_t3" name="Montar a página do cliente com as duas marcas"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-75_F3</bpmn:incoming><bpmn:outgoing>P-75_F4</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:endEvent id="P-75_f1" name="Link e página do cliente prontos"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-75_F4</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-75_F1" name="" sourceRef="P-75_i1" targetRef="P-75_t1" />
+    <bpmn:sequenceFlow id="P-75_F2" name="" sourceRef="P-75_t1" targetRef="P-75_t2" />
+    <bpmn:sequenceFlow id="P-75_F3" name="" sourceRef="P-75_t2" targetRef="P-75_t3" />
+    <bpmn:sequenceFlow id="P-75_F4" name="" sourceRef="P-75_t3" targetRef="P-75_f1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-75">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-75" bpmnElement="Collaboration_P-75">
+      <bpmndi:BPMNShape id="Participant_P-75_di" bpmnElement="Participant_P-75" isHorizontal="true"><dc:Bounds x="0" y="0" width="1000" height="296" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-75_PA-01_di" bpmnElement="Lane_P-75_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="970" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-75_PA-05_di" bpmnElement="Lane_P-75_PA-05" isHorizontal="true"><dc:Bounds x="30" y="148" width="970" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-75_i1_di" bpmnElement="P-75_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-75_t1_di" bpmnElement="P-75_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-75_t2_di" bpmnElement="P-75_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="466" y="186" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-75_t3_di" bpmnElement="P-75_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-75_f1_di" bpmnElement="P-75_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="864" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-75_F1_di" bpmnElement="P-75_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-75_F2_di" bpmnElement="P-75_F2"><di:waypoint x="418" y="74" /><di:waypoint x="442" y="74" /><di:waypoint x="442" y="222" /><di:waypoint x="466" y="222" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-75_F3_di" bpmnElement="P-75_F3"><di:waypoint x="594" y="222" /><di:waypoint x="618" y="222" /><di:waypoint x="618" y="74" /><di:waypoint x="642" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-75_F4_di" bpmnElement="P-75_F4"><di:waypoint x="770" y="74" /><di:waypoint x="864" y="74" /></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

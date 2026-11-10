@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-94" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-94">
+    <bpmn:participant id="Participant_P-94" name="5.2 Conduzir o onboarding por etapas" processRef="Process_P-94" />
+    <bpmn:participant id="Ext_P-94_X2" name="Cliente do parceiro" />
+    <bpmn:messageFlow id="P-94_M1" name="Cadastro pelo link" sourceRef="Ext_P-94_X2" targetRef="P-94_e1" />
+    <bpmn:messageFlow id="P-94_M2" name="Diagnóstico feito" sourceRef="Ext_P-94_X2" targetRef="P-94_e2" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-94" name="5.2 Conduzir o onboarding por etapas" isExecutable="false">
+    <bpmn:documentation>Etapas e metas do Select, sem contar dias: primeiro login, feito na conversa; minicurso assistido; anúncio conjunto da parceria publicado; link e mensagem pronta enviados para a base; primeiro cliente cadastrado pelo link (ativação); primeiro diagnóstico feito na base do parceiro. A ordem é sugerida, não obrigatória. O Premium e o Elite têm entrada própria. No portal: cria as etapas, marca sozinho as que consegue ver (login, minicurso, cliente, diagnóstico), deixa o parceiro marcar as outras e mostra a ele o que falta. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-94">
+      <bpmn:lane id="Lane_P-94_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-94_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_t1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_e1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_s1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_e2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_t5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_f1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_P-94_PA-05" name="Responsável nomeado no parceiro">
+        <bpmn:flowNodeRef>P-94_t2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-94_t4</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-94_i1" name="Parceiro com grupo, link, minicurso e Hub"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-94_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-94_t1" name="Criar as etapas do onboarding do Select"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F1</bpmn:incoming><bpmn:outgoing>P-94_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:task id="P-94_t2" name="Assistir ao minicurso de como vender a Wise"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F2</bpmn:incoming><bpmn:outgoing>P-94_F3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-94_t3" name="Publicar o anúncio conjunto da parceria e marcar no portal"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F3</bpmn:incoming><bpmn:outgoing>P-94_F4</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-94_t4" name="Enviar o link e a mensagem pronta para a base e marcar no portal"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F4</bpmn:incoming><bpmn:outgoing>P-94_F5</bpmn:outgoing></bpmn:task>
+    <bpmn:intermediateCatchEvent id="P-94_e1" name="Primeiro cliente cadastrado pelo link"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F5</bpmn:incoming><bpmn:outgoing>P-94_F6</bpmn:outgoing><bpmn:messageEventDefinition id="P-94_e1_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:subProcess id="P-94_s1" name="Declarar a ativação"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F6</bpmn:incoming><bpmn:outgoing>P-94_F7</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:intermediateCatchEvent id="P-94_e2" name="Primeiro diagnóstico feito na base do parceiro"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F7</bpmn:incoming><bpmn:outgoing>P-94_F8</bpmn:outgoing><bpmn:messageEventDefinition id="P-94_e2_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:serviceTask id="P-94_t5" name="Marcar o onboarding como concluído"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F8</bpmn:incoming><bpmn:outgoing>P-94_F9</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:endEvent id="P-94_f1" name="Onboarding do Select concluído"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-94_F9</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-94_F1" name="" sourceRef="P-94_i1" targetRef="P-94_t1" />
+    <bpmn:sequenceFlow id="P-94_F2" name="" sourceRef="P-94_t1" targetRef="P-94_t2" />
+    <bpmn:sequenceFlow id="P-94_F3" name="" sourceRef="P-94_t2" targetRef="P-94_t3" />
+    <bpmn:sequenceFlow id="P-94_F4" name="" sourceRef="P-94_t3" targetRef="P-94_t4" />
+    <bpmn:sequenceFlow id="P-94_F5" name="" sourceRef="P-94_t4" targetRef="P-94_e1" />
+    <bpmn:sequenceFlow id="P-94_F6" name="" sourceRef="P-94_e1" targetRef="P-94_s1" />
+    <bpmn:sequenceFlow id="P-94_F7" name="" sourceRef="P-94_s1" targetRef="P-94_e2" />
+    <bpmn:sequenceFlow id="P-94_F8" name="" sourceRef="P-94_e2" targetRef="P-94_t5" />
+    <bpmn:sequenceFlow id="P-94_F9" name="" sourceRef="P-94_t5" targetRef="P-94_f1" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-94">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-94" bpmnElement="Collaboration_P-94">
+      <bpmndi:BPMNShape id="Participant_P-94_di" bpmnElement="Participant_P-94" isHorizontal="true"><dc:Bounds x="0" y="100" width="1880" height="296" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-94_PA-01_di" bpmnElement="Lane_P-94_PA-01" isHorizontal="true"><dc:Bounds x="30" y="100" width="1850" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-94_PA-05_di" bpmnElement="Lane_P-94_PA-05" isHorizontal="true"><dc:Bounds x="30" y="248" width="1850" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Ext_P-94_X2_di" bpmnElement="Ext_P-94_X2" isHorizontal="true"><dc:Bounds x="0" y="0" width="1880" height="60" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_i1_di" bpmnElement="P-94_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="198" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_t1_di" bpmnElement="P-94_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_t2_di" bpmnElement="P-94_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="466" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_t3_di" bpmnElement="P-94_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_t4_di" bpmnElement="P-94_t4" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="818" y="286" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_e1_di" bpmnElement="P-94_e1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1040" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="198" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_s1_di" bpmnElement="P-94_s1" isExpanded="false" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1170" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_e2_di" bpmnElement="P-94_e2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1392" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="198" width="110" height="56" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_t5_di" bpmnElement="P-94_t5" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1522" y="138" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-94_f1_di" bpmnElement="P-94_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1744" y="156" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1707" y="198" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-94_F1_di" bpmnElement="P-94_F1"><di:waypoint x="196" y="174" /><di:waypoint x="290" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F2_di" bpmnElement="P-94_F2"><di:waypoint x="418" y="174" /><di:waypoint x="442" y="174" /><di:waypoint x="442" y="322" /><di:waypoint x="466" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F3_di" bpmnElement="P-94_F3"><di:waypoint x="594" y="322" /><di:waypoint x="642" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F4_di" bpmnElement="P-94_F4"><di:waypoint x="770" y="322" /><di:waypoint x="818" y="322" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F5_di" bpmnElement="P-94_F5"><di:waypoint x="946" y="322" /><di:waypoint x="1016" y="322" /><di:waypoint x="1016" y="174" /><di:waypoint x="1040" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F6_di" bpmnElement="P-94_F6"><di:waypoint x="1076" y="174" /><di:waypoint x="1170" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F7_di" bpmnElement="P-94_F7"><di:waypoint x="1298" y="174" /><di:waypoint x="1392" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F8_di" bpmnElement="P-94_F8"><di:waypoint x="1428" y="174" /><di:waypoint x="1522" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_F9_di" bpmnElement="P-94_F9"><di:waypoint x="1650" y="174" /><di:waypoint x="1744" y="174" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_M1_di" bpmnElement="P-94_M1"><di:waypoint x="1058" y="60" /><di:waypoint x="1058" y="156" /><bpmndi:BPMNLabel><dc:Bounds x="1064" y="73" width="126" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-94_M2_di" bpmnElement="P-94_M2"><di:waypoint x="1410" y="60" /><di:waypoint x="1410" y="156" /><bpmndi:BPMNLabel><dc:Bounds x="1416" y="73" width="119" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,21 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Ficha para conferência ou ficha alterada"]):::hipotese
+      n_t1["Conferir os dados, as categorias e os casos"]:::hipotese
+      n_t2["Conferir a apresentação de vendas"]:::hipotese
+      n_g1{"A ficha está completa e correta?"}:::hipotese
+      n_t3["Pedir a correção ao parceiro"]:::hipotese
+      n_t4["Publicar a ficha na Prateleira"]:::hipotese
+      n_f1(["Ficha publicada"]):::hipotese
+    end
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_g1
+    n_g1 -->|Não| n_t3
+    n_t3 --> n_t1
+    n_g1 -->|Sim| n_t4
+    n_t4 --> n_f1

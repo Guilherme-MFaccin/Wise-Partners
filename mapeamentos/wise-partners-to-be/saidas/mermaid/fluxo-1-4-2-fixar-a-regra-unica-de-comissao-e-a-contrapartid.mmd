@@ -1,0 +1,20 @@
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Revisão anual das regras"]):::hipotese
+      n_t1["Reunir os dados de permanência dos clientes indicados"]:::hipotese
+      n_t2["Comparar a comissão paga com a receita dos clientes vindos de parceiros"]:::hipotese
+      n_t4["Atualizar a regra e o simulador de ganho no portal"]:::hipotese
+      n_f1(["Regra de comissão confirmada ou atualizada"]):::hipotese
+    end
+    subgraph raia_PA_02 ["Diretor"]
+      n_t3["Decidir se a regra muda"]:::hipotese
+    end
+    n_i1 --> n_t1
+    n_t1 --> n_t2
+    n_t2 --> n_t3
+    n_t3 --> n_t4
+    n_t4 --> n_f1

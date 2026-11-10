@@ -4,17 +4,29 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro convidado para o Premium"]):::confirmado
-      n_s1[["Conduzir o encontro de alinhamento"]]:::confirmado
-      n_t1["Registrar a subida para Premium"]:::confirmado
-      n_t2["Revisar o perfil para as recomendações e a Prateleira"]:::confirmado
-      n_t3["Avisar os consultores da Wise de que ele pode ser recomendado"]:::confirmado
-      n_t4["Anunciar o novo nível ao parceiro e na comunidade"]:::confirmado
-      n_f1(["Parceiro Premium recomendável"]):::confirmado
+      n_i1(["Parceiro convidado para o Premium"]):::hipotese
+      n_e0>"Resposta do parceiro ao convite"]:::hipotese
+      n_g0{"O parceiro aceitou o convite?"}:::hipotese
+      n_s1[["Conduzir o encontro de alinhamento"]]:::hipotese
+      n_t1["Registrar a subida para Premium"]:::hipotese
+      n_s2[["Verificar a ficha do fornecedor"]]:::hipotese
+      n_t3["Avisar os consultores da Wise de que ele pode ser recomendado"]:::hipotese
+      n_t4["Anunciar o novo nível ao parceiro, com o certificado"]:::hipotese
+      n_f0(["Parceiro segue como Select"]):::hipotese
+      n_f1(["Parceiro Premium recomendável"]):::hipotese
     end
-    n_i1 --> n_s1
+    subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
+      n_t2["Enviar a apresentação de vendas e os casos"]:::hipotese
+    end
+    ext_X1[/"Parceiro"/]
+    n_i1 --> n_e0
+    n_e0 --> n_g0
+    n_g0 -->|Não| n_f0
+    n_g0 -->|Sim| n_s1
     n_s1 --> n_t1
     n_t1 --> n_t2
-    n_t2 --> n_t3
+    n_t2 --> n_s2
+    n_s2 --> n_t3
     n_t3 --> n_t4
     n_t4 --> n_f1
+    ext_X1 -.->|Resposta ao convite| n_e0

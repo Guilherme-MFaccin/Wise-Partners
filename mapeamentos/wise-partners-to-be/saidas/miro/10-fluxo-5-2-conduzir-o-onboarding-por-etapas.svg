@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<g id="f_P_94" transform="translate(0,52610)" data-frame="5.2 Conduzir o onboarding por etapas">
+<rect data-type="frame" x="0" y="0" width="3128" height="858" fill="#ffffff" />
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">5.2 Conduzir o onboarding por etapas</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="5.2 Conduzir o onboarding por etapas">
+flowchart LR
+    classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
+    classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300
+    classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
+    classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
+    subgraph raia_PA_01 ["Gerente de Parcerias"]
+      n_i1(["Parceiro com grupo, link, minicurso e Hub"]):::hipotese
+      n_t1["Criar as etapas do onboarding do Select"]:::hipotese
+      n_e1&gt;"Primeiro cliente cadastrado pelo link"]:::hipotese
+      n_s1[["Declarar a ativação"]]:::hipotese
+      n_e2&gt;"Primeiro diagnóstico feito na base do parceiro"]:::hipotese
+      n_t5["Marcar o onboarding como concluído"]:::hipotese
+      n_f1(["Onboarding do Select concluído"]):::hipotese
+    end
+    subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
+      n_t2["Assistir ao minicurso de como vender a Wise"]:::hipotese
+      n_t3["Publicar o anúncio conjunto da parceria e marcar no portal"]:::hipotese
+      n_t4["Enviar o link e a mensagem pronta para a base e marcar no portal"]:::hipotese
+    end
+    ext_X2[/"Cliente do parceiro"/]
+    n_i1 --&gt; n_t1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_t3
+    n_t3 --&gt; n_t4
+    n_t4 --&gt; n_e1
+    n_e1 --&gt; n_s1
+    n_s1 --&gt; n_e2
+    n_e2 --&gt; n_t5
+    n_t5 --&gt; n_f1
+    ext_X2 -.-&gt;|Cadastro pelo link| n_e1
+    ext_X2 -.-&gt;|Diagnóstico feito| n_e2
+
+</foreignObject>
+</g></svg>

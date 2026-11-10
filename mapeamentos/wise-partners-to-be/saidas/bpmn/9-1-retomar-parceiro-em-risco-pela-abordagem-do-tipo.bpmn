@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color/1.0" id="Definitions_P-55" targetNamespace="http://bpmn.io/schema/bpmn" exporter="mapear-processos" exporterVersion="1.0">
+  <bpmn:collaboration id="Collaboration_P-55">
+    <bpmn:participant id="Participant_P-55" name="9.1 Retomar parceiro em risco pela abordagem do tipo" processRef="Process_P-55" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_P-55" name="9.1 Retomar parceiro em risco pela abordagem do tipo" isExecutable="false">
+    <bpmn:documentation>Âncora esfriando: chegar com oportunidade pronta. Valioso em risco: ouvir primeiro e decidir em 15 dias se vale. Cordial seletivo: recrutar de novo com foco único. Desertor: decidir, sem insistir. No portal: mostra a abordagem e a mensagem sugerida do tipo. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_P-55">
+      <bpmn:lane id="Lane_P-55_PA-01" name="Gerente de Parcerias">
+        <bpmn:flowNodeRef>P-55_i1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_t0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_g1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_t1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_t2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_e1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_g2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_f1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-55_f2</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="P-55_i1" name="Parceiro entra num tipo de risco"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-55_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-55_t0" name="Mostrar o tipo, a abordagem e a mensagem sugerida"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F1</bpmn:incoming><bpmn:outgoing>P-55_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="P-55_g1" name="Qual é o tipo?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F2</bpmn:incoming><bpmn:outgoing>P-55_F3</bpmn:outgoing><bpmn:outgoing>P-55_F5</bpmn:outgoing><bpmn:outgoing>P-55_F7</bpmn:outgoing><bpmn:outgoing>P-55_F9</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="P-55_t1" name="Levar uma oportunidade pronta ao parceiro"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F3</bpmn:incoming><bpmn:outgoing>P-55_F4</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-55_t2" name="Ouvir o parceiro e decidir em 15 dias se vale"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F5</bpmn:incoming><bpmn:outgoing>P-55_F6</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-55_t3" name="Recrutar de novo com um foco único"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F7</bpmn:incoming><bpmn:outgoing>P-55_F8</bpmn:outgoing></bpmn:task>
+    <bpmn:intermediateCatchEvent id="P-55_e1" name="30 dias"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F4</bpmn:incoming><bpmn:incoming>P-55_F6</bpmn:incoming><bpmn:incoming>P-55_F8</bpmn:incoming><bpmn:outgoing>P-55_F10</bpmn:outgoing><bpmn:timerEventDefinition id="P-55_e1_def" /></bpmn:intermediateCatchEvent>
+    <bpmn:exclusiveGateway id="P-55_g2" name="O Ritmo voltou a ser alto?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F10</bpmn:incoming><bpmn:outgoing>P-55_F11</bpmn:outgoing><bpmn:outgoing>P-55_F12</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:endEvent id="P-55_f1" name="Parceiro retomado"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F11</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-55_f2" name="Desligamento sugerido"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-55_F9</bpmn:incoming><bpmn:incoming>P-55_F12</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="P-55_F1" name="" sourceRef="P-55_i1" targetRef="P-55_t0" />
+    <bpmn:sequenceFlow id="P-55_F2" name="" sourceRef="P-55_t0" targetRef="P-55_g1" />
+    <bpmn:sequenceFlow id="P-55_F3" name="Âncora esfriando" sourceRef="P-55_g1" targetRef="P-55_t1" />
+    <bpmn:sequenceFlow id="P-55_F4" name="" sourceRef="P-55_t1" targetRef="P-55_e1" />
+    <bpmn:sequenceFlow id="P-55_F5" name="Valioso em risco" sourceRef="P-55_g1" targetRef="P-55_t2" />
+    <bpmn:sequenceFlow id="P-55_F6" name="" sourceRef="P-55_t2" targetRef="P-55_e1" />
+    <bpmn:sequenceFlow id="P-55_F7" name="Cordial seletivo" sourceRef="P-55_g1" targetRef="P-55_t3" />
+    <bpmn:sequenceFlow id="P-55_F8" name="" sourceRef="P-55_t3" targetRef="P-55_e1" />
+    <bpmn:sequenceFlow id="P-55_F9" name="Desertor" sourceRef="P-55_g1" targetRef="P-55_f2" />
+    <bpmn:sequenceFlow id="P-55_F10" name="" sourceRef="P-55_e1" targetRef="P-55_g2" />
+    <bpmn:sequenceFlow id="P-55_F11" name="Sim" sourceRef="P-55_g2" targetRef="P-55_f1" />
+    <bpmn:sequenceFlow id="P-55_F12" name="Não" sourceRef="P-55_g2" targetRef="P-55_f2" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_P-55">
+    <bpmndi:BPMNPlane id="BPMNPlane_P-55" bpmnElement="Collaboration_P-55">
+      <bpmndi:BPMNShape id="Participant_P-55_di" bpmnElement="Participant_P-55" isHorizontal="true"><dc:Bounds x="0" y="0" width="1352" height="356" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-55_PA-01_di" bpmnElement="Lane_P-55_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1322" height="356" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_i1_di" bpmnElement="P-55_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_t0_di" bpmnElement="P-55_t0" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_g1_di" bpmnElement="P-55_g1" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="505" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="29" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_t1_di" bpmnElement="P-55_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_t2_di" bpmnElement="P-55_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="142" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_t3_di" bpmnElement="P-55_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="246" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_e1_di" bpmnElement="P-55_e1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="864" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_g2_di" bpmnElement="P-55_g2" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1033" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="15" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_f1_di" bpmnElement="P-55_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1216" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-55_f2_di" bpmnElement="P-55_f2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1216" y="160" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="202" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="P-55_F1_di" bpmnElement="P-55_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F2_di" bpmnElement="P-55_F2"><di:waypoint x="418" y="74" /><di:waypoint x="505" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F3_di" bpmnElement="P-55_F3"><di:waypoint x="555" y="74" /><di:waypoint x="642" y="74" /><bpmndi:BPMNLabel><dc:Bounds x="561" y="54" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F4_di" bpmnElement="P-55_F4"><di:waypoint x="770" y="74" /><di:waypoint x="864" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F5_di" bpmnElement="P-55_F5"><di:waypoint x="530" y="99" /><di:waypoint x="530" y="178" /><di:waypoint x="642" y="178" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="158" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F6_di" bpmnElement="P-55_F6"><di:waypoint x="770" y="178" /><di:waypoint x="840" y="178" /><di:waypoint x="840" y="74" /><di:waypoint x="864" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F7_di" bpmnElement="P-55_F7"><di:waypoint x="530" y="99" /><di:waypoint x="530" y="282" /><di:waypoint x="642" y="282" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="262" width="112" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F8_di" bpmnElement="P-55_F8"><di:waypoint x="770" y="282" /><di:waypoint x="840" y="282" /><di:waypoint x="840" y="74" /><di:waypoint x="864" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F9_di" bpmnElement="P-55_F9"><di:waypoint x="530" y="99" /><di:waypoint x="530" y="178" /><di:waypoint x="1216" y="178" /><bpmndi:BPMNLabel><dc:Bounds x="538" y="158" width="56" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F10_di" bpmnElement="P-55_F10"><di:waypoint x="900" y="74" /><di:waypoint x="1033" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F11_di" bpmnElement="P-55_F11"><di:waypoint x="1083" y="74" /><di:waypoint x="1216" y="74" /><bpmndi:BPMNLabel><dc:Bounds x="1089" y="54" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-55_F12_di" bpmnElement="P-55_F12"><di:waypoint x="1058" y="99" /><di:waypoint x="1058" y="178" /><di:waypoint x="1216" y="178" /><bpmndi:BPMNLabel><dc:Bounds x="1066" y="158" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
