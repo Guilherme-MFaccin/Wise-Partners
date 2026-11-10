@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-09",
-    "atualizado_em": "2026-11-09"
+    "criado_em": "2026-11-10",
+    "atualizado_em": "2026-11-10"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -723,8 +723,8 @@
     {
       "id": "CV-01",
       "nome": "Jornada do parceiro: do candidato ao parceiro em crescimento",
-      "gatilho": "Candidato identificado",
-      "valor": "Parceiro ativo, gerando e recebendo oportunidades",
+      "gatilho": "Cadastro enviado pela landing page",
+      "valor": "Parceiro ativo, subindo de Select para Premium e Elite",
       "stakeholder": "Empresa parceira",
       "ofertas": [
         "OF-01",
@@ -732,13 +732,13 @@
       ],
       "etapas": [
         {
-          "nome": "Atrair e selecionar",
+          "nome": "Atrair pela campanha e selecionar pela fila",
           "processos": [
             "P-20"
           ]
         },
         {
-          "nome": "Integrar e ativar",
+          "nome": "Integrar e ativar por etapas",
           "processos": [
             "P-26"
           ]
@@ -765,7 +765,9 @@
       "status": "confirmado",
       "evidencias": [
         "EV-0167",
-        "EV-0069"
+        "EV-0069",
+        "EV-0332",
+        "EV-0350"
       ]
     },
     {
@@ -1187,7 +1189,7 @@
       "nome": "Definir o perfil de parceiro ideal",
       "pai": "P-01",
       "ordem": 3,
-      "descricao": "Escrever o perfil comercial e o institucional a partir do ICP, com critérios do scorecard e a regra de só aceitar quem a Wise indicaria ao seu melhor cliente. No portal: guarda o perfil e o scorecard usados na qualificação.",
+      "descricao": "Escrever o perfil comercial e o institucional a partir do ICP, com os critérios da fila (clientes empresariais que podem estar no ICP da Wise, não ser concorrente, interesse real, responsável pela parceria) e a regra de só recomendar a um cliente quem a Wise indicaria ao seu melhor cliente. No portal: guarda o perfil e os critérios usados na fila.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Planejamento anual",
@@ -1203,7 +1205,7 @@
       ],
       "saidas": [
         {
-          "nome": "Perfil e scorecard",
+          "nome": "Perfil e critérios da fila",
           "para": "P-22"
         }
       ],
@@ -1221,14 +1223,16 @@
         "EV-0149",
         "EV-0150",
         "EV-0151",
-        "EV-0279"
+        "EV-0279",
+        "EV-0336",
+        "EV-0334"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
       "principios": [
         "F-004"
       ],
-      "portal": "guarda o perfil e o scorecard usados na qualificação."
+      "portal": "guarda o perfil e os critérios usados na fila."
     },
     {
       "id": "P-05",
@@ -2347,6 +2351,18 @@
         {
           "nome": "Parceiro convidado para o Premium",
           "para": "P-70"
+        },
+        {
+          "nome": "Parceiro convidado para o Premium",
+          "para": "P-71"
+        },
+        {
+          "nome": "Parceiro convidado para o Premium",
+          "para": "P-72"
+        },
+        {
+          "nome": "Parceiro convidado para o Premium",
+          "para": "P-74"
         }
       ],
       "cliente": "Parceiro",
@@ -2806,7 +2822,7 @@
       "entradas": [],
       "saidas": [
         {
-          "nome": "Candidato com reunião agendada",
+          "nome": "Cadastro na fila",
           "para": "P-22"
         }
       ],
@@ -2843,11 +2859,11 @@
       "gatilho": "Candidato respondeu ao primeiro contato",
       "entradas": [
         {
-          "nome": "Perfil e scorecard",
+          "nome": "Perfil e critérios da fila",
           "de": "P-04"
         },
         {
-          "nome": "Candidato com reunião agendada",
+          "nome": "Cadastro na fila",
           "de": "P-21"
         }
       ],
@@ -2906,10 +2922,6 @@
           "de": "P-25"
         },
         {
-          "nome": "Ficha de jogo",
-          "de": "P-70"
-        },
-        {
           "nome": "Sobreposição estimada",
           "de": "P-71"
         },
@@ -2922,6 +2934,14 @@
         {
           "nome": "Parceiro com acesso",
           "para": "P-26"
+        },
+        {
+          "nome": "Parceiro com acesso",
+          "para": "P-73"
+        },
+        {
+          "nome": "Parceiro com acesso",
+          "para": "P-75"
         }
       ],
       "cliente": "Candidato",
@@ -3359,6 +3379,10 @@
         {
           "nome": "Dados protegidos",
           "de": "P-92"
+        },
+        {
+          "nome": "Ficha de jogo",
+          "de": "P-70"
         }
       ],
       "saidas": [
@@ -3487,7 +3511,7 @@
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
       "principios": [],
-      "portal": "marca a ativação sozinho e avisa os marcos de 90 e 120 dias."
+      "portal": "marca a ativação sozinho e avisa o parceiro e o Gerente."
     },
     {
       "id": "P-31",
@@ -6767,7 +6791,7 @@
       "saidas": [
         {
           "nome": "Ficha de jogo",
-          "para": "P-23"
+          "para": "P-28"
         }
       ],
       "cliente": "Gerente de Parcerias",
@@ -6803,12 +6827,8 @@
       "gatilho": "Encontro de alinhamento marcado",
       "entradas": [
         {
-          "nome": "Perfil e scorecard",
-          "de": "EXT:Definir o perfil de parceiro ideal"
-        },
-        {
-          "nome": "Candidato com reunião agendada",
-          "de": "EXT:Manter a lista de candidatos"
+          "nome": "Parceiro convidado para o Premium",
+          "de": "P-18"
         }
       ],
       "saidas": [
@@ -6850,12 +6870,8 @@
       "gatilho": "Encontro de alinhamento marcado",
       "entradas": [
         {
-          "nome": "Perfil e scorecard",
-          "de": "EXT:Definir o perfil de parceiro ideal"
-        },
-        {
-          "nome": "Candidato com reunião agendada",
-          "de": "EXT:Manter a lista de candidatos"
+          "nome": "Parceiro convidado para o Premium",
+          "de": "P-18"
         }
       ],
       "saidas": [
@@ -6898,8 +6914,8 @@
       "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
-          "nome": "Termo assinado",
-          "de": "EXT:Empresa parceira"
+          "nome": "Parceiro com acesso",
+          "de": "P-23"
         }
       ],
       "saidas": [
@@ -6942,8 +6958,8 @@
       "gatilho": "Parceiro convidado para o Premium",
       "entradas": [
         {
-          "nome": "Termo assinado",
-          "de": "EXT:Empresa parceira"
+          "nome": "Parceiro convidado para o Premium",
+          "de": "P-18"
         }
       ],
       "saidas": [
@@ -6984,8 +7000,8 @@
       "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
-          "nome": "Termo assinado",
-          "de": "EXT:Empresa parceira"
+          "nome": "Parceiro com acesso",
+          "de": "P-23"
         }
       ],
       "saidas": [
@@ -16545,7 +16561,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-09",
+      "data": "2026-11-10",
       "evento": "Mapeamento iniciado"
     },
     {

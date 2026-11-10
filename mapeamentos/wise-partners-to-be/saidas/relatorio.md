@@ -1,6 +1,6 @@
 # Mapeamento de processos: Programa Wise Partners (to-be)
 
-Atualizado em 2026-11-09.
+Atualizado em 2026-11-10.
 
 ## Situação
 

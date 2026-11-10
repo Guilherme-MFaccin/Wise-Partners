@@ -413,3 +413,30 @@ add("perguntas", "Q", texto="Depois de quantos dias na mesma etapa do onboarding
 
 d["historico"].append({"data": H7, "evento": "To-be v8: Rodada 7 (FO-11 e FO-12) aplicada. Entrada pela fila para todos, com conversa de entrada no lugar do workshop e aceite na página; escada Select, Premium e Elite, todos entrando pelo Select e subindo pelo resultado; onboarding por etapas, sem prazo em dias, com lembrete; diagnóstico como está no ar, com autodiagnóstico fora do ICP; scorecard de entrada retirado"})
 d["organizacao"]["objetivo_do_mapeamento"] = d["organizacao"]["objetivo_do_mapeamento"].replace("17 livros", "17 livros", 1)
+
+# a jornada do parceiro passa a começar no cadastro pela página
+for cv in d["cadeias_de_valor"]:
+    if cv["id"] == "CV-01":
+        cv["gatilho"] = "Cadastro enviado pela landing page"
+        cv["etapas"][0]["nome"] = "Atrair pela campanha e selecionar pela fila"
+        cv["etapas"][1]["nome"] = "Integrar e ativar por etapas"
+        cv["valor"] = "Parceiro ativo, subindo de Select para Premium e Elite"
+        for e in [D11("entrada"), D12("escada")]:
+            if e not in cv["evidencias"]: cv["evidencias"].append(e)
+
+# resíduos da v7 nas entregas entre processos (achados na montagem do FO-13)
+upd("P-04", [D11("fila_criterio"), D12("criterio_geral")],
+    descricao="Escrever o perfil comercial e o institucional a partir do ICP, com os critérios da fila (clientes empresariais que podem estar no ICP da Wise, não ser concorrente, interesse real, responsável pela parceria) e a regra de só recomendar a um cliente quem a Wise indicaria ao seu melhor cliente. No portal: guarda o perfil e os critérios usados na fila.",
+    portal="guarda o perfil e os critérios usados na fila.", saidas=[{"nome": "Perfil e critérios da fila", "para": "P-22"}])
+PX["P-21"]["saidas"] = [{"nome": "Cadastro na fila", "para": "P-22"}]
+PX["P-22"]["entradas"] = [{"nome": "Perfil e critérios da fila", "de": "P-04"}, {"nome": "Cadastro na fila", "de": "P-21"}]
+PX["P-30"]["portal"] = "marca a ativação sozinho e avisa o parceiro e o Gerente."
+PX["P-70"]["saidas"] = [{"nome": "Ficha de jogo", "para": "P-28"}]
+PX["P-28"]["entradas"] = [e for e in PX["P-28"].get("entradas", []) if e.get("de") != "P-70"] + [{"nome": "Ficha de jogo", "de": "P-70"}]
+for pid in ("P-71", "P-72", "P-74"):
+    PX[pid]["entradas"] = [{"nome": "Parceiro convidado para o Premium", "de": "P-18"}]
+    PX["P-18"]["saidas"].append({"nome": "Parceiro convidado para o Premium", "para": pid})
+for pid in ("P-73", "P-75"):
+    PX[pid]["entradas"] = [{"nome": "Parceiro com acesso", "de": "P-23"}]
+    PX["P-23"]["saidas"].append({"nome": "Parceiro com acesso", "para": pid})
+PX["P-23"]["entradas"] = [e for e in PX["P-23"].get("entradas", []) if e.get("de") != "P-70"]
