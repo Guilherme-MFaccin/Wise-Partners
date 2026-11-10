@@ -7,7 +7,7 @@
     <bpmn:messageFlow id="P-34_M2" name="Desfecho e impacto" sourceRef="P-34_t4" targetRef="Ext_P-34_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-34" name="6.3 Fechar o ciclo com o parceiro" isExecutable="false">
-    <bpmn:documentation>O closer avisa o Gerente por WhatsApp a cada mudança de etapa; o Gerente registra a etapa e devolve ao parceiro (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. No portal: registra a etapa informada pelo Gerente, prepara a mensagem para ele personalizar e mandar no grupo do parceiro, e mostra no painel da semana as oportunidades paradas há mais de 15 dias. [status do fluxo: Confirmado; evidências: EV-0026, EV-0237, EV-0074, EV-0077]</bpmn:documentation>
+    <bpmn:documentation>O closer avisa o Gerente por WhatsApp a cada mudança de etapa; o Gerente registra a etapa e devolve ao parceiro (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. O grupo de WhatsApp vale para todos os parceiros até que o tamanho torne isso inviável; o portal mostra ao parceiro a lista de quem entrou pelo link e o andamento. No portal: registra a etapa informada pelo Gerente, prepara a mensagem para ele personalizar e mandar no grupo do parceiro, e mostra no painel da semana as oportunidades paradas há mais de 15 dias. [status do fluxo: Confirmado; evidências: EV-0026, EV-0237, EV-0074, EV-0077]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-34">
       <bpmn:lane id="Lane_P-34_PA-03" name="Closer da empresa do grupo">
         <bpmn:flowNodeRef>P-34_i1</bpmn:flowNodeRef>

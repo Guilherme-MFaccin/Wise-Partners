@@ -6,7 +6,7 @@
     <bpmn:messageFlow id="P-42_M1" name="Pauta e resultados" sourceRef="P-42_t3" targetRef="Ext_P-42_X1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-42" name="7.2 Revisar a parceria com o parceiro" isExecutable="false">
-    <bpmn:documentation>Revisão conjunta com pauta montada pelo portal; trimestral para todos os ativos e mensal para os destaques; o Diretor participa nas dos parceiros Elite. As ações nascem da ata. No portal: monta a pauta com os dados do parceiro e transforma a ata em ações. [status do fluxo: Confirmado; evidências: EV-0195, EV-0196, EV-0197]</bpmn:documentation>
+    <bpmn:documentation>Revisão conjunta com pauta montada pelo portal, para parceiros Premium e Elite: trimestral para todos e mensal para os destaques; o Diretor participa nas dos parceiros Elite. Para o Select, o contato do trimestre é o encontro trimestral de parceiros (P-83). As ações nascem da ata. No portal: monta a pauta com os dados do parceiro e transforma a ata em ações. [status do fluxo: Confirmado; evidências: EV-0195, EV-0196, EV-0197]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-42">
       <bpmn:lane id="Lane_P-42_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-42_i1</bpmn:flowNodeRef>

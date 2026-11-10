@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Carregando, ErroCarga } from "@/components/comum/Estados";
+import { useAuth } from "@/hooks/useAuth";
 
 type Cadastro = {
   id: string; created_at: string; parceiro_id: string | null; empresa: string; nome: string; email: string; whatsapp: string; cargo: string | null;
@@ -50,8 +51,9 @@ async function copiar(texto: string) {
 }
 
 // Fila de espera dos parceiros que se cadastraram pela landing page (pedido do Igor, 07/11/2026):
-// o Igor fala com cada um pelo WhatsApp, manda o link da agenda e, depois da conversa, aprova e cria o acesso.
+// o Gerente de Parcerias fala com cada um pelo WhatsApp, manda o link da agenda e, depois da conversa, aprova e cria o acesso.
 export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
+  const { perfil } = useAuth();
   const qc = useQueryClient();
   const [aprovar, setAprovar] = useState<Cadastro | null>(null);
   const [aprovando, setAprovando] = useState(false);
@@ -100,9 +102,10 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
   const fila = lista.filter((c) => NA_FILA.includes(c.status));
   const historico = lista.filter((c) => !NA_FILA.includes(c.status));
   const portal = window.location.origin;
+  const quem = perfil?.nome ? primeiroNome(perfil.nome) : "a equipe";
 
   const msgContato = (c: Cadastro) =>
-    `Oi, ${primeiroNome(c.nome)}! Aqui é o Igor, diretor da Wise Makers. Vi que a ${c.empresa} se cadastrou no Programa Wise Partners. Posso te explicar rapidinho como funciona?`;
+    `Oi, ${primeiroNome(c.nome)}! Aqui é ${quem}, da Wise Makers. Vi que a ${c.empresa} se cadastrou no Programa Wise Partners. Posso te explicar rapidinho como funciona?`;
   const msgAgenda = (c: Cadastro) =>
     `${primeiroNome(c.nome)}, escolhe aqui o melhor horário pra gente conversar sobre o Wise Partners: ${agendaUrl}`;
   const msgAcesso = (a: NonNullable<typeof acesso>) =>

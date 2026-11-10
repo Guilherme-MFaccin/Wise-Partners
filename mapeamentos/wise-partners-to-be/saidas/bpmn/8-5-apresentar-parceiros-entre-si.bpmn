@@ -9,7 +9,7 @@
     <bpmn:messageFlow id="P-52_M4" name="Como foi a conversa" sourceRef="Ext_P-52_X1" targetRef="P-52_e1" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-52" name="8.5 Apresentar parceiros entre si" isExecutable="false">
-    <bpmn:documentation>Quando um parceiro menciona um problema, a Wise pensa em quem resolve e apresenta, sem esperar pedido; a troca acontece em torno de uma oportunidade específica, nunca com a lista inteira de contatos; quem apresentou recebe o retorno de como foi. No portal: sugere apresentações a partir do cruzamento de carteiras e das categorias de cada parceiro, e registra cada apresentação feita. [status do fluxo: Confirmado; evidências: EV-0250, EV-0106, EV-0107, EV-0110]</bpmn:documentation>
+    <bpmn:documentation>Quando um parceiro menciona um problema, a Wise pensa em quem resolve e apresenta, sem esperar pedido; a troca acontece em torno de uma oportunidade específica, nunca com a lista inteira de contatos; quem apresentou recebe o retorno de como foi. Apresentações a outros parceiros são benefício do Premium e do Elite. No portal: sugere apresentações a partir do cruzamento de carteiras e das categorias de cada parceiro, e registra cada apresentação feita. [status do fluxo: Confirmado; evidências: EV-0250, EV-0106, EV-0107, EV-0110]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-52">
       <bpmn:lane id="Lane_P-52_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-52_i1</bpmn:flowNodeRef>

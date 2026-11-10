@@ -4,7 +4,7 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro de pacote A assinado"]):::confirmado
+      n_i1(["Subida para Elite decidida"]):::confirmado
       n_g1{"Há horas disponíveis?"}:::confirmado
       n_t1["Colocar o parceiro na fila com a data prevista"]:::confirmado
       n_e1>"Vez do parceiro na fila"]:::confirmado
@@ -14,6 +14,8 @@ flowchart LR
       n_t6["Planejar formação e evento"]:::confirmado
       n_t7["Preparar roteiro, divulgação e logística do evento"]:::confirmado
       n_t9["Emitir o certificado metodológico"]:::confirmado
+      n_r7a["Oferecer o diagnóstico aos participantes"]:::confirmado
+      n_r7b["Enviar ao parceiro o relatório de presença e resultados"]:::confirmado
       n_f1(["Comunidade validada"]):::confirmado
     end
     subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
@@ -32,4 +34,6 @@ flowchart LR
     n_t6 --> n_t7
     n_t7 --> n_t8
     n_t8 --> n_t9
-    n_t9 --> n_f1
+    n_t9 --> n_r7a
+    n_r7a --> n_r7b
+    n_r7b --> n_f1

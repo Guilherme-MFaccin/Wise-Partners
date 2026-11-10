@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-05",
-    "atualizado_em": "2026-11-05"
+    "criado_em": "2026-11-09",
+    "atualizado_em": "2026-11-09"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -145,12 +145,14 @@
     {
       "id": "F-009",
       "tema": "estrategia",
-      "texto": "Princípio 9 (Como o programa se relaciona): Primeiro valor em até 90 dias; o parceiro só conta quando ativa. A ativação (primeira indicação no ICP que virou reunião) é a linha que separa parceiro de contrato assinado.",
+      "texto": "Princípio 9 (Como o programa se relaciona): Primeiro valor logo na entrada, por etapas e sem prazo em dias; o parceiro só conta quando ativa. A ativação (primeiro cliente cadastrado pelo link do parceiro) é a linha que separa parceiro de cadastro aprovado.",
       "status": "confirmado",
       "evidencias": [
         "EV-0016",
         "EV-0072",
-        "EV-0073"
+        "EV-0073",
+        "EV-0344",
+        "EV-0342"
       ]
     },
     {
@@ -318,7 +320,7 @@
     {
       "id": "F-022",
       "tema": "oferta",
-      "texto": "Duas parcerias: a Comercial, com três pacotes por nível (C Prateleira, B Formação e A Base Ativa) e contrapartidas dos dois lados, e a Institucional, para entidades que reúnem indústrias. Os três pilares existem desde o início, mas a entrega sobe em escada: o pacote C (Prateleira, indicação e grupo) vale para todos; o B (certificado, Hub, mentoria, eventos e formações) para Premium e Elite que divulgam à própria base; o A (Base Ativa) só para Elite, conforme as horas. O que o parceiro recebe acompanha o que ele consegue devolver, e abrir mais é orgânico, conforme a relação cresce.",
+      "texto": "Duas parcerias: a Comercial e a Institucional, para entidades que reúnem indústrias. A Comercial tem três níveis em escada, e todo parceiro entra pelo Select. Select (C): consultoria gratuita aos clientes da carteira no ICP da Wise, comissão, certificado, Wise Hub com as duas marcas, grupo, comunidade e minicurso. Premium (B): também a recomendação pela Wise nas consultorias e na Prateleira, mentoria, eventos, formações e apresentações a outros parceiros. Elite (A): também o Base Ativa. O nível sobe pelo resultado e pela relação, e só sobe.",
       "status": "confirmado",
       "evidencias": [
         "EV-0116",
@@ -327,7 +329,12 @@
         "EV-0020",
         "EV-0117",
         "EV-0044",
-        "EV-0118"
+        "EV-0118",
+        "EV-0350",
+        "EV-0345",
+        "EV-0351",
+        "EV-0338",
+        "EV-0355"
       ]
     },
     {
@@ -366,13 +373,14 @@
     {
       "id": "F-026",
       "tema": "proposta_de_valor",
-      "texto": "Valor ao parceiro: para o software de gestão, a retenção da própria base pelo diagnóstico e pelo Wise Hub dados aos clientes dele; para todos, demanda de volta pela Prateleira, carteira ativa pelo Base Ativa, conhecimento para vender as três empresas do grupo (kit e simulador de ganho), comunidade e reconhecimento, e comissão por regra única.",
+      "texto": "Valor ao parceiro: a própria parceria. Para todos, consultoria gratuita para a base de clientes e uma boa comissão quando um cliente fecha com a Wise; para o software de gestão, isso também retém a base dele. No Premium, ser recomendado pela Wise aos clientes dela; no Elite, uma formação gratuita e exclusiva para a base, organizada pela Wise.",
       "status": "confirmado",
       "evidencias": [
         "EV-0012",
         "EV-0122",
         "EV-0023",
-        "EV-0036"
+        "EV-0036",
+        "EV-0351"
       ]
     },
     {
@@ -448,21 +456,25 @@
     {
       "id": "F-033",
       "tema": "canal",
-      "texto": "Canais: a comunidade Wise Partners no WhatsApp para a conversa; o portal com a face interna (operada pelo Gerente) e a do parceiro (kit, simulador, trilhas, oportunidades, regras).",
+      "texto": "Canais: a campanha de aquisição (hoje, anúncios no Meta para software de gestão) leva à landing page dos parceiros; a comunidade Wise Partners no WhatsApp, com um grupo por parceiro para todos enquanto o tamanho permitir; o portal com a face interna (operada pelo Gerente) e a do parceiro (link da página do cliente, minicurso, kit, simulador, clientes, oportunidades e regras).",
       "status": "confirmado",
       "evidencias": [
         "EV-0012",
-        "EV-0132"
+        "EV-0132",
+        "EV-0331",
+        "EV-0347",
+        "EV-0339"
       ]
     },
     {
       "id": "F-034",
       "tema": "estrategia",
-      "texto": "Parceiro conta quando ativa: primeira indicação no ICP que virou reunião.",
+      "texto": "Parceiro conta quando ativa: primeiro cliente cadastrado pelo link do parceiro.",
       "status": "confirmado",
       "evidencias": [
         "EV-0021",
-        "EV-0073"
+        "EV-0073",
+        "EV-0344"
       ]
     },
     {
@@ -542,38 +554,45 @@
     {
       "id": "F-041",
       "tema": "oferta",
-      "texto": "Entregável padrão, para todos os parceiros desde já: reunião de diagnóstico comercial gratuita, de 40 a 60 minutos, que termina com um mapa de planejamento, só para clientes dentro do ICP da Wise. O Gerente conduz, no máximo um por dia; a agenda online só oferece vagas livres. Logo depois do diagnóstico, o cliente ganha acesso ao Wise Hub. O diagnóstico é a quinta porta de oportunidade do programa.",
+      "texto": "Entregável padrão para os clientes de todos os parceiros: o cliente entra pelo link do parceiro; no ICP da Wise (mais de 3 vendedores), reunião de diagnóstico pela Matriz 5x5 e mapa próprio da reunião em até 2 dias úteis; fora do ICP, autodiagnóstico na hora e e-mail com o resultado. O Gerente conduz as reuniões; acima de 10 por semana, outra pessoa da Wise assume.",
       "status": "confirmado",
       "evidencias": [
         "EV-0300",
         "EV-0301",
         "EV-0072",
         "EV-0302",
-        "EV-0037"
+        "EV-0037",
+        "EV-0361",
+        "EV-0362",
+        "EV-0363",
+        "EV-0364"
       ]
     },
     {
       "id": "F-042",
       "tema": "oferta",
-      "texto": "O Wise Hub é liberado logo depois do diagnóstico para todo cliente diagnosticado, e o pacote B continua dando o Hub à base do parceiro. O Hub não é oferecido sozinho, como publicidade: plataforma de aulas sem contato gera pouco engajamento e perde valor.",
+      "texto": "O Wise Hub com as duas marcas é benefício de todo parceiro desde o Select. Para o cliente do parceiro, o link do Hub aparece depois do diagnóstico ou do autodiagnóstico, nunca solto, como publicidade.",
       "status": "confirmado",
       "evidencias": [
         "EV-0303",
         "EV-0304",
         "EV-0117",
-        "EV-0039"
+        "EV-0039",
+        "EV-0345",
+        "EV-0361"
       ]
     },
     {
       "id": "F-043",
       "tema": "estrategia",
-      "texto": "Diagnóstico e pesquisa andam juntos até março, com separação clara: a pesquisa do Gerente sobre maturidade comercial e CRM (50 entrevistas de cerca de 40 minutos) usa o roteiro do diagnóstico; no agendamento, o cliente consente com a pesquisa e aceita o acesso ao Wise Hub. O diagnóstico não é pitch de venda: a conversa comercial é separada e só acontece se o cliente pedir.",
+      "texto": "Pesquisa da UniCesumar sobre maturidade comercial: entra na reunião de diagnóstico como passo opcional, só depois da aprovação do Comitê de Ética e com o consentimento do cliente, separado do contato comercial.",
       "status": "confirmado",
       "evidencias": [
         "EV-0305",
         "EV-0306",
         "EV-0307",
-        "EV-0040"
+        "EV-0040",
+        "EV-0365"
       ]
     },
     {
@@ -591,7 +610,7 @@
     {
       "id": "F-045",
       "tema": "parceiro",
-      "texto": "Na fase de Experimentação, o recrutamento foca num segmento só: software de gestão para empresas (CRM e ERP à frente). Agências ficam fora porque concorrem com a Wise. O ecossistema continua pequeno: não é para milhares de parceiros.",
+      "texto": "Os processos servem a qualquer tipo de parceiro; o que muda é a campanha de aquisição. A campanha atual busca software de gestão (CRM e ERP à frente), com qualquer tamanho de carteira, em volume: muitos parceiros no Select, que sobem para Premium e Elite com o tempo. O critério fixo é ter clientes empresariais que podem estar no ICP da Wise e não ser concorrente; agências ficam fora porque concorrem com a Wise.",
       "status": "confirmado",
       "evidencias": [
         "EV-0310",
@@ -599,7 +618,12 @@
         "EV-0312",
         "EV-0313",
         "EV-0314",
-        "EV-0041"
+        "EV-0041",
+        "EV-0335",
+        "EV-0334",
+        "EV-0338",
+        "EV-0342",
+        "EV-0356"
       ]
     },
     {
@@ -623,6 +647,41 @@
         "EV-0317",
         "EV-0043",
         "EV-0042"
+      ]
+    },
+    {
+      "id": "F-048",
+      "tema": "parceiro",
+      "texto": "Escada de níveis: para o Premium, 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos do parceiro, ou avaliação do Gerente com o Igor; para o Elite, 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. A subida é decidida no fechamento trimestral e o Premium começa pelo encontro de alinhamento. O nível nunca desce: se um cliente da Wise tem problema sério com o parceiro, a Wise só deixa de recomendá-lo.",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0353",
+        "EV-0354",
+        "EV-0357",
+        "EV-0355"
+      ]
+    },
+    {
+      "id": "F-049",
+      "tema": "parceiro",
+      "texto": "Transição: todos os parceiros atuais voltam ao Select e sobem pelos critérios novos, porque não há contrato que impeça; quem já recebeu a promessa verbal dos benefícios do Premium ou do Elite continua no nível prometido.",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0371"
+      ]
+    },
+    {
+      "id": "F-050",
+      "tema": "canal",
+      "texto": "Entrada pela fila: o cadastro da página aceita o termo e a política e entra numa fila no portal; o Gerente chama cada um pelo WhatsApp em até 24 horas úteis, qualifica pela mensagem, envia a agenda, confirma o horário na véspera e no dia e, na conversa, cria a conta. A página diz que a equipe da Wise vai falar pelo WhatsApp em até 24 horas úteis.",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0331",
+        "EV-0332",
+        "EV-0341",
+        "EV-0337",
+        "EV-0340",
+        "EV-0372"
       ]
     }
   ],
@@ -1352,7 +1411,7 @@
       "nome": "Tratar a fila diária de exceções",
       "pai": "P-08",
       "ordem": 1,
-      "descricao": "Abrir a fila única ordenada por prazo e tratar só o que fugiu da regra; quando outra pessoa executa, o Gerente combina por WhatsApp ou pessoalmente. No portal: gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, retorno pendente ao parceiro) e prepara a mensagem.",
+      "descricao": "Abrir a fila única ordenada por prazo e tratar só o que fugiu da regra; quando outra pessoa executa, o Gerente combina por WhatsApp ou pessoalmente. No portal: gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, cadastro na fila sem contato há mais de 24 horas úteis, parceiro parado numa etapa depois do lembrete, retorno pendente ao parceiro) e prepara a mensagem.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Início de cada dia de trabalho no programa",
@@ -1372,6 +1431,10 @@
         {
           "nome": "Regra rodando",
           "de": "P-91"
+        },
+        {
+          "nome": "Caso parado na fila de exceções",
+          "de": "P-97"
         }
       ],
       "saidas": [
@@ -1393,7 +1456,9 @@
       "evidencias": [
         "EV-0069",
         "EV-0070",
-        "EV-0071"
+        "EV-0071",
+        "EV-0341",
+        "EV-0349"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2269,7 +2334,7 @@
       "nome": "Revisar o nível dos parceiros",
       "pai": "P-14",
       "ordem": 4,
-      "descricao": "Apurar requisitos, colocar em observação ou propor descida; a subida acontece na hora. No portal: apura os requisitos, avisa o parceiro do que falta e registra a decisão do Gerente com motivo.",
+      "descricao": "No fechamento trimestral, o portal lista quem cumpre os critérios do nível acima; o Gerente avalia com o Igor os casos sem número fixo. Quem sobe para Premium passa antes pelo encontro de alinhamento; quem sobe para Elite entra no Base Ativa. Não há descida de nível: se um cliente da Wise tem problema sério com o parceiro, a Wise deixa de recomendá-lo, sem rebaixar (P-87). No portal: apura os critérios, lista os candidatos à subida e registra a decisão com o motivo.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Primeiro dia útil do trimestre",
@@ -2278,6 +2343,10 @@
         {
           "nome": "Nível revisto",
           "para": "EXT:Parceiro"
+        },
+        {
+          "nome": "Parceiro convidado para o Premium",
+          "para": "P-70"
         }
       ],
       "cliente": "Parceiro",
@@ -2292,96 +2361,76 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0015",
-        "EV-0166"
+        "EV-0166",
+        "EV-0357",
+        "EV-0353",
+        "EV-0354",
+        "EV-0355"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "apura os requisitos, avisa o parceiro do que falta e registra a decisão do Gerente com motivo.",
+      "portal": "apura os critérios, lista os candidatos à subida e registra a decisão com o motivo.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0249",
-          "EV-0015"
+          "EV-0357",
+          "EV-0355"
         ],
         "raias": [
-          "PA-01"
+          "PA-01",
+          "PA-02"
         ],
-        "externos": [
-          {
-            "id": "X1",
-            "nome": "Parceiro"
-          }
-        ],
+        "externos": [],
         "nos": [
           {
             "id": "i1",
             "tipo": "inicio",
             "nome": "Primeiro dia útil do trimestre",
             "raia": "PA-01",
-            "gatilho": "tempo"
+            "evento": "tempo"
           },
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Apurar os requisitos de cada parceiro",
+            "nome": "Listar quem cumpre os critérios do nível acima",
             "raia": "PA-01",
             "sistema": "SI-01",
             "modo": "automatico"
-          },
-          {
-            "id": "g0",
-            "tipo": "decisao",
-            "nome": "Parceiro isento?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "g1",
-            "tipo": "decisao",
-            "nome": "Cumpre o nível atual?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "g2",
-            "tipo": "decisao",
-            "nome": "Já estava em observação?",
-            "raia": "PA-01"
           },
           {
             "id": "t2",
             "tipo": "tarefa",
-            "nome": "Colocar em observação e avisar o que falta",
+            "nome": "Avaliar com o Igor os casos sem critério numérico",
+            "raia": "PA-02"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "O parceiro sobe de nível?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Conduzir a entrada no Premium",
             "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "automatico"
+            "processo": "P-45"
           },
           {
             "id": "t3",
             "tipo": "tarefa",
-            "nome": "Propor a descida de nível",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "automatico"
-          },
-          {
-            "id": "t4",
-            "tipo": "tarefa",
-            "nome": "Decidir a descida com motivo",
+            "nome": "Registrar a subida para Elite",
             "raia": "PA-01",
             "sistema": "SI-01",
             "modo": "sistema"
           },
           {
-            "id": "g3",
-            "tipo": "decisao",
-            "nome": "Descer de nível?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "f0",
-            "tipo": "fim",
-            "nome": "Parceiro isento",
-            "raia": "PA-01"
+            "id": "s2",
+            "tipo": "subprocesso",
+            "nome": "Conduzir o ciclo do Base Ativa",
+            "raia": "PA-01",
+            "processo": "P-44"
           },
           {
             "id": "f1",
@@ -2392,13 +2441,13 @@
           {
             "id": "f2",
             "tipo": "fim",
-            "nome": "Parceiro em observação",
+            "nome": "Parceiro Premium",
             "raia": "PA-01"
           },
           {
             "id": "f3",
             "tipo": "fim",
-            "nome": "Nível rebaixado",
+            "nome": "Parceiro Elite",
             "raia": "PA-01"
           }
         ],
@@ -2409,73 +2458,41 @@
           },
           {
             "de": "t1",
-            "para": "g0"
+            "para": "t2"
           },
           {
-            "de": "g0",
-            "para": "f0",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g0",
-            "para": "g1",
-            "rotulo": "Não"
+            "de": "t2",
+            "para": "g1"
           },
           {
             "de": "g1",
             "para": "f1",
-            "rotulo": "Sim"
+            "rotulo": "Não"
           },
           {
             "de": "g1",
-            "para": "g2",
-            "rotulo": "Não"
+            "para": "s1",
+            "rotulo": "Para Premium"
           },
           {
-            "de": "g2",
-            "para": "t2",
-            "rotulo": "Não"
-          },
-          {
-            "de": "t2",
+            "de": "s1",
             "para": "f2"
           },
           {
-            "de": "g2",
+            "de": "g1",
             "para": "t3",
-            "rotulo": "Sim"
+            "rotulo": "Para Elite"
           },
           {
             "de": "t3",
-            "para": "t4"
+            "para": "s2"
           },
           {
-            "de": "t4",
-            "para": "g3"
-          },
-          {
-            "de": "g3",
-            "para": "f3",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g3",
-            "para": "f1",
-            "rotulo": "Não"
+            "de": "s2",
+            "para": "f3"
           }
         ],
-        "mensagens": [
-          {
-            "de": "t2",
-            "para": "X1",
-            "rotulo": "Aviso do que falta"
-          },
-          {
-            "de": "t4",
-            "para": "X1",
-            "rotulo": "Aviso de nível"
-          }
-        ]
+        "mensagens": []
       }
     },
     {
@@ -2532,16 +2549,21 @@
       "nome": "Atrair e selecionar parceiros",
       "pai": null,
       "ordem": 4,
-      "descricao": "Do candidato na lista ao termo assinado. No portal: mantém a lista, transforma o candidato em card na primeira reunião e guarda a ficha, o scorecard e o texto único.",
+      "descricao": "Da campanha de aquisição ao parceiro com acesso. Todo parceiro entra pelo mesmo caminho, sem exceção: anúncio da campanha, landing page, cadastro com aceite do termo e da política, fila no portal, contato do Gerente pelo WhatsApp, link da agenda, confirmação do horário na véspera e no dia, e a conversa de entrada, em que a conta é criada. A fila existe para que concorrentes e pessoas sem interesse não tenham acesso ao que a Wise oferece. O processo serve a qualquer tipo de parceiro; só a campanha muda (hoje, software de gestão, com CRM e ERP à frente). No portal: recebe o cadastro na fila, avisa os administradores, guarda a origem da campanha e registra cada mudança de situação até a aprovação.",
       "dono": "PA-01",
       "participantes": [
-        "PA-02"
+        "PA-05"
       ],
-      "gatilho": "Candidato identificado",
-      "entradas": [],
+      "gatilho": "Cadastro enviado pela landing page",
+      "entradas": [
+        {
+          "nome": "Aceite registrado",
+          "de": "P-24"
+        }
+      ],
       "saidas": [
         {
-          "nome": "Termo assinado",
+          "nome": "Parceiro com acesso",
           "para": "P-26"
         }
       ],
@@ -2557,7 +2579,11 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0167",
-        "EV-0168"
+        "EV-0168",
+        "EV-0331",
+        "EV-0332",
+        "EV-0333",
+        "EV-0334"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2565,99 +2591,119 @@
         "F-005",
         "F-021"
       ],
-      "portal": "mantém a lista, transforma o candidato em card na primeira reunião e guarda a ficha, o scorecard e o texto único.",
+      "portal": "recebe o cadastro na fila, avisa os administradores, guarda a origem da campanha e registra cada mudança de situação até a aprovação.",
       "tipo": "finalistico",
       "quadro": "Quadro da jornada do parceiro",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0167",
-          "EV-0168",
-          "EV-0169"
+          "EV-0331",
+          "EV-0332"
         ],
         "raias": [
           "PA-01",
-          "PA-02"
+          "PA-05"
         ],
-        "externos": [
-          {
-            "id": "X1",
-            "nome": "Empresa candidata"
-          }
-        ],
+        "externos": [],
         "nos": [
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Candidato identificado",
-            "raia": "PA-01"
-          },
-          {
-            "id": "s1",
-            "tipo": "subprocesso",
-            "nome": "Manter a lista de candidatos",
-            "raia": "PA-01",
-            "processo": "P-21"
+            "nome": "Cadastro com aceite enviado pela landing page",
+            "raia": "PA-05"
           },
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Agendar a primeira reunião",
+            "nome": "Colocar o cadastro na fila e avisar os administradores",
             "raia": "PA-01",
-            "sistema": "SI-02",
-            "modo": "sistema"
+            "sistema": "SI-01",
+            "modo": "automatico"
           },
           {
-            "id": "e1",
-            "tipo": "espera",
-            "nome": "Resposta do candidato",
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Chamar o candidato pelo WhatsApp em até 24 horas úteis",
             "raia": "PA-01",
-            "evento": "mensagem"
+            "sistema": "SI-02"
           },
           {
-            "id": "s2",
-            "tipo": "subprocesso",
-            "nome": "Qualificar candidato",
-            "raia": "PA-01",
-            "processo": "P-22"
-          },
-          {
-            "id": "g1",
+            "id": "g0",
             "tipo": "decisao",
-            "nome": "Candidato elegível?",
+            "nome": "O candidato respondeu?",
             "raia": "PA-01"
           },
           {
-            "id": "g2",
-            "tipo": "decisao",
-            "nome": "Candidato quer seguir agora?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "s3",
+            "id": "s0",
             "tipo": "subprocesso",
             "nome": "Nutrir candidato",
             "raia": "PA-01",
             "processo": "P-25"
           },
           {
-            "id": "s4",
+            "id": "s1",
             "tipo": "subprocesso",
-            "nome": "Conduzir o workshop de alinhamento",
+            "nome": "Qualificar o candidato pelo WhatsApp",
+            "raia": "PA-01",
+            "processo": "P-22"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "Cumpre os critérios da fila?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Descartar o cadastro com o motivo",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Enviar o link da agenda",
+            "raia": "PA-01",
+            "sistema": "SI-02"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Marcar o horário na agenda",
+            "raia": "PA-05"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Confirmar o horário na véspera e no dia",
+            "raia": "PA-01",
+            "sistema": "SI-02"
+          },
+          {
+            "id": "s2",
+            "tipo": "subprocesso",
+            "nome": "Conduzir a conversa de entrada",
             "raia": "PA-01",
             "processo": "P-23"
           },
           {
-            "id": "s5",
-            "tipo": "subprocesso",
-            "nome": "Negociar e formalizar o termo",
-            "raia": "PA-01",
-            "processo": "P-24"
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "O candidato quer seguir?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f0",
+            "tipo": "fim",
+            "nome": "Candidato em nutrição",
+            "raia": "PA-01"
           },
           {
             "id": "f1",
             "tipo": "fim",
-            "nome": "Candidato não elegível",
+            "nome": "Cadastro descartado",
             "raia": "PA-01"
           },
           {
@@ -2669,50 +2715,70 @@
           {
             "id": "f3",
             "tipo": "fim",
-            "nome": "Termo assinado",
+            "nome": "Parceiro Select com acesso ao portal",
             "raia": "PA-01"
           }
         ],
         "ligacoes": [
           {
             "de": "i1",
-            "para": "s1"
-          },
-          {
-            "de": "s1",
             "para": "t1"
           },
           {
             "de": "t1",
-            "para": "e1"
+            "para": "t2"
           },
           {
-            "de": "e1",
-            "para": "s2"
+            "de": "t2",
+            "para": "g0"
           },
           {
-            "de": "s2",
+            "de": "g0",
+            "para": "s0",
+            "rotulo": "Não"
+          },
+          {
+            "de": "s0",
+            "para": "f0"
+          },
+          {
+            "de": "g0",
+            "para": "s1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "s1",
             "para": "g1"
           },
           {
             "de": "g1",
-            "para": "g2",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g1",
-            "para": "f1",
+            "para": "t3",
             "rotulo": "Não"
           },
           {
-            "de": "g2",
-            "para": "s4",
+            "de": "t3",
+            "para": "f1"
+          },
+          {
+            "de": "g1",
+            "para": "t4",
             "rotulo": "Sim"
           },
           {
-            "de": "g2",
-            "para": "s3",
-            "rotulo": "Agora não"
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "s2"
+          },
+          {
+            "de": "s2",
+            "para": "g2"
           },
           {
             "de": "g2",
@@ -2720,41 +2786,23 @@
             "rotulo": "Não"
           },
           {
-            "de": "s3",
-            "para": "s4"
-          },
-          {
-            "de": "s4",
-            "para": "s5"
-          },
-          {
-            "de": "s5",
-            "para": "f3"
+            "de": "g2",
+            "para": "f3",
+            "rotulo": "Sim"
           }
         ],
-        "mensagens": [
-          {
-            "de": "t1",
-            "para": "X1",
-            "rotulo": "Convite"
-          },
-          {
-            "de": "X1",
-            "para": "e1",
-            "rotulo": "Resposta"
-          }
-        ]
+        "mensagens": []
       }
     },
     {
       "id": "P-21",
-      "nome": "Manter a lista de candidatos",
+      "nome": "Manter a fila de candidatos",
       "pai": "P-20",
       "ordem": 1,
-      "descricao": "Lista de candidatos vindos de forma orgânica, de clientes do grupo, de fornecedores que já estão nas indústrias atendidas, de categorias pedidas sem fornecedor e de eventos; reativar laços dormentes antes de buscar contatos novos. No portal: é uma tabela, não um quadro; o candidato só vira card depois da primeira reunião.",
+      "descricao": "Os cadastros das campanhas de aquisição entram na fila do portal com a data de entrada e a origem (campanha, anúncio e vídeo); candidatos vindos de outras origens (orgânica, clientes do grupo, eventos) entram na mesma fila. A fila mostra quem espera contato, quem foi contatado, quem tem reunião marcada e o histórico de aprovados e descartados. No portal: é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Candidato identificado",
+      "gatilho": "Cadastro enviado pela landing page ou candidato identificado",
       "entradas": [],
       "saidas": [
         {
@@ -2775,22 +2823,24 @@
       "evidencias": [
         "EV-0168",
         "EV-0169",
-        "EV-0170"
+        "EV-0170",
+        "EV-0331",
+        "EV-0335"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
       "principios": [],
-      "portal": "é uma tabela, não um quadro; o candidato só vira card depois da primeira reunião."
+      "portal": "é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação."
     },
     {
       "id": "P-22",
-      "nome": "Qualificar candidato",
+      "nome": "Qualificar o candidato pelo WhatsApp",
       "pai": "P-20",
       "ordem": 2,
-      "descricao": "Scorecard, ficha de jogo (papéis na rede de valor e quem ganha com a entrada dele), estimativa de sobreposição de carteiras e leitura do comportamento: quem só toma se reconhece pelo que faz, não pela simpatia. No portal: calcula o scorecard e o nível de entrada e guarda a ficha de jogo e a sobreposição estimada.",
+      "descricao": "Pela própria mensagem, o Gerente confirma as informações que o candidato deixou no cadastro e aplica os critérios: ter clientes empresariais que podem estar no ICP da Wise (vale para qualquer tipo de parceiro), não ser concorrente da Wise Makers, mostrar interesse real em oferecer a consultoria aos clientes e ter um responsável na empresa para cuidar da parceria. Não há mínimo de clientes ativos. O Gerente cuida da fila sempre. No portal: guarda a observação de cada contato e muda a situação do cadastro.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Primeira reunião realizada",
+      "gatilho": "Candidato respondeu ao primeiro contato",
       "entradas": [
         {
           "nome": "Perfil e scorecard",
@@ -2822,24 +2872,30 @@
         "EV-0171",
         "EV-0084",
         "EV-0150",
-        "EV-0259"
+        "EV-0259",
+        "EV-0336",
+        "EV-0334",
+        "EV-0332",
+        "EV-0337"
       ],
       "situacao": "no_papel",
-      "fluxo_dispensado": null,
+      "fluxo_dispensado": "DE-28",
       "principios": [
         "F-013"
       ],
-      "portal": "calcula o scorecard e o nível de entrada e guarda a ficha de jogo e a sobreposição estimada."
+      "portal": "guarda a observação de cada contato e muda a situação do cadastro."
     },
     {
       "id": "P-23",
-      "nome": "Conduzir o workshop de alinhamento",
+      "nome": "Conduzir a conversa de entrada",
       "pai": "P-20",
       "ordem": 3,
-      "descricao": "Conversa mais longa com a diretoria do candidato: o que cada lado faz, o que é sucesso para ele na unidade de medida dele e o caso de negócio (quantos negócios saem da carteira, quanto ganha, que demanda recebe de volta). No portal: monta o caso de negócio com a sobreposição estimada e a regra de comissão.",
+      "descricao": "Conversa do Gerente com o candidato, no lugar do workshop: perguntas sobre a empresa e os clientes dele; apresentação da Wise Makers, com números e casos; como o parceiro ganha junto com a Wise; a consultoria gratuita que ele oferece aos clientes; o Wise Hub por dentro e os resultados dos clientes; como é fácil indicar (o link da página do cliente, no portal Wise Partners, com o login dele); o minicurso de como vender a Wise. No fim, o Gerente aprova o cadastro, cria a conta e acompanha o parceiro entrando no portal. No portal: aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
       "dono": "PA-01",
-      "participantes": [],
-      "gatilho": "Candidato qualificado quer seguir",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Horário marcado e confirmado",
       "entradas": [
         {
           "nome": "Candidato qualificado ou não elegível",
@@ -2864,8 +2920,8 @@
       ],
       "saidas": [
         {
-          "nome": "Plano conjunto e caso de negócio",
-          "para": "P-24"
+          "nome": "Parceiro com acesso",
+          "para": "P-26"
         }
       ],
       "cliente": "Candidato",
@@ -2882,31 +2938,177 @@
         "EV-0168",
         "EV-0172",
         "EV-0173",
-        "EV-0174"
+        "EV-0174",
+        "EV-0333",
+        "EV-0338",
+        "EV-0339"
       ],
       "situacao": "no_papel",
-      "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
+      "fluxo_dispensado": null,
       "principios": [
         "F-002"
       ],
-      "portal": "monta o caso de negócio com a sobreposição estimada e a regra de comissão."
+      "portal": "aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
+      "fluxo": {
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0333"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-05"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Horário marcado e confirmado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Perguntar sobre a empresa e os clientes do candidato",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Apresentar a Wise Makers, os números e os casos",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Mostrar como o parceiro ganha junto com a Wise",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Mostrar a consultoria gratuita para os clientes dele",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Mostrar o Wise Hub por dentro e os resultados dos clientes",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Mostrar como indicar pelo link da página do cliente",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t7",
+            "tipo": "tarefa",
+            "nome": "Apresentar o minicurso de como vender a Wise",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "O candidato quer seguir?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t8",
+            "tipo": "tarefa",
+            "nome": "Aprovar o cadastro e criar a conta no portal",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t9",
+            "tipo": "tarefa",
+            "nome": "Entrar no portal com a senha provisória",
+            "raia": "PA-05",
+            "sistema": "SI-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Candidato sem interesse",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Parceiro conectado ao portal",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "t5"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "t6",
+            "para": "t7"
+          },
+          {
+            "de": "t7",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g1",
+            "para": "t8",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t8",
+            "para": "t9"
+          },
+          {
+            "de": "t9",
+            "para": "f2"
+          }
+        ],
+        "mensagens": []
+      }
     },
     {
       "id": "P-24",
-      "nome": "Negociar e formalizar o termo",
+      "nome": "Registrar o aceite do termo e da política",
       "pai": "P-20",
       "ordem": 4,
-      "descricao": "Texto único: o Gerente propõe a minuta como rascunho, recebe críticas e ajusta até as duas partes aprovarem; o Diretor assina; assinatura digital. No portal: gera a minuta a partir do termo-quadro, guarda as versões e anexa o termo assinado.",
+      "descricao": "O termo de adesão e a política de privacidade são aceitos no próprio formulário da landing page, com a versão de cada texto, a data e a hora. Na aprovação, o aceite vira o registro de aceite eletrônico do parceiro. Não há negociação de minuta nem assinatura à parte para quem entra pela página. No portal: guarda as versões do termo e da política, registra o aceite no cadastro e cria a aprovação de aceite eletrônico na entrada.",
       "dono": "PA-01",
       "participantes": [
-        "PA-02"
+        "PA-05"
       ],
-      "gatilho": "Plano conjunto acordado",
+      "gatilho": "Cadastro enviado pela landing page",
       "entradas": [
-        {
-          "nome": "Plano conjunto e caso de negócio",
-          "de": "P-23"
-        },
         {
           "nome": "Termo-quadro atualizado",
           "de": "P-64"
@@ -2914,8 +3116,8 @@
       ],
       "saidas": [
         {
-          "nome": "Termo assinado",
-          "para": "P-26"
+          "nome": "Aceite registrado",
+          "para": "P-20"
         }
       ],
       "cliente": "Empresa parceira",
@@ -2933,168 +3135,16 @@
       "evidencias": [
         "EV-0007",
         "EV-0175",
-        "EV-0100"
+        "EV-0100",
+        "EV-0340"
       ],
       "situacao": "no_papel",
-      "fluxo_dispensado": null,
+      "fluxo_dispensado": "DE-28",
       "principios": [
         "F-021"
       ],
-      "portal": "gera a minuta a partir do termo-quadro, guarda as versões e anexa o termo assinado.",
-      "fluxo": {
-        "status": "confirmado",
-        "evidencias": [
-          "EV-0007",
-          "EV-0100",
-          "EV-0175",
-          "EV-0013"
-        ],
-        "raias": [
-          "PA-01",
-          "PA-02"
-        ],
-        "externos": [
-          {
-            "id": "X1",
-            "nome": "Empresa candidata"
-          }
-        ],
-        "nos": [
-          {
-            "id": "i1",
-            "tipo": "inicio",
-            "nome": "Plano conjunto acordado no workshop",
-            "raia": "PA-01"
-          },
-          {
-            "id": "t1",
-            "tipo": "tarefa",
-            "nome": "Preencher o termo-quadro",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "sistema"
-          },
-          {
-            "id": "t2",
-            "tipo": "tarefa",
-            "nome": "Enviar a minuta pedindo críticas",
-            "raia": "PA-01",
-            "sistema": "SI-02",
-            "modo": "sistema"
-          },
-          {
-            "id": "e1",
-            "tipo": "espera",
-            "nome": "Críticas do candidato",
-            "raia": "PA-01",
-            "evento": "mensagem"
-          },
-          {
-            "id": "g1",
-            "tipo": "decisao",
-            "nome": "As duas partes aprovam?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "t3",
-            "tipo": "tarefa",
-            "nome": "Ajustar a minuta",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "sistema"
-          },
-          {
-            "id": "t4",
-            "tipo": "tarefa",
-            "nome": "Assinar o termo",
-            "raia": "PA-02",
-            "sistema": "SI-03",
-            "modo": "sistema"
-          },
-          {
-            "id": "e2",
-            "tipo": "espera",
-            "nome": "Assinatura do parceiro",
-            "raia": "PA-01",
-            "evento": "mensagem"
-          },
-          {
-            "id": "t5",
-            "tipo": "tarefa",
-            "nome": "Anexar o termo assinado",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "sistema"
-          },
-          {
-            "id": "f1",
-            "tipo": "fim",
-            "nome": "Termo assinado",
-            "raia": "PA-01"
-          }
-        ],
-        "ligacoes": [
-          {
-            "de": "i1",
-            "para": "t1"
-          },
-          {
-            "de": "t1",
-            "para": "t2"
-          },
-          {
-            "de": "t2",
-            "para": "e1"
-          },
-          {
-            "de": "e1",
-            "para": "g1"
-          },
-          {
-            "de": "g1",
-            "para": "t3",
-            "rotulo": "Não"
-          },
-          {
-            "de": "t3",
-            "para": "t2"
-          },
-          {
-            "de": "g1",
-            "para": "t4",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "t4",
-            "para": "e2"
-          },
-          {
-            "de": "e2",
-            "para": "t5"
-          },
-          {
-            "de": "t5",
-            "para": "f1"
-          }
-        ],
-        "mensagens": [
-          {
-            "de": "t2",
-            "para": "X1",
-            "rotulo": "Minuta"
-          },
-          {
-            "de": "X1",
-            "para": "e1",
-            "rotulo": "Críticas"
-          },
-          {
-            "de": "X1",
-            "para": "e2",
-            "rotulo": "Termo assinado"
-          }
-        ]
-      }
+      "portal": "guarda as versões do termo e da política, registra o aceite no cadastro e cria a aprovação de aceite eletrônico na entrada.",
+      "fluxo": null
     },
     {
       "id": "P-25",
@@ -3104,7 +3154,7 @@
       "descricao": "Pausa com data de retomada e cadência, com gestos de valor sem pedido. No portal: lembra a data de retomada e sugere um gesto (conteúdo, convite, oportunidade).",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Candidato pede para retomar depois",
+      "gatilho": "Candidato não responde ou pede para retomar depois",
       "entradas": [],
       "saidas": [
         {
@@ -3126,7 +3176,8 @@
         "EV-0176",
         "EV-0177",
         "EV-0178",
-        "EV-0283"
+        "EV-0283",
+        "EV-0341"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3140,20 +3191,20 @@
       "nome": "Integrar e ativar parceiro",
       "pai": null,
       "ordem": 5,
-      "descricao": "Do termo assinado à ativação em até 90 dias (extensão até 120), entregando o primeiro valor em fatias. No portal: cria o plano de 90 dias com marcos dentro do card do parceiro e marca a ativação sozinho quando a primeira indicação no ICP vira reunião.",
+      "descricao": "Do acesso criado à ativação, por etapas e metas, sem prazo em dias: o tempo varia de caso a caso. Todo parceiro começa como Select; o portal mostra em que etapa cada um está e há quantos dias, e lembra quem parou. No portal: cria as etapas do nível no card do parceiro, mostra os dias em cada etapa e marca a ativação sozinho no primeiro cliente cadastrado pelo link.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Termo assinado",
+      "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
-          "nome": "Termo assinado",
-          "de": "P-20"
+          "nome": "Parceiro com acesso",
+          "de": "P-23"
         },
         {
-          "nome": "Termo assinado",
-          "de": "P-24"
+          "nome": "Parceiro com acesso",
+          "de": "P-20"
         }
       ],
       "saidas": [
@@ -3176,35 +3227,34 @@
         "EV-0016",
         "EV-0072",
         "EV-0179",
-        "EV-0258"
+        "EV-0258",
+        "EV-0342",
+        "EV-0343",
+        "EV-0344"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-009"
       ],
-      "portal": "cria o plano de 90 dias com marcos dentro do card do parceiro e marca a ativação sozinho quando a primeira indicação no ICP vira reunião.",
+      "portal": "cria as etapas do nível no card do parceiro, mostra os dias em cada etapa e marca a ativação sozinho no primeiro cliente cadastrado pelo link.",
       "tipo": "finalistico",
       "quadro": "Quadro da jornada do parceiro",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0016",
-          "EV-0072",
-          "EV-0168",
-          "EV-0258",
-          "EV-0326"
+          "EV-0342",
+          "EV-0343"
         ],
         "raias": [
-          "PA-01",
-          "PA-05"
+          "PA-01"
         ],
         "externos": [],
         "nos": [
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Termo assinado",
+            "nome": "Acesso criado na conversa de entrada",
             "raia": "PA-01"
           },
           {
@@ -3217,54 +3267,14 @@
           {
             "id": "s2",
             "tipo": "subprocesso",
-            "nome": "Conduzir o encontro de alinhamento",
-            "raia": "PA-01",
-            "processo": "P-28"
-          },
-          {
-            "id": "s3",
-            "tipo": "subprocesso",
-            "nome": "Ensinar o parceiro a indicar",
-            "raia": "PA-01",
-            "processo": "P-29"
-          },
-          {
-            "id": "s4",
-            "tipo": "subprocesso",
-            "nome": "Conduzir o plano de ativação de 90 dias",
+            "nome": "Conduzir o onboarding por etapas",
             "raia": "PA-01",
             "processo": "P-94"
           },
           {
-            "id": "g1",
-            "tipo": "decisao",
-            "nome": "Parceiro ativado em 90 dias?",
-            "raia": "PA-01"
-          },
-          {
-            "id": "t1",
-            "tipo": "tarefa",
-            "nome": "Estender o plano até 120 dias",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "automatico"
-          },
-          {
-            "id": "g2",
-            "tipo": "decisao",
-            "nome": "Parceiro ativado em 120 dias?",
-            "raia": "PA-01"
-          },
-          {
             "id": "f1",
             "tipo": "fim",
-            "nome": "Parceiro ativado",
-            "raia": "PA-01"
-          },
-          {
-            "id": "f2",
-            "tipo": "fim",
-            "nome": "Parceiro não ativado",
+            "nome": "Parceiro ativado e onboarding do Select concluído",
             "raia": "PA-01"
           }
         ],
@@ -3279,39 +3289,7 @@
           },
           {
             "de": "s2",
-            "para": "s3"
-          },
-          {
-            "de": "g1",
-            "para": "f1",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g1",
-            "para": "t1",
-            "rotulo": "Não"
-          },
-          {
-            "de": "t1",
-            "para": "g2"
-          },
-          {
-            "de": "g2",
-            "para": "f1",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g2",
-            "para": "f2",
-            "rotulo": "Não"
-          },
-          {
-            "de": "s3",
-            "para": "s4"
-          },
-          {
-            "de": "s4",
-            "para": "g1"
+            "para": "f1"
           }
         ],
         "mensagens": []
@@ -3322,10 +3300,10 @@
       "nome": "Preparar a entrada do parceiro",
       "pai": "P-26",
       "ordem": 1,
-      "descricao": "Primeira entrega em até 2 dias úteis, conforme o pacote: no C, grupo na comunidade, ficha na Prateleira com a apresentação de vendas do parceiro e link exclusivo; no B, também certificado, selo, Hub e convites à mentoria e às formações; no A, também a entrada na fila da Base Ativa. No portal: publica a ficha, guarda a apresentação no perfil e gera o link e os acessos.",
+      "descricao": "O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Termo assinado",
+      "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [],
       "saidas": [
         {
@@ -3348,24 +3326,27 @@
         "EV-0012",
         "EV-0180",
         "EV-0019",
-        "EV-0181"
+        "EV-0181",
+        "EV-0345",
+        "EV-0346",
+        "EV-0347"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "publica a ficha, guarda a apresentação no perfil e gera o link e os acessos."
+      "portal": "gera o link, a página do cliente com a logo do parceiro e os acessos."
     },
     {
       "id": "P-28",
       "nome": "Conduzir o encontro de alinhamento",
-      "pai": "P-26",
-      "ordem": 2,
-      "descricao": "Registrar o que é sucesso para o parceiro, cruzar carteiras revelando só as coincidências e escolher a primeira oportunidade concreta. No portal: processa o cruzamento e sugere as primeiras jogadas.",
+      "pai": "P-45",
+      "ordem": 1,
+      "descricao": "O encontro deixa de ser para todos e vira a porta do Premium: só com quem a Wise vai passar a recomendar. Registrar o que é sucesso para o parceiro, preencher a ficha de jogo, cruzar carteiras revelando só as coincidências, ler o comportamento dele e escolher a primeira oportunidade concreta. No portal: processa o cruzamento e sugere as primeiras jogadas.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Até 7 dias da assinatura",
+      "gatilho": "Parceiro convidado para o Premium no fechamento trimestral",
       "entradas": [
         {
           "nome": "Parceiro com acesso e ficha publicada",
@@ -3400,7 +3381,9 @@
         "EV-0168",
         "EV-0182",
         "EV-0173",
-        "EV-0183"
+        "EV-0183",
+        "EV-0338",
+        "EV-0357"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3415,12 +3398,12 @@
       "nome": "Ensinar o parceiro a indicar",
       "pai": "P-26",
       "ordem": 3,
-      "descricao": "Mostrar o perfil do cliente ideal, as frases que reconhecem a dor na conversa com o cliente dele e o gesto de indicar sem atrito; encontros de vendas, produto e pós-venda. No portal: libera a trilha, o kit de cada empresa e o simulador de ganho; registra cada encontro como marco.",
+      "descricao": "Minicurso gravado de como vender a Wise e facilitar a entrega da consultoria: perfil do cliente ideal, frases que reconhecem a dor e o gesto de indicar pelo link. O Igor grava e revisa; o Gerente mantém atualizado. No portal: libera o minicurso, o kit e o simulador de ganho e registra quando o parceiro assiste.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Encontro de alinhamento feito",
+      "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
           "nome": "Parceiro equipado",
@@ -3442,7 +3425,7 @@
       "saidas": [
         {
           "nome": "Pessoas preparadas para indicar",
-          "para": "P-30"
+          "para": "P-94"
         }
       ],
       "cliente": "Pessoas do parceiro",
@@ -3459,7 +3442,9 @@
         "EV-0078",
         "EV-0079",
         "EV-0012",
-        "EV-0258"
+        "EV-0258",
+        "EV-0348",
+        "EV-0333"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3470,30 +3455,17 @@
     },
     {
       "id": "P-30",
-      "nome": "Declarar a ativação ou estender o plano",
+      "nome": "Declarar a ativação",
       "pai": "P-26",
       "ordem": 4,
-      "descricao": "Ativado na primeira indicação no ICP que virou reunião; sem ativação em 90 dias, extensão até 120; depois, não ativado. No portal: marca a ativação sozinho e avisa os marcos de 90 e 120 dias.",
+      "descricao": "O parceiro está ativado quando o primeiro cliente se cadastra pelo link dele. Não há prazo de 90 ou 120 dias: quem não avança recebe o lembrete do portal (P-97). No portal: marca a ativação sozinho e avisa o parceiro e o Gerente.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Primeira reunião gerada ou marco de 90 dias",
-      "entradas": [
-        {
-          "nome": "Pessoas preparadas para indicar",
-          "de": "P-29"
-        },
-        {
-          "nome": "Gesto sem atrito",
-          "de": "P-78"
-        },
-        {
-          "nome": "Parceiro com o primeiro valor recebido",
-          "de": "P-94"
-        }
-      ],
+      "gatilho": "Primeiro cliente cadastrado pelo link do parceiro",
+      "entradas": [],
       "saidas": [
         {
-          "nome": "Parceiro ativado ou não ativado",
+          "nome": "Parceiro ativado",
           "para": "P-40"
         }
       ],
@@ -3509,7 +3481,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0184",
-        "EV-0285"
+        "EV-0285",
+        "EV-0344"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3787,7 +3760,7 @@
       "nome": "Entregar o lead ao closer",
       "pai": "P-31",
       "ordem": 2,
-      "descricao": "O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. No portal: registra para quem foi o lead e quando.",
+      "descricao": "O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. Quando a oportunidade nasce de um diagnóstico, quem conduziu a reunião passa o caso ao closer. No portal: registra para quem foi o lead e quando.",
       "dono": "PA-01",
       "participantes": [
         "PA-03"
@@ -3823,7 +3796,8 @@
         "EV-0009",
         "EV-0025",
         "EV-0187",
-        "EV-0026"
+        "EV-0026",
+        "EV-0366"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -3837,7 +3811,7 @@
       "nome": "Fechar o ciclo com o parceiro",
       "pai": "P-31",
       "ordem": 3,
-      "descricao": "O closer avisa o Gerente por WhatsApp a cada mudança de etapa; o Gerente registra a etapa e devolve ao parceiro (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. No portal: registra a etapa informada pelo Gerente, prepara a mensagem para ele personalizar e mandar no grupo do parceiro, e mostra no painel da semana as oportunidades paradas há mais de 15 dias.",
+      "descricao": "O closer avisa o Gerente por WhatsApp a cada mudança de etapa; o Gerente registra a etapa e devolve ao parceiro (primeiro contato, proposta, fechamento ou perda) e, no fim, o impacto gerado. O grupo de WhatsApp vale para todos os parceiros até que o tamanho torne isso inviável; o portal mostra ao parceiro a lista de quem entrou pelo link e o andamento. No portal: registra a etapa informada pelo Gerente, prepara a mensagem para ele personalizar e mandar no grupo do parceiro, e mostra no painel da semana as oportunidades paradas há mais de 15 dias.",
       "dono": "PA-01",
       "participantes": [
         "PA-03"
@@ -3872,7 +3846,8 @@
         "EV-0076",
         "EV-0026",
         "EV-0077",
-        "EV-0237"
+        "EV-0237",
+        "EV-0347"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4020,7 +3995,7 @@
       "nome": "Atender necessidade do cliente pela Prateleira",
       "pai": "P-31",
       "ordem": 4,
-      "descricao": "O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente; o fornecedor que entra no pedido dá uma contrapartida não financeira. No portal: recomenda parceiros por categoria, monta a página e registra a contrapartida combinada.",
+      "descricao": "O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente; só parceiros Premium e Elite, sem recomendação suspensa, entram na recomendação; o fornecedor que entra no pedido dá uma contrapartida não financeira. No portal: recomenda parceiros Premium e Elite por categoria, monta a página e registra a contrapartida combinada.",
       "dono": "PA-01",
       "participantes": [
         "PA-03"
@@ -4058,7 +4033,9 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0188",
-        "EV-0023"
+        "EV-0023",
+        "EV-0352",
+        "EV-0350"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4335,7 +4312,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0024",
-        "EV-0192"
+        "EV-0192",
+        "EV-0368"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -4395,8 +4373,12 @@
           "de": "P-26"
         },
         {
-          "nome": "Parceiro ativado ou não ativado",
+          "nome": "Parceiro ativado",
           "de": "P-30"
+        },
+        {
+          "nome": "Parceiro ativado",
+          "de": "P-94"
         }
       ],
       "saidas": [
@@ -4482,7 +4464,7 @@
       "nome": "Revisar a parceria com o parceiro",
       "pai": "P-40",
       "ordem": 2,
-      "descricao": "Revisão conjunta com pauta montada pelo portal; trimestral para todos os ativos e mensal para os destaques; o Diretor participa nas dos parceiros Elite. As ações nascem da ata. No portal: monta a pauta com os dados do parceiro e transforma a ata em ações.",
+      "descricao": "Revisão conjunta com pauta montada pelo portal, para parceiros Premium e Elite: trimestral para todos e mensal para os destaques; o Diretor participa nas dos parceiros Elite. Para o Select, o contato do trimestre é o encontro trimestral de parceiros (P-83). As ações nascem da ata. No portal: monta a pauta com os dados do parceiro e transforma a ata em ações.",
       "dono": "PA-01",
       "participantes": [
         "PA-02",
@@ -4509,7 +4491,8 @@
       "evidencias": [
         "EV-0195",
         "EV-0196",
-        "EV-0197"
+        "EV-0197",
+        "EV-0360"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4679,12 +4662,12 @@
       "nome": "Conduzir o ciclo do Base Ativa",
       "pai": "P-40",
       "ordem": 4,
-      "descricao": "Fila por horas disponíveis, 12 semanas com 6 encontros e evento da comunidade do parceiro. No portal: controla a fila, a agenda dos encontros e o evento.",
+      "descricao": "Formação gratuita e exclusiva para a base do parceiro Elite, organizada pela Wise, conforme as horas disponíveis: definir com o parceiro o tema e a data do evento; o parceiro convida a própria base com o material da Wise; a Wise conduz a formação; os participantes recebem a oferta do diagnóstico; o parceiro recebe um relatório com a presença e os resultados. A fila por horas, os encontros de preparação e o certificado metodológico continuam. No portal: controla a fila, a agenda, o evento e o relatório.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Parceiro de pacote A com horas disponíveis",
+      "gatilho": "Subida para Elite decidida",
       "entradas": [],
       "saidas": [
         {
@@ -4705,7 +4688,9 @@
       "evidencias": [
         "EV-0199",
         "EV-0095",
-        "EV-0019"
+        "EV-0019",
+        "EV-0359",
+        "EV-0354"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4735,7 +4720,7 @@
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Parceiro de pacote A assinado",
+            "nome": "Subida para Elite decidida",
             "raia": "PA-01"
           },
           {
@@ -4812,6 +4797,22 @@
             "modo": "sistema"
           },
           {
+            "id": "r7a",
+            "tipo": "tarefa",
+            "nome": "Oferecer o diagnóstico aos participantes",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "r7b",
+            "tipo": "tarefa",
+            "nome": "Enviar ao parceiro o relatório de presença e resultados",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
             "id": "f1",
             "tipo": "fim",
             "nome": "Comunidade validada",
@@ -4871,6 +4872,14 @@
           },
           {
             "de": "t9",
+            "para": "r7a"
+          },
+          {
+            "de": "r7a",
+            "para": "r7b"
+          },
+          {
+            "de": "r7b",
             "para": "f1"
           }
         ],
@@ -4879,13 +4888,13 @@
     },
     {
       "id": "P-45",
-      "nome": "Evoluir o nível e o pacote",
+      "nome": "Conduzir a entrada no Premium",
       "pai": "P-40",
       "ordem": 5,
-      "descricao": "Subida na hora em que os requisitos do nível acima são cumpridos; o pacote acompanha. No portal: detecta e avisa os dois lados.",
+      "descricao": "O Premium é o nível em que a Wise passa a recomendar o parceiro aos próprios clientes, e por isso começa pelo encontro de alinhamento. Depois dele, o parceiro sobe, tem o perfil revisado para as recomendações e a Prateleira, os consultores da Wise ficam sabendo que podem recomendá-lo e o novo nível é anunciado. No portal: registra a subida, publica a ficha na Prateleira e avisa os dois lados.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Requisitos cumpridos",
+      "gatilho": "Parceiro convidado para o Premium no fechamento trimestral",
       "entradas": [],
       "saidas": [
         {
@@ -4905,19 +4914,109 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0200",
-        "EV-0291"
+        "EV-0291",
+        "EV-0358",
+        "EV-0357",
+        "EV-0338"
       ],
       "situacao": "no_papel",
-      "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
+      "fluxo_dispensado": null,
       "principios": [],
-      "portal": "detecta e avisa os dois lados."
+      "portal": "registra a subida, publica a ficha na Prateleira e avisa os dois lados.",
+      "fluxo": {
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0358"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Parceiro convidado para o Premium",
+            "raia": "PA-01"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Conduzir o encontro de alinhamento",
+            "raia": "PA-01",
+            "processo": "P-28"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Registrar a subida para Premium",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Revisar o perfil para as recomendações e a Prateleira",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Avisar os consultores da Wise de que ele pode ser recomendado",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Anunciar o novo nível ao parceiro e na comunidade",
+            "raia": "PA-01",
+            "sistema": "SI-02"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Parceiro Premium recomendável",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "s1"
+          },
+          {
+            "de": "s1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
     },
     {
       "id": "P-46",
       "nome": "Manter a cadência de contato com o parceiro",
       "pai": "P-40",
       "ordem": 6,
-      "descricao": "Contato curto e frequente, com ritmo pela importância: mensal para quem tem atenção alta, trimestral para os demais ativos, duas a três vezes por ano para candidatos em nutrição e ex-parceiros. Cada contato leva algo de valor (oportunidade, conteúdo ou apresentação); depois de cada encontro, retorno em até 24 horas. No portal: lembra quem passou da cadência sem contato e sugere o que levar; a lembrança entra na fila como exceção.",
+      "descricao": "Contato curto e frequente, com ritmo pela importância: para o Select, contato automático (portal, e-mail do mês e resumo dos clientes) e o encontro trimestral de parceiros como o contato do trimestre; mensal para quem tem atenção alta; trimestral para os demais Premium e Elite; duas a três vezes por ano para candidatos em nutrição e ex-parceiros. Cada contato leva algo de valor; depois de cada encontro, retorno em até 24 horas. No portal: lembra quem passou da cadência sem contato e sugere o que levar; a lembrança entra na fila como exceção.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Cadência vencida ou encontro realizado",
@@ -4946,7 +5045,8 @@
         "EV-0105",
         "EV-0104",
         "EV-0202",
-        "EV-0247"
+        "EV-0247",
+        "EV-0360"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5070,7 +5170,7 @@
       "nome": "Cultivar a comunidade Wise Partners",
       "pai": null,
       "ordem": 8,
-      "descricao": "A comunidade no WhatsApp como lugar de pertencer: utilidade primeiro, ritual fixo, reconhecimento por status, rede e acesso, e reciprocidade visível entre parceiros. No portal: registra quem participa, conta contribuições e oportunidades nascidas na comunidade, e prepara o comunicado do mês.",
+      "descricao": "A comunidade no WhatsApp como lugar de pertencer: utilidade primeiro, ritual fixo, reconhecimento por status, rede e acesso, e reciprocidade visível entre parceiros. Todo parceiro entra na comunidade desde a entrada. No portal: registra quem participa, conta contribuições e oportunidades nascidas na comunidade, e prepara o comunicado do mês.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Calendário da comunidade",
@@ -5106,7 +5206,8 @@
         "EV-0203",
         "EV-0204",
         "EV-0257",
-        "EV-0232"
+        "EV-0232",
+        "EV-0346"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5286,7 +5387,7 @@
       "nome": "Apresentar parceiros entre si",
       "pai": "P-47",
       "ordem": 5,
-      "descricao": "Quando um parceiro menciona um problema, a Wise pensa em quem resolve e apresenta, sem esperar pedido; a troca acontece em torno de uma oportunidade específica, nunca com a lista inteira de contatos; quem apresentou recebe o retorno de como foi. No portal: sugere apresentações a partir do cruzamento de carteiras e das categorias de cada parceiro, e registra cada apresentação feita.",
+      "descricao": "Quando um parceiro menciona um problema, a Wise pensa em quem resolve e apresenta, sem esperar pedido; a troca acontece em torno de uma oportunidade específica, nunca com a lista inteira de contatos; quem apresentou recebe o retorno de como foi. Apresentações a outros parceiros são benefício do Premium e do Elite. No portal: sugere apresentações a partir do cruzamento de carteiras e das categorias de cada parceiro, e registra cada apresentação feita.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Problema ou oportunidade que outro parceiro resolve",
@@ -5314,7 +5415,8 @@
         "EV-0209",
         "EV-0210",
         "EV-0110",
-        "EV-0250"
+        "EV-0250",
+        "EV-0345"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6138,10 +6240,10 @@
       "nome": "Manter a Prateleira de fornecedores",
       "pai": null,
       "ordem": 10,
-      "descricao": "Categorias e fichas verificadas, sem limite por categoria; a permanência depende da nota de qualidade e do retorno dos clientes. No portal: guarda as fichas, calcula a nota e marca a permanência.",
+      "descricao": "Categorias e fichas verificadas dos parceiros Premium e Elite, sem limite por categoria; a permanência depende da nota de qualidade e do retorno dos clientes. No portal: guarda as fichas, calcula a nota e marca a permanência.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Parceiro assinado ou ficha desatualizada",
+      "gatilho": "Parceiro sobe para Premium ou ficha desatualizada",
       "entradas": [
         {
           "nome": "Apresentação no perfil",
@@ -6166,7 +6268,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0219",
-        "EV-0220"
+        "EV-0220",
+        "EV-0352"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6218,7 +6321,7 @@
       "nome": "Operar o portal no centro da gestão",
       "pai": null,
       "ordem": 12,
-      "descricao": "Manter as regras que rodam sozinhas, os dados e a privacidade (cruzamento com consentimento, só dados de empresa), os contratos e os acessos; primeiro fazer à mão e entender, depois automatizar. No portal: é o próprio processo: regras, automações, painéis, versões de contrato, acessos e auditoria.",
+      "descricao": "Manter as regras que rodam sozinhas, os dados e a privacidade (cruzamento com consentimento, só dados de empresa), os contratos e os acessos; primeiro fazer à mão e entender, depois automatizar. As landing pages (dos parceiros e dos clientes) ficam no domínio partners.wisemakers.com.br e são administradas por quem tem acesso de administrador; o responsável é o Gerente. No portal: é o próprio processo: regras, automações, painéis, versões de contrato, acessos e auditoria.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Regra nova, pessoa nova, contrato ou pedido de dados",
@@ -6243,7 +6346,9 @@
         "EV-0063",
         "EV-0152",
         "EV-0043",
-        "EV-0064"
+        "EV-0064",
+        "EV-0369",
+        "EV-0370"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6258,7 +6363,7 @@
       "nome": "Definir níveis, pacotes e contrapartidas",
       "pai": "P-05",
       "ordem": 1,
-      "descricao": "Três níveis com os mesmos critérios do recrutamento; pacotes com contrapartidas dos dois lados. No portal: guarda a tabela e carrega as contrapartidas no card do parceiro.",
+      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão por regra única, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -6289,12 +6394,20 @@
       "evidencias": [
         "EV-0222",
         "EV-0032",
-        "EV-0280"
+        "EV-0280",
+        "EV-0350",
+        "EV-0345",
+        "EV-0351",
+        "EV-0352",
+        "EV-0353",
+        "EV-0354",
+        "EV-0355",
+        "EV-0356"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
       "principios": [],
-      "portal": "guarda a tabela e carrega as contrapartidas no card do parceiro."
+      "portal": "guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro."
     },
     {
       "id": "P-62",
@@ -6635,66 +6748,20 @@
       "portal": "lê a tabela e cria a tarefa."
     },
     {
-      "id": "P-69",
-      "nome": "Pontuar o scorecard",
-      "pai": "P-22",
-      "ordem": 1,
-      "descricao": "Sete critérios com nota 0, 0,5 ou 1, nota de potencial e nível de entrada. No portal: calcula a nota e o nível.",
-      "dono": "PA-01",
-      "participantes": [
-        "PA-05"
-      ],
-      "gatilho": "Primeira reunião realizada",
-      "entradas": [
-        {
-          "nome": "Perfil e scorecard",
-          "de": "EXT:Definir o perfil de parceiro ideal"
-        },
-        {
-          "nome": "Candidato com reunião agendada",
-          "de": "EXT:Manter a lista de candidatos"
-        }
-      ],
-      "saidas": [
-        {
-          "nome": "Nota e nível sugerido",
-          "para": "P-70"
-        }
-      ],
-      "cliente": "Gerente de Parcerias",
-      "sistemas": [
-        "SI-01"
-      ],
-      "indicadores": [],
-      "frequencia": "",
-      "dores": [],
-      "regras": [],
-      "status": "confirmado",
-      "hipoteses": [],
-      "evidencias": [
-        "EV-0171",
-        "EV-0032"
-      ],
-      "situacao": "no_papel",
-      "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
-      "principios": [],
-      "portal": "calcula a nota e o nível."
-    },
-    {
       "id": "P-70",
       "nome": "Preencher a ficha de jogo",
-      "pai": "P-22",
-      "ordem": 2,
+      "pai": "P-28",
+      "ordem": 1,
       "descricao": "Papéis do candidato na rede de valor e quem ganha com a entrada dele. No portal: guarda a ficha no card.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Scorecard pontuado",
+      "gatilho": "Encontro de alinhamento marcado",
       "entradas": [
         {
-          "nome": "Nota e nível sugerido",
-          "de": "P-69"
+          "nome": "Parceiro convidado para o Premium",
+          "de": "P-18"
         }
       ],
       "saidas": [
@@ -6715,7 +6782,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0168",
-        "EV-0223"
+        "EV-0223",
+        "EV-0338"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6725,14 +6793,14 @@
     {
       "id": "P-71",
       "nome": "Estimar a sobreposição de carteiras",
-      "pai": "P-22",
-      "ordem": 3,
+      "pai": "P-28",
+      "ordem": 2,
       "descricao": "Quantos clientes da carteira do candidato estão no ICP e em comum com o grupo. No portal: estima a partir do que o candidato informa.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Ficha preenchida",
+      "gatilho": "Encontro de alinhamento marcado",
       "entradas": [
         {
           "nome": "Perfil e scorecard",
@@ -6761,7 +6829,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0168",
-        "EV-0224"
+        "EV-0224",
+        "EV-0338"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6771,14 +6840,14 @@
     {
       "id": "P-72",
       "nome": "Ler o comportamento do candidato",
-      "pai": "P-22",
-      "ordem": 4,
+      "pai": "P-28",
+      "ordem": 3,
       "descricao": "O que ele já deu antes de pedir e se a Wise o indicaria a um cliente importante. No portal: guarda as duas respostas na ficha.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Ficha preenchida",
+      "gatilho": "Encontro de alinhamento marcado",
       "entradas": [
         {
           "nome": "Perfil e scorecard",
@@ -6808,7 +6877,8 @@
       "evidencias": [
         "EV-0084",
         "EV-0150",
-        "EV-0259"
+        "EV-0259",
+        "EV-0338"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6820,12 +6890,12 @@
       "nome": "Incluir o parceiro na comunidade",
       "pai": "P-27",
       "ordem": 1,
-      "descricao": "Grupo do parceiro na comunidade Wise Partners, se ainda não existe desde a negociação. No portal: registra o grupo no card.",
+      "descricao": "Grupo de WhatsApp do parceiro na comunidade Wise Partners desde a entrada, para todos os níveis, até que o tamanho torne isso inviável; nesse ponto a regra é revista. No portal: registra o grupo no card.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Termo assinado",
+      "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
           "nome": "Termo assinado",
@@ -6850,7 +6920,9 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0012",
-        "EV-0225"
+        "EV-0225",
+        "EV-0346",
+        "EV-0347"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6860,14 +6932,14 @@
     {
       "id": "P-74",
       "nome": "Recolher a apresentação de vendas do parceiro",
-      "pai": "P-27",
+      "pai": "P-45",
       "ordem": 2,
-      "descricao": "Guardar no perfil a apresentação comercial dele para o Gerente resgatar quando o apresentar a um cliente. No portal: guarda no perfil.",
+      "descricao": "Guardar no perfil a apresentação comercial do parceiro, para o Gerente e os consultores resgatarem quando o recomendarem a um cliente. No portal: guarda no perfil.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Termo assinado",
+      "gatilho": "Parceiro convidado para o Premium",
       "entradas": [
         {
           "nome": "Termo assinado",
@@ -6891,7 +6963,8 @@
       "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0012"
+        "EV-0012",
+        "EV-0358"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -6900,15 +6973,15 @@
     },
     {
       "id": "P-75",
-      "nome": "Publicar a ficha na Prateleira e entregar o link",
+      "nome": "Entregar o link da página do cliente e a mensagem pronta",
       "pai": "P-27",
       "ordem": 3,
-      "descricao": "Ficha verificada na Prateleira, link exclusivo e acessos. No portal: publica e gera o link.",
+      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Termo assinado",
+      "gatilho": "Acesso criado na conversa de entrada",
       "entradas": [
         {
           "nome": "Termo assinado",
@@ -6933,7 +7006,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0226",
-        "EV-0284"
+        "EV-0284",
+        "EV-0339"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7057,7 +7131,7 @@
       "saidas": [
         {
           "nome": "Gesto sem atrito",
-          "para": "P-30"
+          "para": "P-94"
         }
       ],
       "cliente": "Pessoas do parceiro",
@@ -7084,7 +7158,7 @@
       "nome": "Registrar a oportunidade com a porta de origem",
       "pai": "P-32",
       "ordem": 1,
-      "descricao": "Link, cruzamento, Base Ativa, Prateleira ou registro à mão, sempre com o parceiro de origem. No portal: registra e protege por 180 dias.",
+      "descricao": "Link de indicação, link da página do cliente, cruzamento, Base Ativa, Prateleira ou registro à mão, sempre com o parceiro de origem; a proteção é de 180 dias em todas as portas. No portal: registra e protege por 180 dias.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -7118,7 +7192,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0228",
-        "EV-0287"
+        "EV-0287",
+        "EV-0367"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7301,7 +7376,7 @@
       "nome": "Abrir a mentoria mensal à carteira dos parceiros",
       "pai": "P-49",
       "ordem": 3,
-      "descricao": "Calendário da mentoria mensal da Wise aberto às carteiras de pacote B e A. No portal: envia os convites.",
+      "descricao": "Calendário da mentoria mensal da Wise aberto às carteiras dos parceiros Premium e Elite. No portal: envia os convites.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -7331,7 +7406,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0206",
-        "EV-0292"
+        "EV-0292",
+        "EV-0345"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7340,10 +7416,10 @@
     },
     {
       "id": "P-85",
-      "nome": "Convidar os parceiros às formações internas do grupo Tríade",
+      "nome": "Convidar os parceiros a eventos e formações da Wise",
       "pai": "P-49",
       "ordem": 4,
-      "descricao": "Abrir as formações internas do grupo Tríade como acesso de reconhecimento: só para os parceiros destaque e os de pacote B e A. No portal: envia os convites a partir do calendário de formações e registra presença.",
+      "descricao": "Eventos e formações da Wise abertos como acesso de reconhecimento aos parceiros Premium e Elite. No portal: envia os convites a partir do calendário e registra presença.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -7376,7 +7452,8 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0232",
-        "EV-0233"
+        "EV-0233",
+        "EV-0345"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7426,7 +7503,7 @@
       "nome": "Revisar a permanência na Prateleira",
       "pai": "P-58",
       "ordem": 2,
-      "descricao": "A cada trimestre, quem fica e quem sai da Prateleira, pela nota de qualidade e pelo retorno dos clientes. No portal: calcula e sinaliza quem está abaixo.",
+      "descricao": "A cada trimestre, quem fica e quem sai da Prateleira, pela nota de qualidade e pelo retorno dos clientes. Se um cliente da Wise tem problema sério com o parceiro, a Wise deixa de recomendá-lo, sem avisar e sem rebaixar o nível: rebaixar faria o parceiro deixar de recomendar a Wise à base dele. No portal: calcula, sinaliza quem está abaixo e guarda a marca interna de recomendação suspensa.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Fechamento trimestral",
@@ -7448,7 +7525,8 @@
       "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0219"
+        "EV-0219",
+        "EV-0355"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7460,7 +7538,7 @@
       "nome": "Manter trilhas e certificação",
       "pai": "P-59",
       "ordem": 1,
-      "descricao": "Trilhas por empresa do grupo com teste e certificado. No portal: entrega a trilha e emite o certificado.",
+      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. No portal: entrega o minicurso e as trilhas e emite o certificado.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Material novo",
@@ -7483,7 +7561,9 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0234",
-        "EV-0294"
+        "EV-0294",
+        "EV-0348",
+        "EV-0345"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -7666,20 +7746,29 @@
     },
     {
       "id": "P-94",
-      "nome": "Conduzir o plano de ativação de 90 dias",
+      "nome": "Conduzir o onboarding por etapas",
       "pai": "P-26",
       "ordem": 5,
-      "descricao": "Ação de início logo depois do termo, para o parceiro sentir o valor antes de indicar. Semana 1: anúncio conjunto da parceria, com postagem dos dois lados. Mês 1: treinamento curto de gestão comercial para o time do parceiro e diagnóstico dos dois ou três primeiros clientes dele. Mês 2: divulgação do diagnóstico e do treinamento para a base do parceiro. Mês 3: encontro com a base e as primeiras oportunidades. Vale para todos os pacotes; a Base Ativa segue só no pacote A. No portal: monta o plano de 90 dias pelo pacote, cria as tarefas de cada mês e mostra ao parceiro o que já foi feito.",
+      "descricao": "Etapas e metas do Select, na ordem, sem contar dias: primeiro login, feito na conversa; minicurso assistido; anúncio conjunto da parceria publicado; link e mensagem pronta enviados para a base; primeiro cliente cadastrado pelo link (ativação); primeiro diagnóstico feito na base do parceiro. O Premium e o Elite têm onboarding próprio (P-45 e P-44). No portal: cria as etapas, marca sozinho as que o portal registra (login, minicurso, cliente, diagnóstico) e mostra ao parceiro o que falta.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Termo assinado",
-      "entradas": [],
+      "gatilho": "Acesso criado na conversa de entrada",
+      "entradas": [
+        {
+          "nome": "Pessoas preparadas para indicar",
+          "de": "P-29"
+        },
+        {
+          "nome": "Gesto sem atrito",
+          "de": "P-78"
+        }
+      ],
       "saidas": [
         {
-          "nome": "Parceiro com o primeiro valor recebido",
-          "para": "P-30"
+          "nome": "Parceiro ativado",
+          "para": "P-40"
         }
       ],
       "cliente": "Empresa parceira",
@@ -7698,7 +7787,10 @@
         "EV-0319",
         "EV-0320",
         "EV-0072",
-        "EV-0326"
+        "EV-0326",
+        "EV-0342",
+        "EV-0343",
+        "EV-0349"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7706,29 +7798,33 @@
         "F-009",
         "F-002"
       ],
-      "portal": "monta o plano de 90 dias pelo pacote, cria as tarefas de cada mês e mostra ao parceiro o que já foi feito.",
+      "portal": "cria as etapas, marca sozinho as que o portal registra (login, minicurso, cliente, diagnóstico) e mostra ao parceiro o que falta.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0326",
-          "EV-0319"
+          "EV-0343"
         ],
         "raias": [
           "PA-01",
           "PA-05"
         ],
-        "externos": [],
+        "externos": [
+          {
+            "id": "X2",
+            "nome": "Cliente do parceiro"
+          }
+        ],
         "nos": [
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Termo assinado",
+            "nome": "Acesso criado na conversa de entrada",
             "raia": "PA-01"
           },
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Montar o plano de 90 dias pelo pacote",
+            "nome": "Criar as etapas do onboarding do Select",
             "raia": "PA-01",
             "sistema": "SI-01",
             "modo": "automatico"
@@ -7736,60 +7832,47 @@
           {
             "id": "t2",
             "tipo": "tarefa",
-            "nome": "Publicar o anúncio conjunto da parceria",
-            "raia": "PA-05"
+            "nome": "Assistir ao minicurso de como vender a Wise",
+            "raia": "PA-05",
+            "sistema": "SI-01"
           },
           {
             "id": "t3",
             "tipo": "tarefa",
-            "nome": "Dar o treinamento curto de gestão comercial ao time do parceiro",
-            "raia": "PA-01"
-          },
-          {
-            "id": "s1",
-            "tipo": "subprocesso",
-            "nome": "Conduzir o diagnóstico do cliente do parceiro",
-            "raia": "PA-01",
-            "processo": "P-95"
-          },
-          {
-            "id": "e1",
-            "tipo": "espera",
-            "nome": "Início do segundo mês",
-            "raia": "PA-01",
-            "evento": "tempo"
+            "nome": "Publicar o anúncio conjunto da parceria",
+            "raia": "PA-05"
           },
           {
             "id": "t4",
             "tipo": "tarefa",
-            "nome": "Divulgar o diagnóstico e o treinamento para a base",
+            "nome": "Enviar o link e a mensagem pronta para a base",
             "raia": "PA-05"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Primeiro cliente cadastrado pelo link",
+            "raia": "PA-01",
+            "evento": "mensagem"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Declarar a ativação",
+            "raia": "PA-01",
+            "processo": "P-30"
           },
           {
             "id": "e2",
             "tipo": "espera",
-            "nome": "Início do terceiro mês",
+            "nome": "Primeiro diagnóstico feito na base do parceiro",
             "raia": "PA-01",
-            "evento": "tempo"
-          },
-          {
-            "id": "t5",
-            "tipo": "tarefa",
-            "nome": "Conduzir o encontro com a base do parceiro",
-            "raia": "PA-01"
-          },
-          {
-            "id": "t6",
-            "tipo": "tarefa",
-            "nome": "Registrar as primeiras oportunidades",
-            "raia": "PA-01",
-            "sistema": "SI-01",
-            "modo": "sistema"
+            "evento": "mensagem"
           },
           {
             "id": "f1",
             "tipo": "fim",
-            "nome": "Plano de 90 dias cumprido",
+            "nome": "Onboarding do Select concluído",
             "raia": "PA-01"
           }
         ],
@@ -7808,34 +7891,37 @@
           },
           {
             "de": "t3",
-            "para": "s1"
-          },
-          {
-            "de": "s1",
-            "para": "e1"
-          },
-          {
-            "de": "e1",
             "para": "t4"
           },
           {
             "de": "t4",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "s1"
+          },
+          {
+            "de": "s1",
             "para": "e2"
           },
           {
             "de": "e2",
-            "para": "t5"
-          },
-          {
-            "de": "t5",
-            "para": "t6"
-          },
-          {
-            "de": "t6",
             "para": "f1"
           }
         ],
-        "mensagens": []
+        "mensagens": [
+          {
+            "de": "X2",
+            "para": "e1",
+            "rotulo": "Cadastro pelo link"
+          },
+          {
+            "de": "X2",
+            "para": "e2",
+            "rotulo": "Diagnóstico feito"
+          }
+        ]
       }
     },
     {
@@ -7843,12 +7929,12 @@
       "nome": "Conduzir o diagnóstico do cliente do parceiro",
       "pai": "P-31",
       "ordem": 9,
-      "descricao": "O cliente do parceiro marca pela agenda online, no link do parceiro, e dá ali os consentimentos; o Gerente confere se a empresa está no ICP, conduz a reunião pelo roteiro, entrega o mapa de planejamento e libera o Wise Hub; se o cliente autorizou, o parceiro recebe o resumo; se o cliente pedir para seguir, vira oportunidade com a origem no parceiro. No portal: recebe o agendamento pelo link do parceiro, registra o diagnóstico, libera o Hub e cria a oportunidade quando há interesse.",
+      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP (mais de 3 vendedores, com faturamento mínimo opcional). No ICP: agenda do Google, reunião pela Matriz 5x5 conduzida pelo Gerente (acima de 10 reuniões por semana, outra pessoa da Wise assume), mapa próprio da reunião num modelo da Wise em até 2 dias úteis e acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e um e-mail com o resultado e um próximo passo, sem ligação. A pesquisa da UniCesumar entra como passo opcional, só depois da aprovação do Comitê de Ética e com o consentimento do cliente. Se o cliente quer contratar, quem fez o diagnóstico passa ao closer. No portal: registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Cliente do parceiro marca o diagnóstico",
+      "gatilho": "Cliente do parceiro se cadastra pela página do link",
       "entradas": [],
       "saidas": [
         {
@@ -7881,7 +7967,13 @@
         "EV-0302",
         "EV-0037",
         "EV-0038",
-        "EV-0324"
+        "EV-0324",
+        "EV-0361",
+        "EV-0362",
+        "EV-0363",
+        "EV-0364",
+        "EV-0365",
+        "EV-0366"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7889,16 +7981,13 @@
         "F-002",
         "F-003"
       ],
-      "portal": "recebe o agendamento pelo link do parceiro, registra o diagnóstico, libera o Hub e cria a oportunidade quando há interesse.",
+      "portal": "registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0037",
-          "EV-0038",
-          "EV-0039",
-          "EV-0040",
-          "EV-0324",
-          "EV-0325"
+          "EV-0361",
+          "EV-0363",
+          "EV-0364"
         ],
         "raias": [
           "PA-01"
@@ -7917,86 +8006,129 @@
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Cliente do parceiro marca o diagnóstico",
-            "raia": "PA-01",
-            "gatilho": "mensagem"
+            "nome": "Cliente se cadastra pelo link do parceiro",
+            "raia": "PA-01"
           },
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Conferir se a empresa está no ICP da Wise",
+            "nome": "Registrar o cadastro com a origem no parceiro",
             "raia": "PA-01",
             "sistema": "SI-01",
-            "modo": "sistema"
+            "modo": "automatico"
           },
           {
             "id": "g1",
             "tipo": "decisao",
-            "nome": "A empresa está no ICP?",
+            "nome": "A empresa está no ICP da Wise?",
             "raia": "PA-01"
           },
           {
             "id": "t2",
             "tipo": "tarefa",
-            "nome": "Avisar o cliente e o parceiro de que o diagnóstico não se aplica",
+            "nome": "Liberar o autodiagnóstico na hora",
             "raia": "PA-01",
-            "sistema": "SI-02",
-            "modo": "sistema"
+            "sistema": "SI-01",
+            "modo": "automatico"
           },
           {
             "id": "t3",
             "tipo": "tarefa",
-            "nome": "Conduzir a reunião de diagnóstico pelo roteiro",
-            "raia": "PA-01"
+            "nome": "Mostrar o resultado e o link do Wise Hub",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
           },
           {
             "id": "t4",
             "tipo": "tarefa",
-            "nome": "Entregar o mapa de planejamento",
+            "nome": "Enviar o resultado e um próximo passo por e-mail",
             "raia": "PA-01",
             "sistema": "SI-01",
-            "modo": "sistema"
+            "modo": "automatico"
           },
           {
             "id": "t5",
             "tipo": "tarefa",
-            "nome": "Liberar o acesso ao Wise Hub",
+            "nome": "Liberar a agenda para a reunião",
             "raia": "PA-01",
-            "sistema": "SI-04",
-            "modo": "sistema"
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Cliente marca o horário",
+            "raia": "PA-01",
+            "evento": "mensagem"
           },
           {
             "id": "g2",
             "tipo": "decisao",
-            "nome": "O cliente autorizou o resumo ao parceiro?",
+            "nome": "Mais de 10 reuniões na semana?",
             "raia": "PA-01"
           },
           {
             "id": "t6",
             "tipo": "tarefa",
-            "nome": "Enviar o resumo ao parceiro",
-            "raia": "PA-01",
-            "sistema": "SI-02",
-            "modo": "sistema"
-          },
-          {
-            "id": "g3",
-            "tipo": "decisao",
-            "nome": "O cliente pediu para seguir com a Wise?",
+            "nome": "Passar a reunião a outra pessoa da Wise",
             "raia": "PA-01"
           },
           {
             "id": "t7",
             "tipo": "tarefa",
-            "nome": "Registrar a oportunidade com a origem no parceiro",
+            "nome": "Conduzir a reunião de diagnóstico pela Matriz 5x5",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t8",
+            "tipo": "tarefa",
+            "nome": "Aplicar a pesquisa, se aprovada pelo CEP e consentida",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t9",
+            "tipo": "tarefa",
+            "nome": "Enviar o mapa da reunião em até 2 dias úteis",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t10",
+            "tipo": "tarefa",
+            "nome": "Liberar o acesso ao Wise Hub",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g3",
+            "tipo": "decisao",
+            "nome": "O cliente autorizou mostrar o resultado ao parceiro?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t11",
+            "tipo": "tarefa",
+            "nome": "Liberar o resultado ao parceiro no portal",
             "raia": "PA-01",
             "sistema": "SI-01",
-            "modo": "sistema"
+            "modo": "automatico"
+          },
+          {
+            "id": "g4",
+            "tipo": "decisao",
+            "nome": "O cliente quer contratar a consultoria?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "s1",
+            "tipo": "subprocesso",
+            "nome": "Entregar o lead ao closer",
+            "raia": "PA-01",
+            "processo": "P-33"
           },
           {
             "id": "f1",
             "tipo": "fim",
-            "nome": "Diagnóstico não aplicável",
+            "nome": "Autodiagnóstico entregue",
             "raia": "PA-01"
           },
           {
@@ -8008,7 +8140,7 @@
           {
             "id": "f3",
             "tipo": "fim",
-            "nome": "Oportunidade aberta",
+            "nome": "Oportunidade com o closer",
             "raia": "PA-01"
           }
         ],
@@ -8028,12 +8160,7 @@
           },
           {
             "de": "t2",
-            "para": "f1"
-          },
-          {
-            "de": "g1",
-            "para": "t3",
-            "rotulo": "Sim"
+            "para": "t3"
           },
           {
             "de": "t3",
@@ -8041,10 +8168,19 @@
           },
           {
             "de": "t4",
-            "para": "t5"
+            "para": "f1"
+          },
+          {
+            "de": "g1",
+            "para": "t5",
+            "rotulo": "Sim"
           },
           {
             "de": "t5",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
             "para": "g2"
           },
           {
@@ -8053,64 +8189,104 @@
             "rotulo": "Sim"
           },
           {
-            "de": "g2",
-            "para": "g3",
-            "rotulo": "Não"
-          },
-          {
             "de": "t6",
-            "para": "g3"
+            "para": "t7"
           },
           {
-            "de": "g3",
+            "de": "g2",
             "para": "t7",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "g3",
-            "para": "f2",
             "rotulo": "Não"
           },
           {
             "de": "t7",
+            "para": "t8"
+          },
+          {
+            "de": "t8",
+            "para": "t9"
+          },
+          {
+            "de": "t9",
+            "para": "t10"
+          },
+          {
+            "de": "t10",
+            "para": "g3"
+          },
+          {
+            "de": "g3",
+            "para": "t11",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t11",
+            "para": "g4"
+          },
+          {
+            "de": "g3",
+            "para": "g4",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g4",
+            "para": "s1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "s1",
             "para": "f3"
+          },
+          {
+            "de": "g4",
+            "para": "f2",
+            "rotulo": "Não"
           }
         ],
         "mensagens": [
           {
             "de": "X2",
             "para": "i1",
-            "rotulo": "Agendamento e consentimentos"
+            "rotulo": "Cadastro de qualificação"
           },
           {
-            "de": "t2",
+            "de": "t3",
             "para": "X2",
-            "rotulo": "Aviso"
+            "rotulo": "Resultado e link do Hub"
           },
           {
             "de": "t4",
             "para": "X2",
-            "rotulo": "Mapa de planejamento"
+            "rotulo": "E-mail do resultado"
           },
           {
-            "de": "t5",
+            "de": "t9",
+            "para": "X2",
+            "rotulo": "Mapa da reunião"
+          },
+          {
+            "de": "t10",
             "para": "X2",
             "rotulo": "Acesso ao Hub"
           },
           {
-            "de": "t6",
+            "de": "t11",
             "para": "X1",
-            "rotulo": "Resumo autorizado"
+            "rotulo": "Resultado autorizado"
+          },
+          {
+            "de": "X2",
+            "para": "e1",
+            "rotulo": "Horário marcado"
           }
         ]
       }
     },
     {
       "id": "P-96",
-      "nome": "Manter o kit de convite ao diagnóstico",
+      "nome": "Manter a página do cliente e o kit de convite",
       "pai": "P-59",
       "ordem": 4,
-      "descricao": "Página com vídeo da Wise explicando o diagnóstico gratuito e o que o cliente leva, mensagem pronta para o parceiro enviar e agenda online para o cliente marcar sozinho, sempre com o link do parceiro. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
+      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Parceiro novo ou mudança na oferta",
@@ -8135,7 +8311,9 @@
         "EV-0322",
         "EV-0323",
         "EV-0079",
-        "EV-0329"
+        "EV-0329",
+        "EV-0348",
+        "EV-0339"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": "DE-28: não vira quadro, fila ou ritual próprio; fica no nível de dono, gatilho e entregas",
@@ -8143,6 +8321,146 @@
         "F-011"
       ],
       "portal": "gera a página e a mensagem com o link exclusivo do parceiro."
+    },
+    {
+      "id": "P-97",
+      "nome": "Lembrar o parceiro parado numa etapa",
+      "pai": "P-26",
+      "ordem": 6,
+      "descricao": "Sem prazo em dias, o processo não estoura; o que existe é um lembrete. Quando o parceiro fica na mesma etapa além do limite, o portal manda um e-mail com o próximo passo; se ele continuar parado, o caso entra na fila de exceções com os dias na etapa, e o Gerente decide se vale uma mensagem pessoal. No portal: conta os dias em cada etapa, envia o lembrete e põe o caso na fila.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05"
+      ],
+      "gatilho": "Parceiro na mesma etapa além do limite",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Caso parado na fila de exceções",
+          "para": "P-09"
+        }
+      ],
+      "cliente": "Empresa parceira",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Por parceiro parado",
+      "dores": [],
+      "regras": [],
+      "status": "confirmado",
+      "hipoteses": [
+        "gatilho"
+      ],
+      "evidencias": [
+        "EV-0349"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [
+        "F-008"
+      ],
+      "portal": "conta os dias em cada etapa, envia o lembrete e põe o caso na fila.",
+      "fluxo": {
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0349"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-05"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Parceiro na mesma etapa além do limite",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Enviar o lembrete por e-mail com o próximo passo",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Prazo depois do lembrete",
+            "raia": "PA-01",
+            "evento": "tempo"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "O parceiro avançou de etapa?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Pôr o caso na fila de exceções com os dias na etapa",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Decidir se vale uma mensagem pessoal",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Parceiro de volta ao onboarding",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Caso parado tratado",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "f1",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "g1",
+            "para": "t2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "f2"
+          }
+        ],
+        "mensagens": []
+      }
     }
   ],
   "evidencias": [
@@ -11115,6 +11433,384 @@
       "data": "2026-11-06",
       "trecho": "Aprovo como está. ",
       "local": "FO-06/Q-0055"
+    },
+    {
+      "id": "EV-0331",
+      "tipo": "entrevista",
+      "fonte": "Pedido do Igor, repassado pelo patrocinador em 07/11",
+      "pessoa": "PE-01",
+      "data": "2026-11-07",
+      "trecho": "Vamos precisar fazer com que os leads parceiros das campanhas do meta entrem na landing page, inscrever-se e entrarem em uma fila de espera visualizável pelos administradores no portal do wise partners. Isso serve para que eu possa entrar em contato via whatsapp um a um e, somente então, eu envio o link do google calendar.",
+      "local": "conversa no chat do mapeamento"
+    },
+    {
+      "id": "EV-0332",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Fila para todos, sem exceção. Um detalhe: quem fará a reunião serei eu, sempre. O processo sempre começa assim: anúncio do meta > Landing Page > Cadastro Através do Formulário (sem aceite) > Fila no Portal > Através do meu Whatsapp vou entrar em contato com o número de telefone que está registrado alí > Na mensagem que vou qualificar o parceiro > depois de brevemente qualificado (só confirmar as informações que ele mesmo deixou), enviarei o link do google agenda para o prospecto parceiro > Ele marca o horário na agenda > Confirmo o horário no dia anterior e no mesmo dia da conferência > Conversamos e apresento o acesso.\n\n\nO objetivo de fazer assim é para não entrarem concorrentes e nem pessoas desinteressadas a terem acesso a tudo isso que vamos oferecer, além de incentivar o parceiro a assistir o material e aprender a vender e indicar a Wise.",
+      "local": "FO-11/PR-entrada"
+    },
+    {
+      "id": "EV-0333",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Primeiramente que a conversa será entre eu e o parceiro.\n\nAqui acho que eu devo fazer algumas perguntas sobre o que é o parceiro, depois disso, apresento o que é a Wise Makers, mostro alguns números e alguns cases. Depois disso, apresento como o parceiro pode vir a lucrar junto com a Wise. Depois disso apresento como ele pode fazer isso oferecendo a consultoria da Wise gratuitamente. Mostro a plataforma Wise Hub por dentro e como os nossos clientes têm resultado e como o cliente dele pode ter resultado também. Além disso, devo mostrar como é fácil indicar a Wise (apenas enviar o link de afiliado que está no portal wise hub, que o parceiro entra com o próprio login dele). Depois disso mostro que tem um minicurso de como vender a Wise Makers e facilitar a entrega dessa consultoria.\nDepois disso tenho que criar a conta do portal para o parceiro com o login e senha dele e ver ele conectando.",
+      "local": "FO-11/PR-fila_conversa"
+    },
+    {
+      "id": "EV-0334",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Vira \"ter clientes empresariais que podem estar no ICP da Wise\", para qualquer tipo de parceiro. ",
+      "local": "FO-12/NV-criterio_geral"
+    },
+    {
+      "id": "EV-0335",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Mesmo processo, mas o Gerente confere na fila de exceções se o software combina com o ICP da Wise. Estamos elaborando o processo de maneira que possamos usar para qualquer tipo de parceiro, até aqueles que não são software. A única coisa que muda é a campanha de aquisição desses parceiros. Neste caso a aquisição está sendo de CRMs e ERPs, mas o processo tem que ser desenvolvido em modo que possamos fazer a aquisição de qualquer tipo de parceiro.",
+      "local": "FO-11/PR-outros_softwares"
+    },
+    {
+      "id": "EV-0336",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Ser empresa de software com clientes empresariais; Ter um número mínimo de clientes ativos (comente quantos); A conversa mostrar interesse real em oferecer a consultoria aos clientes; Não ser concorrente da Wise Makers (consultoria comercial); Ter um responsável na empresa para cuidar da parceria. Não vamos estipular um mínimo de clientes ativos",
+      "local": "FO-11/PR-fila_criterio"
+    },
+    {
+      "id": "EV-0337",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sou eu que cuidarei da fila, sempre",
+      "local": "FO-11/PR-fila_quem"
+    },
+    {
+      "id": "EV-0338",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Aqui estamos falando de um tipo de aquisição de parceiros mais focado em volume e menos em qualidade e profundidade. Na verão anterior, a qual o P-28 fazia parte, o processo funcionava em modo que o epicentro era o compartilhamento recíproco de indicações. Agora não vamos indicar cada um dos parceiros, apenas aqueles que temos mais relacionamento, que indicam mais e os quais fazemos a reunião de alinhamento, registrada no P28. O P28 não vai desaparecer, mas não vai ser feito com qualquer um. Em outras palavras, vamos fazer com que a categoria de parceiro C seja esta mais comercial, na qual os parceiros podem dar a consultoria gratuita para o ICP da Wise Makers que esteja na carteira deles. A categoria B vamos poder indicar também o parceiro, mas, para isso, preciso fazer o proceso de alinhamento. Por fim, a categoria A entra o programa base ativa.",
+      "local": "FO-11/PR-encontro"
+    },
+    {
+      "id": "EV-0339",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "O link da página do cliente no portal Wise Partners; escrevi Wise Hub por engano. O link de afiliado não está no portal wise hub, mas no portal wise partners. Se falei wise hub, enganei-me.",
+      "local": "FO-12/NV-link_afiliado"
+    },
+    {
+      "id": "EV-0340",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Página só informa a política (sem caixa de aceite); o termo é aceito no primeiro acesso ao portal, antes de usar. A política de privacidade e o termo são aceitos no formulário da landing page. Simples e ponto final.",
+      "local": "FO-12/NV-aceite"
+    },
+    {
+      "id": "EV-0341",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Em até 24 horas úteis. No caso, não será o Igor, mas eu mesmo",
+      "local": "FO-11/PR-fila_prazo"
+    },
+    {
+      "id": "EV-0342",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Publicar o anúncio conjunto da parceria. Vamos ter que reformulr o P-94 para as diferentes categorias de parceiros, lembrando que vamos ter uma massificação de parceiros de nível C, que é o nível de entrada e depois, com o tempo, eles vão entrar nas categorias B e A, nesta ordem. O P-94 tem que refletir esta lógica, mas não pode ser definida temporalmente (90 dias no caso. Não podemos definir o escopo deste processo por número de dias). Isso porque o tempo pode variar de caso a caso. Temos que ter um processo de onboarding e uma série de metas pré estabelecidas e atividades em conjunto, mas não definir temporalmente.",
+      "local": "FO-11/PR-plano90"
+    },
+    {
+      "id": "EV-0343",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Acesso criado na conversa e primeiro login; Minicurso de como vender a Wise assistido; Anúncio conjunto da parceria publicado; Link e mensagem pronta enviados para a base; Primeiro cliente cadastrado pelo link (ativado, P-30); Primeiro diagnóstico feito na base dele. ",
+      "local": "FO-12/NV-onb_c"
+    },
+    {
+      "id": "EV-0344",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Primeiro cliente cadastrado pelo link. ",
+      "local": "FO-11/PR-ativado"
+    },
+    {
+      "id": "EV-0345",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Mentoria mensal aberta à carteira do parceiro (P-84); Convite a eventos e formações da Wise; Apresentação a outros parceiros da comunidade (P-52). Certificado de parceiro Wise já ganha desde o nível C (Select), assim como o Wise Hub com as duas marcas.",
+      "local": "FO-12/NV-itens_b"
+    },
+    {
+      "id": "EV-0346",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sim, desde a entrada. ",
+      "local": "FO-11/PR-comunidade"
+    },
+    {
+      "id": "EV-0347",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Grupo de WhatsApp para todos, como hoje. Vamos manter o grupo de whatsapp para todos até que fique inviável pelo tamanho, depois decidimos.",
+      "local": "FO-11/PR-retorno"
+    },
+    {
+      "id": "EV-0348",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Quem grava: Igor Makoto\nQuem revisa: O próprio Igor, portanto não precisa de revisão.\nAtualização: Guilherme",
+      "local": "FO-11/PR-treinamento"
+    },
+    {
+      "id": "EV-0349",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "O portal manda um lembrete automático por e-mail depois de um tempo na mesma etapa (comente quanto), e você só entra se ele continuar parado. Tenho que ter a possibilidade de ver há quantos dias o parceiro ficou na mesma etapa",
+      "local": "FO-12/NV-parado"
+    },
+    {
+      "id": "EV-0350",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sim, com ajustes (comente). Vamos definir as categorias A, B, C como Elite, Premium e Select",
+      "local": "FO-12/NV-escada"
+    },
+    {
+      "id": "EV-0351",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Os benefícios são a própria parceria: Consultoria gratuita a para base de clientes e a possibilidade de receber uma boa comissão se fecham com a Wise Makers, caso sejam no nível C. Caso o parceiro seja no nível B, existe a possibilidade de ser recomendado nas consultorias da Wise Makers. Se for nível A, a própria Wise Makers organiza um evento para dar uma formação gratuita e exclusiva para a base de clientes (Base Ativa).",
+      "local": "FO-11/PR-valor"
+    },
+    {
+      "id": "EV-0352",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "O Gerente revisa na fila diária de exceções (P-09) quando o parceiro informa mais de um número de clientes ativos (comente o corte). Com a arquitetura desta campanha, que estamos buscando prospectos parceiros que tenham qualquer quantidade de clientes na respectiva carteira, não estamos buscando distinguir entre os níveis A, B ou C. Além disso, o que entregávamos na categoria C, que era a troca de prateleira de indicações, não vale mais para estes tipos de parceiros. Em outras palavras, o parceiro tem que ter algum tipo de entrega de valor, tempo conosco, dentre outros tipos de entrega para que possamos cogitar a possibilidade de indicá-los no RFP para nossos clientes. Portanto o design de níveis dos parceiros vai ter que mudar.",
+      "local": "FO-11/PR-nivel"
+    },
+    {
+      "id": "EV-0353",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Tempo mínimo no programa (comente quanto); Clientes fechados com a Wise vindos dele (comente quantos); Avaliação da relação por você e pelo Igor, sem número fixo. Tempo mínimo no programa - 60 dias e;\nPelo menos 3 clientes fechados com a Wise vindos dele, ou;\nAvaliação sem critério definido por mim e pelo Igor",
+      "local": "FO-12/NV-c_para_b"
+    },
+    {
+      "id": "EV-0354",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Tempo mínimo no nível B (comente quanto); Clientes fechados com a Wise vindos dele (comente quantos); Decisão do Igor, caso a caso. - mínimo 60 dias no pacote B (Premium),\n- ou 6 clientes fechados com a Wise vindos dele\n- Avaliação sem critério definido por mim e pelo Igor",
+      "local": "FO-12/NV-b_para_a"
+    },
+    {
+      "id": "EV-0355",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Não, o nível só sobe. Caso o cliente da Wise tenha um problema sério com o parceiro, simplesmente vamos deixar de recomendar aos nossos clientes. O parceiro continua achando que está no nível B. Caso os rebaixemos ele deixará de recomendar a Wise Makers à sua base",
+      "local": "FO-12/NV-descer"
+    },
+    {
+      "id": "EV-0356",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sim, todos entram pelo C, sem exceção. Se uma empresa é grande e tem centenas de clientes, eles não vão recomendar facilmente a Wise Makers e não vão querer oferecer tão facilmente a consultoria gratuita. Não faz sentido oferecer mais coisas só porque são grandes, isso não quer dizer que vamos ter um retorno maior com eles.",
+      "local": "FO-12/NV-grandes"
+    },
+    {
+      "id": "EV-0357",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "No fechamento trimestral, o portal lista quem bateu os critérios; você convida para o encontro de alinhamento e o parceiro sobe depois dele. ",
+      "local": "FO-12/NV-quem_sobe"
+    },
+    {
+      "id": "EV-0358",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Encontro de alinhamento (P-28); Perfil do parceiro revisado para aparecer nas recomendações e na Prateleira; Avisar os consultores da Wise de que ele pode ser recomendado; Certificado e anúncio do novo nível. ",
+      "local": "FO-12/NV-onb_b"
+    },
+    {
+      "id": "EV-0359",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Definir com o parceiro o tema e a data do evento; O parceiro convida a própria base, com o material da Wise; A Wise conduz a formação; Diagnósticos oferecidos aos participantes depois do evento; Relatório para o parceiro com presença e resultados. ",
+      "local": "FO-12/NV-onb_a"
+    },
+    {
+      "id": "EV-0360",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Automático e o encontro trimestral de parceiros (P-83) como o contato do trimestre. ",
+      "local": "FO-11/PR-cadencia"
+    },
+    {
+      "id": "EV-0361",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sim, como está no esquema. ",
+      "local": "FO-11/PR-diag_fluxo"
+    },
+    {
+      "id": "EV-0362",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Eu conduzo; quando passar de um número por semana (comente), entra outra pessoa da Wise. Se passarem de 10 reuniões por semana, eu passo para outra pessoa da Wise.",
+      "local": "FO-11/PR-diag_quem"
+    },
+    {
+      "id": "EV-0363",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Mapa próprio da reunião, num modelo da Wise, enviado em até 2 dias úteis. ",
+      "local": "FO-11/PR-diag_entrega"
+    },
+    {
+      "id": "EV-0364",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "A Wise manda um e-mail com o resultado e um próximo passo, sem ligação. ",
+      "local": "FO-11/PR-pos_autodiag"
+    },
+    {
+      "id": "EV-0365",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Já entra no to-be como passo opcional, marcado como dependente da aprovação. ",
+      "local": "FO-11/PR-pesquisa"
+    },
+    {
+      "id": "EV-0366",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Quem fez o diagnóstico passa ao closer da Wise (P-33). ",
+      "local": "FO-11/PR-closer"
+    },
+    {
+      "id": "EV-0367",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "180 dias, como as outras portas. ",
+      "local": "FO-11/PR-portas"
+    },
+    {
+      "id": "EV-0368",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Sim, regra única para todos os parceiros. ",
+      "local": "FO-11/PR-comissao"
+    },
+    {
+      "id": "EV-0369",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Eu (Guilherme). Qualquer pessoa com o acesso admin pode administrar as landing pages. Já que eu estou encarregado nas questões operacionais do programa wise partners, natualmente, ficarei responsável por admnistrar as páginas.",
+      "local": "FO-11/PR-admin"
+    },
+    {
+      "id": "EV-0370",
+      "tipo": "validacao",
+      "fonte": "FO-11: processos depois das landing pages",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Ajustar (comente). partners.wisemakers.com.br\n\nVamos usar este",
+      "local": "FO-11/PR-dominio"
+    },
+    {
+      "id": "EV-0371",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "Todos voltam para o C e sobem pelos critérios novos. Como não temos nenhum contrato, não tem nenhum malefício reorganizarmos nossos critérios. Para aqueles que já oferecemos os benefícios dos pacotes A e B verbalmente, não tem nenhum problema mantermos nos seus respectivos níveis, vamos manter nossa palavra.",
+      "local": "FO-12/NV-atuais"
+    },
+    {
+      "id": "EV-0372",
+      "tipo": "validacao",
+      "fonte": "FO-12: escada de níveis e onboarding por etapas",
+      "pessoa": "PE-01",
+      "data": "2026-11-09",
+      "trecho": "\"Nossa equipe vai falar com você pelo WhatsApp em até 24 horas úteis\", sem nome. ",
+      "local": "FO-12/NV-nome_pagina"
     }
   ],
   "perguntas": [
@@ -11909,7 +12605,7 @@
       ],
       "alvo": [
         "CT-05",
-        "P-69",
+        "P-22",
         "P-61"
       ],
       "para": [
@@ -13389,6 +14085,1458 @@
       ],
       "visual": "igor_portal",
       "recomendo": ""
+    },
+    {
+      "id": "Q-0058",
+      "texto": "A fila de espera vale só para empresas de software, ou para todos os perfis?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Fila para empresas de software; caminho completo do P-20 (com workshop e negociação) para os demais perfis",
+        "Fila para todos; workshop e negociação só para candidatos estratégicos (os que podem virar nível A)",
+        "Fila para todos, sem exceção"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0332"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "entrada",
+      "contexto": [
+        "O P-20 do to-be tem cinco passos: lista de candidatos, primeira reunião, qualificação, workshop e negociação do termo. No FO-08 você tirou a conversa para os SaaS; em 07/11 o Igor pediu a fila: o cadastro entra numa fila no portal, ele fala com cada um pelo WhatsApp, manda a agenda e só depois da conversa libera o acesso.",
+        "Falta decidir se outros perfis (consultorias, agências, institucionais, parceiros estratégicos) também entram pela fila ou continuam no caminho completo do P-20."
+      ],
+      "logica": "Minha recomendação: a segunda. A conversa do Igor já faz a qualificação; workshop e negociação ficam para quem justifica o esforço.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0059",
+      "texto": "Em quanto tempo quem entrou na fila recebe a primeira mensagem do Igor?",
+      "tipo": "escolha",
+      "opcoes": [
+        "No mesmo dia útil",
+        "Em até 24 horas úteis",
+        "Em até 48 horas úteis",
+        "Outro prazo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0341"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "fila_prazo",
+      "contexto": [
+        "Quem vem do anúncio está quente nas primeiras horas. O portal avisa os administradores a cada cadastro e mostra a fila com a data de entrada."
+      ],
+      "logica": "Minha recomendação: no mesmo dia útil. Se o prazo virar regra, o portal pode marcar quem passou dele na fila diária de exceções (P-09).",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0060",
+      "texto": "Quem cuida da fila quando o Igor não puder?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Só o Igor, sempre",
+        "Eu (Guilherme) cubro quando o Igor não puder",
+        "O Gerente de Parcerias, com o Igor só nas conversas",
+        "Outra pessoa (comente)"
+      ],
+      "alvo": [
+        "P-22"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0337"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "fila_quem",
+      "contexto": [
+        "Hoje os botões da fila (WhatsApp, agenda e aprovar) estão para administradores e para o time de parcerias."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0061",
+      "texto": "O que decide aprovar ou descartar alguém da fila?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Ser empresa de software com clientes empresariais",
+        "Ter um número mínimo de clientes ativos (comente quantos)",
+        "A conversa mostrar interesse real em oferecer a consultoria aos clientes",
+        "Não ser concorrente da Wise Makers (consultoria comercial)",
+        "Ter um responsável na empresa para cuidar da parceria"
+      ],
+      "alvo": [
+        "P-22"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0336"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "fila_criterio",
+      "contexto": [
+        "Hoje a aprovação é livre: quem estiver na fila pode ser aprovado. Marque o que pesa; o que for regra fixa pode virar aviso na fila."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0062",
+      "texto": "O que a conversa do Igor com o parceiro cobre?",
+      "tipo": "texto",
+      "opcoes": [],
+      "alvo": [
+        "P-23"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0333"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "fila_conversa",
+      "contexto": [
+        "A conversa fica no lugar da qualificação e, talvez, do encontro de alinhamento. Descreva o roteiro e a duração, para virar o passo a passo do processo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0063",
+      "texto": "Quem confirma o nível e o pacote de quem entra pela página, e quando?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Ninguém revisa no cadastro: o nível só muda no fechamento trimestral (P-18), pelo cubo",
+        "O Gerente revisa na fila diária de exceções (P-09) quando o parceiro informa mais de um número de clientes ativos (comente o corte)",
+        "O Gerente revisa todo cadastro novo uma vez por semana"
+      ],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0352"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "nivel",
+      "contexto": [
+        "Hoje o cadastro coloca todo mundo no nível C (Select), pacote Prateleira, em onboarding, com a nota \"nível a confirmar pela carteira no ICP\". O P-18 revisa o nível no fechamento trimestral."
+      ],
+      "logica": "Minha recomendação: a segunda. O cadastro já pede o número de clientes ativos; só os grandes viram exceção, e o resto segue pelo trimestre.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0064",
+      "texto": "Empresa de software que não é CRM nem ERP: segue o mesmo processo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Mesmo processo, mesma oferta e mesma comissão para qualquer software",
+        "Mesmo processo, mas o Gerente confere na fila de exceções se o software combina com o ICP da Wise",
+        "Processo próprio para cada tipo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada de parceiros (P-20)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0335"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "outros_softwares",
+      "contexto": [
+        "No FO-09 você decidiu que ninguém fica de fora: quem não é CRM nem ERP entra na categoria certa. A página do cliente já foi deixada neutra para qualquer tipo de sistema."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0065",
+      "texto": "O encontro de alinhamento (P-28) continua para quem entra pela página?",
+      "tipo": "escolha",
+      "opcoes": [
+        "A conversa do Igor na fila substitui o encontro de alinhamento",
+        "Substituído pelo treinamento gravado no portal, sem encontro",
+        "Encontro coletivo de boas-vindas, uma vez por mês, para todos os novos",
+        "Encontro individual só para quem tem mais de um número de clientes ativos (comente o corte)",
+        "Continua individual para todos"
+      ],
+      "alvo": [
+        "P-28"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Integração e ativação (P-26, P-94)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0338"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "encontro",
+      "contexto": [
+        "O P-28 prevê um encontro individual em até 7 dias da assinatura, para escolher a primeira oportunidade. Com a fila, o Igor já conversa com cada parceiro antes de aprovar.",
+        "A página promete: link exclusivo, mensagem pronta e treinamento curto no portal."
+      ],
+      "logica": "Minha recomendação: a conversa do Igor faz o papel do encontro, e o treinamento gravado entrega o resto. Assim não há duas reuniões por parceiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0066",
+      "texto": "Quais passos do plano de 90 dias (P-94) continuam para quem entra pela página?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Montar o plano pelo pacote",
+        "Publicar o anúncio conjunto da parceria",
+        "Dar o treinamento curto ao time do parceiro (gravado)",
+        "Divulgar o diagnóstico e o treinamento para a base do parceiro",
+        "Conduzir o encontro com a base do parceiro",
+        "Registrar as primeiras oportunidades"
+      ],
+      "alvo": [
+        "P-94"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Integração e ativação (P-26, P-94)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0342"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "plano90",
+      "contexto": [
+        "O P-94 foi desenhado para poucos parceiros acompanhados de perto. No FO-07 você pediu um sistema de valor constante para o parceiro, num programa massificado.",
+        "Marque o que continua. O que não for marcado sai do plano de quem entra pela página (continua para os outros perfis, se você escolheu dois caminhos)."
+      ],
+      "logica": "Minha recomendação: treinamento gravado, divulgação para a base (com a mensagem pronta e o link) e o registro das oportunidades, que o portal faz sozinho. Anúncio conjunto e encontro com a base ficam para níveis A e B.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0067",
+      "texto": "O que conta para declarar o parceiro ativado (P-30)?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Primeiro cliente cadastrado pelo link",
+        "Um número de clientes cadastrados pelo link (comente quantos)",
+        "Primeiro diagnóstico feito (reunião ou autodiagnóstico)",
+        "Primeira oportunidade de consultoria aberta"
+      ],
+      "alvo": [
+        "P-30"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Integração e ativação (P-26, P-94)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0344"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "ativado",
+      "contexto": [
+        "Hoje o P-30 declara a ativação pela primeira reunião gerada ou pelo marco de 90 dias, com extensão até 120 dias. Com o link, o portal já registra sozinho cada cliente que entra e cada diagnóstico feito."
+      ],
+      "logica": "Minha recomendação: um número pequeno de diagnósticos feitos, por exemplo 3, em 90 dias. Um só cadastro pode ser teste do próprio parceiro; diagnóstico feito mostra que a base respondeu.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0068",
+      "texto": "Quem produz e mantém o treinamento gravado e o kit de convite (P-88, P-96)?",
+      "tipo": "texto",
+      "opcoes": [],
+      "alvo": [
+        "P-29",
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Integração e ativação (P-26, P-94)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0348"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "treinamento",
+      "contexto": [
+        "A página dos parceiros promete um treinamento curto de como apresentar a consultoria incluída e ganhar comissão. O P-96 (kit de convite ao diagnóstico) e o P-88 (trilhas) têm o Gerente como dono. Diga quem grava, quem revisa e de quanto em quanto tempo atualiza."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0069",
+      "texto": "O fluxo do diagnóstico no to-be passa a ser o que está no ar?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como está no esquema",
+        "Sim, com ajustes (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Diagnóstico do cliente do parceiro (P-95)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0361"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "diag_fluxo",
+      "contexto": [
+        "O P-95 hoje tem só a reunião, com o perfil de R$ 250 mil por mês e duas pessoas no comercial. No FO-10 você mudou para mais de 3 vendedores, agenda do Google para quem está no ICP e autodiagnóstico na hora para os demais, com o link do Hub só depois do resultado."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0070",
+      "texto": "Quem conduz as reuniões de diagnóstico, e o que acontece quando a agenda enche?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Eu conduzo; quando passar de um número por semana (comente), entra outra pessoa da Wise",
+        "Uma equipe de consultores da Wise divide a agenda desde o começo (comente quem)",
+        "Quando a agenda enche, a página passa a mandar todos para o autodiagnóstico até abrir horário"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Diagnóstico do cliente do parceiro (P-95)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0362"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "diag_quem",
+      "contexto": [
+        "No FO-08 você disse que, se ficarem muitos diagnósticos num dia, outras pessoas além de você passam a conduzir, mesmo que sejam 10 por dia. Hoje o P-95 tem o Gerente como dono."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0071",
+      "texto": "O que a reunião entrega ao cliente, e em quanto tempo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O mapa sai do próprio Wise Hub (o PDF do diagnóstico de planejamento) e é enviado no mesmo dia",
+        "Mapa próprio da reunião, num modelo da Wise, enviado em até 2 dias úteis",
+        "Só a conversa na reunião e o acesso ao Hub, sem documento"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Diagnóstico do cliente do parceiro (P-95)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0363"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "diag_entrega",
+      "contexto": [
+        "O P-95 termina em \"Entregar o mapa de planejamento\" e \"Liberar o acesso ao Wise Hub\". Falta definir o formato do mapa e o prazo."
+      ],
+      "logica": "Minha recomendação: o PDF do próprio Hub, ajustado na reunião. Não cria um documento novo para produzir a cada cliente.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0072",
+      "texto": "Quem fala com o cliente que fez o autodiagnóstico e ficou fora do ICP?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Ninguém: o Wise Hub nutre, e a Wise só fala se o cliente pedir",
+        "A Wise manda um e-mail com o resultado e um próximo passo, sem ligação",
+        "O parceiro recebe a sugestão de conversar com o cliente, quando houver autorização"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Diagnóstico do cliente do parceiro (P-95)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0364"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "pos_autodiag",
+      "contexto": [
+        "Hoje ele recebe o resultado e o link do Hub, e ninguém entra em contato (a página promete \"sem ligação insistente\"). O Hub tem trilhas e conteúdo para nutrir."
+      ],
+      "logica": "Minha recomendação: a primeira, com um e-mail automático do resultado quando o Resend estiver ligado. Mantém a promessa da página.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0073",
+      "texto": "Como a pesquisa da UniCesumar entra no processo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Fica fora do processo até a aprovação do CEP; depois, entra como passo da reunião",
+        "Já entra no to-be como passo opcional, marcado como dependente da aprovação",
+        "Vira um processo separado, fora do Wise Partners"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Diagnóstico do cliente do parceiro (P-95)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0365"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "pesquisa",
+      "contexto": [
+        "No FO-10 você disse que as reuniões serão onde a pesquisa é aplicada, com um aceite de consentimento com a marca da UniCesumar. A coleta só começa depois da aprovação do Comitê de Ética e do Termo de Consentimento assinado."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0074",
+      "texto": "A proteção da origem vale igual para o link da página do cliente?",
+      "tipo": "escolha",
+      "opcoes": [
+        "180 dias, como as outras portas",
+        "12 meses a partir do cadastro do cliente",
+        "Enquanto o parceiro estiver ativo no programa",
+        "Outra regra (comente)"
+      ],
+      "alvo": [
+        "P-79"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Oportunidade e comissão (P-31, P-38)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0367"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "portas",
+      "contexto": [
+        "O to-be tem cinco portas: indicação por link, Prateleira, cruzamento de carteiras, Base Ativa e diagnóstico do cliente do parceiro. O link novo da página do cliente (/c/código) alimenta a quinta porta; o link /i/ continua sendo a indicação de projeto.",
+        "O P-79 protege a origem por 180 dias. No FO-10 você disse que o link /c/ funciona como link de afiliado. Uma consultoria pode levar mais que 6 meses entre o diagnóstico e a contratação."
+      ],
+      "logica": "Minha recomendação: 180 dias, igual às outras portas. Uma regra só é mais fácil de explicar e de pagar; se o ciclo real se mostrar mais longo, revisamos no fechamento trimestral.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0075",
+      "texto": "Depois do diagnóstico, se o cliente quer contratar a consultoria, quem segue?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Quem fez o diagnóstico conduz a proposta até o fechamento",
+        "Quem fez o diagnóstico passa ao closer da Wise (P-33)",
+        "Depende do porte (comente o corte)"
+      ],
+      "alvo": [
+        "P-33"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Oportunidade e comissão (P-31, P-38)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0366"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "closer",
+      "contexto": [
+        "O P-33 entrega o lead ao closer da empresa do grupo. Para clientes da página, quem fez o diagnóstico já conhece o caso."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0076",
+      "texto": "Como o parceiro fica sabendo do andamento dos clientes que indicou?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Só pelo portal e por e-mail para quem entra pela página; grupo de WhatsApp só para níveis A e B",
+        "Portal e e-mail para todos; o grupo de WhatsApp deixa de existir",
+        "Grupo de WhatsApp para todos, como hoje"
+      ],
+      "alvo": [
+        "P-34"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Oportunidade e comissão (P-31, P-38)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0347"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "retorno",
+      "contexto": [
+        "O P-34 avisa o Gerente por WhatsApp e manda o retorno no grupo do parceiro. Com parceiros entrando sozinhos, nem todos terão grupo.",
+        "O portal já mostra ao parceiro a lista de quem entrou pelo link e o andamento. No FO-10 você escolheu aviso no portal, e-mail na hora e resumo semanal."
+      ],
+      "logica": "Minha recomendação: a primeira. O P-34 ganha um caminho automático e mantém o grupo para quem já tem.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0077",
+      "texto": "A regra da comissão continua a mesma para quem entra pela página?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, regra única para todos os parceiros",
+        "Sim, mas com valor mínimo para emitir nota (comente)",
+        "Outra regra para quem entra pela página (comente)"
+      ],
+      "alvo": [
+        "P-38"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Oportunidade e comissão (P-31, P-38)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0368"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "comissao",
+      "contexto": [
+        "A página promete 40% da primeira mensalidade da consultoria da Wise Makers, pago ao CNPJ do parceiro com nota, depois que o primeiro pagamento compensar, uma vez por cliente novo; o Wise Hub não gera comissão. O P-38 paga e o P-62 fixa a regra única."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0078",
+      "texto": "Qual a cadência de contato da Wise com o parceiro nível C que entrou pela página?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Só automático: portal, e-mail do mês e o resumo dos clientes",
+        "Automático e o encontro trimestral de parceiros (P-83) como o contato do trimestre",
+        "Trimestral individual, como os demais ativos"
+      ],
+      "alvo": [
+        "P-46"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Relação contínua (P-40, P-46, P-47)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0360"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "cadencia",
+      "contexto": [
+        "O P-46 dá contato mensal para quem tem atenção alta e trimestral para os demais ativos, sempre levando algo de valor. Com centenas de parceiros da página, um contato individual por trimestre pode não caber na agenda."
+      ],
+      "logica": "Minha recomendação: a segunda. Usa o encontro trimestral que já existe e não cria agenda por parceiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0079",
+      "texto": "O que a Wise devolve ao parceiro, e de quanto em quanto tempo?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Raio-x agregado da base, quando houver pelo menos alguns diagnósticos (comente o mínimo)",
+        "Resumo mensal: quem entrou, diagnósticos feitos, oportunidades",
+        "Caso publicado em conjunto quando um cliente tiver resultado",
+        "Mentoria mensal aberta à carteira do parceiro (P-84, hoje só para os pacotes B e A)"
+      ],
+      "alvo": [
+        "F-026"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Relação contínua (P-40, P-46, P-47)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0351"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "valor",
+      "contexto": [
+        "Os benefícios que você aprovou para a página: raio-x da maturidade da base (agregado; por cliente só com autorização), caso publicado em conjunto, mais uso e renovação do sistema. Marque o que vira entrega periódica no processo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0080",
+      "texto": "Os parceiros que entram pela página fazem parte da comunidade Wise Partners (P-47)?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, desde a entrada",
+        "Só depois de ativados (P-30)",
+        "Só a partir do nível B"
+      ],
+      "alvo": [
+        "P-47"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Relação contínua (P-40, P-46, P-47)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0346"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "comunidade",
+      "contexto": [
+        "A comunidade tem rituais (P-49), apresentações entre parceiros (P-52) e encontros pequenos (P-53)."
+      ],
+      "logica": "Minha recomendação: depois de ativados. Quem ainda não mandou o link para a base tem pouco a trocar com os outros.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0081",
+      "texto": "Quem administra as landing pages no portal?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Eu (Guilherme)",
+        "Igor",
+        "Outra pessoa (comente quem)"
+      ],
+      "alvo": [
+        "P-60"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Portal e governança (P-60)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0369"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "admin",
+      "contexto": [
+        "Em Configurações ficam: publicação, vídeo e formato, pixel do Meta e GA4, agenda, link do Hub, regra do ICP, termo, política e as listas de cadastros. Hoje só o administrador edita."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0082",
+      "texto": "Os endereços no domínio novo ficam assim?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim",
+        "Ajustar (comente)"
+      ],
+      "alvo": [
+        "P-60"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Portal e governança (P-60)",
+      "status": "respondida",
+      "formulario": "FO-05",
+      "respostas": [
+        "EV-0370"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "dominio",
+      "contexto": [
+        "Com o wisepartners.com.br, proponho: a página dos parceiros na raiz do domínio, a página do cliente em wisepartners.com.br/c/código e o login do portal em wisepartners.com.br/entrar. O endereço antigo da Netlify continua funcionando e leva para o novo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0083",
+      "texto": "Onde o parceiro aceita o termo de adesão e a política de privacidade?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Página só informa a política (sem caixa de aceite); o termo é aceito no primeiro acesso ao portal, antes de usar",
+        "Página só informa a política; o termo é enviado para assinatura eletrônica depois da conversa",
+        "Os dois aceites continuam na página, como está hoje"
+      ],
+      "alvo": [
+        "P-24"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada pela fila (P-20, P-22)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0340"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "aceite",
+      "contexto": [
+        "No FO-11 você descreveu o cadastro pela página sem aceite. Hoje a página pede os dois aceites antes de enviar.",
+        "A política de privacidade precisa ao menos ser informada na página, porque o formulário coleta nome, e-mail e WhatsApp (LGPD). O termo de adesão é o contrato da parceria."
+      ],
+      "logica": "Minha recomendação: a primeira. O formulário fica mais curto, quem não passar da conversa não assina nada, e o aceite no portal fica registrado com data, versão e usuário.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0084",
+      "texto": "Quem a página diz que vai entrar em contato?",
+      "tipo": "escolha",
+      "opcoes": [
+        "\"O Guilherme, da Wise Makers, vai falar com você pelo WhatsApp em até 24 horas úteis\"",
+        "\"Nossa equipe vai falar com você pelo WhatsApp em até 24 horas úteis\", sem nome",
+        "Outro texto (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada pela fila (P-20, P-22)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0372"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "nome_pagina",
+      "contexto": [
+        "Depois do cadastro, a página mostra hoje: \"O Igor, diretor da Wise Makers, vai falar com você pelo WhatsApp\". No FO-11 você disse que a fila e as conversas são suas, sempre."
+      ],
+      "logica": "Minha recomendação: com o seu nome. Quem recebe a mensagem reconhece o remetente e responde mais.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0085",
+      "texto": "Qual link o parceiro manda para os clientes dele?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O link da página do cliente no portal Wise Partners; escrevi Wise Hub por engano",
+        "Um link de afiliado dentro do Wise Hub, que ainda não existe no portal (comente como funciona)",
+        "Os dois, cada um para uma coisa (comente)"
+      ],
+      "alvo": [
+        "P-75"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada pela fila (P-20, P-22)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0339"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "link_afiliado",
+      "contexto": [
+        "No FO-11 você escreveu que indicar é só enviar o link de afiliado que está no portal Wise Hub, onde o parceiro entra com o login dele.",
+        "O que existe hoje é o link da página do cliente no portal Wise Partners (partners.wisemakers.com.br/c/código), na tela Indicar do parceiro, com mensagem pronta. É esse link que registra a origem por 180 dias e leva ao diagnóstico."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0086",
+      "texto": "Com o processo servindo para qualquer tipo de parceiro, como fica o critério \"ser empresa de software\"?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Vira \"ter clientes empresariais que podem estar no ICP da Wise\", para qualquer tipo de parceiro",
+        "Cada campanha define o tipo de empresa que aceita; esta campanha aceita só software",
+        "Outro (comente)"
+      ],
+      "alvo": [
+        "P-22"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Entrada pela fila (P-20, P-22)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0334"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "criterio_geral",
+      "contexto": [
+        "No FO-11 você marcou \"ser empresa de software com clientes empresariais\" como critério da fila, e também disse que o processo deve servir para qualquer tipo de parceiro, mudando só a campanha de aquisição."
+      ],
+      "logica": "Minha recomendação: a primeira. O critério de processo fica fixo e a campanha só muda quem chega.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0087",
+      "texto": "A escada de níveis fica assim?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como no esquema",
+        "Sim, com ajustes (comente)"
+      ],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0350"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "escada",
+      "contexto": [
+        "Resumo do que você escreveu no FO-11: o nível C é a entrada de todos, mais comercial, com a consultoria gratuita para os clientes da carteira que estão no ICP e a comissão; a troca de indicações da Prateleira deixa de valer para ele. O B passa a ser recomendado pela Wise nas consultorias, depois do encontro de alinhamento (P-28). O A entra no Base Ativa.",
+        "No to-be v7, o nível de entrada vinha da quantidade de clientes no ICP (Elite, Premium e Select) e o pacote C era Prateleira, indicação e grupo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0088",
+      "texto": "Além de ser recomendado nas consultorias, o que mais o nível B recebe?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Certificado de parceiro Wise",
+        "Wise Hub com as duas marcas para a base do parceiro",
+        "Mentoria mensal aberta à carteira do parceiro (P-84)",
+        "Convite a eventos e formações da Wise",
+        "Apresentação a outros parceiros da comunidade (P-52)"
+      ],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0345"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "itens_b",
+      "contexto": [
+        "O pacote B do to-be v7 tinha estes itens. O que não for marcado sai do B; comente se algum vai para o C ou para o A."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0089",
+      "texto": "O que um parceiro C precisa mostrar para virar B?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Tempo mínimo no programa (comente quanto)",
+        "Clientes cadastrados pelo link (comente quantos)",
+        "Diagnósticos feitos na base dele (comente quantos)",
+        "Clientes fechados com a Wise vindos dele (comente quantos)",
+        "Presença no encontro trimestral e na comunidade",
+        "Produto bem avaliado por clientes da Wise que já usam o software dele",
+        "Avaliação da relação por você e pelo Igor, sem número fixo"
+      ],
+      "alvo": [
+        "P-18"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0353"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "c_para_b",
+      "contexto": [
+        "No FO-11 você escreveu que, para cogitar indicar um parceiro aos clientes da Wise, ele precisa ter entrega de valor e tempo com a Wise. Marque o que conta e comente os números, se houver."
+      ],
+      "logica": "Minha recomendação: pelo menos um cliente fechado vindo dele, produto bem avaliado e a sua avaliação da relação. Recomendar um parceiro é emprestar a confiança da Wise; o resultado com clientes mostra se ele merece.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0090",
+      "texto": "Como a subida de C para B acontece?",
+      "tipo": "escolha",
+      "opcoes": [
+        "No fechamento trimestral, o portal lista quem bateu os critérios; você convida para o encontro de alinhamento e o parceiro sobe depois dele",
+        "O parceiro pede pelo portal; você avalia e marca o encontro de alinhamento",
+        "Os dois caminhos: convite no trimestre e pedido do parceiro"
+      ],
+      "alvo": [
+        "P-18"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0357"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "quem_sobe",
+      "contexto": [
+        "O P-18 revisa o nível no fechamento trimestral. O encontro de alinhamento (P-28) passa a ser a porta do B."
+      ],
+      "logica": "Minha recomendação: a primeira. A Wise decide quem recomendar; o parceiro não fica esperando uma resposta a um pedido.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0091",
+      "texto": "O que um parceiro B precisa para entrar no Base Ativa (nível A)?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Carteira com um mínimo de clientes no ICP da Wise (comente quantos)",
+        "Tempo mínimo no nível B (comente quanto)",
+        "Clientes fechados com a Wise vindos dele (comente quantos)",
+        "Base engajada: diagnósticos feitos pelo link (comente quantos)",
+        "Agenda da Wise com horas livres no trimestre",
+        "Decisão do Igor, caso a caso"
+      ],
+      "alvo": [
+        "P-18"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0354"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "b_para_a",
+      "contexto": [
+        "O evento do Base Ativa custa horas da Wise. Marque o que conta e comente os números, se houver."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0092",
+      "texto": "Um parceiro pode descer de nível?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Não, o nível só sobe",
+        "Sim, no fechamento trimestral, quando deixa de cumprir os critérios, sempre com uma conversa antes",
+        "Só do B para o C, quando um cliente da Wise tem problema sério com ele"
+      ],
+      "alvo": [
+        "P-18"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0355"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "descer",
+      "contexto": [
+        "Com parceiros sendo recomendados aos clientes da Wise, um problema com o produto ou com o atendimento dele recai sobre a Wise."
+      ],
+      "logica": "Minha recomendação: a segunda. Sem descida, o B vira um título permanente e a recomendação perde o valor.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0093",
+      "texto": "Uma empresa grande (por exemplo, um ERP com centenas de clientes no ICP) também entra pelo C?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, todos entram pelo C, sem exceção",
+        "Entra pelo C, mas você pode marcar o encontro de alinhamento logo depois e subir direto para o B",
+        "Decisão caso a caso do Igor"
+      ],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0356"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "grandes",
+      "contexto": [
+        "Nesta campanha você não distingue o tamanho da carteira. Mas um parceiro grande pode valer o encontro de alinhamento logo no começo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0094",
+      "texto": "E os parceiros que já estão no programa, com o nível do desenho antigo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Mantêm o nível atual; a escada nova vale para quem entra daqui em diante",
+        "São reclassificados pela escada nova no próximo fechamento trimestral",
+        "Todos voltam para o C e sobem pelos critérios novos"
+      ],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Escada de níveis (P-18, P-28)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0371"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "atuais",
+      "contexto": [
+        "Hoje o portal tem parceiros com nível A, B ou C dados pela carteira no ICP e pacotes ligados a esse nível."
+      ],
+      "logica": "Minha recomendação: a segunda, com conversa individual antes com quem desceria. Quem já tem relação com a Wise provavelmente já cumpre o B.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0095",
+      "texto": "Quais são as etapas do onboarding do nível C, na ordem?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Acesso criado na conversa e primeiro login",
+        "Minicurso de como vender a Wise assistido",
+        "Anúncio conjunto da parceria publicado",
+        "Link e mensagem pronta enviados para a base",
+        "Primeiro cliente cadastrado pelo link (ativado, P-30)",
+        "Primeiro diagnóstico feito na base dele"
+      ],
+      "alvo": [
+        "P-94"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Onboarding por nível (P-94, P-30)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0343"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "onb_c",
+      "contexto": [
+        "No FO-11 você pediu um onboarding por etapas e metas, sem prazo em dias, porque o tempo varia de caso a caso. No P-94 só o anúncio conjunto continuou, e a ativação passou a ser o primeiro cliente cadastrado pelo link.",
+        "Marque as etapas; comente se a ordem muda ou se falta alguma."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0096",
+      "texto": "Sem prazo, como a Wise percebe um parceiro parado numa etapa, e o que faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O portal mostra quantos dias o parceiro está na mesma etapa; você manda uma mensagem quando achar que vale",
+        "O portal manda um lembrete automático por e-mail depois de um tempo na mesma etapa (comente quanto), e você só entra se ele continuar parado",
+        "Só no encontro trimestral (P-83), sem contato individual"
+      ],
+      "alvo": [
+        "P-97"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Onboarding por nível (P-94, P-30)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0349"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "parado",
+      "contexto": [
+        "Sem dias definidos, o processo não estoura prazo. Mas, com volume, alguém precisa notar quem parou, sem virar cobrança."
+      ],
+      "logica": "Minha recomendação: a segunda. O prazo vira lembrete, não regra do processo, e a sua agenda fica para quem precisa de conversa.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0097",
+      "texto": "O que acontece quando o parceiro sobe para o B?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Encontro de alinhamento (P-28)",
+        "Perfil do parceiro revisado para aparecer nas recomendações e na Prateleira",
+        "Avisar os consultores da Wise de que ele pode ser recomendado",
+        "Certificado e anúncio do novo nível",
+        "Primeira recomendação a um cliente da Wise"
+      ],
+      "alvo": [
+        "P-45"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Onboarding por nível (P-94, P-30)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0358"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "onb_b",
+      "contexto": [
+        "Marque as etapas do onboarding do B; o que faltar, comente."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0098",
+      "texto": "Quais são as etapas do Base Ativa (nível A)?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Definir com o parceiro o tema e a data do evento",
+        "O parceiro convida a própria base, com o material da Wise",
+        "A Wise conduz a formação",
+        "Diagnósticos oferecidos aos participantes depois do evento",
+        "Relatório para o parceiro com presença e resultados"
+      ],
+      "alvo": [
+        "P-44"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 7,
+      "bloco": "Onboarding por nível (P-94, P-30)",
+      "status": "respondida",
+      "formulario": "FO-06",
+      "respostas": [
+        "EV-0359"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "onb_a",
+      "contexto": [
+        "O evento de formação gratuita e exclusiva para a base do parceiro. Marque as etapas; o que faltar, comente."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0099",
+      "texto": "Depois de quantos dias na mesma etapa do onboarding o portal manda o lembrete por e-mail ao parceiro?",
+      "tipo": "escolha",
+      "opcoes": [
+        "7 dias",
+        "14 dias",
+        "21 dias",
+        "30 dias"
+      ],
+      "alvo": [
+        "P-97.gatilho"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 8,
+      "bloco": "Onboarding",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "limite_lembrete",
+      "contexto": [
+        "No FO-12 você escolheu o lembrete automático por e-mail, mas não definiu depois de quanto tempo."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "14 dias"
     }
   ],
   "formularios": [
@@ -13532,6 +15680,89 @@
       "enviado_em": "2026-11-05",
       "prazo": "",
       "identificacao": false
+    },
+    {
+      "id": "FO-05",
+      "titulo": "FO-11: processos depois das landing pages",
+      "rodada": 7,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0058",
+        "Q-0059",
+        "Q-0060",
+        "Q-0061",
+        "Q-0062",
+        "Q-0063",
+        "Q-0064",
+        "Q-0065",
+        "Q-0066",
+        "Q-0067",
+        "Q-0068",
+        "Q-0069",
+        "Q-0070",
+        "Q-0071",
+        "Q-0072",
+        "Q-0073",
+        "Q-0074",
+        "Q-0075",
+        "Q-0076",
+        "Q-0077",
+        "Q-0078",
+        "Q-0079",
+        "Q-0080",
+        "Q-0081",
+        "Q-0082"
+      ],
+      "introducao": "O que muda nos processos com as duas landing pages e a fila de espera.",
+      "link": "https://claude.ai/artifact/VMkzjxzihzEDhqMcAeky1v",
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
+      "enviado_em": "2026-11-07",
+      "prazo": "",
+      "identificacao": false
+    },
+    {
+      "id": "FO-06",
+      "titulo": "FO-12: escada de níveis e onboarding por etapas",
+      "rodada": 7,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0083",
+        "Q-0084",
+        "Q-0085",
+        "Q-0086",
+        "Q-0087",
+        "Q-0088",
+        "Q-0089",
+        "Q-0090",
+        "Q-0091",
+        "Q-0092",
+        "Q-0093",
+        "Q-0094",
+        "Q-0095",
+        "Q-0096",
+        "Q-0097",
+        "Q-0098"
+      ],
+      "introducao": "Critérios da escada Select, Premium e Elite, onboarding por nível e três pontos da entrada pela fila.",
+      "link": "https://claude.ai/artifact/3u3FEWEKYT4ZFcgLvcVuc2",
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
+      "enviado_em": "2026-11-09",
+      "prazo": "",
+      "identificacao": false
     }
   ],
   "contradicoes": [
@@ -13666,9 +15897,11 @@
       ],
       "status": "resolvida",
       "pergunta": "Q-0019",
-      "resolucao": "Mantida a especificação e o Playbook v3.1: o nível mede potencial pela faixa de clientes no ICP; o pacote, que exige contrapartida, é o que libera as entregas.",
+      "resolucao": "Mantida a especificação e o Playbook v3.1: o nível mede potencial pela faixa de clientes no ICP; o pacote, que exige contrapartida, é o que libera as entregas. Revista em 09/11 (FO-12): todos entram pelo Select e sobem pelo resultado, como Bech recomendava.",
       "evidencias_resolucao": [
-        "EV-0032"
+        "EV-0032",
+        "EV-0356",
+        "EV-0350"
       ],
       "lado_patrocinador": [
         "EV-0269"
@@ -13764,7 +15997,7 @@
     {
       "id": "DE-03",
       "data": "2026-11-06",
-      "texto": "Os três pilares existem desde o primeiro parceiro, mas a entrega a cada um segue a escada de pacotes do Playbook v3.1: o que o parceiro recebe acompanha o que ele consegue devolver, e abrir mais é orgânico.",
+      "texto": "Os três pilares existem desde o primeiro parceiro, mas a entrega a cada um segue a escada de pacotes do Playbook v3.1: o que o parceiro recebe acompanha o que ele consegue devolver, e abrir mais é orgânico. Revista em 09/11: a escada passa a ser Select, Premium e Elite, com todos entrando pelo Select.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -13890,7 +16123,7 @@
     {
       "id": "DE-15",
       "data": "2026-11-06",
-      "texto": "O nível de entrada segue a especificação: faixa de clientes no ICP.",
+      "texto": "O nível de entrada segue a especificação: faixa de clientes no ICP. Revista em 09/11: todo parceiro entra pelo Select, qualquer que seja a carteira.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -13930,7 +16163,7 @@
     {
       "id": "DE-19",
       "data": "2026-11-06",
-      "texto": "O Diretor só assina o termo; o Gerente de Parcerias negocia com autonomia.",
+      "texto": "O Diretor só assina o termo; o Gerente de Parcerias negocia com autonomia. Para quem entra pela página, o termo é aceito no formulário, sem negociação.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -13960,7 +16193,7 @@
     {
       "id": "DE-22",
       "data": "2026-11-06",
-      "texto": "O diagnóstico comercial gratuito vale para todos os parceiros desde já, só para clientes dentro do ICP da Wise, conduzido pelo Gerente, no máximo um por dia.",
+      "texto": "O diagnóstico comercial gratuito vale para todos os parceiros desde já, só para clientes dentro do ICP da Wise, conduzido pelo Gerente, no máximo um por dia. Revista em 09/11: acima de 10 reuniões por semana, outra pessoa da Wise assume; fora do ICP, autodiagnóstico na hora.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -13971,7 +16204,7 @@
     {
       "id": "DE-23",
       "data": "2026-11-06",
-      "texto": "O Wise Hub é liberado logo depois do diagnóstico para todo cliente diagnosticado; o pacote B continua dando o Hub à base do parceiro.",
+      "texto": "O Wise Hub é liberado logo depois do diagnóstico para todo cliente diagnosticado; o pacote B continua dando o Hub à base do parceiro. Revista em 09/11: o Hub com as duas marcas vale desde o Select.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -14044,6 +16277,75 @@
         "P-66.participantes",
         "P-67.participantes",
         "P-68.participantes"
+      ]
+    },
+    {
+      "id": "DE-30",
+      "data": "2026-11-09",
+      "texto": "Todo parceiro entra pela fila, sem exceção: cadastro com aceite na página, contato do Gerente pelo WhatsApp, agenda e conversa de entrada, em que a conta é criada.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0331",
+        "EV-0332",
+        "EV-0340"
+      ]
+    },
+    {
+      "id": "DE-31",
+      "data": "2026-11-09",
+      "texto": "O Gerente cuida da fila e conduz as conversas de entrada, sempre; o primeiro contato sai em até 24 horas úteis.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0337",
+        "EV-0341"
+      ]
+    },
+    {
+      "id": "DE-32",
+      "data": "2026-11-09",
+      "texto": "Três níveis: Select, Premium e Elite. Todos entram pelo Select; o nível só sobe, pelos critérios de tempo, clientes fechados ou avaliação do Gerente com o Igor.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0350",
+        "EV-0353",
+        "EV-0354",
+        "EV-0355",
+        "EV-0356"
+      ]
+    },
+    {
+      "id": "DE-33",
+      "data": "2026-11-09",
+      "texto": "O onboarding é por etapas e metas, sem prazo em dias; o portal mostra os dias em cada etapa e manda um lembrete a quem parou.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0342",
+        "EV-0349"
+      ]
+    },
+    {
+      "id": "DE-34",
+      "data": "2026-11-09",
+      "texto": "Os processos servem a qualquer tipo de parceiro; só a campanha de aquisição muda.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0335"
+      ]
+    },
+    {
+      "id": "DE-35",
+      "data": "2026-11-09",
+      "texto": "O Gerente administra as landing pages, no domínio partners.wisemakers.com.br.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0369",
+        "EV-0370"
       ]
     }
   ],
@@ -14243,7 +16545,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-05",
+      "data": "2026-11-09",
       "evento": "Mapeamento iniciado"
     },
     {
@@ -14261,6 +16563,10 @@
     {
       "data": "2026-11-06",
       "evento": "To-be v7: Rodada 6 respondida; diagnóstico gratuito para todos os parceiros com filtro de ICP, Hub liberado depois do diagnóstico, foco em software de gestão, ativação de 90 dias e os oito blocos na primeira entrega do portal"
+    },
+    {
+      "data": "2026-11-09",
+      "evento": "To-be v8: Rodada 7 (FO-11 e FO-12) aplicada. Entrada pela fila para todos, com conversa de entrada no lugar do workshop e aceite na página; escada Select, Premium e Elite, todos entrando pelo Select e subindo pelo resultado; onboarding por etapas, sem prazo em dias, com lembrete; diagnóstico como está no ar, com autodiagnóstico fora do ICP; scorecard de entrada retirado"
     }
   ]
 }

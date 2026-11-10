@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_18" transform="translate(0,11310)" data-frame="3.4 Revisar o nível dos parceiros">
-<rect data-type="frame" x="0" y="0" width="2668" height="858" fill="#ffffff" />
+<g id="f_P_18" transform="translate(0,11218)" data-frame="3.4 Revisar o nível dos parceiros">
+<rect data-type="frame" x="0" y="0" width="2348" height="1258" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">3.4 Revisar o nível dos parceiros</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="3.4 Revisar o nível dos parceiros">
 flowchart LR
@@ -10,35 +10,27 @@ flowchart LR
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
       n_i1(["Primeiro dia útil do trimestre"]):::confirmado
-      n_t1["Apurar os requisitos de cada parceiro"]:::confirmado
-      n_g0{"Parceiro isento?"}:::confirmado
-      n_g1{"Cumpre o nível atual?"}:::confirmado
-      n_g2{"Já estava em observação?"}:::confirmado
-      n_t2["Colocar em observação e avisar o que falta"]:::confirmado
-      n_t3["Propor a descida de nível"]:::confirmado
-      n_t4["Decidir a descida com motivo"]:::confirmado
-      n_g3{"Descer de nível?"}:::confirmado
-      n_f0(["Parceiro isento"]):::confirmado
+      n_t1["Listar quem cumpre os critérios do nível acima"]:::confirmado
+      n_g1{"O parceiro sobe de nível?"}:::confirmado
+      n_s1[["Conduzir a entrada no Premium"]]:::confirmado
+      n_t3["Registrar a subida para Elite"]:::confirmado
+      n_s2[["Conduzir o ciclo do Base Ativa"]]:::confirmado
       n_f1(["Nível mantido"]):::confirmado
-      n_f2(["Parceiro em observação"]):::confirmado
-      n_f3(["Nível rebaixado"]):::confirmado
+      n_f2(["Parceiro Premium"]):::confirmado
+      n_f3(["Parceiro Elite"]):::confirmado
     end
-    ext_X1[/"Parceiro"/]
+    subgraph raia_PA_02 ["Diretor"]
+      n_t2["Avaliar com o Igor os casos sem critério numérico"]:::confirmado
+    end
     n_i1 --&gt; n_t1
-    n_t1 --&gt; n_g0
-    n_g0 --&gt;|Sim| n_f0
-    n_g0 --&gt;|Não| n_g1
-    n_g1 --&gt;|Sim| n_f1
-    n_g1 --&gt;|Não| n_g2
-    n_g2 --&gt;|Não| n_t2
-    n_t2 --&gt; n_f2
-    n_g2 --&gt;|Sim| n_t3
-    n_t3 --&gt; n_t4
-    n_t4 --&gt; n_g3
-    n_g3 --&gt;|Sim| n_f3
-    n_g3 --&gt;|Não| n_f1
-    n_t2 -.-&gt;|Aviso do que falta| ext_X1
-    n_t4 -.-&gt;|Aviso de nível| ext_X1
+    n_t1 --&gt; n_t2
+    n_t2 --&gt; n_g1
+    n_g1 --&gt;|Não| n_f1
+    n_g1 --&gt;|Para Premium| n_s1
+    n_s1 --&gt; n_f2
+    n_g1 --&gt;|Para Elite| n_t3
+    n_t3 --&gt; n_s2
+    n_s2 --&gt; n_f3
 
 </foreignObject>
 </g></svg>

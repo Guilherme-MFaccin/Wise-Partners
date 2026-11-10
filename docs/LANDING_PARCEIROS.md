@@ -68,6 +68,7 @@ O pedido era "cria o acesso e manda o login por e-mail". O portal ainda não tem
 * A aprovação (`aprovar_cadastro_landing`) cria o parceiro em onboarding, com o aceite eletrônico feito na página; a conta sai pela função `convidar-usuario` com senha provisória, mostrada uma vez, com a mensagem pronta para o WhatsApp.
 * A chave "Fila de espera" (`config_landing.modo_cadastro`) volta ao acesso na hora, se um dia for preciso.
 * Migração 27, testes em `tests/db/fila_landing.test.ts`.
+* Ajustes de 09/11 (FO-11 e FO-12): a página diz que "nossa equipe" fala pelo WhatsApp em até 24 horas úteis; quem cuida da fila e das conversas é o Gerente de Parcerias (Guilherme), e a mensagem pronta do WhatsApp usa o nome de quem está logado. O aceite do termo e da política continua no formulário.
 
 ## Textos legais 2026-11-07
 

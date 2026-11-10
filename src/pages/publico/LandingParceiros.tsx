@@ -43,7 +43,7 @@ const PARCEIRO_RECEBE = [
 
 // Transformação: o caminho do parceiro em três passos
 const PASSOS_PARCEIRO = [
-  { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos. Depois, o Igor, diretor da Wise Makers, fala com você pelo WhatsApp." },
+  { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos. Depois, nossa equipe fala com você pelo WhatsApp em até 24 horas úteis." },
   { titulo: "Pegue o seu link", texto: "No portal ficam o link exclusivo, a mensagem pronta e um treinamento curto." },
   { titulo: "Ofereça à sua base", texto: "Pros clientes de hoje e pra cada cliente novo. O resto você acompanha pelo portal." },
 ];
@@ -85,7 +85,7 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "Tem exclusividade ou meta de indicação?", r: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
   { p: "Posso sair quando quiser?", r: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
   { p: "Quem é a Wise Makers?", r: "Uma consultoria de estrutura e gestão comercial. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
-  { p: "Quando eu começo?", r: "Logo depois do cadastro, o Igor, diretor da Wise Makers, fala com você pelo WhatsApp para combinar o início. Depois dessa conversa, você recebe o acesso ao portal e o seu link." },
+  { p: "Quando eu começo?", r: "Em até 24 horas úteis depois do cadastro, nossa equipe fala com você pelo WhatsApp para combinar o início. Depois dessa conversa, você recebe o acesso ao portal e o seu link." },
 ];
 
 // Última configuração recebida, guardada no navegador (só o que a página pública já mostra)
@@ -199,7 +199,7 @@ export default function LandingParceiros() {
     placeholderData: lerConfigGuardada,
   });
 
-  // Desde 07/11/2026 o padrão é a fila de espera: o Igor fala com cada parceiro antes de liberar o acesso
+  // Desde 07/11/2026 o padrão é a fila de espera: a equipe da Wise fala com cada parceiro antes de liberar o acesso
   const fila = cfg?.modo_cadastro !== "acesso_direto";
 
   useEffect(() => {
@@ -467,7 +467,7 @@ export default function LandingParceiros() {
               Seu cliente não precisa escolher pelo preço. Dá pra ele um motivo pra escolher você.
             </h2>
             <p className="mt-4 max-w-[62ch] text-neutro-100">{fila
-              ? "Cadastre sua empresa em 2 minutos. O Igor, diretor da Wise Makers, fala com você pelo WhatsApp para combinar os próximos passos."
+              ? "Cadastre sua empresa em 2 minutos. Nossa equipe fala com você pelo WhatsApp em até 24 horas úteis para combinar os próximos passos."
               : "Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui."}</p>
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
               <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
@@ -494,7 +494,7 @@ export default function LandingParceiros() {
                 ) : naFila ? (
                   <div className="space-y-3 text-sm" role="status">
                     <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
-                    <p className="text-neutro-100">O Igor, diretor da Wise Makers, vai falar com você pelo WhatsApp {naFila} para combinar os próximos passos. Fique de olho nas mensagens.</p>
+                    <p className="text-neutro-100">Nossa equipe vai falar com você pelo WhatsApp {naFila} em até 24 horas úteis para combinar os próximos passos. Fique de olho nas mensagens.</p>
                     <p className="text-neutro-300">Depois dessa conversa, você recebe o acesso ao portal com o seu link exclusivo.</p>
                   </div>
                 ) : criado ? (

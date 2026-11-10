@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_95" transform="translate(0,21156)" data-frame="6.9 Conduzir o diagnóstico do cliente do parceiro">
-<rect data-type="frame" x="0" y="0" width="3188" height="858" fill="#ffffff" />
+<g id="f_P_95" transform="translate(3188,21264)" data-frame="6.9 Conduzir o diagnóstico do cliente do parceiro">
+<rect data-type="frame" x="0" y="0" width="4488" height="858" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">6.9 Conduzir o diagnóstico do cliente do parceiro</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="6.9 Conduzir o diagnóstico do cliente do parceiro">
 flowchart LR
@@ -9,42 +9,59 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Cliente do parceiro marca o diagnóstico"]):::confirmado
-      n_t1["Conferir se a empresa está no ICP da Wise"]:::confirmado
-      n_g1{"A empresa está no ICP?"}:::confirmado
-      n_t2["Avisar o cliente e o parceiro de que o diagnóstico não se aplica"]:::confirmado
-      n_t3["Conduzir a reunião de diagnóstico pelo roteiro"]:::confirmado
-      n_t4["Entregar o mapa de planejamento"]:::confirmado
-      n_t5["Liberar o acesso ao Wise Hub"]:::confirmado
-      n_g2{"O cliente autorizou o resumo ao parceiro?"}:::confirmado
-      n_t6["Enviar o resumo ao parceiro"]:::confirmado
-      n_g3{"O cliente pediu para seguir com a Wise?"}:::confirmado
-      n_t7["Registrar a oportunidade com a origem no parceiro"]:::confirmado
-      n_f1(["Diagnóstico não aplicável"]):::confirmado
+      n_i1(["Cliente se cadastra pelo link do parceiro"]):::confirmado
+      n_t1["Registrar o cadastro com a origem no parceiro"]:::confirmado
+      n_g1{"A empresa está no ICP da Wise?"}:::confirmado
+      n_t2["Liberar o autodiagnóstico na hora"]:::confirmado
+      n_t3["Mostrar o resultado e o link do Wise Hub"]:::confirmado
+      n_t4["Enviar o resultado e um próximo passo por e-mail"]:::confirmado
+      n_t5["Liberar a agenda para a reunião"]:::confirmado
+      n_e1&gt;"Cliente marca o horário"]:::confirmado
+      n_g2{"Mais de 10 reuniões na semana?"}:::confirmado
+      n_t6["Passar a reunião a outra pessoa da Wise"]:::confirmado
+      n_t7["Conduzir a reunião de diagnóstico pela Matriz 5x5"]:::confirmado
+      n_t8["Aplicar a pesquisa, se aprovada pelo CEP e consentida"]:::confirmado
+      n_t9["Enviar o mapa da reunião em até 2 dias úteis"]:::confirmado
+      n_t10["Liberar o acesso ao Wise Hub"]:::confirmado
+      n_g3{"O cliente autorizou mostrar o resultado ao parceiro?"}:::confirmado
+      n_t11["Liberar o resultado ao parceiro no portal"]:::confirmado
+      n_g4{"O cliente quer contratar a consultoria?"}:::confirmado
+      n_s1[["Entregar o lead ao closer"]]:::confirmado
+      n_f1(["Autodiagnóstico entregue"]):::confirmado
       n_f2(["Diagnóstico entregue"]):::confirmado
-      n_f3(["Oportunidade aberta"]):::confirmado
+      n_f3(["Oportunidade com o closer"]):::confirmado
     end
     ext_X1[/"Parceiro"/]
     ext_X2[/"Cliente do parceiro"/]
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_g1
     n_g1 --&gt;|Não| n_t2
-    n_t2 --&gt; n_f1
-    n_g1 --&gt;|Sim| n_t3
+    n_t2 --&gt; n_t3
     n_t3 --&gt; n_t4
-    n_t4 --&gt; n_t5
-    n_t5 --&gt; n_g2
+    n_t4 --&gt; n_f1
+    n_g1 --&gt;|Sim| n_t5
+    n_t5 --&gt; n_e1
+    n_e1 --&gt; n_g2
     n_g2 --&gt;|Sim| n_t6
-    n_g2 --&gt;|Não| n_g3
-    n_t6 --&gt; n_g3
-    n_g3 --&gt;|Sim| n_t7
-    n_g3 --&gt;|Não| n_f2
-    n_t7 --&gt; n_f3
-    ext_X2 -.-&gt;|Agendamento e consentimentos| n_i1
-    n_t2 -.-&gt;|Aviso| ext_X2
-    n_t4 -.-&gt;|Mapa de planejamento| ext_X2
-    n_t5 -.-&gt;|Acesso ao Hub| ext_X2
-    n_t6 -.-&gt;|Resumo autorizado| ext_X1
+    n_t6 --&gt; n_t7
+    n_g2 --&gt;|Não| n_t7
+    n_t7 --&gt; n_t8
+    n_t8 --&gt; n_t9
+    n_t9 --&gt; n_t10
+    n_t10 --&gt; n_g3
+    n_g3 --&gt;|Sim| n_t11
+    n_t11 --&gt; n_g4
+    n_g3 --&gt;|Não| n_g4
+    n_g4 --&gt;|Sim| n_s1
+    n_s1 --&gt; n_f3
+    n_g4 --&gt;|Não| n_f2
+    ext_X2 -.-&gt;|Cadastro de qualificação| n_i1
+    n_t3 -.-&gt;|Resultado e link do Hub| ext_X2
+    n_t4 -.-&gt;|E-mail do resultado| ext_X2
+    n_t9 -.-&gt;|Mapa da reunião| ext_X2
+    n_t10 -.-&gt;|Acesso ao Hub| ext_X2
+    n_t11 -.-&gt;|Resultado autorizado| ext_X1
+    ext_X2 -.-&gt;|Horário marcado| n_e1
 
 </foreignObject>
 </g></svg>
