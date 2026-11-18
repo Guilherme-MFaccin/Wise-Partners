@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-83" name="8.2.2 Conduzir o encontro trimestral de parceiros" processRef="Process_P-83" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-83" name="8.2.2 Conduzir o encontro trimestral de parceiros" isExecutable="false">
-    <bpmn:documentation>Encontro online de todos os parceiros, com casos, resultados do trimestre e reconhecimento, aberto por uma mensagem gravada do Igor como voz do programa. A gravação e o resumo vão para quem não foi. No portal: agenda, convida, lembra o Igor de gravar a mensagem, registra a presença e envia a gravação. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:documentation>Encontro online de todos os parceiros, com casos, resultados do trimestre e reconhecimento, aberto por uma mensagem gravada do Igor como voz do programa. A gravação e o resumo vão para quem não foi. No portal: agenda, convida, lembra o Igor de gravar a mensagem, registra a presença e envia a gravação. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-83">
       <bpmn:lane id="Lane_P-83_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-83_i1</bpmn:flowNodeRef>
@@ -19,14 +19,14 @@
         <bpmn:flowNodeRef>P-83_t2</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-83_i1" name="Trimestre fechado"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-83_F1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:serviceTask id="P-83_t1" name="Agendar o encontro e convidar todos os parceiros"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F1</bpmn:incoming><bpmn:outgoing>P-83_F2</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:task id="P-83_t2" name="Gravar a mensagem de abertura"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F2</bpmn:incoming><bpmn:outgoing>P-83_F3</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-83_t3" name="Escolher os casos e os reconhecimentos do trimestre"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F3</bpmn:incoming><bpmn:outgoing>P-83_F4</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-83_t4" name="Conduzir o encontro online"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F4</bpmn:incoming><bpmn:outgoing>P-83_F5</bpmn:outgoing></bpmn:task>
-    <bpmn:serviceTask id="P-83_t5" name="Registrar a presença"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F5</bpmn:incoming><bpmn:outgoing>P-83_F6</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:serviceTask id="P-83_t6" name="Enviar a gravação e o resumo a todos os parceiros"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F6</bpmn:incoming><bpmn:outgoing>P-83_F7</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:endEvent id="P-83_f1" name="Encontro trimestral realizado"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-83_F7</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="P-83_i1" name="Trimestre fechado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-83_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-83_t1" name="Agendar o encontro e convidar todos os parceiros"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F1</bpmn:incoming><bpmn:outgoing>P-83_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:task id="P-83_t2" name="Gravar a mensagem de abertura"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F2</bpmn:incoming><bpmn:outgoing>P-83_F3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-83_t3" name="Escolher os casos e os reconhecimentos do trimestre"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F3</bpmn:incoming><bpmn:outgoing>P-83_F4</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-83_t4" name="Conduzir o encontro online"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F4</bpmn:incoming><bpmn:outgoing>P-83_F5</bpmn:outgoing></bpmn:task>
+    <bpmn:serviceTask id="P-83_t5" name="Registrar a presença"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F5</bpmn:incoming><bpmn:outgoing>P-83_F6</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:serviceTask id="P-83_t6" name="Enviar a gravação e o resumo a todos os parceiros"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F6</bpmn:incoming><bpmn:outgoing>P-83_F7</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:endEvent id="P-83_f1" name="Encontro trimestral realizado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-83_F7</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-83_F1" name="" sourceRef="P-83_i1" targetRef="P-83_t1" />
     <bpmn:sequenceFlow id="P-83_F2" name="" sourceRef="P-83_t1" targetRef="P-83_t2" />
     <bpmn:sequenceFlow id="P-83_F3" name="" sourceRef="P-83_t2" targetRef="P-83_t3" />
@@ -40,14 +40,14 @@
       <bpmndi:BPMNShape id="Participant_P-83_di" bpmnElement="Participant_P-83" isHorizontal="true"><dc:Bounds x="0" y="0" width="1528" height="296" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-83_PA-01_di" bpmnElement="Lane_P-83_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1498" height="148" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-83_PA-02_di" bpmnElement="Lane_P-83_PA-02" isHorizontal="true"><dc:Bounds x="30" y="148" width="1498" height="148" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_i1_di" bpmnElement="P-83_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t1_di" bpmnElement="P-83_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t2_di" bpmnElement="P-83_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="466" y="186" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t3_di" bpmnElement="P-83_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t4_di" bpmnElement="P-83_t4" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t5_di" bpmnElement="P-83_t5" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="994" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_t6_di" bpmnElement="P-83_t6" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1170" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-83_f1_di" bpmnElement="P-83_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1392" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_i1_di" bpmnElement="P-83_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t1_di" bpmnElement="P-83_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t2_di" bpmnElement="P-83_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="186" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t3_di" bpmnElement="P-83_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t4_di" bpmnElement="P-83_t4" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t5_di" bpmnElement="P-83_t5" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_t6_di" bpmnElement="P-83_t6" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1170" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-83_f1_di" bpmnElement="P-83_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1392" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1355" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-83_F1_di" bpmnElement="P-83_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-83_F2_di" bpmnElement="P-83_F2"><di:waypoint x="418" y="74" /><di:waypoint x="442" y="74" /><di:waypoint x="442" y="222" /><di:waypoint x="466" y="222" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-83_F3_di" bpmnElement="P-83_F3"><di:waypoint x="594" y="222" /><di:waypoint x="618" y="222" /><di:waypoint x="618" y="74" /><di:waypoint x="642" y="74" /></bpmndi:BPMNEdge>

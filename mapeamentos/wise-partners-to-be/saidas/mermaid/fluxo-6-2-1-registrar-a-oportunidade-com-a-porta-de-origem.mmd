@@ -4,10 +4,10 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Oportunidade chega"]):::hipotese
-      n_t1["Registrar a empresa, o parceiro de origem e a porta"]:::hipotese
-      n_t2["Iniciar a proteção de 180 dias"]:::hipotese
-      n_f1(["Oportunidade registrada"]):::hipotese
+      n_i1(["Oportunidade chega"]):::confirmado
+      n_t1["Registrar a empresa, o parceiro de origem e a porta"]:::confirmado
+      n_t2["Iniciar a proteção de 180 dias"]:::confirmado
+      n_f1(["Oportunidade registrada"]):::confirmado
     end
     n_i1 --> n_t1
     n_t1 --> n_t2

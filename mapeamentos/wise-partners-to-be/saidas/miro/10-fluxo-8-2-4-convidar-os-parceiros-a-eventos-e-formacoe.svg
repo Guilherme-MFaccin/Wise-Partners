@@ -9,11 +9,11 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Evento ou formação da Wise agendado"]):::hipotese
-      n_t1["Escolher quem convidar entre Premium, Elite e destaques"]:::hipotese
-      n_t2["Enviar os convites"]:::hipotese
-      n_t3["Registrar a presença"]:::hipotese
-      n_f1(["Parceiros convidados e presença registrada"]):::hipotese
+      n_i1(["Evento ou formação da Wise agendado"]):::confirmado
+      n_t1["Escolher quem convidar entre Premium, Elite e destaques"]:::confirmado
+      n_t2["Enviar os convites"]:::confirmado
+      n_t3["Registrar a presença"]:::confirmado
+      n_f1(["Parceiros convidados e presença registrada"]):::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_t2

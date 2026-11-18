@@ -9,12 +9,12 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Fechamento trimestral"]):::hipotese
-      n_t1["Enviar a pesquisa de pulso aos parceiros"]:::hipotese
-      n_t2["Responder as perguntas sobre cada parceiro Premium e Elite"]:::hipotese
-      n_e1&gt;"Respostas dos parceiros"]:::hipotese
-      n_t3["Juntar as respostas e alimentar a Relação"]:::hipotese
-      n_f1(["Pulso do trimestre registrado"]):::hipotese
+      n_i1(["Fechamento trimestral"]):::confirmado
+      n_t1["Enviar a pesquisa de pulso aos parceiros"]:::confirmado
+      n_t2["Responder as perguntas sobre cada parceiro Premium e Elite"]:::confirmado
+      n_e1&gt;"Respostas dos parceiros"]:::confirmado
+      n_t3["Juntar as respostas e alimentar a Relação"]:::confirmado
+      n_f1(["Pulso do trimestre registrado"]):::confirmado
     end
     ext_X1[/"Parceiro"/]
     n_i1 --&gt; n_t1

@@ -9,13 +9,13 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Acesso criado na conversa de entrada"]):::hipotese
-      n_t1["Gerar o link exclusivo e a mensagem pronta"]:::hipotese
-      n_t3["Montar a página do cliente com as duas marcas"]:::hipotese
-      n_f1(["Link e página do cliente prontos"]):::hipotese
+      n_i1(["Acesso criado na conversa de entrada"]):::confirmado
+      n_t1["Gerar o link exclusivo e a mensagem pronta"]:::confirmado
+      n_t3["Montar a página do cliente com as duas marcas"]:::confirmado
+      n_f1(["Link e página do cliente prontos"]):::confirmado
     end
     subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
-      n_t2["Subir a logo da empresa"]:::hipotese
+      n_t2["Subir a logo da empresa"]:::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_t2

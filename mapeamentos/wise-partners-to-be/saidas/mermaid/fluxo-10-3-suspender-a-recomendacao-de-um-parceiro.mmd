@@ -4,16 +4,16 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_t1["Ouvir o consultor e o cliente"]:::hipotese
-      n_g1{"O problema é sério?"}:::hipotese
-      n_t2["Registrar o problema na ficha do parceiro"]:::hipotese
-      n_t3["Marcar a recomendação como suspensa"]:::hipotese
-      n_t4["Levar o caso à conversa da semana com o Diretor"]:::hipotese
-      n_f1(["Problema registrado, recomendação mantida"]):::hipotese
-      n_f2(["Recomendação suspensa"]):::hipotese
+      n_t1["Ouvir o consultor e o cliente"]:::confirmado
+      n_g1{"O problema é sério?"}:::confirmado
+      n_t2["Registrar o problema na ficha do parceiro"]:::confirmado
+      n_t3["Marcar a recomendação como suspensa"]:::confirmado
+      n_t4["Levar o caso à conversa da semana com o Diretor"]:::confirmado
+      n_f1(["Problema registrado, recomendação mantida"]):::confirmado
+      n_f2(["Recomendação suspensa"]):::confirmado
     end
     subgraph raia_PA_07 ["Consultor da Wise Makers"]
-      n_i1(["Consultor relata problema de um cliente com um parceiro recomendado"]):::hipotese
+      n_i1(["Consultor relata problema de um cliente com um parceiro recomendado"]):::confirmado
     end
     n_i1 --> n_t1
     n_t1 --> n_g1

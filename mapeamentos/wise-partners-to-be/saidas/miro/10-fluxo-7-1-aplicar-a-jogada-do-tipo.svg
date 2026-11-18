@@ -9,14 +9,14 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Mudança de tipo ou decisão da mesa mensal"]):::hipotese
-      n_t1["Mostrar a jogada do tipo e a mensagem sugerida"]:::hipotese
-      n_g1{"O tipo é de risco?"}:::hipotese
-      n_t2["Decidir a intensidade pelo Potencial do parceiro"]:::hipotese
-      n_t3["Aplicar a ação do tipo com o parceiro"]:::hipotese
-      n_t4["Registrar a jogada e a próxima data"]:::hipotese
-      n_f1(["Caso de risco encaminhado para a retomada"]):::hipotese
-      n_f2(["Jogada aplicada"]):::hipotese
+      n_i1(["Mudança de tipo ou decisão da mesa mensal"]):::confirmado
+      n_t1["Mostrar a jogada do tipo e a mensagem sugerida"]:::confirmado
+      n_g1{"O tipo é de risco?"}:::confirmado
+      n_t2["Decidir a intensidade pelo Potencial do parceiro"]:::confirmado
+      n_t3["Aplicar a ação do tipo com o parceiro"]:::confirmado
+      n_t4["Registrar a jogada e a próxima data"]:::confirmado
+      n_f1(["Caso de risco encaminhado para a retomada"]):::confirmado
+      n_f2(["Jogada aplicada"]):::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_g1

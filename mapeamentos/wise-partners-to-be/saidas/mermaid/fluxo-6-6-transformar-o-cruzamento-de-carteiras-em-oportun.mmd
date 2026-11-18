@@ -4,14 +4,14 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Coincidências do cruzamento disponíveis"]):::hipotese
-      n_t1["Listar as contas em comum e as vizinhas"]:::hipotese
-      n_t2["Escolher uma jogada para cada conta"]:::hipotese
-      n_t3["Combinar a jogada com o parceiro"]:::hipotese
-      n_g1{"O parceiro topa a jogada?"}:::hipotese
-      n_t4["Registrar a oportunidade com a porta cruzamento"]:::hipotese
-      n_f1(["Jogada descartada"]):::hipotese
-      n_f2(["Oportunidades criadas"]):::hipotese
+      n_i1(["Coincidências do cruzamento disponíveis"]):::confirmado
+      n_t1["Listar as contas em comum e as vizinhas"]:::confirmado
+      n_t2["Escolher uma jogada para cada conta"]:::confirmado
+      n_t3["Combinar a jogada com o parceiro"]:::confirmado
+      n_g1{"O parceiro topa a jogada?"}:::confirmado
+      n_t4["Registrar a oportunidade com a porta cruzamento"]:::confirmado
+      n_f1(["Jogada descartada"]):::confirmado
+      n_f2(["Oportunidades criadas"]):::confirmado
     end
     n_i1 --> n_t1
     n_t1 --> n_t2

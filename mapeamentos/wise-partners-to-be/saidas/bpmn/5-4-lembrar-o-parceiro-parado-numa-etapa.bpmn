@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-97" name="5.4 Lembrar o parceiro parado numa etapa" processRef="Process_P-97" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-97" name="5.4 Lembrar o parceiro parado numa etapa" isExecutable="false">
-    <bpmn:documentation>Sem prazo em dias, o processo não estoura; o que existe é um lembrete. Quando o parceiro fica na mesma etapa além do limite, o portal manda um e-mail com o próximo passo; se ele continuar parado, o caso entra na fila de exceções com os dias na etapa, e o Gerente decide se vale uma mensagem pessoal. No portal: conta os dias em cada etapa, envia o lembrete e põe o caso na fila. [status do fluxo: Confirmado; evidências: EV-0349]</bpmn:documentation>
+    <bpmn:documentation>Sem prazo em dias, o processo não estoura; o que existe é um lembrete. Quando o parceiro fica na mesma etapa além do limite, o portal manda um e-mail com o próximo passo; se ele continuar parado, o caso entra na fila de exceções com os dias na etapa, e o Gerente decide se vale uma mensagem pessoal. O lembrete sai depois de 14 dias na mesma etapa. Depois de 3 lembretes sem avanço, o parceiro fica adormecido: mantém o acesso, para de receber lembretes, sai das contas de parceiros ativos e volta sozinho se um cliente se cadastrar pelo link. No portal: conta os dias em cada etapa, envia o lembrete e põe o caso na fila. [status do fluxo: Confirmado; evidências: EV-0349]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-97">
       <bpmn:lane id="Lane_P-97_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-97_i1</bpmn:flowNodeRef>
@@ -19,7 +19,7 @@
       <bpmn:lane id="Lane_P-97_PA-05" name="Responsável nomeado no parceiro">
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-97_i1" name="Parceiro na mesma etapa além do limite"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-97_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-97_i1_def" /></bpmn:startEvent>
+    <bpmn:startEvent id="P-97_i1" name="Parceiro há 14 dias na mesma etapa"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-97_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-97_i1_def" /></bpmn:startEvent>
     <bpmn:serviceTask id="P-97_t1" name="Enviar o lembrete por e-mail com o próximo passo"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-97_F1</bpmn:incoming><bpmn:outgoing>P-97_F2</bpmn:outgoing></bpmn:serviceTask>
     <bpmn:intermediateCatchEvent id="P-97_e1" name="Prazo depois do lembrete"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-97_F2</bpmn:incoming><bpmn:outgoing>P-97_F3</bpmn:outgoing><bpmn:timerEventDefinition id="P-97_e1_def" /></bpmn:intermediateCatchEvent>
     <bpmn:exclusiveGateway id="P-97_g1" name="O parceiro avançou de etapa?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-97_F3</bpmn:incoming><bpmn:outgoing>P-97_F4</bpmn:outgoing><bpmn:outgoing>P-97_F5</bpmn:outgoing></bpmn:exclusiveGateway>

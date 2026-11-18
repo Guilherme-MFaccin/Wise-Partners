@@ -9,20 +9,20 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro entra num tipo de risco"]):::hipotese
-      n_i2(["Descumprimento do termo ou dano a um cliente"]):::hipotese
-      n_s1[["Retomar parceiro em risco pela abordagem do tipo"]]:::hipotese
-      n_g1{"O parceiro foi retomado?"}:::hipotese
-      n_s2[["Desligar parceiro"]]:::hipotese
-      n_g2{"A parceria foi encerrada?"}:::hipotese
-      n_s3[["Encerrar a parceria a pedido"]]:::hipotese
-      n_f1(["Parceiro retomado"]):::hipotese
-      n_f2(["Parceria encerrada pela Wise"]):::hipotese
-      n_f3(["Parceiro mantido em observação"]):::hipotese
-      n_f4(["Parceria encerrada a pedido"]):::hipotese
+      n_i1(["Parceiro entra num tipo de risco"]):::confirmado
+      n_i2(["Descumprimento do termo ou dano a um cliente"]):::confirmado
+      n_s1[["Retomar parceiro em risco pela abordagem do tipo"]]:::confirmado
+      n_g1{"O parceiro foi retomado?"}:::confirmado
+      n_s2[["Desligar parceiro"]]:::confirmado
+      n_g2{"A parceria foi encerrada?"}:::confirmado
+      n_s3[["Encerrar a parceria a pedido"]]:::confirmado
+      n_f1(["Parceiro retomado"]):::confirmado
+      n_f2(["Parceria encerrada pela Wise"]):::confirmado
+      n_f3(["Parceiro mantido em observação"]):::confirmado
+      n_f4(["Parceria encerrada a pedido"]):::confirmado
     end
     subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
-      n_i3(["Parceiro pede para sair"]):::hipotese
+      n_i3(["Parceiro pede para sair"]):::confirmado
     end
     n_i1 --&gt; n_s1
     n_s1 --&gt; n_g1

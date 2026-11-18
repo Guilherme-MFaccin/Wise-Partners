@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-30" name="5.3 Declarar a ativação" processRef="Process_P-30" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-30" name="5.3 Declarar a ativação" isExecutable="false">
-    <bpmn:documentation>O parceiro está ativado quando o primeiro cliente se cadastra pelo link dele, desde que não seja um teste do próprio parceiro. Não há prazo: quem não avança recebe o lembrete do portal (5.4). No portal: confere se não é teste, marca a ativação sozinho e avisa o parceiro e o Gerente. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:documentation>O parceiro está ativado quando o primeiro cliente se cadastra pelo link dele, desde que não seja um teste do próprio parceiro. Não há prazo: quem não avança recebe o lembrete do portal (5.4). No portal: confere se não é teste, marca a ativação sozinho e avisa o parceiro e o Gerente. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-30">
       <bpmn:lane id="Lane_P-30_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-30_i1</bpmn:flowNodeRef>
@@ -16,13 +16,13 @@
         <bpmn:flowNodeRef>P-30_f2</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-30_i1" name="Primeiro cliente cadastrado pelo link do parceiro"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-30_F1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:serviceTask id="P-30_t1" name="Conferir se o cadastro não é do próprio parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F1</bpmn:incoming><bpmn:outgoing>P-30_F2</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:exclusiveGateway id="P-30_g1" name="É cadastro de teste?"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F2</bpmn:incoming><bpmn:outgoing>P-30_F3</bpmn:outgoing><bpmn:outgoing>P-30_F4</bpmn:outgoing></bpmn:exclusiveGateway>
-    <bpmn:serviceTask id="P-30_t2" name="Marcar o parceiro como ativado e avisar os dois lados"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F4</bpmn:incoming><bpmn:outgoing>P-30_F5</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:task id="P-30_t3" name="Parabenizar no grupo e explicar como o cliente será atendido"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F5</bpmn:incoming><bpmn:outgoing>P-30_F6</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="P-30_f1" name="Cadastro de teste ignorado"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F3</bpmn:incoming></bpmn:endEvent>
-    <bpmn:endEvent id="P-30_f2" name="Parceiro ativado"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-30_F6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="P-30_i1" name="Primeiro cliente cadastrado pelo link do parceiro"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-30_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:serviceTask id="P-30_t1" name="Conferir se o cadastro não é do próprio parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F1</bpmn:incoming><bpmn:outgoing>P-30_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="P-30_g1" name="É cadastro de teste?"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F2</bpmn:incoming><bpmn:outgoing>P-30_F3</bpmn:outgoing><bpmn:outgoing>P-30_F4</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="P-30_t2" name="Marcar o parceiro como ativado e avisar os dois lados"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F4</bpmn:incoming><bpmn:outgoing>P-30_F5</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:task id="P-30_t3" name="Parabenizar no grupo e explicar como o cliente será atendido"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F5</bpmn:incoming><bpmn:outgoing>P-30_F6</bpmn:outgoing></bpmn:task>
+    <bpmn:endEvent id="P-30_f1" name="Cadastro de teste ignorado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F3</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="P-30_f2" name="Parceiro ativado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-30_F6</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-30_F1" name="" sourceRef="P-30_i1" targetRef="P-30_t1" />
     <bpmn:sequenceFlow id="P-30_F2" name="" sourceRef="P-30_t1" targetRef="P-30_g1" />
     <bpmn:sequenceFlow id="P-30_F3" name="Sim" sourceRef="P-30_g1" targetRef="P-30_f1" />
@@ -34,13 +34,13 @@
     <bpmndi:BPMNPlane id="BPMNPlane_P-30" bpmnElement="Collaboration_P-30">
       <bpmndi:BPMNShape id="Participant_P-30_di" bpmnElement="Participant_P-30" isHorizontal="true"><dc:Bounds x="0" y="0" width="1176" height="252" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-30_PA-01_di" bpmnElement="Lane_P-30_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1146" height="252" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_i1_di" bpmnElement="P-30_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_t1_di" bpmnElement="P-30_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_g1_di" bpmnElement="P-30_g1" isMarkerVisible="true" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="505" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="15" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_t2_di" bpmnElement="P-30_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="142" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_t3_di" bpmnElement="P-30_t3" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_f1_di" bpmnElement="P-30_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="688" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-30_f2_di" bpmnElement="P-30_f2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1040" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_i1_di" bpmnElement="P-30_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_t1_di" bpmnElement="P-30_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_g1_di" bpmnElement="P-30_g1" isMarkerVisible="true" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="505" y="49" width="50" height="50" /><bpmndi:BPMNLabel><dc:Bounds x="475" y="15" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_t2_di" bpmnElement="P-30_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="142" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_t3_di" bpmnElement="P-30_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_f1_di" bpmnElement="P-30_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="688" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="651" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-30_f2_di" bpmnElement="P-30_f2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1040" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="98" width="110" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-30_F1_di" bpmnElement="P-30_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-30_F2_di" bpmnElement="P-30_F2"><di:waypoint x="418" y="74" /><di:waypoint x="505" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-30_F3_di" bpmnElement="P-30_F3"><di:waypoint x="555" y="74" /><di:waypoint x="688" y="74" /><bpmndi:BPMNLabel><dc:Bounds x="561" y="54" width="30" height="14" /></bpmndi:BPMNLabel></bpmndi:BPMNEdge>

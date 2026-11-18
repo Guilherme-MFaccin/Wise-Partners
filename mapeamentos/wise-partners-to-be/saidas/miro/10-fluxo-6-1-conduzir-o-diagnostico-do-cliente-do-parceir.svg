@@ -9,33 +9,33 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Cliente se cadastra pelo link do parceiro"]):::hipotese
-      n_t1["Registrar o cadastro com a origem no parceiro e avisar o parceiro"]:::hipotese
-      n_g1{"A empresa está no ICP da Wise?"}:::hipotese
-      n_t2["Liberar o autodiagnóstico na hora"]:::hipotese
-      n_t3["Mostrar o resultado e o link do Wise Hub"]:::hipotese
-      n_t4["Enviar o resultado e um próximo passo por e-mail"]:::hipotese
-      n_t5["Liberar a agenda para a reunião"]:::hipotese
-      n_e1&gt;"Cliente marca o horário"]:::hipotese
-      n_t6["Conferir a agenda da semana"]:::hipotese
-      n_g2{"Passou de 10 reuniões na semana?"}:::hipotese
-      n_t7["Passar a reunião a um consultor da Wise"]:::hipotese
-      n_t8["Abrir a reunião no horário marcado (Gerente ou consultor)"]:::hipotese
-      n_g0{"O cliente compareceu?"}:::hipotese
-      n_t9["Oferecer um novo horário ou o autodiagnóstico"]:::hipotese
-      n_ta["Conduzir o diagnóstico pela Matriz 5x5"]:::hipotese
-      n_g3{"Pesquisa aprovada pelo CEP e consentida pelo cliente?"}:::hipotese
-      n_tb["Aplicar a pesquisa"]:::hipotese
-      n_tc["Enviar o mapa da reunião em até 2 dias úteis"]:::hipotese
-      n_td["Liberar o acesso ao Wise Hub"]:::hipotese
-      n_g4{"O cliente autorizou mostrar o resultado ao parceiro?"}:::hipotese
-      n_te["Liberar o resultado ao parceiro no portal"]:::hipotese
-      n_g5{"O cliente pediu para contratar a consultoria?"}:::hipotese
-      n_tf["Abrir a oportunidade com a origem no parceiro"]:::hipotese
-      n_f0(["Reunião não realizada"]):::hipotese
-      n_f1(["Autodiagnóstico entregue"]):::hipotese
-      n_f2(["Diagnóstico entregue"]):::hipotese
-      n_f3(["Oportunidade aberta"]):::hipotese
+      n_i1(["Cliente se cadastra pelo link do parceiro"]):::confirmado
+      n_t1["Registrar o cadastro com a origem no parceiro e avisar o parceiro"]:::confirmado
+      n_g1{"A empresa está no ICP da Wise?"}:::confirmado
+      n_t2["Liberar o autodiagnóstico na hora"]:::confirmado
+      n_t3["Mostrar o resultado e o link do Wise Hub"]:::confirmado
+      n_t4["Enviar o resultado e um próximo passo por e-mail"]:::confirmado
+      n_t5["Liberar a agenda para a reunião"]:::confirmado
+      n_e1&gt;"Cliente marca o horário"]:::confirmado
+      n_t6["Conferir a agenda da semana"]:::confirmado
+      n_g2{"Passou de 10 reuniões na semana?"}:::confirmado
+      n_t7["Passar a reunião a um consultor da Wise"]:::confirmado
+      n_t8["Abrir a reunião no horário marcado (Gerente ou consultor)"]:::confirmado
+      n_g0{"O cliente compareceu?"}:::confirmado
+      n_t9["Oferecer um novo horário ou o autodiagnóstico"]:::confirmado
+      n_ta["Conduzir o diagnóstico pela Matriz 5x5"]:::confirmado
+      n_g3{"Pesquisa aprovada pelo CEP e consentida pelo cliente?"}:::confirmado
+      n_tb["Aplicar a pesquisa"]:::confirmado
+      n_tc["Enviar o mapa da reunião em até 2 dias úteis"]:::confirmado
+      n_td["Liberar o acesso ao Wise Hub"]:::confirmado
+      n_g4{"O cliente autorizou mostrar o resultado ao parceiro?"}:::confirmado
+      n_te["Liberar o resultado ao parceiro no portal"]:::confirmado
+      n_g5{"O cliente pediu para contratar a consultoria?"}:::confirmado
+      n_tf["Abrir a oportunidade com a origem no parceiro"]:::confirmado
+      n_f0(["Reunião não realizada"]):::confirmado
+      n_f1(["Autodiagnóstico entregue"]):::confirmado
+      n_f2(["Diagnóstico entregue"]):::confirmado
+      n_f3(["Oportunidade aberta"]):::confirmado
     end
     ext_X1[/"Parceiro"/]
     ext_X2[/"Cliente do parceiro"/]

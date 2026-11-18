@@ -3,7 +3,7 @@
   "organizacao": {
     "nome": "Programa Wise Partners (to-be)",
     "slug": "x",
-    "descricao": "Canal de aquisição mais barato que os canais ativos: um ecossistema pequeno, orquestrado pela Wise Makers com o portal no centro, em que parceiros que vendem para a indústria geram e recebem oportunidades e ganham comunidade, reconhecimento e comissão por regra única.",
+    "descricao": "Canal de aquisição mais barato que os canais ativos: um ecossistema pequeno, orquestrado pela Wise Makers com o portal no centro, em que parceiros que vendem para a indústria geram e recebem oportunidades e ganham comunidade, reconhecimento e comissão pela regra de comissão.",
     "setor": "Consultoria de gestão para indústrias (ecossistema de parceiros)",
     "objetivo_do_mapeamento": "Refatorar todos os conceitos de uma vez: princípios ordenados de 17 livros, hierarquia e arquitetura de processos to-be com o portal no centro da gestão, e o modelo de negócio do programa. As decisões do patrocinador não pesam mais que os livros: onde divergem, a divergência fica registrada e é conciliada.",
     "escopo": {
@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-10",
-    "atualizado_em": "2026-11-10"
+    "criado_em": "2026-11-18",
+    "atualizado_em": "2026-11-18"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -99,13 +99,14 @@
     {
       "id": "F-005",
       "tema": "estrategia",
-      "texto": "Princípio 5 (Como o programa se organiza): Interface simples e estável, operação mudando por dentro. Regra única de comissão, poucas regras aplicadas sempre do mesmo jeito, termo curto; a complexidade fica dentro do portal, nunca na frente do parceiro.",
+      "texto": "Princípio 5 (Como o programa se organiza): Interface simples e estável, operação mudando por dentro. Regra de comissão, poucas regras aplicadas sempre do mesmo jeito, termo curto; a complexidade fica dentro do portal, nunca na frente do parceiro.",
       "status": "confirmado",
       "evidencias": [
         "EV-0024",
         "EV-0060",
         "EV-0061",
-        "EV-0062"
+        "EV-0062",
+        "EV-0377"
       ]
     },
     {
@@ -185,14 +186,15 @@
     {
       "id": "F-012",
       "tema": "estrategia",
-      "texto": "Princípio 12 (Como o programa se relaciona): Norma social antes de norma de mercado. Na comunidade, o parceiro é reconhecido por status, rede e acesso; a comissão é a regra única e fica fora da conversa da comunidade.",
+      "texto": "Princípio 12 (Como o programa se relaciona): Norma social antes de norma de mercado. Na comunidade, o parceiro é reconhecido por status, rede e acesso; a comissão segue a regra de comissão e fica fora da conversa da comunidade.",
       "status": "confirmado",
       "evidencias": [
         "EV-0080",
         "EV-0081",
         "EV-0082",
         "EV-0035",
-        "EV-0232"
+        "EV-0232",
+        "EV-0377"
       ]
     },
     {
@@ -407,7 +409,7 @@
     {
       "id": "F-029",
       "tema": "receita",
-      "texto": "Comissão por regra única, sem exceção: 40% da primeira mensalidade ao parceiro e 10% ao Gerente na Wise Makers e na Tríade; 6% e 2% do projeto na Swallow. Sobre o LTV, fica entre 2% e 4% para clientes de 12 a 24 meses. O dinheiro é igual para todos; o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio). A regra é revista depois de dois trimestres com dados de permanência dos clientes indicados.",
+      "texto": "Comissão por uma regra geral, igual para todos nesta fase: 40% da primeira mensalidade ao parceiro e 10% ao Gerente na Wise Makers e na Tríade; 6% e 2% do projeto na Swallow. Sobre o LTV, fica entre 2% e 4% para clientes de 12 a 24 meses. O dinheiro é igual para todos; o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio). A regra é revista depois de dois trimestres com dados de permanência dos clientes indicados.",
       "status": "confirmado",
       "evidencias": [
         "EV-0024",
@@ -415,7 +417,8 @@
         "EV-0127",
         "EV-0029",
         "EV-0128",
-        "EV-0129"
+        "EV-0129",
+        "EV-0377"
       ]
     },
     {
@@ -598,13 +601,14 @@
     {
       "id": "F-044",
       "tema": "receita",
-      "texto": "Cliente que contrata a Wise depois de um diagnóstico oferecido pelo parceiro conta como indicação do parceiro e gera a comissão da regra única.",
+      "texto": "Cliente que contrata a Wise depois de um diagnóstico oferecido pelo parceiro conta como indicação do parceiro e gera a comissão pela regra de comissão.",
       "status": "confirmado",
       "evidencias": [
         "EV-0308",
         "EV-0024",
         "EV-0309",
-        "EV-0325"
+        "EV-0325",
+        "EV-0377"
       ]
     },
     {
@@ -767,7 +771,8 @@
         "EV-0167",
         "EV-0069",
         "EV-0332",
-        "EV-0350"
+        "EV-0350",
+        "EV-0387"
       ]
     },
     {
@@ -825,7 +830,8 @@
       "status": "confirmado",
       "evidencias": [
         "EV-0023",
-        "EV-0055"
+        "EV-0055",
+        "EV-0387"
       ]
     }
   ],
@@ -932,7 +938,8 @@
       "externo": true,
       "status": "confirmado",
       "evidencias": [
-        "EV-0332"
+        "EV-0332",
+        "EV-0388"
       ],
       "descricao": "Empresa que se cadastrou pela landing page e ainda não foi aprovada."
     },
@@ -944,7 +951,8 @@
       "status": "confirmado",
       "evidencias": [
         "EV-0362",
-        "EV-0005"
+        "EV-0005",
+        "EV-0388"
       ],
       "descricao": "Atende o cliente da Wise; relata necessidades para a Prateleira, faz a checagem aos 6 e 12 meses e pode conduzir diagnósticos quando a agenda do Gerente enche. Não entra no portal."
     }
@@ -1126,13 +1134,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0145",
         "EV-0146",
-        "EV-0063"
+        "EV-0063",
+        "EV-0378"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1174,13 +1181,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0057",
         "EV-0147",
-        "EV-0148"
+        "EV-0148",
+        "EV-0379"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1189,8 +1195,10 @@
       ],
       "portal": "registra o papel por categoria e os papéis de cada parceiro por escopo.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0379"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -1276,20 +1284,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0120",
-        "EV-0121"
+        "EV-0121",
+        "EV-0380"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "mostra a matriz de parceiros Premium e Elite por elemento e onde a cobertura está fraca.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0380"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -1388,16 +1397,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0149",
         "EV-0150",
         "EV-0151",
         "EV-0279",
         "EV-0336",
-        "EV-0334"
+        "EV-0334",
+        "EV-0381"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1406,8 +1414,10 @@
       ],
       "portal": "guarda o perfil e os critérios usados na fila.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0381"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -1473,7 +1483,7 @@
       "nome": "Definir as regras do programa",
       "pai": "P-01",
       "ordem": 4,
-      "descricao": "Níveis, benefícios e critérios de subida, regra única de comissão, contrapartida da Prateleira, regulamento curto, política de dados e termo de adesão, todos poucos e estáveis. No portal: gera a página de regras do parceiro a partir da configuração e versiona cada mudança com vigência de 30 dias.",
+      "descricao": "Níveis, benefícios e critérios de subida, regra de comissão, contrapartida da Prateleira, regulamento curto, política de dados e termo de adesão, todos poucos e estáveis. No portal: gera a página de regras do parceiro a partir da configuração e versiona cada mudança com vigência de 30 dias.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -1495,15 +1505,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0024",
         "EV-0023",
         "EV-0152",
         "EV-0061",
-        "EV-0060"
+        "EV-0060",
+        "EV-0377",
+        "EV-0382"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1540,13 +1550,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0027",
         "EV-0023",
-        "EV-0153"
+        "EV-0153",
+        "EV-0383"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1555,8 +1564,10 @@
       ],
       "portal": "calcula o CAC do Wise Partners a cada mês a partir de comissões, horas, anúncios e custos diretos.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0383"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -1623,7 +1634,7 @@
       "nome": "Definir a fase e as metas do programa",
       "pai": "P-01",
       "ordem": 6,
-      "descricao": "Registrar a fase e os portões da próxima; o Diretor define as metas, que entram quando fizer sentido. No portal: mostra a distância de cada portão e registra as metas do programa e por pessoa.",
+      "descricao": "Registrar a fase e os portões da próxima; o Diretor define as metas, que entram quando fizer sentido. Os portões continuam como estão e são revistos no próximo fechamento trimestral, com os números reais da campanha. No portal: mostra a distância de cada portão e registra as metas do programa e por pessoa.",
       "dono": "PA-02",
       "participantes": [
         "PA-01"
@@ -1654,7 +1665,8 @@
       "evidencias": [
         "EV-0006",
         "EV-0095",
-        "EV-0154"
+        "EV-0154",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1663,8 +1675,10 @@
       ],
       "portal": "mostra a distância de cada portão e registra as metas do programa e por pessoa.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -1770,13 +1784,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0096",
         "EV-0097",
-        "EV-0085"
+        "EV-0085",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1840,7 +1853,8 @@
         "EV-0070",
         "EV-0071",
         "EV-0341",
-        "EV-0349"
+        "EV-0349",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -1850,8 +1864,10 @@
       "portal": "gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, retorno pendente ao parceiro) e prepara a mensagem.",
       "quadro": "Fila única de tarefas (por exceção)",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -2025,16 +2041,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0025",
         "EV-0099",
         "EV-0155",
         "EV-0156",
         "EV-0031",
-        "EV-0045"
+        "EV-0045",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2046,8 +2061,10 @@
       "portal": "monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -2193,14 +2210,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0066",
         "EV-0139",
-        "EV-0157"
+        "EV-0157",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2211,8 +2226,10 @@
       "portal": "mostra o cubo, as mudanças de tipo, a jogada sugerida para cada parceiro e o funil do onboarding com os dias em cada etapa.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -2316,13 +2333,11 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0158",
-        "EV-0281"
+        "EV-0281",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2333,8 +2348,10 @@
       "portal": "roda as apurações, mostra o resultado e agenda as revisões.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -2465,22 +2482,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0159",
-        "EV-0160"
+        "EV-0160",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "versiona a regra, registra a publicação e aplica a regra nova na data.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -2596,7 +2612,8 @@
         "EV-0089",
         "EV-0090",
         "EV-0092",
-        "EV-0257"
+        "EV-0257",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2645,17 +2662,14 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0161",
         "EV-0023",
         "EV-0027",
         "EV-0028",
-        "EV-0282"
+        "EV-0282",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2665,8 +2679,10 @@
       ],
       "portal": "calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -2805,12 +2821,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0139",
         "EV-0091",
@@ -2818,7 +2829,8 @@
         "EV-0141",
         "EV-0092",
         "EV-0163",
-        "EV-0137"
+        "EV-0137",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2968,7 +2980,7 @@
       "nome": "Ouvir o pulso da relação",
       "pai": "P-14",
       "ordem": 3,
-      "descricao": "Três perguntas de 1 a 5, respondidas pelo parceiro e pelo Gerente sobre o outro lado (daria referência positiva, a parceria cumpre o combinado, há equilíbrio no que cada lado dá), mais a nota de satisfação. No portal: envia a pesquisa, junta as respostas e alimenta o fator Relação.",
+      "descricao": "Três perguntas de 1 a 5, respondidas pelo parceiro e pelo Gerente sobre o outro lado (daria referência positiva, a parceria cumpre o combinado, há equilíbrio no que cada lado dá), mais a nota de satisfação. O Gerente responde sobre os Premium e Elite; para o Select vale só a nota do parceiro. No portal: envia a pesquisa, junta as respostas e alimenta o fator Relação.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Fechamento trimestral",
@@ -2992,13 +3004,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0164",
         "EV-0165",
-        "EV-0137"
+        "EV-0137",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3007,8 +3018,10 @@
       ],
       "portal": "envia a pesquisa, junta as respostas e alimenta o fator Relação.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -3127,6 +3140,10 @@
         {
           "nome": "Parceiro Elite na fila do Base Ativa",
           "para": "P-44"
+        },
+        {
+          "nome": "Parceiros Premium e Elite",
+          "para": "P-85"
         }
       ],
       "cliente": "Parceiro",
@@ -3138,11 +3155,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0015",
         "EV-0166",
@@ -3153,15 +3166,18 @@
         "EV-0084",
         "EV-0150",
         "EV-0259",
-        "EV-0338"
+        "EV-0338",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "apura os critérios, lista os candidatos à subida e registra a decisão com o motivo.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -3312,14 +3328,13 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0134",
         "EV-0136",
         "EV-0095",
-        "EV-0133"
+        "EV-0133",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3329,8 +3344,10 @@
       ],
       "portal": "calcula as três medidas e mostra cada portão em verde ou vermelho.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -3420,18 +3437,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0167",
         "EV-0168",
         "EV-0331",
         "EV-0332",
         "EV-0333",
-        "EV-0334"
+        "EV-0334",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3443,8 +3457,10 @@
       "tipo": "finalistico",
       "quadro": "Quadro da jornada do parceiro",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-06"
@@ -3723,13 +3739,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "cliente",
-        "descricao",
-        "entradas",
-        "gatilho",
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0168",
         "EV-0169",
@@ -3739,15 +3749,18 @@
         "EV-0007",
         "EV-0175",
         "EV-0100",
-        "EV-0340"
+        "EV-0340",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-06"
@@ -3863,7 +3876,7 @@
       "nome": "Qualificar o candidato pelo WhatsApp",
       "pai": "P-20",
       "ordem": 2,
-      "descricao": "Pela própria mensagem, o Gerente confirma as informações que o candidato deixou no cadastro e aplica os critérios: ter clientes empresariais que podem estar no ICP da Wise (vale para qualquer tipo de parceiro), não ser concorrente da Wise Makers, mostrar interesse real em oferecer a consultoria aos clientes e ter um responsável na empresa para cuidar da parceria. Não há mínimo de clientes ativos. O Gerente cuida da fila sempre. No portal: guarda a observação de cada contato e muda a situação do cadastro.",
+      "descricao": "Pela própria mensagem, o Gerente confirma as informações que o candidato deixou no cadastro e aplica os critérios: ter clientes empresariais que podem estar no ICP da Wise (vale para qualquer tipo de parceiro), não ser concorrente da Wise Makers, mostrar interesse real em oferecer a consultoria aos clientes e ter um responsável na empresa para cuidar da parceria. Não há mínimo de clientes ativos. O Gerente cuida da fila sempre. Quem chegou a trocar mensagens e não passa recebe uma mensagem curta e respeitosa, sem o motivo; quem foi barrado na conferência do cadastro não recebe nada. No portal: guarda a observação de cada contato e muda a situação do cadastro.",
       "dono": "PA-01",
       "participantes": [
         "PA-06"
@@ -3894,9 +3907,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0168",
         "EV-0171",
@@ -3906,7 +3917,8 @@
         "EV-0336",
         "EV-0334",
         "EV-0332",
-        "EV-0337"
+        "EV-0337",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3915,8 +3927,10 @@
       ],
       "portal": "guarda a observação de cada contato e muda a situação do cadastro.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -4005,7 +4019,7 @@
       "nome": "Conduzir a conversa de entrada",
       "pai": "P-20",
       "ordem": 3,
-      "descricao": "Conversa do Gerente com o candidato, no lugar do workshop: perguntas sobre a empresa e os clientes dele; apresentação da Wise Makers, com números e casos; como o parceiro ganha junto com a Wise; a consultoria gratuita que ele oferece aos clientes; o Wise Hub por dentro e os resultados dos clientes; como é fácil indicar (o link da página do cliente, no portal Wise Partners, com o login dele); o minicurso de como vender a Wise. No fim, o Gerente aprova o cadastro, cria a conta e acompanha o parceiro entrando no portal. No portal: aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
+      "descricao": "Conversa do Gerente com o candidato, no lugar do workshop: perguntas sobre a empresa e os clientes dele; apresentação da Wise Makers, com números e casos; como o parceiro ganha junto com a Wise; a consultoria gratuita que ele oferece aos clientes; o Wise Hub por dentro e os resultados dos clientes; como é fácil indicar (o link da página do cliente, no portal Wise Partners, com o login dele); o minicurso de como vender a Wise. No fim, o Gerente aprova o cadastro, cria a conta e acompanha o parceiro entrando no portal. A conversa dura 45 minutos. Na primeira falta, o Gerente oferece um novo horário; na segunda, o cadastro sai da fila. No portal: aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
       "dono": "PA-01",
       "participantes": [
         "PA-06"
@@ -4048,11 +4062,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0168",
         "EV-0172",
@@ -4060,7 +4070,8 @@
         "EV-0174",
         "EV-0333",
         "EV-0338",
-        "EV-0339"
+        "EV-0339",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4069,8 +4080,10 @@
       ],
       "portal": "aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-06"
@@ -4285,7 +4298,7 @@
       "nome": "Retomar candidato sem resposta",
       "pai": "P-20",
       "ordem": 4,
-      "descricao": "Para quem não respondeu ao primeiro contato, não marcou horário ou pediu para falar depois: um número limitado de novas mensagens, espaçadas, cada uma com algo útil. Sem resposta até o fim, o cadastro sai da fila como 'sem resposta'; a empresa pode se cadastrar de novo. No portal: mostra há quantos dias o cadastro está sem resposta, conta as tentativas e lembra a data de retomada.",
+      "descricao": "Para quem não respondeu ao primeiro contato, não marcou horário ou pediu para falar depois: um número limitado de novas mensagens, espaçadas, cada uma com algo útil. Sem resposta até o fim, o cadastro sai da fila como 'sem resposta'; a empresa pode se cadastrar de novo. São 3 mensagens em 7 dias úteis: a primeira e mais duas. No portal: mostra há quantos dias o cadastro está sem resposta, conta as tentativas e lembra a data de retomada.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Candidato sem resposta, sem horário marcado ou que pediu para retomar depois",
@@ -4305,16 +4318,14 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0176",
         "EV-0177",
         "EV-0178",
         "EV-0283",
-        "EV-0341"
+        "EV-0341",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4323,8 +4334,10 @@
       ],
       "portal": "mostra há quantos dias o cadastro está sem resposta, conta as tentativas e lembra a data de retomada.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -4490,7 +4503,8 @@
         "EV-0258",
         "EV-0342",
         "EV-0343",
-        "EV-0344"
+        "EV-0344",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4560,7 +4574,7 @@
       "nome": "Preparar a entrada do parceiro",
       "pai": "P-26",
       "ordem": 1,
-      "descricao": "O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos.",
+      "descricao": "O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Acesso criado na conversa de entrada",
@@ -4587,8 +4601,7 @@
       "regras": [],
       "status": "confirmado",
       "hipoteses": [
-        "entradas",
-        "saidas"
+        "descricao"
       ],
       "evidencias": [
         "EV-0012",
@@ -4597,15 +4610,18 @@
         "EV-0181",
         "EV-0345",
         "EV-0346",
-        "EV-0347"
+        "EV-0347",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "gera o link, a página do cliente com a logo do parceiro e os acessos.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -4717,12 +4733,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0168",
         "EV-0182",
@@ -4731,7 +4742,8 @@
         "EV-0338",
         "EV-0357",
         "EV-0223",
-        "EV-0224"
+        "EV-0224",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -4741,8 +4753,10 @@
       ],
       "portal": "processa o cruzamento e sugere as primeiras jogadas.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -4885,23 +4899,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0184",
         "EV-0285",
-        "EV-0344"
+        "EV-0344",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "confere se não é teste, marca a ativação sozinho e avisa o parceiro e o Gerente.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -5022,14 +5035,13 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0054",
         "EV-0055",
         "EV-0185",
-        "EV-0237"
+        "EV-0237",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5253,13 +5265,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0186",
         "EV-0074",
-        "EV-0286"
+        "EV-0286",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5268,8 +5279,10 @@
       ],
       "portal": "registra pelo link, pelo cruzamento ou à mão, envia a confirmação e calcula a nota de qualidade.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -5394,7 +5407,8 @@
         "EV-0025",
         "EV-0187",
         "EV-0026",
-        "EV-0366"
+        "EV-0366",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5403,8 +5417,10 @@
       ],
       "portal": "registra para quem foi o lead e quando.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-03"
@@ -5512,9 +5528,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0074",
         "EV-0075",
@@ -5522,7 +5536,8 @@
         "EV-0026",
         "EV-0077",
         "EV-0237",
-        "EV-0347"
+        "EV-0347",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5713,13 +5728,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "gatilho",
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0188",
         "EV-0023",
@@ -5727,7 +5736,8 @@
         "EV-0350",
         "EV-0189",
         "EV-0052",
-        "EV-0289"
+        "EV-0289",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5736,8 +5746,10 @@
       ],
       "portal": "lista os parceiros Premium e Elite por categoria, monta a página, registra a contrapartida combinada e o retorno do cliente.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-07"
@@ -5936,22 +5948,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0054",
         "EV-0190",
-        "EV-0191"
+        "EV-0191",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "sugere as jogadas por célula da matriz de contas.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -6051,7 +6063,7 @@
       "nome": "Pagar a comissão",
       "pai": "P-31",
       "ordem": 6,
-      "descricao": "Regra única: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro.",
+      "descricao": "Regra de comissão: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro.",
       "dono": "PA-04",
       "participantes": [
         "PA-01",
@@ -6079,23 +6091,23 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho",
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0024",
         "EV-0192",
-        "EV-0368"
+        "EV-0368",
+        "EV-0377",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula e avisa o financeiro.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-04",
@@ -6264,20 +6276,20 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
-        "EV-0005"
+        "EV-0005",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "cria a tarefa e registra o retorno.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-07"
@@ -6398,13 +6410,11 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0163",
-        "EV-0139"
+        "EV-0139",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6455,7 +6465,8 @@
         "EV-0163",
         "EV-0193",
         "EV-0194",
-        "EV-0138"
+        "EV-0138",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6464,8 +6475,10 @@
       ],
       "portal": "mostra a jogada e cria as tarefas da cadência do tipo.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -6593,14 +6606,13 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0195",
         "EV-0196",
         "EV-0197",
-        "EV-0360"
+        "EV-0360",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6754,14 +6766,11 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0198",
-        "EV-0290"
+        "EV-0290",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6769,8 +6778,10 @@
       "portal": "mostra o plano em calendário e conta cada ação como ação de valor no Ritmo.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -6859,7 +6870,7 @@
       "nome": "Conduzir o ciclo do Base Ativa",
       "pai": "P-40",
       "ordem": 4,
-      "descricao": "Formação gratuita e exclusiva para a base do parceiro Elite, organizada pela Wise, conforme as horas disponíveis: definir com o parceiro o tema e a data; o parceiro convida a própria base com o material da Wise; a Wise conduz a formação; os participantes recebem a oferta do diagnóstico pelo link do parceiro; o parceiro recebe um relatório de presença e resultados. No portal: controla a fila, a agenda, a lista de presença e o relatório.",
+      "descricao": "Formação gratuita e exclusiva para a base do parceiro Elite, organizada pela Wise, conforme as horas disponíveis: definir com o parceiro o tema e a data; o parceiro convida a própria base com o material da Wise; a Wise conduz a formação; os participantes recebem a oferta do diagnóstico pelo link do parceiro; o parceiro recebe um relatório de presença e resultados. O Base Ativa é só a formação: o método antigo de 12 semanas sai. Cada Elite tem uma formação por ano. No portal: controla a fila, a agenda, a lista de presença e o relatório.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -6886,17 +6897,14 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0199",
         "EV-0095",
         "EV-0019",
         "EV-0359",
-        "EV-0354"
+        "EV-0354",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -6904,8 +6912,10 @@
       "portal": "controla a fila, a agenda, a lista de presença e o relatório.",
       "quadro": "Agenda de rituais",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -7089,26 +7099,25 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0200",
         "EV-0291",
         "EV-0358",
         "EV-0357",
         "EV-0338",
-        "EV-0012"
+        "EV-0012",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "registra a subida, publica a ficha na Prateleira e avisa os dois lados.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -7281,7 +7290,8 @@
         "EV-0104",
         "EV-0202",
         "EV-0247",
-        "EV-0360"
+        "EV-0360",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7405,7 +7415,7 @@
       "nome": "Cultivar a comunidade Wise Partners",
       "pai": null,
       "ordem": 8,
-      "descricao": "A comunidade como lugar de pertencer: utilidade primeiro, ritual fixo e reconhecimento por status, rede e acesso. Para todos, desde a entrada: grupo de WhatsApp com a Wise, comunicado do mês e encontro trimestral. Para Premium e Elite: mentoria, eventos e formações, apresentações entre parceiros e encontros pequenos. No portal: registra quem participa, conta contribuições e oportunidades nascidas na comunidade, e prepara o comunicado do mês.",
+      "descricao": "A comunidade como lugar de pertencer: utilidade primeiro, ritual fixo e reconhecimento por status, rede e acesso. Para todos, desde a entrada: grupo de WhatsApp com a Wise, comunicado do mês e encontro trimestral. Para Premium e Elite: mentoria, eventos e formações, apresentações entre parceiros e encontros pequenos. Não há grupo geral de parceiros: cada parceiro tem o próprio grupo com a Wise, e o que é de todos vai pelo comunicado e pelo encontro trimestral. Um grupo geral só de Premium e Elite pode ser aberto quando houver Premium suficiente. No portal: registra quem participa, conta contribuições e oportunidades nascidas na comunidade, e prepara o comunicado do mês.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Calendário da comunidade",
@@ -7431,17 +7441,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0088",
         "EV-0203",
         "EV-0204",
         "EV-0257",
         "EV-0232",
-        "EV-0346"
+        "EV-0346",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7468,6 +7476,14 @@
         {
           "nome": "Objetivo da comunidade",
           "para": "P-49"
+        },
+        {
+          "nome": "Objetivo da comunidade",
+          "para": "P-84"
+        },
+        {
+          "nome": "Objetivo da comunidade",
+          "para": "P-85"
         }
       ],
       "cliente": "Gerente de Parcerias",
@@ -7479,13 +7495,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0143",
         "EV-0205",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7494,8 +7509,10 @@
       ],
       "portal": "mede os dois resultados escolhidos.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -7590,7 +7607,8 @@
       "evidencias": [
         "EV-0085",
         "EV-0206",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7630,14 +7648,13 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0207",
         "EV-0083",
         "EV-0178",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7646,8 +7663,10 @@
       ],
       "portal": "registra pedidos e contribuições e alimenta o equilíbrio de dar e receber.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -7743,14 +7762,13 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0080",
         "EV-0081",
         "EV-0208",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -7759,8 +7777,10 @@
       ],
       "portal": "sugere quem reconhecer a partir do cubo e do ranking.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -7857,7 +7877,8 @@
         "EV-0210",
         "EV-0110",
         "EV-0250",
-        "EV-0345"
+        "EV-0345",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -8056,9 +8077,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0108",
         "EV-0211",
@@ -8066,7 +8085,8 @@
         "EV-0213",
         "EV-0109",
         "EV-0214",
-        "EV-0250"
+        "EV-0250",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -8280,14 +8300,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "gatilho",
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0163",
         "EV-0215",
-        "EV-0138"
+        "EV-0138",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -8299,8 +8317,10 @@
       "tipo": "finalistico",
       "quadro": "Quadro da jornada do parceiro",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -8462,7 +8482,8 @@
         "EV-0163",
         "EV-0194",
         "EV-0164",
-        "EV-0138"
+        "EV-0138",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -8471,8 +8492,10 @@
       ],
       "portal": "mostra a abordagem e a mensagem sugerida do tipo.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -8609,7 +8632,7 @@
       "nome": "Desligar parceiro",
       "pai": "P-54",
       "ordem": 2,
-      "descricao": "O Gerente decide; o Igor assina o aviso formal de 30 dias, entregue em conversa e por escrito; encerramento com acessos revogados e comissões preservadas. No portal: gera o aviso e revoga os acessos na data.",
+      "descricao": "O Gerente decide; o Igor assina o aviso formal de 30 dias, entregue em conversa e por escrito; encerramento com acessos revogados e comissões preservadas. Oportunidades em negociação: na saída a pedido, a proteção de 180 dias continua valendo e a comissão é paga se o cliente fechar no prazo; no desligamento por descumprimento do termo, não. No portal: gera o aviso e revoga os acessos na data.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -8636,21 +8659,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0216",
         "EV-0007",
-        "EV-0034"
+        "EV-0034",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "gera o aviso e revoga os acessos na data.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -8772,7 +8796,7 @@
       "nome": "Encerrar a parceria a pedido",
       "pai": "P-54",
       "ordem": 3,
-      "descricao": "Saída por decisão de qualquer das partes, com aviso de 30 dias, registrada como encerramento amigável e com o motivo para aprender. No portal: registra o motivo da saída.",
+      "descricao": "Saída por decisão de qualquer das partes, com aviso de 30 dias, registrada como encerramento amigável e com o motivo para aprender. A proteção de 180 dias das oportunidades em negociação continua valendo depois da saída. No portal: registra o motivo da saída.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -8794,21 +8818,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "participantes"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0217",
         "EV-0218",
-        "EV-0293"
+        "EV-0293",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "registra o motivo da saída.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -8920,13 +8945,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0219",
         "EV-0220",
-        "EV-0352"
+        "EV-0352",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -8959,13 +8983,12 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0012",
         "EV-0079",
-        "EV-0221"
+        "EV-0221",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9007,7 +9030,8 @@
         "EV-0043",
         "EV-0064",
         "EV-0369",
-        "EV-0370"
+        "EV-0370",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9022,7 +9046,7 @@
       "nome": "Definir níveis, benefícios e critérios de subida",
       "pai": "P-05",
       "ordem": 1,
-      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão por regra única, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
+      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão pela regra de comissão, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. A subida ao Premium exige os 60 dias e, além disso, 3 clientes fechados ou a avaliação. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9042,6 +9066,10 @@
         {
           "nome": "Tabela de níveis e critérios",
           "para": "P-18"
+        },
+        {
+          "nome": "Mudança de nível ou benefício que afeta o termo",
+          "para": "P-64"
         }
       ],
       "cliente": "Parceiros",
@@ -9053,10 +9081,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0222",
         "EV-0032",
@@ -9068,15 +9093,20 @@
         "EV-0353",
         "EV-0354",
         "EV-0355",
-        "EV-0356"
+        "EV-0356",
+        "EV-0374",
+        "EV-0377",
+        "EV-0384"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0384"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -9150,10 +9180,10 @@
     },
     {
       "id": "P-62",
-      "nome": "Fixar a regra única de comissão e a contrapartida da Prateleira",
+      "nome": "Fixar a regra de comissão e a contrapartida da Prateleira",
       "pai": "P-05",
       "ordem": 2,
-      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. No portal: calcula a comissão sozinho e registra a contrapartida combinada.",
+      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. No portal: calcula a comissão sozinho e registra a contrapartida combinada.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9173,6 +9203,10 @@
         {
           "nome": "Regra de comissão vigente",
           "para": "P-89"
+        },
+        {
+          "nome": "Mudança na regra de comissão",
+          "para": "P-64"
         }
       ],
       "cliente": "Parceiros",
@@ -9184,22 +9218,23 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0024",
         "EV-0023",
-        "EV-0029"
+        "EV-0029",
+        "EV-0375",
+        "EV-0377"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula a comissão sozinho e registra a contrapartida combinada.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0377"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -9309,20 +9344,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0152",
-        "EV-0061"
+        "EV-0061",
+        "EV-0385"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "gera a página de regras e versiona cada mudança.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0385"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -9403,13 +9439,22 @@
       "nome": "Manter o termo de adesão",
       "pai": "P-05",
       "ordem": 4,
-      "descricao": "Termo de adesão curto e igual para todos, aceito no formulário do cadastro. Cada mudança gera uma versão nova com data de vigência; o aceite de cada parceiro fica ligado à versão que ele leu. No portal: guarda as versões do termo e mostra na página a versão vigente.",
+      "descricao": "Termo de adesão curto e igual para todos, aceito no formulário do cadastro. Cada mudança gera uma versão nova com data de vigência; o aceite de cada parceiro fica ligado à versão que ele leu. Quando a versão muda, o portal pede o aceite da versão nova no próximo acesso, depois dos 30 dias de aviso. No portal: guarda as versões do termo e mostra na página a versão vigente.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
       ],
       "gatilho": "Mudança de regra",
-      "entradas": [],
+      "entradas": [
+        {
+          "nome": "Mudança de nível ou benefício que afeta o termo",
+          "de": "P-61"
+        },
+        {
+          "nome": "Mudança na regra de comissão",
+          "de": "P-62"
+        }
+      ],
       "saidas": [
         {
           "nome": "Termo de adesão vigente",
@@ -9425,22 +9470,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0007",
-        "EV-0100"
+        "EV-0100",
+        "EV-0376",
+        "EV-0386"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "guarda as versões do termo e mostra na página a versão vigente.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0386"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -9558,20 +9603,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0139",
-        "EV-0137"
+        "EV-0137",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula todo dia.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -9674,21 +9720,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0162",
-        "EV-0137"
+        "EV-0137",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula todo dia.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -9787,23 +9833,23 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0164",
         "EV-0141",
         "EV-0137",
-        "EV-0033"
+        "EV-0033",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula no fechamento trimestral com o pulso.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -9910,15 +9956,18 @@
       "evidencias": [
         "EV-0139",
         "EV-0194",
-        "EV-0137"
+        "EV-0137",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "lê a tabela e cria a tarefa.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10029,15 +10078,18 @@
         "EV-0012",
         "EV-0225",
         "EV-0346",
-        "EV-0347"
+        "EV-0347",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "registra o grupo no card.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10131,21 +10183,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0226",
         "EV-0284",
-        "EV-0339"
+        "EV-0339",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "publica e gera o link.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -10240,21 +10293,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0228",
         "EV-0287",
-        "EV-0367"
+        "EV-0367",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "registra e protege por 180 dias.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10341,15 +10395,18 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0074",
-        "EV-0237"
+        "EV-0237",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "envia a confirmação.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10421,20 +10478,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0186",
-        "EV-0288"
+        "EV-0288",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "checa duplicidade e calcula a nota.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10544,21 +10602,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0085",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "prepara o rascunho com os números do mês e envia o e-mail.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -10668,25 +10726,24 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0085",
         "EV-0229",
         "EV-0230",
         "EV-0231",
-        "EV-0232"
+        "EV-0232",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "agenda, convida, lembra o Igor de gravar a mensagem, registra a presença e envia a gravação.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -10792,7 +10849,12 @@
         "PA-05"
       ],
       "gatilho": "Calendário mensal",
-      "entradas": [],
+      "entradas": [
+        {
+          "nome": "Objetivo da comunidade",
+          "de": "P-48"
+        }
+      ],
       "saidas": [
         {
           "nome": "Convites enviados",
@@ -10808,21 +10870,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0206",
         "EV-0292",
-        "EV-0345"
+        "EV-0345",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "envia os convites.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -10897,7 +10960,16 @@
         "PA-05"
       ],
       "gatilho": "Evento ou formação da Wise agendado",
-      "entradas": [],
+      "entradas": [
+        {
+          "nome": "Objetivo da comunidade",
+          "de": "P-48"
+        },
+        {
+          "nome": "Parceiros Premium e Elite",
+          "de": "P-18"
+        }
+      ],
       "saidas": [
         {
           "nome": "Parceiros convidados",
@@ -10916,14 +10988,12 @@
         "Só destaques e pacotes B e A"
       ],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0232",
         "EV-0233",
-        "EV-0345"
+        "EV-0345",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -10933,8 +11003,10 @@
       ],
       "portal": "envia os convites a partir do calendário de formações e registra presença.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11028,21 +11100,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0220",
-        "EV-0219"
+        "EV-0219",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "mostra a ficha para conferência e publica.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11167,21 +11239,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0219",
-        "EV-0355"
+        "EV-0355",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "calcula a nota, sinaliza quem está abaixo e registra a decisão.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11261,7 +11333,7 @@
       "nome": "Manter o minicurso e o certificado",
       "pai": "P-59",
       "ordem": 1,
-      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. No portal: entrega o minicurso e as trilhas e emite o certificado.",
+      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. No portal: entrega o minicurso e as trilhas e emite o certificado.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -11288,25 +11360,24 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho",
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0234",
         "EV-0294",
         "EV-0348",
-        "EV-0345"
+        "EV-0345",
+        "EV-0375",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "entrega a trilha e emite o certificado.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -11384,7 +11455,7 @@
       "nome": "Manter o kit de vendas e o simulador de ganho",
       "pai": "P-59",
       "ordem": 2,
-      "descricao": "Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. No portal: mostra o kit e simula o ganho pela regra única.",
+      "descricao": "Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. O kit e o simulador do Select mostram só a Wise Makers; os de Premium e Elite, as três empresas. No portal: mostra o kit e simula o ganho pela regra de comissão.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Material ou regra nova",
@@ -11409,20 +11480,22 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
-        "EV-0012"
+        "EV-0012",
+        "EV-0375",
+        "EV-0377",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "mostra o kit e simula o ganho pela regra única.",
+      "portal": "mostra o kit e simula o ganho pela regra de comissão.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11503,21 +11576,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0078",
-        "EV-0258"
+        "EV-0258",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "mostra na área do parceiro.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11594,20 +11667,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0043",
-        "EV-0064"
+        "EV-0064",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "é onde as regras rodam.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11730,21 +11804,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0152",
-        "EV-0235"
+        "EV-0235",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "processa o cruzamento, guarda só as coincidências e registra cada pedido atendido.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11873,21 +11947,21 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0236",
-        "EV-0295"
+        "EV-0295",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "controla os acessos e registra quem acessou o quê.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -11989,7 +12063,7 @@
       "nome": "Conduzir o onboarding por etapas",
       "pai": "P-26",
       "ordem": 2,
-      "descricao": "Etapas e metas do Select, sem contar dias: primeiro login, feito na conversa; minicurso assistido; anúncio conjunto da parceria publicado; link e mensagem pronta enviados para a base; primeiro cliente cadastrado pelo link (ativação); primeiro diagnóstico feito na base do parceiro. A ordem é sugerida, não obrigatória. O Premium e o Elite têm entrada própria. No portal: cria as etapas, marca sozinho as que consegue ver (login, minicurso, cliente, diagnóstico), deixa o parceiro marcar as outras e mostra a ele o que falta.",
+      "descricao": "Etapas e metas do Select, sem contar dias: primeiro login, feito na conversa; minicurso assistido; anúncio conjunto da parceria publicado; link e mensagem pronta enviados para a base; primeiro cliente cadastrado pelo link (ativação); primeiro diagnóstico feito na base do parceiro. A ordem é sugerida, não obrigatória. O Premium e o Elite têm entrada própria. O certificado sai na conclusão do minicurso. O anúncio conjunto é publicado pelo parceiro, com a arte e o texto prontos do kit; a Wise cita os novos parceiros no comunicado do mês. No portal: cria as etapas, marca sozinho as que consegue ver (login, minicurso, cliente, diagnóstico), deixa o parceiro marcar as outras e mostra a ele o que falta.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -12037,12 +12111,7 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "entradas",
-        "gatilho",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0318",
         "EV-0319",
@@ -12058,7 +12127,8 @@
         "EV-0079",
         "EV-0012",
         "EV-0348",
-        "EV-0333"
+        "EV-0333",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -12068,8 +12138,10 @@
       ],
       "portal": "cria as etapas, marca sozinho as que consegue ver (login, minicurso, cliente, diagnóstico), deixa o parceiro marcar as outras e mostra a ele o que falta.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-05"
@@ -12206,7 +12278,7 @@
       "nome": "Conduzir o diagnóstico do cliente do parceiro",
       "pai": "P-31",
       "ordem": 0,
-      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP (mais de 3 vendedores, com faturamento mínimo opcional); o parceiro é avisado. No ICP: agenda do Google, reunião pela Matriz 5x5 conduzida pelo Gerente (acima de 10 por semana, um consultor da Wise assume), mapa próprio da reunião em até 2 dias úteis e acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade, que segue pela esteira. No portal: registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
+      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP (mais de 3 vendedores, com faturamento mínimo opcional); o parceiro é avisado. No ICP: agenda do Google, reunião pela Matriz 5x5 conduzida pelo Gerente (acima de 10 por semana, um consultor da Wise assume), mapa próprio da reunião em até 2 dias úteis e acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade, que segue pela esteira. Se a empresa já é cliente da Wise ou já negocia com ela, o portal identifica no cadastro: a empresa é atendida normalmente, mas sem proteção de origem nem comissão, e o parceiro é avisado na hora. No portal: registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -12250,15 +12322,10 @@
         "Consentimento da pesquisa e aceite do Hub no agendamento",
         "Resumo ao parceiro só com autorização escrita do cliente, dada no agendamento",
         "Conversa comercial só se o cliente pedir",
-        "Cliente que marcou pelo link do parceiro gera a comissão da regra única se contratar"
+        "Cliente que marcou pelo link do parceiro gera a comissão pela regra de comissão se contratar"
       ],
       "status": "confirmado",
-      "hipoteses": [
-        "descricao",
-        "frequencia",
-        "participantes",
-        "saidas"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0301",
         "EV-0321",
@@ -12271,7 +12338,8 @@
         "EV-0363",
         "EV-0364",
         "EV-0365",
-        "EV-0366"
+        "EV-0366",
+        "EV-0373"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12281,8 +12349,10 @@
       ],
       "portal": "registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -12684,17 +12754,15 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "entradas",
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
         "EV-0322",
         "EV-0323",
         "EV-0079",
         "EV-0329",
         "EV-0348",
-        "EV-0339"
+        "EV-0339",
+        "EV-0373"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12703,8 +12771,10 @@
       ],
       "portal": "gera a página e a mensagem com o link exclusivo do parceiro.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01"
         ],
@@ -12771,12 +12841,12 @@
       "nome": "Lembrar o parceiro parado numa etapa",
       "pai": "P-26",
       "ordem": 4,
-      "descricao": "Sem prazo em dias, o processo não estoura; o que existe é um lembrete. Quando o parceiro fica na mesma etapa além do limite, o portal manda um e-mail com o próximo passo; se ele continuar parado, o caso entra na fila de exceções com os dias na etapa, e o Gerente decide se vale uma mensagem pessoal. No portal: conta os dias em cada etapa, envia o lembrete e põe o caso na fila.",
+      "descricao": "Sem prazo em dias, o processo não estoura; o que existe é um lembrete. Quando o parceiro fica na mesma etapa além do limite, o portal manda um e-mail com o próximo passo; se ele continuar parado, o caso entra na fila de exceções com os dias na etapa, e o Gerente decide se vale uma mensagem pessoal. O lembrete sai depois de 14 dias na mesma etapa. Depois de 3 lembretes sem avanço, o parceiro fica adormecido: mantém o acesso, para de receber lembretes, sai das contas de parceiros ativos e volta sozinho se um cliente se cadastrar pelo link. No portal: conta os dias em cada etapa, envia o lembrete e põe o caso na fila.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
       ],
-      "gatilho": "Parceiro na mesma etapa além do limite",
+      "gatilho": "Parceiro há 14 dias na mesma etapa",
       "entradas": [],
       "saidas": [
         {
@@ -12793,11 +12863,10 @@
       "dores": [],
       "regras": [],
       "status": "confirmado",
-      "hipoteses": [
-        "gatilho"
-      ],
+      "hipoteses": [],
       "evidencias": [
-        "EV-0349"
+        "EV-0349",
+        "EV-0373"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -12819,7 +12888,7 @@
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Parceiro na mesma etapa além do limite",
+            "nome": "Parceiro há 14 dias na mesma etapa",
             "raia": "PA-01",
             "evento": "tempo"
           },
@@ -12949,16 +13018,20 @@
       "frequencia": "Uma campanha por tipo de parceiro",
       "dores": [],
       "regras": [],
-      "status": "hipotese",
+      "status": "confirmado",
       "hipoteses": [],
-      "evidencias": [],
+      "evidencias": [
+        "EV-0373"
+      ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-02"
@@ -13098,7 +13171,7 @@
       "nome": "Suspender a recomendação de um parceiro",
       "pai": "P-58",
       "ordem": 3,
-      "descricao": "Quando um cliente da Wise relata um problema sério com um parceiro recomendado, o Gerente ouve o consultor e o cliente e, se o problema for sério, suspende a recomendação: o parceiro some das listas de recomendação, sem aviso e sem rebaixar o nível. No portal: guarda a marca interna de recomendação suspensa e tira o parceiro das listas de recomendação.",
+      "descricao": "Quando um cliente da Wise relata um problema sério com um parceiro recomendado, o Gerente ouve o consultor e o cliente e, se o problema for sério, suspende a recomendação: o parceiro some das listas de recomendação, sem aviso e sem rebaixar o nível. A suspensão é revista a cada fechamento trimestral: a recomendação volta se o cliente disser que o problema foi resolvido e não houver novo problema. No portal: guarda a marca interna de recomendação suspensa e tira o parceiro das listas de recomendação.",
       "dono": "PA-01",
       "participantes": [
         "PA-07",
@@ -13128,16 +13201,20 @@
       "frequencia": "Quando acontece",
       "dores": [],
       "regras": [],
-      "status": "hipotese",
+      "status": "confirmado",
       "hipoteses": [],
-      "evidencias": [],
+      "evidencias": [
+        "EV-0373"
+      ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
       "portal": "guarda a marca interna de recomendação suspensa e tira o parceiro das listas de recomendação.",
       "fluxo": {
-        "status": "hipotese",
-        "evidencias": [],
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0373"
+        ],
         "raias": [
           "PA-01",
           "PA-07"
@@ -16581,6 +16658,150 @@
       "data": "2026-11-09",
       "trecho": "\"Nossa equipe vai falar com você pelo WhatsApp em até 24 horas úteis\", sem nome. ",
       "local": "FO-12/NV-nome_pagina"
+    },
+    {
+      "id": "EV-0373",
+      "tipo": "validacao",
+      "fonte": "Aprovação das recomendações do FO-14, no chat",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Preciso que você siga aprovando todas as tuas recomendações sem distinção. Acabei ficando sem tempo para validar tudo",
+      "local": "chat de 18/11/2026"
+    },
+    {
+      "id": "EV-0374",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "60 dias no programa e, além disso, 3 clientes fechados ou a avaliação com o Igor. ",
+      "local": "FO-14/R14-DEC-criterio_premium"
+    },
+    {
+      "id": "EV-0375",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Só a Wise Makers no Select; as três para Premium e Elite. ",
+      "local": "FO-14/R14-DEC-empresas_grupo"
+    },
+    {
+      "id": "EV-0376",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "O portal pede o aceite da versão nova no próximo acesso, depois dos 30 dias de aviso. ",
+      "local": "FO-14/R14-DEC-termo_versao"
+    },
+    {
+      "id": "EV-0377",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo com ajustes (comente). Aqui estamos falando de \"regra única\" de comissionamento. Vamos precisar deixar apenas como \"regra\"de comissionamento. Isso porque é natural que, com o tempo, vamos criar regras mais específicas para cada caso e não será mais \"única\" e generalizada. Vamos optar por fazer uma regra geral única agora para facilitar o MVP.",
+      "local": "FO-14/R14-P-62"
+    },
+    {
+      "id": "EV-0378",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-01"
+    },
+    {
+      "id": "EV-0379",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-02"
+    },
+    {
+      "id": "EV-0380",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-03"
+    },
+    {
+      "id": "EV-0381",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-04"
+    },
+    {
+      "id": "EV-0382",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-05"
+    },
+    {
+      "id": "EV-0383",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-06"
+    },
+    {
+      "id": "EV-0384",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-61"
+    },
+    {
+      "id": "EV-0385",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-63"
+    },
+    {
+      "id": "EV-0386",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-P-64"
+    },
+    {
+      "id": "EV-0387",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-jornadas"
+    },
+    {
+      "id": "EV-0388",
+      "tipo": "validacao",
+      "fonte": "FO-14: revisão crítica dos processos",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-14/R14-papeis"
     }
   ],
   "perguntas": [
@@ -20293,10 +20514,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0378"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-01",
       "contexto": [
         "Uma vez por ano, ou quando o programa muda de fase, decidir as regras do jogo: o papel da Wise, o valor entregue, quem é o parceiro ideal, os níveis, a comissão e como se mede o custo do canal."
@@ -20326,10 +20551,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0379"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-02",
       "contexto": [
         "Listar quem está em volta do cliente da Wise (fornecedores, concorrentes e complementadores) e decidir, por categoria de parceiro, onde a Wise lidera e onde só acompanha."
@@ -20359,10 +20588,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0380"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-03",
       "contexto": [
         "Rever os cinco tipos de valor que a indústria recebe do ecossistema (descobrir, comparar e decidir, implantar integrado, pertencer e aprender, confiar) e ver quais estão bem cobertos por parceiros e quais estão fracos."
@@ -20392,10 +20625,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0381"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-04",
       "contexto": [
         "Escrever quem a Wise quer como parceiro e os critérios usados para aprovar um cadastro da fila."
@@ -20424,10 +20661,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0382"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-05",
       "contexto": [
         "Manter poucas regras, iguais para todos: níveis e benefícios, comissão, regulamento, política de dados e o termo de adesão."
@@ -20458,10 +20699,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0384"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-61",
       "contexto": [
         "Manter a tabela dos três níveis: o que cada um recebe e o que é preciso para subir."
@@ -20489,10 +20734,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0374"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-criterio_premium",
       "contexto": [
         "No FO-12 você escreveu: 'Tempo mínimo no programa, 60 dias e; pelo menos 3 clientes fechados com a Wise vindos dele, ou; avaliação sem critério definido por mim e pelo Igor'.",
@@ -20524,10 +20773,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0377"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-62",
       "contexto": [
         "Manter a regra do dinheiro: quanto o parceiro ganha, quando recebe e o que o fornecedor dá para entrar num pedido da Prateleira."
@@ -20555,10 +20808,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0375"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-empresas_grupo",
       "contexto": [
         "A regra de comissão guarda três empresas: Wise Makers e Tríade (40% da primeira mensalidade) e Swallow (6% do projeto). O kit de vendas e o simulador de ganho também falam das três.",
@@ -20589,10 +20846,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0385"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-63",
       "contexto": [
         "Manter, em uma página, as regras de convivência do programa e o que a Wise faz com os dados."
@@ -20624,10 +20885,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0386"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-64",
       "contexto": [
         "Manter o texto do termo que o parceiro aceita no cadastro, com número de versão."
@@ -20655,10 +20920,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0376"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-termo_versao",
       "contexto": [
         "Hoje o portal guarda a versão que cada parceiro aceitou no cadastro. Quando o texto mudar (por exemplo, com a versão de 07/11), quem já está dentro continua ligado à versão antiga.",
@@ -20689,10 +20958,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0383"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-06",
       "contexto": [
         "Fixar a conta que diz se o programa vale a pena: quanto custa conquistar um cliente por meio de parceiros."
@@ -20721,10 +20994,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-07",
       "contexto": [
         "A cada trimestre, registrar em que fase o programa está, o que falta para passar à próxima e as metas que o Diretor definir."
@@ -20752,10 +21029,14 @@
       ],
       "rodada": 8,
       "bloco": "1",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-portoes",
       "contexto": [
         "Portões validados na v7 para sair da Experimentação: 5 parceiros ativados; desfecho devolvido ao parceiro em toda oportunidade; 3 clientes fechados vindos de parceiros; CAC apurado no trimestre; metade das oportunidades qualificadas virando reunião; rituais rodando dois trimestres iguais.",
@@ -20786,10 +21067,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-08",
       "contexto": [
         "Tocar o programa com poucos encontros fixos (dia, semana, mês e trimestre) e uma fila única do que saiu da regra."
@@ -20818,10 +21103,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-09",
       "contexto": [
         "Todo dia, abrir a lista do que saiu da regra e resolver uma a uma, por ordem de prazo."
@@ -20851,10 +21140,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-10",
       "contexto": [
         "Uma conversa por semana entre o Gerente e o Diretor: primeiro os números, depois os casos, um a um, com decisão."
@@ -20885,10 +21178,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-11",
       "contexto": [
         "Uma vez por mês, olhar todos os parceiros de uma vez e decidir onde o Gerente põe as horas do mês."
@@ -20919,10 +21216,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-12",
       "contexto": [
         "No primeiro dia útil de cada trimestre, fechar as contas do programa: quem sobe de nível, como está a relação, a saúde do programa e a Prateleira."
@@ -20954,10 +21255,14 @@
       ],
       "rodada": 8,
       "bloco": "2",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-13",
       "contexto": [
         "Quando uma regra muda, publicar a versão nova com data para começar a valer e avisar os parceiros."
@@ -20985,10 +21290,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-14",
       "contexto": [
         "Medir o programa e cada parceiro com números que o portal calcula, e transformar cada medida numa decisão."
@@ -21020,10 +21329,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-15",
       "contexto": [
         "Todo mês, calcular quanto custou cada cliente vindo de parceiro e quanto valor a Wise devolveu aos parceiros."
@@ -21055,10 +21368,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-16",
       "contexto": [
         "Ler cada parceiro ativado em três fatores (Valor, Ritmo e Relação), cada um alto ou baixo, e com isso saber qual dos oito tipos ele é."
@@ -21088,10 +21405,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-65",
       "contexto": [
         "Somar o que o parceiro já trouxe de receita em 12 meses e o que está em negociação, e dizer se o Valor é alto ou baixo."
@@ -21122,10 +21443,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-66",
       "contexto": [
         "Ver há quanto tempo e com que frequência o parceiro faz algo de valor, e dizer se o Ritmo é alto ou baixo."
@@ -21156,10 +21481,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-67",
       "contexto": [
         "A cada trimestre, juntar o pulso da relação e o equilíbrio entre o que cada lado deu, e dizer se a Relação é alta ou baixa."
@@ -21188,10 +21517,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-68",
       "contexto": [
         "Com os três fatores, achar o tipo do parceiro na tabela e, se mudou, criar a tarefa da jogada do tipo novo."
@@ -21221,10 +21554,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-17",
       "contexto": [
         "A cada trimestre, perguntar ao parceiro, em três perguntas de 1 a 5, como está a parceria."
@@ -21251,10 +21588,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-pulso_select",
       "contexto": [
         "O pulso tem dois lados: o parceiro avalia a Wise e o Gerente avalia o parceiro, nas mesmas três perguntas. As duas notas juntas formam o fator Relação do cubo.",
@@ -21287,10 +21628,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-18",
       "contexto": [
         "A cada trimestre, ver quem cumpre os critérios para subir de nível e decidir quem é convidado."
@@ -21320,10 +21665,14 @@
       ],
       "rodada": 8,
       "bloco": "3",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-19",
       "contexto": [
         "A cada trimestre, tirar três medidas do programa inteiro e ver quanto falta para cada portão de fase."
@@ -21355,10 +21704,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-20",
       "contexto": [
         "O caminho de quem vê o anúncio até virar parceiro com acesso ao portal: cadastro na página, fila, contato pelo WhatsApp, agenda e conversa de entrada."
@@ -21387,10 +21740,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-98",
       "contexto": [
         "Planejar, pôr no ar e acompanhar a campanha de anúncios que leva empresas à página dos parceiros."
@@ -21418,10 +21775,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-campanha_dono",
       "contexto": [
         "O dono responde pelo resultado: decide o público, aprova os anúncios, acompanha o gasto e decide quando pausar. Não precisa ser quem executa cada passo.",
@@ -21456,10 +21817,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-21",
       "contexto": [
         "O que o portal faz, sozinho, no instante em que alguém envia o formulário da página: valida, registra o aceite, põe na fila e avisa."
@@ -21489,10 +21854,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-22",
       "contexto": [
         "Uma troca curta de mensagens em que o Gerente confirma o que o candidato escreveu no cadastro e decide se ele segue para a conversa."
@@ -21519,10 +21888,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-aviso_descarte",
       "contexto": [
         "Hoje o cadastro descartado só muda de situação no portal; o candidato não recebe nada.",
@@ -21555,10 +21928,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-23",
       "contexto": [
         "A reunião marcada pela agenda em que o Gerente conhece o candidato, apresenta a Wise e o programa e, se os dois quiserem seguir, cria a conta dele ali mesmo."
@@ -21585,10 +21962,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-conversa_duracao",
       "contexto": [
         "O roteiro tem sete blocos e termina com a criação da conta e o primeiro login do parceiro. A duração define o tamanho do horário na agenda do Google e quantas conversas cabem por dia.",
@@ -21616,10 +21997,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-no_show",
       "contexto": [
         "Falta em reunião marcada pela internet é comum. Sem regra, o horário se perde e o cadastro fica parado em 'reunião marcada'."
@@ -21650,10 +22035,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-25",
       "contexto": [
         "O que fazer com quem se cadastrou e sumiu: não respondeu ao WhatsApp, não marcou horário ou pediu para falar depois."
@@ -21681,10 +22070,14 @@
       ],
       "rodada": 8,
       "bloco": "4",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-tentativas",
       "contexto": [
         "Cada tentativa é uma mensagem de WhatsApp. Depois da última sem resposta, o cadastro sai da fila como 'sem resposta' e para de aparecer."
@@ -21712,10 +22105,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-26",
       "contexto": [
         "Do dia em que o parceiro recebe o acesso até o primeiro cliente dele entrar pelo link e fazer o diagnóstico."
@@ -21746,10 +22143,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-27",
       "contexto": [
         "Entregar ao novo parceiro, ainda na conversa de entrada ou logo depois, tudo o que o Select recebe: grupo, link, página do cliente com a logo dele, minicurso e Wise Hub."
@@ -21776,10 +22177,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-certificado",
       "contexto": [
         "No FO-12 você escreveu que o certificado de parceiro Wise já se ganha desde o Select. No desenho antigo, o certificado saía depois da trilha com teste.",
@@ -21801,15 +22206,15 @@
         "Não sei: ver com quem cuida do Hub"
       ],
       "alvo": [
-        "P-27"
+        "P-27.descricao"
       ],
       "para": [
         "PE-01"
       ],
-      "rodada": 8,
+      "rodada": 9,
       "bloco": "5",
-      "status": "em_formulario",
-      "formulario": "FO-07",
+      "status": "aberta",
+      "formulario": null,
       "respostas": [],
       "respondida_por": [],
       "chave": "DEC-hub_marcas",
@@ -21841,10 +22246,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-73",
       "contexto": [
         "Abrir o grupo de WhatsApp entre a Wise e as pessoas do parceiro e registrar no portal."
@@ -21874,10 +22283,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-75",
       "contexto": [
         "Dar ao parceiro o link exclusivo dele, a página do cliente com a logo dele e a mensagem pronta para enviar à base."
@@ -21910,10 +22323,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-94",
       "contexto": [
         "As seis etapas que levam o Select do primeiro login ao primeiro diagnóstico feito na base dele, com o portal mostrando onde cada parceiro está."
@@ -21941,10 +22358,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-anuncio",
       "contexto": [
         "No desenho antigo, o anúncio conjunto era uma postagem dos dois lados na primeira semana. Com dezenas de parceiros entrando por mês, a Wise publicar um post para cada um enche o perfil dela e toma tempo.",
@@ -21977,10 +22398,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-30",
       "contexto": [
         "O momento em que o portal reconhece que o parceiro ativou: o primeiro cliente dele se cadastrou pelo link."
@@ -22009,10 +22434,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-97",
       "contexto": [
         "Quando um parceiro fica tempo demais na mesma etapa, o portal lembra por e-mail; se não adiantar, o caso vai para o Gerente."
@@ -22040,10 +22469,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-limite_lembrete",
       "contexto": [
         "No FO-12 você escolheu o lembrete automático por e-mail, mas não disse depois de quanto tempo."
@@ -22070,10 +22503,14 @@
       ],
       "rodada": 8,
       "bloco": "5",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-adormecido",
       "contexto": [
         "Sem prazo em dias, o parceiro nunca é reprovado. Mas, sem um fim, o portal manda lembrete para sempre e o parceiro parado continua contando como parceiro nos números.",
@@ -22103,10 +22540,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-31",
       "contexto": [
         "A esteira única por onde passa toda oportunidade de cliente que nasce de um parceiro: chega, é conferida, vai para o closer, o parceiro é informado a cada etapa e, se fechar, a comissão é paga."
@@ -22139,10 +22580,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-95",
       "contexto": [
         "O que acontece com a empresa que clica no link do parceiro: cadastro, triagem pelo perfil e, então, reunião de diagnóstico com a Wise ou autodiagnóstico na hora."
@@ -22169,10 +22614,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-ja_cliente",
       "contexto": [
         "A regra da esteira (validada na v7) diz que empresa que já está com o grupo não gera comissão. Mas, no caminho do link, essa conferência só acontecia depois, quando a oportunidade abria. Até lá o parceiro acha que indicou um cliente novo.",
@@ -22203,10 +22652,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-32",
       "contexto": [
         "A conferência de entrada da esteira: registrar de onde veio a oportunidade, agradecer ao parceiro e checar se ela é válida."
@@ -22236,10 +22689,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-79",
       "contexto": [
         "Criar o registro da oportunidade com o parceiro de origem e a porta por onde ela chegou, e iniciar a proteção de 180 dias."
@@ -22268,10 +22725,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-80",
       "contexto": [
         "Avisar o parceiro, na hora, de que a oportunidade chegou, e agradecer."
@@ -22301,10 +22762,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-81",
       "contexto": [
         "Conferir se a empresa já é cliente ou já está em negociação com o grupo, e se está no perfil da Wise."
@@ -22333,10 +22798,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-33",
       "contexto": [
         "O Gerente leva a oportunidade, com o contexto, ao closer que vai atender, e combina com ele como e quando."
@@ -22365,10 +22834,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-34",
       "contexto": [
         "A cada passo da negociação, contar ao parceiro o que aconteceu com o cliente que ele indicou, até o desfecho."
@@ -22402,10 +22875,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-35",
       "contexto": [
         "Quando um cliente da Wise precisa de algo que a Wise não faz, recomendar a ele parceiros Premium e Elite da categoria."
@@ -22436,10 +22913,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-37",
       "contexto": [
         "Depois do encontro de alinhamento, pegar cada cliente em comum ou vizinho entre a Wise e o parceiro e decidir uma jogada para ele."
@@ -22471,10 +22952,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-38",
       "contexto": [
         "Do contrato fechado ao dinheiro na conta do parceiro: calcular, esperar o primeiro pagamento do cliente compensar, receber a nota e pagar."
@@ -22505,10 +22990,14 @@
       ],
       "rodada": 8,
       "bloco": "6",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-39",
       "contexto": [
         "Seis e doze meses depois do fechamento, saber se o cliente indicado continua com a Wise e como está, e contar ao parceiro."
@@ -22538,10 +23027,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-40",
       "contexto": [
         "Depois da ativação, cuidar de cada parceiro conforme o nível e o tipo dele, e fazê-lo subir quando merecer."
@@ -22570,10 +23063,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-41",
       "contexto": [
         "Quando o parceiro muda de tipo no cubo, fazer o que o tipo pede: uma ação, com um jeito de abordar e um ritmo de contato."
@@ -22602,10 +23099,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-42",
       "contexto": [
         "Uma reunião periódica com cada parceiro Premium e Elite para ver os números juntos e combinar as ações do próximo período."
@@ -22637,10 +23138,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-43",
       "contexto": [
         "Tirar do papel o que foi combinado na revisão: cada ação conjunta com data, responsável, comprovação e resultado."
@@ -22672,10 +23177,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-44",
       "contexto": [
         "Organizar, para a base de clientes de um parceiro Elite, uma formação gratuita e exclusiva conduzida pela Wise."
@@ -22702,10 +23211,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-base_ativa_formato",
       "contexto": [
         "Na v7, o Base Ativa era um ciclo de 12 semanas com 6 encontros: diagnosticar a base do parceiro, categorizar a carteira, definir a estrutura e o anúncio da comunidade do parceiro, definir oferta e nutrição, planejar a formação e o evento, e emitir um certificado metodológico.",
@@ -22734,10 +23247,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-base_ativa_repete",
       "contexto": [
         "Cada formação consome horas da Wise (preparo, condução e relatório) e gera diagnósticos na semana seguinte. A resposta define o tamanho da fila por horas."
@@ -22769,10 +23286,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-45",
       "contexto": [
         "O caminho do convite até o parceiro estar pronto para ser recomendado pela Wise aos clientes dela."
@@ -22805,10 +23326,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-28",
       "contexto": [
         "Uma reunião mais longa com o parceiro que vai subir ao Premium, para entender o que é sucesso para ele, cruzar as carteiras e sair com uma primeira oportunidade concreta."
@@ -22836,10 +23361,14 @@
       ],
       "rodada": 8,
       "bloco": "7",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-46",
       "contexto": [
         "Garantir que nenhum parceiro fique tempo demais sem ouvir a Wise, com um ritmo de contato conforme o nível e a atenção que ele merece."
@@ -22869,10 +23398,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-47",
       "contexto": [
         "Fazer os parceiros se sentirem parte de algo: um canal de conversa, um comunicado por mês, um encontro por trimestre e reconhecimento para quem contribui."
@@ -22900,10 +23433,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-comunidade_select",
       "contexto": [
         "Hoje o desenho tem um grupo de WhatsApp por parceiro (a Wise e as pessoas dele). Alguns processos da comunidade (pedidos e contribuições entre parceiros, apresentações) supõem um espaço em que os parceiros se veem.",
@@ -22934,10 +23471,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-48",
       "contexto": [
         "A cada fase do programa, escolher um ou dois resultados que a comunidade deve gerar e medir só esses."
@@ -22965,10 +23506,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-49",
       "contexto": [
         "O calendário fixo da comunidade: um comunicado por mês, um encontro por trimestre, a mentoria mensal e os convites a eventos."
@@ -22999,10 +23544,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-82",
       "contexto": [
         "Uma mensagem por mês para todos os parceiros, sempre no mesmo formato: novidades, resultados do programa, oportunidades e agenda."
@@ -23034,10 +23583,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-83",
       "contexto": [
         "Um encontro por trimestre, aberto a todos os parceiros, com casos, reconhecimento e uma mensagem do Diretor."
@@ -23067,10 +23620,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-84",
       "contexto": [
         "Todo mês, convidar os clientes dos parceiros Premium e Elite para a mentoria aberta da Wise."
@@ -23101,10 +23658,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-85",
       "contexto": [
         "Quando a Wise tem um evento ou uma formação, abrir vagas para os parceiros Premium e Elite."
@@ -23134,10 +23695,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-50",
       "contexto": [
         "Registrar e mostrar quem pediu ajuda e quem ajudou, e agradecer em público a quem deu."
@@ -23167,10 +23732,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-51",
       "contexto": [
         "Todo mês e todo trimestre, escolher quem merece destaque e reconhecer com algo que não é dinheiro."
@@ -23198,10 +23767,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-52",
       "contexto": [
         "Quando um parceiro Premium ou Elite menciona um problema ou uma oportunidade que outro parceiro resolve, a Wise apresenta os dois."
@@ -23230,10 +23803,14 @@
       ],
       "rodada": 8,
       "bloco": "8",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-53",
       "contexto": [
         "Encontros presenciais de seis a dez pessoas, sem pauta de venda, juntando parceiros, clientes da Wise e gente que o parceiro quer conhecer."
@@ -23264,10 +23841,14 @@
       ],
       "rodada": 8,
       "bloco": "9",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-54",
       "contexto": [
         "O que fazer quando um parceiro ativado esfria, entra em risco, descumpre o combinado ou quer sair: tentar retomar e, se não der, encerrar com respeito."
@@ -23296,10 +23877,14 @@
       ],
       "rodada": 8,
       "bloco": "9",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-55",
       "contexto": [
         "Para cada tipo de risco, uma abordagem diferente, com 30 dias para ver se o parceiro volta a ter ritmo."
@@ -23329,10 +23914,14 @@
       ],
       "rodada": 8,
       "bloco": "9",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-56",
       "contexto": [
         "Encerrar a parceria por decisão da Wise, com aviso formal de 30 dias, em conversa e por escrito."
@@ -23359,10 +23948,14 @@
       ],
       "rodada": 8,
       "bloco": "9",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-saida_oportunidades",
       "contexto": [
         "A página dos parceiros diz: 'Comissões já geradas continuam sendo pagas'. Uma oportunidade em negociação ainda não gerou comissão, mas a origem dela está protegida por 180 dias.",
@@ -23393,10 +23986,14 @@
       ],
       "rodada": 8,
       "bloco": "9",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-57",
       "contexto": [
         "Quando o parceiro pede para sair: entender o motivo, cumprir os 30 dias e fechar sem atrito."
@@ -23425,10 +24022,14 @@
       ],
       "rodada": 8,
       "bloco": "10",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-58",
       "contexto": [
         "Manter a lista de parceiros que a Wise recomenda aos próprios clientes, por categoria, com ficha conferida."
@@ -23459,10 +24060,14 @@
       ],
       "rodada": 8,
       "bloco": "10",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-86",
       "contexto": [
         "Antes de um parceiro aparecer na Prateleira, conferir os dados, os casos e a apresentação de vendas dele."
@@ -23493,10 +24098,14 @@
       ],
       "rodada": 8,
       "bloco": "10",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-87",
       "contexto": [
         "A cada trimestre, ver a nota de qualidade e o retorno dos clientes de cada parceiro recomendado e decidir quem continua."
@@ -23525,10 +24134,14 @@
       ],
       "rodada": 8,
       "bloco": "10",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-99",
       "contexto": [
         "Quando um cliente da Wise tem um problema sério com um parceiro recomendado, parar de recomendá-lo, sem avisar o parceiro e sem mexer no nível dele."
@@ -23555,10 +24168,14 @@
       ],
       "rodada": 8,
       "bloco": "10",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "DEC-suspensao_revisao",
       "contexto": [
         "A suspensão é silenciosa: o parceiro não sabe. Se ela for definitiva, um problema pontual tira o parceiro das recomendações para sempre; se for revista, alguém precisa decidir com que critério."
@@ -23587,10 +24204,14 @@
       ],
       "rodada": 8,
       "bloco": "11",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-59",
       "contexto": [
         "Manter atualizado tudo o que o parceiro usa para indicar: minicurso, kit de vendas, simulador de ganho, perfil do cliente ideal e a página do cliente."
@@ -23623,10 +24244,14 @@
       ],
       "rodada": 8,
       "bloco": "11",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-88",
       "contexto": [
         "Produzir e manter atualizado o minicurso de como vender a Wise e o certificado que o parceiro recebe."
@@ -23657,10 +24282,14 @@
       ],
       "rodada": 8,
       "bloco": "11",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-89",
       "contexto": [
         "Manter o material de vendas que o parceiro usa e a calculadora que mostra quanto ele ganha por indicação."
@@ -23691,10 +24320,14 @@
       ],
       "rodada": 8,
       "bloco": "11",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-90",
       "contexto": [
         "Manter a página que diz ao parceiro quem é o cliente certo para a Wise e o que esse cliente costuma dizer quando precisa de ajuda."
@@ -23725,10 +24358,14 @@
       ],
       "rodada": 8,
       "bloco": "11",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-96",
       "contexto": [
         "Manter no ar a página que o cliente do parceiro vê e a mensagem pronta que o parceiro envia."
@@ -23756,10 +24393,14 @@
       ],
       "rodada": 8,
       "bloco": "12",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-60",
       "contexto": [
         "Cuidar do próprio portal: as regras que rodam sozinhas, os dados, a privacidade e quem tem acesso."
@@ -23789,10 +24430,14 @@
       ],
       "rodada": 8,
       "bloco": "12",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-91",
       "contexto": [
         "Criar, ajustar e conferir as regras que o portal executa sozinho: avisos, lembretes, cálculos e mudanças de situação."
@@ -23823,10 +24468,14 @@
       ],
       "rodada": 8,
       "bloco": "12",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-92",
       "contexto": [
         "Cuidar dos dados que parceiros e clientes entregam: cruzar carteiras só com consentimento, guardar só o necessário e atender quem pede para ver ou apagar os próprios dados."
@@ -23857,10 +24506,14 @@
       ],
       "rodada": 8,
       "bloco": "12",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "REV-P-93",
       "contexto": [
         "Criar, ajustar e revogar o acesso de cada pessoa ao portal: time da Wise, Diretor e pessoas dos parceiros."
@@ -23886,10 +24539,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-24",
       "contexto": [
         "O aceite acontece no mesmo gesto do cadastro. Separado, era um processo de um passo só e de um papel só, o que o checklist do método chama de pequeno demais: vira um passo de outro processo.",
@@ -23916,10 +24573,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-76",
       "contexto": [
         "Era uma página de conteúdo (o perfil do cliente ideal) mostrada num encontro de vendas presencial que não existe mais. Não tem caso, começo nem fim: é material, não processo.",
@@ -23946,10 +24607,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-77",
       "contexto": [
         "Mesma situação: ensinar as frases que reconhecem a dor era um bloco de treinamento presencial. Hoje é conteúdo do minicurso gravado.",
@@ -23976,10 +24641,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-78",
       "contexto": [
         "Repetia o que 5.1.2 já faz: entregar a mensagem pronta com o link. Dois processos para a mesma entrega.",
@@ -24006,10 +24675,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-29",
       "contexto": [
         "Foi desenhado para encontros de vendas, produto e pós-venda com o time do parceiro. Com o minicurso gravado, o ensino acontece em dois lugares que já existem: a conversa de entrada (4.4) e a etapa do minicurso no onboarding (5.2). Um processo só para isso duplicaria os dois.",
@@ -24036,10 +24709,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-36",
       "contexto": [
         "Tinha o mesmo gatilho da Prateleira (um cliente da Wise precisa de algo que um parceiro resolve) e o mesmo resultado (o parceiro recebe uma indicação da Wise). Pelo checklist do método, um caso é um processo só.",
@@ -24066,10 +24743,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-70",
       "contexto": [
         "Preencher a ficha de jogo é um campo preenchido por uma pessoa durante o encontro de alinhamento. Pelo checklist do método, é pequeno demais para ser processo: vira um passo.",
@@ -24096,10 +24777,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-71",
       "contexto": [
         "A sobreposição de carteiras era estimada pelo que o candidato dizia, antes de ele entrar. Agora o cruzamento real acontece no encontro de alinhamento, com consentimento. A estimativa perdeu a função.",
@@ -24126,10 +24811,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-72",
       "contexto": [
         "As duas perguntas (deu antes de pedir? a Wise o indicaria a um cliente importante?) são critério para convidar ao Premium. Estavam depois do convite, dentro do encontro. Além disso, eram um campo de uma pessoa só.",
@@ -24156,10 +24845,14 @@
       ],
       "rodada": 8,
       "bloco": "Retirados",
-      "status": "em_formulario",
+      "status": "respondida",
       "formulario": "FO-07",
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0373"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "RET-P-74",
       "contexto": [
         "Recolher a apresentação de vendas é um passo de um papel só. A conferência da ficha (10.1) já inclui a apresentação e os casos.",
@@ -24451,7 +25144,6 @@
         "Q-0142",
         "Q-0143",
         "Q-0144",
-        "Q-0145",
         "Q-0146",
         "Q-0147",
         "Q-0148",
@@ -24527,9 +25219,11 @@
       ],
       "introducao": "Revisão crítica de cada processo pelo método, com as decisões embutidas e as propostas de mudança.",
       "link": "https://claude.ai/artifact/PiN89dTpmBXhtz37cTS71J",
-      "status": "enviado",
-      "respondido_por": [],
-      "respostas_recebidas": 0,
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
       "enviado_em": "2026-11-10",
       "prazo": "",
       "identificacao": false
@@ -24820,7 +25514,7 @@
     {
       "id": "DE-08",
       "data": "2026-11-06",
-      "texto": "A comissão é regra única, sem exceção por parceiro.",
+      "texto": "A comissão segue uma regra geral, igual para todos nesta fase.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -25117,13 +25811,237 @@
         "EV-0369",
         "EV-0370"
       ]
+    },
+    {
+      "id": "DE-36",
+      "data": "2026-11-18",
+      "texto": "A revisão crítica do to-be (v9) foi aprovada: 16 itens respondidos no FO-14 e, para os demais, as recomendações da revisão, a pedido do patrocinador.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373",
+        "EV-0374",
+        "EV-0375",
+        "EV-0376",
+        "EV-0377"
+      ]
+    },
+    {
+      "id": "DE-37",
+      "data": "2026-11-18",
+      "texto": "A comissão segue uma regra geral, igual para todos nesta fase (MVP). Com o tempo, podem surgir regras específicas por caso; por isso o mapa fala em 'regra de comissão', não em 'regra única'.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0377"
+      ]
+    },
+    {
+      "id": "DE-38",
+      "data": "2026-11-18",
+      "texto": "Como se combinam os critérios para subir ao Premium? 60 dias no programa e, além disso, 3 clientes fechados ou a avaliação com o Igor.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0374"
+      ]
+    },
+    {
+      "id": "DE-39",
+      "data": "2026-11-18",
+      "texto": "O parceiro que entra pela campanha indica só a Wise Makers ou as três empresas do grupo? Só a Wise Makers no Select; as três para Premium e Elite.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0375"
+      ]
+    },
+    {
+      "id": "DE-40",
+      "data": "2026-11-18",
+      "texto": "Quando o termo de adesão muda, o que acontece com os parceiros que aceitaram a versão anterior? O portal pede o aceite da versão nova no próximo acesso, depois dos 30 dias de aviso.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0376"
+      ]
+    },
+    {
+      "id": "DE-41",
+      "data": "2026-11-18",
+      "texto": "Os portões de fase continuam com os números de antes da campanha? Manter como está e rever no próximo fechamento trimestral.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-42",
+      "data": "2026-11-18",
+      "texto": "No pulso trimestral, sobre quais parceiros o Gerente também responde? O Gerente responde só sobre Premium e Elite; para o Select vale só a nota do parceiro.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-43",
+      "data": "2026-11-18",
+      "texto": "Quem é o dono da campanha de aquisição de parceiros? O Igor é o dono; eu configuro a página e informo os números.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-44",
+      "data": "2026-11-18",
+      "texto": "O candidato que não passa na fila é avisado? Avisa só quem chegou a conversar; quem foi barrado na conferência do cadastro não recebe nada.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-45",
+      "data": "2026-11-18",
+      "texto": "Quanto tempo dura a conversa de entrada? 45 minutos.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-46",
+      "data": "2026-11-18",
+      "texto": "O que acontece quando o candidato marca e não aparece? O Gerente oferece um novo horário uma vez; na segunda falta, o cadastro sai da fila.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-47",
+      "data": "2026-11-18",
+      "texto": "Quantas vezes o Gerente tenta falar com um candidato que não responde? 3 mensagens em 7 dias úteis (a primeira e mais duas).",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-48",
+      "data": "2026-11-18",
+      "texto": "Quando o Select recebe o certificado de parceiro Wise? Ao concluir o minicurso.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-49",
+      "data": "2026-11-18",
+      "texto": "Como é feito o anúncio conjunto da parceria? O parceiro publica com a arte e o texto prontos do kit; a Wise cita os novos parceiros no comunicado do mês.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-50",
+      "data": "2026-11-18",
+      "texto": "Depois de quantos dias na mesma etapa o portal manda o lembrete? 14 dias.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-51",
+      "data": "2026-11-18",
+      "texto": "O que acontece com o parceiro que recebe os lembretes e nunca avança? Depois de 3 lembretes sem avanço, fica como adormecido: mantém o acesso, para de receber lembrete, sai das contas de parceiros ativos e volta sozinho se um cliente se cadastrar.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-52",
+      "data": "2026-11-18",
+      "texto": "E quando a empresa que entra pelo link do parceiro já é cliente da Wise ou já está em negociação com ela? O portal confere no cadastro; a empresa é atendida normalmente, mas sem proteção de origem nem comissão, e o parceiro é avisado na hora.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-53",
+      "data": "2026-11-18",
+      "texto": "O Base Ativa é só a formação, ou continua com o método de 12 semanas? É só a formação, com os cinco passos; o método de 12 semanas sai.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-54",
+      "data": "2026-11-18",
+      "texto": "A formação do Base Ativa acontece uma vez por parceiro ou se repete? Uma por ano para cada Elite.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-55",
+      "data": "2026-11-18",
+      "texto": "Existe um grupo único com todos os parceiros? Não: cada parceiro tem só o próprio grupo com a Wise; o que é de todos vai pelo comunicado e pelo encontro trimestral.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-56",
+      "data": "2026-11-18",
+      "texto": "Quando a parceria acaba, o que acontece com as oportunidades do parceiro que ainda estão em negociação? Continua valendo na saída a pedido; no desligamento por descumprimento do termo, não.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
+    },
+    {
+      "id": "DE-57",
+      "data": "2026-11-18",
+      "texto": "A recomendação suspensa de um parceiro pode voltar? É revista a cada fechamento trimestral: volta se o cliente disser que foi resolvido e não houver novo problema.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0373"
+      ]
     }
   ],
   "glossario": [
     {
       "id": "GL-01",
       "termo": "Tipo Embaixador",
-      "definicao": "V alto, R alto, Q alto (AAA). Ação: Proteger e alavancar. Pedir dois movimentos por trimestre: uma indicação nova de alta qualidade e um movimento conjunto (caso de sucesso, ação na Base Ativa ou resposta a uma RFP da Prateleira). Conferir os números reais da relação: o livro alerta que muitos Evangelistas não são os mais lucrativos. Usar como piloto de novas jogadas. Abordagem: Tom de sócio: reconhecimento, acesso antecipado às RFPs da Prateleira, co-marketing, novidades das empresas do grupo. Mensagens constantes e conservadoras, sem mudar o processo de repente, e uma iniciativa nova de tempos em tempos para não virar acomodação. Nenhuma exceção de comissão (regra única). Cadência: Ligação ou conversa mensal com o gerente, grupo de WhatsApp conforme a demanda, revisão trimestral conjunta com dados.",
+      "definicao": "V alto, R alto, Q alto (AAA). Ação: Proteger e alavancar. Pedir dois movimentos por trimestre: uma indicação nova de alta qualidade e um movimento conjunto (caso de sucesso, ação na Base Ativa ou resposta a uma RFP da Prateleira). Conferir os números reais da relação: o livro alerta que muitos Evangelistas não são os mais lucrativos. Usar como piloto de novas jogadas. Abordagem: Tom de sócio: reconhecimento, acesso antecipado às RFPs da Prateleira, co-marketing, novidades das empresas do grupo. Mensagens constantes e conservadoras, sem mudar o processo de repente, e uma iniciativa nova de tempos em tempos para não virar acomodação. Nenhuma exceção de comissão (regra de comissão). Cadência: Ligação ou conversa mensal com o gerente, grupo de WhatsApp conforme a demanda, revisão trimestral conjunta com dados.",
       "sinonimos": [],
       "evidencias": [
         "EV-0139",
@@ -25315,7 +26233,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-10",
+      "data": "2026-11-18",
       "evento": "Mapeamento iniciado"
     },
     {
@@ -25341,6 +26259,10 @@
     {
       "data": "2026-11-10",
       "evento": "To-be v9: revisão crítica pelo método. 2 processos novos, 10 retirados ou fundidos, 81 com proposta de mudança e 21 decisões em aberto, tudo como hipótese até o FO-14"
+    },
+    {
+      "data": "2026-11-18",
+      "evento": "To-be v10: revisão crítica aprovada. 16 itens respondidos no FO-14 (com o ajuste 'regra de comissão' no lugar de 'regra única'); os demais aprovados pela recomendação, a pedido do patrocinador. 20 decisões aplicadas; fica aberta só a forma de entregar o Wise Hub com as duas marcas."
     }
   ]
 }

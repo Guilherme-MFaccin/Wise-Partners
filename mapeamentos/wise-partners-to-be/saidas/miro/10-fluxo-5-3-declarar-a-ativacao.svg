@@ -9,13 +9,13 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Primeiro cliente cadastrado pelo link do parceiro"]):::hipotese
-      n_t1["Conferir se o cadastro não é do próprio parceiro"]:::hipotese
-      n_g1{"É cadastro de teste?"}:::hipotese
-      n_t2["Marcar o parceiro como ativado e avisar os dois lados"]:::hipotese
-      n_t3["Parabenizar no grupo e explicar como o cliente será atendido"]:::hipotese
-      n_f1(["Cadastro de teste ignorado"]):::hipotese
-      n_f2(["Parceiro ativado"]):::hipotese
+      n_i1(["Primeiro cliente cadastrado pelo link do parceiro"]):::confirmado
+      n_t1["Conferir se o cadastro não é do próprio parceiro"]:::confirmado
+      n_g1{"É cadastro de teste?"}:::confirmado
+      n_t2["Marcar o parceiro como ativado e avisar os dois lados"]:::confirmado
+      n_t3["Parabenizar no grupo e explicar como o cliente será atendido"]:::confirmado
+      n_f1(["Cadastro de teste ignorado"]):::confirmado
+      n_f2(["Parceiro ativado"]):::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_g1

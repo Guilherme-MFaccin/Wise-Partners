@@ -4,18 +4,18 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Parceiro com grupo, link, minicurso e Hub"]):::hipotese
-      n_t1["Criar as etapas do onboarding do Select"]:::hipotese
-      n_e1>"Primeiro cliente cadastrado pelo link"]:::hipotese
-      n_s1[["Declarar a ativação"]]:::hipotese
-      n_e2>"Primeiro diagnóstico feito na base do parceiro"]:::hipotese
-      n_t5["Marcar o onboarding como concluído"]:::hipotese
-      n_f1(["Onboarding do Select concluído"]):::hipotese
+      n_i1(["Parceiro com grupo, link, minicurso e Hub"]):::confirmado
+      n_t1["Criar as etapas do onboarding do Select"]:::confirmado
+      n_e1>"Primeiro cliente cadastrado pelo link"]:::confirmado
+      n_s1[["Declarar a ativação"]]:::confirmado
+      n_e2>"Primeiro diagnóstico feito na base do parceiro"]:::confirmado
+      n_t5["Marcar o onboarding como concluído"]:::confirmado
+      n_f1(["Onboarding do Select concluído"]):::confirmado
     end
     subgraph raia_PA_05 ["Responsável nomeado no parceiro"]
-      n_t2["Assistir ao minicurso de como vender a Wise"]:::hipotese
-      n_t3["Publicar o anúncio conjunto da parceria e marcar no portal"]:::hipotese
-      n_t4["Enviar o link e a mensagem pronta para a base e marcar no portal"]:::hipotese
+      n_t2["Assistir ao minicurso de como vender a Wise"]:::confirmado
+      n_t3["Publicar o anúncio conjunto da parceria e marcar no portal"]:::confirmado
+      n_t4["Enviar o link e a mensagem pronta para a base e marcar no portal"]:::confirmado
     end
     ext_X2[/"Cliente do parceiro"/]
     n_i1 --> n_t1

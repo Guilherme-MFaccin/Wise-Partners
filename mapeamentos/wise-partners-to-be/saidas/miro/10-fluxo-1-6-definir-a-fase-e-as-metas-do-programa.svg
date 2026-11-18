@@ -9,14 +9,14 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_t1["Mostrar a distância de cada portão"]:::hipotese
-      n_t4["Registrar a fase e as metas"]:::hipotese
-      n_f1(["Fase e metas registradas"]):::hipotese
+      n_t1["Mostrar a distância de cada portão"]:::confirmado
+      n_t4["Registrar a fase e as metas"]:::confirmado
+      n_f1(["Fase e metas registradas"]):::confirmado
     end
     subgraph raia_PA_02 ["Diretor"]
-      n_i1(["Início de cada trimestre"]):::hipotese
-      n_t2["Decidir se o programa muda de fase"]:::hipotese
-      n_t3["Definir ou rever as metas do trimestre"]:::hipotese
+      n_i1(["Início de cada trimestre"]):::confirmado
+      n_t2["Decidir se o programa muda de fase"]:::confirmado
+      n_t3["Definir ou rever as metas do trimestre"]:::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_t2

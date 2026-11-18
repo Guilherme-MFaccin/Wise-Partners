@@ -4,13 +4,13 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Planejamento anual"]):::hipotese
-      n_t1["Listar os custos do canal: comissões, horas, anúncios e outros custos diretos"]:::hipotese
-      n_t3["Registrar a fórmula no portal"]:::hipotese
-      n_f1(["Fórmula do CAC definida"]):::hipotese
+      n_i1(["Planejamento anual"]):::confirmado
+      n_t1["Listar os custos do canal: comissões, horas, anúncios e outros custos diretos"]:::confirmado
+      n_t3["Registrar a fórmula no portal"]:::confirmado
+      n_f1(["Fórmula do CAC definida"]):::confirmado
     end
     subgraph raia_PA_02 ["Diretor"]
-      n_t2["Confirmar a fórmula do CAC e os custos intermediários"]:::hipotese
+      n_t2["Confirmar a fórmula do CAC e os custos intermediários"]:::confirmado
     end
     n_i1 --> n_t1
     n_t1 --> n_t2

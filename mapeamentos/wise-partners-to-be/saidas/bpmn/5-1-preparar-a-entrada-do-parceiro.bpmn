@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-27" name="5.1 Preparar a entrada do parceiro" processRef="Process_P-27" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-27" name="5.1 Preparar a entrada do parceiro" isExecutable="false">
-    <bpmn:documentation>O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos. [status do fluxo: Hipótese; evidências: nenhuma]</bpmn:documentation>
+    <bpmn:documentation>O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-27">
       <bpmn:lane id="Lane_P-27_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-27_i1</bpmn:flowNodeRef>
@@ -15,12 +15,12 @@
         <bpmn:flowNodeRef>P-27_f1</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
-    <bpmn:startEvent id="P-27_i1" name="Acesso criado na conversa de entrada"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:outgoing>P-27_F1</bpmn:outgoing></bpmn:startEvent>
-    <bpmn:subProcess id="P-27_s1" name="Criar o grupo de WhatsApp do parceiro"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-27_F1</bpmn:incoming><bpmn:outgoing>P-27_F2</bpmn:outgoing></bpmn:subProcess>
-    <bpmn:subProcess id="P-27_s2" name="Entregar o link da página do cliente e a mensagem pronta"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-27_F2</bpmn:incoming><bpmn:outgoing>P-27_F3</bpmn:outgoing></bpmn:subProcess>
-    <bpmn:serviceTask id="P-27_t1" name="Liberar o minicurso e o kit na área do parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Hipótese</bpmn:documentation><bpmn:incoming>P-27_F3</bpmn:incoming><bpmn:outgoing>P-27_F4</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:task id="P-27_t2" name="Providenciar o Wise Hub com as duas marcas"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-27_F4</bpmn:incoming><bpmn:outgoing>P-27_F5</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="P-27_f1" name="Parceiro com grupo, link, minicurso e Hub"><bpmn:documentation>status: Hipótese</bpmn:documentation><bpmn:incoming>P-27_F5</bpmn:incoming></bpmn:endEvent>
+    <bpmn:startEvent id="P-27_i1" name="Acesso criado na conversa de entrada"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-27_F1</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:subProcess id="P-27_s1" name="Criar o grupo de WhatsApp do parceiro"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-27_F1</bpmn:incoming><bpmn:outgoing>P-27_F2</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:subProcess id="P-27_s2" name="Entregar o link da página do cliente e a mensagem pronta"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-27_F2</bpmn:incoming><bpmn:outgoing>P-27_F3</bpmn:outgoing></bpmn:subProcess>
+    <bpmn:serviceTask id="P-27_t1" name="Liberar o minicurso e o kit na área do parceiro"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-27_F3</bpmn:incoming><bpmn:outgoing>P-27_F4</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:task id="P-27_t2" name="Providenciar o Wise Hub com as duas marcas"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-27_F4</bpmn:incoming><bpmn:outgoing>P-27_F5</bpmn:outgoing></bpmn:task>
+    <bpmn:endEvent id="P-27_f1" name="Parceiro com grupo, link, minicurso e Hub"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-27_F5</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-27_F1" name="" sourceRef="P-27_i1" targetRef="P-27_s1" />
     <bpmn:sequenceFlow id="P-27_F2" name="" sourceRef="P-27_s1" targetRef="P-27_s2" />
     <bpmn:sequenceFlow id="P-27_F3" name="" sourceRef="P-27_s2" targetRef="P-27_t1" />
@@ -31,12 +31,12 @@
     <bpmndi:BPMNPlane id="BPMNPlane_P-27" bpmnElement="Collaboration_P-27">
       <bpmndi:BPMNShape id="Participant_P-27_di" bpmnElement="Participant_P-27" isHorizontal="true"><dc:Bounds x="0" y="0" width="1176" height="148" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_P-27_PA-01_di" bpmnElement="Lane_P-27_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1146" height="148" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_i1_di" bpmnElement="P-27_i1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_s1_di" bpmnElement="P-27_s1" isExpanded="false" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_s2_di" bpmnElement="P-27_s2" isExpanded="false" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_t1_di" bpmnElement="P-27_t1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_t2_di" bpmnElement="P-27_t2" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-27_f1_di" bpmnElement="P-27_f1" color:background-color="#FFFFFF" color:border-color="#8A9099"><dc:Bounds x="1040" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_i1_di" bpmnElement="P-27_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_s1_di" bpmnElement="P-27_s1" isExpanded="false" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_s2_di" bpmnElement="P-27_s2" isExpanded="false" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_t1_di" bpmnElement="P-27_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_t2_di" bpmnElement="P-27_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-27_f1_di" bpmnElement="P-27_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1040" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1003" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-27_F1_di" bpmnElement="P-27_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-27_F2_di" bpmnElement="P-27_F2"><di:waypoint x="418" y="74" /><di:waypoint x="466" y="74" /></bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="P-27_F3_di" bpmnElement="P-27_F3"><di:waypoint x="594" y="74" /><di:waypoint x="642" y="74" /></bpmndi:BPMNEdge>

@@ -9,9 +9,9 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Oportunidade registrada"]):::hipotese
-      n_t1["Enviar a confirmação e o agradecimento ao parceiro"]:::hipotese
-      n_f1(["Parceiro agradecido"]):::hipotese
+      n_i1(["Oportunidade registrada"]):::confirmado
+      n_t1["Enviar a confirmação e o agradecimento ao parceiro"]:::confirmado
+      n_f1(["Parceiro agradecido"]):::confirmado
     end
     n_i1 --&gt; n_t1
     n_t1 --&gt; n_f1

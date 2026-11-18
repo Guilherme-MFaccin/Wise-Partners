@@ -1,0 +1,82 @@
+{
+ "criterio_premium": {
+  "escolha": "60 dias no programa e, além disso, 3 clientes fechados ou a avaliação com o Igor",
+  "fonte": "resposta"
+ },
+ "empresas_grupo": {
+  "escolha": "Só a Wise Makers no Select; as três para Premium e Elite",
+  "fonte": "resposta"
+ },
+ "termo_versao": {
+  "escolha": "O portal pede o aceite da versão nova no próximo acesso, depois dos 30 dias de aviso",
+  "fonte": "resposta"
+ },
+ "portoes": {
+  "escolha": "Manter como está e rever no próximo fechamento trimestral",
+  "fonte": "recomendação aprovada"
+ },
+ "pulso_select": {
+  "escolha": "O Gerente responde só sobre Premium e Elite; para o Select vale só a nota do parceiro",
+  "fonte": "recomendação aprovada"
+ },
+ "campanha_dono": {
+  "escolha": "O Igor é o dono; eu configuro a página e informo os números",
+  "fonte": "recomendação aprovada"
+ },
+ "aviso_descarte": {
+  "escolha": "Avisa só quem chegou a conversar; quem foi barrado na conferência do cadastro não recebe nada",
+  "fonte": "recomendação aprovada"
+ },
+ "conversa_duracao": {
+  "escolha": "45 minutos",
+  "fonte": "recomendação aprovada"
+ },
+ "no_show": {
+  "escolha": "O Gerente oferece um novo horário uma vez; na segunda falta, o cadastro sai da fila",
+  "fonte": "recomendação aprovada"
+ },
+ "tentativas": {
+  "escolha": "3 mensagens em 7 dias úteis (a primeira e mais duas)",
+  "fonte": "recomendação aprovada"
+ },
+ "certificado": {
+  "escolha": "Ao concluir o minicurso",
+  "fonte": "recomendação aprovada"
+ },
+ "anuncio": {
+  "escolha": "O parceiro publica com a arte e o texto prontos do kit; a Wise cita os novos parceiros no comunicado do mês",
+  "fonte": "recomendação aprovada"
+ },
+ "limite_lembrete": {
+  "escolha": "14 dias",
+  "fonte": "recomendação aprovada"
+ },
+ "adormecido": {
+  "escolha": "Depois de 3 lembretes sem avanço, fica como adormecido: mantém o acesso, para de receber lembrete, sai das contas de parceiros ativos e volta sozinho se um cliente se cadastrar",
+  "fonte": "recomendação aprovada"
+ },
+ "ja_cliente": {
+  "escolha": "O portal confere no cadastro; a empresa é atendida normalmente, mas sem proteção de origem nem comissão, e o parceiro é avisado na hora",
+  "fonte": "recomendação aprovada"
+ },
+ "base_ativa_formato": {
+  "escolha": "É só a formação, com os cinco passos; o método de 12 semanas sai",
+  "fonte": "recomendação aprovada"
+ },
+ "base_ativa_repete": {
+  "escolha": "Uma por ano para cada Elite",
+  "fonte": "recomendação aprovada"
+ },
+ "comunidade_select": {
+  "escolha": "Não: cada parceiro tem só o próprio grupo com a Wise; o que é de todos vai pelo comunicado e pelo encontro trimestral",
+  "fonte": "recomendação aprovada"
+ },
+ "saida_oportunidades": {
+  "escolha": "Continua valendo na saída a pedido; no desligamento por descumprimento do termo, não",
+  "fonte": "recomendação aprovada"
+ },
+ "suspensao_revisao": {
+  "escolha": "É revista a cada fechamento trimestral: volta se o cliente disser que foi resolvido e não houver novo problema",
+  "fonte": "recomendação aprovada"
+ }
+}
