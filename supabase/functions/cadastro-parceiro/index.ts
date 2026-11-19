@@ -1,13 +1,11 @@
 // Cadastro de parceiros pela página pública (/parceiros), para empresas de qualquer categoria. Sem login.
 // GET: o que a página precisa (categorias, vídeo, IDs de medição, conteúdo editável, valores de referência, perfil da
 // reunião e cases) ou, com ?texto=termo|privacidade, o texto vigente.
-// POST, modo "fila" (padrão desde 07/11/2026): o cadastro entra na fila de espera; o Igor fala com a pessoa pelo WhatsApp
-// e aprova no portal. Modo "acesso_direto": cria parceiro, aceite eletrônico, onboarding e conta com a senha escolhida.
-// A conta nasce confirmada: sem SMTP próprio, o portal não consegue mandar e-mail de confirmação.
+// POST: o cadastro entra na fila de espera (P-21); a equipe fala com a pessoa pelo WhatsApp, faz a conversa de entrada
+// e aprova no portal (P-23), que cria o parceiro e a conta com senha provisória. Não há mais acesso direto (20/11/2026).
 import { cors, erro, json } from "../_shared/cors.ts";
-import { admin, urlDoApp } from "../_shared/supabase.ts";
+import { admin } from "../_shared/supabase.ts";
 import { excedeuLimite, ipDe } from "../_shared/limite.ts";
-import { enviarEmail, layoutEmail } from "../_shared/email.ts";
 import { COLUNAS_CLIENTE, icp, valores } from "../_shared/paginas.ts";
 
 const SEM_CACHE = { "X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store" };
@@ -80,10 +78,7 @@ Deno.serve(async (req) => {
 
     const b = await req.json().catch(() => ({}));
     if (texto(b?.website, 200)) return json({ ok: true, fila: true }); // campo oculto preenchido: robô
-    const { data: modo } = await sb.from("config_landing").select("modo_cadastro").eq("id", 1).maybeSingle();
-    const fila = (modo?.modo_cadastro ?? "fila") !== "acesso_direto";
-    const senha = String(b?.senha ?? "");
-    if (!fila && senha.length < 8) return erro("A senha precisa de pelo menos 8 caracteres.");
+    // A entrada é sempre pessoal (P-21 a P-23): o cadastro entra na fila; o acesso só sai depois da conversa de entrada
     const email = texto(b?.email, 160).toLowerCase();
     const whatsapp = texto(b?.whatsapp, 40);
     const dados = {
@@ -95,38 +90,11 @@ Deno.serve(async (req) => {
       referencia: texto(b?.referencia, 300), aceite_termo: b?.aceite_termo === true, aceite_privacidade: b?.aceite_privacidade === true,
     };
 
-    if (fila) {
-      const { error: e } = await sb.rpc("entrar_fila_landing", { p: dados });
-      if (e) return erro(e.message.replace(/^.*?: /, ""), e.code === "23505" ? 409 : 400);
-      const { data: c } = await sb.from("config_landing").select("pixel_meta_id, capi_ativa").eq("id", 1).maybeSingle();
-      if (c?.capi_ativa && c.pixel_meta_id) await eventoMeta(c.pixel_meta_id, b, email, whatsapp, req);
-      return json({ ok: true, fila: true });
-    }
-
-    const { data: r, error } = await sb.rpc("cadastrar_parceiro_landing", { p: dados });
-    if (error) return erro(error.message.replace(/^.*?: /, ""), error.code === "23505" ? 409 : 400);
-
-    const conta = await sb.auth.admin.createUser({ email, password: senha, email_confirm: true, user_metadata: { nome: dados.nome } });
-    if (conta.error) {
-      await sb.rpc("desfazer_cadastro_landing", { p_cadastro: r.cadastro_id, p_erro: conta.error.message });
-      const jaExiste = /already|registered|exists/i.test(conta.error.message);
-      return erro(jaExiste ? "Este e-mail já tem acesso ao portal. Entre com a sua senha." : "Não foi possível criar o seu acesso agora. Tente de novo.", jaExiste ? 409 : 500);
-    }
-
-    const { data: cfg } = await sb.from("config_landing").select("pixel_meta_id, capi_ativa").eq("id", 1).maybeSingle();
-    if (cfg?.capi_ativa && cfg.pixel_meta_id) await eventoMeta(cfg.pixel_meta_id, b, email, whatsapp, req);
-
-    // Boas-vindas por e-mail só com o Resend configurado; o acesso já funciona sem ele
-    const app = await urlDoApp(sb);
-    if (Deno.env.get("RESEND_API_KEY") && app) {
-      await enviarEmail(email, "Seu acesso ao Wise Partners está pronto", layoutEmail({
-        titulo: "Seu acesso ao Wise Partners está pronto",
-        paragrafos: [`Oi, ${dados.nome.split(" ")[0]}. A ${dados.empresa} já faz parte do programa.`,
-          "No portal você encontra o seu link para oferecer a consultoria comercial aos seus clientes e o passo a passo para começar."],
-        botao: { texto: "Entrar no portal", url: `${app}/entrar` },
-      }), `Seu acesso ao Wise Partners está pronto. Entre em ${app}/entrar com o e-mail ${email} e a senha que você criou.`).catch(() => {});
-    }
-    return json({ ok: true, email });
+    const { error: e } = await sb.rpc("entrar_fila_landing", { p: dados });
+    if (e) return erro(e.message.replace(/^.*?: /, ""), e.code === "23505" ? 409 : 400);
+    const { data: c } = await sb.from("config_landing").select("pixel_meta_id, capi_ativa").eq("id", 1).maybeSingle();
+    if (c?.capi_ativa && c.pixel_meta_id) await eventoMeta(c.pixel_meta_id, b, email, whatsapp, req);
+    return json({ ok: true, fila: true });
   } catch (e) {
     return erro(e instanceof Error ? e.message : String(e), 500);
   }

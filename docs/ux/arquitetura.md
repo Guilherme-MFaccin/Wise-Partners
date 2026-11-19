@@ -11,7 +11,7 @@ Vale acima das seções seguintes onde houver diferença. Pedido do patrocinador
 | Parceiros | Carteira (com a ficha), Ações conjuntas, Base Ativa, Comunicados | P-26, P-40, P-47, P-54 |
 | Oportunidades | Indicações, Diagnósticos, Prateleira, Cruzamento, Comissões | P-31 a P-39, P-58, P-95 |
 | Resultados | Painel da semana, Canal e CAC, Custos, Maturidade, Ranking | P-14 a P-19 |
-| Programa | Modelo e processos, Páginas, Capacitação, Regras e configurações, Usuários, Importação | P-01, P-05, P-59, P-60, P-96, P-100 |
+| Programa | Modelo e processos, Wireframe, Páginas, Capacitação, Regras e configurações, Usuários, Importação | P-01, P-05, P-59, P-60, P-96, P-100 |
 
 | Seção (parceiro) | Abas |
 |---|---|
@@ -25,6 +25,8 @@ Vale acima das seções seguintes onde houver diferença. Pedido do patrocinador
 * **Ficha do parceiro** e **Regras e configurações** usam abas agrupadas (`NavegacaoSecoes` com `grupo`): a ficha pela jornada (quem é, entrada, relação, resultado, saída); as configurações por assunto (regras do programa, metas e medição, operação, sistema).
 * **Páginas públicas**: uma página dos parceiros e uma página do cliente, únicas, sem citar nenhum parceiro; o link exclusivo só atribui o cadastro. Textos, seções, perguntas, vídeo, valores, cases e publicação são editados em Programa, Páginas.
 * Nomes seguem o glossário do to-be: Prateleira (antes "Pedidos de RFP"), Painel da semana, Diagnósticos.
+* **Wireframe** (Programa, Wireframe; dados em `src/lib/wireframe.ts`): mapa do portal, sete jornadas, o desenho de baixa fidelidade de cada uma das 52 telas e a lista de ajustes de coerência com o to-be. Toda tela nova entra lá.
+* **Entrada do parceiro** (20/11/2026): a raiz do domínio sem login abre a página dos parceiros; não existe acesso direto (só fila, WhatsApp e conversa de entrada); quem tem senha provisória cria a própria senha antes de qualquer tela (`PrimeiroAcesso`); onboarding em seis etapas sem prazo (`etapas_onboarding()`), ativação no primeiro cliente pelo link e lembrete aos 14 dias parado numa etapa.
 
 ## Versão 2 (histórico)
 

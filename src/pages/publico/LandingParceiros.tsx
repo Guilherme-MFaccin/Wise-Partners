@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { BadgePercent, CheckCircle2, HeartHandshake, Loader2, Repeat, Sparkles } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { supabase } from "@/integrations/supabase/client";
 import {
   CABECALHOS, URL_CADASTRO, capturarOrigem, carregarConfig, cnpjValido, idsMeta, iniciarMedicao, mascaraCnpj, mascaraTelefone,
   registrarCadastro, somenteDigitos, type ConfigLanding,
@@ -45,7 +44,7 @@ async function carregarConfigGuardando(): Promise<ConfigLanding> {
 }
 
 const VAZIO = {
-  nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "", senha: "",
+  nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "",
   aceite_termo: false, aceite_privacidade: false, website: "",
 };
 
@@ -102,13 +101,11 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
 }
 
 export default function LandingParceiros() {
-  const navigate = useNavigate();
   const origem = useMemo(() => capturarOrigem(), []);
   const [f, setF] = useState(VAZIO);
   const [tocado, setTocado] = useState(false);
   const [enviando, setEnviando] = useState(false);
   const [falha, setFalha] = useState<string | null>(null);
-  const [criado, setCriado] = useState<string | null>(null);
   const [naFila, setNaFila] = useState<string | null>(null);
   const set = (k: keyof typeof VAZIO, v: string | boolean) => setF((x) => ({ ...x, [k]: v }));
 
@@ -123,8 +120,7 @@ export default function LandingParceiros() {
   const { valores, cases, vars } = useMemo(() => resolverDados(cfg), [cfg]);
   const conteudo = useMemo(() => montarConteudo(PADRAO_PARCEIROS, cfg?.conteudo, vars), [cfg?.conteudo, vars]);
   const s = conteudo.secoes;
-  // Desde 07/11/2026 o padrão é a fila: a equipe da Wise fala com cada parceiro antes de liberar o acesso
-  const fila = cfg?.modo_cadastro !== "acesso_direto";
+  // A entrada é sempre pessoal (P-21 a P-23): cadastro na fila, WhatsApp, conversa de entrada e só então o acesso
   const foraDoAr = !!cfg && !cfg.publicada;
   const carregandoTudo = isLoading && !cfg;
   const { ctaTopo, formRef, fimRef, visivel: barraVisivel } = useBarraFixa(!carregandoTudo && !foraDoAr);
@@ -133,8 +129,7 @@ export default function LandingParceiros() {
     if (cfg?.publicada) iniciarMedicao(cfg);
   }, [cfg]);
 
-  const perguntas = useMemo(() => conteudo.perguntas.map((q) => (q.pergunta === "Quando eu começo?" && !fila
-    ? { ...q, resposta: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." } : q)), [conteudo.perguntas, fila]);
+  const perguntas = conteudo.perguntas;
 
   const categorias = cfg?.categorias ?? [];
   const grupos = [
@@ -151,7 +146,6 @@ export default function LandingParceiros() {
     cnpj: !cnpjValido(f.cnpj) ? "Informe um CNPJ válido." : "",
     categoria_id: !f.categoria_id ? "Escolha a categoria da sua empresa." : "",
     clientes_ativos: !/^\d{1,7}$/.test(f.clientes_ativos) ? "Informe um número aproximado." : "",
-    senha: fila || f.senha.length >= 8 ? "" : "Use pelo menos 8 caracteres.",
     aceites: !(f.aceite_termo && f.aceite_privacidade) ? "Marque as duas caixas pra continuar." : "",
   };
   const valido = Object.values(erros).every((e) => !e);
@@ -185,16 +179,7 @@ export default function LandingParceiros() {
         return;
       }
       registrarCadastro(eventId);
-      if (d?.fila) {
-        setNaFila(f.whatsapp);
-        return;
-      }
-      const { error } = await supabase.auth.signInWithPassword({ email, password: f.senha });
-      if (error) {
-        setCriado(email);
-        return;
-      }
-      navigate("/parceiro", { replace: true });
+      setNaFila(f.whatsapp);
     } catch {
       setFalha("Sem conexão com o servidor. Confira a internet e tente de novo.");
     } finally {
@@ -355,9 +340,7 @@ export default function LandingParceiros() {
           <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
             {s.cadastro.eyebrow && <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">{s.cadastro.eyebrow}</p>}
             <h2 className="mt-2 max-w-3xl text-balance break-words font-display text-[28px] font-extrabold leading-tight sm:text-[36px]">{s.cadastro.titulo}</h2>
-            <p className="mt-4 max-w-[62ch] text-neutro-100">{fila
-              ? s.cadastro.texto
-              : "Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui."}</p>
+            <p className="mt-4 max-w-[62ch] text-neutro-100">{s.cadastro.texto}</p>
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
               <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
                 {s.incluido.itens_parceiro.slice(0, 6).map((t, i) => (
@@ -376,12 +359,6 @@ export default function LandingParceiros() {
                     <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
                     <p className="text-neutro-100">A equipe da Wise vai falar com você pelo WhatsApp {naFila} em até 24 horas úteis para marcar a conversa de entrada de 45 minutos. Fique de olho nas mensagens.</p>
                     <p className="text-neutro-300">Depois dessa conversa, você recebe o acesso ao portal com o seu link exclusivo.</p>
-                  </div>
-                ) : criado ? (
-                  <div className="space-y-3 text-sm" role="status">
-                    <p className="flex items-center gap-2 font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Seu acesso está pronto.</p>
-                    <p className="text-neutro-300">Entre no portal com o e-mail {criado} e a senha que você criou.</p>
-                    <Button asChild><Link to="/entrar">Entrar no portal</Link></Button>
                   </div>
                 ) : (
                   <form onSubmit={enviar} noValidate className="space-y-4">
@@ -426,11 +403,6 @@ export default function LandingParceiros() {
                       <Campo id="site" rotulo="Site" opcional>
                         <Input className="border-white/40" id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
                       </Campo>
-                      {!fila && (
-                        <Campo id="senha" rotulo="Crie uma senha pro portal" erro={mostra("senha")}>
-                          <Input className="border-white/40" id="senha" type="password" autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} aria-invalid={!!mostra("senha")} aria-describedby={mostra("senha") ? "senha-erro" : undefined} />
-                        </Campo>
-                      )}
                     </div>
 
                     {/* Campo oculto contra robôs */}
@@ -457,8 +429,8 @@ export default function LandingParceiros() {
 
                     <Button type="submit" size="lg" className="h-12 w-full text-base" disabled={enviando}>
                       {enviando
-                        ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />{fila ? "Enviando..." : "Criando o seu acesso..."}</>
-                        : fila ? (s.cadastro.botao || "Quero ser parceiro") : "Criar meu acesso de parceiro"}
+                        ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Enviando...</>
+                        : (s.cadastro.botao || "Quero ser parceiro")}
                     </Button>
                     <p className="text-center text-xs text-neutro-300">Valor de referência do que o seu cliente recebe: {reais(valores.total)}. Pra ele e pra você, sem custo.</p>
                   </form>

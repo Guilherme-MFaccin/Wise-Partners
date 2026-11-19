@@ -4126,14 +4126,15 @@
         "EV-0338",
         "EV-0339",
         "EV-0373",
-        "EV-0405"
+        "EV-0405",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-002"
       ],
-      "portal": "aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
+      "portal": "aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso; no primeiro acesso, o portal pede a senha própria antes de qualquer tela. Não existe acesso sem a conversa de entrada.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -4961,12 +4962,13 @@
         "EV-0184",
         "EV-0285",
         "EV-0344",
-        "EV-0373"
+        "EV-0373",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "confere se não é teste, marca a ativação sozinho e avisa o parceiro e o Gerente.",
+      "portal": "ativa sozinho no primeiro cliente cadastrado pelo link, ignora o cadastro com o CNPJ do próprio parceiro e avisa os dois lados.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -9074,14 +9076,15 @@
         "EV-0391",
         "EV-0392",
         "EV-0393",
-        "EV-0446"
+        "EV-0446",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-006"
       ],
-      "portal": "é o próprio processo. A navegação segue a cadeia de valor em seis seções com poucas abas cada: Tarefas, Candidatos, Parceiros, Oportunidades, Resultados e Programa; a área do parceiro tem cinco: Início, Oportunidades, Aprender, Minha parceria e Comunidade.",
+      "portal": "é o próprio processo. A navegação segue a cadeia de valor em seis seções com poucas abas cada: Tarefas, Candidatos, Parceiros, Oportunidades, Resultados e Programa; a área do parceiro tem cinco: Início, Oportunidades, Aprender, Minha parceria e Comunidade. O wireframe de todas as telas e jornadas fica em Programa, Wireframe.",
       "tipo": "suporte"
     },
     {
@@ -12016,12 +12019,13 @@
         "EV-0295",
         "EV-0373",
         "EV-0391",
-        "EV-0392"
+        "EV-0392",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "controla os acessos e registra quem acessou o quê.",
+      "portal": "controla os acessos (time da Wise em Usuários, colegas do parceiro pelo responsável), sempre com senha provisória trocada no primeiro acesso, e registra quem acessou o quê.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -12193,7 +12197,8 @@
         "EV-0012",
         "EV-0348",
         "EV-0333",
-        "EV-0373"
+        "EV-0373",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -12201,7 +12206,7 @@
         "F-009",
         "F-002"
       ],
-      "portal": "cria as etapas, marca sozinho as que consegue ver (login, minicurso, cliente, diagnóstico), deixa o parceiro marcar as outras e mostra a ele o que falta.",
+      "portal": "mostra ao parceiro as seis etapas em Primeiros passos, sem prazo em dias: marca sozinho o acesso, o minicurso, o primeiro cliente e o primeiro diagnóstico, e deixa o parceiro marcar o anúncio e o envio do link.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -13007,14 +13012,15 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0349",
-        "EV-0373"
+        "EV-0373",
+        "EV-0447"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-008"
       ],
-      "portal": "conta os dias em cada etapa, envia o lembrete e põe o caso na fila.",
+      "portal": "conta os dias parado na etapa e põe o caso em Tarefas a partir de 14 dias.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -17722,6 +17728,15 @@
       "data": "2026-11-20",
       "trecho": "Não vamos fazer uma landing page adaptada para cada parceiro. Vamos fazer uma landing page unica geral para todos, sem citar ninguém. Isso serve para a landing page do parceiro e a landing page do cliente do parceiro. [...] não tenho controle nenhum das páginas nem do parceiro nem do cliente do parceiro. [...] A aba de tarefas está horrível como estava antes. [...] Ficaram muitas abas. [...] Mantenha as funções, mas deixe toda a estrutura e arquitetura do portal do wise partners coerente com uma hierarquia organizada, equilibrada.",
       "local": "Sessão de trabalho, revisão do portal"
+    },
+    {
+      "id": "EV-0447",
+      "tipo": "entrevista",
+      "fonte": "Mensagem do patrocinador na sessão de trabalho (20/11/2026)",
+      "pessoa": "PE-01",
+      "data": "2026-11-20",
+      "trecho": "Preciso que você estruture todo o Wireframe do portal wise partners e deixe disponível em algum lugar da aba de Programa. Você verá, pela lógica, que existem algumas inconsistências com relação ao login como parceiro, criação de conta como parceiro etc etc. Preciso que você ajuste também tudo o que tem de incoerência lógica arquitetônica do wireframe, além de deixa-lo visível no próprio portal",
+      "local": "Sessão de trabalho, wireframe do portal"
     }
   ],
   "perguntas": [
@@ -27701,6 +27716,32 @@
       "citacoes": [],
       "visual": "",
       "recomendo": ""
+    },
+    {
+      "id": "Q-0278",
+      "texto": "Os pacotes (Base Ativa, Formação, Prateleira) continuam, ou os benefícios passam a seguir só o nível (Select, Premium, Elite)?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-61"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 12,
+      "bloco": "Níveis",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v14",
+      "contexto": [
+        "Hoje todo Select aprovado recebe o pacote Prateleira, mas no canvas ser recomendado na Prateleira é benefício do Premium."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
     }
   ],
   "formularios": [
@@ -29180,6 +29221,36 @@
       "evidencias": [
         "EV-0446"
       ]
+    },
+    {
+      "id": "DE-76",
+      "data": "2026-11-20",
+      "texto": "A entrada do parceiro é sempre pela fila, WhatsApp e conversa de entrada; não existe acesso direto pela página.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0447"
+      ]
+    },
+    {
+      "id": "DE-77",
+      "data": "2026-11-20",
+      "texto": "Quem recebe senha provisória cria a própria senha no primeiro acesso, antes de usar o portal.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0447"
+      ]
+    },
+    {
+      "id": "DE-78",
+      "data": "2026-11-20",
+      "texto": "O endereço do portal sem login abre a página dos parceiros.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0447"
+      ]
     }
   ],
   "glossario": [
@@ -29312,10 +29383,11 @@
     {
       "id": "GL-14",
       "termo": "Parceiro ativo",
-      "definicao": "Parceiro que já teve a primeira indicação no ICP que virou reunião.",
+      "definicao": "Parceiro cujo primeiro cliente se cadastrou pelo link exclusivo (P-30); cadastro com o CNPJ do próprio parceiro não conta.",
       "sinonimos": [],
       "evidencias": [
-        "EV-0016"
+        "EV-0016",
+        "EV-0447"
       ]
     },
     {
@@ -29421,6 +29493,10 @@
     {
       "data": "2026-11-20",
       "evento": "To-be v13: páginas públicas únicas sem citar o parceiro e controladas pelo portal; tarefas como fila de exceções; navegação do portal em seis seções pela cadeia de valor (P-09, P-21, P-25, P-27, P-60, P-75, P-95, P-96, P-98, P-100, P-101 e glossário do diagnóstico)."
+    },
+    {
+      "data": "2026-11-20",
+      "evento": "To-be v14: wireframe do portal em Programa, Wireframe; entrada sempre pela fila; senha própria no primeiro acesso; onboarding por etapas e ativação no primeiro cliente pelo link aplicados no portal; glossário de parceiro ativo corrigido; pergunta aberta sobre pacotes e níveis."
     }
   ]
 }

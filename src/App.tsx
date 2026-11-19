@@ -35,12 +35,14 @@ const Comunicados = lazy(() => import("@/pages/app/Comunicados"));
 const Ranking = lazy(() => import("@/pages/app/Ranking"));
 const Cruzamento = lazy(() => import("@/pages/app/Cruzamento"));
 const MeuPainel = lazy(() => import("@/pages/app/MeuPainel"));
+const PrimeiroAcesso = lazy(() => import("@/pages/PrimeiroAcesso"));
 const ModeloProcessos = lazy(() => import("@/pages/app/ModeloProcessos"));
 const Tarefas = lazy(() => import("@/pages/app/Tarefas"));
 const Diagnosticos = lazy(() => import("@/pages/app/Diagnosticos"));
 const FilaCandidatos = lazy(() => import("@/pages/app/candidatos/Fila"));
 const OrigensCandidatos = lazy(() => import("@/pages/app/candidatos/Origens"));
 const Paginas = lazy(() => import("@/pages/app/programa/Paginas"));
+const Wireframe = lazy(() => import("@/pages/app/programa/Wireframe"));
 
 const PInicio = lazy(() => import("@/pages/parceiro/Inicio"));
 const PIndicacoes = lazy(() => import("@/pages/parceiro/Indicacoes"));
@@ -77,13 +79,16 @@ function Protegida({ publico, children }: { publico: "interno" | "parceiro"; chi
   if (!perfil) return <SemAcesso />;
   if (publico === "interno" && perfil.papel === "parceiro") return <Navigate to="/parceiro" replace />;
   if (publico === "parceiro" && perfil.papel !== "parceiro") return <Navigate to="/app" replace />;
+  // Senha provisória (acesso criado pela Wise ou pelo responsável do parceiro): cria a própria senha antes de entrar
+  if (session.user.user_metadata?.senha_provisoria) return <PrimeiroAcesso />;
   return <>{children}</>;
 }
 
+// Raiz do domínio: quem não entrou vê a página do programa (com "Já sou parceiro" para o login); quem entrou vai para a sua área
 function Inicio() {
   const { session, perfil, carregando } = useAuth();
   if (carregando) return <Carregando />;
-  if (!session) return <Navigate to="/entrar" replace />;
+  if (!session) return <Navigate to="/parceiros" replace />;
   if (!perfil) return <SemAcesso />;
   return <Navigate to={perfil.papel === "parceiro" ? "/parceiro" : "/app"} replace />;
 }
@@ -112,6 +117,7 @@ export default function App() {
                   <Route path="candidatos/origens" element={<OrigensCandidatos />} />
                   <Route path="diagnosticos" element={<Diagnosticos />} />
                   <Route path="programa/paginas" element={<Paginas />} />
+                  <Route path="programa/wireframe" element={<Wireframe />} />
                   <Route path="parceiros" element={<Parceiros />} />
                   <Route path="parceiros/:id" element={<FichaParceiro />} />
                   <Route path="indicacoes" element={<Indicacoes />} />

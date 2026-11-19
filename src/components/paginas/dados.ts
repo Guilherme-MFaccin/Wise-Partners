@@ -16,7 +16,7 @@ export const CHAVES = {
 };
 
 export type ConfigParceiros = {
-  publicada: boolean; modo_cadastro: "fila" | "acesso_direto"; agenda_url: string | null; video_url: string | null; video_formato: FormatoVideo;
+  publicada: boolean; modo_cadastro: "fila"; agenda_url: string | null; video_url: string | null; video_formato: FormatoVideo;
   pixel_meta_id: string | null; capi_ativa: boolean; ga4_id: string | null;
   termo_versao: string; termo_texto: string; privacidade_versao: string; privacidade_texto: string; contato_privacidade: string;
   conteudo: Conteudo | null; updated_at: string;

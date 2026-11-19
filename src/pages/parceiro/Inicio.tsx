@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { useEtapasOnboarding } from "@/components/portal/EtapasOnboarding";
 import { ArrowRight, CalendarCheck, CheckCircle2, Circle, ExternalLink, FileSearch, Handshake, ListChecks, Mail, Megaphone, MessageSquareHeart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -38,12 +39,6 @@ export default function Inicio() {
     queryFn: async () => ok<any>(await supabase.from("pacotes").select("codigo, nome, entregas, wise_hub").eq("codigo", p!.pacote).maybeSingle()) as
       { codigo: string; nome: string; entregas: string[]; wise_hub: boolean } | null,
   });
-  const tarefasQ = useQuery({
-    enabled: !!perfil?.parceiro_id,
-    queryKey: ["portal-tarefas", perfil?.parceiro_id],
-    queryFn: async () => ok<any>(await supabase.from("tarefas_onboarding").select("id, descricao, prazo, feita")
-      .eq("parceiro_id", perfil!.parceiro_id).order("prazo")) as { id: string; descricao: string; prazo: string; feita: boolean }[],
-  });
   const indicacoesQ = useQuery({
     enabled: !!perfil?.parceiro_id,
     queryKey: ["portal-indicacoes-contagem", perfil?.parceiro_id],
@@ -64,7 +59,6 @@ export default function Inicio() {
   // Wise Hub: só pacotes que incluem o Hub (B e A), e só depois da assinatura
   const hubUrl = typeof hubQ.data === "string" ? hubQ.data.trim() : "";
   const mostraHub = assinado && !!pacoteQ.data?.wise_hub && !!hubUrl;
-  const tarefas = tarefasQ.data ?? [];
 
   // Nível e onboarding entram no quadro "Seus objetivos"
   const nivel = nivelQ.data;
@@ -178,24 +172,7 @@ export default function Inicio() {
           ) : <p className="mt-2 text-sm text-muted-foreground">O pacote ainda não foi definido.</p>}
           {!assinado && <p className="mt-3 text-xs text-muted-foreground">As entregas começam depois da assinatura.</p>}
         </section>
-        <section className="rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
-          <h2 className="font-semibold">Primeiros passos</h2>
-          {tarefas.length === 0 ? (
-            <p className="mt-2 text-sm text-muted-foreground">
-              {assinado ? "Nenhuma tarefa de início pendente." : "As tarefas de início aparecem aqui depois da assinatura."}
-            </p>
-          ) : (
-            <ul className="mt-3 space-y-2 text-sm">
-              {tarefas.map((t) => (
-                <li key={t.id} className="flex gap-2">
-                  {t.feita ? <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" /> : <Circle className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />}
-                  <span className={t.feita ? "text-muted-foreground line-through" : ""}>{t.descricao}</span>
-                  {!t.feita && <span className="ml-auto shrink-0 text-xs text-muted-foreground">até {data(t.prazo)}</span>}
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
+        <ResumoEtapas parceiroId={perfil!.parceiro_id!} />
       </div>
     </div>
   );
@@ -227,5 +204,28 @@ function Contador({ to, icone: Icone, titulo, valor, detalhe }: { to: string; ic
       <p className="mt-1 text-2xl font-bold">{valor}</p>
       <p className="text-xs text-muted-foreground">{detalhe}</p>
     </Link>
+  );
+}
+
+// Primeiros passos (P-94): a próxima etapa e o caminho para a lista completa
+function ResumoEtapas({ parceiroId }: { parceiroId: string }) {
+  const q = useEtapasOnboarding(parceiroId);
+  const etapas = q.data ?? [];
+  const feitas = etapas.filter((e) => e.feita).length;
+  const proxima = etapas.find((e) => !e.feita);
+  return (
+    <section className="flex flex-col rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
+      <h2 className="font-semibold">Primeiros passos</h2>
+      {q.isLoading ? <p className="mt-2 text-sm text-muted-foreground">Carregando...</p>
+        : q.error ? <p className="mt-2 text-sm text-muted-foreground">Não foi possível carregar as etapas agora.</p>
+        : !proxima ? <p className="mt-2 text-sm text-muted-foreground">Todas as etapas feitas. A parceria está ativa e o primeiro diagnóstico da sua base já aconteceu.</p>
+        : (
+          <>
+            <p className="mt-2 text-sm text-muted-foreground">{feitas} de {etapas.length} etapas feitas. A próxima:</p>
+            <p className="mt-1 font-semibold">{proxima.titulo}</p>
+          </>
+        )}
+      <Link to="/parceiro/onboarding" className="mt-3 inline-flex items-center gap-1 self-start text-sm text-menta-400 hover:underline">Ver os primeiros passos <ArrowRight className="h-3.5 w-3.5" /></Link>
+    </section>
   );
 }

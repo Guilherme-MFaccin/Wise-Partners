@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { ArrowLeft, Loader2, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -74,7 +74,8 @@ export default function Entrar() {
               <h1 className="text-xl font-bold">Confira o seu e-mail</h1>
               <p className="text-sm text-muted-foreground">
                 Se <strong className="text-foreground">{emailLimpo}</strong> tiver acesso ao portal, você vai receber um link para criar uma senha nova.
-                Se ele não chegar em alguns minutos, peça a um administrador da Wise para redefinir a sua senha.
+                Se ele não chegar em alguns minutos, peça uma senha provisória: o parceiro, ao responsável da empresa dele no portal ou à equipe
+                da Wise pelo grupo de WhatsApp; o time da Wise, a um administrador.
               </p>
               <Button variant="ghost" onClick={() => irPara("entrar")}><ArrowLeft /> Voltar para o login</Button>
             </div>
@@ -115,6 +116,11 @@ export default function Entrar() {
               </button>
             </form>
           )}
+        </div>
+        {/* Quem ainda não tem acesso: o acesso ao portal só existe depois da conversa de entrada (P-21 a P-23) */}
+        <div className="mt-6 space-y-2 text-center text-sm text-muted-foreground">
+          <p>Fez o cadastro pela página? O acesso chega pelo WhatsApp, com uma senha provisória, depois da conversa de entrada com a Wise.</p>
+          <p>Ainda não é parceiro? <Link to="/parceiros" className="font-semibold text-menta-400 underline-offset-4 hover:underline">Conheça o programa</Link></p>
         </div>
       </div>
     </div>

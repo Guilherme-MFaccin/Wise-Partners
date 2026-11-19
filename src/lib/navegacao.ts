@@ -63,6 +63,7 @@ export const SECOES_INTERNAS: SecaoNav[] = [
     id: "programa", rotulo: "Programa", icone: Network, descricao: "Arquitetar, equipar e operar o programa (P-01, P-59, P-60)",
     abas: [
       { to: "/app/modelo-e-processos", rotulo: "Modelo e processos", papeis: TODOS_INTERNOS },
+      { to: "/app/programa/wireframe", rotulo: "Wireframe", papeis: TODOS_INTERNOS },
       { to: "/app/programa/paginas", rotulo: "Páginas", papeis: GESTAO },
       { to: "/app/capacitacao", rotulo: "Capacitação", papeis: SEM_FINANCEIRO },
       { to: "/app/configuracoes", rotulo: "Regras e configurações", papeis: GESTAO },

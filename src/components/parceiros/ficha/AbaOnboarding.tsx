@@ -5,6 +5,7 @@ import { Ban, CalendarCheck, Check, Circle, Link2, Loader2, RefreshCw } from "lu
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { EtapasOnboarding } from "@/components/portal/EtapasOnboarding";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -56,8 +57,11 @@ export function AbaOnboarding({ parceiro: p }: { parceiro: Parceiro }) {
 
   return (
     <div className="space-y-4">
+      {/* P-94: etapas sem prazo em dias; a ativação vem do primeiro cliente pelo link (P-30) */}
+      {p.tipo_parceria === "comercial" && <EtapasOnboarding parceiroId={p.id} area="interno" podeMarcar={isParcerias} />}
+      <h3 className="pt-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground">Encontros e marcos registrados</h3>
       {q.isLoading ? <Carregando /> : q.error ? <ErroCarga erro={q.error} /> : !q.data?.plano ? (
-        <Vazio titulo="Sem plano de onboarding.">O plano de 90 dias é criado quando o parceiro comercial entra em onboarding.</Vazio>
+        <Vazio titulo="Sem encontros registrados.">Os encontros e marcos aparecem aqui quando o parceiro comercial entra em onboarding.</Vazio>
       ) : (
         <>
           <Resumo plano={q.data.plano} />

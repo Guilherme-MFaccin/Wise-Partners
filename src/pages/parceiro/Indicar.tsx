@@ -75,71 +75,10 @@ export default function Indicar() {
 
   return (
     <div className="space-y-6">
-      <Cabecalho titulo="Indicar" descricao="Indique clientes para a Wise pelo seu link exclusivo ou pelo formulário."
+      <Cabecalho titulo="Indicar" descricao="Como levar a consultoria aos seus clientes? Mande o seu link da página do cliente. Quem já quer contratar a Wise, indique pelo formulário."
         acoes={<Button onClick={() => setNova(true)}><Plus /> Registrar indicação</Button>} />
 
       {pid && parceiroQ.data?.tipo_parceria !== "institucional" && <LinkClientes parceiroId={pid} nome={parceiroQ.data?.nome_fantasia ?? "sua empresa"} />}
-
-      {!url ? (
-        <section className="rounded-[14px] border border-white/10 bg-card p-4 text-sm sm:p-5">
-          <h2 className="font-semibold">Link exclusivo</h2>
-          <p className="mt-2 text-muted-foreground">
-            {parceiroQ.data?.tipo_parceria === "institucional"
-              ? "O link exclusivo de indicação é para parcerias comerciais. Use o formulário para registrar indicações."
-              : "O link exclusivo é criado na entrada em onboarding, depois da assinatura do contrato. Enquanto isso, use o formulário."}
-          </p>
-        </section>
-      ) : (
-        <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
-          <section className="min-w-0 space-y-5 rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
-            <div>
-              <h2 className="font-semibold">Seu link exclusivo</h2>
-              <p className="mt-1 text-sm text-muted-foreground">
-                Quem abrir o link vê uma página da Wise Makers com o nome da sua empresa e preenche os dados. A indicação entra atribuída a vocês.
-              </p>
-              <div className="mt-3 flex flex-col gap-2 sm:flex-row">
-                <Input readOnly value={url} onFocus={(e) => e.currentTarget.select()} className="font-mono text-xs" aria-label="Link exclusivo" />
-                <div className="flex gap-2">
-                  <Button onClick={() => copiar(url, "Link copiado.")} className="flex-1 sm:flex-none"><Copy /> Copiar</Button>
-                  <Button variant="outline" asChild size="icon" aria-label="Abrir o link">
-                    <a href={url} target="_blank" rel="noreferrer"><ExternalLink /></a>
-                  </Button>
-                </div>
-              </div>
-              <p className="mt-2 text-xs text-muted-foreground">
-                {linkQ.data!.envios === 1 ? "1 indicação recebida pelo link." : `${linkQ.data!.envios} indicações recebidas pelo link.`}
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold">Texto sugerido para divulgar</h3>
-              <p className="mt-2 whitespace-pre-line break-all rounded-[10px] border border-white/10 bg-white/5 p-3 text-sm">{mensagem}</p>
-              <div className="mt-2 flex flex-wrap gap-2">
-                <Button variant="outline" size="sm" onClick={() => copiar(mensagem, "Texto copiado.")}><Copy /> Copiar texto e link</Button>
-                <Button variant="outline" size="sm" asChild>
-                  <a href={`https://wa.me/?text=${encodeURIComponent(mensagem)}`} target="_blank" rel="noreferrer"><MessageCircle /> Enviar pelo WhatsApp</a>
-                </Button>
-              </div>
-            </div>
-
-            <p className="text-xs text-muted-foreground">
-              O link é pessoal da sua empresa. Se precisar de um novo link, fale com o seu responsável na Wise. Acompanhe o que chegou em{" "}
-              <Link to="/parceiro/indicacoes" className="text-menta-400 hover:underline">Indicações</Link>.
-            </p>
-          </section>
-
-          <section className="flex flex-col items-center gap-3 rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
-            <h2 className="flex items-center gap-2 self-start font-semibold"><QrCode className="h-4 w-4 text-menta-400" /> QR Code</h2>
-            {qr ? (
-              <img src={qr} alt="QR Code do link exclusivo de indicação" className="w-full max-w-[240px] rounded-[10px] bg-white p-2" />
-            ) : (
-              <div className="flex aspect-square w-full max-w-[240px] items-center justify-center rounded-[10px] bg-white/5 text-xs text-muted-foreground">Gerando...</div>
-            )}
-            <p className="text-center text-xs text-muted-foreground">Use em apresentações, eventos e materiais impressos.</p>
-            <Button variant="outline" size="sm" onClick={baixarQr} disabled={!qr}><Download /> Baixar PNG</Button>
-          </section>
-        </div>
-      )}
 
       <section className="rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
         <h2 className="font-semibold">Formulário de indicação</h2>
@@ -148,6 +87,76 @@ export default function Indicar() {
         </p>
         <Button className="mt-3" onClick={() => setNova(true)}><Plus /> Registrar indicação</Button>
       </section>
+      {/* O link do parceiro é o da página do cliente (P-75). O link de indicação direta continua valendo para quem já o recebeu. */}
+      <details className="group rounded-[14px] border border-white/10 bg-card p-4 sm:p-5 [&_summary::-webkit-details-marker]:hidden">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
+          Link de indicação direta, para quem já quer contratar a consultoria
+          <span className="text-xl leading-none text-muted-foreground transition-transform group-open:rotate-45" aria-hidden>+</span>
+        </summary>
+        <p className="mt-2 text-sm text-muted-foreground">Para a maioria dos clientes, use o link da página do cliente, acima. Este outro link abre um formulário curto da Wise Makers para quem já decidiu conversar sobre a consultoria completa; a indicação entra atribuída a vocês.</p>
+        <div className="mt-4">
+      {!url ? (
+          <section className="rounded-[14px] border border-white/10 bg-card p-4 text-sm sm:p-5">
+            <h2 className="font-semibold">Link exclusivo</h2>
+            <p className="mt-2 text-muted-foreground">
+              {parceiroQ.data?.tipo_parceria === "institucional"
+                ? "O link exclusivo de indicação é para parcerias comerciais. Use o formulário para registrar indicações."
+                : "O link exclusivo é criado na entrada em onboarding, depois da assinatura do contrato. Enquanto isso, use o formulário."}
+            </p>
+          </section>
+        ) : (
+          <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
+            <section className="min-w-0 space-y-5 rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
+              <div>
+                <h2 className="font-semibold">Link de indicação direta</h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Quem abrir o link preenche os dados num formulário da Wise Makers. A indicação entra atribuída a vocês.
+                </p>
+                <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                  <Input readOnly value={url} onFocus={(e) => e.currentTarget.select()} className="font-mono text-xs" aria-label="Link exclusivo" />
+                  <div className="flex gap-2">
+                    <Button onClick={() => copiar(url, "Link copiado.")} className="flex-1 sm:flex-none"><Copy /> Copiar</Button>
+                    <Button variant="outline" asChild size="icon" aria-label="Abrir o link">
+                      <a href={url} target="_blank" rel="noreferrer"><ExternalLink /></a>
+                    </Button>
+                  </div>
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  {linkQ.data!.envios === 1 ? "1 indicação recebida pelo link." : `${linkQ.data!.envios} indicações recebidas pelo link.`}
+                </p>
+              </div>
+  
+              <div>
+                <h3 className="text-sm font-semibold">Texto sugerido para divulgar</h3>
+                <p className="mt-2 whitespace-pre-line break-all rounded-[10px] border border-white/10 bg-white/5 p-3 text-sm">{mensagem}</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Button variant="outline" size="sm" onClick={() => copiar(mensagem, "Texto copiado.")}><Copy /> Copiar texto e link</Button>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={`https://wa.me/?text=${encodeURIComponent(mensagem)}`} target="_blank" rel="noreferrer"><MessageCircle /> Enviar pelo WhatsApp</a>
+                  </Button>
+                </div>
+              </div>
+  
+              <p className="text-xs text-muted-foreground">
+                O link é pessoal da sua empresa. Se precisar de um novo link, fale com o seu responsável na Wise. Acompanhe o que chegou em{" "}
+                <Link to="/parceiro/indicacoes" className="text-menta-400 hover:underline">Indicações</Link>.
+              </p>
+            </section>
+  
+            <section className="flex flex-col items-center gap-3 rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
+              <h2 className="flex items-center gap-2 self-start font-semibold"><QrCode className="h-4 w-4 text-menta-400" /> QR Code</h2>
+              {qr ? (
+                <img src={qr} alt="QR Code do link exclusivo de indicação" className="w-full max-w-[240px] rounded-[10px] bg-white p-2" />
+              ) : (
+                <div className="flex aspect-square w-full max-w-[240px] items-center justify-center rounded-[10px] bg-white/5 text-xs text-muted-foreground">Gerando...</div>
+              )}
+              <p className="text-center text-xs text-muted-foreground">Use em apresentações, eventos e materiais impressos.</p>
+              <Button variant="outline" size="sm" onClick={baixarQr} disabled={!qr}><Download /> Baixar PNG</Button>
+            </section>
+          </div>
+        )}
+        </div>
+      </details>
 
       <NovaIndicacaoDialog aberto={nova} onClose={() => setNova(false)} />
     </div>

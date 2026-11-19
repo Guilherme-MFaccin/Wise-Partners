@@ -14,7 +14,6 @@ import { Pilula } from "@/components/comum/Selos";
 import { ErroCarga, Vazio } from "@/components/comum/Estados";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
@@ -166,7 +165,7 @@ const RESUMO_VAZIO: ResumoCases = { itens: [], quantidade: 0, media: null };
 // Página dos parceiros (/parceiros)
 // ---------------------------------------------------------------------------
 type FormParceiros = {
-  video_url: string; video_formato: FormatoVideo; modo_cadastro: "fila" | "acesso_direto"; agenda_url: string; conteudo: ConteudoPronto<BlocoParceiros>;
+  video_url: string; video_formato: FormatoVideo; modo_cadastro: "fila"; agenda_url: string; conteudo: ConteudoPronto<BlocoParceiros>;
 };
 
 export function AbaParceiros({ desligado }: { desligado: boolean }) {
@@ -215,11 +214,7 @@ export function AbaParceiros({ desligado }: { desligado: boolean }) {
           aoMudarUrl={(v) => form.set("video_url", v)} aoMudarFormato={(v) => form.set("video_formato", v)} />
       </Cartao>
 
-      <Cartao titulo="Entrada do parceiro" descricao="A entrada é pessoal: quem se cadastra entra na fila, a equipe chama no WhatsApp e marca a conversa de entrada de 45 minutos. A fila de candidatos fica em outra tela.">
-        <label className="flex items-center justify-between gap-4">
-          <span className="text-sm">Cadastro entra na fila<span className="block text-xs text-neutro-300">Desligado, o acesso ao portal sai na hora, com a senha que a pessoa escolhe.</span></span>
-          <Switch checked={f.modo_cadastro === "fila"} onCheckedChange={(v) => form.set("modo_cadastro", v ? "fila" : "acesso_direto")} disabled={desligado} aria-label="Cadastro entra na fila" />
-        </label>
+      <Cartao titulo="Entrada do parceiro" descricao="A entrada é pessoal: quem se cadastra entra na fila, a equipe chama no WhatsApp e marca a conversa de entrada de 45 minutos. A fila fica em Candidatos; o acesso ao portal só é criado na aprovação, depois da conversa.">
         <CampoTexto rotulo="Agenda da conversa de entrada" valor={f.agenda_url} aoMudar={(v) => form.set("agenda_url", v)} desligado={desligado}
           placeholder="https://calendar.app.google/..." maximo={500} ajuda="Página de agendamento usada para marcar a conversa de 45 minutos com o candidato." />
       </Cartao>

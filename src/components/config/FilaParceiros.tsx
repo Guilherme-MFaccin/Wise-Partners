@@ -201,7 +201,7 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
           <DialogHeader>
             <DialogTitle>Aprovar {aprovar?.empresa}?</DialogTitle>
             <DialogDescription>
-              Cria o parceiro no portal (nível C, pacote Prateleira, em onboarding, com o aceite do termo feito na página) e uma conta para {aprovar?.nome} com senha provisória. A senha aparece na próxima tela, para você mandar pelo WhatsApp.
+              Cria o parceiro no portal (nível Select, em onboarding por etapas, com o aceite do termo feito na página) e uma conta para {aprovar?.nome} com senha provisória. A senha aparece na próxima tela, para você mandar pelo WhatsApp.
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
