@@ -72,3 +72,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Documento "Modelo de negócio e arquitetura de processos" (v12) gravado em `documentos_internos` com `scripts/publicar-documento.py`; leitura só para o time interno (sem login, a API recusa).
 * Perfil para a reunião de diagnóstico: 3 vendedores ou mais e faturamento a partir da faixa de R$ 250 mil a R$ 500 mil (`config_landing_cliente`), como decidido no FO-15. A pergunta sobre venda complexa e ciclo de venda depende do FO-18.
 * Páginas dos parceiros e do cliente: reunião de cerca de 2 horas, plano de ação em até 2 dias úteis, valor de referência R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub (R$ 5.000) e os 8 cases com a média de +35%.
+
+## Publicação de 20/11/2026 (portal v3)
+
+* Migrações `20261120000029` (páginas editáveis, valores, cases) e `20261120000030` (fila de tarefas, diagnósticos com consultor, candidatos por origem) aplicadas e registradas.
+* Funções `cadastro-parceiro` e `cliente-parceiro` publicadas: devolvem conteúdo, valores, perfil da reunião e cases; a do cliente não devolve mais nome nem logo do parceiro.
+* Site publicado com a navegação nova (seis seções internas, cinco do parceiro), Tarefas, Candidatos, Diagnósticos e Programa, Páginas.
+* Documento "Modelo e processos" na versão v13.
+* Conferido no ar: páginas únicas em 375, 768 e 1440 px sem erro; a página do cliente não mostra o nome do parceiro do link; sem login, cases e fila de tarefas são recusados.
