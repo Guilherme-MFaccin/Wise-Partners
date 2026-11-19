@@ -64,3 +64,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Sites novos da Netlify nascem privados (`sso_login`): o acesso público foi liberado pela API, e o selo "Powered by Netlify" está desligado.
 * O site antigo (portal-wise-partners.netlify.app, na conta pessoal) fica como está até o domínio novo funcionar; depois recebe só um redirecionamento para o domínio novo.
 * Publicação: build com `VITE_SUPABASE_URL` e `VITE_SUPABASE_PUBLISHABLE_KEY` e envio da pasta `dist` em zip para `POST /api/v1/sites/<id>/deploys`, com o token da conta nova guardado no ambiente como `NETLIFY_AUTH_TOKEN` (nunca no chat nem no repositório).
+
+## Publicação de 19/11/2026
+
+* Migrações `20261107000027` (fila de parceiros da página) e `20261119000028` (documentos internos) aplicadas e registradas.
+* Função `cadastro-parceiro` publicada de novo; termo de adesão e política de privacidade na versão 2026-11-07.
+* Documento "Modelo de negócio e arquitetura de processos" (v12) gravado em `documentos_internos` com `scripts/publicar-documento.py`; leitura só para o time interno (sem login, a API recusa).
+* Perfil para a reunião de diagnóstico: 3 vendedores ou mais e faturamento a partir da faixa de R$ 250 mil a R$ 500 mil (`config_landing_cliente`), como decidido no FO-15. A pergunta sobre venda complexa e ciclo de venda depende do FO-18.
+* Páginas dos parceiros e do cliente: reunião de cerca de 2 horas, plano de ação em até 2 dias úteis, valor de referência R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub (R$ 5.000) e os 8 cases com a média de +35%.

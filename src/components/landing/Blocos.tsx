@@ -31,12 +31,26 @@ export const CASOS = {
 };
 
 // Wise Hub: o que cada entrega custaria contratada à parte (valores da página do Wise Hub)
+// Valor de referência (FO-15): reunião de diagnóstico R$ 2.000 e Wise Hub R$ 3.000
+export const PERFIL_REUNIAO = "a partir de 3 vendedores e R$\u00a0250 mil de faturamento por mês";
+export const VALOR_TOTAL = "R$\u00a05.000";
 export const HUB_VALOR = [
-  { titulo: "Imersão Wise Makers, +20h", texto: "Quatro módulos: atrair clientes, recrutar vendedores, vender mais pra base e planejamento comercial.", valor: "R$ 3.000" },
-  { titulo: "Diagnóstico de maturidade comercial", texto: "O nível real da operação, com pontos fortes e riscos.", valor: "R$ 1.400" },
-  { titulo: "Plano comercial de 30, 60 e 90 dias", texto: "20 perguntas viram um PDF com gargalos priorizados, ações e responsáveis.", valor: "R$ 3.300" },
-  { titulo: "Calculadoras, planilhas e checklists", texto: "Receita esquecida na base, meta necessária, custo de improdutividade.", valor: "R$ 2.300" },
-  { titulo: "Reunião individual com a equipe da Wise", texto: "Para empresas com mais de 3 vendedores.", valor: "R$ 5.000" },
+  { titulo: "Reunião de diagnóstico e plano de ação", texto: `Cerca de 2 horas, online, com a equipe da Wise Makers. O plano de ação chega por e-mail em até 2 dias úteis. Para empresas ${PERFIL_REUNIAO}.`, valor: "R$\u00a02.000" },
+  { titulo: "Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, autodiagnóstico, plano de 30, 60 e 90 dias, calculadoras, planilhas e checklists.", valor: "R$\u00a03.000" },
+];
+
+// Cases de resultado (página de cases da Wise Makers, nov/26): faturamento nos meses de trabalho contra os mesmos meses do ano anterior.
+// Os 8 clientes autorizaram o uso do nome. Atualizar a cada trimestre (processo P-100 do mapeamento).
+export const CASES_MEDIA = "+35%";
+export const CASES: { empresa: string; segmento: string; crescimento: string; periodo: string }[] = [
+  { empresa: "Florart's Decor", segmento: "Decoração e ambientes de alto padrão", crescimento: "+89,4%", periodo: "jan/25 a out/26" },
+  { empresa: "Maringá Portas", segmento: "Indústria de portas", crescimento: "+43,8%", periodo: "jan/26 a out/26" },
+  { empresa: "Chamego Bandeiras", segmento: "Indústria de bandeiras", crescimento: "+39,7%", periodo: "jan/25 a ago/26" },
+  { empresa: "Fusion Alumínios", segmento: "Portas de vidro e soluções para móveis planejados", crescimento: "+25,7%", periodo: "fev/25 a nov/25" },
+  { empresa: "Totonho Locações", segmento: "Locação de móveis e peças para festas e eventos", crescimento: "+25,4%", periodo: "jan/26 a out/26" },
+  { empresa: "Protectpool", segmento: "Soluções para piscinas e rede de revendedores", crescimento: "+20,8%", periodo: "jan/25 a out/26" },
+  { empresa: "Powerfit", segmento: "Equipamentos esportivos para o mercado fitness", crescimento: "+19,9%", periodo: "jan/25 a out/25" },
+  { empresa: "Nicopel", segmento: "Indústria de embalagens personalizadas", crescimento: "+16,5%", periodo: "jan/26 a out/26" },
 ];
 
 // Depoimentos em vídeo (os mesmos da plataformawise.com) e os números de cada caso
@@ -293,7 +307,7 @@ export function QuadroValorHub({ paraQuem, destaque, vantagens }: { paraQuem: st
           ))}
         </ul>
         <div className="flex items-end justify-between gap-4 rounded-b-[14px] border-t border-white/10 bg-white/[0.03] px-5 py-4">
-          <span className="text-sm text-neutro-300">Valor contratado à parte<span className="block text-base tabular-nums line-through decoration-neutro-500">R$&nbsp;15.000</span></span>
+          <span className="text-sm text-neutro-300">Valor de referência<span className="block text-base tabular-nums line-through decoration-neutro-500">{VALOR_TOTAL}</span></span>
           <span className="text-right text-sm text-neutro-300">{paraQuem}<span className="block text-[28px] font-bold leading-none tabular-nums text-menta-400">R$&nbsp;0</span></span>
         </div>
       </div>
@@ -312,6 +326,29 @@ export function QuadroValorHub({ paraQuem, destaque, vantagens }: { paraQuem: st
   );
 }
 
+// Os 8 cases de resultado, com a média em destaque
+export function QuadroCases() {
+  return (
+    <div className="mt-8 rounded-[14px] border border-white/10 bg-card">
+      <div className="flex flex-col gap-1 border-b border-white/10 px-5 py-5 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+        <p><span className="block text-[40px] font-bold leading-none tabular-nums text-menta-400">{CASES_MEDIA}</span>
+          <span className="mt-2 block font-semibold">de faturamento em média, nas 8 empresas</span></p>
+        <p className="max-w-[44ch] text-sm text-neutro-300">Cada case compara os meses de trabalho com a Wise com os mesmos meses do ano anterior.</p>
+      </div>
+      <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-b-[14px] bg-white/10 lg:grid-cols-4">
+        {CASES.map((c) => (
+          <li key={c.empresa} className="bg-card px-4 py-4 sm:px-5">
+            <span className="block text-xl font-bold leading-none tabular-nums sm:text-[22px]">{c.crescimento}</span>
+            <span className="mt-2 block font-semibold leading-snug">{c.empresa}</span>
+            <span className="block text-sm text-neutro-300">{c.segmento}</span>
+            <span className="mt-1 block text-xs tabular-nums text-neutro-300">{c.periodo}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 // Seção de depoimentos em vídeo, com a janela do YouTube
 export function SecaoDepoimentos({ subtitulo }: { subtitulo: string }) {
   const [videoAberto, setVideoAberto] = useState<Depoimento | null>(null);
@@ -319,6 +356,7 @@ export function SecaoDepoimentos({ subtitulo }: { subtitulo: string }) {
     <>
       <Secao eyebrow="Depoimentos" titulo="Quem aplicou o método conta o resultado.">
         <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">{subtitulo}</p>
+        <QuadroCases />
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {DEPOIMENTOS.map((d) => <CartaoDepoimento key={d.video} d={d} aoAssistir={() => setVideoAberto(d)} />)}
         </div>

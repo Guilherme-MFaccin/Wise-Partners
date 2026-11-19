@@ -5,7 +5,7 @@ import {
   ArrowDown, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
 } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
-import { Campo, FaixaEvento, FaixaLogos, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
+import { Campo, FaixaEvento, FaixaLogos, PERFIL_REUNIAO, QuadroValorHub, Secao, SecaoDepoimentos, VALOR_TOTAL, Video } from "@/components/landing/Blocos";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -25,9 +25,9 @@ const GARANTIAS = ["Sem custo para você e para o seu cliente", "Sem exclusivida
 // O que o cliente do parceiro recebe (a consultoria incluída)
 const CLIENTE_RECEBE = [
   { titulo: "Diagnóstico de maturidade comercial", texto: "Cinco frentes do comercial: posicionamento, aquisição de clientes, conversão, retenção e governança do time." },
-  { titulo: "Mapa de planejamento", texto: "Onde ele está, o que priorizar e um plano de 30, 60 e 90 dias, com indicadores pra acompanhar." },
+  { titulo: "Plano de ação", texto: "Onde ele está, o que priorizar, quem faz e os indicadores pra acompanhar. Chega por e-mail em até 2 dias úteis." },
   { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, treinamentos curtos, diagnósticos, calculadoras, planilhas e checklists." },
-  { titulo: "Reunião individual de diagnóstico", texto: "Para empresas com mais de 3 vendedores, com horário marcado na hora." },
+  { titulo: "Reunião individual de diagnóstico", texto: `Cerca de 2 horas, online, com horário marcado na hora. Para empresas ${PERFIL_REUNIAO}.` },
 ];
 
 // O que o parceiro recebe ao entrar
@@ -66,7 +66,7 @@ const MAIS = [
 const COMPARACAO: [string, boolean, boolean][] = [
   ["Argumento na negociação além do preço", false, true],
   ["Diagnóstico de maturidade comercial pro cliente", false, true],
-  ["Plano de 30, 60 e 90 dias pro cliente", false, true],
+  ["Plano de ação pro cliente", false, true],
   ["Formação e ferramentas de gestão comercial (Wise Hub)", false, true],
   ["Visão da maturidade comercial da sua base", false, true],
   ["Motivo pro seu time falar com quem usa pouco", false, true],
@@ -80,7 +80,7 @@ const PERGUNTAS: { p: string; r: ReactNode }[] = [
   { p: "A Wise concorre com o meu time de implantação ou de sucesso do cliente?", r: "Não. A Wise trata o processo comercial do cliente: meta, funil, rotina e time. Implantação, suporte e uso do seu sistema continuam com você. Na prática, o cliente chega mais preparado pra usar o seu software." },
   { p: "Vai dar trabalho pro meu time?", r: "O cadastro leva uns 2 minutos. Depois, o trabalho é mandar o seu link: a página de convite, a mensagem pronta e o treinamento ficam no portal." },
   { p: "Quais dados dos meus clientes a Wise vê?", r: "Só o que o próprio cliente informa no diagnóstico. A Wise nunca recebe a sua lista de clientes, e o resultado individual só é compartilhado com você se o cliente autorizar." },
-  { p: "Meu cliente não é indústria. Serve pra ele?", r: "Serve. O autodiagnóstico do Wise Hub é aberto a qualquer empresa com time comercial. A reunião individual de diagnóstico com a equipe da Wise é para empresas com mais de 3 vendedores." },
+  { p: "Meu cliente não é indústria. Serve pra ele?", r: "Serve. O autodiagnóstico do Wise Hub é aberto a qualquer empresa com time comercial. A reunião individual de diagnóstico com a equipe da Wise é para empresas a partir de 3 vendedores e R$\u00a0250 mil de faturamento por mês." },
   { p: "Como e quando recebo a comissão?", r: "Você recebe 40% da primeira mensalidade da consultoria, depois que o primeiro pagamento do cliente compensar. O pagamento vai pro CNPJ da sua empresa, com nota fiscal. Vale uma vez por cliente novo; o Wise Hub não gera comissão." },
   { p: "Tem exclusividade ou meta de indicação?", r: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
   { p: "Posso sair quando quiser?", r: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
@@ -122,7 +122,7 @@ function VisualBeneficio({ tipo }: { tipo: "desconto" | "raiox" | "renovacao" })
         <p className="w-fit max-w-[85%] rounded-[14px] rounded-bl-[4px] bg-white/5 px-4 py-2.5 text-sm">Gostei do sistema, mas o outro tá mais barato. Consegue um desconto?</p>
         <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-white/10 px-4 py-2.5 text-sm text-neutro-300 line-through decoration-neutro-500">Vou ver o que consigo fazer no preço.</div>
         <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-menta-500/40 bg-menta-500/10 px-4 py-2.5 text-sm">
-          Melhor: o seu time ganha um diagnóstico comercial da Wise Makers, um plano de 90 dias e acesso ao Wise Hub. Sem custo.
+          Melhor: o seu time ganha um diagnóstico comercial da Wise Makers, um plano de ação e acesso ao Wise Hub. Sem custo.
         </div>
       </div>
     );
@@ -149,7 +149,7 @@ function VisualBeneficio({ tipo }: { tipo: "desconto" | "raiox" | "renovacao" })
       </div>
     );
   }
-  const etapas = ["Cliente assina o seu sistema", "Faz o diagnóstico comercial", "Segue o plano de 30, 60 e 90 dias", "O time inteiro trabalha no sistema", "Renova com você"];
+  const etapas = ["Cliente assina o seu sistema", "Faz o diagnóstico comercial", "Segue o plano de ação", "O time inteiro trabalha no sistema", "Renova com você"];
   return (
     <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
       {etapas.map((e, i) => (
@@ -307,7 +307,7 @@ export default function LandingParceiros() {
               Pare de competir por preço: inclua consultoria comercial no seu software, sem custo.
             </h1>
             <p className="mt-5 max-w-[48ch] text-base text-neutro-300 sm:text-lg">
-              Diagnóstico, plano de 90 dias e Wise Hub pro seu cliente. Um argumento que o concorrente não tem.
+              Diagnóstico, plano de ação e Wise Hub pro seu cliente, num valor de referência de {VALOR_TOTAL}. Um argumento que o concorrente não tem.
             </p>
           </div>
           <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
@@ -394,13 +394,13 @@ export default function LandingParceiros() {
 
         {/* 6b. Wise Hub: o valor do que o cliente recebe */}
         <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Wise Hub" titulo="O que o seu cliente recebe vale mais de R$ 15.000. Pra ele, sai de graça.">
+          <Secao eyebrow="Wise Hub" titulo={`O que o seu cliente recebe vale ${VALOR_TOTAL}. Pra ele, sai de graça.`}>
             <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
               Não é área de curso. É onde o seu cliente diagnostica a operação, monta o plano e estrutura o comercial, com o método aplicado em mais de 300 empresas.
             </p>
             <QuadroValorHub paraQuem="Pro seu cliente"
-              vantagens={["Com a sua marca no Hub e nos certificados", "Sem cartão e sem instalação", "Plano de ação no mesmo dia", "Aulas com cases reais de indústrias"]}
-              destaque={<>Na próxima negociação, em vez de dar desconto, você entrega R$&nbsp;15.000 em método.</>} />
+              vantagens={["Com a sua marca no Hub e nos certificados", "Sem cartão e sem instalação", "Plano de ação em até 2 dias úteis", "Aulas com cases reais de indústrias"]}
+              destaque={<>Na próxima negociação, em vez de dar desconto, você entrega {VALOR_TOTAL} em método.</>} />
           </Secao>
         </div>
 

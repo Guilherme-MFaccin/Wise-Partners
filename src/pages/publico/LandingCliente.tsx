@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Campo, FaixaEvento, FaixaLogos, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
+import { Campo, FaixaEvento, FaixaLogos, PERFIL_REUNIAO, QuadroValorHub, Secao, SecaoDepoimentos, VALOR_TOTAL, Video } from "@/components/landing/Blocos";
 import { Autodiagnostico } from "@/components/landing/Autodiagnostico";
 import {
   capturarOrigem, carregarPaginaCliente, cnpjValido, enviarCliente, iniciarMedicao, mascaraCnpj, mascaraTelefone, registrarLead, somenteDigitos,
@@ -18,7 +18,7 @@ import { CRITERIOS, FAIXAS_FATURAMENTO, PILARES } from "@/lib/diagnostico";
 
 // Página do cliente do parceiro (/c/:codigo), decisões do FO-10.
 // O cliente chega pelo link do parceiro, responde o cadastro de qualificação e:
-//   com mais de 3 vendedores (ICP, configurável), escolhe o horário da reunião de diagnóstico;
+//   no perfil (vendedores e faturamento mínimos, configuráveis), escolhe o horário da reunião de diagnóstico;
 //   com menos, faz o autodiagnóstico na hora e só depois recebe o link do Wise Hub.
 
 const GARANTIAS = ["Sem custo e sem cartão", "Sem ligação insistente", "Seus dados não vão para o seu fornecedor sem a sua autorização"];
@@ -33,24 +33,24 @@ function perguntas(p: string) {
     { p: "Por que é de graça? Qual é o porém?", r: `A ${p} é parceira da Wise Makers e incluiu a consultoria pra quem é cliente dela. A Wise ganha se, depois do diagnóstico, você quiser contratar a consultoria completa. Isso só acontece se você pedir.` },
     { p: "Vão me ligar insistindo?", r: "Não. A equipe da Wise só fala com você na reunião que você marcar, ou se você pedir." },
     { p: `A ${p} vai ver os meus dados?`, r: `A ${p} fica sabendo que a sua empresa se cadastrou e em que pé está. O resultado do diagnóstico só é compartilhado se você marcar a autorização no cadastro. Suas respostas e seus números ficam com a Wise Makers.` },
-    { p: "Serve pra minha empresa?", r: "Serve pra qualquer empresa com time comercial. Com mais de 3 vendedores, o diagnóstico é numa reunião online com a equipe da Wise. Com menos, você faz o autodiagnóstico online e vê o resultado na hora." },
-    { p: "Quanto tempo leva?", r: "O cadastro leva uns 2 minutos e o autodiagnóstico, uns 5. A reunião de diagnóstico é online, no horário que você escolher." },
+    { p: "Serve pra minha empresa?", r: `Serve pra qualquer empresa com time comercial. Para empresas ${PERFIL_REUNIAO}, o diagnóstico é numa reunião online com a equipe da Wise. Nos outros casos, você faz o autodiagnóstico online e vê o resultado na hora.` },
+    { p: "Quanto tempo leva?", r: "O cadastro leva uns 2 minutos e o autodiagnóstico, uns 5. A reunião de diagnóstico dura cerca de 2 horas, online, no horário que você escolher, e o plano de ação chega por e-mail em até 2 dias úteis." },
     { p: "É curso? Vou ter que assistir 20 horas?", r: "Não. Primeiro vem o diagnóstico e o plano. O Wise Hub tem a imersão de mais de 20 horas e as ferramentas, e você usa o que fizer sentido, no seu ritmo." },
-    { p: "Depois vão me cobrar alguma coisa?", r: "Não. O diagnóstico, o plano e o acesso ao Wise Hub não têm custo e não pedem cartão. Se quiser a consultoria completa da Wise depois, é uma conversa à parte." },
+    { p: "Depois vão me cobrar alguma coisa?", r: "Não. O diagnóstico com o plano de ação (valor de referência R$\u00a02.000) e o acesso ao Wise Hub (R$\u00a03.000) não têm custo e não pedem cartão. Se quiser a consultoria completa da Wise depois, é uma conversa à parte." },
     { p: "Quem é a Wise Makers?", r: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
   ];
 }
 
 const RECEBE = [
   { icone: ClipboardList, titulo: "Diagnóstico de maturidade comercial", texto: "Cinco pilares do seu comercial, de quem é o cliente ideal até a rotina de gestão e o uso do sistema no dia a dia." },
-  { icone: MapaIcone, titulo: "Plano de 30, 60 e 90 dias", texto: "O que priorizar primeiro, com ações e indicadores pra acompanhar." },
+  { icone: MapaIcone, titulo: "Plano de ação", texto: "O que priorizar primeiro, com ações, responsáveis e indicadores pra acompanhar." },
   { icone: Sparkles, titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas, treinamentos curtos, calculadoras, planilhas e checklists." },
-  { icone: CalendarCheck, titulo: "Reunião individual de diagnóstico", texto: "Para empresas com mais de 3 vendedores, online, com a equipe da Wise Makers." },
+  { icone: CalendarCheck, titulo: "Reunião individual de diagnóstico", texto: `Cerca de 2 horas, online, com a equipe da Wise Makers. Para empresas ${PERFIL_REUNIAO}.` },
 ];
 
 const PASSOS = [
   { titulo: "Conte sobre a sua empresa", texto: "Um cadastro de 2 minutos: faturamento, time comercial e o principal desafio." },
-  { titulo: "Faça o diagnóstico", texto: "Com mais de 3 vendedores, numa reunião online com a Wise. Com menos, online e na hora." },
+  { titulo: "Faça o diagnóstico", texto: "A partir de 3 vendedores, numa reunião online de cerca de 2 horas com a Wise. Nos outros casos, online e na hora." },
   { titulo: "Receba o plano e entre no Hub", texto: "Você sai com as prioridades e acesso ao Wise Hub pra colocar o plano em prática." },
 ];
 
@@ -59,18 +59,18 @@ function beneficios(p: string) {
   return [
     { visual: "travas" as const, titulo: "Saiba onde o seu comercial mais trava", texto: "O diagnóstico olha os cinco pilares e aponta o mais frágil. Você para de tentar resolver tudo ao mesmo tempo e começa pelo que mais pesa no faturamento." },
     { visual: "sistema" as const, titulo: "Use de verdade o sistema que você já paga", texto: `Com processo e rotina definidos, o time passa a usar o sistema da ${p} no dia a dia, no lugar de planilhas paralelas e anotações soltas. A informação fica num lugar só, e você decide com dado.` },
-    { visual: "plano" as const, titulo: "Um comercial que depende menos de você", texto: "O plano de 30, 60 e 90 dias diz o que fazer primeiro, quem faz e como medir. A meta deixa de sair no achismo e o time sabe o que fazer sem esperar o dono." },
+    { visual: "plano" as const, titulo: "Um comercial que depende menos de você", texto: "O plano de ação diz o que fazer primeiro, quem faz e como medir. A meta deixa de sair no achismo e o time sabe o que fazer sem esperar o dono." },
   ];
 }
 
 // Comparação: resolver sozinho, contratar à parte (valores do Wise Hub) e a consultoria incluída pelo parceiro
 const COMPARACAO: [string, boolean, boolean, boolean][] = [
   ["Saber onde o comercial mais trava", false, true, true],
-  ["Plano de 30, 60 e 90 dias com prioridades", false, true, true],
+  ["Plano de ação com prioridades", false, true, true],
   ["Formação pra você e o time, mais de 20 horas", false, true, true],
   ["Calculadoras, planilhas e checklists prontos", false, true, true],
   ["Método aplicado em mais de 300 empresas", false, true, true],
-  ["Reunião com a equipe da Wise (mais de 3 vendedores)", false, true, true],
+  ["Reunião de diagnóstico de 2 horas com a Wise", false, true, true],
 ];
 
 const FOTOS = [
@@ -282,7 +282,7 @@ export default function LandingCliente() {
               A {parceiro} está oferecendo uma consultoria de gestão comercial de graça pra você.
             </h1>
             <p className="mt-5 max-w-[48ch] text-base text-neutro-300 sm:text-lg">
-              Comece pelo diagnóstico do seu comercial. Você sai com um plano de 90 dias e acesso ao Wise Hub.
+              Comece pelo diagnóstico do seu comercial. Você sai com um plano de ação e acesso ao Wise Hub, num valor de referência de {VALOR_TOTAL}, sem custo pra você.
             </p>
           </div>
           <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
@@ -364,7 +364,7 @@ export default function LandingCliente() {
               </li>
             ))}
           </ul>
-          <h3 className="mt-14 max-w-3xl text-balance text-[22px] font-semibold leading-snug sm:text-[28px]">{"O Wise Hub vale mais de R$\u00a015.000. Pra você, sai de graça."}</h3>
+          <h3 className="mt-14 max-w-3xl text-balance text-[22px] font-semibold leading-snug sm:text-[28px]">{`O diagnóstico e o Wise Hub valem ${VALOR_TOTAL}. Pra você, sai de graça.`}</h3>
           <p className="mt-3 max-w-[64ch] text-neutro-100">
             Não é área de curso. É onde você monta o plano, segue o Método Wise passo a passo e usa as ferramentas na rotina do seu time.
           </p>
@@ -405,7 +405,7 @@ export default function LandingCliente() {
                   <tr>
                     <th scope="row" className="px-3 py-3 font-normal sm:px-5">Quanto custa pra você</th>
                     <td className="px-1 py-3 text-center text-xs text-neutro-300 sm:text-sm">Seu tempo</td>
-                    <td className="px-1 py-3 text-center text-xs text-neutro-300 sm:text-sm">Mais de R$&nbsp;15.000</td>
+                    <td className="px-1 py-3 text-center text-xs text-neutro-300 sm:text-sm">{VALOR_TOTAL}</td>
                     <td className="px-1 py-3 text-center text-xs font-semibold text-menta-400 sm:text-sm">R$&nbsp;0</td>
                   </tr>
                 </tbody>
