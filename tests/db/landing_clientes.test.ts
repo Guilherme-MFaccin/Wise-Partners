@@ -42,7 +42,7 @@ describe("Página do cliente do parceiro", () => {
       await q.sql("update public.config_landing_cliente set agenda_url = 'https://calendar.app.google/teste' where id = 1");
       const icp = (await q.um("select public.cadastrar_cliente_parceiro($1::jsonb) as r", [JSON.stringify(dados(c))])).r;
       expect(icp).toMatchObject({ icp: true, agenda_url: "https://calendar.app.google/teste", parceiro: "Parceiro Alfa" });
-      const fora = (await q.um("select public.cadastrar_cliente_parceiro($1::jsonb) as r", [JSON.stringify(dados(c, { vendedores: "3" }))])).r;
+      const fora = (await q.um("select public.cadastrar_cliente_parceiro($1::jsonb) as r", [JSON.stringify(dados(c, { vendedores: "2" }))])).r;
       expect(fora).toMatchObject({ icp: false, agenda_url: null });
       const s = await q.sql("select caminho, status from public.cadastros_cliente where parceiro_id = $1 order by vendedores desc", [P.A]);
       expect(s).toEqual([{ caminho: "agenda", status: "agenda_liberada" }, { caminho: "autodiagnostico", status: "cadastrado" }]);

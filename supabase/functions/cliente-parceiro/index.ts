@@ -1,10 +1,12 @@
-// Página do cliente do parceiro (/c/:codigo). Sem login.
-// GET ?codigo=: nome e logo do parceiro, vídeo e IDs de medição (os mesmos da página dos parceiros).
+// Página do cliente do parceiro (/c/:codigo). Sem login. A página é única e geral: não mostra nome, logo nem cor do parceiro.
+// GET ?codigo=: se o link vale, vídeo, IDs de medição (os mesmos da página dos parceiros), conteúdo editável,
+// valores de referência, perfil da reunião e cases. O código só serve para atribuir o cadastro ao parceiro.
 // POST {acao:"cadastro"}: cadastro de qualificação; devolve se está no ICP (agenda) ou se segue para o autodiagnóstico.
 // POST {acao:"diagnostico"}: respostas da Matriz 5x5; o banco calcula o resultado e devolve o link do Wise Hub.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin } from "../_shared/supabase.ts";
 import { excedeuLimite, ipDe } from "../_shared/limite.ts";
+import { COLUNAS_CLIENTE, icp, valores } from "../_shared/paginas.ts";
 
 const SEM_CACHE = { "X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store" };
 
@@ -20,23 +22,24 @@ Deno.serve(async (req) => {
     if (req.method === "GET") {
       if (excedeuLimite(`lcl:${ip}`, 60)) return erro("Muitas requisições. Tente de novo em instantes.", 429);
       const codigo = texto(new URL(req.url).searchParams.get("codigo"), 40).toLowerCase();
-      const [{ data: cfg }, { data: med }, { data: link }] = await Promise.all([
-        sb.from("config_landing_cliente").select("publicada, video_url, video_formato").eq("id", 1).maybeSingle(),
+      const [{ data: cfg }, { data: med }, { data: link }, { data: cases }] = await Promise.all([
+        sb.from("config_landing_cliente").select(`publicada, video_url, video_formato, conteudo, ${COLUNAS_CLIENTE}`).eq("id", 1).maybeSingle(),
         sb.from("config_landing").select("pixel_meta_id, ga4_id, privacidade_versao").eq("id", 1).maybeSingle(),
         sb.from("links_cliente").select("parceiro_id, ativo, liberado_sem_contrato").eq("codigo", codigo).maybeSingle(),
+        sb.rpc("resumo_cases"),
       ]);
-      let parceiro: { nome: string; logo_url: string | null } | null = null;
+      // A página é a mesma para todos: o código só confirma que o link vale (e atribui o cadastro no POST).
+      // Nome, logo e cor do parceiro não saem daqui.
+      let linkValido = false;
       if (link?.ativo) {
-        const { data: p } = await sb.from("parceiros").select("nome_fantasia, logo_caminho, data_encerramento").eq("id", link.parceiro_id).maybeSingle();
+        const { data: p } = await sb.from("parceiros").select("data_encerramento").eq("id", link.parceiro_id).maybeSingle();
         const { data: assinado } = await sb.rpc("parceiro_assinado", { p_id: link.parceiro_id });
-        if (p && (assinado || link.liberado_sem_contrato) && !p.data_encerramento) {
-          const logo = p.logo_caminho ? sb.storage.from("logos").getPublicUrl(p.logo_caminho).data.publicUrl : null;
-          parceiro = { nome: p.nome_fantasia, logo_url: logo };
-        }
+        linkValido = !!p && (!!assinado || !!link.liberado_sem_contrato) && !p.data_encerramento;
       }
       return json({
-        publicada: !!cfg?.publicada, parceiro, video_url: cfg?.video_url ?? null, video_formato: cfg?.video_formato ?? "auto",
+        publicada: !!cfg?.publicada, link_valido: linkValido, video_url: cfg?.video_url ?? null, video_formato: cfg?.video_formato ?? "auto",
         pixel_meta_id: med?.pixel_meta_id ?? null, ga4_id: med?.ga4_id ?? null, privacidade_versao: med?.privacidade_versao ?? null,
+        conteudo: cfg?.conteudo ?? {}, valores: valores(cfg), icp: icp(cfg), cases: cases ?? null,
       }, 200, SEM_CACHE);
     }
     if (req.method !== "POST") return erro("Método não aceito.", 405);
@@ -67,7 +70,9 @@ Deno.serve(async (req) => {
     };
     const { data, error } = await sb.rpc("cadastrar_cliente_parceiro", { p: dados });
     if (error) return erro(error.message.replace(/^.*?: /, ""));
-    return json(data, 200, SEM_CACHE);
+    // O nome do parceiro fica no banco (atribuição e avisos), mas não volta para a página
+    const { parceiro: _parceiro, ...resposta } = (data ?? {}) as Record<string, unknown>;
+    return json(resposta, 200, SEM_CACHE);
   } catch (e) {
     return erro(e instanceof Error ? e.message : String(e), 500);
   }

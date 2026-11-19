@@ -1,11 +1,23 @@
-// Landing page dos parceiros SaaS: chamada à função pública, origem do anúncio (UTM) e medição (pixel do Meta e GA4).
+// Páginas públicas (parceiros e cliente do parceiro): chamada às funções públicas, origem do anúncio (UTM) e medição (pixel do Meta e GA4).
+// O conteúdo editável, os valores de referência e os cases chegam pelas funções; o padrão fica em src/lib/paginas.ts.
 // Os IDs de medição vêm da configuração do portal; nada é carregado enquanto o administrador não os preencher.
+
+import type { Conteudo, Icp, ResumoCases, Valores } from "@/lib/paginas";
 
 export const URL_CADASTRO = `${import.meta.env.VITE_SUPABASE_URL ?? "http://localhost:54321"}/functions/v1/cadastro-parceiro`;
 const CHAVE = (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? import.meta.env.VITE_SUPABASE_ANON_KEY ?? "anon") as string;
 export const CABECALHOS = { apikey: CHAVE, Authorization: `Bearer ${CHAVE}` };
 
 export type FormatoVideo = "auto" | "horizontal" | "vertical" | "quadrado";
+
+// Parte comum das duas páginas: conteúdo salvo no portal, valores de referência, perfil da reunião e cases.
+// Campos opcionais: enquanto a função publicada for a anterior, a página usa os padrões do código.
+export type DadosPagina = {
+  conteudo?: Conteudo | null;
+  valores?: Valores | null;
+  icp?: Icp | null;
+  cases?: ResumoCases | null;
+};
 
 export type ConfigLanding = {
   publicada: boolean;
@@ -15,8 +27,8 @@ export type ConfigLanding = {
   pixel_meta_id: string | null;
   ga4_id: string | null;
   termo_versao: string;
-  categorias: { id: string; nome: string }[];
-};
+  categorias: { id: string; nome: string; grupo?: "comercial" | "institucional" }[];
+} & DadosPagina;
 
 export type TextoLegal = { titulo: string; versao: string; texto: string; contato?: string };
 
@@ -169,15 +181,18 @@ export const URL_CLIENTE = `${import.meta.env.VITE_SUPABASE_URL ?? "http://local
 
 export type PaginaCliente = {
   publicada: boolean;
-  parceiro: { nome: string; logo_url: string | null } | null;
+  // O link só atribui o cadastro ao parceiro; a página não mostra nome nem logo dele
+  link_valido?: boolean;
+  /** Só a função anterior devolvia; a página não usa. */
+  parceiro?: unknown;
   video_url: string | null;
   video_formato?: FormatoVideo;
   pixel_meta_id: string | null;
   ga4_id: string | null;
   privacidade_versao: string | null;
-};
+} & DadosPagina;
 
-export type RespostaCadastroCliente = { id: string; chave: string; icp: boolean; agenda_url: string | null; parceiro: string };
+export type RespostaCadastroCliente = { id: string; chave: string; icp: boolean; agenda_url: string | null };
 
 export async function carregarPaginaCliente(codigo: string): Promise<PaginaCliente> {
   const r = await fetch(`${URL_CLIENTE}?codigo=${encodeURIComponent(codigo)}`, { headers: CABECALHOS });

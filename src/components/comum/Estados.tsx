@@ -18,10 +18,17 @@ export function Vazio({ titulo, children }: { titulo: string; children?: ReactNo
   );
 }
 
-export function ErroCarga({ erro }: { erro: any }) {
+// `aoTentar`: mostra o botão "Tentar de novo"
+export function ErroCarga({ erro, aoTentar }: { erro: any; aoTentar?: () => void }) {
   return (
-    <div className="rounded-[14px] border border-destructive/40 bg-destructive/10 p-4 text-sm text-red-200">
-      Não foi possível carregar: {erro?.message ?? String(erro)}
+    <div role="alert" className="flex flex-wrap items-center justify-between gap-3 rounded-[14px] border border-destructive/40 bg-destructive/10 p-4 text-sm text-red-200">
+      <span className="min-w-0">Não foi possível carregar: {erro?.message ?? String(erro)}</span>
+      {aoTentar && (
+        <button type="button" onClick={aoTentar}
+          className="rounded-[10px] border border-white/20 px-3 py-1.5 text-sm font-medium text-foreground hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          Tentar de novo
+        </button>
+      )}
     </div>
   );
 }

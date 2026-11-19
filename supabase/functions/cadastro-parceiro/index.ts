@@ -1,5 +1,6 @@
-// Cadastro de parceiros SaaS pela landing page (/parceiros). Sem login.
-// GET: o que a página precisa (tipos de software, vídeo, IDs de medição) ou, com ?texto=termo|privacidade, o texto vigente.
+// Cadastro de parceiros pela página pública (/parceiros), para empresas de qualquer categoria. Sem login.
+// GET: o que a página precisa (categorias, vídeo, IDs de medição, conteúdo editável, valores de referência, perfil da
+// reunião e cases) ou, com ?texto=termo|privacidade, o texto vigente.
 // POST, modo "fila" (padrão desde 07/11/2026): o cadastro entra na fila de espera; o Igor fala com a pessoa pelo WhatsApp
 // e aprova no portal. Modo "acesso_direto": cria parceiro, aceite eletrônico, onboarding e conta com a senha escolhida.
 // A conta nasce confirmada: sem SMTP próprio, o portal não consegue mandar e-mail de confirmação.
@@ -7,6 +8,7 @@ import { cors, erro, json } from "../_shared/cors.ts";
 import { admin, urlDoApp } from "../_shared/supabase.ts";
 import { excedeuLimite, ipDe } from "../_shared/limite.ts";
 import { enviarEmail, layoutEmail } from "../_shared/email.ts";
+import { COLUNAS_CLIENTE, icp, valores } from "../_shared/paginas.ts";
 
 const SEM_CACHE = { "X-Robots-Tag": "noindex, nofollow", "Cache-Control": "no-store" };
 
@@ -60,11 +62,17 @@ Deno.serve(async (req) => {
       if (qual === "privacidade") {
         return json({ titulo: "Política de privacidade", versao: cfg.privacidade_versao, texto: cfg.privacidade_texto, contato: cfg.contato_privacidade }, 200, SEM_CACHE);
       }
-      const { data: cats } = await sb.from("categorias").select("id, nome, ordem").eq("tipo", "comercial").eq("ativa", true)
-        .order("ordem").order("nome");
+      // Parceiro de qualquer categoria: comerciais e institucionais (federações, Sistema S, associações, universidades)
+      const [{ data: cats }, { data: cli }, { data: cases }] = await Promise.all([
+        sb.from("categorias").select("id, nome, tipo, ordem").in("tipo", ["comercial", "institucional"]).eq("ativa", true)
+          .order("ordem").order("nome"),
+        sb.from("config_landing_cliente").select(COLUNAS_CLIENTE).eq("id", 1).maybeSingle(),
+        sb.rpc("resumo_cases"),
+      ]);
       return json({
         publicada: cfg.publicada, video_url: cfg.video_url, video_formato: cfg.video_formato ?? "auto", modo_cadastro: cfg.modo_cadastro ?? "fila", pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
-        termo_versao: cfg.termo_versao, categorias: (cats ?? []).map((c) => ({ id: c.id, nome: c.nome })),
+        termo_versao: cfg.termo_versao, categorias: (cats ?? []).map((c) => ({ id: c.id, nome: c.nome, grupo: c.tipo })),
+        conteudo: cfg.conteudo ?? {}, valores: valores(cli), icp: icp(cli), cases: cases ?? null,
       }, 200, SEM_CACHE);
     }
     if (req.method !== "POST") return erro("Método não aceito.", 405);

@@ -1,92 +1,28 @@
-import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import {
-  ArrowDown, Check, CheckCircle2, Loader2, RefreshCcw, ShieldCheck, Timer, X, Zap,
-} from "lucide-react";
+import { BadgePercent, CheckCircle2, HeartHandshake, Loader2, Repeat, Sparkles } from "lucide-react";
 import { Logo } from "@/components/comum/Logo";
-import { Campo, FaixaEvento, FaixaLogos, PERFIL_REUNIAO, QuadroValorHub, Secao, SecaoDepoimentos, VALOR_TOTAL, Video } from "@/components/landing/Blocos";
+import { SeloNivel } from "@/components/comum/Selos";
+import { Campo, FaixaEvento, FaixaLogos, QuadroCases, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
+import {
+  BarraFixa, EsqueletoPagina, Faixa, Garantias, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina,
+} from "@/components/landing/Secoes";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { supabase } from "@/integrations/supabase/client";
 import {
-  CABECALHOS, URL_CADASTRO, capturarOrigem, carregarConfig, cnpjValido, fonteVideo, idsMeta, iniciarMedicao, mascaraCnpj, mascaraTelefone,
+  CABECALHOS, URL_CADASTRO, capturarOrigem, carregarConfig, cnpjValido, idsMeta, iniciarMedicao, mascaraCnpj, mascaraTelefone,
   registrarCadastro, somenteDigitos, type ConfigLanding,
 } from "@/lib/landing";
+import { PADRAO_PARCEIROS, montarConteudo, reais, resolverDados } from "@/lib/paginas";
 
-// Landing page dos parceiros SaaS de CRM e ERP (/parceiros): tráfego dos anúncios do Meta, fora dos buscadores.
-// Uma ação só: criar o acesso de parceiro no portal, com aceite eletrônico do termo padrão.
-
-const GARANTIAS = ["Sem custo para você e para o seu cliente", "Sem exclusividade", "Sem meta mínima de indicação", "Sai quando quiser"];
-
-// O que o cliente do parceiro recebe (a consultoria incluída)
-const CLIENTE_RECEBE = [
-  { titulo: "Diagnóstico de maturidade comercial", texto: "Cinco frentes do comercial: posicionamento, aquisição de clientes, conversão, retenção e governança do time." },
-  { titulo: "Plano de ação", texto: "Onde ele está, o que priorizar, quem faz e os indicadores pra acompanhar. Chega por e-mail em até 2 dias úteis." },
-  { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, treinamentos curtos, diagnósticos, calculadoras, planilhas e checklists." },
-  { titulo: "Reunião individual de diagnóstico", texto: `Cerca de 2 horas, online, com horário marcado na hora. Para empresas ${PERFIL_REUNIAO}.` },
-];
-
-// O que o parceiro recebe ao entrar
-const PARCEIRO_RECEBE = [
-  { titulo: "Acesso ao portal Wise Partners", texto: "Tudo do programa num lugar só: link, mensagem pronta e treinamento." },
-  { titulo: "Seu link exclusivo", texto: "Cada cliente que entra por ele fica registrado como seu." },
-  { titulo: "Mensagem pronta e página de convite", texto: "É só mandar pros clientes de hoje e incluir na entrada dos novos." },
-  { titulo: "O Wise Hub com a sua marca", texto: "Seu logo aparece no Hub e nos certificados dos seus clientes." },
-  { titulo: "Treinamento curto", texto: "Como apresentar a consultoria incluída na venda e no sucesso do cliente." },
-  { titulo: "Acompanhamento no portal", texto: "Quem entrou pelo seu link e em que pé está." },
-  { titulo: "Comissão quando um cliente contrata a Wise", texto: "40% da primeira mensalidade da consultoria, pago ao CNPJ da sua empresa." },
-];
-
-// Transformação: o caminho do parceiro em três passos
-const PASSOS_PARCEIRO = [
-  { titulo: "Cadastre sua empresa", texto: "Leva uns 2 minutos. Depois, nossa equipe fala com você pelo WhatsApp em até 24 horas úteis." },
-  { titulo: "Pegue o seu link", texto: "No portal ficam o link exclusivo, a mensagem pronta e um treinamento curto." },
-  { titulo: "Ofereça à sua base", texto: "Pros clientes de hoje e pra cada cliente novo. O resto você acompanha pelo portal." },
-];
-
-// Benefícios em profundidade: cada um com um visual
-const BENEFICIOS = [
-  { titulo: "Consultoria no lugar do desconto", texto: "Na negociação apertada, em vez de baixar o preço, você inclui um diagnóstico comercial e o Wise Hub. O cliente leva mais, e você protege ticket e margem.", visual: "desconto" },
-  { titulo: "Um raio-x da sua base, sem custo", texto: "Os diagnósticos mostram a maturidade comercial dos seus clientes e onde eles travam. Você sabe quem precisa de atenção antes da renovação. Por cliente, só com autorização dele.", visual: "raiox" },
-  { titulo: "Mais uso, mais renovação", texto: "Com processo, o time inteiro do cliente passa a trabalhar dentro do sistema. Quem vê resultado no seu software tem motivo pra continuar com você.", visual: "renovacao" },
-] as const;
-
-// Camada pra quem só escaneia
-const MAIS = [
-  { icone: Timer, titulo: "Implantação mais rápida", texto: "O cliente chega com funil, metas e rotina definidos." },
-  { icone: Zap, titulo: "Venda mais rápida", texto: "Um argumento concreto quando o concorrente parece igual." },
-  { icone: RefreshCcw, titulo: "Motivo pra falar com quem sumiu", texto: "Seu time liga oferecendo o diagnóstico, e não cobrando." },
-];
-
-// Comparação: vender só o software contra vender com a consultoria incluída
-const COMPARACAO: [string, boolean, boolean][] = [
-  ["Argumento na negociação além do preço", false, true],
-  ["Diagnóstico de maturidade comercial pro cliente", false, true],
-  ["Plano de ação pro cliente", false, true],
-  ["Formação e ferramentas de gestão comercial (Wise Hub)", false, true],
-  ["Visão da maturidade comercial da sua base", false, true],
-  ["Motivo pro seu time falar com quem usa pouco", false, true],
-  ["Comissão quando o cliente contrata a Wise", false, true],
-];
-
-const PERGUNTAS: { p: string; r: ReactNode }[] = [
-  { p: "Quanto custa?", r: "Nada. Não tem mensalidade, taxa nem custo pra você ou pro seu cliente." },
-  { p: "Por que é de graça? Qual é o porém?", r: "A Wise Makers ganha quando um cliente seu, depois de ver o próprio diagnóstico, decide contratar a consultoria pra ir além. Isso acontece só se ele quiser. Pra você, o programa é argumento de venda e retenção, sem custo." },
-  { p: "A Wise vai vender outra coisa pro meu cliente?", r: "O diagnóstico não é apresentação de vendas. A conversa comercial só acontece se o cliente pedir, e a Wise Makers não vende software. Se ele contratar a consultoria, você recebe comissão." },
-  { p: "A Wise concorre com o meu time de implantação ou de sucesso do cliente?", r: "Não. A Wise trata o processo comercial do cliente: meta, funil, rotina e time. Implantação, suporte e uso do seu sistema continuam com você. Na prática, o cliente chega mais preparado pra usar o seu software." },
-  { p: "Vai dar trabalho pro meu time?", r: "O cadastro leva uns 2 minutos. Depois, o trabalho é mandar o seu link: a página de convite, a mensagem pronta e o treinamento ficam no portal." },
-  { p: "Quais dados dos meus clientes a Wise vê?", r: "Só o que o próprio cliente informa no diagnóstico. A Wise nunca recebe a sua lista de clientes, e o resultado individual só é compartilhado com você se o cliente autorizar." },
-  { p: "Meu cliente não é indústria. Serve pra ele?", r: "Serve. O autodiagnóstico do Wise Hub é aberto a qualquer empresa com time comercial. A reunião individual de diagnóstico com a equipe da Wise é para empresas a partir de 3 vendedores e R$\u00a0250 mil de faturamento por mês." },
-  { p: "Como e quando recebo a comissão?", r: "Você recebe 40% da primeira mensalidade da consultoria, depois que o primeiro pagamento do cliente compensar. O pagamento vai pro CNPJ da sua empresa, com nota fiscal. Vale uma vez por cliente novo; o Wise Hub não gera comissão." },
-  { p: "Tem exclusividade ou meta de indicação?", r: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
-  { p: "Posso sair quando quiser?", r: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
-  { p: "Quem é a Wise Makers?", r: "Uma consultoria de estrutura e gestão comercial. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
-  { p: "Quando eu começo?", r: "Em até 24 horas úteis depois do cadastro, nossa equipe fala com você pelo WhatsApp para combinar o início. Depois dessa conversa, você recebe o acesso ao portal e o seu link." },
-];
+// Página única dos parceiros (/parceiros): empresas que vendem para empresas, de qualquer categoria e tamanho.
+// Pergunta que a página responde: "Por que oferecer a consultoria da Wise à minha base, e como eu entro?"
+// Textos, seções, perguntas, valores e cases vêm do portal (Programa, Páginas); o padrão está em src/lib/paginas.ts.
+// Entrada pessoal: cadastro na fila, conversa pelo WhatsApp e conversa de entrada de 45 minutos.
 
 // Última configuração recebida, guardada no navegador (só o que a página pública já mostra)
 const CHAVE_CFG = "wp_cfg_landing";
@@ -113,56 +49,56 @@ const VAZIO = {
   aceite_termo: false, aceite_privacidade: false, website: "",
 };
 
+const ICONES_BENEFICIO = [Repeat, Sparkles, BadgePercent];
+// Selo do nível quando o título do item é o nome do nível
+const CODIGO_NIVEL: Record<string, string> = { Select: "C", Premium: "B", Elite: "A" };
 
-// Visuais dos benefícios: desenhos de interface, sem números inventados
-function VisualBeneficio({ tipo }: { tipo: "desconto" | "raiox" | "renovacao" }) {
-  if (tipo === "desconto") {
+// Desenhos dos benefícios, na ordem dos itens: interface ilustrativa, sem números inventados
+function VisualBeneficio({ posicao }: { posicao: number }) {
+  if (posicao === 0) {
+    const etapas = ["Cliente compra de você", "Faz o diagnóstico comercial", "Segue o plano de ação", "Vende mais, com processo", "Continua com você"];
+    return (
+      <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
+        {etapas.map((e, i) => (
+          <li key={e} className="relative flex items-center gap-3 pb-4 last:pb-0">
+            {i < etapas.length - 1 && <span className="absolute left-[11px] top-6 h-[calc(100%-12px)] w-px bg-white/10" />}
+            <span className={`relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-xs font-bold ${i === etapas.length - 1 ? "border-menta-500 bg-menta-500 text-primary-foreground" : "border-white/20 text-neutro-300"}`}>
+              {i === etapas.length - 1 ? <HeartHandshake className="h-3.5 w-3.5" /> : i + 1}
+            </span>
+            <span className={`text-sm ${i === etapas.length - 1 ? "font-semibold" : "text-neutro-100"}`}>{e}</span>
+          </li>
+        ))}
+      </ol>
+    );
+  }
+  if (posicao === 1) {
     return (
       <div className="space-y-3 rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
-        <p className="w-fit max-w-[85%] rounded-[14px] rounded-bl-[4px] bg-white/5 px-4 py-2.5 text-sm">Gostei do sistema, mas o outro tá mais barato. Consegue um desconto?</p>
+        <p className="w-fit max-w-[85%] rounded-[14px] rounded-bl-[4px] bg-white/5 px-4 py-2.5 text-sm">Gostei da proposta, mas o outro tá mais barato. Consegue um desconto?</p>
         <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-white/10 px-4 py-2.5 text-sm text-neutro-300 line-through decoration-neutro-500">Vou ver o que consigo fazer no preço.</div>
         <div className="ml-auto max-w-[85%] rounded-[14px] rounded-br-[4px] border border-menta-500/40 bg-menta-500/10 px-4 py-2.5 text-sm">
-          Melhor: o seu time ganha um diagnóstico comercial da Wise Makers, um plano de ação e acesso ao Wise Hub. Sem custo.
+          Melhor: fechando com a gente, o seu time ganha um diagnóstico comercial da Wise Makers, um plano de ação e acesso ao Wise Hub. Sem custo.
         </div>
       </div>
     );
   }
-  if (tipo === "raiox") {
-    const frentes: [string, string][] = [
-      ["Posicionamento", "w-[72%]"], ["Aquisição de clientes", "w-[48%]"], ["Conversão", "w-[60%]"], ["Retenção", "w-[34%]"], ["Governança do time", "w-[40%]"],
-    ];
+  if (posicao === 2) {
+    const passos = ["Cliente entra pelo seu link", "Faz o diagnóstico", "Contrata a consultoria da Wise"];
     return (
       <div className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
-        <div className="flex items-baseline justify-between gap-3">
-          <p className="text-sm font-semibold">Maturidade comercial da sua base</p>
-          <p className="text-xs text-neutro-300">Exemplo ilustrativo</p>
-        </div>
-        <ul className="mt-4 space-y-3">
-          {frentes.map(([n, w]) => (
-            <li key={n} className="text-xs">
-              <span className="text-neutro-300">{n}</span>
-              <div className="mt-1 h-2 rounded-full bg-white/5"><div className={`h-2 rounded-full bg-neutro-300 ${w}`} /></div>
-            </li>
+        <ul className="space-y-2">
+          {passos.map((p) => (
+            <li key={p} className="flex items-center gap-2 text-sm text-neutro-100"><CheckCircle2 className="h-4 w-4 shrink-0 text-neutro-300" />{p}</li>
           ))}
         </ul>
-        <p className="mt-4 rounded-[10px] bg-white/5 px-3 py-2 text-xs text-neutro-100">Onde a base mais trava: retenção e governança do time.</p>
+        <div className="mt-4 rounded-[10px] border border-menta-500/40 bg-menta-500/10 px-4 py-3">
+          <p className="text-[28px] font-bold leading-none tabular-nums text-menta-400">40%</p>
+          <p className="mt-1 text-sm">da primeira mensalidade, pago ao CNPJ da sua empresa</p>
+        </div>
       </div>
     );
   }
-  const etapas = ["Cliente assina o seu sistema", "Faz o diagnóstico comercial", "Segue o plano de ação", "O time inteiro trabalha no sistema", "Renova com você"];
-  return (
-    <ol className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
-      {etapas.map((e, i) => (
-        <li key={e} className="relative flex items-center gap-3 pb-4 last:pb-0">
-          {i < etapas.length - 1 && <span className="absolute left-[11px] top-6 h-[calc(100%-12px)] w-px bg-white/10" />}
-          <span className={`relative flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[11px] font-bold ${i === etapas.length - 1 ? "border-menta-500 bg-menta-500 text-primary-foreground" : "border-white/20 text-neutro-300"}`}>
-            {i === etapas.length - 1 ? <Check className="h-3.5 w-3.5" /> : i + 1}
-          </span>
-          <span className={`text-sm ${i === etapas.length - 1 ? "font-semibold" : "text-neutro-100"}`}>{e}</span>
-        </li>
-      ))}
-    </ol>
-  );
+  return null;
 }
 
 export default function LandingParceiros() {
@@ -174,54 +110,37 @@ export default function LandingParceiros() {
   const [falha, setFalha] = useState<string | null>(null);
   const [criado, setCriado] = useState<string | null>(null);
   const [naFila, setNaFila] = useState<string | null>(null);
-  const formRef = useRef<HTMLDivElement>(null);
-  const ctaTopo = useRef<HTMLButtonElement>(null);
-  const fimRef = useRef<HTMLElement>(null);
-  const [fixoVisivel, setFixoVisivel] = useState(false);
   const set = (k: keyof typeof VAZIO, v: string | boolean) => setF((x) => ({ ...x, [k]: v }));
 
-  useEffect(() => {
-    const anterior = document.title;
-    document.title = "Wise Partners | Consultoria comercial incluída no seu software";
-    const meta = document.createElement("meta");
-    meta.name = "robots";
-    meta.content = "noindex,nofollow";
-    document.head.appendChild(meta);
-    return () => {
-      document.title = anterior;
-      meta.remove();
-    };
-  }, []);
+  useCabecalhoPagina("Wise Partners | Programa de parceria da Wise Makers");
 
   const { data: cfg, isLoading, isError, refetch } = useQuery<ConfigLanding>({
     queryKey: ["landing-parceiros"], queryFn: carregarConfigGuardando, retry: 1, staleTime: 5 * 60_000,
-    // Quem já visitou abre com o vídeo da última visita; a configuração nova chega por cima
+    // Quem já visitou abre com o conteúdo da última visita; a configuração nova chega por cima
     placeholderData: lerConfigGuardada,
   });
 
-  // Desde 07/11/2026 o padrão é a fila de espera: a equipe da Wise fala com cada parceiro antes de liberar o acesso
+  const { valores, cases, vars } = useMemo(() => resolverDados(cfg), [cfg]);
+  const conteudo = useMemo(() => montarConteudo(PADRAO_PARCEIROS, cfg?.conteudo, vars), [cfg?.conteudo, vars]);
+  const s = conteudo.secoes;
+  // Desde 07/11/2026 o padrão é a fila: a equipe da Wise fala com cada parceiro antes de liberar o acesso
   const fila = cfg?.modo_cadastro !== "acesso_direto";
+  const foraDoAr = !!cfg && !cfg.publicada;
+  const carregandoTudo = isLoading && !cfg;
+  const { ctaTopo, formRef, fimRef, visivel: barraVisivel } = useBarraFixa(!carregandoTudo && !foraDoAr);
 
   useEffect(() => {
-    if (cfg) iniciarMedicao(cfg);
+    if (cfg?.publicada) iniciarMedicao(cfg);
   }, [cfg]);
 
-  // Botão fixo no celular: aparece quando o botão do topo sai da tela e some quando o cadastro aparece
-  useEffect(() => {
-    const vistos = { topo: true, cadastro: false, fim: false };
-    const obs = new IntersectionObserver((itens) => {
-      for (const i of itens) {
-        if (i.target === ctaTopo.current) vistos.topo = i.isIntersecting;
-        if (i.target === formRef.current) vistos.cadastro = i.isIntersecting;
-        if (i.target === fimRef.current) vistos.fim = i.isIntersecting;
-      }
-      setFixoVisivel(!vistos.topo && !vistos.cadastro && !vistos.fim);
-    });
-    if (ctaTopo.current) obs.observe(ctaTopo.current);
-    if (formRef.current) obs.observe(formRef.current);
-    if (fimRef.current) obs.observe(fimRef.current);
-    return () => obs.disconnect();
-  }, []);
+  const perguntas = useMemo(() => conteudo.perguntas.map((q) => (q.pergunta === "Quando eu começo?" && !fila
+    ? { ...q, resposta: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." } : q)), [conteudo.perguntas, fila]);
+
+  const categorias = cfg?.categorias ?? [];
+  const grupos = [
+    { rotulo: "Empresas", itens: categorias.filter((c) => c.grupo !== "institucional") },
+    { rotulo: "Entidades e instituições", itens: categorias.filter((c) => c.grupo === "institucional") },
+  ].filter((g) => g.itens.length);
 
   const erros = {
     nome: !f.nome.trim() ? "Informe o seu nome." : "",
@@ -230,14 +149,13 @@ export default function LandingParceiros() {
     whatsapp: somenteDigitos(f.whatsapp).length < 10 ? "Informe o WhatsApp com DDD." : "",
     empresa: !f.empresa.trim() ? "Informe o nome da empresa." : "",
     cnpj: !cnpjValido(f.cnpj) ? "Informe um CNPJ válido." : "",
-    categoria_id: !f.categoria_id ? "Escolha o tipo de software." : "",
+    categoria_id: !f.categoria_id ? "Escolha a categoria da sua empresa." : "",
     clientes_ativos: !/^\d{1,7}$/.test(f.clientes_ativos) ? "Informe um número aproximado." : "",
     senha: fila || f.senha.length >= 8 ? "" : "Use pelo menos 8 caracteres.",
     aceites: !(f.aceite_termo && f.aceite_privacidade) ? "Marque as duas caixas pra continuar." : "",
   };
   const valido = Object.values(erros).every((e) => !e);
   const mostra = (k: keyof typeof erros) => (tocado ? erros[k] : "");
-
   const irParaCadastro = () => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   async function enviar(e: FormEvent) {
@@ -284,217 +202,179 @@ export default function LandingParceiros() {
     }
   }
 
-  const fechado = cfg && !cfg.publicada;
+  if (carregandoTudo) return <EsqueletoPagina />;
+  if (foraDoAr) {
+    return (
+      <PaginaAviso titulo="O cadastro de parceiros está fora do ar no momento."
+        texto="Volte em breve ou fale com a Wise Makers pelo e-mail contato@wisemakers.com.br."
+        acao={<Button asChild variant="outline"><Link to="/entrar">Já sou parceiro</Link></Button>} />
+    );
+  }
+
+  const fixoTexto = s.topo.botao || "Quero ser parceiro";
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
       <header className="sticky top-0 z-20 border-b border-white/10 bg-background/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <Logo className="h-7" />
           <div className="flex items-center gap-2">
             <Button asChild variant="ghost" size="sm"><Link to="/entrar">Já sou parceiro</Link></Button>
-            <Button size="sm" onClick={irParaCadastro} className="hidden sm:inline-flex">Quero ser parceiro</Button>
+            <Button size="sm" onClick={irParaCadastro} className="hidden sm:inline-flex">{fixoTexto}</Button>
           </div>
         </div>
       </header>
 
       <main>
-        {/* Topo: promessa, vídeo e ação */}
-        <section className="mx-auto grid w-full max-w-6xl gap-8 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-x-12 lg:gap-y-0 lg:pb-20 lg:pt-16">
-          <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Wise Partners · para empresas de CRM e ERP</p>
-            <h1 className="mt-3 text-balance font-display text-[36px] font-extrabold leading-[1.06] sm:text-[48px]">
-              Pare de competir por preço: inclua consultoria comercial no seu software, sem custo.
-            </h1>
-            <p className="mt-5 max-w-[48ch] text-base text-neutro-300 sm:text-lg">
-              Diagnóstico, plano de ação e Wise Hub pro seu cliente, num valor de referência de {VALOR_TOTAL}. Um argumento que o concorrente não tem.
-            </p>
-          </div>
-          <div className="w-full sm:max-w-[560px] lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:max-w-none lg:self-center">
-            <Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} carregando={!cfg} />
-          </div>
-          <div className="lg:col-start-1 lg:row-start-2">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:mt-8">
-              <Button ref={ctaTopo} size="lg" onClick={irParaCadastro} className="h-12 px-6 text-base">
-                Quero ser parceiro <ArrowDown className="ml-1 h-4 w-4" aria-hidden />
-              </Button>
-              <p className="text-sm text-neutro-300">{fila ? "Cadastro em 2 minutos. A gente fala com você pelo WhatsApp." : "Cadastro em 2 minutos, acesso na hora."}</p>
-            </div>
-          </div>
-        </section>
+        <Topo eyebrow={s.topo.eyebrow} titulo={s.topo.titulo} texto={s.topo.texto} botao={s.topo.botao} nota={s.topo.nota}
+          ctaRef={ctaTopo} aoClicar={irParaCadastro}
+          video={<Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} carregando={!cfg && !isError} />} />
 
-        {/* 1b. Faixa de prova: logos de clientes da Wise Makers */}
-        <FaixaLogos />
+        {s.logos.visivel && <FaixaLogos titulo={s.logos.titulo} />}
 
-        {/* 2. Transformação: o caminho do parceiro em três passos */}
-        <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Como funciona" titulo="Três passos, e o seu software passa a vir com consultoria.">
-            <ol className="grid gap-4 md:grid-cols-3">
-              {PASSOS_PARCEIRO.map((p, i) => (
-                <li key={p.titulo} className="relative rounded-[14px] border border-white/10 bg-card p-5">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full border border-menta-500/40 text-sm font-bold tabular-nums text-menta-400">{i + 1}</span>
-                  <p className="mt-4 font-semibold">{p.titulo}</p>
-                  <p className="mt-2 text-sm text-neutro-300">{p.texto}</p>
-                </li>
-              ))}
-            </ol>
+        {s.para_quem.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.para_quem.eyebrow} titulo={s.para_quem.titulo} texto={s.para_quem.texto}>
+              <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {s.para_quem.itens.map((x, i) => (
+                  <li key={`${i}-${x.titulo}`} className="min-w-0 rounded-[14px] border border-white/10 bg-card p-5">
+                    <p className="break-words font-semibold">{x.titulo}</p>
+                    {x.texto && <p className="mt-2 text-sm text-neutro-300">{x.texto}</p>}
+                  </li>
+                ))}
+              </ul>
+            </Secao>
+          </Faixa>
+        )}
+
+        {s.como_funciona.visivel && (
+          <Secao eyebrow={s.como_funciona.eyebrow} titulo={s.como_funciona.titulo}>
+            <PassosNumerados itens={s.como_funciona.itens} />
           </Secao>
-        </div>
+        )}
 
-        {/* 3. Benefícios em profundidade, alternando texto e visual */}
-        <Secao eyebrow="O que muda pro seu negócio" titulo="Você para de disputar preço e começa a entregar resultado.">
-          <div className="space-y-12 sm:space-y-16">
-            {BENEFICIOS.map((b, i) => (
-              <div key={b.titulo} className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
-                <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <p className="text-sm font-bold tabular-nums text-neutro-300">0{i + 1}</p>
-                  <h3 className="mt-2 text-[22px] font-semibold leading-snug sm:text-[28px]">{b.titulo}</h3>
-                  <p className="mt-3 max-w-[56ch] text-neutro-100">{b.texto}</p>
+        {s.beneficios.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.beneficios.eyebrow} titulo={s.beneficios.titulo}>
+              <div className="space-y-12 sm:space-y-16">
+                {s.beneficios.itens.map((b, i) => {
+                  const Icone = ICONES_BENEFICIO[i] ?? Sparkles;
+                  return (
+                    <div key={`${i}-${b.titulo}`} className="grid items-center gap-6 md:grid-cols-2 md:gap-12">
+                      <div className={`min-w-0 ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                        <Icone className="h-6 w-6 text-menta-400" aria-hidden />
+                        <h3 className="mt-3 break-words text-[22px] font-semibold leading-snug sm:text-[28px]">{b.titulo}</h3>
+                        {b.texto && <p className="mt-3 max-w-[56ch] text-neutro-100">{b.texto}</p>}
+                      </div>
+                      {i < 3 && <div className={i % 2 === 1 ? "md:order-1" : ""}><VisualBeneficio posicao={i} /></div>}
+                    </div>
+                  );
+                })}
+              </div>
+            </Secao>
+          </Faixa>
+        )}
+
+        {s.faixa_meio.visivel && (
+          <FaixaEvento titulo={s.faixa_meio.titulo} texto={s.faixa_meio.texto} botao={s.faixa_meio.botao || fixoTexto} aoClicar={irParaCadastro} nota={s.faixa_meio.nota} />
+        )}
+
+        {s.incluido.visivel && (
+          <Secao eyebrow={s.incluido.eyebrow} titulo={s.incluido.titulo}>
+            <div className="grid gap-4 lg:grid-cols-2">
+              {([["Seu cliente recebe", s.incluido.itens], ["Você recebe", s.incluido.itens_parceiro]] as const).map(([t, lista]) => (
+                <div key={t} className="rounded-[14px] border border-white/10 bg-card p-6">
+                  <h3 className="text-lg font-semibold">{t}</h3>
+                  <ul className="mt-4 space-y-4">
+                    {lista.map((x, i) => (
+                      <li key={`${i}-${x.titulo}`} className="flex items-start gap-3">
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-menta-400" aria-hidden />
+                        <span className="min-w-0"><span className="block break-words font-semibold">{x.titulo}</span>{x.texto && <span className="text-sm text-neutro-300">{x.texto}</span>}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className={i % 2 === 1 ? "md:order-1" : ""}><VisualBeneficio tipo={b.visual} /></div>
-              </div>
-            ))}
-          </div>
-
-          {/* 4. Camada pra quem só escaneia */}
-          <ul className="mt-14 grid gap-4 border-t border-white/10 pt-10 sm:grid-cols-3">
-            {MAIS.map((m) => (
-              <li key={m.titulo} className="flex items-start gap-3">
-                <m.icone className="mt-0.5 h-5 w-5 shrink-0 text-neutro-300" aria-hidden />
-                <span><span className="block font-semibold">{m.titulo}</span><span className="text-sm text-neutro-300">{m.texto}</span></span>
-              </li>
-            ))}
-          </ul>
-        </Secao>
-
-        {/* 5. Chamada do meio, com prova */}
-        <FaixaEvento titulo="Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers."
-          texto="Agora esse método pode ir junto com o seu software, sem custo." botao="Quero ser parceiro" aoClicar={irParaCadastro}
-          nota="Sem custo · Sem exclusividade · Sai quando quiser" />
-
-        {/* 6. O que está incluído, dos dois lados */}
-        <Secao eyebrow="O que está incluído" titulo="Sem letra miúda: o que o seu cliente recebe e o que você recebe.">
-          <div className="grid gap-4 lg:grid-cols-2">
-            {[["Seu cliente recebe", CLIENTE_RECEBE], ["Você recebe", PARCEIRO_RECEBE]].map(([t, lista]) => (
-              <div key={t as string} className="rounded-[14px] border border-white/10 bg-card p-6">
-                <h3 className="text-lg font-semibold">{t as string}</h3>
-                <ul className="mt-4 space-y-4">
-                  {(lista as { titulo: string; texto: string }[]).map((x) => (
-                    <li key={x.titulo} className="flex items-start gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-menta-400" aria-hidden />
-                      <span><span className="block font-semibold">{x.titulo}</span><span className="text-sm text-neutro-300">{x.texto}</span></span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 text-sm text-neutro-300">Vale pra toda a sua base de hoje e pra cada cliente novo. O diagnóstico online é aberto a qualquer cliente seu.</p>
-        </Secao>
-
-        {/* 6b. Wise Hub: o valor do que o cliente recebe */}
-        <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Wise Hub" titulo={`O que o seu cliente recebe vale ${VALOR_TOTAL}. Pra ele, sai de graça.`}>
-            <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">
-              Não é área de curso. É onde o seu cliente diagnostica a operação, monta o plano e estrutura o comercial, com o método aplicado em mais de 300 empresas.
-            </p>
-            <QuadroValorHub paraQuem="Pro seu cliente"
-              vantagens={["Com a sua marca no Hub e nos certificados", "Sem cartão e sem instalação", "Plano de ação em até 2 dias úteis", "Aulas com cases reais de indústrias"]}
-              destaque={<>Na próxima negociação, em vez de dar desconto, você entrega {VALOR_TOTAL} em método.</>} />
-          </Secao>
-        </div>
-
-        {/* 7. Prova */}
-        <SecaoDepoimentos subtitulo="Empresários e gestores que estruturaram o comercial com a Wise Makers. É esse método que vai pro seu cliente." />
-
-        {/* 9. Comparação */}
-        <div className="border-y border-white/10 bg-neutro-800/40">
-          <Secao eyebrow="Lado a lado" titulo="Vender só o software, ou vender com consultoria incluída.">
-            <div className="overflow-hidden rounded-[14px] border border-white/10 bg-card">
-              <table className="w-full text-left text-sm">
-                <caption className="sr-only">Comparação entre vender só o software e vender com a consultoria incluída do Wise Partners</caption>
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th scope="col" className="px-4 py-3 font-medium text-neutro-300 sm:px-5"><span className="sr-only">O que entra</span></th>
-                    <th scope="col" className="w-[4.5rem] px-1 py-3 text-center text-xs font-medium text-neutro-300 sm:w-40 sm:px-2 sm:text-sm">Só o software</th>
-                    <th scope="col" className="w-[5.5rem] px-1 py-3 text-center text-xs font-semibold sm:w-48 sm:px-2 sm:text-sm">Com o Wise Partners</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COMPARACAO.map(([item, sem, com]) => (
-                    <tr key={item} className="border-b border-white/10 last:border-0">
-                      <th scope="row" className="px-4 py-3 font-normal sm:px-5">{item}</th>
-                      {[sem, com].map((v, k) => (
-                        <td key={k} className="px-2 py-3 text-center">
-                          {v ? <Check className="mx-auto h-5 w-5 text-menta-400" aria-label="Sim" /> : <X className="mx-auto h-5 w-5 text-neutro-500" aria-label="Não" />}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                  <tr>
-                    <th scope="row" className="px-4 py-3 font-normal sm:px-5">Custo a mais pra você</th>
-                    <td className="px-2 py-3 text-center text-neutro-300">Nenhum</td>
-                    <td className="px-2 py-3 text-center font-semibold">Nenhum</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </Secao>
-        </div>
-
-        {/* 10. Perguntas frequentes */}
-        <div>
-          <Secao eyebrow="Perguntas frequentes" titulo="O que todo dono de software pergunta antes de entrar.">
-            <div className="divide-y divide-white/10 rounded-[14px] border border-white/10 bg-card">
-              {PERGUNTAS.map((q) => (q.p === "Quando eu começo?" && !fila ? { ...q, r: "Na hora. Assim que você termina o cadastro, já entra no portal e encontra o seu link." } : q)).map((q) => (
-                <details key={q.p} className="group px-5 py-4 [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold">
-                    {q.p}
-                    <span className="text-xl leading-none text-neutro-300 transition-transform group-open:rotate-45" aria-hidden>+</span>
-                  </summary>
-                  <p className="mt-3 max-w-[68ch] text-sm text-neutro-300">{q.r}</p>
-                </details>
               ))}
             </div>
+            {s.incluido.texto && <p className="mt-4 text-sm text-neutro-300">{s.incluido.texto}</p>}
           </Secao>
-        </div>
+        )}
 
-        {/* Fechamento: frase emocional, cadastro e garantias embaixo */}
-        <div ref={formRef} id="cadastro" className="scroll-mt-16">
+        {s.niveis.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.niveis.eyebrow} titulo={s.niveis.titulo} texto={s.niveis.texto}>
+              <ol className="grid gap-4 md:grid-cols-3">
+                {s.niveis.itens.map((n, i) => (
+                  <li key={`${i}-${n.titulo}`} className="min-w-0 rounded-[14px] border border-white/10 bg-card p-5">
+                    {CODIGO_NIVEL[n.titulo]
+                      ? <SeloNivel tipo="comercial" nivel={CODIGO_NIVEL[n.titulo]} className="text-sm" />
+                      : <p className="font-semibold">{n.titulo}</p>}
+                    {n.texto && <p className="mt-3 text-sm text-neutro-100">{n.texto}</p>}
+                  </li>
+                ))}
+              </ol>
+            </Secao>
+          </Faixa>
+        )}
+
+        {s.valor.visivel && (
+          <Secao eyebrow={s.valor.eyebrow} titulo={s.valor.titulo} texto={s.valor.texto}>
+            <QuadroValorHub paraQuem="Pro seu cliente" valores={valores} perfil={vars.perfil_reuniao}
+              vantagens={s.valor.itens.map((v) => v.titulo)} destaque={s.valor.nota || undefined} />
+          </Secao>
+        )}
+
+        {s.cases.visivel && cases.itens.length > 0 && (
+          <div className="border-t border-white/10">
+            <Secao eyebrow={s.cases.eyebrow} titulo={s.cases.titulo} texto={s.cases.texto}>
+              <QuadroCases cases={cases} nota={s.cases.nota} />
+            </Secao>
+          </div>
+        )}
+
+        {s.depoimentos.visivel && <SecaoDepoimentos eyebrow={s.depoimentos.eyebrow} titulo={s.depoimentos.titulo} />}
+
+        {s.comparacao.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.comparacao.eyebrow} titulo={s.comparacao.titulo}>
+              <TabelaComparacao legenda="Comparação entre vender sem o programa e vender com a consultoria incluída do Wise Partners"
+                colunas={["Sem o programa", "Com o Wise Partners"]} marcas={[false, true]} linhas={s.comparacao.itens}
+                custo={{ rotulo: "Custo a mais pra você", valores: ["Nenhum", "Nenhum"] }} />
+            </Secao>
+          </Faixa>
+        )}
+
+        {s.perguntas.visivel && perguntas.length > 0 && (
+          <Secao eyebrow={s.perguntas.eyebrow} titulo={s.perguntas.titulo}>
+            <ListaPerguntas perguntas={perguntas} />
+          </Secao>
+        )}
+
+        {/* Fechamento: frase, cadastro e garantias */}
+        <div ref={formRef} id="cadastro" className="scroll-mt-16 border-t border-white/10">
           <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Cadastro</p>
-            <h2 className="mt-2 max-w-3xl text-balance font-display text-[32px] font-extrabold leading-tight sm:text-[44px]">
-              Seu cliente não precisa escolher pelo preço. Dá pra ele um motivo pra escolher você.
-            </h2>
+            {s.cadastro.eyebrow && <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">{s.cadastro.eyebrow}</p>}
+            <h2 className="mt-2 max-w-3xl text-balance break-words font-display text-[28px] font-extrabold leading-tight sm:text-[36px]">{s.cadastro.titulo}</h2>
             <p className="mt-4 max-w-[62ch] text-neutro-100">{fila
-              ? "Cadastre sua empresa em 2 minutos. Nossa equipe fala com você pelo WhatsApp em até 24 horas úteis para combinar os próximos passos."
+              ? s.cadastro.texto
               : "Cadastre sua empresa em 2 minutos e entre no portal Wise Partners com o e-mail e a senha que escolher aqui."}</p>
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
               <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
-                {PARCEIRO_RECEBE.slice(0, 5).map((t) => (
-                  <li key={t.titulo} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t.titulo}</li>
+                {s.incluido.itens_parceiro.slice(0, 6).map((t, i) => (
+                  <li key={`${i}-${t.titulo}`} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t.titulo}</li>
                 ))}
               </ul>
-              <div className="rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">
-                {isLoading ? (
-                  <div className="space-y-4" aria-busy="true" aria-label="Carregando o formulário">
-                    {Array.from({ length: 6 }).map((_, i) => <div key={i} className="h-10 animate-pulse rounded-[10px] bg-white/5" />)}
-                  </div>
-                ) : isError ? (
-                  <div className="space-y-3 text-sm">
+              <div className="min-w-0 rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">
+                {isError && !cfg ? (
+                  <div className="space-y-3 text-sm" role="alert">
                     <p className="font-semibold">Não conseguimos abrir o cadastro agora.</p>
                     <p className="text-neutro-300">Pode ser a conexão. Tente de novo em instantes.</p>
                     <Button variant="outline" onClick={() => refetch()}>Tentar de novo</Button>
                   </div>
-                ) : fechado ? (
-                  <div className="space-y-2 text-sm">
-                    <p className="font-semibold">O cadastro pela página está pausado.</p>
-                    <p className="text-neutro-300">Volte em breve ou fale com a Wise Makers pelo e-mail contato@wisemakers.com.br.</p>
-                  </div>
                 ) : naFila ? (
                   <div className="space-y-3 text-sm" role="status">
                     <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
-                    <p className="text-neutro-100">Nossa equipe vai falar com você pelo WhatsApp {naFila} em até 24 horas úteis para combinar os próximos passos. Fique de olho nas mensagens.</p>
+                    <p className="text-neutro-100">A equipe da Wise vai falar com você pelo WhatsApp {naFila} em até 24 horas úteis para marcar a conversa de entrada de 45 minutos. Fique de olho nas mensagens.</p>
                     <p className="text-neutro-300">Depois dessa conversa, você recebe o acesso ao portal com o seu link exclusivo.</p>
                   </div>
                 ) : criado ? (
@@ -519,26 +399,31 @@ export default function LandingParceiros() {
                         <Input className="border-white/40" id="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(44) 99999-0000" value={f.whatsapp}
                           onChange={(e) => set("whatsapp", mascaraTelefone(e.target.value))} aria-invalid={!!mostra("whatsapp")} aria-describedby={mostra("whatsapp") ? "whatsapp-erro" : undefined} />
                       </Campo>
-                      <Campo id="empresa" rotulo="Empresa" erro={mostra("empresa")}>
+                      <Campo id="empresa" rotulo="Empresa ou entidade" erro={mostra("empresa")}>
                         <Input className="border-white/40" id="empresa" autoComplete="organization" value={f.empresa} onChange={(e) => set("empresa", e.target.value)} aria-invalid={!!mostra("empresa")} aria-describedby={mostra("empresa") ? "empresa-erro" : undefined} />
                       </Campo>
                       <Campo id="cnpj" rotulo="CNPJ" erro={mostra("cnpj")}>
                         <Input className="border-white/40" id="cnpj" inputMode="numeric" placeholder="00.000.000/0000-00" value={f.cnpj}
                           onChange={(e) => set("cnpj", mascaraCnpj(e.target.value))} aria-invalid={!!mostra("cnpj")} aria-describedby={mostra("cnpj") ? "cnpj-erro" : undefined} />
                       </Campo>
-                      <Campo id="categoria" rotulo="Tipo de software" erro={mostra("categoria_id")}>
+                      <Campo id="categoria" rotulo="Categoria" erro={mostra("categoria_id")}>
                         <Select value={f.categoria_id} onValueChange={(v) => set("categoria_id", v)}>
                           <SelectTrigger id="categoria" className="border-white/40" aria-invalid={!!mostra("categoria_id")} aria-describedby={mostra("categoria_id") ? "categoria-erro" : undefined}><SelectValue placeholder="Escolha" /></SelectTrigger>
                           <SelectContent>
-                            {(cfg?.categorias ?? []).map((c) => <SelectItem key={c.id} value={c.id}>{c.nome}</SelectItem>)}
+                            {grupos.map((g) => (
+                              <SelectGroup key={g.rotulo}>
+                                <SelectLabel>{g.rotulo}</SelectLabel>
+                                {g.itens.map((c) => <SelectItem key={c.id} value={c.id}>{c.nome}</SelectItem>)}
+                              </SelectGroup>
+                            ))}
                           </SelectContent>
                         </Select>
                       </Campo>
-                      <Campo id="clientes" rotulo="Clientes ativos na base" erro={mostra("clientes_ativos")}>
+                      <Campo id="clientes" rotulo="Clientes ou associados ativos" erro={mostra("clientes_ativos")}>
                         <Input className="border-white/40" id="clientes" inputMode="numeric" placeholder="Ex.: 150" value={f.clientes_ativos}
                           onChange={(e) => set("clientes_ativos", somenteDigitos(e.target.value).slice(0, 7))} aria-invalid={!!mostra("clientes_ativos")} aria-describedby={mostra("clientes_ativos") ? "clientes-erro" : undefined} />
                       </Campo>
-                      <Campo id="site" rotulo="Site da empresa" opcional>
+                      <Campo id="site" rotulo="Site" opcional>
                         <Input className="border-white/40" id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
                       </Campo>
                       {!fila && (
@@ -563,7 +448,7 @@ export default function LandingParceiros() {
                       <label className="flex items-start gap-3">
                         <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
                           aria-invalid={!!mostra("aceites") && !f.aceite_privacidade} aria-describedby={mostra("aceites") ? "aceites-erro" : undefined} />
-                        <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade</Link> e com o uso dos meus dados pra criar o acesso e falar sobre a parceria.</span>
+                        <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade</Link> e com o uso dos meus dados pra falar sobre a parceria.</span>
                       </label>
                       {mostra("aceites") && <p id="aceites-erro" role="alert" className="text-xs text-destructive">{erros.aceites}</p>}
                     </div>
@@ -571,16 +456,16 @@ export default function LandingParceiros() {
                     {falha && <p role="alert" className="rounded-[10px] border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">{falha}</p>}
 
                     <Button type="submit" size="lg" className="h-12 w-full text-base" disabled={enviando}>
-                      {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />{fila ? "Enviando..." : "Criando o seu acesso..."}</> : fila ? "Quero ser parceiro" : "Criar meu acesso de parceiro"}
+                      {enviando
+                        ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />{fila ? "Enviando..." : "Criando o seu acesso..."}</>
+                        : fila ? (s.cadastro.botao || "Quero ser parceiro") : "Criar meu acesso de parceiro"}
                     </Button>
-                    <p className="text-center text-xs text-neutro-300">Sem custo, sem exclusividade e sem meta mínima. Sai quando quiser.</p>
+                    <p className="text-center text-xs text-neutro-300">Valor de referência do que o seu cliente recebe: {reais(valores.total)}. Pra ele e pra você, sem custo.</p>
                   </form>
                 )}
               </div>
             </div>
-            <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-neutro-300">
-              {GARANTIAS.map((g) => <li key={g} className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 shrink-0" aria-hidden />{g}</li>)}
-            </ul>
+            <Garantias itens={s.cadastro.itens} />
           </section>
         </div>
       </main>
@@ -588,7 +473,7 @@ export default function LandingParceiros() {
       <footer ref={fimRef} className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-neutro-300 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>Wise Makers · Estrutura e gestão comercial · Maringá, Paraná</p>
-          <nav className="flex gap-4" aria-label="Documentos">
+          <nav className="flex flex-wrap gap-x-4 gap-y-2" aria-label="Documentos">
             <Link to="/parceiros/termo" className="hover:text-foreground">Termo de adesão</Link>
             <Link to="/parceiros/privacidade" className="hover:text-foreground">Política de privacidade</Link>
             <Link to="/entrar" className="hover:text-foreground">Entrar no portal</Link>
@@ -596,12 +481,7 @@ export default function LandingParceiros() {
         </div>
       </footer>
 
-      {/* Botão fixo no celular, até chegar ao cadastro */}
-      <div aria-hidden={!fixoVisivel}
-        className={`fixed inset-x-0 bottom-0 z-20 border-t border-white/10 bg-background/95 p-3 backdrop-blur transition-transform duration-200 ease-out motion-reduce:transition-none sm:hidden ${fixoVisivel ? "translate-y-0" : "pointer-events-none translate-y-full"}`}
-        style={{ paddingBottom: "max(12px, env(safe-area-inset-bottom))" }}>
-        <Button onClick={irParaCadastro} className="h-11 w-full" tabIndex={fixoVisivel ? 0 : -1}>Quero ser parceiro</Button>
-      </div>
+      <BarraFixa visivel={barraVisivel} texto={fixoTexto} aoClicar={irParaCadastro} />
     </div>
   );
 }

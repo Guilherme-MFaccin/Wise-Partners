@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Navigate, useSearchParams } from "react-router-dom";
 import { Info } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { Cabecalho } from "@/components/comum/Cabecalho";
@@ -56,6 +56,9 @@ export default function Configuracoes() {
   const leitura = !isAdmin;
   const abas = ABAS.filter((a) => !a.admin || isAdmin);
   const abaParam = params.get("aba");
+  // Avisos antigos apontavam para as abas das páginas, que saíram daqui (v3)
+  if (abaParam === "landing") return <Navigate to="/app/candidatos" replace />;
+  if (abaParam === "landing-cliente") return <Navigate to="/app/diagnosticos" replace />;
   const aba = abas.some((a) => a.id === abaParam) ? abaParam! : "niveis";
   const conteudo: Record<string, ReactNode> = {
     empresas: <SecaoEmpresas somenteLeitura={leitura} />,

@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { fonteVideo, type FormatoVideo } from "@/lib/landing";
+import { percentualCase, reais, type ResumoCases, type Valores } from "@/lib/paginas";
 
-// Blocos das landing pages públicas (parceiros e clientes dos parceiros): prova, vídeo, Wise Hub e campos.
-// Os números e casos vêm dos materiais da Wise Makers; mudar aqui muda nas duas páginas.
+// Blocos das páginas públicas (parceiros e clientes dos parceiros): prova, vídeo, Wise Hub e campos.
+// Textos, valores de referência e cases vêm do banco (editados em Programa, Páginas); os vídeos de depoimento ficam aqui.
 
 // Logos de clientes da Wise Makers (grade original da apresentação de parceria, recortada e ampliada).
 // Fora: Havan, Bayer, Implemar e Café Jandaia, que são clientes do grupo Tríade, não da Wise Makers.
@@ -29,29 +30,6 @@ export const CASOS = {
     celular: "https://triade-emails.vercel.app/uploads/02-caso-fusion-aluminios-mobile-260821-1124",
   },
 };
-
-// Wise Hub: o que cada entrega custaria contratada à parte (valores da página do Wise Hub)
-// Valor de referência (FO-15): reunião de diagnóstico R$ 2.000 e Wise Hub R$ 3.000
-export const PERFIL_REUNIAO = "a partir de 3 vendedores e R$\u00a0250 mil de faturamento por mês";
-export const VALOR_TOTAL = "R$\u00a05.000";
-export const HUB_VALOR = [
-  { titulo: "Reunião de diagnóstico e plano de ação", texto: `Cerca de 2 horas, online, com a equipe da Wise Makers. O plano de ação chega por e-mail em até 2 dias úteis. Para empresas ${PERFIL_REUNIAO}.`, valor: "R$\u00a02.000" },
-  { titulo: "Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, autodiagnóstico, plano de 30, 60 e 90 dias, calculadoras, planilhas e checklists.", valor: "R$\u00a03.000" },
-];
-
-// Cases de resultado (página de cases da Wise Makers, nov/26): faturamento nos meses de trabalho contra os mesmos meses do ano anterior.
-// Os 8 clientes autorizaram o uso do nome. Atualizar a cada trimestre (processo P-100 do mapeamento).
-export const CASES_MEDIA = "+35%";
-export const CASES: { empresa: string; segmento: string; crescimento: string; periodo: string }[] = [
-  { empresa: "Florart's Decor", segmento: "Decoração e ambientes de alto padrão", crescimento: "+89,4%", periodo: "jan/25 a out/26" },
-  { empresa: "Maringá Portas", segmento: "Indústria de portas", crescimento: "+43,8%", periodo: "jan/26 a out/26" },
-  { empresa: "Chamego Bandeiras", segmento: "Indústria de bandeiras", crescimento: "+39,7%", periodo: "jan/25 a ago/26" },
-  { empresa: "Fusion Alumínios", segmento: "Portas de vidro e soluções para móveis planejados", crescimento: "+25,7%", periodo: "fev/25 a nov/25" },
-  { empresa: "Totonho Locações", segmento: "Locação de móveis e peças para festas e eventos", crescimento: "+25,4%", periodo: "jan/26 a out/26" },
-  { empresa: "Protectpool", segmento: "Soluções para piscinas e rede de revendedores", crescimento: "+20,8%", periodo: "jan/25 a out/26" },
-  { empresa: "Powerfit", segmento: "Equipamentos esportivos para o mercado fitness", crescimento: "+19,9%", periodo: "jan/25 a out/25" },
-  { empresa: "Nicopel", segmento: "Indústria de embalagens personalizadas", crescimento: "+16,5%", periodo: "jan/26 a out/26" },
-];
 
 // Depoimentos em vídeo (os mesmos da plataformawise.com) e os números de cada caso
 export type Depoimento = {
@@ -81,11 +59,12 @@ export const DEPOIMENTOS: Depoimento[] = [
   },
 ];
 
-export function Secao({ id, eyebrow, titulo, children, className = "" }: { id?: string; eyebrow?: string; titulo: string; children: ReactNode; className?: string }) {
+export function Secao({ id, eyebrow, titulo, texto, children, className = "" }: { id?: string; eyebrow?: string; titulo: string; texto?: string; children: ReactNode; className?: string }) {
   return (
     <section id={id} className={`mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-20 ${className}`}>
       {eyebrow && <p className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">{eyebrow}</p>}
-      <h2 className="mt-2 max-w-3xl text-balance text-[28px] font-semibold leading-tight sm:text-[36px]">{titulo}</h2>
+      <h2 className="mt-2 max-w-3xl text-balance break-words text-[28px] font-semibold leading-tight sm:text-[36px]">{titulo}</h2>
+      {texto && <p className="mt-4 max-w-[64ch] text-neutro-100">{texto}</p>}
       <div className="mt-8 sm:mt-10">{children}</div>
     </section>
   );
@@ -272,7 +251,7 @@ export function Campo({ id, rotulo, opcional, erro, children }: { id: string; ro
 
 // Faixa de logos logo abaixo do topo: carrossel contínuo, pausa ao passar o mouse.
 // Com "reduzir movimento" ligado, vira uma faixa parada que rola com o dedo.
-export function FaixaLogos() {
+export function FaixaLogos({ titulo }: { titulo: string }) {
   // Espaço como padding de cada item (e não gap): as duas cópias ficam com a mesma largura e o loop não dá salto
   const item = (n: number, nome: string, copia: boolean) => (
     <li key={`${copia ? "c" : "o"}${n}`} className={`shrink-0 pr-4 sm:pr-5 ${copia ? "motion-reduce:hidden" : ""}`} aria-hidden={copia || undefined}>
@@ -282,7 +261,7 @@ export function FaixaLogos() {
   );
   return (
     <section aria-labelledby="clientes-titulo" className="w-full pb-14 lg:pb-20">
-      <h2 id="clientes-titulo" className="mx-auto max-w-6xl px-4 text-center text-sm font-medium text-neutro-300 sm:px-6">Empresas que estruturaram o comercial com a Wise Makers</h2>
+      <h2 id="clientes-titulo" className="mx-auto max-w-6xl px-4 text-center text-sm font-medium text-neutro-300 sm:px-6">{titulo}</h2>
       <div className="group mt-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] motion-reduce:overflow-x-auto">
         <ul className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:pl-4">
           {CLIENTES.map(([n, nome]) => item(n, nome, false))}
@@ -293,21 +272,27 @@ export function FaixaLogos() {
   );
 }
 
-// Quadro de valor do Wise Hub, com a tela do Hub ao lado
-export function QuadroValorHub({ paraQuem, destaque, vantagens }: { paraQuem: string; destaque?: ReactNode; vantagens: string[] }) {
+// Quadro de valor do Wise Hub, com a tela do Hub ao lado. Valores de referência vêm do banco (total já somado).
+export function QuadroValorHub({ paraQuem, destaque, vantagens, valores, perfil }: {
+  paraQuem: string; destaque?: ReactNode; vantagens: string[]; valores: Valores; perfil: string;
+}) {
+  const linhas = [
+    { titulo: "Reunião de diagnóstico e plano de ação", texto: `Cerca de 2 horas, online, com a equipe da Wise Makers, pela Matriz de Governança Comercial 5x5. O plano de ação chega por e-mail em até 2 dias úteis. Para empresas ${perfil}.`, valor: reais(valores.diagnostico) },
+    { titulo: "Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, autodiagnóstico, plano de 30, 60 e 90 dias, calculadoras, planilhas e checklists.", valor: reais(valores.hub) },
+  ];
   return (
     <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_1fr] lg:items-start lg:gap-10">
       <div className="rounded-[14px] border border-white/10 bg-card">
         <ul className="divide-y divide-white/10">
-          {HUB_VALOR.map((h) => (
+          {linhas.map((h) => (
             <li key={h.titulo} className="flex items-start justify-between gap-4 px-5 py-4">
-              <span><span className="block font-semibold">{h.titulo}</span><span className="text-sm text-neutro-300">{h.texto}</span></span>
+              <span className="min-w-0"><span className="block font-semibold">{h.titulo}</span><span className="text-sm text-neutro-300">{h.texto}</span></span>
               <span className="shrink-0 pt-0.5 text-sm tabular-nums text-neutro-300">{h.valor}</span>
             </li>
           ))}
         </ul>
         <div className="flex items-end justify-between gap-4 rounded-b-[14px] border-t border-white/10 bg-white/[0.03] px-5 py-4">
-          <span className="text-sm text-neutro-300">Valor de referência<span className="block text-base tabular-nums line-through decoration-neutro-500">{VALOR_TOTAL}</span></span>
+          <span className="text-sm text-neutro-300">Valor de referência<span className="block text-base tabular-nums line-through decoration-neutro-500">{reais(valores.total)}</span></span>
           <span className="text-right text-sm text-neutro-300">{paraQuem}<span className="block text-[28px] font-bold leading-none tabular-nums text-menta-400">R$&nbsp;0</span></span>
         </div>
       </div>
@@ -315,32 +300,37 @@ export function QuadroValorHub({ paraQuem, destaque, vantagens }: { paraQuem: st
         <img src="/landing/wise-hub.webp" width={1200} height={519} loading="lazy" decoding="async"
           alt="Tela inicial do Wise Hub com o painel de evolução, o vídeo de boas-vindas e a próxima etapa do Método Wise"
           className="h-auto w-full rounded-[14px] border border-white/10" />
-        <ul className="mt-5 grid gap-2 text-sm text-neutro-100 sm:grid-cols-2">
-          {vantagens.map((t) => (
-            <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t}</li>
-          ))}
-        </ul>
+        {vantagens.length > 0 && (
+          <ul className="mt-5 grid gap-2 text-sm text-neutro-100 sm:grid-cols-2">
+            {vantagens.map((t) => (
+              <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t}</li>
+            ))}
+          </ul>
+        )}
         {destaque && <p className="mt-6 border-l-2 border-menta-500/60 pl-4 text-lg font-semibold leading-snug">{destaque}</p>}
       </div>
     </div>
   );
 }
 
-// Os 8 cases de resultado, com a média em destaque
-export function QuadroCases() {
+// Cases de resultado (tabela cases_resultado), com a média que o banco calcula
+export function QuadroCases({ cases, nota }: { cases: ResumoCases; nota?: string }) {
+  if (!cases.itens.length) return null;
   return (
-    <div className="mt-8 rounded-[14px] border border-white/10 bg-card">
+    <div className="rounded-[14px] border border-white/10 bg-card">
       <div className="flex flex-col gap-1 border-b border-white/10 px-5 py-5 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
-        <p><span className="block text-[40px] font-bold leading-none tabular-nums text-menta-400">{CASES_MEDIA}</span>
-          <span className="mt-2 block font-semibold">de faturamento em média, nas 8 empresas</span></p>
-        <p className="max-w-[44ch] text-sm text-neutro-300">Cada case compara os meses de trabalho com a Wise com os mesmos meses do ano anterior.</p>
+        {cases.media !== null && (
+          <p><span className="block text-[36px] font-bold leading-none tabular-nums text-menta-400">{cases.media > 0 ? "+" : ""}{cases.media}%</span>
+            <span className="mt-2 block font-semibold">de faturamento em média, {cases.quantidade === 1 ? "em 1 empresa" : `nas ${cases.quantidade} empresas`}</span></p>
+        )}
+        {nota && <p className="max-w-[44ch] text-sm text-neutro-300">{nota}</p>}
       </div>
-      <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-b-[14px] bg-white/10 lg:grid-cols-4">
-        {CASES.map((c) => (
-          <li key={c.empresa} className="bg-card px-4 py-4 sm:px-5">
-            <span className="block text-xl font-bold leading-none tabular-nums sm:text-[22px]">{c.crescimento}</span>
-            <span className="mt-2 block font-semibold leading-snug">{c.empresa}</span>
-            <span className="block text-sm text-neutro-300">{c.segmento}</span>
+      <ul className="grid grid-cols-1 gap-px overflow-hidden rounded-b-[14px] bg-white/10 min-[420px]:grid-cols-2 lg:grid-cols-4">
+        {cases.itens.map((c) => (
+          <li key={c.empresa} className="min-w-0 bg-card px-4 py-4 sm:px-5">
+            <span className="block text-xl font-bold leading-none tabular-nums sm:text-[22px]">{percentualCase(Number(c.crescimento))}</span>
+            <span className="mt-2 block break-words font-semibold leading-snug">{c.empresa}</span>
+            <span className="block break-words text-sm text-neutro-300">{c.segmento}</span>
             <span className="mt-1 block text-xs tabular-nums text-neutro-300">{c.periodo}</span>
           </li>
         ))}
@@ -350,14 +340,12 @@ export function QuadroCases() {
 }
 
 // Seção de depoimentos em vídeo, com a janela do YouTube
-export function SecaoDepoimentos({ subtitulo }: { subtitulo: string }) {
+export function SecaoDepoimentos({ eyebrow, titulo }: { eyebrow?: string; titulo: string }) {
   const [videoAberto, setVideoAberto] = useState<Depoimento | null>(null);
   return (
     <>
-      <Secao eyebrow="Depoimentos" titulo="Quem aplicou o método conta o resultado.">
-        <p className="-mt-4 max-w-[64ch] text-neutro-100 sm:-mt-6">{subtitulo}</p>
-        <QuadroCases />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Secao eyebrow={eyebrow} titulo={titulo}>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {DEPOIMENTOS.map((d) => <CartaoDepoimento key={d.video} d={d} aoAssistir={() => setVideoAberto(d)} />)}
         </div>
         <figure className="mt-6 rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">
@@ -382,7 +370,7 @@ export function SecaoDepoimentos({ subtitulo }: { subtitulo: string }) {
 }
 
 // Faixa com a foto do evento, um número de prova e a chamada
-export function FaixaEvento({ titulo, texto, botao, aoClicar, nota }: { titulo: string; texto: string; botao: string; aoClicar: () => void; nota: string; }) {
+export function FaixaEvento({ titulo, texto, botao, aoClicar, nota }: { titulo: string; texto?: string; botao: string; aoClicar: () => void; nota?: string; }) {
   return (
     <section className="border-y border-white/10 bg-card">
       <div className="mx-auto grid max-w-6xl items-center gap-6 px-4 py-10 sm:px-6 md:grid-cols-[1fr_1.1fr] md:gap-10 lg:py-12">
@@ -391,9 +379,9 @@ export function FaixaEvento({ titulo, texto, botao, aoClicar, nota }: { titulo: 
           className="h-auto w-full rounded-[14px] border border-white/10" />
         <div>
           <p className="text-[22px] font-semibold leading-snug">{titulo}</p>
-          <p className="mt-2 text-neutro-300">{texto}</p>
+          {texto && <p className="mt-2 text-neutro-300">{texto}</p>}
           <Button size="lg" onClick={aoClicar} className="mt-6 h-12 px-6 text-base">{botao}</Button>
-          <p className="mt-2 text-xs text-neutro-300">{nota}</p>
+          {nota && <p className="mt-2 text-xs text-neutro-300">{nota}</p>}
         </div>
       </div>
     </section>

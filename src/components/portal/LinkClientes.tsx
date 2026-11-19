@@ -30,6 +30,7 @@ async function copiar(texto: string, aviso: string) {
 }
 
 // Página de consultoria para os clientes do parceiro (/c/código): link, mensagem pronta, logo e quem entrou (FO-10).
+// A página é única e geral da Wise Makers: não mostra nome, logo nem cor do parceiro; o link só atribui o cliente.
 // O parceiro vê empresa, data e andamento; o resultado só quando o cliente autorizou no cadastro.
 export function LinkClientes({ parceiroId, nome }: { parceiroId: string; nome: string }) {
   const qc = useQueryClient();
@@ -65,7 +66,7 @@ export function LinkClientes({ parceiroId, nome }: { parceiroId: string; nome: s
     const { error } = await supabase.rpc("definir_logo_parceiro", { p_parceiro: parceiroId, p_caminho: caminho });
     setEnviando(false);
     if (error) return toastErro(error);
-    toast.success("Logo atualizado. Ele já aparece na página.");
+    toast.success("Logo atualizado.");
     qc.invalidateQueries({ queryKey: ["portal-logo", parceiroId] });
   }
 
@@ -86,7 +87,7 @@ export function LinkClientes({ parceiroId, nome }: { parceiroId: string; nome: s
       <div>
         <h2 className="font-semibold">Consultoria para os seus clientes</h2>
         <p className="mt-1 text-sm text-muted-foreground">
-          Mande este link para a sua base e para cada cliente novo. A página mostra o logo da {nome} ao lado da Wise Makers: o cliente faz o cadastro, o diagnóstico e recebe o acesso ao Wise Hub.
+          Mande este link para a sua base e para cada cliente novo, com a sua mensagem. A página é da Wise Makers e explica que o fornecedor que enviou o link é parceiro: o cliente faz o cadastro, o diagnóstico e recebe o acesso ao Wise Hub. Quem entra pelo link fica registrado como cliente da {nome}.
         </p>
         <div className="mt-3 flex flex-col gap-2 sm:flex-row">
           <Input readOnly value={url} onFocus={(e) => e.currentTarget.select()} className="font-mono text-xs" aria-label="Link da consultoria para clientes" />
@@ -111,15 +112,15 @@ export function LinkClientes({ parceiroId, nome }: { parceiroId: string; nome: s
           </div>
         </div>
         <div>
-          <h3 className="text-sm font-semibold">Seu logo na página</h3>
+          <h3 className="text-sm font-semibold">Logo da sua empresa</h3>
           <div className="mt-2 flex h-20 items-center justify-center rounded-[10px] border border-white/10 bg-white/5 p-3">
-            {logoQ.data ? <img src={logoQ.data} alt={`Logo da ${nome}`} className="max-h-full max-w-full object-contain" /> : <span className="text-xs text-muted-foreground">Sem logo: a página mostra o nome em texto.</span>}
+            {logoQ.data ? <img src={logoQ.data} alt={`Logo da ${nome}`} className="max-h-full max-w-full object-contain" /> : <span className="text-xs text-muted-foreground">Nenhum logo enviado.</span>}
           </div>
           <input ref={arquivo} type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" className="hidden" onChange={(e) => trocarLogo(e.target.files?.[0])} />
           <Button variant="outline" size="sm" className="mt-2 w-full" onClick={() => arquivo.current?.click()} disabled={enviando}>
             {enviando ? <Loader2 className="animate-spin" /> : <ImagePlus />} {logoQ.data ? "Trocar o logo" : "Enviar o logo"}
           </Button>
-          <p className="mt-1 text-xs text-muted-foreground">PNG ou SVG com fundo transparente, até 1 MB.</p>
+          <p className="mt-1 text-xs text-muted-foreground">Fica no cadastro do programa; a página do cliente não mostra o logo. PNG ou SVG, até 1 MB.</p>
         </div>
       </div>
 
