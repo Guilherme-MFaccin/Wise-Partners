@@ -5,18 +5,14 @@ flowchart LR
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
       n_i1(["6 ou 12 meses do fechamento"]):::confirmado
-      n_t1["Criar a tarefa de checagem"]:::confirmado
-      n_t2["Perguntar ao consultor como está o cliente"]:::confirmado
-      n_t4["Registrar a checagem"]:::confirmado
-      n_t5["Contar ao parceiro como está o cliente que ele indicou"]:::confirmado
+      n_t1["Criar a tarefa de checagem para o consultor"]:::confirmado
+      n_t3["Contar ao parceiro como está o cliente que ele indicou"]:::confirmado
       n_f1(["Checagem registrada e parceiro informado"]):::confirmado
     end
     subgraph raia_PA_07 ["Consultor da Wise Makers"]
-      n_t3["Informar se o cliente continua e o resultado obtido"]:::confirmado
+      n_t2["Registrar no portal se o cliente continua e o resultado obtido"]:::confirmado
     end
     n_i1 --> n_t1
     n_t1 --> n_t2
     n_t2 --> n_t3
-    n_t3 --> n_t4
-    n_t4 --> n_t5
-    n_t5 --> n_f1
+    n_t3 --> n_f1

@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-89" name="11.2 Manter o kit de vendas e o simulador de ganho" processRef="Process_P-89" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-89" name="11.2 Manter o kit de vendas e o simulador de ganho" isExecutable="false">
-    <bpmn:documentation>Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. O kit e o simulador do Select mostram só a Wise Makers; os de Premium e Elite, as três empresas. No portal: mostra o kit e simula o ganho pela regra de comissão. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. O kit e o simulador do Select mostram só a Wise Makers; os de Premium e Elite, as três empresas. O kit traz os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento, para o parceiro usar com os clientes. No portal: mostra o kit e simula o ganho pela regra de comissão. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-89">
       <bpmn:lane id="Lane_P-89_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-89_i1</bpmn:flowNodeRef>

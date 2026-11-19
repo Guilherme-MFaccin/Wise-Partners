@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-18",
-    "atualizado_em": "2026-11-18"
+    "criado_em": "2026-11-19",
+    "atualizado_em": "2026-11-19"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -557,7 +557,7 @@
     {
       "id": "F-041",
       "tema": "oferta",
-      "texto": "Entregável padrão para os clientes de todos os parceiros: o cliente entra pelo link do parceiro; no ICP da Wise (mais de 3 vendedores), reunião de diagnóstico pela Matriz 5x5 e mapa próprio da reunião em até 2 dias úteis; fora do ICP, autodiagnóstico na hora e e-mail com o resultado. O Gerente conduz as reuniões; acima de 10 por semana, outra pessoa da Wise assume.",
+      "texto": "Entregável padrão para os clientes de todos os parceiros, desde o Select: o cliente entra pelo link do parceiro; no ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa), uma reunião de cerca de 2 horas com diagnóstico e plano de ação, pela Matriz 5x5 mesclada ao roteiro de diagnóstico adaptado a cada cliente, e o documento em até 2 dias úteis; fora do ICP, autodiagnóstico na hora e e-mail com o resultado. O Gerente conduz até 5 reuniões por semana; o que passar vai para um consultor da Wise.",
       "status": "confirmado",
       "evidencias": [
         "EV-0300",
@@ -568,13 +568,18 @@
         "EV-0361",
         "EV-0362",
         "EV-0363",
-        "EV-0364"
+        "EV-0364",
+        "EV-0389",
+        "EV-0394",
+        "EV-0397",
+        "EV-0396",
+        "EV-0399"
       ]
     },
     {
       "id": "F-042",
       "tema": "oferta",
-      "texto": "O Wise Hub com as duas marcas é benefício de todo parceiro desde o Select. Para o cliente do parceiro, o link do Hub aparece depois do diagnóstico ou do autodiagnóstico, nunca solto, como publicidade.",
+      "texto": "Valor de referência mostrado ao cliente do parceiro: o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise, e o Wise Hub R$ 3.000, total de R$ 5.000; para o cliente do parceiro, sai sem custo. O Wise Hub com as duas marcas é benefício de todo parceiro desde o Select, e o link do Hub aparece depois do diagnóstico ou do autodiagnóstico, nunca solto.",
       "status": "confirmado",
       "evidencias": [
         "EV-0303",
@@ -582,7 +587,8 @@
         "EV-0117",
         "EV-0039",
         "EV-0345",
-        "EV-0361"
+        "EV-0361",
+        "EV-0400"
       ]
     },
     {
@@ -884,7 +890,7 @@
         "EV-0005",
         "EV-0030"
       ],
-      "descricao": "Dono de todas as tarefas do portal, inclusive as executadas por consultores, comercial, financeiro ou parceiro."
+      "descricao": "Dono de todas as tarefas do portal, inclusive as executadas por diretores, consultores, comercial, financeiro ou parceiro; administra o portal."
     },
     {
       "id": "PA-02",
@@ -894,9 +900,10 @@
       "status": "confirmado",
       "evidencias": [
         "EV-0006",
-        "EV-0007"
+        "EV-0007",
+        "EV-0391"
       ],
-      "descricao": "Define as metas e assina o termo; não faz aprovação criteriosa da negociação."
+      "descricao": "Define as metas, aprova as regras e assina o aviso formal de desligamento; administra o portal, com acesso total, inclusive para editar as landing pages."
     },
     {
       "id": "PA-03",
@@ -952,9 +959,10 @@
       "evidencias": [
         "EV-0362",
         "EV-0005",
-        "EV-0388"
+        "EV-0388",
+        "EV-0392"
       ],
-      "descricao": "Atende o cliente da Wise; relata necessidades para a Prateleira, faz a checagem aos 6 e 12 meses e pode conduzir diagnósticos quando a agenda do Gerente enche. Não entra no portal."
+      "descricao": "Atende o cliente da Wise; relata necessidades para a Prateleira, conduz diagnósticos quando a agenda do Gerente enche e faz a checagem aos 6 e 12 meses. Entra no portal com o perfil de consultor: vê os clientes e as oportunidades e registra os diagnósticos e as checagens que faz, sem editar páginas nem regras."
     }
   ],
   "pessoas": [
@@ -2002,7 +2010,7 @@
       "nome": "Revisar o programa com o Diretor",
       "pai": "P-08",
       "ordem": 2,
-      "descricao": "Toda semana, o Gerente e o Igor passam pelo painel da semana (poucos números estratégicos) e pela lista de casos, parceiro a parceiro, e decidem o próximo passo de cada caso. No portal: monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso. O Igor vê o painel e os casos no portal, só para leitura.",
+      "descricao": "Toda semana, o Gerente e o Igor passam pelo painel da semana (poucos números estratégicos) e pela lista de casos, parceiro a parceiro, e decidem o próximo passo de cada caso. No portal: monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso. O Diretor é administrador e pode abrir o painel e os casos quando quiser.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -2049,7 +2057,8 @@
         "EV-0156",
         "EV-0031",
         "EV-0045",
-        "EV-0373"
+        "EV-0373",
+        "EV-0391"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2058,7 +2067,7 @@
         "F-021",
         "F-001"
       ],
-      "portal": "monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso.",
+      "portal": "monta o painel da semana e a lista de casos (parceiros que mudaram de tipo, oportunidades paradas, decisões pendentes), cada caso com o histórico e a jogada sugerida; registra a decisão de cada caso. O Diretor é administrador e pode abrir o painel e os casos quando quiser.",
       "quadro": "Agenda de rituais",
       "fluxo": {
         "status": "confirmado",
@@ -4019,7 +4028,7 @@
       "nome": "Conduzir a conversa de entrada",
       "pai": "P-20",
       "ordem": 3,
-      "descricao": "Conversa do Gerente com o candidato, no lugar do workshop: perguntas sobre a empresa e os clientes dele; apresentação da Wise Makers, com números e casos; como o parceiro ganha junto com a Wise; a consultoria gratuita que ele oferece aos clientes; o Wise Hub por dentro e os resultados dos clientes; como é fácil indicar (o link da página do cliente, no portal Wise Partners, com o login dele); o minicurso de como vender a Wise. No fim, o Gerente aprova o cadastro, cria a conta e acompanha o parceiro entrando no portal. A conversa dura 45 minutos. Na primeira falta, o Gerente oferece um novo horário; na segunda, o cadastro sai da fila. No portal: aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
+      "descricao": "Conversa do Gerente com o candidato, no lugar do workshop: perguntas sobre a empresa e os clientes dele; apresentação da Wise Makers, com números e casos; como o parceiro ganha junto com a Wise; a consultoria gratuita que ele oferece aos clientes; o Wise Hub por dentro e os resultados dos clientes; como é fácil indicar (o link da página do cliente, no portal Wise Partners, com o login dele); o minicurso de como vender a Wise. No fim, o Gerente aprova o cadastro, cria a conta e acompanha o parceiro entrando no portal. A conversa dura 45 minutos. Na primeira falta, o Gerente oferece um novo horário; na segunda, o cadastro sai da fila. Na apresentação da Wise, a conversa usa os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. No portal: aprova o cadastro, cria o parceiro como Select com o aceite registrado e gera a conta com senha provisória e a mensagem de acesso.",
       "dono": "PA-01",
       "participantes": [
         "PA-06"
@@ -4071,7 +4080,8 @@
         "EV-0333",
         "EV-0338",
         "EV-0339",
-        "EV-0373"
+        "EV-0373",
+        "EV-0405"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5408,7 +5418,8 @@
         "EV-0187",
         "EV-0026",
         "EV-0366",
-        "EV-0373"
+        "EV-0373",
+        "EV-0395"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -5442,7 +5453,7 @@
           {
             "id": "t2",
             "tipo": "tarefa",
-            "nome": "Levar ao closer o contexto: parceiro, diagnóstico e mapa da reunião",
+            "nome": "Levar ao closer o contexto: parceiro, diagnóstico e plano de ação",
             "raia": "PA-01"
           },
           {
@@ -6250,7 +6261,7 @@
       "nome": "Checar o cliente aos 6 e 12 meses",
       "pai": "P-31",
       "ordem": 7,
-      "descricao": "Tarefa do Gerente, executada pelo consultor que atende o cliente. No portal: cria a tarefa e registra o retorno.",
+      "descricao": "Seis e doze meses depois do fechamento, o consultor que atende o cliente registra no portal se o cliente continua e o resultado obtido; o Gerente acompanha e conta ao parceiro que indicou. No portal: cria a tarefa para o consultor, recebe o registro e lembra o Gerente de avisar o parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -6279,16 +6290,17 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0005",
-        "EV-0373"
+        "EV-0373",
+        "EV-0392"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "cria a tarefa e registra o retorno.",
+      "portal": "cria a tarefa para o consultor, recebe o registro e lembra o Gerente de avisar o parceiro.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0373"
+          "EV-0392"
         ],
         "raias": [
           "PA-01",
@@ -6306,7 +6318,7 @@
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Criar a tarefa de checagem",
+            "nome": "Criar a tarefa de checagem para o consultor",
             "raia": "PA-01",
             "sistema": "SI-01",
             "modo": "automatico"
@@ -6314,26 +6326,13 @@
           {
             "id": "t2",
             "tipo": "tarefa",
-            "nome": "Perguntar ao consultor como está o cliente",
-            "raia": "PA-01",
-            "sistema": "SI-02"
-          },
-          {
-            "id": "t3",
-            "tipo": "tarefa",
-            "nome": "Informar se o cliente continua e o resultado obtido",
-            "raia": "PA-07"
-          },
-          {
-            "id": "t4",
-            "tipo": "tarefa",
-            "nome": "Registrar a checagem",
-            "raia": "PA-01",
+            "nome": "Registrar no portal se o cliente continua e o resultado obtido",
+            "raia": "PA-07",
             "sistema": "SI-01",
             "modo": "sistema"
           },
           {
-            "id": "t5",
+            "id": "t3",
             "tipo": "tarefa",
             "nome": "Contar ao parceiro como está o cliente que ele indicou",
             "raia": "PA-01",
@@ -6361,14 +6360,6 @@
           },
           {
             "de": "t3",
-            "para": "t4"
-          },
-          {
-            "de": "t4",
-            "para": "t5"
-          },
-          {
-            "de": "t5",
             "para": "f1"
           }
         ],
@@ -9003,7 +8994,7 @@
       "nome": "Operar o portal no centro da gestão",
       "pai": null,
       "ordem": 12,
-      "descricao": "Manter as regras que rodam sozinhas, os dados e a privacidade (cruzamento com consentimento, só dados de empresa), os contratos e os acessos; primeiro fazer à mão e entender, depois automatizar. As landing pages (dos parceiros e dos clientes) ficam no domínio partners.wisemakers.com.br e são administradas por quem tem acesso de administrador; o responsável é o Gerente. No portal: é o próprio processo: regras, automações, painéis, versões de contrato, acessos e auditoria.",
+      "descricao": "Manter as regras que rodam sozinhas, os dados e a privacidade (cruzamento com consentimento, só dados de empresa), os contratos e os acessos; primeiro fazer à mão e entender, depois automatizar. As landing pages (dos parceiros e dos clientes) ficam no domínio partners.wisemakers.com.br e são administradas por quem tem acesso de administrador; o responsável é o Gerente. Os administradores são os diretores e o Gerente, com acesso total; os consultores entram com o perfil de consultor e registram a parte deles; o Gerente continua dono de todos os processos. No portal: é o próprio processo: regras, automações, painéis, versões de contrato, acessos e auditoria.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Regra nova, pessoa nova, contrato ou pedido de dados",
@@ -9031,7 +9022,10 @@
         "EV-0064",
         "EV-0369",
         "EV-0370",
-        "EV-0373"
+        "EV-0373",
+        "EV-0391",
+        "EV-0392",
+        "EV-0393"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -10156,7 +10150,7 @@
       "nome": "Entregar o link da página do cliente e a mensagem pronta",
       "pai": "P-27",
       "ordem": 3,
-      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
+      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. A mensagem pronta diz que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -10188,12 +10182,13 @@
         "EV-0226",
         "EV-0284",
         "EV-0339",
-        "EV-0373"
+        "EV-0373",
+        "EV-0401"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "publica e gera o link.",
+      "portal": "gera o link e a mensagem na tela Indicar do parceiro.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -11333,7 +11328,7 @@
       "nome": "Manter o minicurso e o certificado",
       "pai": "P-59",
       "ordem": 1,
-      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. No portal: entrega o minicurso e as trilhas e emite o certificado.",
+      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. O minicurso mostra os cases e o valor de referência do diagnóstico. No portal: entrega o minicurso e as trilhas e emite o certificado.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -11343,6 +11338,10 @@
         {
           "nome": "Perfil e frases atualizados",
           "de": "P-90"
+        },
+        {
+          "nome": "Cases atualizados",
+          "de": "P-100"
         }
       ],
       "saidas": [
@@ -11367,12 +11366,14 @@
         "EV-0348",
         "EV-0345",
         "EV-0375",
-        "EV-0373"
+        "EV-0373",
+        "EV-0405",
+        "EV-0401"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "entrega a trilha e emite o certificado.",
+      "portal": "entrega o minicurso e as trilhas e emite o certificado.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -11455,7 +11456,7 @@
       "nome": "Manter o kit de vendas e o simulador de ganho",
       "pai": "P-59",
       "ordem": 2,
-      "descricao": "Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. O kit e o simulador do Select mostram só a Wise Makers; os de Premium e Elite, as três empresas. No portal: mostra o kit e simula o ganho pela regra de comissão.",
+      "descricao": "Material de vendas da Wise Makers, da Tríade e da Swallow e quanto o parceiro ganha por indicação em cada uma. O kit e o simulador do Select mostram só a Wise Makers; os de Premium e Elite, as três empresas. O kit traz os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento, para o parceiro usar com os clientes. No portal: mostra o kit e simula o ganho pela regra de comissão.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Material ou regra nova",
@@ -11463,6 +11464,10 @@
         {
           "nome": "Regra de comissão vigente",
           "de": "P-62"
+        },
+        {
+          "nome": "Cases atualizados",
+          "de": "P-100"
         }
       ],
       "saidas": [
@@ -11485,7 +11490,8 @@
         "EV-0012",
         "EV-0375",
         "EV-0377",
-        "EV-0373"
+        "EV-0373",
+        "EV-0405"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -11552,7 +11558,7 @@
       "nome": "Manter o perfil do cliente ideal e as frases",
       "pai": "P-59",
       "ordem": 3,
-      "descricao": "Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. No portal: mostra na área do parceiro.",
+      "descricao": "Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. O perfil para a reunião de diagnóstico é: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa. Abaixo disso, o cliente faz o autodiagnóstico. No portal: mostra na área do parceiro.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Mudança de oferta ou da regra do ICP",
@@ -11580,7 +11586,8 @@
       "evidencias": [
         "EV-0078",
         "EV-0258",
-        "EV-0373"
+        "EV-0373",
+        "EV-0397"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -11927,7 +11934,7 @@
       "nome": "Conceder e revogar acessos ao portal",
       "pai": "P-60",
       "ordem": 3,
-      "descricao": "Usuários e permissões do portal: criar o acesso com o perfil certo, ajustar quando a função muda e revogar na saída. No portal: controla os acessos e registra quem acessou o quê.",
+      "descricao": "Usuários e permissões do portal: criar o acesso com o perfil certo, ajustar quando a função muda e revogar na saída. Perfis: administrador (diretores e Gerente, acesso total, inclusive editar as landing pages); consultor (vê clientes e oportunidades e registra diagnósticos e checagens, sem editar páginas nem regras); parceiro (a área dele: link, clientes, minicurso e kit). No portal: controla os acessos e registra quem acessou o quê.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Pessoa nova, mudança de função ou encerramento de parceria",
@@ -11951,7 +11958,9 @@
       "evidencias": [
         "EV-0236",
         "EV-0295",
-        "EV-0373"
+        "EV-0373",
+        "EV-0391",
+        "EV-0392"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -12278,7 +12287,7 @@
       "nome": "Conduzir o diagnóstico do cliente do parceiro",
       "pai": "P-31",
       "ordem": 0,
-      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP (mais de 3 vendedores, com faturamento mínimo opcional); o parceiro é avisado. No ICP: agenda do Google, reunião pela Matriz 5x5 conduzida pelo Gerente (acima de 10 por semana, um consultor da Wise assume), mapa próprio da reunião em até 2 dias úteis e acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade, que segue pela esteira. Se a empresa já é cliente da Wise ou já negocia com ela, o portal identifica no cadastro: a empresa é atendida normalmente, mas sem proteção de origem nem comissão, e o parceiro é avisado na hora. No portal: registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
+      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa); o parceiro é avisado. No ICP: agenda do Google e uma reunião de cerca de 2 horas, com diagnóstico e plano de ação na mesma conversa. A base é a Matriz 5x5, mesclada ao roteiro de diagnóstico da Wise, que é adaptado a cada cliente antes da reunião. O Gerente conduz até 5 reuniões por semana (10 horas); o que passar vai para um consultor da Wise, que registra o diagnóstico no portal. O cliente recebe o diagnóstico e o plano de ação num documento da Wise em até 2 dias úteis, e o acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. Vale para os clientes de todos os parceiros, desde o Select. Valor de referência: o diagnóstico custaria R$ 2.000 contratado direto com a Wise, e o Wise Hub R$ 3.000; para o cliente do parceiro, sai sem custo. Se a empresa já é cliente da Wise ou já negocia com ela, é atendida sem proteção de origem nem comissão, e o parceiro é avisado. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade. No portal: registra o cadastro com a origem no parceiro, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, calcula o resultado da matriz, recebe o registro do diagnóstico feito pelo Gerente ou pelo consultor e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -12286,10 +12295,6 @@
       "gatilho": "Cliente do parceiro se cadastra pela página do link",
       "entradas": [],
       "saidas": [
-        {
-          "nome": "Diagnóstico ou autodiagnóstico entregue",
-          "para": "EXT:Cliente do parceiro"
-        },
         {
           "nome": "Oportunidade aberta",
           "para": "P-32"
@@ -12305,6 +12310,10 @@
         {
           "nome": "Clientes e diagnósticos pelo link",
           "para": "P-66"
+        },
+        {
+          "nome": "Diagnóstico e plano de ação entregues",
+          "para": "EXT:Cliente do parceiro"
         }
       ],
       "cliente": "Cliente do parceiro e parceiro",
@@ -12313,7 +12322,7 @@
         "SI-04"
       ],
       "indicadores": [],
-      "frequencia": "Até 10 reuniões por semana com o Gerente; o que passar vai para um consultor da Wise",
+      "frequencia": "Até 5 reuniões de cerca de 2 horas por semana com o Gerente; o que passar vai para um consultor da Wise",
       "dores": [],
       "regras": [
         "Só clientes dentro do ICP da Wise",
@@ -12339,7 +12348,15 @@
         "EV-0364",
         "EV-0365",
         "EV-0366",
-        "EV-0373"
+        "EV-0373",
+        "EV-0389",
+        "EV-0394",
+        "EV-0395",
+        "EV-0396",
+        "EV-0397",
+        "EV-0398",
+        "EV-0399",
+        "EV-0400"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12347,11 +12364,14 @@
         "F-002",
         "F-003"
       ],
-      "portal": "registra o cadastro com a origem no parceiro, calcula o resultado da matriz, libera a agenda ou o autodiagnóstico e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
+      "portal": "registra o cadastro com a origem no parceiro, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, calcula o resultado da matriz, recebe o registro do diagnóstico feito pelo Gerente ou pelo consultor e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0373"
+          "EV-0389",
+          "EV-0394",
+          "EV-0395",
+          "EV-0396"
         ],
         "raias": [
           "PA-01"
@@ -12437,19 +12457,27 @@
           {
             "id": "g2",
             "tipo": "decisao",
-            "nome": "Passou de 10 reuniões na semana?",
+            "nome": "O Gerente já tem 5 reuniões na semana?",
             "raia": "PA-01"
           },
           {
             "id": "t7",
             "tipo": "tarefa",
             "nome": "Passar a reunião a um consultor da Wise",
-            "raia": "PA-01"
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
           },
           {
             "id": "t8",
             "tipo": "tarefa",
-            "nome": "Abrir a reunião no horário marcado (Gerente ou consultor)",
+            "nome": "Adaptar o roteiro ao cliente (Gerente ou consultor)",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t9",
+            "tipo": "tarefa",
+            "nome": "Abrir a reunião de cerca de 2 horas (Gerente ou consultor)",
             "raia": "PA-01"
           },
           {
@@ -12459,16 +12487,22 @@
             "raia": "PA-01"
           },
           {
-            "id": "t9",
+            "id": "ta",
             "tipo": "tarefa",
             "nome": "Oferecer um novo horário ou o autodiagnóstico",
             "raia": "PA-01",
             "sistema": "SI-02"
           },
           {
-            "id": "ta",
+            "id": "tb",
             "tipo": "tarefa",
-            "nome": "Conduzir o diagnóstico pela Matriz 5x5",
+            "nome": "Conduzir o diagnóstico pela Matriz 5x5 e pelo roteiro (Gerente ou consultor)",
+            "raia": "PA-01"
+          },
+          {
+            "id": "tc",
+            "tipo": "tarefa",
+            "nome": "Montar o plano de ação com o cliente (Gerente ou consultor)",
             "raia": "PA-01"
           },
           {
@@ -12478,19 +12512,27 @@
             "raia": "PA-01"
           },
           {
-            "id": "tb",
+            "id": "td",
             "tipo": "tarefa",
             "nome": "Aplicar a pesquisa",
             "raia": "PA-01"
           },
           {
-            "id": "tc",
+            "id": "te",
             "tipo": "tarefa",
-            "nome": "Enviar o mapa da reunião em até 2 dias úteis",
+            "nome": "Registrar o diagnóstico e o plano no portal (Gerente ou consultor)",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "tf",
+            "tipo": "tarefa",
+            "nome": "Enviar o diagnóstico e o plano em até 2 dias úteis (Gerente ou consultor)",
             "raia": "PA-01"
           },
           {
-            "id": "td",
+            "id": "tg",
             "tipo": "tarefa",
             "nome": "Liberar o acesso ao Wise Hub",
             "raia": "PA-01",
@@ -12504,7 +12546,7 @@
             "raia": "PA-01"
           },
           {
-            "id": "te",
+            "id": "th",
             "tipo": "tarefa",
             "nome": "Liberar o resultado ao parceiro no portal",
             "raia": "PA-01",
@@ -12518,7 +12560,7 @@
             "raia": "PA-01"
           },
           {
-            "id": "tf",
+            "id": "ti",
             "tipo": "tarefa",
             "nome": "Abrir a oportunidade com a origem no parceiro",
             "raia": "PA-01",
@@ -12540,7 +12582,7 @@
           {
             "id": "f2",
             "tipo": "fim",
-            "nome": "Diagnóstico entregue",
+            "nome": "Diagnóstico e plano de ação entregues",
             "raia": "PA-01"
           },
           {
@@ -12609,28 +12651,23 @@
           },
           {
             "de": "t8",
+            "para": "t9"
+          },
+          {
+            "de": "t9",
             "para": "g0"
           },
           {
             "de": "g0",
-            "para": "t9",
+            "para": "ta",
             "rotulo": "Não"
           },
           {
-            "de": "t9",
+            "de": "ta",
             "para": "f0"
           },
           {
             "de": "g0",
-            "para": "ta",
-            "rotulo": "Sim"
-          },
-          {
-            "de": "ta",
-            "para": "g3"
-          },
-          {
-            "de": "g3",
             "para": "tb",
             "rotulo": "Sim"
           },
@@ -12639,25 +12676,42 @@
             "para": "tc"
           },
           {
-            "de": "g3",
-            "para": "tc",
-            "rotulo": "Não"
+            "de": "tc",
+            "para": "g3"
           },
           {
-            "de": "tc",
-            "para": "td"
+            "de": "g3",
+            "para": "td",
+            "rotulo": "Sim"
           },
           {
             "de": "td",
+            "para": "te"
+          },
+          {
+            "de": "g3",
+            "para": "te",
+            "rotulo": "Não"
+          },
+          {
+            "de": "te",
+            "para": "tf"
+          },
+          {
+            "de": "tf",
+            "para": "tg"
+          },
+          {
+            "de": "tg",
             "para": "g4"
           },
           {
             "de": "g4",
-            "para": "te",
+            "para": "th",
             "rotulo": "Sim"
           },
           {
-            "de": "te",
+            "de": "th",
             "para": "g5"
           },
           {
@@ -12667,11 +12721,11 @@
           },
           {
             "de": "g5",
-            "para": "tf",
+            "para": "ti",
             "rotulo": "Sim"
           },
           {
-            "de": "tf",
+            "de": "ti",
             "para": "f3"
           },
           {
@@ -12707,17 +12761,17 @@
             "rotulo": "Horário marcado"
           },
           {
-            "de": "tc",
+            "de": "tf",
             "para": "X2",
-            "rotulo": "Mapa da reunião"
+            "rotulo": "Diagnóstico e plano de ação"
           },
           {
-            "de": "td",
+            "de": "tg",
             "para": "X2",
             "rotulo": "Acesso ao Hub"
           },
           {
-            "de": "te",
+            "de": "th",
             "para": "X1",
             "rotulo": "Resultado autorizado"
           }
@@ -12729,7 +12783,7 @@
       "nome": "Manter a página do cliente e o kit de convite",
       "pai": "P-59",
       "ordem": 4,
-      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
+      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. A página mostra, no topo, na oferta e no quadro de comparação, que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo; e mostra os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Mudança na oferta, no vídeo, na agenda ou na regra do ICP",
@@ -12737,6 +12791,10 @@
         {
           "nome": "Perfil e frases atualizados",
           "de": "P-90"
+        },
+        {
+          "nome": "Cases atualizados",
+          "de": "P-100"
         }
       ],
       "saidas": [
@@ -12762,7 +12820,14 @@
         "EV-0329",
         "EV-0348",
         "EV-0339",
-        "EV-0373"
+        "EV-0373",
+        "EV-0401",
+        "EV-0400",
+        "EV-0402",
+        "EV-0403",
+        "EV-0404",
+        "EV-0405",
+        "EV-0390"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12980,7 +13045,7 @@
       "nome": "Rodar a campanha de aquisição de parceiros",
       "pai": "P-20",
       "ordem": 0,
-      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
+      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. A página dos parceiros mostra o que o parceiro passa a oferecer, com o valor de referência (R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub, sem custo para o cliente dele), e os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
       "dono": "PA-02",
       "participantes": [
         "PA-01"
@@ -12994,6 +13059,10 @@
         {
           "nome": "Perfil e critérios da fila",
           "de": "P-04"
+        },
+        {
+          "nome": "Cases atualizados",
+          "de": "P-100"
         }
       ],
       "saidas": [
@@ -13021,7 +13090,9 @@
       "status": "confirmado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0373"
+        "EV-0373",
+        "EV-0401",
+        "EV-0405"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -13304,6 +13375,131 @@
           {
             "de": "t4",
             "para": "f2"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-100",
+      "nome": "Manter os cases de resultado atualizados",
+      "pai": "P-59",
+      "ordem": 5,
+      "descricao": "A cada trimestre, o Gerente lê a página de cases da Wise Makers e atualiza os números, os nomes e o destaque de média nas duas páginas, no kit e no minicurso. Os cases comparam os meses de trabalho com os mesmos meses do ano anterior à entrada da Wise, sem valores em reais. Hoje: Florart's Decor (decoração e ambientes de alto padrão), +89,4% de jan/25 a out/26; Maringá Portas (indústria de portas), +43,8% de jan/26 a out/26; Chamego Bandeiras (indústria de bandeiras), +39,7% de jan/25 a ago/26; Fusion Alumínios (portas de vidro e soluções para móveis planejados), +25,7% de fev/25 a nov/25; Totonho Locações (locação de móveis e peças para festas e eventos), +25,4% de jan/26 a out/26; Protectpool (soluções para piscinas e rede de revendedores), +20,8% de jan/25 a out/26; Powerfit (equipamentos esportivos para o mercado fitness), +19,9% de jan/25 a out/25; Nicopel (indústria de embalagens personalizadas), +16,5% de jan/26 a out/26; média de +35%. Todos os 8 clientes autorizaram o uso do nome. No portal: guarda os cases num lugar só, usado pelas páginas e pelo kit.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Primeiro dia útil do trimestre",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Cases atualizados",
+          "para": "P-96"
+        },
+        {
+          "nome": "Cases atualizados",
+          "para": "P-89"
+        },
+        {
+          "nome": "Cases atualizados",
+          "para": "P-88"
+        },
+        {
+          "nome": "Cases atualizados",
+          "para": "P-98"
+        }
+      ],
+      "cliente": "Parceiros e clientes dos parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Trimestral",
+      "dores": [],
+      "regras": [],
+      "status": "confirmado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0406",
+        "EV-0403",
+        "EV-0404",
+        "EV-0390"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [
+        "F-011"
+      ],
+      "portal": "guarda os cases num lugar só, usado pelas páginas e pelo kit.",
+      "fluxo": {
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0406"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Primeiro dia útil do trimestre",
+            "raia": "PA-01",
+            "gatilho": "tempo"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Ler a página de cases da Wise Makers",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Conferir se entrou case novo e se os clientes autorizam o nome",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Atualizar os números, os nomes e a média no portal",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Conferir as duas páginas, o kit e o minicurso",
+            "raia": "PA-01"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Cases atualizados",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "f1"
           }
         ],
         "mensagens": []
@@ -16802,6 +16998,177 @@
       "data": "2026-11-18",
       "trecho": "Aprovo como está. ",
       "local": "FO-14/R14-papeis"
+    },
+    {
+      "id": "EV-0389",
+      "tipo": "entrevista",
+      "fonte": "Reunião com a PluggMe (Lennon), relatada pelo patrocinador no chat de 18/11",
+      "pessoa": "PE-01",
+      "data": "2026-11-18",
+      "trecho": "Nós vamos apresentar para ele e também agora para todos os próximos parceiros um programa de consultoria um pouco mais robusto. Nós vamos fazer uma reunião de diagnóstico para cada um dos respectivos clientes dos nossos parceiros. Em vez de 40 minutos, agora vamos fazer de cerca de 2 horas cada.",
+      "local": "chat de 18/11/2026"
+    },
+    {
+      "id": "EV-0390",
+      "tipo": "documento",
+      "fonte": "Página de cases da Wise Makers (nov/26)",
+      "pessoa": null,
+      "data": "2026-11-18",
+      "trecho": "As 8 empresas faturaram mais no período com a Wise. Cada case compara os meses de trabalho com os mesmos meses do ano anterior à nossa entrada, sem expor valores em reais.",
+      "local": "claude.ai/artifact/1R7mtSvDJqXoDgQ6vv2Rt9"
+    },
+    {
+      "id": "EV-0391",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, os diretores são administradores, com acesso total. ",
+      "local": "FO-15/PD-acesso_diretor"
+    },
+    {
+      "id": "EV-0392",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Entram com o perfil de consultor: veem os clientes e as oportunidades e registram os diagnósticos e as checagens que fazem, sem editar páginas nem regras. ",
+      "local": "FO-15/PD-acesso_consultor"
+    },
+    {
+      "id": "EV-0393",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "O Gerente continua dono de tudo; consultores e diretores executam e registram a parte deles. Diretores também têm a possibilidade de editar",
+      "local": "FO-15/PD-dono"
+    },
+    {
+      "id": "EV-0394",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Uma reunião só, de cerca de 2 horas: diagnóstico e plano de ação na mesma conversa. Vamos fazer uma adaptação em mescla do roteiro de diagnóstico anexado com o modelo a matriz 5x5 da pesquisa",
+      "local": "FO-15/PD-diag_formato"
+    },
+    {
+      "id": "EV-0395",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Diagnóstico e plano de ação num documento da Wise, enviado em até 2 dias úteis. ",
+      "local": "FO-15/PD-diag_entrega"
+    },
+    {
+      "id": "EV-0396",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "O Gerente conduz até 5 por semana (10 horas); o que passar vai para um consultor. ",
+      "local": "FO-15/PD-diag_quem"
+    },
+    {
+      "id": "EV-0397",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Mantém o corte: mais de 3 vendedores; abaixo disso, autodiagnóstico. Vamos fazer a empresa com 3 vendedores ou mais e faturamento de, pelo menos R$250.000,00 mensais e produtos de venda mais complexa.",
+      "local": "FO-15/PD-diag_icp"
+    },
+    {
+      "id": "EV-0398",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, a Matriz 5x5 é a base, e a reunião aprofunda cada pilar. Como disse numa resposta anterior, vamos mesclar a matriz 5x5 e o roteiro de diagnóstico que passei. A base é a matriz 5x5 porque as perguntas dela são necessárias. Temos que adaptar o roteiro para que possamos analisar também os pontos explorados no roteiro de diagnóstico. Leve em consideração que o roteiro de diagnóstico em anexo é apenas um exemplo de um cliente específico, a base é aquela, mas tem que ser adaptada de caso a caso",
+      "local": "FO-15/PD-diag_matriz"
+    },
+    {
+      "id": "EV-0399",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, de todos os parceiros, desde o Select. ",
+      "local": "FO-15/PD-todos_parceiros"
+    },
+    {
+      "id": "EV-0400",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Outro ajuste (comente). A reunião de 2 horas é o diagóstico. Antes estava R$1.400,00 e agora será R$2.000,00.\nO valor do Wise Hub vamos colocar de R$3.000,00 totalizando R$5.000,00",
+      "local": "FO-15/PD-valor_conflito"
+    },
+    {
+      "id": "EV-0401",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Página do cliente do parceiro, no topo e na oferta; Página do cliente, no quadro de comparação (sozinho, contratando à parte, incluído pelo parceiro); Página dos parceiros, no que o parceiro passa a oferecer; Mensagem pronta que o parceiro manda aos clientes. ",
+      "local": "FO-15/PD-valor_onde"
+    },
+    {
+      "id": "EV-0402",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, com ajustes (comente). Ajuste baseado na resposta da pergunta 10",
+      "local": "FO-15/PD-valor_texto"
+    },
+    {
+      "id": "EV-0403",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Com nome e segmento, os 8: todos autorizaram. ",
+      "local": "FO-15/PD-cases_nomes"
+    },
+    {
+      "id": "EV-0404",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "A média: '+35% em média'. ",
+      "local": "FO-15/PD-cases_numero"
+    },
+    {
+      "id": "EV-0405",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Página do cliente do parceiro; Página dos parceiros; Minicurso do parceiro; Kit do parceiro no portal, para ele usar com os clientes; Conversa de entrada com o candidato a parceiro. ",
+      "local": "FO-15/PD-cases_onde"
+    },
+    {
+      "id": "EV-0406",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "O Gerente atualiza nas páginas e no kit a cada trimestre, a partir da página de cases. ",
+      "local": "FO-15/PD-cases_atualizar"
+    },
+    {
+      "id": "EV-0407",
+      "tipo": "validacao",
+      "fonte": "FO-15: processos depois da reunião com a PluggMe",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, é isso. ",
+      "local": "FO-15/PD-link_confirma"
     }
   ],
   "perguntas": [
@@ -24862,6 +25229,655 @@
       "citacoes": [],
       "visual": "",
       "recomendo": "Sim"
+    },
+    {
+      "id": "Q-0218",
+      "texto": "Os diretores da Wise passam a administrar o portal?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, os diretores são administradores, com acesso total",
+        "Os diretores veem tudo e editam só as landing pages e os conteúdos",
+        "Continua só leitura, como hoje"
+      ],
+      "alvo": [
+        "P-93"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Quem usa o portal (12.3 e 2)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0391"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-acesso_diretor",
+      "contexto": [
+        "Hoje o mapa diz que o Igor acessa o portal só para ver o painel da semana e os casos, sem mudar nada (decisão do FO-06). Você agora descreveu os diretores como administradores, inclusive para editar as landing pages.",
+        "Administrador vê e muda tudo: configurações das duas páginas, fila de candidatos, aprovação de parceiros, comissões, regras e acessos."
+      ],
+      "logica": "Minha recomendação: a primeira, se os diretores vão de fato operar. Se a ideia é só acompanhar e ajustar textos, a segunda reduz o risco de alguém mudar uma regra sem querer.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0219",
+      "texto": "O que os consultores da Wise fazem no portal?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Entram com o perfil de consultor: veem os clientes e as oportunidades e registram os diagnósticos e as checagens que fazem, sem editar páginas nem regras",
+        "Entram como administradores, com acesso total",
+        "Continuam fora do portal; o Gerente registra por eles"
+      ],
+      "alvo": [
+        "P-93"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Quem usa o portal (12.3 e 2)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0392"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-acesso_consultor",
+      "contexto": [
+        "Hoje o mapa diz que consultores e comercial não entram no portal: o Gerente registra o que eles fazem (decisão do FO-01). O portal já tem um perfil 'consultor' pronto, que vê os parceiros e as oportunidades, mas não mexe em configurações.",
+        "Com o diagnóstico de 2 horas, outros consultores provavelmente vão conduzir reuniões. Se eles entram no portal, registram o próprio diagnóstico, o plano de ação e a checagem de 6 e 12 meses, em vez de passar tudo ao Gerente."
+      ],
+      "logica": "Minha recomendação: a primeira. Cada um registra o que faz, o Gerente deixa de ser digitador, e só quem responde pelo programa mexe em regras e páginas.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0220",
+      "texto": "Com mais gente no portal, quem continua dono dos processos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O Gerente continua dono de tudo; consultores e diretores executam e registram a parte deles",
+        "Cada consultor é dono dos diagnósticos que conduz",
+        "O Diretor passa a ser dono dos processos de gestão (rituais e medidas); o Gerente, do resto"
+      ],
+      "alvo": [
+        "P-93"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Quem usa o portal (12.3 e 2)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0393"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-dono",
+      "contexto": [
+        "O mapa tem o Gerente de Parcerias como dono de todas as tarefas, mesmo as que outros executam. Dono é quem responde pelo resultado do processo, não quem digita."
+      ],
+      "logica": "Minha recomendação: a primeira. Um dono só por processo continua sendo o que permite uma pessoa garantir o programa inteiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0221",
+      "texto": "Como é a nova reunião de diagnóstico de cerca de 2 horas?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Uma reunião só, de cerca de 2 horas: diagnóstico e plano de ação na mesma conversa",
+        "Duas reuniões de cerca de 1 hora: diagnóstico na primeira, plano de ação na segunda",
+        "Outro formato (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Diagnóstico do cliente do parceiro (6.1)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0394"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-diag_formato",
+      "contexto": [
+        "Você contou que, depois da reunião com o Lennon (PluggMe), o programa ficou mais robusto: em vez de cerca de 40 minutos, cada cliente do parceiro recebe uma reunião de cerca de 2 horas, com diagnóstico e plano de ação.",
+        "Hoje o processo 6.1 tem uma reunião pela Matriz 5x5 e o mapa da reunião enviado em até 2 dias úteis."
+      ],
+      "logica": "Minha recomendação: depende de como vocês combinaram com o Lennon. Duas reuniões dão tempo de preparar o plano entre elas e criam um segundo contato com o cliente; uma só é mais simples de agendar.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0222",
+      "texto": "O que o cliente leva da reunião, e quando?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Diagnóstico e plano de ação num documento da Wise, enviado em até 2 dias úteis",
+        "O plano de ação é montado e entregue na própria reunião",
+        "Diagnóstico e plano de ação em até 5 dias úteis",
+        "Outro (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Diagnóstico do cliente do parceiro (6.1)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0395"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-diag_entrega",
+      "contexto": [
+        "Hoje: mapa próprio da reunião, num modelo da Wise, enviado em até 2 dias úteis (FO-11), e acesso ao Wise Hub.",
+        "Agora você falou em diagnóstico com plano de ação."
+      ],
+      "logica": "Minha recomendação: a primeira. Mantém o prazo que você já tinha definido e garante um documento com a marca da Wise e do parceiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0223",
+      "texto": "Quem conduz as reuniões de 2 horas, e qual é o limite?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O Gerente conduz até 5 por semana (10 horas); o que passar vai para um consultor",
+        "O Gerente mantém até 10 por semana (20 horas); o que passar vai para um consultor",
+        "Os consultores da Wise conduzem todas; o Gerente só acompanha",
+        "Outro limite (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Diagnóstico do cliente do parceiro (6.1)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0396"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-diag_quem",
+      "contexto": [
+        "Hoje: o Gerente conduz até 10 reuniões por semana e o que passar disso vai para um consultor da Wise. Com reuniões de 2 horas, 10 por semana viram 20 horas, metade da semana."
+      ],
+      "logica": "Minha recomendação: a primeira. Com a fila de candidatos, as conversas de entrada de 45 minutos e o resto do programa, 20 horas de diagnóstico por semana não cabem na agenda de uma pessoa.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0224",
+      "texto": "Quem recebe a reunião de 2 horas?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Mantém o corte: mais de 3 vendedores; abaixo disso, autodiagnóstico",
+        "Sobe o corte (comente para quantos vendedores ou qual faturamento)",
+        "Todo cliente do parceiro recebe a reunião, sem corte"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Diagnóstico do cliente do parceiro (6.1)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0397"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-diag_icp",
+      "contexto": [
+        "Hoje: empresa com mais de 3 vendedores (com faturamento mínimo opcional) recebe a reunião; as demais fazem o autodiagnóstico na hora e recebem o link do Wise Hub e um e-mail com o resultado.",
+        "Cada reunião passou a custar cerca de 2 horas da Wise. O corte define quantas reuniões a campanha vai gerar."
+      ],
+      "logica": "Minha recomendação: manter por enquanto e rever com os números do primeiro mês. O corte já está configurável em Configurações, sem mexer no portal.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0225",
+      "texto": "A reunião de 2 horas continua usando a Matriz 5x5?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, a Matriz 5x5 é a base, e a reunião aprofunda cada pilar",
+        "A reunião usa outro roteiro (comente qual)",
+        "A Matriz fica só no autodiagnóstico"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Diagnóstico do cliente do parceiro (6.1)",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0398"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-diag_matriz",
+      "contexto": [
+        "A Matriz 5x5 (cinco pilares, cinco afirmações em cada, nota de 1 a 5) é a base do autodiagnóstico na página e da reunião hoje. O portal calcula o resultado sozinho."
+      ],
+      "logica": "Minha recomendação: a primeira. Mantém um resultado comparável entre todos os clientes e permite o raio-x agregado da base do parceiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0226",
+      "texto": "Onde aparece o valor de referência de R$ 1.500 a R$ 2.000?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Página do cliente do parceiro, no topo e na oferta",
+        "Página do cliente, no quadro de comparação (sozinho, contratando à parte, incluído pelo parceiro)",
+        "Página dos parceiros, no que o parceiro passa a oferecer",
+        "Mensagem pronta que o parceiro manda aos clientes",
+        "Conversa de entrada com o candidato a parceiro",
+        "E-mail de confirmação da reunião"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Valor de referência na comunicação",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0401"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-valor_onde",
+      "contexto": [
+        "Você pediu para deixar claro, onde for oportuno e especialmente na landing page, que um diagnóstico com plano de ação como esse custaria de R$ 1.500 a R$ 2.000 direto com a Wise, e que para o cliente do parceiro é sem custo.",
+        "Marque todos os lugares onde o valor deve aparecer."
+      ],
+      "logica": "Minha recomendação: as duas da página do cliente, a página dos parceiros e a mensagem pronta. O valor é o que faz o cliente levar a reunião a sério e o que faz o parceiro perceber o tamanho do benefício.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0227",
+      "texto": "Como fica o valor do diagnóstico que já aparece no quadro do Wise Hub?",
+      "tipo": "escolha",
+      "opcoes": [
+        "A reunião de 2 horas com plano de ação (R$ 1.500 a R$ 2.000) substitui os dois itens no quadro; o resto do Hub continua",
+        "Os dois itens continuam, e a reunião de 2 horas aparece separada, como a entrega principal",
+        "Outro ajuste (comente)"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Valor de referência na comunicação",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0400"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-valor_conflito",
+      "contexto": [
+        "As duas páginas já mostram o quadro de valor do Wise Hub, com os preços da página do Hub. Dois itens se sobrepõem ao valor novo: 'Diagnóstico de maturidade comercial', R$ 1.400, e 'Reunião individual com a equipe da Wise', R$ 5.000.",
+        "Se o cliente lê R$ 1.400 num lugar e R$ 1.500 a R$ 2.000 em outro para o que parece a mesma coisa, o número perde credibilidade."
+      ],
+      "logica": "Minha recomendação: a primeira. Um valor só para o diagnóstico, e o quadro do Hub continua mostrando o resto (imersão, plano de 90 dias, ferramentas).",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0228",
+      "texto": "Esta frase pode ir para a página do cliente?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como está",
+        "Sim, com ajustes (comente)"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Valor de referência na comunicação",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0402"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-valor_texto",
+      "contexto": [
+        "Proposta de texto, no tom da página: \"Um diagnóstico comercial com plano de ação, como este, custa de R$ 1.500 a R$ 2.000 contratado direto com a Wise Makers. Pra quem é cliente da [Parceiro], sai sem custo.\""
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0229",
+      "texto": "Os cases aparecem com o nome das empresas?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Com nome e segmento, os 8: todos autorizaram",
+        "Com nome só os que já têm depoimento público; os outros só com o segmento",
+        "Só com o segmento, sem nenhum nome",
+        "Não sei: confirmar com cada cliente antes"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Cases de resultado",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0403"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-cases_nomes",
+      "contexto": [
+        "A página de cases que você mandou tem a opção 'Ocultar nomes' e não mostra valores em reais, só o crescimento percentual. Isso sugere que alguns clientes podem não ter autorizado o nome em público.",
+        "Hoje as páginas mostram três depoimentos em vídeo com nome (Grupo Protectpool, Fusion Alumínios e Cristal Móveis), que já são públicos."
+      ],
+      "logica": "Minha recomendação: a segunda, até cada cliente confirmar por escrito. Nome em página de anúncio pago é uso de marca do cliente.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0230",
+      "texto": "Qual número de resultado vai em destaque?",
+      "tipo": "escolha",
+      "opcoes": [
+        "'As 8 empresas cresceram; metade cresceu mais de 25%', com a lista dos 8 e o período de cada um",
+        "A média: '+35% em média'",
+        "O maior resultado: 'até +89%'",
+        "Outro (comente)"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Cases de resultado",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0404"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-cases_numero",
+      "contexto": [
+        "Os 8 cases da página, comparando os meses com a Wise com os mesmos meses do ano anterior: Florart's Decor +89,4%, Maringá Portas +43,8%, Chamego Bandeiras +39,7%, Fusion Alumínios +25,7%, Totonho Locações +25,4%, Protectpool +20,8%, Powerfit +19,9% e Nicopel +16,5%.",
+        "Resumo: 8 de 8 cresceram; mediana de +25,5%; média de +35,1% (puxada pelo +89,4%); 91 de 113 meses acima do ano anterior; 5 bateram recorde de faturamento.",
+        "As páginas hoje mostram outros números para os mesmos clientes: Protectpool '+54,83% em julho, mês recorde' e Fusion '+30% em 8 meses'. São recortes diferentes (um mês, outro período), e quem compara pode estranhar."
+      ],
+      "logica": "Minha recomendação: a primeira, e trocar os números dos depoimentos atuais pelos do período da página de cases. A mediana é o número que um cliente comum pode esperar; a média e o máximo prometem mais do que a maioria entrega.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0231",
+      "texto": "Onde os cases entram?",
+      "tipo": "multipla",
+      "opcoes": [
+        "Página do cliente do parceiro",
+        "Página dos parceiros",
+        "Minicurso do parceiro",
+        "Kit do parceiro no portal, para ele usar com os clientes",
+        "Conversa de entrada com o candidato a parceiro",
+        "Mapa ou plano de ação entregue depois do diagnóstico"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Cases de resultado",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0405"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-cases_onde",
+      "contexto": [
+        "Você disse que o percentual de crescimento é o parâmetro mais importante, tanto para o parceiro quanto para o cliente dele."
+      ],
+      "logica": "Minha recomendação: as duas páginas, o kit e a conversa de entrada. O caso certo no momento certo faz o parceiro indicar e o cliente marcar a reunião.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0232",
+      "texto": "Quem atualiza os cases, e de quanto em quanto tempo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O Gerente atualiza nas páginas e no kit a cada trimestre, a partir da página de cases",
+        "Quem mantém a página de cases avisa o Gerente quando muda",
+        "Os números vêm da página de cases automaticamente, sem ninguém copiar"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "Cases de resultado",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0406"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-cases_atualizar",
+      "contexto": [
+        "Hoje nenhum processo cuida dos cases: eles estão escritos direto no código das páginas. A página de cases que você mandou é atualizada mês a mês com as planilhas dos clientes."
+      ],
+      "logica": "Minha recomendação: a primeira agora, como passo novo no processo 11.2 (kit e simulador), e a terceira quando der para ligar as duas páginas.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0233",
+      "texto": "O diagnóstico de 2 horas vale para os clientes de todos os parceiros?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, de todos os parceiros, desde o Select",
+        "Só de Premium e Elite; o Select oferece o autodiagnóstico e o Wise Hub",
+        "Só dos parceiros escolhidos pelo Igor, como a PluggMe"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "O parceiro e o link",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0399"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-todos_parceiros",
+      "contexto": [
+        "Você disse que o programa mais robusto vai ser apresentado à PluggMe e a todos os próximos parceiros. Pela escada aprovada, a consultoria gratuita aos clientes da carteira é benefício de todo parceiro, desde o Select."
+      ],
+      "logica": "Minha recomendação: a primeira, que é o que a página dos parceiros já promete. O limite fica no corte do ICP e na agenda, não no nível do parceiro.",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0234",
+      "texto": "O caminho do parceiro até o cliente é este?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, é isso",
+        "É isso, com ajustes (comente)"
+      ],
+      "alvo": [
+        "P-96"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 9,
+      "bloco": "O parceiro e o link",
+      "status": "respondida",
+      "formulario": "FO-08",
+      "respostas": [
+        "EV-0407"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "PD-link_confirma",
+      "contexto": [
+        "Como está hoje: o parceiro entra no portal com o login dele; na tela Indicar, copia o link exclusivo (partners.wisemakers.com.br/c/código) e a mensagem pronta; o cliente abre a página com as duas marcas, que explica a consultoria gratuita, se cadastra e marca a reunião ou faz o autodiagnóstico; o parceiro acompanha no portal quem entrou.",
+        "O link registra a origem por 180 dias e é o que garante a comissão."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0235",
+      "texto": "Você pode enviar o roteiro de diagnóstico que serve de exemplo?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "Diagnóstico",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-fo15",
+      "contexto": [
+        "No FO-15 você citou o roteiro de diagnóstico 'em anexo', para mesclar à Matriz 5x5. O formulário não aceita anexos e o arquivo não chegou."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0236",
+      "texto": "Como a página confere a 'venda mais complexa' do ICP?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "Diagnóstico",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-fo15",
+      "contexto": [
+        "O cadastro hoje pergunta vendedores e faturamento. 'Venda mais complexa' não tem campo: precisa de uma pergunta no cadastro ou de uma conferência do Gerente antes de confirmar a reunião."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
     }
   ],
   "formularios": [
@@ -25227,6 +26243,44 @@
       "enviado_em": "2026-11-10",
       "prazo": "",
       "identificacao": false
+    },
+    {
+      "id": "FO-08",
+      "titulo": "FO-15: processos depois da reunião com a PluggMe",
+      "rodada": 9,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0218",
+        "Q-0219",
+        "Q-0220",
+        "Q-0221",
+        "Q-0222",
+        "Q-0223",
+        "Q-0224",
+        "Q-0225",
+        "Q-0226",
+        "Q-0227",
+        "Q-0228",
+        "Q-0229",
+        "Q-0230",
+        "Q-0231",
+        "Q-0232",
+        "Q-0233",
+        "Q-0234"
+      ],
+      "introducao": "Acessos ao portal, diagnóstico de 2 horas, valor de referência e cases.",
+      "link": "https://claude.ai/artifact/6JWvXsaRkFpTEfSpjjxDVX",
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
+      "enviado_em": "2026-11-18",
+      "prazo": "",
+      "identificacao": false
     }
   ],
   "contradicoes": [
@@ -25494,7 +26548,7 @@
     {
       "id": "DE-06",
       "data": "2026-11-06",
-      "texto": "Todas as tarefas do portal têm o Gerente de Parcerias como dono, mesmo quando outra pessoa executa; consultores e comercial não entram no portal.",
+      "texto": "Todas as tarefas do portal têm o Gerente de Parcerias como dono, mesmo quando outra pessoa executa; consultores e comercial não entram no portal. Revista em 19/11 (FO-15): o Gerente continua dono de tudo; diretores e consultores entram no portal e registram a parte deles.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -25710,7 +26764,7 @@
     {
       "id": "DE-27",
       "data": "2026-11-06",
-      "texto": "O Igor acessa o portal só para ver o painel da semana e os casos.",
+      "texto": "O Igor acessa o portal só para ver o painel da semana e os casos. Revista em 19/11 (FO-15): os diretores passam a administrar o portal, com acesso total.",
       "por": "PE-01",
       "provisoria": false,
       "evidencias": [
@@ -26035,6 +27089,106 @@
       "evidencias": [
         "EV-0373"
       ]
+    },
+    {
+      "id": "DE-58",
+      "data": "2026-11-19",
+      "texto": "Os diretores administram o portal, com acesso total, inclusive para editar as landing pages.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0391",
+        "EV-0393"
+      ]
+    },
+    {
+      "id": "DE-59",
+      "data": "2026-11-19",
+      "texto": "Os consultores entram com o perfil de consultor: veem clientes e oportunidades e registram os diagnósticos e as checagens que fazem, sem editar páginas nem regras.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0392"
+      ]
+    },
+    {
+      "id": "DE-60",
+      "data": "2026-11-19",
+      "texto": "O Gerente continua dono de todos os processos; diretores e consultores executam e registram a parte deles.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0393"
+      ]
+    },
+    {
+      "id": "DE-61",
+      "data": "2026-11-19",
+      "texto": "O diagnóstico do cliente do parceiro passa a ser uma reunião de cerca de 2 horas, com diagnóstico e plano de ação na mesma conversa, para os clientes de todos os parceiros; o documento sai em até 2 dias úteis.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0389",
+        "EV-0394",
+        "EV-0395",
+        "EV-0399"
+      ]
+    },
+    {
+      "id": "DE-62",
+      "data": "2026-11-19",
+      "texto": "A base da reunião é a Matriz 5x5, mesclada ao roteiro de diagnóstico da Wise e adaptada a cada cliente.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0398",
+        "EV-0394"
+      ]
+    },
+    {
+      "id": "DE-63",
+      "data": "2026-11-19",
+      "texto": "O Gerente conduz até 5 reuniões de diagnóstico por semana; o que passar vai para um consultor da Wise.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0396"
+      ]
+    },
+    {
+      "id": "DE-64",
+      "data": "2026-11-19",
+      "texto": "ICP para a reunião: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa. Abaixo disso, autodiagnóstico.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0397"
+      ]
+    },
+    {
+      "id": "DE-65",
+      "data": "2026-11-19",
+      "texto": "Valor de referência: diagnóstico R$ 2.000 (antes R$ 1.400) e Wise Hub R$ 3.000, total de R$ 5.000, sem custo para o cliente do parceiro. Aparece na página do cliente (topo, oferta e comparação), na página dos parceiros e na mensagem pronta.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0400",
+        "EV-0401",
+        "EV-0402"
+      ]
+    },
+    {
+      "id": "DE-66",
+      "data": "2026-11-19",
+      "texto": "Cases: os 8 com nome e segmento, destaque '+35% em média', nas duas páginas, no minicurso, no kit e na conversa de entrada; o Gerente atualiza a cada trimestre.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0403",
+        "EV-0404",
+        "EV-0405",
+        "EV-0406"
+      ]
     }
   ],
   "glossario": [
@@ -26233,7 +27387,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-18",
+      "data": "2026-11-19",
       "evento": "Mapeamento iniciado"
     },
     {
@@ -26263,6 +27417,10 @@
     {
       "data": "2026-11-18",
       "evento": "To-be v10: revisão crítica aprovada. 16 itens respondidos no FO-14 (com o ajuste 'regra de comissão' no lugar de 'regra única'); os demais aprovados pela recomendação, a pedido do patrocinador. 20 decisões aplicadas; fica aberta só a forma de entregar o Wise Hub com as duas marcas."
+    },
+    {
+      "data": "2026-11-19",
+      "evento": "To-be v11: FO-15 aplicado. Diretores administram o portal e consultores registram a parte deles; diagnóstico de cerca de 2 horas com plano de ação, pela Matriz 5x5 mesclada ao roteiro, até 5 por semana com o Gerente; ICP com 3 vendedores, R$ 250 mil por mês e venda complexa; valor de referência R$ 2.000 mais R$ 3.000 do Hub; cases com nome e média de +35%, atualizados a cada trimestre (processo novo)."
     }
   ]
 }

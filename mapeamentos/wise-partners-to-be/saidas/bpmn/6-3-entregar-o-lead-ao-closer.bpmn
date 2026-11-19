@@ -19,7 +19,7 @@
     </bpmn:laneSet>
     <bpmn:startEvent id="P-33_i1" name="Oportunidade qualificada"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-33_F1</bpmn:outgoing></bpmn:startEvent>
     <bpmn:task id="P-33_t1" name="Escolher o closer que vai atender"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F1</bpmn:incoming><bpmn:outgoing>P-33_F2</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-33_t2" name="Levar ao closer o contexto: parceiro, diagnóstico e mapa da reunião"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F2</bpmn:incoming><bpmn:outgoing>P-33_F3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="P-33_t2" name="Levar ao closer o contexto: parceiro, diagnóstico e plano de ação"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F2</bpmn:incoming><bpmn:outgoing>P-33_F3</bpmn:outgoing></bpmn:task>
     <bpmn:task id="P-33_t3" name="Combinar o primeiro contato com o cliente"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F3</bpmn:incoming><bpmn:outgoing>P-33_F4</bpmn:outgoing></bpmn:task>
     <bpmn:userTask id="P-33_t4" name="Registrar para quem foi o lead e quando"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F4</bpmn:incoming><bpmn:outgoing>P-33_F5</bpmn:outgoing></bpmn:userTask>
     <bpmn:endEvent id="P-33_f1" name="Lead com o closer"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-33_F5</bpmn:incoming></bpmn:endEvent>

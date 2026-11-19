@@ -4,52 +4,42 @@
     <bpmn:participant id="Participant_P-39" name="6.8 Checar o cliente aos 6 e 12 meses" processRef="Process_P-39" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-39" name="6.8 Checar o cliente aos 6 e 12 meses" isExecutable="false">
-    <bpmn:documentation>Tarefa do Gerente, executada pelo consultor que atende o cliente. No portal: cria a tarefa e registra o retorno. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Seis e doze meses depois do fechamento, o consultor que atende o cliente registra no portal se o cliente continua e o resultado obtido; o Gerente acompanha e conta ao parceiro que indicou. No portal: cria a tarefa para o consultor, recebe o registro e lembra o Gerente de avisar o parceiro. [status do fluxo: Confirmado; evidências: EV-0392]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-39">
       <bpmn:lane id="Lane_P-39_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-39_i1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-39_t1</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>P-39_t2</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>P-39_t4</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>P-39_t5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-39_t3</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>P-39_f1</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_P-39_PA-07" name="Consultor da Wise Makers">
-        <bpmn:flowNodeRef>P-39_t3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>P-39_t2</bpmn:flowNodeRef>
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:startEvent id="P-39_i1" name="6 ou 12 meses do fechamento"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:outgoing>P-39_F1</bpmn:outgoing><bpmn:timerEventDefinition id="P-39_i1_def" /></bpmn:startEvent>
-    <bpmn:serviceTask id="P-39_t1" name="Criar a tarefa de checagem"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F1</bpmn:incoming><bpmn:outgoing>P-39_F2</bpmn:outgoing></bpmn:serviceTask>
-    <bpmn:task id="P-39_t2" name="Perguntar ao consultor como está o cliente"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F2</bpmn:incoming><bpmn:outgoing>P-39_F3</bpmn:outgoing></bpmn:task>
-    <bpmn:task id="P-39_t3" name="Informar se o cliente continua e o resultado obtido"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F3</bpmn:incoming><bpmn:outgoing>P-39_F4</bpmn:outgoing></bpmn:task>
-    <bpmn:userTask id="P-39_t4" name="Registrar a checagem"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F4</bpmn:incoming><bpmn:outgoing>P-39_F5</bpmn:outgoing></bpmn:userTask>
-    <bpmn:task id="P-39_t5" name="Contar ao parceiro como está o cliente que ele indicou"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F5</bpmn:incoming><bpmn:outgoing>P-39_F6</bpmn:outgoing></bpmn:task>
-    <bpmn:endEvent id="P-39_f1" name="Checagem registrada e parceiro informado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:serviceTask id="P-39_t1" name="Criar a tarefa de checagem para o consultor"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F1</bpmn:incoming><bpmn:outgoing>P-39_F2</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:userTask id="P-39_t2" name="Registrar no portal se o cliente continua e o resultado obtido"><bpmn:documentation>sistema: Portal Wise Partners; status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F2</bpmn:incoming><bpmn:outgoing>P-39_F3</bpmn:outgoing></bpmn:userTask>
+    <bpmn:task id="P-39_t3" name="Contar ao parceiro como está o cliente que ele indicou"><bpmn:documentation>sistema: Comunidade Wise Partners no WhatsApp (um grupo por parceiro); status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F3</bpmn:incoming><bpmn:outgoing>P-39_F4</bpmn:outgoing></bpmn:task>
+    <bpmn:endEvent id="P-39_f1" name="Checagem registrada e parceiro informado"><bpmn:documentation>status: Confirmado</bpmn:documentation><bpmn:incoming>P-39_F4</bpmn:incoming></bpmn:endEvent>
     <bpmn:sequenceFlow id="P-39_F1" name="" sourceRef="P-39_i1" targetRef="P-39_t1" />
     <bpmn:sequenceFlow id="P-39_F2" name="" sourceRef="P-39_t1" targetRef="P-39_t2" />
     <bpmn:sequenceFlow id="P-39_F3" name="" sourceRef="P-39_t2" targetRef="P-39_t3" />
-    <bpmn:sequenceFlow id="P-39_F4" name="" sourceRef="P-39_t3" targetRef="P-39_t4" />
-    <bpmn:sequenceFlow id="P-39_F5" name="" sourceRef="P-39_t4" targetRef="P-39_t5" />
-    <bpmn:sequenceFlow id="P-39_F6" name="" sourceRef="P-39_t5" targetRef="P-39_f1" />
+    <bpmn:sequenceFlow id="P-39_F4" name="" sourceRef="P-39_t3" targetRef="P-39_f1" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_P-39">
     <bpmndi:BPMNPlane id="BPMNPlane_P-39" bpmnElement="Collaboration_P-39">
-      <bpmndi:BPMNShape id="Participant_P-39_di" bpmnElement="Participant_P-39" isHorizontal="true"><dc:Bounds x="0" y="0" width="1352" height="296" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_P-39_PA-01_di" bpmnElement="Lane_P-39_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="1322" height="148" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_P-39_PA-07_di" bpmnElement="Lane_P-39_PA-07" isHorizontal="true"><dc:Bounds x="30" y="148" width="1322" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_P-39_di" bpmnElement="Participant_P-39" isHorizontal="true"><dc:Bounds x="0" y="0" width="1000" height="296" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-39_PA-01_di" bpmnElement="Lane_P-39_PA-01" isHorizontal="true"><dc:Bounds x="30" y="0" width="970" height="148" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_P-39_PA-07_di" bpmnElement="Lane_P-39_PA-07" isHorizontal="true"><dc:Bounds x="30" y="148" width="970" height="148" /></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-39_i1_di" bpmnElement="P-39_i1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="160" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="123" y="98" width="110" height="28" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="P-39_t1_di" bpmnElement="P-39_t1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="290" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-39_t2_di" bpmnElement="P-39_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-39_t3_di" bpmnElement="P-39_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="186" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-39_t4_di" bpmnElement="P-39_t4" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="818" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-39_t5_di" bpmnElement="P-39_t5" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="994" y="38" width="128" height="72" /></bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="P-39_f1_di" bpmnElement="P-39_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="1216" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="1179" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-39_t2_di" bpmnElement="P-39_t2" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="466" y="186" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-39_t3_di" bpmnElement="P-39_t3" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="642" y="38" width="128" height="72" /></bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="P-39_f1_di" bpmnElement="P-39_f1" color:background-color="#D9F2E1" color:border-color="#2F8F4E"><dc:Bounds x="864" y="56" width="36" height="36" /><bpmndi:BPMNLabel><dc:Bounds x="827" y="98" width="110" height="42" /></bpmndi:BPMNLabel></bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="P-39_F1_di" bpmnElement="P-39_F1"><di:waypoint x="196" y="74" /><di:waypoint x="290" y="74" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-39_F2_di" bpmnElement="P-39_F2"><di:waypoint x="418" y="74" /><di:waypoint x="466" y="74" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-39_F3_di" bpmnElement="P-39_F3"><di:waypoint x="594" y="74" /><di:waypoint x="618" y="74" /><di:waypoint x="618" y="222" /><di:waypoint x="642" y="222" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-39_F4_di" bpmnElement="P-39_F4"><di:waypoint x="770" y="222" /><di:waypoint x="794" y="222" /><di:waypoint x="794" y="74" /><di:waypoint x="818" y="74" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-39_F5_di" bpmnElement="P-39_F5"><di:waypoint x="946" y="74" /><di:waypoint x="994" y="74" /></bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="P-39_F6_di" bpmnElement="P-39_F6"><di:waypoint x="1122" y="74" /><di:waypoint x="1216" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-39_F2_di" bpmnElement="P-39_F2"><di:waypoint x="418" y="74" /><di:waypoint x="442" y="74" /><di:waypoint x="442" y="222" /><di:waypoint x="466" y="222" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-39_F3_di" bpmnElement="P-39_F3"><di:waypoint x="594" y="222" /><di:waypoint x="618" y="222" /><di:waypoint x="618" y="74" /><di:waypoint x="642" y="74" /></bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="P-39_F4_di" bpmnElement="P-39_F4"><di:waypoint x="770" y="74" /><di:waypoint x="864" y="74" /></bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-93" name="12.3 Conceder e revogar acessos ao portal" processRef="Process_P-93" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-93" name="12.3 Conceder e revogar acessos ao portal" isExecutable="false">
-    <bpmn:documentation>Usuários e permissões do portal: criar o acesso com o perfil certo, ajustar quando a função muda e revogar na saída. No portal: controla os acessos e registra quem acessou o quê. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Usuários e permissões do portal: criar o acesso com o perfil certo, ajustar quando a função muda e revogar na saída. Perfis: administrador (diretores e Gerente, acesso total, inclusive editar as landing pages); consultor (vê clientes e oportunidades e registra diagnósticos e checagens, sem editar páginas nem regras); parceiro (a área dele: link, clientes, minicurso e kit). No portal: controla os acessos e registra quem acessou o quê. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-93">
       <bpmn:lane id="Lane_P-93_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-93_i1</bpmn:flowNodeRef>
