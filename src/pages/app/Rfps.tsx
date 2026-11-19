@@ -63,8 +63,8 @@ export default function Rfps() {
   return (
     <div>
       <Cabecalho
-        titulo="Pedidos de RFP"
-        descricao="Pedidos de clientes por fornecedores fora do escopo da Wise, com recomendação de parceiros assinados e página exclusiva."
+        titulo="Prateleira"
+        descricao="Quais clientes da Wise pediram um fornecedor fora do nosso escopo e quais parceiros Premium e Elite recomendamos a cada um?"
         acoes={podeCriar && <Button asChild><Link to="/app/rfp/novo"><Plus /> Novo pedido</Link></Button>}
       />
       <Tabs defaultValue="pedidos">

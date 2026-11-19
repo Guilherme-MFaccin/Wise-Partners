@@ -9,7 +9,7 @@ export default function Rfps() {
   const { data: lista = [], isLoading, error } = useMeusRfps();
   return (
     <div>
-      <Cabecalho titulo="Pedidos de RFP" descricao="Clientes da Wise para os quais a sua empresa foi apresentada como opção." />
+      <Cabecalho titulo="Prateleira" descricao="Clientes da Wise para os quais a sua empresa foi apresentada como opção." />
       {isLoading ? <Carregando /> : error ? <ErroCarga erro={error} /> : lista.length === 0 ? (
         <Vazio titulo="Nenhum pedido ainda">Quando a Wise apresentar a sua empresa a um cliente, o pedido aparece aqui.</Vazio>
       ) : (

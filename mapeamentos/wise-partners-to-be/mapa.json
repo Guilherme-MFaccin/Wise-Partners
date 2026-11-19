@@ -1898,14 +1898,15 @@
         "EV-0071",
         "EV-0341",
         "EV-0349",
-        "EV-0373"
+        "EV-0373",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-008"
       ],
-      "portal": "gera a fila a partir das regras (marco atrasado, régua atrasada, mudança de tipo no cubo, oportunidade parada, retorno pendente ao parceiro) e prepara a mensagem.",
+      "portal": "é a tela Tarefas: uma fila única gerada pelas regras, em três grupos (decidir, responder, acompanhar) e três faixas de urgência (agora, esta semana, quando der); cada item diz o que fazer, de quem é, há quanto tempo espera e se resolve ali mesmo ou abre o lugar certo. O que segue a regra não aparece.",
       "quadro": "Fila única de tarefas (por exceção)",
       "fluxo": {
         "status": "confirmado",
@@ -3802,12 +3803,13 @@
         "EV-0175",
         "EV-0100",
         "EV-0340",
-        "EV-0373"
+        "EV-0373",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação.",
+      "portal": "é a tela Candidatos, Fila de cadastros, com a situação, a observação e os botões de WhatsApp, agenda e aprovação; quem está na fila sem contato aparece em Tarefas.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -4378,14 +4380,15 @@
         "EV-0178",
         "EV-0283",
         "EV-0341",
-        "EV-0373"
+        "EV-0373",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-002"
       ],
-      "portal": "mostra há quantos dias o cadastro está sem resposta, conta as tentativas e lembra a data de retomada.",
+      "portal": "mostra em Tarefas o candidato contatado há mais de 2 dias sem resposta.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -4627,7 +4630,7 @@
       "nome": "Preparar a entrada do parceiro",
       "pai": "P-26",
       "ordem": 1,
-      "descricao": "O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos.",
+      "descricao": "O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, o link exclusivo para a página do cliente e os acessos. A página do cliente é única e geral, igual para todos os parceiros, sem nome, logo ou marca de nenhum deles; o link exclusivo de cada parceiro só atribui o cadastro a quem mandou.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Acesso criado na conversa de entrada",
@@ -4664,12 +4667,13 @@
         "EV-0345",
         "EV-0346",
         "EV-0347",
-        "EV-0373"
+        "EV-0373",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "gera o link, a página do cliente com a logo do parceiro e os acessos.",
+      "portal": "gera o link exclusivo e os acessos; a página do cliente é a mesma para todos.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -9069,14 +9073,15 @@
         "EV-0373",
         "EV-0391",
         "EV-0392",
-        "EV-0393"
+        "EV-0393",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-006"
       ],
-      "portal": "é o próprio processo: regras, automações, painéis, versões de contrato, acessos e auditoria.",
+      "portal": "é o próprio processo. A navegação segue a cadeia de valor em seis seções com poucas abas cada: Tarefas, Candidatos, Parceiros, Oportunidades, Resultados e Programa; a área do parceiro tem cinco: Início, Oportunidades, Aprender, Minha parceria e Comunidade.",
       "tipo": "suporte"
     },
     {
@@ -10197,7 +10202,7 @@
       "nome": "Entregar o link da página do cliente e a mensagem pronta",
       "pai": "P-27",
       "ordem": 3,
-      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. A mensagem pronta diz que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo. Na maior parte das vezes o parceiro escreve a própria mensagem e só usa o link; a mensagem pronta é uma sugestão. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
+      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. A mensagem pronta diz que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo. Na maior parte das vezes o parceiro escreve a própria mensagem e só usa o link; a mensagem pronta é uma sugestão. No portal: gera o link e a mensagem na tela Indicar do parceiro. A página do cliente é única e geral, igual para todos os parceiros, sem nome, logo ou marca de nenhum deles; o link exclusivo de cada parceiro só atribui o cadastro a quem mandou.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -10231,12 +10236,13 @@
         "EV-0339",
         "EV-0373",
         "EV-0401",
-        "EV-0414"
+        "EV-0414",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "gera o link e a mensagem na tela Indicar do parceiro.",
+      "portal": "gera o link exclusivo e a mensagem pronta na tela Indicar do parceiro; a página que abre é a página única do cliente.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -12417,7 +12423,8 @@
         "EV-0419",
         "EV-0420",
         "EV-0409",
-        "EV-0421"
+        "EV-0421",
+        "EV-0446"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12425,7 +12432,7 @@
         "F-002",
         "F-003"
       ],
-      "portal": "registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail.",
+      "portal": "registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail. A tela Oportunidades, Diagnósticos mostra cada cliente pela etapa (cadastrado, agenda enviada, reunião marcada, reunião feita, plano enviado), com quem conduz, a data da reunião e o registro do plano; o plano atrasado aparece em Tarefas.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -12850,7 +12857,7 @@
       "nome": "Manter a página do cliente e o kit de convite",
       "pai": "P-59",
       "ordem": 4,
-      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. A página mostra, no topo, na oferta e no quadro de comparação, que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo; e mostra os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. A mensagem pronta é uma sugestão: o parceiro costuma mandar o link com o texto dele. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
+      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. A página mostra, no topo, na oferta e no quadro de comparação, que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo; e mostra os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. A mensagem pronta é uma sugestão: o parceiro costuma mandar o link com o texto dele. No portal: gera a página e a mensagem com o link exclusivo do parceiro. A página do cliente é única e geral, igual para todos os parceiros, sem nome, logo ou marca de nenhum deles; o link exclusivo de cada parceiro só atribui o cadastro a quem mandou. Os textos, as seções, as perguntas frequentes, o vídeo e os valores são editados pelo portal, sem depender de desenvolvimento.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Mudança na oferta, no vídeo, na agenda ou na regra do ICP",
@@ -12895,14 +12902,15 @@
         "EV-0404",
         "EV-0405",
         "EV-0390",
-        "EV-0414"
+        "EV-0414",
+        "EV-0446"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
       "principios": [
         "F-011"
       ],
-      "portal": "gera a página e a mensagem com o link exclusivo do parceiro.",
+      "portal": "é a tela Programa, Páginas: o Gerente edita os textos de cada bloco, liga e desliga seções, as perguntas frequentes, o vídeo, os valores e o perfil da reunião, e publica ou tira do ar; o link exclusivo de cada parceiro só atribui o cadastro.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -13113,7 +13121,7 @@
       "nome": "Rodar a campanha de aquisição de parceiros",
       "pai": "P-20",
       "ordem": 0,
-      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. A página dos parceiros mostra o que o parceiro passa a oferecer, com o valor de referência (R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub, sem custo para o cliente dele), e os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. O anúncio é um dos canais de entrada, não o único: os parceiros também chegam por outras origens (4.0). No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
+      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. A página dos parceiros mostra o que o parceiro passa a oferecer, com o valor de referência (R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub, sem custo para o cliente dele), e os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. O anúncio é um dos canais de entrada, não o único: os parceiros também chegam por outras origens (4.0). No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio. A página dos parceiros é única e fala com empresas de qualquer categoria que vendem para empresas, não só com software.",
       "dono": "PA-02",
       "participantes": [
         "PA-01"
@@ -13161,12 +13169,13 @@
         "EV-0373",
         "EV-0401",
         "EV-0405",
-        "EV-0413"
+        "EV-0413",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
+      "portal": "é a tela Programa, Páginas (página dos parceiros, única, para qualquer categoria) e a tela Candidatos, Origens e campanha (funil por origem até a ativação).",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -13491,14 +13500,15 @@
         "EV-0406",
         "EV-0403",
         "EV-0404",
-        "EV-0390"
+        "EV-0390",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-011"
       ],
-      "portal": "guarda os cases num lugar só, usado pelas páginas e pelo kit.",
+      "portal": "guarda os cases numa tabela só (Programa, Páginas, Cases), usada pelas duas páginas e pelo kit; a média em destaque é calculada a partir deles.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -13606,14 +13616,15 @@
       "hipoteses": [],
       "evidencias": [
         "EV-0413",
-        "EV-0414"
+        "EV-0414",
+        "EV-0446"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-015"
       ],
-      "portal": "registra a origem de cada candidato, para comparar o custo e o resultado de cada canal.",
+      "portal": "registra a origem de cada candidato e mostra em Candidatos, Origens e campanha quantos chegam a parceiro ativo por origem.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -17702,6 +17713,15 @@
       "data": "2026-11-19",
       "trecho": "Aprovo como está. ",
       "local": "FO-16/BM-hipoteses"
+    },
+    {
+      "id": "EV-0446",
+      "tipo": "entrevista",
+      "fonte": "Mensagem do patrocinador na sessão de trabalho (20/11/2026)",
+      "pessoa": "PE-01",
+      "data": "2026-11-20",
+      "trecho": "Não vamos fazer uma landing page adaptada para cada parceiro. Vamos fazer uma landing page unica geral para todos, sem citar ninguém. Isso serve para a landing page do parceiro e a landing page do cliente do parceiro. [...] não tenho controle nenhum das páginas nem do parceiro nem do cliente do parceiro. [...] A aba de tarefas está horrível como estava antes. [...] Ficaram muitas abas. [...] Mantenha as funções, mas deixe toda a estrutura e arquitetura do portal do wise partners coerente com uma hierarquia organizada, equilibrada.",
+      "local": "Sessão de trabalho, revisão do portal"
     }
   ],
   "perguntas": [
@@ -29130,6 +29150,36 @@
       "evidencias": [
         "EV-0419"
       ]
+    },
+    {
+      "id": "DE-73",
+      "data": "2026-11-20",
+      "texto": "As duas páginas públicas (a dos parceiros e a do cliente do parceiro) são únicas e gerais, sem citar nenhum parceiro. O link exclusivo do parceiro só atribui o cadastro.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0446"
+      ]
+    },
+    {
+      "id": "DE-74",
+      "data": "2026-11-20",
+      "texto": "O patrocinador controla as duas páginas pelo portal (Programa, Páginas): textos, seções, perguntas frequentes, vídeo, valores, cases e publicação.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0446"
+      ]
+    },
+    {
+      "id": "DE-75",
+      "data": "2026-11-20",
+      "texto": "Tarefas é uma fila única de exceções; o portal se organiza em seis seções pela cadeia de valor, cada uma com poucas abas, mantendo todas as funções.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0446"
+      ]
     }
   ],
   "glossario": [
@@ -29316,12 +29366,13 @@
     {
       "id": "GL-20",
       "termo": "Diagnóstico do cliente do parceiro",
-      "definicao": "Reunião gratuita de 40 a 60 minutos com o Gerente, só para empresas no ICP da Wise, que termina com um mapa de planejamento e libera o Wise Hub; quinta porta de oportunidade.",
+      "definicao": "Reunião gratuita de cerca de 2 horas com a equipe da Wise (Gerente ou consultor), só para empresas no perfil (3 vendedores ou mais e R$ 250 mil por mês), pela Matriz de Governança Comercial 5x5, que termina mostrando o Wise Hub; o plano de ação sai em até 2 dias úteis. Valor de referência R$ 2.000, mais R$ 3.000 do Wise Hub. Quinta porta de oportunidade.",
       "sinonimos": [
         "Diagnóstico comercial"
       ],
       "evidencias": [
-        "EV-0037"
+        "EV-0037",
+        "EV-0446"
       ]
     }
   ],
@@ -29366,6 +29417,10 @@
     {
       "data": "2026-11-19",
       "evento": "To-be v12: FO-16 aplicado. O canvas vira quadro separado de modelo de negócio; parceiros também por outras origens (processo novo 4.0); roteiro do diagnóstico por IA no Wise Hub; reunião sem encontro extra e termo de uso do diagnóstico; venda complexa = ciclo acima de 2 dias; contradição aberta no critério dos níveis."
+    },
+    {
+      "data": "2026-11-20",
+      "evento": "To-be v13: páginas públicas únicas sem citar o parceiro e controladas pelo portal; tarefas como fila de exceções; navegação do portal em seis seções pela cadeia de valor (P-09, P-21, P-25, P-27, P-60, P-75, P-95, P-96, P-98, P-100, P-101 e glossário do diagnóstico)."
     }
   ]
 }

@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import {
-  Bell, BarChart3, Building2, Handshake, Wallet, FileSearch, Users2, Clock, Inbox, Upload, Settings, UserCog, Menu, LogOut, Plus, UserCircle,
-  TrendingUp, Receipt, Radar, CalendarRange, GraduationCap, Megaphone, Trophy, GitMerge, Target, Network,
-} from "lucide-react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Bell, Menu, LogOut, Plus, UserCircle } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { AvisoSenhaProvisoria } from "@/components/conta/AvisoSenhaProvisoria";
 import { useNaoLidas } from "@/hooks/useNotificacoes";
@@ -13,57 +10,17 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { PAPEIS } from "@/lib/rotulos";
+import { SECOES_INTERNAS } from "@/lib/navegacao";
+import { BarraAbas, MenuSecoes, filtrarSecoes } from "@/components/layout/Navegacao";
 
-type Item = { to: string; rotulo: string; icone: any; papeis?: string[]; fim?: boolean };
-
-const ITENS: Item[] = [
-  { to: "/app", rotulo: "Painel", icone: BarChart3, fim: true },
-  { to: "/app/parceiros", rotulo: "Parceiros", icone: Building2, papeis: ["admin", "parcerias", "consultor", "comercial", "financeiro"] },
-  { to: "/app/indicacoes", rotulo: "Indicações", icone: Handshake, papeis: ["admin", "parcerias", "consultor", "comercial", "financeiro"] },
-  { to: "/app/comissoes", rotulo: "Comissões", icone: Wallet, papeis: ["admin", "parcerias", "financeiro"] },
-  { to: "/app/rfp", rotulo: "Pedidos de RFP", icone: FileSearch, papeis: ["admin", "parcerias", "consultor", "comercial"] },
-  { to: "/app/base-ativa", rotulo: "Base Ativa", icone: Users2, papeis: ["admin", "parcerias", "consultor", "comercial"] },
-  { to: "/app/atividades", rotulo: "Atividades", icone: Clock, papeis: ["admin", "parcerias", "consultor", "comercial"] },
-  { to: "/app/pendencias", rotulo: "Pendências", icone: Inbox, papeis: ["admin", "parcerias"] },
-  { to: "/app/meu-painel", rotulo: "Meu painel", icone: Target, papeis: ["admin", "parcerias"] },
-  { to: "/app/modelo-e-processos", rotulo: "Modelo e processos", icone: Network, papeis: ["admin", "parcerias", "consultor", "comercial", "financeiro"] },
-  { to: "/app/resultado", rotulo: "Resultado do canal", icone: TrendingUp, papeis: ["admin"] },
-  { to: "/app/custos", rotulo: "Custos", icone: Receipt, papeis: ["admin"] },
-  { to: "/app/acoes", rotulo: "Ações conjuntas", icone: CalendarRange, papeis: ["admin", "parcerias", "consultor"] },
-  { to: "/app/capacitacao", rotulo: "Capacitação", icone: GraduationCap, papeis: ["admin", "parcerias", "consultor", "comercial"] },
-  { to: "/app/comunicados", rotulo: "Comunicados", icone: Megaphone, papeis: ["admin", "parcerias", "consultor"] },
-  { to: "/app/ranking", rotulo: "Ranking e faixas", icone: Trophy, papeis: ["admin", "parcerias", "consultor"] },
-  { to: "/app/maturidade", rotulo: "Maturidade", icone: Radar, papeis: ["admin", "parcerias", "consultor"] },
-  { to: "/app/cruzamento", rotulo: "Cruzamento", icone: GitMerge, papeis: ["admin", "parcerias"] },
-  { to: "/app/importar", rotulo: "Importação", icone: Upload, papeis: ["admin"] },
-  { to: "/app/configuracoes", rotulo: "Configurações", icone: Settings, papeis: ["admin", "parcerias"] },
-  { to: "/app/usuarios", rotulo: "Usuários", icone: UserCog, papeis: ["admin", "parcerias"] },
-];
+// Seções pela cadeia de valor do to-be (src/lib/navegacao.ts), filtradas pelo papel de quem entrou
+function useSecoes() {
+  const { perfil } = useAuth();
+  return filtrarSecoes(SECOES_INTERNAS, (a) => !a.papeis || (!!perfil && a.papeis.includes(perfil.papel)));
+}
 
 function Navegacao({ onNavegar }: { onNavegar?: () => void }) {
-  const { perfil } = useAuth();
-  const itens = ITENS.filter((i) => !i.papeis || (perfil && i.papeis.includes(perfil.papel)));
-  return (
-    <nav className="flex flex-col gap-1">
-      {itens.map((i) => (
-        <NavLink
-          key={i.to}
-          to={i.to}
-          end={i.fim}
-          onClick={onNavegar}
-          className={({ isActive }) =>
-            cn(
-              "flex items-center gap-3 rounded-[8px] px-3 py-2 text-sm font-medium text-neutro-300 transition-colors hover:bg-white/5 hover:text-white",
-              isActive && "bg-menta-500/10 text-menta-400",
-            )
-          }
-        >
-          <i.icone className="h-4 w-4" />
-          {i.rotulo}
-        </NavLink>
-      ))}
-    </nav>
-  );
+  return <MenuSecoes secoes={useSecoes()} onNavegar={onNavegar} />;
 }
 
 function BarraUsuario() {
@@ -110,6 +67,10 @@ function Sino() {
   );
 }
 
+function AbasDaSecao() {
+  return <BarraAbas secoes={useSecoes()} />;
+}
+
 function Estrutura() {
   const [menu, setMenu] = useState(false);
   const { abrir } = useRegistroRapido();
@@ -150,7 +111,8 @@ function Estrutura() {
           <Sino />
         </header>
         <AvisoSenhaProvisoria />
-        <main className="mx-auto w-full max-w-7xl px-4 py-6 pb-24 sm:px-6">
+        <main className="mx-auto w-full max-w-7xl px-4 pb-24 pt-4 sm:px-6">
+          <AbasDaSecao />
           <Outlet />
         </main>
       </div>

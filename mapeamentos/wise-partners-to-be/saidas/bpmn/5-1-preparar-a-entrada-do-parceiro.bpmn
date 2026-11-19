@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-27" name="5.1 Preparar a entrada do parceiro" processRef="Process_P-27" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-27" name="5.1 Preparar a entrada do parceiro" isExecutable="false">
-    <bpmn:documentation>O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, a página do cliente com a logo do parceiro e os acessos. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>O que todo parceiro Select recebe na entrada, na própria conversa: grupo de WhatsApp na comunidade Wise Partners, certificado de parceiro Wise, Wise Hub com as duas marcas, link da página do cliente com a mensagem pronta e o minicurso de como vender a Wise. A Prateleira e a recomendação aos clientes da Wise ficam para o Premium. O certificado de parceiro sai quando o parceiro conclui o minicurso. No portal: gera o link, o link exclusivo para a página do cliente e os acessos. A página do cliente é única e geral, igual para todos os parceiros, sem nome, logo ou marca de nenhum deles; o link exclusivo de cada parceiro só atribui o cadastro a quem mandou. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-27">
       <bpmn:lane id="Lane_P-27_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-27_i1</bpmn:flowNodeRef>

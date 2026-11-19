@@ -26,30 +26,30 @@ import { AbaMaturidade } from "@/components/parceiros/ficha/AbaMaturidade";
 import { AbaDesligamento, useFluxosDesligamento } from "@/components/parceiros/ficha/AbaDesligamento";
 import { PAPEIS_V2 } from "@/components/parceiros/ficha/v2";
 
-type Aba = { valor: string; rotulo: string; fixa?: boolean; papeis?: string[]; mostrar?: boolean };
+type Aba = { valor: string; rotulo: string; grupo?: string; fixa?: boolean; papeis?: string[]; mostrar?: boolean };
 
-// Abas por papel, em ordem alfabética na navegação (Visão geral fixa no topo): a RLS devolve vazio para o que o papel não lê; aqui só evitamos abas vazias.
+// Abas por papel, agrupadas pela jornada do parceiro (Visão geral fixa no topo): a RLS devolve vazio para o que o papel não lê; aqui só evitamos abas vazias.
 // v2: a matriz de acesso (briefing técnico, seção 5) está em PAPEIS_V2; "mostrar" depende do parceiro.
 function abasDoParceiro(p: { tipo_parceria: string; data_assinatura: string | null; etapa: string }, temFluxo: boolean, isAdmin: boolean): Aba[] {
   const comercial = p.tipo_parceria === "comercial";
   const assinado = !!p.data_assinatura && !ETAPAS_PERDA.includes(p.etapa);
   return [
     { valor: "visao", rotulo: "Visão geral", fixa: true },
-    { valor: "perfil", rotulo: "Perfil e categoria", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "nossa-parceria", rotulo: "Nossa parceria", papeis: PAPEIS_V2.nossaParceria },
-    { valor: "ficha", rotulo: "Ficha de apresentação", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "contatos", rotulo: "Contatos", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "linha-do-tempo", rotulo: "Linha do tempo", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "scorecard", rotulo: "Scorecard", papeis: PAPEIS_V2.scorecard, mostrar: comercial },
-    { valor: "contrato", rotulo: "Negociação e contrato", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "nivel", rotulo: "Nível e revisões", papeis: PAPEIS_V2.nivel, mostrar: comercial && !!p.data_assinatura },
-    { valor: "onboarding", rotulo: "Onboarding", papeis: PAPEIS_V2.onboarding, mostrar: comercial },
-    { valor: "acoes", rotulo: "Ações conjuntas", papeis: PAPEIS_V2.acoes, mostrar: !!p.data_assinatura },
-    { valor: "contrapartidas", rotulo: "Contrapartidas", papeis: ["admin", "parcerias", "consultor"] },
-    { valor: "indicacoes", rotulo: "Indicações" },
-    { valor: "maturidade", rotulo: "Maturidade", papeis: PAPEIS_V2.maturidade },
-    { valor: "documentos", rotulo: "Documentos", papeis: ["admin", "parcerias", "consultor", "comercial"] },
-    { valor: "desligamento", rotulo: "Desligamento", papeis: PAPEIS_V2.desligamento, mostrar: temFluxo || (isAdmin && assinado) },
+    { valor: "perfil", grupo: "Quem é", rotulo: "Perfil e categoria", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "contatos", grupo: "Quem é", rotulo: "Contatos", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "ficha", grupo: "Quem é", rotulo: "Ficha de apresentação", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "documentos", grupo: "Quem é", rotulo: "Documentos", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "contrato", grupo: "Entrada", rotulo: "Negociação e contrato", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "onboarding", grupo: "Entrada", rotulo: "Onboarding", papeis: PAPEIS_V2.onboarding, mostrar: comercial },
+    { valor: "nossa-parceria", grupo: "Relação", rotulo: "Nossa parceria", papeis: PAPEIS_V2.nossaParceria },
+    { valor: "acoes", grupo: "Relação", rotulo: "Ações conjuntas", papeis: PAPEIS_V2.acoes, mostrar: !!p.data_assinatura },
+    { valor: "contrapartidas", grupo: "Relação", rotulo: "Contrapartidas", papeis: ["admin", "parcerias", "consultor"] },
+    { valor: "linha-do-tempo", grupo: "Relação", rotulo: "Linha do tempo", papeis: ["admin", "parcerias", "consultor", "comercial"] },
+    { valor: "indicacoes", grupo: "Resultado", rotulo: "Indicações" },
+    { valor: "nivel", grupo: "Resultado", rotulo: "Nível e revisões", papeis: PAPEIS_V2.nivel, mostrar: comercial && !!p.data_assinatura },
+    { valor: "scorecard", grupo: "Resultado", rotulo: "Scorecard", papeis: PAPEIS_V2.scorecard, mostrar: comercial },
+    { valor: "maturidade", grupo: "Resultado", rotulo: "Maturidade", papeis: PAPEIS_V2.maturidade },
+    { valor: "desligamento", grupo: "Saída", rotulo: "Desligamento", papeis: PAPEIS_V2.desligamento, mostrar: temFluxo || (isAdmin && assinado) },
   ];
 }
 
@@ -76,7 +76,7 @@ export default function FichaParceiro() {
   return (
     <div className="min-w-0">
       <CabecalhoFicha parceiro={p} estrategico={!!interno.data?.estrategico} />
-      <NavegacaoSecoes rotulo="abas" secoes={abas.map((a) => ({ id: a.valor, rotulo: a.rotulo, fixa: a.fixa }))} ativa={aba}
+      <NavegacaoSecoes rotulo="abas" secoes={abas.map((a) => ({ id: a.valor, rotulo: a.rotulo, fixa: a.fixa, grupo: a.grupo }))} ativa={aba}
         onChange={(v) => setParams({ aba: v }, { replace: true })}>
         {aba === "visao" && (
           <div className="space-y-4">

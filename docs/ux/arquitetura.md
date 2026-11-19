@@ -1,5 +1,33 @@
 # Arquitetura de informação: Portal Wise Partners
 
+## Versão 3 (20/11/2026): navegação pela cadeia de valor do to-be
+
+Vale acima das seções seguintes onde houver diferença. Pedido do patrocinador: manter todas as funções, com hierarquia organizada e equilibrada, sem contradizer os processos (to-be v13) nem o canvas. A fonte única da navegação é `src/lib/navegacao.ts`: o menu lateral mostra as seções; a barra de abas no topo mostra as abas da seção atual. As rotas antigas continuam valendo.
+
+| Seção (time interno) | Abas | Processos |
+|---|---|---|
+| Tarefas | Fila de hoje (tela inicial), Minha carteira, Contatos e horas | P-08, P-09, P-46 |
+| Candidatos | Fila de cadastros, Origens e campanha | P-20 a P-25, P-98, P-101 |
+| Parceiros | Carteira (com a ficha), Ações conjuntas, Base Ativa, Comunicados | P-26, P-40, P-47, P-54 |
+| Oportunidades | Indicações, Diagnósticos, Prateleira, Cruzamento, Comissões | P-31 a P-39, P-58, P-95 |
+| Resultados | Painel da semana, Canal e CAC, Custos, Maturidade, Ranking | P-14 a P-19 |
+| Programa | Modelo e processos, Páginas, Capacitação, Regras e configurações, Usuários, Importação | P-01, P-05, P-59, P-60, P-96, P-100 |
+
+| Seção (parceiro) | Abas |
+|---|---|
+| Início | Início, Primeiros passos (só com plano de onboarding) |
+| Oportunidades | Indicar, Minhas indicações, Prateleira, Cruzamento (só parceria comercial) |
+| Aprender | Capacitação, Kit e materiais, Regras do programa |
+| Minha parceria | Meu nível, O que combinamos, Ações conjuntas, Ficha na Prateleira, Usuários (só o responsável) |
+| Comunidade | Comunicados, Ranking, Pesquisa |
+
+* **Tarefas** é a fila de exceções (P-09), entregue pronta pelo banco (`fila_tarefas()`): três grupos (decidir, responder, acompanhar), três faixas (agora, esta semana, quando der), um item por caso, agrupado por parceiro quando são vários do mesmo tipo. Substitui a antiga tela Pendências (doze listas separadas).
+* **Ficha do parceiro** e **Regras e configurações** usam abas agrupadas (`NavegacaoSecoes` com `grupo`): a ficha pela jornada (quem é, entrada, relação, resultado, saída); as configurações por assunto (regras do programa, metas e medição, operação, sistema).
+* **Páginas públicas**: uma página dos parceiros e uma página do cliente, únicas, sem citar nenhum parceiro; o link exclusivo só atribui o cadastro. Textos, seções, perguntas, vídeo, valores, cases e publicação são editados em Programa, Páginas.
+* Nomes seguem o glossário do to-be: Prateleira (antes "Pedidos de RFP"), Painel da semana, Diagnósticos.
+
+## Versão 2 (histórico)
+
 Plano de UX, fase 2, prompt 2.1. Branch `ux-fundacao`. Só documento: nenhum código foi alterado.
 
 Fontes: `docs/ux/diagnostico.md`, skill `wise-dashboards` (com `mapa-de-telas.md` e `graficos.md`), `specs/002-evolucao-metodo-octo/spec.md` (histórias 1 a 15 e Apêndice L), matrizes de permissão dos briefings técnicos da 001 (seção 3) e da 002 (seção 5), rotas em `src/App.tsx` e inventário das funções do banco em `supabase/migrations/`.

@@ -170,7 +170,7 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
         </div>
       )}
 
-      {!agendaUrl && <p className="text-xs text-neutro-300">Para aparecer o botão "Mandar a agenda", cole o link da sua agenda do Google no campo "Agenda para os parceiros", acima.</p>}
+      {!agendaUrl && <p className="text-xs text-neutro-300">Para aparecer o botão "Mandar a agenda", cole o link da sua agenda do Google em Programa, Páginas, Página dos parceiros (campo "Agenda para os parceiros").</p>}
 
       {historico.length > 0 && (
         <div>

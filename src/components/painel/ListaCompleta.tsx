@@ -22,15 +22,15 @@ export function ListaCompleta({ p, periodo, veComissao }: { p: PainelDados; peri
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <Bloco titulo="Aprovações pendentes do Diretor" icone={FileSignature} contagem={p.aprovacoes_pendentes.length}
-          tom="alerta" link="/app/pendencias">
-          <ListaParceiros vazio="Nenhuma aprovação pendente." linkMais="/app/pendencias"
+          tom="alerta" link="/app">
+          <ListaParceiros vazio="Nenhuma aprovação pendente." linkMais="/app"
             itens={p.aprovacoes_pendentes.map((a) => ({
               chave: a.parceiro_id, parceiroId: a.parceiro_id, nome: a.parceiro, detalhe: `Em proposta com o decisor desde ${data(a.desde)}`,
             }))} />
         </Bloco>
 
-        <Bloco titulo="Follow-ups vencidos" icone={AlarmClock} contagem={p.followups_vencidos.length} tom="perigo" link="/app/pendencias">
-          <ListaParceiros vazio="Nenhum follow-up vencido." linkMais="/app/pendencias"
+        <Bloco titulo="Follow-ups vencidos" icone={AlarmClock} contagem={p.followups_vencidos.length} tom="perigo" link="/app">
+          <ListaParceiros vazio="Nenhum follow-up vencido." linkMais="/app"
             itens={p.followups_vencidos.map((f) => ({
               chave: f.id, parceiroId: f.parceiro_id, nome: f.parceiro, detalhe: `${data(f.data)} · ${f.descricao}`,
             }))} />
@@ -94,7 +94,7 @@ export function ListaCompleta({ p, periodo, veComissao }: { p: PainelDados; peri
           <Indicador rotulo="Com reunião" valor={p.indicacoes.com_reuniao} detalhe={percentual(p.indicacoes.com_reuniao, p.indicacoes.total)} />
           <Indicador rotulo="Fechadas" valor={p.indicacoes.fechadas} detalhe={percentual(p.indicacoes.fechadas, p.indicacoes.total)} />
           <Indicador rotulo="Paradas há 30 dias" valor={p.indicacoes_paradas} link="/app/indicacoes?paradas=1" detalhe="Sem atualização" />
-          <Indicador rotulo="Propostas de ficha" valor={p.propostas_ficha_pendentes} link="/app/pendencias" detalhe="Aguardando validação" />
+          <Indicador rotulo="Propostas de ficha" valor={p.propostas_ficha_pendentes} link="/app" detalhe="Aguardando validação" />
         </div>
         {Object.keys(p.indicacoes.por_empresa).length > 0 && (
           <div className="mt-4 space-y-2">

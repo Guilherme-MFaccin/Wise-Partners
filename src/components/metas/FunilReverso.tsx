@@ -81,7 +81,7 @@ export function LinhaFunil({ versao }: { versao: number }) {
     <p className="mb-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 rounded-[10px] border border-white/10 bg-white/[0.03] px-3 py-2 text-sm">
       <span className="font-semibold">{frase.titulo}</span>
       {frase.detalhe && <span className="text-muted-foreground">{frase.detalhe}</span>}
-      <Link to="/app" className="text-menta-400 hover:underline">Ver no painel</Link>
+      <Link to="/app/painel" className="text-menta-400 hover:underline">Ver no painel</Link>
     </p>
   );
 }

@@ -21,7 +21,6 @@ const Rfps = lazy(() => import("@/pages/app/Rfps"));
 const RfpDetalhe = lazy(() => import("@/pages/app/RfpDetalhe"));
 const BaseAtiva = lazy(() => import("@/pages/app/BaseAtiva"));
 const Atividades = lazy(() => import("@/pages/app/Atividades"));
-const Pendencias = lazy(() => import("@/pages/app/Pendencias"));
 const Importar = lazy(() => import("@/pages/app/Importar"));
 const Configuracoes = lazy(() => import("@/pages/app/Configuracoes"));
 const Usuarios = lazy(() => import("@/pages/app/Usuarios"));
@@ -37,6 +36,11 @@ const Ranking = lazy(() => import("@/pages/app/Ranking"));
 const Cruzamento = lazy(() => import("@/pages/app/Cruzamento"));
 const MeuPainel = lazy(() => import("@/pages/app/MeuPainel"));
 const ModeloProcessos = lazy(() => import("@/pages/app/ModeloProcessos"));
+const Tarefas = lazy(() => import("@/pages/app/Tarefas"));
+const Diagnosticos = lazy(() => import("@/pages/app/Diagnosticos"));
+const FilaCandidatos = lazy(() => import("@/pages/app/candidatos/Fila"));
+const OrigensCandidatos = lazy(() => import("@/pages/app/candidatos/Origens"));
+const Paginas = lazy(() => import("@/pages/app/programa/Paginas"));
 
 const PInicio = lazy(() => import("@/pages/parceiro/Inicio"));
 const PIndicacoes = lazy(() => import("@/pages/parceiro/Indicacoes"));
@@ -102,7 +106,12 @@ export default function App() {
                 <Route path="/parceiros/termo" element={<TextoLegalParceiros qual="termo" />} />
                 <Route path="/parceiros/privacidade" element={<TextoLegalParceiros qual="privacidade" />} />
                 <Route path="/app" element={<Protegida publico="interno"><AppLayout /></Protegida>}>
-                  <Route index element={<Painel />} />
+                  <Route index element={<Tarefas />} />
+                  <Route path="painel" element={<Painel />} />
+                  <Route path="candidatos" element={<FilaCandidatos />} />
+                  <Route path="candidatos/origens" element={<OrigensCandidatos />} />
+                  <Route path="diagnosticos" element={<Diagnosticos />} />
+                  <Route path="programa/paginas" element={<Paginas />} />
                   <Route path="parceiros" element={<Parceiros />} />
                   <Route path="parceiros/:id" element={<FichaParceiro />} />
                   <Route path="indicacoes" element={<Indicacoes />} />
@@ -111,7 +120,7 @@ export default function App() {
                   <Route path="rfp/:id" element={<RfpDetalhe />} />
                   <Route path="base-ativa" element={<BaseAtiva />} />
                   <Route path="atividades" element={<Atividades />} />
-                  <Route path="pendencias" element={<Pendencias />} />
+                  <Route path="pendencias" element={<Navigate to="/app" replace />} />
                   <Route path="importar" element={<Importar />} />
                   <Route path="configuracoes" element={<Configuracoes />} />
                   <Route path="usuarios" element={<Usuarios />} />

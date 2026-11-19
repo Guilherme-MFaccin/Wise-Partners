@@ -63,7 +63,7 @@ export default function Painel() {
   return (
     <div>
       <Cabecalho
-        titulo="Painel"
+        titulo="Painel da semana"
         descricao="Estamos no ritmo das metas do trimestre e o que pede atenção nesta semana?"
         acoes={
           <Button onClick={() => setPautaAberta(true)} disabled={!p}>

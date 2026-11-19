@@ -85,7 +85,7 @@ export default function Inicio() {
 
   return (
     <div className="space-y-6">
-      <Cabecalho titulo={`Olá, ${perfil?.nome?.split(" ")[0] ?? ""}`} descricao={`Portal Wise Partners de ${p.nome_fantasia}`}
+      <Cabecalho titulo={`Olá, ${perfil?.nome?.split(" ")[0] ?? ""}`} descricao={`O que ${p.nome_fantasia} tem para fazer agora no Wise Partners?`}
         acoes={mostraHub && (
           <Button asChild>
             <a href={hubUrl} target="_blank" rel="noreferrer"><ExternalLink /> Acessar o Wise Hub</a>
@@ -161,7 +161,7 @@ export default function Inicio() {
         <Contador to="/parceiro/acoes" icone={ListChecks} titulo="Contrapartidas"
           valor={`${pendentes} pendentes`} detalhe={atrasadas ? `${atrasadas} atrasadas` : "Nenhuma atrasada"} />
         <Contador to="/parceiro/indicacoes" icone={Handshake} titulo="Indicações" valor={String(indicacoesQ.data ?? 0)} detalhe="feitas e recebidas" />
-        <Contador to="/parceiro/rfps" icone={FileSearch} titulo="Pedidos de RFP" valor={String(rfpsQ.data?.length ?? 0)} detalhe="em que vocês foram apresentados" />
+        <Contador to="/parceiro/rfps" icone={FileSearch} titulo="Prateleira" valor={String(rfpsQ.data?.length ?? 0)} detalhe="em que vocês foram apresentados" />
       </section>
 
       <div className="grid gap-6 lg:grid-cols-2">

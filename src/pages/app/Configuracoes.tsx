@@ -17,38 +17,34 @@ import { ModelosContrato } from "@/components/config/ModelosContrato";
 import { SecaoMetas } from "@/components/config/Metas";
 import { Parametros } from "@/components/config/Parametros";
 import { Backup } from "@/components/config/Backup";
-import { SecaoLandingPage } from "@/components/config/LandingPage";
-import { SecaoLandingCliente } from "@/components/config/LandingCliente";
 
-// Ordem alfabética na navegação (NavegacaoSecoes). `admin`: aba só aparece para administradores (custos e remunerações)
+// Agrupadas por assunto (regras, metas e medição, operação, sistema). As páginas públicas ficam em Programa, Páginas. `admin`: aba só aparece para administradores (custos e remunerações)
 const ABAS: (Secao & { admin?: boolean })[] = [
-  { id: "empresas", rotulo: "Empresas e comissões" },
-  { id: "categorias", rotulo: "Categorias e campos" },
-  { id: "niveis", rotulo: "Níveis e prazos" },
-  { id: "requisitos", rotulo: "Requisitos de nível" },
-  { id: "scorecard", rotulo: "Scorecard" },
-  { id: "pacotes", rotulo: "Pacotes" },
-  { id: "contrapartidas", rotulo: "Contrapartidas" },
-  { id: "acoes", rotulo: "Ações da Wise" },
-  { id: "regua", rotulo: "Régua de atendimento" },
-  { id: "sla", rotulo: "SLA e proteção" },
-  { id: "pontos", rotulo: "Pontos e premiação" },
-  { id: "atividades", rotulo: "Tipos de atividade" },
-  { id: "custos", rotulo: "Custos e remunerações", admin: true },
-  { id: "indicadores", rotulo: "Indicadores do painel" },
-  { id: "metas", rotulo: "Metas" },
-  { id: "fase", rotulo: "Fase do programa" },
-  { id: "regras", rotulo: "Regras publicadas" },
-  { id: "etapas", rotulo: "Etapas e motivos de perda" },
-  { id: "icp", rotulo: "Critérios do ICP" },
-  { id: "cruzamento", rotulo: "Termo do cruzamento" },
-  { id: "landing-cliente", rotulo: "Landing page dos clientes" },
-  { id: "landing", rotulo: "Landing page dos parceiros" },
-  { id: "modelos", rotulo: "Modelos de contrato" },
-  { id: "parametros", rotulo: "Parâmetros" },
-  { id: "feriados", rotulo: "Feriados" },
-  { id: "emails", rotulo: "Textos de e-mail" },
-  { id: "backup", rotulo: "Backup" },
+  { id: "niveis", rotulo: "Níveis e prazos", grupo: "Regras do programa" },
+  { id: "requisitos", rotulo: "Requisitos de nível", grupo: "Regras do programa" },
+  { id: "empresas", rotulo: "Empresas e comissões", grupo: "Regras do programa" },
+  { id: "pacotes", rotulo: "Pacotes", grupo: "Regras do programa" },
+  { id: "contrapartidas", rotulo: "Contrapartidas", grupo: "Regras do programa" },
+  { id: "sla", rotulo: "SLA e proteção", grupo: "Regras do programa" },
+  { id: "pontos", rotulo: "Pontos e premiação", grupo: "Regras do programa" },
+  { id: "regras", rotulo: "Regras publicadas", grupo: "Regras do programa" },
+  { id: "modelos", rotulo: "Modelos de contrato", grupo: "Regras do programa" },
+  { id: "cruzamento", rotulo: "Termo do cruzamento", grupo: "Regras do programa" },
+  { id: "fase", rotulo: "Fase do programa", grupo: "Metas e medição" },
+  { id: "metas", rotulo: "Metas", grupo: "Metas e medição" },
+  { id: "indicadores", rotulo: "Indicadores do painel", grupo: "Metas e medição" },
+  { id: "scorecard", rotulo: "Scorecard", grupo: "Metas e medição" },
+  { id: "icp", rotulo: "Critérios do ICP", grupo: "Metas e medição" },
+  { id: "custos", rotulo: "Custos e remunerações", grupo: "Metas e medição", admin: true },
+  { id: "regua", rotulo: "Régua de atendimento", grupo: "Operação" },
+  { id: "acoes", rotulo: "Ações da Wise", grupo: "Operação" },
+  { id: "etapas", rotulo: "Etapas e motivos de perda", grupo: "Operação" },
+  { id: "atividades", rotulo: "Tipos de atividade", grupo: "Operação" },
+  { id: "categorias", rotulo: "Categorias e campos", grupo: "Operação" },
+  { id: "emails", rotulo: "Textos de e-mail", grupo: "Operação" },
+  { id: "feriados", rotulo: "Feriados", grupo: "Operação" },
+  { id: "parametros", rotulo: "Parâmetros", grupo: "Operação" },
+  { id: "backup", rotulo: "Backup", grupo: "Sistema" },
 ];
 
 // Regras do programa como dados configuráveis (princípio III). Admin edita; time de parcerias só lê.
@@ -60,7 +56,7 @@ export default function Configuracoes() {
   const leitura = !isAdmin;
   const abas = ABAS.filter((a) => !a.admin || isAdmin);
   const abaParam = params.get("aba");
-  const aba = abas.some((a) => a.id === abaParam) ? abaParam! : "empresas";
+  const aba = abas.some((a) => a.id === abaParam) ? abaParam! : "niveis";
   const conteudo: Record<string, ReactNode> = {
     empresas: <SecaoEmpresas somenteLeitura={leitura} />,
     categorias: <CategoriasCampos somenteLeitura={leitura} />,
@@ -82,8 +78,6 @@ export default function Configuracoes() {
     etapas: <SecaoEtapas somenteLeitura={leitura} />,
     icp: <SecaoIcp somenteLeitura={leitura} />,
     cruzamento: <SecaoCruzamento somenteLeitura={leitura} />,
-    landing: <SecaoLandingPage somenteLeitura={leitura} />,
-    "landing-cliente": <SecaoLandingCliente somenteLeitura={leitura} />,
     modelos: <ModelosContrato somenteLeitura={leitura} />,
     parametros: <Parametros somenteLeitura={leitura} excluir={CHAVES_AGRUPADAS} />,
     feriados: <SecaoFeriados somenteLeitura={leitura} />,
@@ -93,12 +87,12 @@ export default function Configuracoes() {
 
   return (
     <div>
-      <Cabecalho titulo="Configurações" descricao={leitura ? "Você pode consultar as regras; só administradores alteram." : "Regras do programa Wise Partners."} />
+      <Cabecalho titulo="Regras e configurações" descricao={leitura ? "Você pode consultar as regras; só administradores alteram." : "Quais regras o portal aplica sozinho? Níveis, comissão, prazos, metas e a operação do programa."} />
       <p className="mb-4 flex gap-2 rounded-[10px] border border-menta-500/30 bg-menta-500/5 px-3 py-2 text-sm">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
         Mudanças de regra valem só para registros novos; os registros existentes mantêm os valores da época.
       </p>
-      <NavegacaoSecoes secoes={abas} ativa={aba} onChange={(v) => setParams(v === "empresas" ? {} : { aba: v }, { replace: true })}>
+      <NavegacaoSecoes secoes={abas} ativa={aba} onChange={(v) => setParams(v === "niveis" ? {} : { aba: v }, { replace: true })}>
         <div key={aba}>{conteudo[aba]}</div>
       </NavegacaoSecoes>
     </div>

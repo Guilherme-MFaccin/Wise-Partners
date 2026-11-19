@@ -199,7 +199,7 @@ FASES = ["Conhecimento", "Avaliação", "Compra", "Entrega", "Pós-venda"]
 CANAIS = {
     "Parceiro": ["Anúncios no Meta, eventos, feiras, orgânico, contatos dos consultores e sócios, instituições e órgãos de governo, indicação de clientes",
                  "Página dos parceiros com vídeo, valor de referência e cases; WhatsApp", "Cadastro com aceite, fila, conversa de entrada de 45 minutos no Meet",
-                 "Portal: link, página do cliente com a logo, minicurso, kit", "Grupo de WhatsApp, e-mail e comunicado do mês, encontro trimestral, lembretes"],
+                 "Portal: link exclusivo para a página única do cliente, minicurso, kit", "Grupo de WhatsApp, e-mail e comunicado do mês, encontro trimestral, lembretes"],
     "Cliente do parceiro": ["Mensagem do próprio parceiro com o link (a mensagem pronta é só sugestão)", "Página do cliente com as duas marcas, o valor de referência e os cases",
                             "Cadastro, aceite do termo, agenda com link do Meet", "Reunião de 2 horas; plano de ação em PDF pelo portal e por e-mail; Wise Hub",
                             "Wise Hub; se quiser mais, horas de consultoria ou a consultoria completa, com o closer"],

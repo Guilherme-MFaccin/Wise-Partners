@@ -550,6 +550,28 @@ insert into public.metas_pessoa (perfil_id, trimestre, indicador, valor) values
   (pg_temp.uid(1), to_char(current_date, 'YYYY-"T"Q'), 'regua_em_dia', 90);
 
 -- -------------------------------------------------------------------------------------
+-- Candidatos da página dos parceiros (fila, P-21 a P-25) e clientes dos parceiros (diagnóstico, P-95)
+-- -------------------------------------------------------------------------------------
+select pg_temp.como(null);
+insert into public.cadastros_landing (nome, email, whatsapp, empresa, cnpj, categoria_nome, clientes_ativos, cargo, termo_versao, privacidade_versao,
+  status, utm_source, utm_campaign, observacao, created_at, atualizado_em) values
+  ('Paula Ribeiro', 'paula@gestaoviva.demo', '44991110001', 'Gestão Viva ERP', pg_temp.cnpj(9101), 'ERP', 180, 'Sócia', 'demo', 'demo', 'fila', 'meta', 'lancamento-parceiros', null, now() - interval '20 hours', null),
+  ('Renato Lima', 'renato@segurotrabalho.demo', '44991110002', 'Seguro Trabalho SST', pg_temp.cnpj(9102), 'SST', 95, 'Diretor comercial', 'demo', 'demo', 'fila', 'evento', 'feira-industria', null, now() - interval '2 days', null),
+  ('Sofia Martins', 'sofia@contaclara.demo', '44991110003', 'Conta Clara Contabilidade', pg_temp.cnpj(9103), 'Contabilidade consultiva', 240, 'Sócia', 'demo', 'demo', 'contatado', 'meta', 'lancamento-parceiros', 'Mandei a agenda, aguardando resposta', now() - interval '6 days', now() - interval '4 days'),
+  ('Tiago Souza', 'tiago@fluxocrm.demo', '44991110004', 'Fluxo CRM', pg_temp.cnpj(9104), 'CRM', 410, 'CEO', 'demo', 'demo', 'reuniao_marcada', 'organico', null, 'Conversa de entrada marcada', now() - interval '5 days', now() - interval '3 days'),
+  ('Úrsula Prado', 'ursula@acisul.demo', '44991110005', 'Associação Comercial Sul', pg_temp.cnpj(9105), 'Associações comerciais e empresariais', null, 'Presidente', 'demo', 'demo', 'aprovado', null, null, 'Indicação de um consultor', now() - interval '25 days', now() - interval '18 days'),
+  ('Vitor Alves', 'vitor@automacaomais.demo', '44991110006', 'Automação Mais', pg_temp.cnpj(9106), 'Automação industrial', 60, 'Comercial', 'demo', 'demo', 'descartado', 'meta', 'lancamento-parceiros', 'Concorrente de parceiro atual', now() - interval '30 days', now() - interval '28 days');
+
+insert into public.cadastros_cliente (parceiro_id, nome, email, whatsapp, empresa, cnpj, cargo, faturamento_faixa, vendedores, segmento, desafio,
+  autoriza_parceiro, privacidade_versao, icp, caminho, status, chave, created_at, reuniao_em, plano_enviado_em, consultor_id) values
+  ('d0000000-0000-4000-a000-000000001008', 'Marcos Teixeira', 'marcos@moveissul.demo', '44992220001', 'Móveis Sul Planejados', pg_temp.cnpj(9201), 'Diretor', '500k_1m', 8, 'Indústria moveleira', 'O time não segue processo e a meta sai no achismo', true, 'demo', true, 'agenda', 'cadastrado', 'demo1', now() - interval '3 days', null, null, null),
+  ('d0000000-0000-4000-a000-000000001012', 'Helena Costa', 'helena@embalaforte.demo', '44992220002', 'Embala Forte', pg_temp.cnpj(9202), 'Sócia', '1m_5m', 14, 'Embalagens', 'Vendedores sem rotina de prospecção', true, 'demo', true, 'agenda', 'reuniao_agendada', 'demo2', now() - interval '4 days', now() + interval '2 days', null, pg_temp.uid(3)),
+  ('d0000000-0000-4000-a000-000000001009', 'Otávio Rocha', 'otavio@metalnorte.demo', '44992220003', 'Metal Norte', pg_temp.cnpj(9203), 'Gerente comercial', '250k_500k', 5, 'Metalurgia', 'Muita proposta e pouco fechamento', false, 'demo', true, 'agenda', 'reuniao_feita', 'demo3', now() - interval '9 days', now() - interval '3 days', null, pg_temp.uid(3)),
+  ('d0000000-0000-4000-a000-000000001008', 'Lívia Nunes', 'livia@grafprint.demo', '44992220004', 'Graf Print', pg_temp.cnpj(9204), 'Diretora', '500k_1m', 6, 'Gráfica', 'Clientes antigos comprando menos', true, 'demo', true, 'agenda', 'diagnostico_feito', 'demo4', now() - interval '20 days', now() - interval '14 days', now() - interval '12 days', pg_temp.uid(1)),
+  ('d0000000-0000-4000-a000-000000001012', 'Caio Mendes', 'caio@docecasa.demo', '44992220005', 'Doce Casa', pg_temp.cnpj(9205), 'Proprietário', '100k_250k', 2, 'Alimentos', 'Depende de mim para vender', false, 'demo', false, 'autodiagnostico', 'cadastrado', 'demo5', now() - interval '1 day', null, null, null);
+update public.cadastros_cliente set diagnostico_em = now() - interval '1 day' where chave = 'demo5';
+
+-- -------------------------------------------------------------------------------------
 -- Rotinas: status de atividade, régua, faixas e alertas como no dia a dia
 -- -------------------------------------------------------------------------------------
 select pg_temp.como(null);

@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import {
-  Award, Bell, BookOpen, FileSearch, GraduationCap, Handshake, Home, IdCard, LogOut, Megaphone, Menu, MessageSquareHeart,
-  Rocket, Scale, Send, Shuffle, Sparkles, Trophy, UserCircle, Users, CalendarCheck,
-} from "lucide-react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Bell, LogOut, Menu, UserCircle } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { AvisoSenhaProvisoria } from "@/components/conta/AvisoSenhaProvisoria";
 import { useNaoLidas } from "@/hooks/useNotificacoes";
@@ -13,64 +10,35 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { cn } from "@/lib/utils";
 import { useMeuParceiro } from "@/components/portal/dados";
 import { useComunicadosNaoLidos, usePlanoOnboarding } from "@/components/portal/dadosV2";
+import { SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
+import { BarraAbas, MenuSecoes, filtrarSecoes } from "@/components/layout/Navegacao";
 
-type Item = {
-  to: string;
-  rotulo: string;
-  icone: any;
-  fim?: boolean;
-  responsavel?: boolean;   // só o responsável do parceiro
-  onboarding?: boolean;    // só enquanto existe plano de onboarding
-  comercial?: boolean;     // só parceria comercial
-  contador?: "comunicados";
-};
-
-const ITENS: Item[] = [
-  { to: "/parceiro", rotulo: "Início", icone: Home, fim: true },
-  { to: "/parceiro/nivel", rotulo: "Meu nível", icone: Award },
-  { to: "/parceiro/parceria", rotulo: "Nossa parceria", icone: Sparkles },
-  { to: "/parceiro/onboarding", rotulo: "Onboarding", icone: Rocket, onboarding: true },
-  { to: "/parceiro/capacitacao", rotulo: "Capacitação", icone: GraduationCap },
-  { to: "/parceiro/indicar", rotulo: "Indicar", icone: Send },
-  { to: "/parceiro/indicacoes", rotulo: "Indicações", icone: Handshake },
-  { to: "/parceiro/acoes", rotulo: "Ações conjuntas", icone: CalendarCheck },
-  { to: "/parceiro/rfps", rotulo: "Pedidos de RFP", icone: FileSearch },
-  { to: "/parceiro/ficha", rotulo: "Ficha de apresentação", icone: IdCard },
-  { to: "/parceiro/materiais", rotulo: "Materiais e agenda", icone: BookOpen },
-  { to: "/parceiro/regras", rotulo: "Regras do programa", icone: Scale },
-  { to: "/parceiro/comunicados", rotulo: "Comunicados", icone: Megaphone, contador: "comunicados" },
-  { to: "/parceiro/ranking", rotulo: "Ranking", icone: Trophy },
-  { to: "/parceiro/pesquisa", rotulo: "Pesquisa", icone: MessageSquareHeart },
-  { to: "/parceiro/cruzamento", rotulo: "Cruzamento", icone: Shuffle, comercial: true },
-  { to: "/parceiro/usuarios", rotulo: "Usuários", icone: Users, responsavel: true },
-];
-
-function Navegacao({ onNavegar }: { onNavegar?: () => void }) {
+// Seções da área do parceiro (src/lib/navegacao.ts), filtradas por responsável, onboarding e tipo de parceria
+function useSecoes() {
   const { perfil } = useAuth();
   const parceiroQ = useMeuParceiro();
   const onboardingQ = usePlanoOnboarding();
-  const { data: naoLidos = 0 } = useComunicadosNaoLidos();
   const temPlano = !!onboardingQ.data?.plano;
   const comercial = parceiroQ.data?.tipo_parceria === "comercial";
-  const itens = ITENS.filter((i) =>
-    (!i.responsavel || perfil?.is_responsavel_parceiro) && (!i.onboarding || temPlano) && (!i.comercial || comercial));
+  return filtrarSecoes(SECOES_PARCEIRO, (a: AbaParceiro) =>
+    (!a.responsavel || !!perfil?.is_responsavel_parceiro) && (!a.onboarding || temPlano) && (!a.comercial || comercial));
+}
+
+function Contador({ n }: { n: number }) {
+  if (n <= 0) return null;
   return (
-    <nav className="flex flex-col gap-0.5">
-      {itens.map((i) => (
-        <NavLink key={i.to} to={i.to} end={i.fim} onClick={onNavegar}
-          className={({ isActive }) => cn(
-            "flex items-center gap-3 rounded-[8px] px-3 py-2 text-sm font-medium text-neutro-300 hover:bg-white/5 hover:text-white",
-            isActive && "bg-menta-500/10 text-menta-400")}>
-          <i.icone className="h-4 w-4 shrink-0" />
-          <span className="min-w-0 flex-1 truncate">{i.rotulo}</span>
-          {i.contador === "comunicados" && naoLidos > 0 && (
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-neutro-900"
-              aria-label={`${naoLidos} não lidos`}>{naoLidos}</span>
-          )}
-        </NavLink>
-      ))}
-    </nav>
+    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-neutro-900" aria-label={`${n} não lidos`}>{n}</span>
   );
+}
+
+function Navegacao({ onNavegar }: { onNavegar?: () => void }) {
+  const { data: naoLidos = 0 } = useComunicadosNaoLidos();
+  return <MenuSecoes secoes={useSecoes()} onNavegar={onNavegar} extra={(s) => (s.id === "comunidade" ? <Contador n={naoLidos} /> : null)} />;
+}
+
+function AbasDaSecao() {
+  const { data: naoLidos = 0 } = useComunicadosNaoLidos();
+  return <BarraAbas secoes={useSecoes()} rotuloExtra={(a: AbaParceiro) => (a.contador === "comunicados" ? <Contador n={naoLidos} /> : null)} />;
 }
 
 export function ParceiroLayout() {
@@ -126,7 +94,7 @@ export function ParceiroLayout() {
           </Link>
         </header>
         <AvisoSenhaProvisoria />
-        <main className="mx-auto w-full max-w-6xl px-4 py-6 sm:px-6"><Outlet /></main>
+        <main className="mx-auto w-full max-w-6xl px-4 pb-10 pt-4 sm:px-6"><AbasDaSecao /><Outlet /></main>
       </div>
     </div>
   );

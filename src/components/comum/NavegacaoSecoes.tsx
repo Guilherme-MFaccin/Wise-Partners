@@ -7,7 +7,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { cn } from "@/lib/utils";
 
 // `fixa`: fica no topo, fora da ordem alfabética (por exemplo, "Visão geral")
-export type Secao = { id: string; rotulo: string; fixa?: boolean };
+// `grupo`: quando as seções têm grupo, a lista segue a ordem dada, com o nome do grupo acima de cada bloco
+export type Secao = { id: string; rotulo: string; fixa?: boolean; grupo?: string };
 
 // Busca sem diferenciar maiúsculas nem acentos: "acoes" encontra "Ações da Wise"
 export function normalizarBusca(texto: string) {
@@ -22,8 +23,21 @@ export function casaBusca(rotulo: string, busca: string) {
 
 export function ordenarSecoes(secoes: Secao[]) {
   const fixas = secoes.filter((s) => s.fixa);
-  const demais = secoes.filter((s) => !s.fixa).sort((a, b) => a.rotulo.localeCompare(b.rotulo, "pt-BR", { sensitivity: "base" }));
+  const agrupado = secoes.some((s) => s.grupo);
+  const demais = secoes.filter((s) => !s.fixa);
+  if (!agrupado) demais.sort((a, b) => a.rotulo.localeCompare(b.rotulo, "pt-BR", { sensitivity: "base" }));
   return { fixas, demais };
+}
+
+// Blocos consecutivos do mesmo grupo
+export function emGrupos(secoes: Secao[]) {
+  const grupos: { grupo?: string; secoes: Secao[] }[] = [];
+  for (const s of secoes) {
+    const ultimo = grupos[grupos.length - 1];
+    if (ultimo && ultimo.grupo === s.grupo) ultimo.secoes.push(s);
+    else grupos.push({ grupo: s.grupo, secoes: [s] });
+  }
+  return grupos;
 }
 
 function BotaoSecao({ secao, ativa, onClick }: { secao: Secao; ativa: boolean; onClick: () => void }) {
@@ -85,7 +99,12 @@ function ListaLateral({ secoes, ativa, onChange, rotulo }: { secoes: Secao[]; at
       <nav aria-label={rotulo} className="-mx-1 flex min-h-0 flex-col gap-0.5 overflow-y-auto px-1">
         {fixas.map((s) => <BotaoSecao key={s.id} secao={s} ativa={s.id === ativa} onClick={() => onChange(s.id)} />)}
         {fixas.length > 0 && demais.length > 0 && <div className="my-1.5 border-t border-white/10" role="separator" />}
-        {demais.map((s) => <BotaoSecao key={s.id} secao={s} ativa={s.id === ativa} onClick={() => onChange(s.id)} />)}
+        {emGrupos(demais).map((g, i) => (
+          <div key={g.grupo ?? i} className="flex flex-col gap-0.5">
+            {g.grupo && <p className="px-3 pb-1 pt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-neutro-300">{g.grupo}</p>}
+            {g.secoes.map((s) => <BotaoSecao key={s.id} secao={s} ativa={s.id === ativa} onClick={() => onChange(s.id)} />)}
+          </div>
+        ))}
       </nav>
       {total === 0 ? (
         <div className="shrink-0 space-y-2 px-3 text-sm text-muted-foreground">
@@ -133,7 +152,7 @@ function SeletorCompacto({ secoes, ativa, onChange, rotulo }: { secoes: Secao[];
             <CommandEmpty>Nada encontrado.</CommandEmpty>
             {fixas.length > 0 && <CommandGroup>{fixas.map(item)}</CommandGroup>}
             {fixas.length > 0 && <CommandSeparator />}
-            <CommandGroup>{demais.map(item)}</CommandGroup>
+            {emGrupos(demais).map((g, i) => <CommandGroup key={g.grupo ?? i} heading={g.grupo}>{g.secoes.map(item)}</CommandGroup>)}
           </CommandList>
         </Command>
       </PopoverContent>
