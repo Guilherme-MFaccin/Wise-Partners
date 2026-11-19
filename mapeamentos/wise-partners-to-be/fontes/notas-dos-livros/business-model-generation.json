@@ -1,0 +1,942 @@
+{
+ "livro": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers",
+ "autores": "Alexander Osterwalder e Yves Pigneur",
+ "slug": "business-model-generation",
+ "leitura": {
+  "fonte": "PDF no Google Drive (fileId 1cHwqZlmIi6PknSLWPo-vSHCDVlJ4hTvn), 338 páginas, baixado inteiro e convertido em texto.",
+  "completa": true,
+  "paginacao": "Esta é a edição digital reformatada (o próprio livro avisa que foi refeita para leitores de e-book), sem número de página impresso. Todas as páginas citadas são a página do PDF ('PDF p. N'). Para achar o trecho na edição impressa, use o título da seção.",
+  "limites": "Figuras não vêm no texto. Os nomes das cinco fases de canal e o rótulo de eficiência e valor dos dois lados do canvas aparecem só nas figuras; onde isso acontece a nota diz e não traz citação."
+ },
+ "tese": "Um modelo de negócio é a lógica de como uma organização cria, entrega e captura valor, e pode ser descrito em nove blocos que cobrem quatro áreas: clientes, oferta, infraestrutura e viabilidade financeira. O lado direito do canvas (segmentos, proposta de valor, canais, relacionamento, receitas) é o lado do valor e do cliente; o lado esquerdo (recursos, atividades, parcerias, custos) é o lado da infraestrutura e do custo, e toda mudança à direita tem efeito imediato à esquerda. O canvas funciona como linguagem comum e como mapa visual, preenchido em grupo com post-its, servindo de ponte entre a estratégia e os processos. Para o Programa Wise Partners os dois padrões centrais são a plataforma de múltiplos lados (dois grupos interdependentes, um subsidiado pelo outro) e o modelo gratuito na variante isca e anzol: o diagnóstico e o Wise Hub gratuitos são a isca, a consultoria contratada é a compra seguinte que paga a conta.",
+ "principios": [
+  {
+   "principio": "Descreva o programa como um modelo de negócio completo, nos nove blocos, antes de desenhar processos.",
+   "explicacao": "O livro define modelo de negócio como a lógica de criar, entregar e capturar valor, e diz que ele é a planta de uma estratégia que será implementada por estruturas, processos e sistemas. Ou seja, o canvas vem antes do mapa de processos e o orienta.",
+   "aplicacao_wise": "O mapeamento to-be do Programa Wise Partners deve partir de um canvas do programa (e não do fluxo atual de atendimento). Cada processo do mapa precisa apontar para o bloco que sustenta: por exemplo, 'fila e conversa de entrada' sustenta Canais e Relacionamento do lado parceiro; 'reunião de diagnóstico' sustenta a Proposta de Valor do lado cliente do parceiro; 'pagar 40% da primeira mensalidade' sustenta Estrutura de Custos.",
+   "citacoes": [
+    {
+     "trecho": "A business model describes the rationale of how an organization creates, delivers, and captures value",
+     "pagina": "PDF p. 19"
+    },
+    {
+     "trecho": "The business model is like a blueprint for a strategy to be implemented through organizational structures, processes, and systems.",
+     "pagina": "PDF p. 20"
+    },
+    {
+     "trecho": "The nine blocks cover the four main areas of a business: customers, offer, infrastructure, and financial viability.",
+     "pagina": "PDF p. 20"
+    }
+   ]
+  },
+  {
+   "principio": "O lado direito do canvas é valor e cliente; o lado esquerdo é custo e infraestrutura. Mexer à direita cobra à esquerda.",
+   "explicacao": "O livro divide o canvas em um lado direito focado em valor e cliente e um lado esquerdo de custo e infraestrutura. Acrescentar ou retirar algo da proposta de valor, dos canais ou do relacionamento muda recursos, atividades, parcerias e custos. A palavra 'eficiência' para o lado esquerdo aparece só na figura do canvas na edição impressa, não no texto desta edição; o texto fala em 'custos' e 'infraestrutura'.",
+   "aplicacao_wise": "Cada benefício que a Wise promete ao parceiro ou ao cliente dele (diagnóstico de 2 horas, plano de ação, Wise Hub, recomendação aos clientes da Wise no nível Premium, formação no Elite) precisa ter, do lado esquerdo, a atividade, o recurso e o custo correspondentes. Exemplo: o diagnóstico gratuito exige horas de consultor sênior (recurso humano) e é custo variável por cliente atendido.",
+   "citacoes": [
+    {
+     "trecho": "In the Business Model Canvas the right-hand side represents value creation and the left-hand side represents costs.",
+     "pagina": "PDF p. 256"
+    },
+    {
+     "trecho": "The Business Model Canvas consists of a right-hand value and customer-focused side, and a left-hand cost and infrastructure side",
+     "pagina": "PDF p. 258"
+    },
+    {
+     "trecho": "Changing elements on the right-hand side has implications for the left-hand side.",
+     "pagina": "PDF p. 258"
+    },
+    {
+     "trecho": "Blue Ocean Strategy is about simultaneously increasing value while reducing costs.",
+     "pagina": "PDF p. 258"
+    }
+   ]
+  },
+  {
+   "principio": "Escolha conscientemente quais segmentos atender e trate como segmentos diferentes os grupos que pedem oferta, canal, relacionamento ou disposição de pagar diferentes.",
+   "explicacao": "O livro lista critérios para separar segmentos: necessidades que justificam oferta distinta, canais diferentes, tipos de relacionamento diferentes, rentabilidade diferente, disposição de pagar por aspectos diferentes da oferta.",
+   "aplicacao_wise": "Pelos critérios do livro há pelo menos três segmentos: (1) empresas de software parceiras (CRM, ERP), que chegam por anúncio no Meta e recebem link e comissão; (2) indústrias clientes do parceiro, que recebem diagnóstico e Wise Hub sem custo e podem contratar a consultoria; (3) indústrias que já são clientes da Wise, que no nível Premium passam a receber recomendação de parceiros. Os níveis Select, Premium e Elite também podem ser segmentos, porque pedem relacionamentos diferentes.",
+   "citacoes": [
+    {
+     "trecho": "An organization must make a conscious decision about which segments to serve and which segments to ignore.",
+     "pagina": "PDF p. 24"
+    },
+    {
+     "trecho": "Their needs require and justify a distinct offer",
+     "pagina": "PDF p. 24"
+    },
+    {
+     "trecho": "They require different types of relationships",
+     "pagina": "PDF p. 24"
+    },
+    {
+     "trecho": "They are willing to pay for different aspects of the offer",
+     "pagina": "PDF p. 24"
+    }
+   ]
+  },
+  {
+   "principio": "Uma plataforma de múltiplos lados só cria valor quando atrai e atende todos os lados ao mesmo tempo.",
+   "explicacao": "Plataformas reúnem dois ou mais grupos distintos e interdependentes, e o valor para um grupo depende da presença do outro. Isso gera o dilema do ovo e da galinha, que se resolve subsidiando um dos lados.",
+   "aplicacao_wise": "O parceiro de software só se engaja se o link gerar diagnósticos e comissão; a indústria só chega se o parceiro oferecer. A Wise é o operador da plataforma: conecta parceiros de software, indústrias clientes desses parceiros e, no nível Premium, os próprios clientes da Wise. O mapa de processos precisa ter, para cada lado, processos de atração, ativação e retenção, e não só o funil de venda da consultoria.",
+   "citacoes": [
+    {
+     "trecho": "MULTI-SIDED PLATFORMS bring together two or more distinct but interdependent groups of customers.",
+     "pagina": "PDF p. 76"
+    },
+    {
+     "trecho": "The platform creates value by facilitating interactions between the different groups.",
+     "pagina": "PDF p. 77"
+    },
+    {
+     "trecho": "The key is that the platform must attract and serve all groups simultaneously in order to create value.",
+     "pagina": "PDF p. 78"
+    },
+    {
+     "trecho": "Hence multi-sided platforms often face a “chicken and egg” dilemma.",
+     "pagina": "PDF p. 78"
+    }
+   ]
+  },
+  {
+   "principio": "Decida de propósito qual lado subsidiar e confira se o lado pagante cobre o subsídio.",
+   "explicacao": "O livro diz que escolher o lado subsidiado é decisão de preço que pode determinar o sucesso da plataforma, e dá o caso do PlayStation 3, em que o subsídio não foi coberto pelo outro lado.",
+   "aplicacao_wise": "Na Wise há dois subsídios: o cliente do parceiro recebe R$ 5.000 de valor de referência (diagnóstico R$ 2.000 e Wise Hub R$ 3.000) sem pagar, e o parceiro recebe 40% da primeira mensalidade sem pagar nada para entrar. Quem paga é a indústria que contrata a consultoria. As quatro perguntas do livro viram uma checagem trimestral: há parceiros e indústrias em número suficiente? Qual lado é mais sensível a preço? O subsídio atrai esse lado? A receita da consultoria cobre o custo dos diagnósticos que não convertem mais a comissão?",
+   "citacoes": [
+    {
+     "trecho": "One way multi-sided platforms solve this problem is by subsidizing a Customer Segment.",
+     "pagina": "PDF p. 78"
+    },
+    {
+     "trecho": "Can we attract sufficient numbers of customers for each side of the platform? Which side is more price sensitive? Can that side be enticed by a subsidized offer? Will the other side of the platform generate sufficient revenues to cover the subsidies?",
+     "pagina": "PDF p. 79"
+    },
+    {
+     "trecho": "Choosing which segment to subsidize can be a crucial pricing decision that determines the success of a multi-sided platform business model.",
+     "pagina": "PDF p. 88-89"
+    }
+   ]
+  },
+  {
+   "principio": "No modelo gratuito, ao menos um segmento recebe algo sem custo de forma contínua e é financiado por outra parte do modelo.",
+   "explicacao": "O livro apresenta três padrões de gratuidade: plataforma com anúncio, freemium e isca e anzol. Os três têm em comum um segmento que se beneficia continuamente da oferta gratuita.",
+   "aplicacao_wise": "O diagnóstico de 2 horas com plano de ação é isca e anzol (uma oferta inicial gratuita que leva à compra seguinte, a consultoria), não freemium: freemium supõe custo marginal baixo por usuário gratuito, e o diagnóstico custa horas de consultor. O Wise Hub está mais perto do freemium (plataforma digital, custo marginal baixo). Separar os dois no canvas muda as métricas: no diagnóstico mede-se custo por diagnóstico e conversão em contrato; no Wise Hub, custo por usuário gratuito e conversão.",
+   "citacoes": [
+    {
+     "trecho": "In the FREE business model at least one substantial Customer Segment is able to continuously benefit from a free-of-charge offer.",
+     "pagina": "PDF p. 89"
+    },
+    {
+     "trecho": "Non-paying customers are financed by another part of the business model or by another Customer Segment.",
+     "pagina": "PDF p. 89"
+    },
+    {
+     "trecho": "The three patterns are (1) free offer based on multi-sided platforms (advertising-based), (2) free basic services with optional premium services (the so-called “freemium” model), (3) and the “bait & hook” model whereby a free or inexpensive initial offer lures customers into repeat purchases.",
+     "pagina": "PDF p. 91"
+    }
+   ]
+  },
+  {
+   "principio": "Na isca e anzol, o que sustenta o modelo é o vínculo forte entre a oferta gratuita e a compra seguinte.",
+   "explicacao": "O livro diz que a chave é a ligação entre o produto inicial barato ou gratuito e o item seguinte com margem alta, e que controlar esse vínculo (lock-in) é crucial. Também diz que o padrão costuma exigir marca forte.",
+   "aplicacao_wise": "O plano de ação entregue no diagnóstico precisa terminar em algo que só a consultoria da Wise executa bem (o anzol). Um diagnóstico que entrega um plano que o cliente executa sozinho é isca sem anzol. Processo a desenhar: o roteiro do diagnóstico com a proposta de consultoria já ligada ao plano, e a cadência de acompanhamento depois do diagnóstico, com o Wise Hub mantendo o cliente perto da marca.",
+   "citacoes": [
+    {
+     "trecho": "“Bait & hook” refers to a business model pattern characterized by an attractive, inexpensive, or free initial offer that encourages continuing future purchases of related products or services.",
+     "pagina": "PDF p. 105"
+    },
+    {
+     "trecho": "Controlling the “lock-in” is crucial to this pattern’s success.",
+     "pagina": "PDF p. 106"
+    },
+    {
+     "trecho": "This pattern is characterized by a tight link or “lock-in” between the initial product and the follow-up products or services.",
+     "pagina": "PDF p. 108"
+    },
+    {
+     "trecho": "Bait & hook patterns usually require a strong brand",
+     "pagina": "PDF p. 108"
+    }
+   ]
+  },
+  {
+   "principio": "Use o canvas em grupo, impresso grande, com post-its: um elemento por nota, poucas palavras, e a discussão vale tanto quanto o resultado.",
+   "explicacao": "O livro insiste no uso visual e coletivo do canvas. Post-its funcionam como contêineres de ideias que se movem entre blocos. Ver o modelo transforma suposições tácitas em informação explícita. Para empresas existentes, sugere mapear e avaliar o modelo atual em oficinas separadas com pessoas de toda a organização, e testar cedo esboços de canvas com clientes.",
+   "aplicacao_wise": "Fazer duas oficinas: uma para o canvas as-is do programa e outra para o to-be, com gerente de parcerias, closer, consultor que conduz diagnóstico e financeiro. Usar uma cor de post-it por segmento (parceiro, cliente do parceiro, cliente da Wise) no mesmo canvas, o que é escolha de método nossa e não regra do livro. Mostrar o esboço do to-be a três ou quatro parceiros antes de fechar.",
+   "citacoes": [
+    {
+     "trecho": "The Business Model Canvas works best when printed out on a large surface so groups of people can jointly start sketching and discussing business model elements with Post-it® notes or board markers.",
+     "pagina": "PDF p. 48"
+    },
+    {
+     "trecho": "Here are three simple guidelines: (1) use thick marking pens, (2) write only one element per Post-it™ note, and (3) write only a few words per note to capture the essential point.",
+     "pagina": "PDF p. 151"
+    },
+    {
+     "trecho": "by visually depicting a business model, one turns its tacit assumptions into explicit information.",
+     "pagina": "PDF p. 150"
+    },
+    {
+     "trecho": "Ideally, mapping and assessing your current business model should be done in separate workshops involving people throughout the organization, at the same time ideas and opinions for new business models are being collected.",
+     "pagina": "PDF p. 290"
+    },
+    {
+     "trecho": "Start testing preliminary business model directions early by soliciting feedback on Business Model Canvas sketches.",
+     "pagina": "PDF p. 290"
+    }
+   ]
+  },
+  {
+   "principio": "Quem recebe o valor nem sempre é quem paga, e isso pode desalinhar incentivos.",
+   "explicacao": "Na seção sobre modelos além do lucro, o livro descreve modelos financiados por terceiros, em que o beneficiário não é o pagador, e alerta que o incentivo de servir quem paga pode ficar mais forte do que o de servir quem recebe.",
+   "aplicacao_wise": "O livro trata de ONGs e governo, então a ligação com a Wise é analogia nossa: a indústria que recebe o diagnóstico gratuito ainda não paga, e o parceiro é remunerado pela Wise. O risco é desenhar o diagnóstico para vender consultoria e não para servir a indústria, ou desenhar o programa para agradar o parceiro e não o cliente final. Regra de processo: o diagnóstico tem critério de qualidade próprio, medido pela indústria, separado da taxa de conversão.",
+   "citacoes": [
+    {
+     "trecho": "In this type of enterprise model, the product or service recipient is not the payer.",
+     "pagina": "PDF p. 307"
+    },
+    {
+     "trecho": "One risk of the third-party enterprise model is that value creation incentives can become misaligned.",
+     "pagina": "PDF p. 307"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Business Model Canvas (os nove blocos)",
+   "paginas": "PDF p. 19 a 49",
+   "componentes": [
+    {
+     "nome": "Customer Segments (Segmentos de Clientes)",
+     "descricao": "Os diferentes grupos de pessoas ou organizações que a empresa quer alcançar e atender. Grupos são segmentos distintos quando pedem oferta, canal ou relacionamento diferentes, têm rentabilidade diferente ou pagam por aspectos diferentes da oferta.",
+     "pergunta": "Para quem estamos criando valor? Quem são nossos clientes mais importantes?",
+     "tipos": [
+      "Mercado de massa",
+      "Nicho de mercado",
+      "Segmentado",
+      "Diversificado",
+      "Plataformas (ou mercados) de múltiplos lados"
+     ],
+     "aplicacao_wise": "Plataforma de múltiplos lados: empresas de software parceiras (CRM, ERP) por nível (Select, Premium, Elite); indústrias clientes dos parceiros; indústrias clientes da Wise (lado que recebe recomendação de parceiros no Premium).",
+     "citacoes": [
+      {
+       "trecho": "Customers comprise the heart of any business model.",
+       "pagina": "PDF p. 24"
+      },
+      {
+       "trecho": "For whom are we creating value? Who are our most important customers?",
+       "pagina": "PDF p. 24"
+      },
+      {
+       "trecho": "Some organizations serve two or more interdependent Customer Segments.",
+       "pagina": "PDF p. 26"
+      }
+     ]
+    },
+    {
+     "nome": "Value Propositions (Propostas de Valor)",
+     "descricao": "O pacote de produtos e serviços que cria valor para um segmento específico. É a razão pela qual o cliente escolhe uma empresa e não outra: resolve um problema ou atende uma necessidade. O valor pode ser quantitativo (preço, rapidez) ou qualitativo (design, experiência).",
+     "pergunta": "Que valor entregamos ao cliente? Qual problema do cliente estamos ajudando a resolver? Quais necessidades estamos atendendo? Que pacotes de produtos e serviços oferecemos a cada segmento?",
+     "tipos": [
+      "Novidade",
+      "Desempenho",
+      "Personalização",
+      "Fazer o trabalho pelo cliente (getting the job done)",
+      "Design",
+      "Marca e status",
+      "Preço (inclui oferta gratuita)",
+      "Redução de custo",
+      "Redução de risco",
+      "Acessibilidade",
+      "Conveniência e usabilidade"
+     ],
+     "aplicacao_wise": "Uma proposta por segmento. Para a indústria: diagnóstico comercial de 2 horas com plano de ação e Wise Hub sem custo (redução de risco e preço zero), e depois a consultoria (fazer o trabalho). Para o parceiro: mais valor entregue à base dele sem custo, comissão de 40% da primeira mensalidade, e nos níveis acima recomendação pela Wise e formação.",
+     "citacoes": [
+      {
+       "trecho": "The Value Proposition is the reason why customers turn to one company over another. It solves a customer problem or satisfies a customer need.",
+       "pagina": "PDF p. 26"
+      },
+      {
+       "trecho": "What value do we deliver to the customer? Which one of our customer’s problems are we helping to solve? Which customer needs are we satisfying? What bundles of products and services are we offering to each Customer Segment?",
+       "pagina": "PDF p. 27"
+      },
+      {
+       "trecho": "Value can be created simply by helping a customer get certain jobs done.",
+       "pagina": "PDF p. 28"
+      },
+      {
+       "trecho": "Customers value reducing the risks they incur when purchasing products or services.",
+       "pagina": "PDF p. 29"
+      }
+     ]
+    },
+    {
+     "nome": "Channels (Canais)",
+     "descricao": "Como a empresa se comunica com os segmentos e os alcança para entregar a proposta de valor: canais de comunicação, distribuição e venda, que são os pontos de contato com o cliente. Podem ser próprios ou de parceiros, diretos ou indiretos. Canais de parceiros têm margem menor mas ampliam o alcance.",
+     "pergunta": "Por quais canais nossos segmentos querem ser alcançados? Como os alcançamos hoje? Como nossos canais estão integrados? Quais funcionam melhor? Quais têm melhor custo? Como os integramos à rotina dos clientes?",
+     "tipos": [
+      "Fase 1: conhecimento (awareness), gerar conhecimento sobre produtos e serviços",
+      "Fase 2: avaliação, ajudar o cliente a avaliar a proposta de valor",
+      "Fase 3: compra, permitir a compra",
+      "Fase 4: entrega da proposta de valor",
+      "Fase 5: pós-venda, suporte depois da compra",
+      "Canais próprios diretos (força de vendas, site)",
+      "Canais próprios indiretos (lojas próprias)",
+      "Canais de parceiros (indiretos: atacado, varejo, sites de parceiros)"
+     ],
+     "nota": "O texto diz que os canais têm cinco fases e lista as cinco funções; os nomes curtos das fases estão na figura, que não vem no texto desta edição.",
+     "aplicacao_wise": "Para o lado parceiro: anúncio no Meta (conhecimento), fila e conversa de entrada (avaliação), adesão (compra, sem pagamento), entrega do link e materiais (entrega), acompanhamento e subida de nível (pós-venda). Para o lado indústria, o parceiro é o canal de parceiro: o link do parceiro cobre conhecimento e avaliação, o diagnóstico é entrega, o Wise Hub e o acompanhamento são pós-venda.",
+     "citacoes": [
+      {
+       "trecho": "Channels are customer touch points that play an important role in the customer experience.",
+       "pagina": "PDF p. 31"
+      },
+      {
+       "trecho": "Through which Channels do our Customer Segments want to be reached? How are we reaching them now? How are our Channels integrated? Which ones work best? Which ones are most cost-efficient? How are we integrating them with customer routines?",
+       "pagina": "PDF p. 31"
+      },
+      {
+       "trecho": "Channels have five distinct phases. Each channel can cover some or all of these phases.",
+       "pagina": "PDF p. 31"
+      },
+      {
+       "trecho": "Partner Channels lead to lower margins, but they allow an organization to expand its reach and benefit from partner strengths.",
+       "pagina": "PDF p. 32"
+      }
+     ]
+    },
+    {
+     "nome": "Customer Relationships (Relacionamento com Clientes)",
+     "descricao": "Os tipos de relação que a empresa estabelece com cada segmento, do pessoal ao automatizado. As motivações são aquisição, retenção e aumento de vendas (upselling). Vários tipos podem coexistir com o mesmo segmento.",
+     "pergunta": "Que tipo de relacionamento cada segmento espera que estabeleçamos e mantenhamos? Quais já estabelecemos? Quanto custam? Como se integram ao resto do modelo?",
+     "tipos": [
+      "Assistência pessoal",
+      "Assistência pessoal dedicada",
+      "Autosserviço",
+      "Serviços automatizados",
+      "Comunidades",
+      "Cocriação",
+      "Motivações: aquisição, retenção, aumento de vendas"
+     ],
+     "aplicacao_wise": "Os níveis do programa são tipos de relacionamento: Select com serviços automatizados e comunidade; Premium com assistência pessoal (gerente de parcerias) e recomendação cruzada; Elite com assistência pessoal dedicada e cocriação (formação para a base do parceiro). Com a indústria: assistência pessoal no diagnóstico e serviços automatizados no Wise Hub.",
+     "citacoes": [
+      {
+       "trecho": "Relationships can range from personal to automated.",
+       "pagina": "PDF p. 33"
+      },
+      {
+       "trecho": "What type of relationship does each of our Customer Segments expect us to establish and maintain with them? Which ones have we established? How costly are they? How are they integrated with the rest of our business model?",
+       "pagina": "PDF p. 34"
+      },
+      {
+       "trecho": "It represents the deepest and most intimate type of relationship and normally develops over a long period of time.",
+       "pagina": "PDF p. 34"
+      }
+     ]
+    },
+    {
+     "nome": "Revenue Streams (Fontes de Receita)",
+     "descricao": "O dinheiro que a empresa gera em cada segmento. Pode ser receita de transação (pagamento único) ou recorrente. Cada fonte pode ter mecanismo de preço fixo (lista, por característica, por segmento, por volume) ou dinâmico (negociação, gestão de rendimento, mercado em tempo real, leilão).",
+     "pergunta": "Por qual valor nossos clientes estão realmente dispostos a pagar? Pelo que pagam hoje? Como pagam hoje? Como prefeririam pagar? Quanto cada fonte contribui para a receita total?",
+     "tipos": [
+      "Venda de ativo",
+      "Taxa de uso",
+      "Assinatura",
+      "Empréstimo, aluguel ou leasing",
+      "Licenciamento",
+      "Taxa de corretagem (comissão por intermediação)",
+      "Publicidade",
+      "Receita de transação x receita recorrente",
+      "Preço fixo x preço dinâmico"
+     ],
+     "aplicacao_wise": "A Wise só tem receita no lado indústria, quando o cliente do parceiro contrata a consultoria (mensalidade, receita recorrente). O lado parceiro e o diagnóstico não geram receita. A comissão de 40% da primeira mensalidade é, do ponto de vista do parceiro, uma taxa de corretagem que a Wise paga; no canvas da Wise ela vai para Estrutura de Custos.",
+     "citacoes": [
+      {
+       "trecho": "If customers comprise the heart of a business model, Revenue Streams are its arteries.",
+       "pagina": "PDF p. 36"
+      },
+      {
+       "trecho": "For what value are our customers really willing to pay? For what do they currently pay? How are they currently paying? How would they prefer to pay? How much does each Revenue Stream contribute to overall revenues?",
+       "pagina": "PDF p. 37"
+      },
+      {
+       "trecho": "Brokers and real estate agents earn a commission each time they successfully match a buyer and seller.",
+       "pagina": "PDF p. 38"
+      }
+     ]
+    },
+    {
+     "nome": "Key Resources (Recursos Principais)",
+     "descricao": "Os ativos mais importantes para o modelo funcionar. Podem ser próprios, alugados ou obtidos de parceiros.",
+     "pergunta": "Que recursos principais nossas propostas de valor exigem? E nossos canais? Nosso relacionamento com clientes? Nossas fontes de receita?",
+     "tipos": [
+      "Físicos",
+      "Intelectuais (marcas, conhecimento proprietário, patentes, parcerias, bases de clientes)",
+      "Humanos",
+      "Financeiros"
+     ],
+     "aplicacao_wise": "Humanos: consultores que conduzem o diagnóstico e entregam a consultoria. Intelectuais: método de diagnóstico, conteúdo do Wise Hub, marca Wise Makers, a base de parceiros e a carteira de clientes (o livro inclui parcerias e bases de clientes como recurso intelectual). Físicos e digitais: o portal e a plataforma do Wise Hub.",
+     "citacoes": [
+      {
+       "trecho": "Key resources can be physical, financial, intellectual, or human. Key resources can be owned or leased by the company or acquired from key partners.",
+       "pagina": "PDF p. 40"
+      },
+      {
+       "trecho": "What Key Resources do our Value Propositions require? Our Distribution Channels? Customer Relationships? Revenue Streams?",
+       "pagina": "PDF p. 40"
+      },
+      {
+       "trecho": "Intellectual resources such as brands, proprietary knowledge, patents and copyrights, partnerships, and customer databases are increasingly important components of a strong business model.",
+       "pagina": "PDF p. 41"
+      }
+     ]
+    },
+    {
+     "nome": "Key Activities (Atividades Principais)",
+     "descricao": "As coisas mais importantes que a empresa precisa fazer para o modelo funcionar.",
+     "pergunta": "Que atividades principais nossas propostas de valor exigem? E nossos canais? Nosso relacionamento com clientes? Nossas fontes de receita?",
+     "tipos": [
+      "Produção",
+      "Resolução de problemas",
+      "Plataforma ou rede (gestão da plataforma, provisão de serviços, promoção da plataforma)"
+     ],
+     "aplicacao_wise": "A Wise combina duas categorias: resolução de problemas (diagnóstico e consultoria, típica de consultorias segundo o livro) e plataforma ou rede (recrutar, ativar e promover parceiros, operar o portal e o Wise Hub). Os macroprocessos do to-be podem seguir essas três atividades de plataforma: gestão da plataforma, provisão de serviço (diagnóstico, Hub, consultoria) e promoção da plataforma (anúncios, fila, níveis).",
+     "citacoes": [
+      {
+       "trecho": "For consultancy McKinsey, Key Activities include problem solving.",
+       "pagina": "PDF p. 43"
+      },
+      {
+       "trecho": "The operations of consultancies, hospitals, and other service organizations are typically dominated by problem solving activities.",
+       "pagina": "PDF p. 43"
+      },
+      {
+       "trecho": "Key Activities in this category relate to platform management, service provisioning, and platform promotion.",
+       "pagina": "PDF p. 44"
+      }
+     ]
+    },
+    {
+     "nome": "Key Partnerships (Parcerias Principais)",
+     "descricao": "A rede de fornecedores e parceiros que faz o modelo funcionar. Empresas fazem alianças para otimizar o modelo, reduzir risco ou adquirir recursos.",
+     "pergunta": "Quem são nossos parceiros principais? Quem são nossos fornecedores principais? Que recursos principais obtemos de parceiros? Que atividades principais os parceiros executam?",
+     "tipos": [
+      "Tipos de parceria: alianças estratégicas entre não concorrentes; coopetição; joint ventures; relação comprador e fornecedor",
+      "Motivação 1: otimização e economia de escala",
+      "Motivação 2: redução de risco e incerteza",
+      "Motivação 3: aquisição de recursos e atividades específicos (conhecimento, licenças, acesso a clientes)"
+     ],
+     "aplicacao_wise": "As empresas de software são aliança estratégica entre não concorrentes, motivada pela terceira razão do livro: aquisição de acesso a clientes e da atividade de prospecção. O livro dá o exemplo da seguradora que usa corretores independentes em vez de força de vendas própria, que é o papel do parceiro Wise. Atenção: no canvas da Wise o parceiro aparece duas vezes, em Parcerias Principais (executa a prospecção) e em Segmentos de Clientes (recebe uma proposta de valor própria).",
+     "citacoes": [
+      {
+       "trecho": "Companies create alliances to optimize their business models, reduce risk, or acquire resources.",
+       "pagina": "PDF p. 44"
+      },
+      {
+       "trecho": "Who are our Key Partners? Who are our key suppliers? Which Key Resources are we acquiring from partners? Which Key Activities do partners perform?",
+       "pagina": "PDF p. 45"
+      },
+      {
+       "trecho": "Such partnerships can be motivated by needs to acquire knowledge, licenses, or access to customers.",
+       "pagina": "PDF p. 46"
+      },
+      {
+       "trecho": "An insurer may choose to rely on independent brokers to sell its policies rather than develop its own sales force.",
+       "pagina": "PDF p. 46"
+      }
+     ]
+    },
+    {
+     "nome": "Cost Structure (Estrutura de Custos)",
+     "descricao": "Todos os custos de operar o modelo. São calculados com relativa facilidade depois de definir recursos, atividades e parcerias. Os modelos vão de orientados a custo a orientados a valor.",
+     "pergunta": "Quais são os custos mais importantes do nosso modelo? Quais recursos principais são mais caros? Quais atividades principais são mais caras?",
+     "tipos": [
+      "Orientado a custo (cost-driven)",
+      "Orientado a valor (value-driven)",
+      "Custos fixos",
+      "Custos variáveis",
+      "Economias de escala",
+      "Economias de escopo"
+     ],
+     "aplicacao_wise": "O programa é orientado a valor (serviço personalizado, diagnóstico com consultor). Fixos: equipe de parcerias, portal, produção do Wise Hub. Variáveis: mídia no Meta por parceiro recrutado, horas de consultor por diagnóstico gratuito, comissão de 40% por contrato. Economia de escopo: o mesmo Wise Hub e a mesma equipe de diagnóstico servem todos os parceiros.",
+     "citacoes": [
+      {
+       "trecho": "Cost-driven business models focus on minimizing costs wherever possible.",
+       "pagina": "PDF p. 47"
+      },
+      {
+       "trecho": "Premium Value Propositions and a high degree of personalized service usually characterize value-driven business models.",
+       "pagina": "PDF p. 47"
+      },
+      {
+       "trecho": "Costs that remain the same despite the volume of goods or services produced.",
+       "pagina": "PDF p. 48"
+      },
+      {
+       "trecho": "Costs that vary proportionally with the volume of goods or services produced.",
+       "pagina": "PDF p. 48"
+      }
+     ]
+    }
+   ],
+   "logica": "Os blocos se leem da direita para a esquerda e de volta: segmentos e proposta de valor definem canais, relacionamento e receita; isso exige recursos, atividades e parcerias, que geram a estrutura de custos. O próprio livro apresenta os blocos nessa sequência, encadeados: o cliente é servido, a proposta é entregue por canais, o relacionamento é mantido, a receita resulta da proposta aceita, e recursos, atividades e parcerias 'resultam' nos custos.",
+   "aplicacao_wise": "Fazer um canvas do Programa Wise Partners com três cores de segmento. Usar as perguntas-guia de cada bloco como roteiro da oficina. Cada post-it do lado esquerdo deve virar, no mapa de processos, um processo ou um recurso com dono.",
+   "citacoes": [
+    {
+     "trecho": "We believe a business model can best be described through nine basic building blocks that show the logic of how a company intends to make money.",
+     "pagina": "PDF p. 20"
+    },
+    {
+     "trecho": "Such costs can be calculated relatively easily after defining Key Resources, Key Activities, and Key Partnerships.",
+     "pagina": "PDF p. 46-47"
+    },
+    {
+     "trecho": "It is a hands-on tool that fosters understanding, discussion, creativity, and analysis.",
+     "pagina": "PDF p. 48"
+    }
+   ]
+  },
+  {
+   "nome": "Padrão Multi-Sided Platforms (Plataformas de Múltiplos Lados, padrão n. 3)",
+   "paginas": "PDF p. 76 a 89",
+   "componentes": [
+    {
+     "nome": "Definição",
+     "descricao": "Reúne dois ou mais grupos de clientes distintos e interdependentes; tem valor para um grupo só se os outros estiverem presentes; cria valor facilitando a interação entre grupos; cresce com o efeito de rede."
+    },
+    {
+     "nome": "Subsídio de um lado",
+     "descricao": "Para resolver o dilema do ovo e da galinha, o operador atrai um lado com oferta barata ou gratuita e cobra do outro. Escolher o lado e o preço é a decisão mais difícil."
+    },
+    {
+     "nome": "Quatro perguntas do operador",
+     "descricao": "Há clientes suficientes em cada lado? Qual lado é mais sensível a preço? Esse lado pode ser atraído com subsídio? O outro lado gera receita suficiente para cobrir o subsídio?"
+    },
+    {
+     "nome": "Proposta de valor da plataforma",
+     "descricao": "Cria valor em três frentes: atrair grupos de usuários, fazer o casamento (matchmaking) entre segmentos e reduzir custos ao canalizar transações pela plataforma."
+    },
+    {
+     "nome": "Segmentos e receitas",
+     "descricao": "Dois ou mais segmentos, cada um com sua proposta de valor e sua fonte de receita; um segmento não existe sem os outros; um ou mais podem ter oferta gratuita subsidiada."
+    },
+    {
+     "nome": "Recursos, atividades e custos",
+     "descricao": "O recurso principal é a plataforma. As atividades são gestão da plataforma, provisão de serviços e promoção da plataforma. O custo principal é manter e desenvolver a plataforma."
+    },
+    {
+     "nome": "Receita adicional do intermediário",
+     "descricao": "Um intermediário que opera uma plataforma entre dois ou mais segmentos acrescenta fontes de receita ao modelo inicial."
+    },
+    {
+     "nome": "Exemplos do livro",
+     "descricao": "Visa, Google (três segmentos, um pagante e dois subsidiados), consoles (Sony e Microsoft subsidiam o jogador; Nintendo Wii com foco diferente), Apple (iPod, iTunes, App Store), jornal gratuito Metro."
+    }
+   ],
+   "logica": "A plataforma vive da interação entre lados. Um lado é atraído por subsídio para tornar a plataforma valiosa para o lado pagante. O risco é subsidiar o lado errado ou subestimar o custo do subsídio, como no caso do PlayStation 3.",
+   "aplicacao_wise": "Lados da plataforma Wise: (A) empresas de software parceiras, subsidiadas (entram sem pagar e recebem comissão); (B) indústrias clientes dos parceiros, subsidiadas na entrada (diagnóstico e Hub sem custo) e pagantes quando contratam consultoria; (C) indústrias clientes da Wise, que recebem recomendação de parceiros Premium. Como no Google, há um lado pagante (a indústria que contrata) e lados subsidiados. O matchmaking acontece em dois sentidos: parceiro leva indústria à Wise; Wise leva parceiro Premium aos clientes dela. O to-be precisa de processos para os dois sentidos.",
+   "citacoes": [
+    {
+     "trecho": "Such platforms are of value to one group of customers only if the other groups of customers are also present.",
+     "pagina": "PDF p. 76-77"
+    },
+    {
+     "trecho": "A multi-sided platform grows in value to the extent that it attracts more users, a phenomenon known as the network effect.",
+     "pagina": "PDF p. 77"
+    },
+    {
+     "trecho": "One difficulty multi-sided platform operators face is understanding which side to subsidize and how to price correctly to attract customers.",
+     "pagina": "PDF p. 78"
+    },
+    {
+     "trecho": "Sony subsidized each console purchased in hopes of later collecting more game royalties. This strategy performed poorly because fewer Playstation 3 games sold than Sony initially estimated.",
+     "pagina": "PDF p. 78"
+    },
+    {
+     "trecho": "It makes money from one Customer Segment, advertisers, while subsidizing free offers to two other segments: Web surfers and content owners.",
+     "pagina": "PDF p. 80"
+    },
+    {
+     "trecho": "The three Key Activities are usually platform management, service provisioning, and platform promotion.",
+     "pagina": "PDF p. 88"
+    },
+    {
+     "trecho": "The value proposition usually creates value in three main areas: First, attracting user groups (i.e. Customer Segments); Second, matchmaking between Customer Segments; Third, reducing costs by channeling transactions through the platform.",
+     "pagina": "PDF p. 88"
+    },
+    {
+     "trecho": "Moreover, one Customer Segment cannot exist without the others.",
+     "pagina": "PDF p. 88"
+    },
+    {
+     "trecho": "One or more segments may enjoy free offers or reduced prices subsidized by revenues from other Customer Segments.",
+     "pagina": "PDF p. 88"
+    },
+    {
+     "trecho": "An intermediary operating a platform between two or more Customer Segments adds Revenue Streams to the initial model.",
+     "pagina": "PDF p. 120"
+    }
+   ]
+  },
+  {
+   "nome": "Padrão FREE as a Business Model (Gratuito como modelo de negócio, padrão n. 4): anúncio, freemium e isca e anzol",
+   "paginas": "PDF p. 89 a 108 e PDF p. 120",
+   "componentes": [
+    {
+     "nome": "Definição",
+     "descricao": "Ao menos um segmento relevante se beneficia continuamente de uma oferta gratuita; clientes que não pagam são financiados por outra parte do modelo ou por outro segmento. A demanda a preço zero é muitas vezes maior que a qualquer outro preço."
+    },
+    {
+     "nome": "Variante 1: anúncio (plataforma de múltiplos lados)",
+     "descricao": "Um lado atrai usuários com conteúdo ou serviço gratuito; outro lado paga para anunciar. Alerta do livro: massa de usuários não garante receita (caso Facebook em 2009)."
+    },
+    {
+     "nome": "Variante 2: freemium",
+     "descricao": "Serviço básico gratuito e serviço premium pago. Poucos usuários, em geral menos de 10%, pagam e subsidiam os gratuitos. Só funciona com custo marginal baixo por usuário gratuito. Métricas: custo médio de servir um usuário gratuito e taxa de conversão para pago. Relacionamento precisa ser automatizado e barato. Estrutura de custos em três partes: fixos altos, marginal muito baixo para gratuitos e custos separados para premium."
+    },
+    {
+     "nome": "Variante 3: isca e anzol (bait and hook, loss leader, razor and blades)",
+     "descricao": "Oferta inicial atraente, barata ou gratuita que leva a compras seguintes de produtos ou serviços relacionados. A compra inicial gera pouca ou nenhuma receita; a receita vem das compras seguintes de margem alta. Exige vínculo forte (lock-in) entre a isca e o item seguinte e costuma exigir marca forte. Custos: subsídio da oferta inicial e produção dos itens seguintes."
+    },
+    {
+     "nome": "Notas de bolso do freemium",
+     "descricao": "Variáveis para o cálculo: usuários, custos fixos, custo de servir (gratuito e premium), crescimento e churn, custo de aquisição, preço do premium, percentual de premium e de gratuitos."
+    },
+    {
+     "nome": "Antes e depois (resumo do padrão)",
+     "descricao": "Antes: proposta de alto valor e alto custo só para quem paga, e o preço afasta clientes. Depois: várias propostas para segmentos diferentes, uma delas gratuita, com os segmentos que não pagam subsidiados pelos que pagam."
+    }
+   ],
+   "logica": "Gratuidade é decisão de modelo, não de marketing: alguém continua pagando, e o desenho precisa dizer quem, quando e por quê. Cada variante tem economia diferente e métricas diferentes.",
+   "aplicacao_wise": "Classificação proposta: diagnóstico de 2 horas com plano de ação é isca e anzol do tipo loss leader (custo real de consultor, pago depois pela consultoria). Wise Hub é a parte mais próxima do freemium (custo marginal baixo, conteúdo digital), e também ajuda o vínculo com a marca. Entrada gratuita do parceiro no programa é subsídio de lado de plataforma. O processo de qualificação antes do diagnóstico é o que protege o custo da isca: se toda indústria indicada recebe 2 horas de consultor, o custo variável cresce com cada indicação que não converte.",
+   "citacoes": [
+    {
+     "trecho": "the demand generated at a price of zero is many times higher than the demand generated at one cent or any other price point.",
+     "pagina": "PDF p. 90"
+    },
+    {
+     "trecho": "Yet to make a profit, an organization offering free products or services must still generate revenues somehow.",
+     "pagina": "PDF p. 90"
+    },
+    {
+     "trecho": "A large number of users does not automatically translate into an El Dorado of advertising revenues",
+     "pagina": "PDF p. 93"
+    },
+    {
+     "trecho": "Most of these users never become paying customers; only a small portion, usually less than 10 percent of all users, subscribe to the paid premium services.",
+     "pagina": "PDF p. 96"
+    },
+    {
+     "trecho": "This is possible because of the low marginal cost of serving additional free users.",
+     "pagina": "PDF p. 96"
+    },
+    {
+     "trecho": "In a freemium model, the key metrics to watch are (1) the average cost of serving a free user, and (2) the rates at which free users convert to premium (paying) customers.",
+     "pagina": "PDF p. 96"
+    },
+    {
+     "trecho": "Customer relationship must be automated and low cost in order to handle large numbers of free users.",
+     "pagina": "PDF p. 104"
+    },
+    {
+     "trecho": "“Loss leader” refers to a subsidized, even money-losing initial offer with the intention of generating profits from subsequent purchases.",
+     "pagina": "PDF p. 105"
+    },
+    {
+     "trecho": "Important cost structure elements include subsidization of the initial product and the costs of producing follow-up products or services.",
+     "pagina": "PDF p. 108"
+    },
+    {
+     "trecho": "The initial one-time purchase generates little or no revenue",
+     "pagina": "PDF p. 108"
+    },
+    {
+     "trecho": "Non-paying Customer Segments are subsidized by paying customers in order to attract the maximum number of users.",
+     "pagina": "PDF p. 120"
+    }
+   ]
+  },
+  {
+   "nome": "Uso visual do canvas e processo de desenho (Visual Thinking e as cinco fases)",
+   "paginas": "PDF p. 48, 52, 148 a 164, 281 a 299",
+   "componentes": [
+    {
+     "nome": "Canvas grande e post-its",
+     "descricao": "Imprimir o canvas grande; um elemento por post-it, poucas palavras, caneta grossa. A discussão sobre onde colocar cada nota é parte do resultado."
+    },
+    {
+     "nome": "Quatro processos melhorados pelo visual",
+     "descricao": "Entender (gramática visual, visão do todo, relações entre elementos), dialogar (ponto de referência comum, linguagem comum, entendimento conjunto), explorar ideias e comunicar."
+    },
+    {
+     "nome": "Contar o modelo por partes",
+     "descricao": "Mapear o modelo em post-its, trocar cada um por um desenho simples, escolher a ordem da história (pode começar por segmentos ou pela proposta de valor) e contar um post-it por vez."
+    },
+    {
+     "nome": "As-is e to-be",
+     "descricao": "Um dos depoimentos do livro descreve o uso do canvas para explicitar modelos as-is e to-be. Para empresas existentes, o livro recomenda mapear e avaliar o modelo atual em oficinas separadas, enquanto se coletam ideias para modelos novos."
+    },
+    {
+     "nome": "Cinco fases do desenho",
+     "descricao": "Mobilizar, Entender, Desenhar, Implementar e Gerenciar. Na fase Entender, testar cedo esboços de canvas com clientes."
+    },
+    {
+     "nome": "Modelo mestre",
+     "descricao": "Na fase Gerenciar, manter um modelo de negócio 'mestre' da organização que sirva de ponto de partida para cada projeto."
+    }
+   ],
+   "logica": "O canvas é ferramenta de conversa: torna explícitas as suposições, cria vocabulário comum entre áreas e permite mexer em alternativas movendo notas.",
+   "aplicacao_wise": "Roteiro para o mapeamento: (1) oficina as-is do programa com post-its por segmento; (2) oficina to-be; (3) contar o to-be por partes para parceiros e para a equipe; (4) manter um canvas mestre da Wise Makers e o canvas do programa como derivado dele.",
+   "citacoes": [
+    {
+     "trecho": "establishing externalized as-is and to-be business models",
+     "pagina": "PDF p. 52"
+    },
+    {
+     "trecho": "A business model really is a system where one element influences the other; it only makes sense as a whole.",
+     "pagina": "PDF p. 150"
+    },
+    {
+     "trecho": "Post-it™ notes function like idea containers that can be added, removed, and easily shifted between business model building blocks.",
+     "pagina": "PDF p. 151"
+    },
+    {
+     "trecho": "Keep in mind, too, that the discussion leading to the final business model picture created by all the Post-it™ notes is just as important as the outcome.",
+     "pagina": "PDF p. 151-152"
+    },
+    {
+     "trecho": "The Business Model Canvas is a shared visual language.",
+     "pagina": "PDF p. 155"
+    },
+    {
+     "trecho": "Try different paths. You might start with Customer Segments, or maybe the Value Proposition.",
+     "pagina": "PDF p. 164"
+    },
+    {
+     "trecho": "Our process has five phases: Mobilize, Understand, Design, Implement, and Manage.",
+     "pagina": "PDF p. 278"
+    },
+    {
+     "trecho": "It should also manage the “master” business model that describes the entire organization.",
+     "pagina": "PDF p. 299"
+    }
+   ]
+  },
+  {
+   "nome": "Epicentros de inovação em modelo de negócio",
+   "paginas": "PDF p. 137 a 140",
+   "componentes": [
+    {
+     "nome": "Orientado a recursos",
+     "descricao": "Parte da infraestrutura ou das parcerias existentes para expandir ou transformar o modelo."
+    },
+    {
+     "nome": "Orientado à oferta",
+     "descricao": "Cria novas propostas de valor que afetam os outros blocos."
+    },
+    {
+     "nome": "Orientado ao cliente",
+     "descricao": "Parte de necessidades do cliente, acesso facilitado ou conveniência."
+    },
+    {
+     "nome": "Orientado a finanças",
+     "descricao": "Parte de novas fontes de receita, mecanismos de preço ou custos menores (exemplo Xerox 914: aluguel com cópias gratuitas incluídas)."
+    },
+    {
+     "nome": "Múltiplos epicentros",
+     "descricao": "Mudanças que partem de vários blocos ao mesmo tempo."
+    }
+   ],
+   "logica": "Qualquer um dos nove blocos pode ser ponto de partida de uma mudança, e mudanças transformadoras afetam vários blocos.",
+   "aplicacao_wise": "O Programa Wise Partners é inovação de múltiplos epicentros sobre o modelo da consultoria: orientado a recursos (usa a base de clientes dos parceiros), orientado à oferta (diagnóstico e Hub gratuitos) e orientado a finanças (receita só na conversão, comissão como custo variável).",
+   "citacoes": [
+    {
+     "trecho": "We can distinguish four epicenters of business model innovation: resource-driven, offer-driven, customer-driven, and finance-driven.",
+     "pagina": "PDF p. 137"
+    }
+   ]
+  }
+ ],
+ "recomendacoes": [
+  {
+   "tema": "Estrutura do mapeamento",
+   "recomendacao": "Organizar o mapa de processos to-be em três camadas ligadas ao canvas: lado direito (processos voltados a parceiro e a indústria), lado esquerdo (processos de recursos, atividades e parceiros) e fórmula financeira (receita da consultoria, comissão, custo dos diagnósticos).",
+   "processo": "Arquitetura de processos do Programa Wise Partners",
+   "citacao": "The Business Model Canvas consists of a right-hand value and customer-focused side, and a left-hand cost and infrastructure side",
+   "pagina": "PDF p. 258",
+   "aplicabilidade": "alta",
+   "porque": "Permite verificar que cada promessa ao parceiro ou à indústria tem processo e custo correspondentes."
+  },
+  {
+   "tema": "Segmentos",
+   "recomendacao": "Registrar no canvas três segmentos com cor própria (parceiro de software, indústria cliente do parceiro, indústria cliente da Wise) e uma proposta de valor, um canal e um relacionamento para cada um.",
+   "processo": "Oficina de canvas to-be",
+   "citacao": "They have two or more customer segments , each of which has its own Value Proposition and associated Revenue Stream.",
+   "pagina": "PDF p. 88",
+   "aplicabilidade": "alta",
+   "porque": "Em plataforma, cada lado tem proposta e receita próprias; um canvas com um segmento só esconde o lado subsidiado."
+  },
+  {
+   "tema": "Subsídio",
+   "recomendacao": "Fazer uma revisão trimestral com as quatro perguntas do operador de plataforma e com o custo total do subsídio (diagnósticos realizados, horas do Hub, comissões) contra a receita de consultoria gerada pelo canal parceiro.",
+   "processo": "Revisão econômica do programa",
+   "citacao": "Will the other side of the platform generate sufficient revenues to cover the subsidies?",
+   "pagina": "PDF p. 79",
+   "aplicabilidade": "alta",
+   "porque": "O caso PlayStation 3 mostra que subsídio sem cobertura do outro lado quebra o modelo."
+  },
+  {
+   "tema": "Isca e anzol",
+   "recomendacao": "Desenhar o roteiro do diagnóstico para terminar num plano de ação cuja execução natural é a consultoria Wise, com proposta comercial apresentada no fechamento do diagnóstico e acompanhamento definido.",
+   "processo": "Conduzir diagnóstico e converter em consultoria",
+   "citacao": "Controlling the “lock-in” is crucial to this pattern’s success.",
+   "pagina": "PDF p. 106",
+   "aplicabilidade": "alta",
+   "porque": "Sem vínculo entre isca e compra seguinte, o diagnóstico vira custo sem retorno."
+  },
+  {
+   "tema": "Custo da isca",
+   "recomendacao": "Criar um critério de qualificação da indústria antes de agendar o diagnóstico (porte, tem área comercial, decisor presente), já que o diagnóstico consome horas de consultor e não tem custo marginal baixo.",
+   "processo": "Qualificar indicação do parceiro",
+   "citacao": "Important cost structure elements include subsidization of the initial product and the costs of producing follow-up products or services.",
+   "pagina": "PDF p. 108",
+   "aplicabilidade": "alta",
+   "porque": "O subsídio da oferta inicial é custo explícito do padrão; sem filtro ele cresce com cada indicação ruim."
+  },
+  {
+   "tema": "Relacionamento por nível",
+   "recomendacao": "Definir para Select, Premium e Elite o tipo de relacionamento do livro: Select com serviços automatizados e comunidade; Premium com assistência pessoal do gerente de parcerias; Elite com assistência dedicada e cocriação (formação conjunta da base).",
+   "processo": "Gestão de níveis de parceiro",
+   "citacao": "Relationships can range from personal to automated.",
+   "pagina": "PDF p. 33",
+   "aplicabilidade": "alta",
+   "porque": "O custo do relacionamento precisa subir junto com o valor do parceiro; o livro pede saber quanto cada relacionamento custa."
+  },
+  {
+   "tema": "Canais do lado parceiro",
+   "recomendacao": "Mapear as cinco fases de canal para o parceiro: anúncio no Meta (conhecimento), fila e conversa de entrada (avaliação), adesão (compra), entrega do link e kit (entrega), acompanhamento e subida de nível (pós-venda), com um dono por fase.",
+   "processo": "Recrutar e ativar parceiro",
+   "citacao": "Channels have five distinct phases. Each channel can cover some or all of these phases.",
+   "pagina": "PDF p. 31",
+   "aplicabilidade": "alta",
+   "porque": "A fila e a conversa de entrada só aparecem no mapa se as fases forem explícitas."
+  },
+  {
+   "tema": "Atividades de plataforma",
+   "recomendacao": "Usar as três atividades de plataforma do livro como macroprocessos do programa: gestão da plataforma (portal, regras, níveis, comissões), provisão de serviço (diagnóstico, Hub, consultoria) e promoção da plataforma (anúncios, recrutamento, recomendação cruzada).",
+   "processo": "Cadeia de valor do programa",
+   "citacao": "Key Activities in this category relate to platform management, service provisioning, and platform promotion.",
+   "pagina": "PDF p. 44",
+   "aplicabilidade": "alta",
+   "porque": "Dá uma divisão de macroprocessos que vem do próprio padrão de plataforma."
+  },
+  {
+   "tema": "Parceiro em dois blocos",
+   "recomendacao": "Colocar o parceiro de software tanto em Parcerias Principais (executa prospecção e dá acesso a clientes) quanto em Segmentos de Clientes (recebe proposta de valor própria), e mapear processos para os dois papéis.",
+   "processo": "Oficina de canvas to-be",
+   "citacao": "Such partnerships can be motivated by needs to acquire knowledge, licenses, or access to customers.",
+   "pagina": "PDF p. 46",
+   "aplicabilidade": "média",
+   "porque": "Sem a visão de cliente, o programa trata o parceiro só como fonte de lead e perde a proposta de valor para ele."
+  },
+  {
+   "tema": "Método de oficina",
+   "recomendacao": "Fazer as oficinas as-is e to-be em sessões separadas, com post-its de uma ideia cada e cores por segmento, e validar o esboço to-be com alguns parceiros antes de fechar.",
+   "processo": "Rodadas do mapeamento",
+   "citacao": "Start testing preliminary business model directions early by soliciting feedback on Business Model Canvas sketches.",
+   "pagina": "PDF p. 290",
+   "aplicabilidade": "alta",
+   "porque": "O livro recomenda separar o mapeamento do atual da geração do novo e testar cedo com clientes."
+  },
+  {
+   "tema": "Canvas mestre",
+   "recomendacao": "Manter um canvas mestre da Wise Makers e tratar o canvas do Programa Wise Partners como derivado, apontando onde ele usa recursos do modelo principal (consultores, marca, método).",
+   "processo": "Governança do modelo de negócio",
+   "citacao": "It should also manage the “master” business model that describes the entire organization.",
+   "pagina": "PDF p. 299",
+   "aplicabilidade": "média",
+   "porque": "Evita que o programa crie atividades e custos duplicados com a consultoria."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Taxa de conversão de diagnóstico gratuito em contrato",
+   "definicao": "Contratos de consultoria assinados dividido por diagnósticos realizados no período, por parceiro e por nível. É a métrica de conversão do padrão gratuito aplicada à isca.",
+   "citacao": "In a freemium model, the key metrics to watch are (1) the average cost of serving a free user, and (2) the rates at which free users convert to premium (paying) customers.",
+   "pagina": "PDF p. 96"
+  },
+  {
+   "nome": "Custo médio de servir um cliente gratuito",
+   "definicao": "Horas de consultor por diagnóstico vezes custo hora, mais custo por usuário ativo do Wise Hub. Comparar com o valor de referência (R$ 2.000 e R$ 3.000) e com a receita esperada por diagnóstico.",
+   "citacao": "In a freemium model, the key metrics to watch are (1) the average cost of serving a free user, and (2) the rates at which free users convert to premium (paying) customers.",
+   "pagina": "PDF p. 96"
+  },
+  {
+   "nome": "Cobertura do subsídio",
+   "definicao": "Receita de consultoria vinda do canal parceiro dividida pela soma de custos de diagnósticos, Hub para clientes indicados e comissões pagas. Abaixo de 1 o lado pagante não cobre os lados subsidiados.",
+   "citacao": "Will the other side of the platform generate sufficient revenues to cover the subsidies?",
+   "pagina": "PDF p. 79"
+  },
+  {
+   "nome": "Custo de aquisição de parceiro",
+   "definicao": "Investimento em anúncios no Meta mais horas da conversa de entrada, dividido por parceiros que enviaram ao menos uma indicação. Variável listada nas notas de bolso do livro.",
+   "citacao": "Customer acquisition costs total expenses a company incurs to acquire new users.",
+   "pagina": "PDF p. 104"
+  },
+  {
+   "nome": "Equilíbrio entre lados",
+   "definicao": "Indicações por parceiro ativo e diagnósticos por parceiro ativo, por mês. Mede se os dois lados estão presentes o suficiente para gerar valor.",
+   "citacao": "Such platforms are of value to one group of customers only if the other groups of customers are also present.",
+   "pagina": "PDF p. 76-77"
+  },
+  {
+   "nome": "Participação de cada fonte de receita",
+   "definicao": "Percentual da receita de consultoria que vem do canal parceiro, da recomendação cruzada (Premium) e do canal direto da Wise.",
+   "citacao": "How much does each Revenue Stream contribute to overall revenues?",
+   "pagina": "PDF p. 37"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Muitos parceiros cadastrados não garantem receita. Medir indicação e conversão, não tamanho da base.",
+   "citacao": "A large number of users does not automatically translate into an El Dorado of advertising revenues",
+   "pagina": "PDF p. 93"
+  },
+  {
+   "alerta": "Subsidiar o lado errado ou superestimar o retorno do outro lado quebra a plataforma.",
+   "citacao": "Sony subsidized each console purchased in hopes of later collecting more game royalties. This strategy performed poorly because fewer Playstation 3 games sold than Sony initially estimated.",
+   "pagina": "PDF p. 78"
+  },
+  {
+   "alerta": "Freemium só fecha a conta com custo marginal baixo. O diagnóstico com consultor não tem custo marginal baixo e não deve ser tratado como freemium.",
+   "citacao": "This is possible because of the low marginal cost of serving additional free users.",
+   "pagina": "PDF p. 96"
+  },
+  {
+   "alerta": "Quando quem recebe não é quem paga, o desenho tende a servir quem paga. Proteger a qualidade do diagnóstico para a indústria.",
+   "citacao": "One risk of the third-party enterprise model is that value creation incentives can become misaligned.",
+   "pagina": "PDF p. 307"
+  },
+  {
+   "alerta": "Canal de parceiro amplia alcance mas reduz margem; a comissão de 40% precisa entrar na conta de cada contrato.",
+   "citacao": "Partner Channels lead to lower margins, but they allow an organization to expand its reach and benefit from partner strengths.",
+   "pagina": "PDF p. 32"
+  },
+  {
+   "alerta": "Relacionamento com o lado gratuito precisa ser automatizado e barato quando o volume cresce; atendimento manual para todo parceiro Select não escala.",
+   "citacao": "Customer relationship must be automated and low cost in order to handle large numbers of free users.",
+   "pagina": "PDF p. 104"
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "O livro trata isca e anzol como oferta barata com compra seguinte de margem alta e vínculo controlado. No programa, a indústria pode receber o diagnóstico e o plano e executar sozinha ou com outro fornecedor.",
+   "como_resolver": "Desenhar o anzol no próprio plano de ação (etapas que pedem método e acompanhamento Wise) e manter o Wise Hub como ponto de contato contínuo."
+  },
+  {
+   "tensao": "O padrão de plataforma pede subsidiar o lado mais sensível a preço. Na Wise os dois lados de entrada são subsidiados (parceiro e indústria), e só a conversão paga a conta.",
+   "como_resolver": "Acompanhar a métrica de cobertura do subsídio e testar qual subsídio realmente move cada lado (por exemplo, se o parceiro se move mais pela comissão ou pelo valor entregue à base dele)."
+  }
+ ]
+}

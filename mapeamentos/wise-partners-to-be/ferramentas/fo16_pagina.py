@@ -258,14 +258,14 @@ item("arquitetura", G1, "Como o mapa de processos passa a ser organizado?", "Dec
 NOME_FER = {"Portal": "Portal", "WhatsApp": "WhatsApp", "Videochamada": "Videochamada", "Agenda": "Google Agenda"}
 for k in ORDEM:
     b = BL[k]
-    comp = comp_bmg(b["ingles"].split()[-1], b["ingles"].split()[0])
+    comp = comp_bmg(b["ingles"])
     sec = [{"t": "A pergunta do bloco", "k": "p", "v": [x for x in [comp.get("pergunta", ""), comp.get("descricao", "")] if x]},
            {"t": "Onde fica no canvas", "k": "fig", "v": desenho_canvas(k)},
            {"t": "O que está no bloco", "k": "dec", "v": [[a, b_, c] for a, b_, c in b["conteudo"]]}]
     if comp.get("tipos"): sec.append({"t": "Os tipos que o livro lista", "k": "ul", "v": [t if isinstance(t, str) else (t.get("nome", "") + (": " + t.get("descricao", "") if t.get("descricao") else "")) for t in comp["tipos"]]})
     sec += [{"t": f"Os {len(b['processos'])} processos que sustentam este bloco", "k": "ul", "v": [nomep(p) + ". " + (PX[p].get("descricao") or "").split(" No portal: ")[0][:220] + ("..." if len((PX[p].get("descricao") or "").split(" No portal: ")[0]) > 220 else "") for p in b["processos"]]},
             {"t": "Ferramentas e responsáveis", "k": "kv", "v": [["Ferramentas", "; ".join(b["ferramentas"])], ["Quem faz", "; ".join(b["quem"])]]},
-            {"t": "De onde vem", "k": "cit", "v": cits_livro("business-model-generation", b["ingles"], b["ingles"].split()[-1], n=3)}]
+            {"t": "De onde vem", "k": "cit", "v": cits_livro("business-model-generation", b["ingles"], n=3) + (cits_livro("business-model-generation", "Multi-Sided", n=2) if k == "seg" else cits_livro("business-model-generation", "FREE as a Business Model", n=2) if k == "rec" else [])}]
     item("bloco-" + k, G1, f"Bloco {b['nome']}: o conteúdo e os processos estão certos?", "Proposta da revisão", "mudou", sec, AP)
 
 # Value Proposition Canvas dos dois lados
@@ -281,7 +281,7 @@ item("vpc-parceiro", G2, "A proposta de valor para o parceiro encaixa no que ele
         ["Renovação e LTV maiores", "Ser visto como parceiro do resultado", "Indicações de volta"])},
     {"t": "De onde vem cada item", "k": "ul", "v": ["Tarefas, dores e ganhos: conversa com o Igor de 04/11 (retenção da base como valor central, FO-06), FO-08 (benefícios: mapeamento da saúde da base, maior LTV, diferenciação, case de sucesso) e a página dos parceiros já no ar.",
                                                     "Produtos e serviços: a escada de níveis aprovada (FO-12 e FO-14)."]},
-    {"t": "De onde vem", "k": "cit", "v": cits_livro("value-proposition-design", "customer profile", "value map", "fit", n=3)}], AP)
+    {"t": "De onde vem", "k": "cit", "v": cits_livro("value-proposition-design", "Value Proposition Canvas", n=3) + cits_livro("value-proposition-design", "plataforma", n=2)}], AP)
 item("vpc-cliente", G2, "A proposta de valor para o cliente do parceiro encaixa no que ele precisa?", "Proposta da revisão", "mudou", [
     {"t": "Cliente do parceiro no ICP (3 vendedores ou mais)", "k": "fig", "v": desenho_vpc("cliente do parceiro",
         ["Diagnóstico de 2 h (R$ 2.000)", "Plano de ação em 2 dias úteis", "Wise Hub (R$ 3.000)", "Cases: +35% em média"],
@@ -291,7 +291,7 @@ item("vpc-cliente", G2, "A proposta de valor para o cliente do parceiro encaixa 
         ["Vendas imprevisíveis", "Não sabe onde está o problema", "Consultoria cara e sem garantia"],
         ["Crescer o faturamento", "Time que vende sem o dono", "Usar melhor o sistema que já paga"])},
     {"t": "De onde vem cada item", "k": "ul", "v": ["Produtos e serviços, valores e cases: FO-15.", "Dores e ganhos: as afirmações da Matriz 5x5 e os blocos do roteiro de diagnóstico, e o texto da página do cliente aprovado no FO-10."]},
-    {"t": "De onde vem", "k": "cit", "v": cits_livro("value-proposition-design", "pain relievers", "gain creators", n=2)}], AP)
+    {"t": "De onde vem", "k": "cit", "v": cits_livro("value-proposition-design", "Pain Relievers", "Gain Creators", "B2B", n=3)}], AP)
 
 # canais nas cinco fases
 item("canais-fases", G2, "Os canais nas cinco fases estão certos?", "Proposta da revisão", "mudou", [
@@ -301,7 +301,7 @@ item("canais-fases", G2, "Os canais nas cinco fases estão certos?", "Proposta d
     {"t": "Cliente do parceiro", "k": "kv", "v": [["1. Conhecimento", "Mensagem pronta do parceiro, com o link e o valor de referência (5.1.2)."], ["2. Avaliação", "Página do cliente com as duas marcas, o valor e os cases (11.4)."],
                                                   ["3. Compra", "Cadastro de qualificação e agenda do Google (6.1)."], ["4. Entrega", "Reunião de 2 horas, documento em até 2 dias úteis, acesso ao Hub (6.1)."],
                                                   ["5. Pós-venda", "E-mail com o próximo passo; Wise Hub; se quiser contratar, closer (6.1 e 6.3)."]]},
-    {"t": "De onde vem", "k": "cit", "v": cits_livro("business-model-generation", "channel phases", "channels", n=2)}], AP)
+    {"t": "De onde vem", "k": "cit", "v": cits_livro("business-model-generation", "Channels", n=3)}], AP)
 
 # ferramentas
 G3 = "O que entra em cada ferramenta"

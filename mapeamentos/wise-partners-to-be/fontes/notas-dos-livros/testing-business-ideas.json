@@ -1,0 +1,424 @@
+{
+ "livro": "Testing Business Ideas: A Field Guide for Rapid Experimentation",
+ "autores": "David J. Bland e Alexander Osterwalder",
+ "slug": "testing-business-ideas",
+ "leitura": {
+  "fonte": "PDF no Google Drive (fileId 1Sj4X9SUl6Uh3LXB-9IcsdnOpIcuwJ_fF). O arquivo tem 14 MB e passa do limite de download; a leitura foi feita pela ferramenta de conteúdo do Drive, que devolveu texto truncado.",
+  "completa": false,
+  "alcance": "Leitura parcial: da abertura até a p. 64 (seções Design e Test: Hypothesize, Experiment, Learn e Decide). Ficaram de fora a biblioteca de 44 experimentos (a partir da p. 91), Manage e Mindset (p. 65 em diante).",
+  "paginacao": "Páginas impressas do livro, que vêm no texto. Como o livro é em páginas duplas, várias citações indicam a dupla (ex.: p. 34-35). As páginas romanas (X, XI) são da abertura."
+ },
+ "tese": "Uma ideia de negócio se testa quebrando-a em hipóteses de três tipos de risco: desejabilidade (o cliente quer?), viabilidade técnica, chamada no livro de feasibility (conseguimos construir e entregar?), e viabilidade financeira, chamada de viability (devemos fazer, ganhamos dinheiro?). Cada tipo mora em blocos específicos do Business Model Canvas: desejabilidade em segmentos, proposta de valor, canais e relacionamento (e no Value Proposition Canvas inteiro); viabilidade técnica em parceiros, atividades e recursos; viabilidade financeira em receitas e custos. O mapeamento de hipóteses (Assumptions Mapping) coloca cada hipótese num quadro de importância por evidência, e o quadrante de cima à direita (importante e sem evidência) define o que testar primeiro, com experimentos baratos e rápidos que produzem evidência cada vez mais forte, até a decisão de perseverar, pivotar ou encerrar.",
+ "principios": [
+  {
+   "principio": "Toda ideia carrega três riscos: desejabilidade, viabilidade técnica e viabilidade financeira.",
+   "explicacao": "Desejabilidade é o risco de o mercado ser pequeno, poucos clientes quererem a proposta ou a empresa não conseguir alcançar, adquirir e reter clientes. Viabilidade técnica (feasibility) é o risco de não ter acesso a recursos, capacidades e parceiros. Viabilidade financeira (viability) é o risco de não gerar receita suficiente, de o cliente não pagar o bastante ou de os custos serem altos demais.",
+   "aplicacao_wise": "Desejabilidade: parceiros de software querem oferecer o diagnóstico à base? Indústrias aceitam o diagnóstico e depois contratam? Viabilidade técnica: há consultores para atender a demanda de diagnósticos? Os parceiros de fato fazem o trabalho de indicação? Viabilidade financeira: a receita das consultorias paga diagnósticos, Hub, anúncios e a comissão de 40%?",
+   "citacoes": [
+    {
+     "trecho": "These hypotheses cover three types of risk. First, that customers aren’t interested in your idea (desirability).",
+     "pagina": "p. X-XI"
+    },
+    {
+     "trecho": "Second, that you can’t build and deliver your idea (feasibility). Third, that you can’t earn enough money from your idea (viability).",
+     "pagina": "p. X-XI"
+    },
+    {
+     "trecho": "The risk is that the market a business is targeting is too small; that too few customers want the value proposition; or that the company can’t reach, acquire, and retain targeted customers.",
+     "pagina": "p. X-XI"
+    },
+    {
+     "trecho": "The risk is that a business can’t get access to key resources (technology, IP, brand, etc.), can’t develop capabilities to perform key activities, or can’t find key partners to build and scale the value proposition.",
+     "pagina": "p. X-XI"
+    },
+    {
+     "trecho": "The risk is that a business can’t generate successful revenue streams, that customers are unwilling to pay (enough), or that the costs are too high to make a sustainable profit.",
+     "pagina": "p. X-XI"
+    }
+   ]
+  },
+  {
+   "principio": "Cada tipo de risco mora em blocos específicos do canvas, e a ordem de exploração é desejabilidade, depois viabilidade técnica, depois viabilidade financeira.",
+   "explicacao": "O livro usa o Business Model Canvas para definir os três riscos. Risco de mercado (desejabilidade) está em proposta de valor, segmentos, canais e relacionamento, e no Value Proposition Canvas inteiro. Risco de infraestrutura (viabilidade técnica) está em parceiros, atividades e recursos. Risco financeiro (viabilidade financeira) está em receitas e custos. As seções vêm marcadas como 'explore first', 'explore second' e 'explore third'.",
+   "aplicacao_wise": "No canvas do programa, marcar cada post-it com a cor do risco. O lado direito (parceiro, indústria, canais, relacionamento) é desejabilidade; o lado esquerdo (consultores, método, parceiros executando a indicação) é viabilidade técnica; comissão, custos de diagnóstico e receita da consultoria são viabilidade financeira.",
+   "citacoes": [
+    {
+     "trecho": "In this book, we use the Business Model Canvas to define the desirability, feasibility, and viability of an idea.",
+     "pagina": "p. 20-21"
+    },
+    {
+     "trecho": "The Business Model Canvas contains market risk in the value proposition, customer segment, channel, and customer relationship components.",
+     "pagina": "p. 34-35"
+    },
+    {
+     "trecho": "The Business Model Canvas contains infrastructure risk in the key partners, key activities, and key resources components.",
+     "pagina": "p. 34-35"
+    },
+    {
+     "trecho": "The Business Model Canvas contains financial risk in the revenue stream and cost structure.",
+     "pagina": "p. 34-35"
+    },
+    {
+     "trecho": "Feasibility Hypotheses Explore second",
+     "pagina": "p. 34-35"
+    }
+   ]
+  },
+  {
+   "principio": "Escreva hipóteses testáveis, precisas e discretas, e inclua algumas que tentem refutar o que você acredita.",
+   "explicacao": "Hipótese de negócio é uma suposição em que a proposta, o modelo ou a estratégia se apoia. Começa com 'Acreditamos que...'. É testável quando pode ser validada ou invalidada por evidência; precisa quando diz o que é sucesso (o quê, quem, quando); discreta quando trata de uma só coisa. Para evitar viés de confirmação, criar hipóteses contrárias.",
+   "aplicacao_wise": "Exemplo no formato do livro: 'Acreditamos que empresas de CRM com 50 a 500 clientes industriais enviam o link a pelo menos 5 clientes nos primeiros 30 dias.' Hipótese contrária: 'Acreditamos que parceiros não enviam o link sem um material pronto da Wise.' Cada hipótese num post-it.",
+   "citacoes": [
+    {
+     "trecho": "an assumption that your value proposition, business model, or strategy builds on.",
+     "pagina": "p. 30-31"
+    },
+    {
+     "trecho": "Your hypothesis is testable when it can be shown true (validated) or false (invalidated), based on evidence (and guided by experience).",
+     "pagina": "p. 30-31"
+    },
+    {
+     "trecho": "Your hypothesis is precise when you know what success looks like.",
+     "pagina": "p. 30-31"
+    },
+    {
+     "trecho": "Your hypothesis is discrete when it describes only one distinct, testable, and precise thing you want to investigate.",
+     "pagina": "p. 30-31"
+    },
+    {
+     "trecho": "In order to prevent this from occurring create a few hypotheses that try to disprove your assumptions.",
+     "pagina": "p. 30-31"
+    }
+   ]
+  },
+  {
+   "principio": "Priorize pelo par importância e evidência: teste primeiro o que é crítico e não tem prova.",
+   "explicacao": "Duas perguntas guiam a prioridade: qual hipótese mais precisa ser verdade para a ideia funcionar, e para quais falta evidência concreta de campo. No Assumptions Map, o eixo horizontal é evidência (à esquerda, há evidência relevante, observável e recente; à direita, não há) e o vertical é importância (no alto, se for falsa a ideia morre).",
+   "aplicacao_wise": "Candidatas ao quadrante de cima à direita, a confirmar na oficina: 'parceiros enviam o link de forma recorrente'; 'diagnósticos convertem em consultoria a uma taxa que paga o custo'; 'a comissão de 40% da primeira mensalidade é o que move o parceiro'. Hipóteses com evidência (por exemplo, se já houver dados de conversão de diagnósticos da Wise fora do programa) vão para cima à esquerda e são só acompanhadas.",
+   "citacoes": [
+    {
+     "trecho": "First, “What is the most important hypothesis that needs to be true for my idea to work?” Second, “For which hypotheses do I lack concrete evidence from the field?”",
+     "pagina": "p. 28-29"
+    },
+    {
+     "trecho": "You place a hypothesis on the left if you are able to produce relevant, observable, and recent evidence to support a hypothesis.",
+     "pagina": "p. 38-39"
+    },
+    {
+     "trecho": "Position a hypothesis at the top if it is absolutely critical for your business idea to succeed.",
+     "pagina": "p. 38-39"
+    },
+    {
+     "trecho": "Focus on the top right quadrant to identify which hypotheses to test first.",
+     "pagina": "p. 38-39"
+    }
+   ]
+  },
+  {
+   "principio": "Evidência tem força: o que as pessoas fazem e pagam vale mais do que o que dizem.",
+   "explicacao": "Evidência fraca: opiniões, o que se diz em entrevista, ambiente de laboratório, pequenos investimentos (deixar o e-mail). Evidência forte: fatos, comportamento observado, ambiente real, grandes investimentos (pré-compra, pôr a reputação em jogo). A confiança sobe com o tipo de evidência, o número de dados e o número e tipo de experimentos.",
+   "aplicacao_wise": "Parceiro que diz 'vou divulgar' é evidência fraca; parceiro que envia o link a clientes nomeados é forte. Indústria que elogia o diagnóstico é fraca; indústria que assina a consultoria é forte. O portal deve registrar comportamento (links enviados, diagnósticos agendados, contratos) e não só intenção.",
+   "citacoes": [
+    {
+     "trecho": "What people say in an interview or survey is not necessarily what they do in real life or will do in the future.",
+     "pagina": "p. 52-53"
+    },
+    {
+     "trecho": "Signing up by email to be informed about an upcoming product release is a small investment and relatively weak evidence of interest.",
+     "pagina": "p. 52-53"
+    },
+    {
+     "trecho": "Pre-purchasing a product or putting one’s professional reputation on the line is an important investment and strong evidence of real interest.",
+     "pagina": "p. 52-53"
+    },
+    {
+     "trecho": "You can be very confident if you’ve run several experiments of which at least one is a call-to-action test that produced very strong evidence.",
+     "pagina": "p. 56-57"
+    }
+   ]
+  },
+  {
+   "principio": "Cada experimento tem hipótese, descrição, métrica e critério de sucesso, e termina numa decisão: perseverar, pivotar ou encerrar.",
+   "explicacao": "Um experimento bem formado define quem, onde e o quê, e tem quatro componentes. Comece com experimentos baratos e rápidos. O aprendizado vira ação: continuar testando, mudar elementos da proposta ou do modelo, ou encerrar a ideia.",
+   "aplicacao_wise": "O mapeamento to-be pode incluir um processo de experimentação do programa, com Test Card e Learning Card, e uma reunião de decisão mensal. Exemplo: hipótese 'parceiros Select enviam o link se receberem mensagem pronta'; experimento 'enviar kit de mensagem a 20 parceiros novos'; métrica 'links enviados em 14 dias'; critério 'ao menos 10 parceiros enviam'.",
+   "citacoes": [
+    {
+     "trecho": "A well-formed business experiment is made up of four components:",
+     "pagina": "p. 44-45"
+    },
+    {
+     "trecho": "The most critical hypothesis from the top right quadrant of your Assumptions Map.",
+     "pagina": "p. 44-45"
+    },
+    {
+     "trecho": "A specific type of experiment that prompts a test subject to perform an observable action.",
+     "pagina": "p. 44-45"
+    },
+    {
+     "trecho": "The decision to make a significant change to one or more elements of your ideas, value proposition, or business model.",
+     "pagina": "p. 60-61"
+    },
+    {
+     "trecho": "The decision to kill an idea based on evidence and insights.",
+     "pagina": "p. 60-61"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Três tipos de hipótese no Business Model Canvas (Desirable, Feasible, Viable)",
+   "paginas": "p. X-XI, 20-21, 32-35",
+   "componentes": [
+    {
+     "nome": "Desejabilidade (Desirable): 'Eles querem isso?'",
+     "descricao": "Risco de mercado. Blocos: Segmentos de Clientes, Proposta de Valor, Canais, Relacionamento com Clientes, e no VPC o Perfil do Cliente e o Mapa de Valor. Explorar primeiro. Hipóteses típicas: os segmentos existem e são grandes o bastante; temos os canais certos para alcançar e adquirir; conseguimos reter; a proposta é a certa para o segmento; produtos e serviços atendem tarefas, dores e ganhos que importam."
+    },
+    {
+     "nome": "Viabilidade técnica (Feasible): 'Conseguimos fazer isso?'",
+     "descricao": "Risco de infraestrutura. Blocos: Parcerias Principais, Atividades Principais e Recursos Principais. Explorar em segundo. Hipóteses típicas: conseguimos executar todas as atividades em escala e com qualidade; conseguimos garantir os recursos (inclusive humanos e financeiros); conseguimos criar as parcerias necessárias."
+    },
+    {
+     "nome": "Viabilidade financeira (Viable): 'Devemos fazer isso?'",
+     "descricao": "Risco financeiro. Blocos: Fontes de Receita e Estrutura de Custos (e o lucro). Explorar em terceiro. Hipóteses típicas: o cliente paga um preço específico; a receita é suficiente; os custos ficam sob controle; a receita supera os custos."
+    },
+    {
+     "nome": "Risco de adaptabilidade",
+     "descricao": "Não aparece no Testing Business Ideas no trecho lido. Aparece no The Invincible Company como quarto risco (fatores externos desfavoráveis)."
+    }
+   ],
+   "logica": "O livro adapta as três lentes de Larry Keeley (Doblin) e da IDEO e as ancora nos blocos do canvas, com uma ordem de exploração: primeiro mercado, depois infraestrutura, depois finanças.",
+   "aplicacao_wise": "Desejabilidade no programa: (lado parceiro) a empresa de software quer oferecer à base e indicar; (lado indústria) a indústria quer o diagnóstico e depois a consultoria; canais (Meta, fila, link) alcançam os dois lados. Viabilidade técnica: capacidade de diagnósticos por mês, parceiros executando a indicação, portal registrando o ciclo. Viabilidade financeira: receita da consultoria contra custos de diagnóstico, Hub, anúncios e comissão.",
+   "citacoes": [
+    {
+     "trecho": "“Do they want this?”",
+     "pagina": "p. 32-33"
+    },
+    {
+     "trecho": "“Can we do this?”",
+     "pagina": "p. 32-33"
+    },
+    {
+     "trecho": "“Should we do this?”",
+     "pagina": "p. 32-33"
+    },
+    {
+     "trecho": "The risk that a business cannot generate more revenue than costs (revenue stream and cost structure).",
+     "pagina": "p. 32-33"
+    },
+    {
+     "trecho": "can create the partnerships required to build our business.",
+     "pagina": "p. 34-35"
+    },
+    {
+     "trecho": "can get customers to pay a specific price for our value propositions.",
+     "pagina": "p. 34-35"
+    },
+    {
+     "trecho": "can generate more revenues than costs in order to make a profit.",
+     "pagina": "p. 34-35"
+    }
+   ]
+  },
+  {
+   "nome": "Assumptions Mapping (Mapeamento de Hipóteses: importância x evidência)",
+   "paginas": "p. 36-39",
+   "componentes": [
+    {
+     "nome": "Quem participa",
+     "descricao": "Time central (multifuncional, dedicado) e time de apoio (jurídico, compliance, marketing, pesquisa). No mínimo o time central mapeia as hipóteses a partir do canvas."
+    },
+    {
+     "nome": "Passo 1: identificar hipóteses",
+     "descricao": "Um post-it por hipótese de desejabilidade, viabilidade técnica e viabilidade financeira, colado no canvas. Cores diferentes por tipo; hipóteses específicas, curtas e precisas; sem tópicos; escritas e acordadas em grupo."
+    },
+    {
+     "nome": "Passo 2: priorizar no mapa",
+     "descricao": "Eixo x: evidência (à esquerda há evidência relevante, observável e recente; à direita não há). Eixo y: importância (no alto, se falsa a ideia morre e o resto fica irrelevante)."
+    },
+    {
+     "nome": "Quadrante de cima à esquerda: compartilhar",
+     "descricao": "Importante e com evidência. Conferir se a evidência é boa o bastante, compartilhar com o time e acompanhar."
+    },
+    {
+     "nome": "Quadrante de cima à direita: experimentar",
+     "descricao": "Importante e sem evidência. Define a experimentação de curto prazo."
+    },
+    {
+     "nome": "Passo 3: hipóteses mais arriscadas",
+     "descricao": "Levar ao mapa primeiro as de desejabilidade, depois viabilidade técnica, depois viabilidade financeira, e focar os testes no quadrante de cima à direita."
+    }
+   ],
+   "logica": "Toda ideia nova exige um salto de fé; o mapa torna os riscos explícitos e mostra o que testar já.",
+   "aplicacao_wise": "Fazer o mapa de hipóteses logo depois da oficina do canvas to-be, com gerente de parcerias, consultor de diagnóstico, closer e financeiro (time central) e marketing de anúncios (apoio). Cada processo novo do to-be que dependa de hipótese do quadrante de cima à direita entra como piloto, com experimento e critério, e não como processo definitivo.",
+   "citacoes": [
+    {
+     "trecho": "A team exercise where desirability, viability, and feasibility hypotheses are made explicit and prioritized in terms of importance and evidence.",
+     "pagina": "p. 36-37"
+    },
+    {
+     "trecho": "Every radically new idea, product, service, value proposition, business model, or strategy requires a leap of faith.",
+     "pagina": "p. 36-37"
+    },
+    {
+     "trecho": "At a minimum, the core team needs to be present when mapping out the assumptions from your Business Model Canvas.",
+     "pagina": "p. 36-37"
+    },
+    {
+     "trecho": "Use different color sticky notes for desirability, feasibility, and viability hypotheses.",
+     "pagina": "p. 36-37"
+    },
+    {
+     "trecho": "Every hypothesis should be a single sticky note.",
+     "pagina": "p. 36-37"
+    },
+    {
+     "trecho": "In other words, if that hypothesis is proven wrong, your business idea will fail and all other hypotheses become irrelevant.",
+     "pagina": "p. 38-39"
+    },
+    {
+     "trecho": "Challenge the evidence to make sure it’s good enough.",
+     "pagina": "p. 38-39"
+    },
+    {
+     "trecho": "These assumptions, if proven false, will cause your business to fail.",
+     "pagina": "p. 38-39"
+    }
+   ]
+  },
+  {
+   "nome": "Ciclo de teste: hipótese, experimento, aprendizado e decisão (com Test Card e Learning Card)",
+   "paginas": "p. 28-64",
+   "componentes": [
+    {
+     "nome": "Hypothesize",
+     "descricao": "Identificar e priorizar hipóteses (Assumptions Mapping)."
+    },
+    {
+     "nome": "Experiment",
+     "descricao": "Transformar a hipótese mais crítica em experimento com quatro componentes (hipótese, experimento, métrica, critério). Experimentos de chamada à ação pedem uma ação observável. Rodar vários experimentos por hipótese, com fidelidade crescente."
+    },
+    {
+     "nome": "Learn",
+     "descricao": "Analisar a evidência (fraca ou forte) e extrair aprendizados. Confiança depende de tipo e força da evidência, número de dados e número e tipo de experimentos."
+    },
+    {
+     "nome": "Decide",
+     "descricao": "Perseverar (seguir testando ou passar à próxima hipótese), pivotar (mudar elementos da proposta ou do modelo, retestando o que já foi testado) ou encerrar."
+    }
+   ],
+   "logica": "Aprendizado tem prazo de validade: precisa virar ação rápido.",
+   "aplicacao_wise": "Incluir no to-be um rito mensal de decisão do programa com as três saídas do livro, alimentado pelos dados do portal (links, diagnósticos, contratos, comissões).",
+   "citacoes": [
+    {
+     "trecho": "In reality, it takes a series of experiments to generate the possibility of a successful business.",
+     "pagina": "p. 46-47"
+    },
+    {
+     "trecho": "You need to experiment more if you’ve only run one experiment that produces weak evidence, such as an interview or survey.",
+     "pagina": "p. 56-57"
+    },
+    {
+     "trecho": "what you’ve learned has an expiration date.",
+     "pagina": "p. 62-63"
+    }
+   ]
+  }
+ ],
+ "recomendacoes": [
+  {
+   "tema": "Cor do risco no canvas",
+   "recomendacao": "Na oficina do canvas to-be, usar três cores de post-it de hipótese (desejabilidade, viabilidade técnica, viabilidade financeira), coladas no bloco a que se referem.",
+   "processo": "Oficina de canvas to-be",
+   "citacao": "Use different color sticky notes for desirability, feasibility, and viability hypotheses.",
+   "pagina": "p. 36-37",
+   "aplicabilidade": "alta",
+   "porque": "Liga cada hipótese ao bloco e ao tipo de risco, e prepara o mapa de hipóteses."
+  },
+  {
+   "tema": "Ordem dos testes",
+   "recomendacao": "Testar primeiro as hipóteses de desejabilidade dos dois lados (parceiro quer indicar, indústria quer diagnóstico e consultoria), depois a capacidade de atender, depois a conta financeira.",
+   "processo": "Plano de experimentos do programa",
+   "citacao": "Feasibility Hypotheses Explore second",
+   "pagina": "p. 34-35",
+   "aplicabilidade": "alta",
+   "porque": "O livro marca a ordem de exploração; não adianta otimizar custo de diagnóstico se ninguém indica."
+  },
+  {
+   "tema": "Piloto antes de processo",
+   "recomendacao": "Processos do to-be que dependem de hipótese importante e sem evidência entram como piloto com Test Card (hipótese, experimento, métrica, critério) e só viram processo padrão depois da decisão de perseverar.",
+   "processo": "Governança do mapeamento",
+   "citacao": "Focus on the top right quadrant to identify which hypotheses to test first.",
+   "pagina": "p. 38-39",
+   "aplicabilidade": "alta",
+   "porque": "Evita desenhar e treinar processos sobre suposições."
+  },
+  {
+   "tema": "Registro de comportamento",
+   "recomendacao": "Fazer o portal registrar ações observáveis do parceiro e da indústria (link enviado, diagnóstico agendado, contrato assinado), não intenções declaradas.",
+   "processo": "Instrumentação do portal",
+   "citacao": "What people say in an interview or survey is not necessarily what they do in real life or will do in the future.",
+   "pagina": "p. 52-53",
+   "aplicabilidade": "alta",
+   "porque": "Comportamento é evidência forte; intenção é fraca."
+  },
+  {
+   "tema": "Rito de decisão",
+   "recomendacao": "Criar uma reunião mensal de decisão do programa com as três saídas do livro (perseverar, pivotar, encerrar) para cada experimento em curso.",
+   "processo": "Gestão do programa",
+   "citacao": "The decision to make a significant change to one or more elements of your ideas, value proposition, or business model.",
+   "pagina": "p. 60-61",
+   "aplicabilidade": "média",
+   "porque": "Sem decisão explícita, o aprendizado perde validade."
+  },
+  {
+   "tema": "Time do mapa de hipóteses",
+   "recomendacao": "Garantir no mapa de hipóteses o time central (parcerias, diagnóstico, closer, financeiro) e convidar apoio onde faltar conhecimento (jurídico para comissão, marketing para anúncios).",
+   "processo": "Oficina de mapa de hipóteses",
+   "citacao": "At a minimum, the core team needs to be present when mapping out the assumptions from your Business Model Canvas.",
+   "pagina": "p. 36-37",
+   "aplicabilidade": "média",
+   "porque": "Sem o time de apoio, decisões de importância são tomadas sem evidência."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Percentual de hipóteses críticas com evidência forte",
+   "definicao": "Hipóteses do alto do mapa (importantes) que têm ao menos um experimento de chamada à ação com resultado, dividido pelo total de hipóteses importantes.",
+   "citacao": "You can be very confident if you’ve run several experiments of which at least one is a call-to-action test that produced very strong evidence.",
+   "pagina": "p. 56-57"
+  },
+  {
+   "nome": "Ação observável do parceiro",
+   "definicao": "Parceiros que executaram uma ação observável (enviar link a cliente nomeado, levar decisor à reunião) dividido por parceiros admitidos no período.",
+   "citacao": "A specific type of experiment that prompts a test subject to perform an observable action.",
+   "pagina": "p. 44-45"
+  },
+  {
+   "nome": "Experimentos por hipótese",
+   "definicao": "Número de experimentos rodados para cada hipótese importante, com indicação do tipo (entrevista, chamada à ação, venda simulada).",
+   "citacao": "In reality, it takes a series of experiments to generate the possibility of a successful business.",
+   "pagina": "p. 46-47"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Escrever todas as hipóteses no formato 'acreditamos que' leva a viés de confirmação; incluir hipóteses contrárias.",
+   "citacao": "In order to prevent this from occurring create a few hypotheses that try to disprove your assumptions.",
+   "pagina": "p. 30-31"
+  },
+  {
+   "alerta": "Entrevista e pesquisa sozinhas não bastam para dar o programa como validado.",
+   "citacao": "You need to experiment more if you’ve only run one experiment that produces weak evidence, such as an interview or survey.",
+   "pagina": "p. 56-57"
+  },
+  {
+   "alerta": "Hipóteses no quadrante 'com evidência' também precisam ter a evidência conferida.",
+   "citacao": "Challenge the evidence to make sure it’s good enough.",
+   "pagina": "p. 38-39"
+  },
+  {
+   "alerta": "Leitura parcial: a biblioteca de experimentos (p. 91 em diante) não foi lida; escolher experimentos específicos para o programa exige ler essa parte."
+  }
+ ]
+}

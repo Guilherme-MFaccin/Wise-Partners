@@ -64,6 +64,28 @@
      "Cada bloco tem uma pergunta própria, logo a seguir, com o conteúdo completo, a origem de cada item, os processos, as ferramentas e os responsáveis.",
      "Os parceiros aparecem como segmento de clientes, e não como parceria principal: o programa é uma plataforma de dois lados, em que o parceiro recebe valor e também traz o outro lado (os clientes dele)."
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "We believe a business model can best be described through nine basic building blocks that show the logic of how a company intends to make money.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 20"
+     },
+     {
+      "trecho": "Such costs can be calculated relatively easily after defining Key Resources, Key Activities, and Key Partnerships.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 46-47"
+     },
+     {
+      "trecho": "It is a hands-on tool that fosters understanding, discussion, creativity, and analysis.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 48"
+     },
+     {
+      "trecho": "establishing externalized as-is and to-be business models",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 52"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -130,6 +152,14 @@
   "cls": "mudou",
   "secoes": [
    {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Quem são nossos parceiros principais? Quem são nossos fornecedores principais? Que recursos principais obtemos de parceiros? Que atividades principais os parceiros executam?",
+     "A rede de fornecedores e parceiros que faz o modelo funcionar. Empresas fazem alianças para otimizar o modelo, reduzir risco ou adquirir recursos."
+    ]
+   },
+   {
     "t": "Onde fica no canvas",
     "k": "fig",
     "v": "<svg viewBox=\"0 0 1100 680\" role=\"img\" aria-label=\"Business Model Canvas do Programa Wise Partners\" style=\"min-width:900px\"><defs><marker id=\"ponta\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" class=\"pt\"/></marker></defs><rect x=\"3\" y=\"3\" width=\"214\" height=\"464\" rx=\"8\" class=\"b hi\"/><text x=\"14\" y=\"24.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Parcerias principais</text><text x=\"14\" y=\"44.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Empresas do grupo e closers</text><text x=\"14\" y=\"58.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">UniCesumar (pesquisa)</text><text x=\"14\" y=\"72.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Meta, Google e e-mail</text><text x=\"14\" y=\"86.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Entidades e jurídico</text><text x=\"14\" y=\"112.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 1.1</text><rect x=\"223\" y=\"3\" width=\"214\" height=\"229\" rx=\"8\" class=\"b\"/><text x=\"234\" y=\"24.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Atividades principais</text><text x=\"234\" y=\"44.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Diagnosticar clientes dos parceiros</text><text x=\"234\" y=\"58.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Atrair, selecionar e ativar parceiros</text><text x=\"234\" y=\"72.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Levar oportunidades ao closer</text><text x=\"234\" y=\"86.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Gerir por rituais e medir</text><text x=\"234\" y=\"112.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 1, 1.4, 1.6, 2, 2.1,</text><text x=\"234\" y=\"125.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">2.2, 2.3, 2.4, 2.5, 3, 3.2, 3.2.1,</text><text x=\"234\" y=\"138.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">3.2.2, 3.2.3, 3.2.4, 3.4, 3.5</text><rect x=\"223\" y=\"238\" width=\"214\" height=\"229\" rx=\"8\" class=\"b\"/><text x=\"234\" y=\"259.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Recursos principais</text><text x=\"234\" y=\"279.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Gerente e consultores</text><text x=\"234\" y=\"293.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Matriz 5x5 e roteiro, cases,</text><text x=\"234\" y=\"307.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">minicurso, marca Wise Makers</text><text x=\"234\" y=\"321.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Portal e Wise Hub</text><text x=\"234\" y=\"347.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 11, 11.1, 11.2, 11.5,</text><text x=\"234\" y=\"360.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">12, 12.1, 12.2, 12.3</text><rect x=\"443\" y=\"3\" width=\"214\" height=\"464\" rx=\"8\" class=\"b\"/><text x=\"454\" y=\"24.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Proposta de valor</text><text x=\"454\" y=\"44.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Parceiro: consultoria gratuita à base,</text><text x=\"454\" y=\"58.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">comissão, Hub; Premium e Elite</text><text x=\"454\" y=\"72.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Cliente do parceiro: diagnóstico</text><text x=\"454\" y=\"86.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">de 2 h (R$ 2.000) e Hub (R$ 3.000)</text><text x=\"454\" y=\"112.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 1.2, 1.4.1, 6.1, 7.4,</text><text x=\"454\" y=\"125.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">6.5, 10, 10.1, 10.2, 10.3, 8.5,</text><text x=\"454\" y=\"138.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">8.2.3, 8.2.4</text><rect x=\"663\" y=\"3\" width=\"214\" height=\"229\" rx=\"8\" class=\"b\"/><text x=\"674\" y=\"24.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Relacionamento</text><text x=\"674\" y=\"44.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Entrada: pessoal (fila e conversa)</text><text x=\"674\" y=\"58.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Select: automatizado e comunidade</text><text x=\"674\" y=\"72.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Premium e Elite: pessoal dedicado</text><text x=\"674\" y=\"86.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Cliente: pessoal na reunião, depois Hub</text><text x=\"674\" y=\"112.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 4, 4.3, 4.4, 4.5, 5,</text><text x=\"674\" y=\"125.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">5.1, 5.1.1, 5.2, 5.3, 5.4, 7, 7.1,</text><text x=\"674\" y=\"138.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">7.2, 7.3, 7.5, 7.6, 7.7, 8, 8.1,</text><text x=\"674\" y=\"151.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">8.2, 8.2.2, 8.3, 8.4, 8.6, 9, 9.1,</text><text x=\"674\" y=\"164.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">9.2, 9.3, 1.4.3, 1.4.4, 6.4, 3.3</text><rect x=\"663\" y=\"238\" width=\"214\" height=\"229\" rx=\"8\" class=\"b\"/><text x=\"674\" y=\"259.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Canais</text><text x=\"674\" y=\"279.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Parceiro: anúncio Meta, página,</text><text x=\"674\" y=\"293.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">WhatsApp, conversa, portal</text><text x=\"674\" y=\"307.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Cliente: link do parceiro,</text><text x=\"674\" y=\"321.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">página, agenda, reunião, e-mail</text><text x=\"674\" y=\"347.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 4.1, 4.2, 5.1.2, 11.4,</text><text x=\"674\" y=\"360.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">8.2.1, 6.2.2</text><rect x=\"883\" y=\"3\" width=\"214\" height=\"464\" rx=\"8\" class=\"b\"/><text x=\"894\" y=\"24.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Segmentos de clientes</text><text x=\"894\" y=\"44.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Parceiros (software de gestão</text><text x=\"894\" y=\"58.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">e outros que vendem a empresas)</text><text x=\"894\" y=\"72.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Clientes dos parceiros</text><text x=\"894\" y=\"86.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Clientes da Wise (Prateleira)</text><text x=\"894\" y=\"112.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 1.3, 11.3</text><rect x=\"3\" y=\"473\" width=\"544\" height=\"204\" rx=\"8\" class=\"b\"/><text x=\"14\" y=\"494.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Estrutura de custos</text><text x=\"14\" y=\"514.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Comissão (40% + 10%)</text><text x=\"14\" y=\"528.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Horas de diagnóstico e do Gerente</text><text x=\"14\" y=\"542.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Anúncios</text><text x=\"14\" y=\"556.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Portal e ferramentas</text><text x=\"14\" y=\"582.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 1.5, 1.4.2, 6.7, 3.1</text><rect x=\"553\" y=\"473\" width=\"544\" height=\"204\" rx=\"8\" class=\"b\"/><text x=\"564\" y=\"494.0\" font-size=\"13\" text-anchor=\"start\" class=\"tx\" font-weight=\"600\">Fontes de receita</text><text x=\"564\" y=\"514.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Consultoria contratada pelos</text><text x=\"564\" y=\"528.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">clientes indicados (mensalidade)</text><text x=\"564\" y=\"542.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">Parceiro e cliente do parceiro</text><text x=\"564\" y=\"556.0\" font-size=\"10.5\" text-anchor=\"start\" class=\"mu\">não pagam (lado subsidiado)</text><text x=\"564\" y=\"582.0\" font-size=\"10\" text-anchor=\"start\" class=\"tx\">Processos: 6, 6.2, 6.2.1, 6.2.3, 6.3, 6.6, 6.8</text></svg>"
@@ -171,6 +201,16 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Tipos de parceria: alianças estratégicas entre não concorrentes; coopetição; joint ventures; relação comprador e fornecedor",
+     "Motivação 1: otimização e economia de escala",
+     "Motivação 2: redução de risco e incerteza",
+     "Motivação 3: aquisição de recursos e atividades específicos (conhecimento, licenças, acesso a clientes)"
+    ]
+   },
+   {
     "t": "Os 1 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -190,6 +230,24 @@
       "Gerente combina com os closers; Diretor responde pelo grupo"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Companies create alliances to optimize their business models, reduce risk, or acquire resources.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 44"
+     },
+     {
+      "trecho": "Who are our Key Partners? Who are our key suppliers? Which Key Resources are we acquiring from partners? Which Key Activities do partners perform?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 45"
+     },
+     {
+      "trecho": "Such partnerships can be motivated by needs to acquire knowledge, licenses, or access to customers.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 46"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -206,6 +264,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Que atividades principais nossas propostas de valor exigem? E nossos canais? Nosso relacionamento com clientes? Nossas fontes de receita?",
+     "As coisas mais importantes que a empresa precisa fazer para o modelo funcionar."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -235,6 +301,15 @@
       "Rituais (dia, semana, mês, trimestre) e medidas (CAC, cubo, nível, saúde) que mantêm o programa nos trilhos (2 e 3).",
       "Já decidido por você · v7"
      ]
+    ]
+   },
+   {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Produção",
+     "Resolução de problemas",
+     "Plataforma ou rede (gestão da plataforma, provisão de serviços, promoção da plataforma)"
     ]
    },
    {
@@ -273,6 +348,24 @@
       "Gerente é dono; Diretor na conversa semanal e nas metas"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "For consultancy McKinsey, Key Activities include problem solving.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 43"
+     },
+     {
+      "trecho": "The operations of consultancies, hospitals, and other service organizations are typically dominated by problem solving activities.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 43"
+     },
+     {
+      "trecho": "Key Activities in this category relate to platform management, service provisioning, and platform promotion.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 44"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -289,6 +382,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Que recursos principais nossas propostas de valor exigem? E nossos canais? Nosso relacionamento com clientes? Nossas fontes de receita?",
+     "Os ativos mais importantes para o modelo funcionar. Podem ser próprios, alugados ou obtidos de parceiros."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -321,6 +422,16 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Físicos",
+     "Intelectuais (marcas, conhecimento proprietário, patentes, parcerias, bases de clientes)",
+     "Humanos",
+     "Financeiros"
+    ]
+   },
+   {
     "t": "Os 8 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -347,6 +458,24 @@
       "Igor grava; Gerente mantém; Diretores e Gerente administram o portal"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Key resources can be physical, financial, intellectual, or human. Key resources can be owned or leased by the company or acquired from key partners.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 40"
+     },
+     {
+      "trecho": "What Key Resources do our Value Propositions require? Our Distribution Channels? Customer Relationships? Revenue Streams?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 40"
+     },
+     {
+      "trecho": "Intellectual resources such as brands, proprietary knowledge, patents and copyrights, partnerships, and customer databases are increasingly important components of a strong business model.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 41"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -363,6 +492,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Que valor entregamos ao cliente? Qual problema do cliente estamos ajudando a resolver? Quais necessidades estamos atendendo? Que pacotes de produtos e serviços oferecemos a cada segmento?",
+     "O pacote de produtos e serviços que cria valor para um segmento específico. É a razão pela qual o cliente escolhe uma empresa e não outra: resolve um problema ou atende uma necessidade. O valor pode ser quantitativo (preço, rapidez) ou qualitativo (design, experiência)."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -400,6 +537,23 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Novidade",
+     "Desempenho",
+     "Personalização",
+     "Fazer o trabalho pelo cliente (getting the job done)",
+     "Design",
+     "Marca e status",
+     "Preço (inclui oferta gratuita)",
+     "Redução de custo",
+     "Redução de risco",
+     "Acessibilidade",
+     "Conveniência e usabilidade"
+    ]
+   },
+   {
     "t": "Os 12 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -430,6 +584,24 @@
       "Gerente e consultores conduzem o diagnóstico; Diretor grava os vídeos"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "The Value Proposition is the reason why customers turn to one company over another. It solves a customer problem or satisfies a customer need.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 26"
+     },
+     {
+      "trecho": "What value do we deliver to the customer? Which one of our customer’s problems are we helping to solve? Which customer needs are we satisfying? What bundles of products and services are we offering to each Customer Segment?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 27"
+     },
+     {
+      "trecho": "Value can be created simply by helping a customer get certain jobs done.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 28"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -446,6 +618,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Que tipo de relacionamento cada segmento espera que estabeleçamos e mantenhamos? Quais já estabelecemos? Quanto custam? Como se integram ao resto do modelo?",
+     "Os tipos de relação que a empresa estabelece com cada segmento, do pessoal ao automatizado. As motivações são aquisição, retenção e aumento de vendas (upselling). Vários tipos podem coexistir com o mesmo segmento."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -480,6 +660,19 @@
       "Retomada pela abordagem do tipo, desligamento com aviso de 30 dias e saída a pedido sem multa.",
       "Já decidido por você · v7"
      ]
+    ]
+   },
+   {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Assistência pessoal",
+     "Assistência pessoal dedicada",
+     "Autosserviço",
+     "Serviços automatizados",
+     "Comunidades",
+     "Cocriação",
+     "Motivações: aquisição, retenção, aumento de vendas"
     ]
    },
    {
@@ -533,6 +726,24 @@
       "Gerente conduz; Diretor nas revisões Elite e no encontro trimestral"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Relationships can range from personal to automated.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 33"
+     },
+     {
+      "trecho": "What type of relationship does each of our Customer Segments expect us to establish and maintain with them? Which ones have we established? How costly are they? How are they integrated with the rest of our business model?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 34"
+     },
+     {
+      "trecho": "It represents the deepest and most intimate type of relationship and normally develops over a long period of time.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 34"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -549,6 +760,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Por quais canais nossos segmentos querem ser alcançados? Como os alcançamos hoje? Como nossos canais estão integrados? Quais funcionam melhor? Quais têm melhor custo? Como os integramos à rotina dos clientes?",
+     "Como a empresa se comunica com os segmentos e os alcança para entregar a proposta de valor: canais de comunicação, distribuição e venda, que são os pontos de contato com o cliente. Podem ser próprios ou de parceiros, diretos ou indiretos. Canais de parceiros têm margem menor mas ampliam o alcance."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -586,6 +805,20 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Fase 1: conhecimento (awareness), gerar conhecimento sobre produtos e serviços",
+     "Fase 2: avaliação, ajudar o cliente a avaliar a proposta de valor",
+     "Fase 3: compra, permitir a compra",
+     "Fase 4: entrega da proposta de valor",
+     "Fase 5: pós-venda, suporte depois da compra",
+     "Canais próprios diretos (força de vendas, site)",
+     "Canais próprios indiretos (lojas próprias)",
+     "Canais de parceiros (indiretos: atacado, varejo, sites de parceiros)"
+    ]
+   },
+   {
     "t": "Os 6 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -610,6 +843,24 @@
       "Diretor é dono da campanha; Gerente configura as páginas; Parceiro envia o link"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Channels are customer touch points that play an important role in the customer experience.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     },
+     {
+      "trecho": "Through which Channels do our Customer Segments want to be reached? How are we reaching them now? How are our Channels integrated? Which ones work best? Which ones are most cost-efficient? How are we integrating them with customer routines?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     },
+     {
+      "trecho": "Channels have five distinct phases. Each channel can cover some or all of these phases.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -626,6 +877,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Para quem estamos criando valor? Quem são nossos clientes mais importantes?",
+     "Os diferentes grupos de pessoas ou organizações que a empresa quer alcançar e atender. Grupos são segmentos distintos quando pedem oferta, canal ou relacionamento diferentes, têm rentabilidade diferente ou pagam por aspectos diferentes da oferta."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -658,6 +917,17 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Mercado de massa",
+     "Nicho de mercado",
+     "Segmentado",
+     "Diversificado",
+     "Plataformas (ou mercados) de múltiplos lados"
+    ]
+   },
+   {
     "t": "Os 2 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -678,6 +948,32 @@
       "Gerente define e mantém; Diretor aprova o público da campanha"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Customers comprise the heart of any business model.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 24"
+     },
+     {
+      "trecho": "For whom are we creating value? Who are our most important customers?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 24"
+     },
+     {
+      "trecho": "Some organizations serve two or more interdependent Customer Segments.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 26"
+     },
+     {
+      "trecho": "Such platforms are of value to one group of customers only if the other groups of customers are also present.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 76-77"
+     },
+     {
+      "trecho": "A multi-sided platform grows in value to the extent that it attracts more users, a phenomenon known as the network effect.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 77"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -694,6 +990,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Quais são os custos mais importantes do nosso modelo? Quais recursos principais são mais caros? Quais atividades principais são mais caras?",
+     "Todos os custos de operar o modelo. São calculados com relativa facilidade depois de definir recursos, atividades e parcerias. Os modelos vão de orientados a custo a orientados a valor."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -726,6 +1030,18 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Orientado a custo (cost-driven)",
+     "Orientado a valor (value-driven)",
+     "Custos fixos",
+     "Custos variáveis",
+     "Economias de escala",
+     "Economias de escopo"
+    ]
+   },
+   {
     "t": "Os 4 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -748,6 +1064,24 @@
       "Gerente apura; Financeiro paga; Diretor define as metas"
      ]
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Cost-driven business models focus on minimizing costs wherever possible.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 47"
+     },
+     {
+      "trecho": "Premium Value Propositions and a high degree of personalized service usually characterize value-driven business models.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 47"
+     },
+     {
+      "trecho": "Costs that remain the same despite the volume of goods or services produced.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 48"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -764,6 +1098,14 @@
   "selo": "Proposta da revisão",
   "cls": "mudou",
   "secoes": [
+   {
+    "t": "A pergunta do bloco",
+    "k": "p",
+    "v": [
+     "Por qual valor nossos clientes estão realmente dispostos a pagar? Pelo que pagam hoje? Como pagam hoje? Como prefeririam pagar? Quanto cada fonte contribui para a receita total?",
+     "O dinheiro que a empresa gera em cada segmento. Pode ser receita de transação (pagamento único) ou recorrente. Cada fonte pode ter mecanismo de preço fixo (lista, por característica, por segmento, por volume) ou dinâmico (negociação, gestão de rendimento, mercado em tempo real, leilão)."
+    ]
+   },
    {
     "t": "Onde fica no canvas",
     "k": "fig",
@@ -796,6 +1138,21 @@
     ]
    },
    {
+    "t": "Os tipos que o livro lista",
+    "k": "ul",
+    "v": [
+     "Venda de ativo",
+     "Taxa de uso",
+     "Assinatura",
+     "Empréstimo, aluguel ou leasing",
+     "Licenciamento",
+     "Taxa de corretagem (comissão por intermediação)",
+     "Publicidade",
+     "Receita de transação x receita recorrente",
+     "Preço fixo x preço dinâmico"
+    ]
+   },
+   {
     "t": "Os 7 processos que sustentam este bloco",
     "k": "ul",
     "v": [
@@ -820,6 +1177,32 @@
       "Quem faz",
       "Gerente registra e devolve ao parceiro; Closer da empresa do grupo fecha"
      ]
+    ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "If customers comprise the heart of a business model, Revenue Streams are its arteries.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 36"
+     },
+     {
+      "trecho": "For what value are our customers really willing to pay? For what do they currently pay? How are they currently paying? How would they prefer to pay? How much does each Revenue Stream contribute to overall revenues?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 37"
+     },
+     {
+      "trecho": "Brokers and real estate agents earn a commission each time they successfully match a buyer and seller.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 38"
+     },
+     {
+      "trecho": "the demand generated at a price of zero is many times higher than the demand generated at one cent or any other price point.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 90"
+     },
+     {
+      "trecho": "Yet to make a profit, an organization offering free products or services must still generate revenues somehow.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 90"
+     }
     ]
    }
   ],
@@ -856,6 +1239,32 @@
      "Tarefas, dores e ganhos: conversa com o Igor de 04/11 (retenção da base como valor central, FO-06), FO-08 (benefícios: mapeamento da saúde da base, maior LTV, diferenciação, case de sucesso) e a página dos parceiros já no ar.",
      "Produtos e serviços: a escada de níveis aprovada (FO-12 e FO-14)."
     ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Pains describe bad outcomes, risks, and obstacles related to customer jobs.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 8-9 (PDF p. 52)"
+     },
+     {
+      "trecho": "Gains describe the outcomes customers want to achieve or the concrete benefits they are seeking.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 8-9 (PDF p. 52)"
+     },
+     {
+      "trecho": "When your customers want to look good or gain power or status.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 12-13 (PDF p. 54)"
+     },
+     {
+      "trecho": "Some business models work only with a combination of several value propositions and customer segments. In these situations, you require fit between each value proposition and its respective customer segment for the business model to work.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 52-53 (PDF p. 124)"
+     },
+     {
+      "trecho": "When a business sells a product or service through an intermediary, it effectively needs to cater to two customers: the end customer and the intermediary itself. Without a clear value proposition to the intermediary, the offer might not reach the end customer at all, or at least not with the same impact.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 52-53 (PDF p. 124)"
+     }
+    ]
    }
   ],
   "opcoes": [
@@ -883,6 +1292,20 @@
     "v": [
      "Produtos e serviços, valores e cases: FO-15.",
      "Dores e ganhos: as afirmações da Matriz 5x5 e os blocos do roteiro de diagnóstico, e o texto da página do cliente aprovado no FO-10."
+    ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Organizations are customers that are composed of different stakeholders who all have different jobs, pains, and gains.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 50-51 (PDF p. 121)"
+     },
+     {
+      "trecho": "Identify the most important ones and sketch out a Value Proposition Canvas for each one of them.",
+      "fonte": "Value Proposition Design: How to Create Products and Services Customers Want, p. 50-51 (PDF p. 119)"
+     }
     ]
    }
   ],
@@ -950,6 +1373,24 @@
       "5. Pós-venda",
       "E-mail com o próximo passo; Wise Hub; se quiser contratar, closer (6.1 e 6.3)."
      ]
+    ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "Channels are customer touch points that play an important role in the customer experience.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     },
+     {
+      "trecho": "Through which Channels do our Customer Segments want to be reached? How are we reaching them now? How are our Channels integrated? Which ones work best? Which ones are most cost-efficient? How are we integrating them with customer routines?",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     },
+     {
+      "trecho": "Channels have five distinct phases. Each channel can cover some or all of these phases.",
+      "fonte": "Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers, PDF p. 31"
+     }
     ]
    }
   ],

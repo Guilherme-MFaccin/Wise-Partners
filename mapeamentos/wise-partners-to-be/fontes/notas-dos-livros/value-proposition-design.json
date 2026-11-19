@@ -1,0 +1,515 @@
+{
+ "livro": "Value Proposition Design: How to Create Products and Services Customers Want",
+ "autores": "Alexander Osterwalder, Yves Pigneur, Gregory Bernarda e Alan Smith",
+ "slug": "value-proposition-design",
+ "leitura": {
+  "fonte": "PDF no Google Drive (fileId 1KhLb--0TrbT7fxOGgCjHmQYgSPX9OA0G), 666 páginas, baixado inteiro e convertido em texto.",
+  "completa": true,
+  "paginacao": "As páginas do PDF não trazem número impresso. Cada citação traz a página do PDF; quando o índice remissivo do livro confirma a página impressa do mesmo assunto, ela vem antes, no formato 'p. 12-13 (PDF p. 54)'.",
+  "limites": "Figuras e quadros não vêm no texto. A tabela de perguntas de 'Testing the Rectangle' saiu desalinhada na extração e não foi citada."
+ },
+ "tese": "A proposta de valor se desenha num canvas com dois lados: o Perfil do Cliente (tarefas, dores e ganhos) e o Mapa de Valor (produtos e serviços, aliviadores de dor e criadores de ganho). Há encaixe (fit) quando o mapa de valor atende as tarefas, dores e ganhos que importam ao cliente. O encaixe acontece em três estágios: no papel (problema e solução), no mercado (produto e mercado) e no banco (modelo de negócio). O Value Proposition Canvas é um plug-in do Business Model Canvas: dá zoom em dois blocos, Segmentos de Clientes e Proposta de Valor. Em modelos com intermediário ou plataforma é preciso encaixe para cada par de proposta e segmento, o que no Programa Wise Partners significa um canvas para o parceiro de software e outro para a indústria cliente dele.",
+ "principios": [
+  {
+   "principio": "O Value Proposition Canvas é um zoom em dois blocos do Business Model Canvas: Segmentos de Clientes e Proposta de Valor.",
+   "explicacao": "O livro apresenta o VPC como peça que se encaixa no BMC. O BMC mostra como a empresa cria e captura valor para si; o VPC mostra como cria valor para o cliente. O trabalho é ir e voltar entre os dois.",
+   "aplicacao_wise": "Para cada segmento do canvas do programa, um VPC: o círculo (perfil) do segmento corresponde ao post-it em Segmentos de Clientes e o quadrado (mapa de valor) ao post-it em Proposta de Valor. O resto do BMC (canais, relacionamento, receita, lado esquerdo) responde se essa proposta se sustenta.",
+   "citacoes": [
+    {
+     "trecho": "The Value Proposition Canvas zooms into the details of two of the building blocks of the Business Model Canvas.",
+     "pagina": "p. xiv-xv (PDF p. 25)"
+    },
+    {
+     "trecho": "The Business Model, and Value Proposition Canvas perfectly integrate, with the latter being like a plug-in to the former that allows you to zoom into the details of how you are creating value for customers.",
+     "pagina": "p. xvi-xvii (PDF p. 27)"
+    },
+    {
+     "trecho": "The Business Model Canvas makes explicit how you are creating and capturing value for your business. The Value Proposition Canvas makes explicit how you are creating value for your customers.",
+     "pagina": "p. 144-145 (PDF p. 357)"
+    }
+   ]
+  },
+  {
+   "principio": "Comece pelo cliente: tarefas, dores e ganhos descritos nas palavras dele, ranqueados por importância.",
+   "explicacao": "O perfil divide o cliente em tarefas (funcionais, sociais, emocionais e de apoio), dores (resultados indesejados, obstáculos, riscos) e ganhos (requeridos, esperados, desejados, inesperados). Tudo deve ser concreto e ranqueado; poucos post-its no perfil indicam pouco conhecimento do cliente.",
+   "aplicacao_wise": "Dois perfis: (1) dono ou diretor comercial da indústria (tarefa funcional: bater meta; social: ser visto como quem organizou o comercial; dor: equipe sem processo, CRM subutilizado; ganho: previsibilidade de receita); (2) sócio ou gestor comercial da empresa de software (tarefa: reter e expandir clientes, diferenciar-se de concorrentes; dor: cliente que não usa o CRM ou ERP e cancela; ganho: receita extra e argumento de venda). Os perfis devem nascer de conversas reais da fila de entrada e de diagnósticos, não de suposição.",
+   "citacoes": [
+    {
+     "trecho": "Customer Jobs describe what customers are trying to get done in their work and in their lives, as expressed in their own words.",
+     "pagina": "p. 8-9 (PDF p. 52)"
+    },
+    {
+     "trecho": "Make sure you take the customer’s perspective when investigating jobs.",
+     "pagina": "p. 12-13 (PDF p. 54)"
+    },
+    {
+     "trecho": "If you have only a few sticky notes on your profile, that probably indicates a lack of customer understanding.",
+     "pagina": "PDF p. 66"
+    },
+    {
+     "trecho": "Ranking jobs, pains, and gains is essential in order to design value propositions that address things customers really care about.",
+     "pagina": "p. 20-21 (PDF p. 67)"
+    }
+   ]
+  },
+  {
+   "principio": "Grandes propostas de valor escolhem poucas dores e ganhos e os atendem muito bem.",
+   "explicacao": "Nenhuma proposta atende todas as dores e ganhos. Os aliviadores e criadores devem focar o que é extremo ou essencial para o cliente, e produtos e serviços só criam valor em relação a um segmento específico.",
+   "aplicacao_wise": "O pacote atual (diagnóstico, plano de ação, Wise Hub, comissão, recomendação, formação) deve ser repartido por segmento: o que é para a indústria e o que é para o parceiro. Cada item precisa apontar para uma dor ou ganho ranqueado no perfil correspondente; o que não aponta para nada é candidato a sair.",
+   "citacoes": [
+    {
+     "trecho": "Great value propositions focus on pains that matter to customers, in particular extreme pains.",
+     "pagina": "p. 31-32 (PDF p. 86)"
+    },
+    {
+     "trecho": "Great value propositions often focus only on few pains that they alleviate extremely well.",
+     "pagina": "p. 31-32 (PDF p. 86-87)"
+    },
+    {
+     "trecho": "Products and services create value only in relationship to a specific customer segment.",
+     "pagina": "PDF p. 105"
+    }
+   ]
+  },
+  {
+   "principio": "Em modelos com intermediário ou plataforma é preciso encaixe para cada par de proposta e segmento.",
+   "explicacao": "O livro chama isso de encaixes múltiplos. Quem vende por intermediário precisa de proposta para o cliente final e para o intermediário; sem proposta clara ao intermediário, a oferta pode nem chegar ao cliente final. Em plataformas, o modelo precisa de uma proposta para cada lado, e a plataforma só existe com todos os lados presentes.",
+   "aplicacao_wise": "É o caso exato do programa: o parceiro de software é o intermediário (leva a oferta à indústria) e também um lado da plataforma (no Premium recebe recomendação aos clientes da Wise). O to-be precisa de pelo menos dois VPCs com encaixe verificado: Wise para parceiro e Wise para indústria cliente do parceiro. Um terceiro, Wise para cliente atual da Wise que recebe recomendação de parceiro, entra quando o Premium for desenhado.",
+   "citacoes": [
+    {
+     "trecho": "Some business models work only with a combination of several value propositions and customer segments. In these situations, you require fit between each value proposition and its respective customer segment for the business model to work.",
+     "pagina": "p. 52-53 (PDF p. 124)"
+    },
+    {
+     "trecho": "When a business sells a product or service through an intermediary, it effectively needs to cater to two customers: the end customer and the intermediary itself. Without a clear value proposition to the intermediary, the offer might not reach the end customer at all, or at least not with the same impact.",
+     "pagina": "p. 52-53 (PDF p. 124)"
+    },
+    {
+     "trecho": "A platform exists only when all sides are present in the model.",
+     "pagina": "p. 52-53 (PDF p. 125)"
+    }
+   ]
+  },
+  {
+   "principio": "Em vendas B2B, cada papel no processo de compra tem seu próprio perfil.",
+   "explicacao": "Organizações são clientes compostos por vários interessados com tarefas, dores e ganhos diferentes: influenciadores, recomendadores, compradores econômicos, decisores, usuários finais e sabotadores. O livro recomenda um VPC para cada um dos mais importantes.",
+   "aplicacao_wise": "Na indústria, o decisor (dono ou diretor) e o usuário final (gestor e vendedores) têm dores diferentes; no parceiro de software, o sócio (decisor) e o executivo de contas que vai enviar o link (usuário) também. A conversa de entrada e o diagnóstico precisam identificar quem é quem. Possível sabotador: o vendedor da indústria que vê a consultoria como fiscalização.",
+   "citacoes": [
+    {
+     "trecho": "Organizations are customers that are composed of different stakeholders who all have different jobs, pains, and gains.",
+     "pagina": "p. 50-51 (PDF p. 121)"
+    },
+    {
+     "trecho": "Identify the most important ones and sketch out a Value Proposition Canvas for each one of them.",
+     "pagina": "p. 50-51 (PDF p. 119)"
+    }
+   ]
+  },
+  {
+   "principio": "O encaixe vem em três estágios, e cada um pede um tipo de evidência.",
+   "explicacao": "Problema e solução (no papel): há evidência de que o cliente se importa com certas tarefas, dores e ganhos, e uma proposta desenhada para elas. Produto e mercado (no mercado): há evidência de que a proposta cria valor e ganha tração. Modelo de negócio (no banco): há evidência de que a proposta cabe num modelo lucrativo e escalável, ou seja, a receita supera o custo de criar e entregar a proposta, ou as propostas no caso de plataformas.",
+   "aplicacao_wise": "Ler o programa por lado: no lado indústria, há sinais de produto e mercado se diagnósticos convertem em contratos; no lado parceiro, verificar se há tração real (parceiros que mandam indicações repetidas) ou só adesão. O encaixe de modelo de negócio só existe se a receita das consultorias pagar diagnósticos, Hub e comissões das duas propostas juntas.",
+   "citacoes": [
+    {
+     "trecho": "Fit happens in three stages.",
+     "pagina": "p. 48-49 (PDF p. 115)"
+    },
+    {
+     "trecho": "The fit you achieve is not yet proven and exists mainly on paper.",
+     "pagina": "p. 48-49 (PDF p. 117)"
+    },
+    {
+     "trecho": "Have evidence that your value proposition can be embedded in a profitable and scalable business model.",
+     "pagina": "p. 48-49 (PDF p. 118)"
+    },
+    {
+     "trecho": "You don’t have business model fit until you can generate more revenues with your value proposition than you incur costs to create and deliver it (or “them\" in the case of platform models with more than one interdependent value propositions).",
+     "pagina": "p. 48-49 (PDF p. 118)"
+    }
+   ]
+  },
+  {
+   "principio": "Teste primeiro o círculo (o que o cliente valoriza), depois o quadrado (a proposta) e por fim o retângulo (o modelo de negócio).",
+   "explicacao": "Ter evidência sobre tarefas, dores e ganhos antes de testar a proposta evita não saber se o cliente rejeitou a proposta ou se ela atacava coisas irrelevantes. Depois, testar aliviadores e criadores um a um. Por fim, testar as suposições críticas do modelo: canais, custo de aquisição, recursos, atividades e parceiros.",
+   "aplicacao_wise": "Sequência para o to-be: (1) círculo: validar com entrevistas e dados da fila as três dores principais de cada lado; (2) quadrado: testar se o diagnóstico gratuito e a comissão são o que move cada lado; (3) retângulo: testar se o custo de anúncio por parceiro ativo e o custo por diagnóstico cabem na receita das consultorias.",
+   "citacoes": [
+    {
+     "trecho": "Provide evidence showing what customers care about (the circle) before focusing on how to help them (the square).",
+     "pagina": "p. 190-191 (PDF p. 452)"
+    },
+    {
+     "trecho": "If you start by testing your value proposition, you never know if customers are rejecting your value proposition or if you are simply addressing irrelevant jobs, pains, or gains.",
+     "pagina": "p. 190-191 (PDF p. 452)"
+    },
+    {
+     "trecho": "Test the most critical assumptions underlying the business model your value proposition is embedded in.",
+     "pagina": "p. 194-195 (PDF p. 457)"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Value Proposition Canvas: Perfil do Cliente (Customer Profile)",
+   "paginas": "p. 8-25 (PDF p. 49 a 72)",
+   "componentes": [
+    {
+     "nome": "Customer Jobs (Tarefas do cliente)",
+     "descricao": "O que o cliente tenta fazer no trabalho e na vida: tarefas a cumprir, problemas a resolver, necessidades a satisfazer. Tipos: funcionais, sociais, pessoais ou emocionais, e de apoio (papéis de comprador, cocriador e transferidor de valor). Contexto e importância variam."
+    },
+    {
+     "nome": "Pains (Dores)",
+     "descricao": "Tudo que incomoda o cliente antes, durante e depois de tentar fazer uma tarefa, ou que o impede de fazê-la. Tipos: resultados, problemas e características indesejados; obstáculos; riscos. Avaliar a severidade (extrema ou moderada) e descrever de forma concreta."
+    },
+    {
+     "nome": "Gains (Ganhos)",
+     "descricao": "Resultados e benefícios que o cliente quer. Tipos: requeridos, esperados, desejados e inesperados. Avaliar a relevância (essencial ou bom de ter) e descrever de forma concreta."
+    },
+    {
+     "nome": "Ranqueamento",
+     "descricao": "Tarefas por importância, dores por severidade, ganhos por relevância, testando o ranking até ele refletir a visão do cliente."
+    }
+   ],
+   "logica": "O perfil é o círculo do canvas. Pode começar por suposições, desde que vire base de entrevistas e testes. Deve ir além das tarefas ligadas ao produto e incluir dores extremas do contexto do cliente.",
+   "aplicacao_wise": "Montar um perfil para a indústria (por decisor e por usuário) e um para o parceiro de software (por sócio e por executivo de contas), alimentados pelas conversas de entrada e pelos diagnósticos já feitos.",
+   "citacoes": [
+    {
+     "trecho": "Pains describe bad outcomes, risks, and obstacles related to customer jobs.",
+     "pagina": "p. 8-9 (PDF p. 52)"
+    },
+    {
+     "trecho": "Gains describe the outcomes customers want to achieve or the concrete benefits they are seeking.",
+     "pagina": "p. 8-9 (PDF p. 52)"
+    },
+    {
+     "trecho": "When your customers want to look good or gain power or status.",
+     "pagina": "p. 12-13 (PDF p. 54)"
+    },
+    {
+     "trecho": "Pains describe anything that annoys your customers before, during, and after trying to get a job done or simply prevents them from getting a job done.",
+     "pagina": "p. 14-15 (PDF p. 57)"
+    },
+    {
+     "trecho": "Gains describe the outcomes and benefits your customers want.",
+     "pagina": "p. 16-17 (PDF p. 61)"
+    },
+    {
+     "trecho": "You may begin exploring ideas by sketching out a profile based on what you believe your potential customers look like.",
+     "pagina": "PDF p. 65"
+    }
+   ]
+  },
+  {
+   "nome": "Value Proposition Canvas: Mapa de Valor (Value Map)",
+   "paginas": "p. 8-9 e 26-39 (PDF p. 49 e 82 a 106)",
+   "componentes": [
+    {
+     "nome": "Products and Services (Produtos e serviços)",
+     "descricao": "A lista do que se oferece, como numa vitrine. Tipos: físicos ou tangíveis, intangíveis, digitais e financeiros. Inclui serviços de apoio aos papéis de comprador, cocriador e transferidor. Nem todos têm a mesma relevância."
+    },
+    {
+     "nome": "Pain Relievers (Aliviadores de dor)",
+     "descricao": "Como exatamente os produtos e serviços aliviam dores específicas do cliente. Focar dores extremas; não é preciso um aliviador para cada dor."
+    },
+    {
+     "nome": "Gain Creators (Criadores de ganho)",
+     "descricao": "Como os produtos e serviços produzem os resultados e benefícios que o cliente espera, deseja ou não imagina. Focar os ganhos relevantes."
+    }
+   ],
+   "logica": "O mapa é o quadrado do canvas. Erros comuns: listar todos os produtos e não só os do segmento; pôr produtos nos campos de aliviadores e criadores; oferecer aliviadores sem relação com o perfil; tentar atender todas as dores.",
+   "aplicacao_wise": "Mapa para a indústria: produtos (diagnóstico de 2 horas, plano de ação, Wise Hub, consultoria); aliviadores (ex.: 'diagnóstico sem custo elimina o risco de contratar no escuro'); criadores (ex.: 'plano de ação priorizado em 2 horas'). Mapa para o parceiro: produtos (link, oferta gratuita para a base, comissão, níveis); aliviadores (ex.: 'cliente que melhora o comercial usa mais o CRM e cancela menos', hipótese a testar); criadores (ex.: 'receita extra de 40% da primeira mensalidade', 'ser recomendado aos clientes da Wise').",
+   "citacoes": [
+    {
+     "trecho": "It breaks your value proposition down into products and services, pain relievers, and gain creators.",
+     "pagina": "p. 8-9 (PDF p. 49)"
+    },
+    {
+     "trecho": "Pain relievers describe how exactly your products and services alleviate specific customer pains.",
+     "pagina": "p. 31-32 (PDF p. 86)"
+    },
+    {
+     "trecho": "Gain creators describe how your products and services create customer gains.",
+     "pagina": "p. 33-34 (PDF p. 89)"
+    },
+    {
+     "trecho": "Make the unrealistic attempt to address all customer pains and gains.",
+     "pagina": "PDF p. 105"
+    }
+   ]
+  },
+  {
+   "nome": "Fit (Encaixe) e os três tipos de encaixe",
+   "paginas": "p. 42-53 (PDF p. 107 a 125)",
+   "componentes": [
+    {
+     "nome": "Encaixe",
+     "descricao": "Há encaixe quando os aliviadores e criadores correspondem a tarefas, dores e ganhos importantes para o cliente. Verificação: marcar com visto cada aliviador ou criador que corresponde a algo do perfil; o que não corresponde provavelmente não cria valor."
+    },
+    {
+     "nome": "1. Problem-Solution Fit (no papel)",
+     "descricao": "Evidência de que o cliente se importa com certas tarefas, dores e ganhos, e uma proposta desenhada para elas. Ainda sem evidência de que o cliente se importa com a proposta."
+    },
+    {
+     "nome": "2. Product-Market Fit (no mercado)",
+     "descricao": "Evidência de que produtos, aliviadores e criadores estão de fato criando valor e ganhando tração. Processo longo e iterativo."
+    },
+    {
+     "nome": "3. Business Model Fit (no banco)",
+     "descricao": "Evidência de que a proposta cabe num modelo lucrativo e escalável: receita maior que o custo de criar e entregar a proposta (ou as propostas, em plataformas)."
+    },
+    {
+     "nome": "Encaixes múltiplos: intermediário",
+     "descricao": "Proposta para o cliente final e para o intermediário (exemplo: Haier, que vende por varejistas)."
+    },
+    {
+     "nome": "Encaixes múltiplos: plataforma",
+     "descricao": "Uma proposta para cada lado (exemplo: Airbnb, anfitriões e viajantes). A plataforma só existe com todos os lados."
+    },
+    {
+     "nome": "Perfis B2B",
+     "descricao": "Influenciadores, recomendadores, compradores econômicos, decisores, usuários finais e sabotadores, cada um com seu perfil."
+    }
+   ],
+   "logica": "O primeiro encaixe se prova no papel, o segundo no mercado e o terceiro no banco. Uma boa proposta sem bom modelo de negócio pode fracassar.",
+   "aplicacao_wise": "Registrar no mapeamento, para cada lado, em que estágio de encaixe o programa está e qual evidência sustenta isso. O lado parceiro provavelmente está em problema e solução (adesão sem prova de indicações recorrentes); o lado indústria depende da taxa de conversão dos diagnósticos.",
+   "citacoes": [
+    {
+     "trecho": "You achieve fit when customers get excited about your value proposition, which happens when you address important jobs, alleviate extreme pains, and create essential gains that customers care about.",
+     "pagina": "p. 42-43 (PDF p. 108)"
+    },
+    {
+     "trecho": "Striving for fit is the essence of value proposition design.",
+     "pagina": "p. 42-43 (PDF p. 108)"
+    },
+    {
+     "trecho": "Your customers are the judge, jury, and executioner of your value proposition.",
+     "pagina": "p. 42-43 (PDF p. 109)"
+    },
+    {
+     "trecho": "At this stage you don’t yet have evidence that customers actually care about your value proposition.",
+     "pagina": "p. 48-49 (PDF p. 117)"
+    },
+    {
+     "trecho": "Have evidence that your products and services, pain relievers, and gain creators are actually creating customer value and getting traction in the market.",
+     "pagina": "p. 48-49 (PDF p. 117)"
+    },
+    {
+     "trecho": "Finding this second type of fit is a long and iterative process; it doesn’t happen overnight.",
+     "pagina": "p. 48-49 (PDF p. 118)"
+    },
+    {
+     "trecho": "In such a case, the business model needs to hold two value propositions, one for local residents (called hosts) and one for travelers.",
+     "pagina": "p. 52-53 (PDF p. 125)"
+    }
+   ]
+  },
+  {
+   "nome": "Ligação entre VPC e BMC (Finding the Right Business Model)",
+   "paginas": "p. xiv-xvii e 142-157 (PDF p. 25 a 29 e 355 a 393)",
+   "componentes": [
+    {
+     "nome": "Zoom in e zoom out",
+     "descricao": "Zoom in no VPC para ver se a proposta cria valor para o cliente; zoom out no BMC para ver se dá para criar, entregar e capturar valor com lucro em torno dessa proposta."
+    },
+    {
+     "nome": "Ida e volta",
+     "descricao": "Acertar proposta e modelo é um processo de ida e volta até fechar (caso Azuri: tecnologia solar que só virou negócio com mudança de modelo, de venda para pagamento por uso)."
+    },
+    {
+     "nome": "Teste de estresse com números",
+     "descricao": "Esboçar custos e receitas de modelos alternativos para a mesma tecnologia (exemplo MedTech: venda do aparelho contra receita recorrente de tiras de teste) como checagem de sanidade."
+    },
+    {
+     "nome": "Sete perguntas para avaliar o modelo",
+     "descricao": "Custos de troca, receita recorrente, ganhar antes de gastar, estrutura de custos que muda o jogo, outros que fazem o trabalho, escalabilidade, proteção contra concorrência. Nota de 0 a 10 em cada."
+    },
+    {
+     "nome": "Inventar e melhorar",
+     "descricao": "Empresas existentes precisam saber se o projeto é de inventar (nova proposta e novo modelo) ou melhorar (proposta atual), e manter um portfólio que cubra os dois extremos."
+    }
+   ],
+   "logica": "Proposta de valor sem modelo de negócio que a sustente morre; modelo sem proposta que o cliente queira não tem receita.",
+   "aplicacao_wise": "As sete perguntas são um bom checklist do to-be. A pergunta 'outros que fazem o trabalho' é a tese do programa (parceiros prospectam pela Wise). 'Receita recorrente' é forte (mensalidade da consultoria). 'Ganhar antes de gastar' é fraca (diagnóstico e comissão vêm antes ou junto da receita). O programa é um projeto de 'inventar' dentro de um modelo de consultoria existente, o que pede atitude de teste e não de execução linear.",
+   "citacoes": [
+    {
+     "trecho": "Embed your value proposition in a viable business model to capture value for your organization.",
+     "pagina": "p. xvi-xvii (PDF p. 27)"
+    },
+    {
+     "trecho": "A business that generates fewer revenues than it incurs costs will inevitably disappear, even with the most successful value proposition.",
+     "pagina": "p. 144-145 (PDF p. 356)"
+    },
+    {
+     "trecho": "Zoom out to the bigger picture to analyze if you can profitably create, deliver, and capture value around this particular customer value proposition.",
+     "pagina": "p. 144-145 (PDF p. 357)"
+    },
+    {
+     "trecho": "Score your business model design by answering these seven questions:",
+     "pagina": "p. 156-157 (PDF p. 386)"
+    },
+    {
+     "trecho": "How much does your business model get customers or third parties to create value for you for free?",
+     "pagina": "p. 156-157 (PDF p. 391)"
+    },
+    {
+     "trecho": "Is every sale a new effort or will it result in quasi-guaranteed follow-up revenues and purchases?",
+     "pagina": "p. 156-157 (PDF p. 388)"
+    },
+    {
+     "trecho": "How easy or difficult is it for customers to switch to another company?",
+     "pagina": "p. 156-157 (PDF p. 387)"
+    }
+   ]
+  },
+  {
+   "nome": "O que testar: círculo, quadrado e retângulo",
+   "paginas": "p. 190-201 (PDF p. 450 a 462)",
+   "componentes": [
+    {
+     "nome": "Testing the Circle",
+     "descricao": "Provar quais tarefas, dores e ganhos importam mais ao cliente, com evidência além da pesquisa inicial, antes de testar a proposta."
+    },
+    {
+     "nome": "Testing the Square",
+     "descricao": "Testar se e quanto o cliente se importa com a forma como a proposta o ajuda, um aliviador e um criador por vez, do jeito mais simples e barato."
+    },
+    {
+     "nome": "Testing the Rectangle",
+     "descricao": "Testar as suposições mais críticas do modelo de negócio: canais, custo de aquisição contra receita, custo de recursos e atividades, acesso a parceiros."
+    },
+    {
+     "nome": "Hipótese de negócio",
+     "descricao": "Algo que precisa ser verdade para a ideia funcionar e ainda não foi validado; extraída do VPC e do BMC antes de sair a campo."
+    }
+   ],
+   "logica": "Do cliente para a proposta e da proposta para o modelo, sempre com evidência.",
+   "aplicacao_wise": "Liga diretamente ao Testing Business Ideas: o círculo e o quadrado testam desejabilidade; o retângulo testa viabilidade e viabilidade técnica.",
+   "citacoes": [
+    {
+     "trecho": "Test if and how much your customers care about how you intend to help them.",
+     "pagina": "p. 192-193 (PDF p. 454)"
+    },
+    {
+     "trecho": "A value proposition that customers want is worth little if you don’t have the channels to reach customers in a way they want to be reached.",
+     "pagina": "p. 194-195 (PDF p. 457)"
+    },
+    {
+     "trecho": "Likewise, a business model that spends more money on acquiring customers than it will earn from revenue from those same customers won’t survive over the long term.",
+     "pagina": "p. 194-195 (PDF p. 457)"
+    },
+    {
+     "trecho": "In some markets you might need access to key partners who might not be interested in working with you.",
+     "pagina": "p. 194-195 (PDF p. 457)"
+    },
+    {
+     "trecho": "Something that needs to be true for your idea to work partially or fully but that hasn’t been validated yet.",
+     "pagina": "p. 200-201 (PDF p. 462)"
+    }
+   ]
+  }
+ ],
+ "recomendacoes": [
+  {
+   "tema": "Dois canvases de proposta",
+   "recomendacao": "Fazer um VPC para o parceiro de software e outro para a indústria cliente do parceiro, e ligar cada um ao post-it correspondente no BMC do programa.",
+   "processo": "Oficina de canvas to-be",
+   "citacao": "Some business models work only with a combination of several value propositions and customer segments. In these situations, you require fit between each value proposition and its respective customer segment for the business model to work.",
+   "pagina": "p. 52-53 (PDF p. 124)",
+   "aplicabilidade": "alta",
+   "porque": "O programa é intermediário e plataforma ao mesmo tempo; sem encaixe nos dois lados, o modelo não fecha."
+  },
+  {
+   "tema": "Proposta ao intermediário",
+   "recomendacao": "Escrever a proposta de valor ao parceiro em termos das tarefas dele (reter e expandir clientes de software), e não só da comissão, e testá-la na conversa de entrada.",
+   "processo": "Conversa de entrada do parceiro",
+   "citacao": "Without a clear value proposition to the intermediary, the offer might not reach the end customer at all, or at least not with the same impact.",
+   "pagina": "p. 52-53 (PDF p. 124)",
+   "aplicabilidade": "alta",
+   "porque": "Se o parceiro não vê ganho próprio, o link não é enviado e a indústria nunca chega."
+  },
+  {
+   "tema": "Perfis por papel",
+   "recomendacao": "Na conversa de entrada e no agendamento do diagnóstico, registrar quem é decisor, usuário final e possível sabotador, no parceiro e na indústria.",
+   "processo": "Qualificar parceiro e qualificar indicação",
+   "citacao": "Identify the most important ones and sketch out a Value Proposition Canvas for each one of them.",
+   "pagina": "p. 50-51 (PDF p. 119)",
+   "aplicabilidade": "média",
+   "porque": "Em B2B o decisor e o usuário têm dores diferentes, e a proposta precisa falar com os dois."
+  },
+  {
+   "tema": "Checagem de encaixe",
+   "recomendacao": "Aplicar o exercício de marcar com visto cada aliviador e criador que corresponde ao perfil, para os dois VPCs, e retirar do pacote o que não corresponde a nada.",
+   "processo": "Revisão da oferta do programa",
+   "citacao": "Go through Pain Relievers and Gain Creators one by one, and check to see whether they fit a customer job, pain, or gain.",
+   "pagina": "PDF p. 112",
+   "aplicabilidade": "alta",
+   "porque": "Evita manter benefícios caros que ninguém valoriza."
+  },
+  {
+   "tema": "Estágio de encaixe",
+   "recomendacao": "Registrar no mapeamento, para cada lado, o estágio de encaixe atual (papel, mercado, banco) e a evidência que o sustenta.",
+   "processo": "Painel do programa",
+   "citacao": "Fit happens in three stages.",
+   "pagina": "p. 48-49 (PDF p. 115)",
+   "aplicabilidade": "alta",
+   "porque": "Mostra o que ainda é suposição e orienta o que testar primeiro."
+  },
+  {
+   "tema": "Avaliação do modelo",
+   "recomendacao": "Pontuar o to-be nas sete perguntas do livro (troca, recorrência, ganhar antes de gastar, custos, outros fazem o trabalho, escala, proteção) e registrar onde o desenho é fraco.",
+   "processo": "Revisão econômica do programa",
+   "citacao": "Score your business model design by answering these seven questions:",
+   "pagina": "p. 156-157 (PDF p. 386)",
+   "aplicabilidade": "média",
+   "porque": "Dá um critério comum para comparar alternativas de desenho."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Percentual de itens da oferta com encaixe",
+   "definicao": "Aliviadores e criadores com visto (correspondem a uma tarefa, dor ou ganho do perfil) dividido pelo total de aliviadores e criadores, por VPC.",
+   "citacao": "If a pain reliever or gain creator doesn’t fit anything, it may not be creating customer value.",
+   "pagina": "PDF p. 113"
+  },
+  {
+   "nome": "Tração por lado (encaixe produto e mercado)",
+   "definicao": "Lado indústria: diagnósticos que viram contrato. Lado parceiro: parceiros com indicações em dois meses seguidos. Indicador de que a proposta ganha tração, não só adesão.",
+   "citacao": "Have evidence that your products and services, pain relievers, and gain creators are actually creating customer value and getting traction in the market.",
+   "pagina": "p. 48-49 (PDF p. 117)"
+  },
+  {
+   "nome": "Margem do programa (encaixe de modelo de negócio)",
+   "definicao": "Receita das consultorias do canal parceiro menos custos de criar e entregar as duas propostas (diagnósticos, Hub, comissões, anúncios, equipe de parcerias).",
+   "citacao": "You don’t have business model fit until you can generate more revenues with your value proposition than you incur costs to create and deliver it (or “them\" in the case of platform models with more than one interdependent value propositions).",
+   "pagina": "p. 48-49 (PDF p. 118)"
+  },
+  {
+   "nome": "Custo de aquisição contra receita por cliente",
+   "definicao": "Custo de aquisição por indústria contratante (anúncios, conversa de entrada, diagnósticos não convertidos, comissão) contra a receita esperada desse cliente.",
+   "citacao": "Likewise, a business model that spends more money on acquiring customers than it will earn from revenue from those same customers won’t survive over the long term.",
+   "pagina": "p. 194-195 (PDF p. 457)"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Não tentar atender todas as dores do parceiro e da indústria; o pacote fica caro e difuso.",
+   "citacao": "Make the unrealistic attempt to address all customer pains and gains.",
+   "pagina": "PDF p. 105"
+  },
+  {
+   "alerta": "Testar a proposta antes de saber o que o cliente valoriza impede saber por que ele recusou.",
+   "citacao": "If you start by testing your value proposition, you never know if customers are rejecting your value proposition or if you are simply addressing irrelevant jobs, pains, or gains.",
+   "pagina": "p. 190-191 (PDF p. 452)"
+  },
+  {
+   "alerta": "Um encaixe no papel ainda não é evidência; o canvas preenchido em oficina é hipótese.",
+   "citacao": "The fit you achieve is not yet proven and exists mainly on paper.",
+   "pagina": "p. 48-49 (PDF p. 117)"
+  },
+  {
+   "alerta": "Proposta de valor forte não salva modelo deficitário.",
+   "citacao": "A business that generates fewer revenues than it incurs costs will inevitably disappear, even with the most successful value proposition.",
+   "pagina": "p. 144-145 (PDF p. 356)"
+  }
+ ]
+}
