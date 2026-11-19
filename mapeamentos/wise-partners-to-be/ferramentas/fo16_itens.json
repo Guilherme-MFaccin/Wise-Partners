@@ -62,7 +62,7 @@
     "k": "ul",
     "v": [
      "Cada bloco tem uma pergunta própria, logo a seguir, com o conteúdo completo, a origem de cada item, os processos, as ferramentas e os responsáveis.",
-     "Os parceiros aparecem como segmento de clientes, e não como parceria principal: o programa é uma plataforma de dois lados, em que o parceiro recebe valor e também traz o outro lado (os clientes dele)."
+     "O parceiro aparece em dois papéis: é um segmento de clientes, porque recebe uma proposta de valor própria, e é parceria principal, porque leva a Wise até os clientes dele. Os processos dele estão no bloco de segmentos e nos de relacionamento e canais."
     ]
    },
    {
@@ -194,8 +194,8 @@
       "Já decidido por você · conversa de 07/11"
      ],
      [
-      "Os parceiros não estão aqui",
-      "Pelo livro, num modelo de plataforma, os parceiros do programa são um dos lados (um segmento de clientes), não parceiros-chave do modelo. É por isso que estão no bloco de segmentos.",
+      "Os parceiros, em dois papéis",
+      "O parceiro recebe uma proposta de valor própria (por isso está em segmentos de clientes) e, ao mandar o link para a base, faz a prospecção dos clientes dele para a Wise (por isso conta também como parceria principal do canal). O livro de propostas de valor chama isso de encaixe com intermediário e pede um canvas de proposta de valor para cada lado: é o que fazem as duas perguntas do bloco seguinte do formulário.",
       "Proposta da revisão"
      ]
     ]
@@ -1132,7 +1132,7 @@
      ],
      [
       "Tipo de receita",
-      "Pelo livro, é receita recorrente de assinatura (a mensalidade da consultoria), com o diagnóstico gratuito como porta de entrada, o padrão que o livro chama de free as a business model.",
+      "Receita recorrente de assinatura (a mensalidade da consultoria). O diagnóstico gratuito segue o padrão que o livro chama de isca e anzol (bait and hook): uma oferta gratuita, cara para quem oferece, que leva à compra paga. Não é freemium, porque o freemium depende de o usuário gratuito custar quase nada, e cada diagnóstico custa horas de consultor. O Wise Hub, sim, fica mais perto do freemium.",
       "Proposta da revisão"
      ]
     ]
@@ -2440,6 +2440,32 @@
       "Se paga (viabilidade financeira)",
       "Diagnósticos viram clientes da consultoria em número suficiente para o CAC ficar abaixo dos canais ativos. Número: clientes fechados sobre diagnósticos feitos, e custo por diagnóstico."
      ]
+    ]
+   },
+   {
+    "t": "De onde vem",
+    "k": "cit",
+    "v": [
+     {
+      "trecho": "“Do they want this?”",
+      "fonte": "Testing Business Ideas: A Field Guide for Rapid Experimentation, p. 32-33"
+     },
+     {
+      "trecho": "“Can we do this?”",
+      "fonte": "Testing Business Ideas: A Field Guide for Rapid Experimentation, p. 32-33"
+     },
+     {
+      "trecho": "“Should we do this?”",
+      "fonte": "Testing Business Ideas: A Field Guide for Rapid Experimentation, p. 32-33"
+     },
+     {
+      "trecho": "A team exercise where desirability, viability, and feasibility hypotheses are made explicit and prioritized in terms of importance and evidence.",
+      "fonte": "Testing Business Ideas: A Field Guide for Rapid Experimentation, p. 36-37"
+     },
+     {
+      "trecho": "Every radically new idea, product, service, value proposition, business model, or strategy requires a leap of faith.",
+      "fonte": "Testing Business Ideas: A Field Guide for Rapid Experimentation, p. 36-37"
+     }
     ]
    }
   ],

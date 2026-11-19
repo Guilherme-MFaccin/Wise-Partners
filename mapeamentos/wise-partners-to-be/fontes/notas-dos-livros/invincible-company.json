@@ -1,0 +1,338 @@
+{
+ "livro": "The Invincible Company: How to Constantly Reinvent Your Organization with Inspiration From the World's Best Business Models",
+ "autores": "Alexander Osterwalder, Yves Pigneur, Fred Etiemble e Alan Smith",
+ "slug": "invincible-company",
+ "leitura": {
+  "fonte": "PDF no Google Drive (fileId 1wat7RKvgLKMYA1_21lhgnVZSDbyPhKr3). O arquivo tem 19,8 MB e passa do limite de download; a leitura foi feita pela ferramenta de conteúdo do Drive, que devolveu texto truncado.",
+  "completa": false,
+  "alcance": "Leitura parcial: da abertura até a p. 62 (capítulo 1, Tool, inteiro, e começo do capítulo 2, Manage: guidance, funil e exemplos Amazon e Ping An). Ficaram de fora a gestão detalhada dos portfólios (p. 70 em diante), as bibliotecas de padrões Invent (p. 130 a 212) e Improve (p. 228 a 280) e o capítulo de cultura.",
+  "paginacao": "Páginas impressas do livro, que vêm no texto. O livro é em páginas duplas, e várias citações indicam a dupla (ex.: p. 22-23). As páginas romanas (xi, xiii) são da abertura.",
+  "consequencia": "Os padrões de modelo de negócio pedidos (frontstage, backstage, profit formula, channel kings e afins) estão nas páginas não lidas. Esta nota lista os nomes desses padrões como referência para a próxima leitura, marcados como não verificados e sem citação. O nome 'gap fillers' não foi encontrado no texto lido e não está entre os nomes de padrões que conheço deste livro; precisa ser conferido."
+ },
+ "tese": "Nenhuma empresa é invencível; chegam perto as que se reinventam o tempo todo, gerindo ao mesmo tempo dois portfólios de lógica oposta. O portfólio Exploit reúne os negócios existentes, avaliados por retorno e risco de morte e disrupção, e é gerido para crescer (escalar, impulsionar, proteger, renovar). O portfólio Explore reúne ideias e projetos novos, avaliados por retorno esperado e risco de inovação, e é gerido por busca e teste: muitas apostas pequenas, financiamento em parcelas conforme a evidência, e transferência para o Exploit só com evidência forte de desejabilidade, viabilidade técnica, viabilidade financeira e adaptabilidade. Para o Programa Wise Partners isso significa tratar o programa, na fase atual, como projeto do portfólio Explore dentro de uma consultoria que é o negócio Exploit, com metas, cultura e métricas de busca, e não de execução.",
+ "principios": [
+  {
+   "principio": "Gerencie dois portfólios com lógicas diferentes: explorar o novo e explorar o existente.",
+   "explicacao": "O portfólio de modelos de negócio é composto por dois portfólios distintos. Exploit inclui negócios, propostas, produtos e serviços que a empresa gere e faz crescer; Explore inclui projetos de inovação, novos modelos, novas propostas e novos produtos em teste. As empresas mais próximas da invencibilidade não priorizam um sobre o outro.",
+   "aplicacao_wise": "A consultoria comercial para indústrias é o Exploit da Wise Makers. O Programa Wise Partners, enquanto não houver evidência forte de que parceiros indicam de forma recorrente e de que os diagnósticos convertem com margem, é Explore. Isso muda o desenho de processos: no Explore, processos são leves, com experimento e decisão; no Exploit, padronizados e eficientes.",
+   "citacoes": [
+    {
+     "trecho": "The collection of existing business models a company exploits and the new business models it explores in order to avoid disruption and ensure longevity.",
+     "pagina": "p. 2-5"
+    },
+    {
+     "trecho": "The former includes existing businesses, value propositions, products, and services that you are managing and growing. The latter includes all your innovation projects, new business models, new value propositions, new products, and services that you are testing.",
+     "pagina": "p. 2-5"
+    },
+    {
+     "trecho": "Invincible Companies do not prioritize exploitation over exploration.",
+     "pagina": "p. 8-9"
+    }
+   ]
+  },
+  {
+   "principio": "Explore se mede por retorno esperado e risco de inovação; Exploit por retorno e risco de morte e disrupção.",
+   "explicacao": "No Explore, o risco de inovação cai com a quantidade de evidência de desejabilidade, viabilidade técnica, viabilidade financeira e adaptabilidade. No Exploit, o risco de disrupção cai com as barreiras (moats) que protegem o negócio.",
+   "aplicacao_wise": "Medir o programa no mapa de portfólio: retorno esperado (receita de consultoria que o canal parceiro pode gerar em 12 meses) e risco de inovação (quanta evidência há em cada um dos quatro riscos). O livro acrescenta o risco de adaptabilidade aos três do Testing Business Ideas: para a Wise, mudanças no mercado de software (por exemplo, fornecedores de CRM lançando consultoria própria) ou no custo de anúncios no Meta.",
+   "citacoes": [
+    {
+     "trecho": "A strategic management tool to simultaneously visualize, analyze, and manage the business models you are improving and growing and the future business models you are searching for and testing.",
+     "pagina": "p. 2-5"
+    },
+    {
+     "trecho": "Risk decreases with the amount of evidence that supports the desirability, feasibility, viability, and adaptability of a business idea.",
+     "pagina": "p. 10-11"
+    },
+    {
+     "trecho": "Risk decreases with the moats protecting your business.",
+     "pagina": "p. 10-11"
+    },
+    {
+     "trecho": "The risk that a business won’t be able to adapt to the competitive environment, technology, regulatory, social, or market trends, or that the macro environment is not favorable (lacking infrastructure, recession, etc.).",
+     "pagina": "p. 18-19"
+    }
+   ]
+  },
+  {
+   "principio": "Explorar é fazer muitas apostas pequenas e reduzi-las com base em evidência.",
+   "explicacao": "Ninguém consegue escolher o vencedor antecipadamente. O livro defende financiamento em parcelas, como no capital de risco: muitas ideias recebem pouco, só as com tração e evidência recebem a próxima parcela. Para uma empresa pequena ou média, basta um negócio novo do tamanho do atual, mas ainda assim é preciso apostar em mais de uma frente.",
+   "aplicacao_wise": "Dentro do programa, tratar como apostas separadas, com verba e prazo próprios: tipos de parceiro (CRM, ERP, outros softwares), canais de recrutamento (Meta e outros), formatos da oferta gratuita (diagnóstico de 2 horas, versão mais curta, só Hub). Cada aposta recebe nova parcela só com evidência.",
+   "citacoes": [
+    {
+     "trecho": "Exploration requires making a large number of small bets that you gradually reduce over time, based on evidence.",
+     "pagina": "p. 16-17"
+    },
+    {
+     "trecho": "You can’t pick the winner without investing in projects that will fail.",
+     "pagina": "p. 54-55"
+    },
+    {
+     "trecho": "Of all those ideas only those with sufficient traction and evidence receive follow-up funding.",
+     "pagina": "p. 54-55"
+    },
+    {
+     "trecho": "A small- or medium-size company (SME), for example, will be happy with a new business that is in line with its current revenues and profits.",
+     "pagina": "p. 56-57"
+    }
+   ]
+  },
+  {
+   "principio": "Explorar e gerir são profissões diferentes e pedem pessoas, cultura e processos diferentes.",
+   "explicacao": "Explore tem foco em busca, incerteza alta, filosofia financeira de capital de risco e experimentação iterativa. Exploit tem foco em eficiência e crescimento, incerteza baixa, retorno estável e execução linear. O livro trata como mito a ideia de que as habilidades são as mesmas.",
+   "aplicacao_wise": "O dono do programa precisa de perfil de explorador (lida com incerteza, lê padrões em dados), não só de gestor de operação. As metas do programa na fase atual devem ser de aprendizado e evidência, e não metas de volume copiadas da consultoria.",
+   "citacoes": [
+    {
+     "trecho": "Exploration and exploitation are two radically different professions that require a different skill set and different experience.",
+     "pagina": "p. 16-17"
+    },
+    {
+     "trecho": "Turning business ideas into value propositions that matter to customers, embedded in scalable and profitable business models",
+     "pagina": "p. 8-9"
+    }
+   ]
+  },
+  {
+   "principio": "Um projeto passa de Explore para Exploit só com evidência forte nos quatro riscos.",
+   "explicacao": "O livro lista sete ações no Explore (idear, investir, perseverar, pivotar, aposentar, desmembrar, transferir) e sete no Exploit (adquirir, fazer parceria, investir, melhorar, fundir, desinvestir, desmontar). Transferir exige evidência forte e um lugar no portfólio Exploit, dentro de um negócio existente ou como negócio próprio.",
+   "aplicacao_wise": "Definir no mapeamento o critério de transferência do programa para operação padrão (por exemplo, X parceiros indicando por três meses seguidos e cobertura do subsídio acima de 1) e onde ele vai morar: dentro da área comercial da consultoria ou como unidade própria. 'Fazer parceria' é, no vocabulário do livro, uma ação de Exploit para reforçar um modelo existente: é o que o Premium faz quando a Wise recomenda parceiros aos clientes dela.",
+   "citacoes": [
+    {
+     "trecho": "The decision to move a business model idea from exploration to exploitation based on strong evidence.",
+     "pagina": "p. 22-23"
+    },
+    {
+     "trecho": "This typically happens once you’ve produced strong evidence of desirability, feasibility, viability, and adaptability.",
+     "pagina": "p. 22-23"
+    },
+    {
+     "trecho": "The decision to kill a search project based on evidence or lack of strategic fit.",
+     "pagina": "p. 22-23"
+    },
+    {
+     "trecho": "The activity of partnering with an outside business to strengthen one or more of your business models.",
+     "pagina": "p. 32-33"
+    }
+   ]
+  },
+  {
+   "principio": "Dê orientação estratégica explícita: o que está dentro e o que está fora da exploração.",
+   "explicacao": "A gestão do portfólio começa com direção estratégica, cultura organizacional e imagem de marca, e daí sai a orientação de portfólio, que diz onde focar, investir, desinvestir e explorar.",
+   "aplicacao_wise": "Escrever para o programa uma orientação de exploração: quais parceiros entram (software de gestão para indústria), quais ofertas gratuitas são permitidas, quanto a Wise aceita gastar por parceiro ativo, e quais ideias ficam fora (por exemplo, revender software).",
+   "citacoes": [
+    {
+     "trecho": "Portfolio guidance provides explicit boundaries to understand what to focus on and what not to, where to invest and where to divest, or what to explore and what not to explore.",
+     "pagina": "p. 50-51"
+    },
+    {
+     "trecho": "Incrementally invest in teams with evidence.",
+     "pagina": "p. 48-49"
+    }
+   ]
+  }
+ ],
+ "frameworks": [
+  {
+   "nome": "Portfolio Map (Mapa de Portfólio): Explore x Exploit",
+   "paginas": "p. 2-43",
+   "componentes": [
+    {
+     "nome": "Explore: eixos",
+     "descricao": "Retorno esperado (vertical) e risco de inovação (horizontal). Risco de inovação reúne desejabilidade, viabilidade técnica, viabilidade financeira e adaptabilidade, e cai com evidência."
+    },
+    {
+     "nome": "Exploit: eixos",
+     "descricao": "Retorno (vertical) e risco de morte e disrupção (horizontal). Risco interno (fraquezas do desenho do modelo) e externo (mercado, tendências, cadeia de suprimentos e concorrência, macroeconomia)."
+    },
+    {
+     "nome": "Jornada Explore",
+     "descricao": "Busca e pivô: descoberta, validação, aceleração; checagem de realidade e mudança de direção quando a evidência contradiz."
+    },
+    {
+     "nome": "Jornada Exploit",
+     "descricao": "Escalar, impulsionar, proteger; disrupção, crise, mudança e reemergência."
+    },
+    {
+     "nome": "Ações no Explore",
+     "descricao": "Idear, investir, perseverar, pivotar, aposentar, desmembrar (spinout), transferir."
+    },
+    {
+     "nome": "Ações no Exploit",
+     "descricao": "Adquirir, fazer parceria, investir, melhorar, fundir, desinvestir, desmontar."
+    },
+    {
+     "nome": "Tipos de inovação",
+     "descricao": "Eficiência e sustentação (ligadas ao modelo existente) e transformação (fora do campo tradicional, mais arriscada, posiciona a empresa para o longo prazo)."
+    },
+    {
+     "nome": "Gestão do portfólio",
+     "descricao": "Visualizar, analisar e gerir; orientar, diversificar, medir e agir."
+    }
+   ],
+   "logica": "Um mapa único com dois lados permite ver se a empresa explora o suficiente para compensar negócios em risco e se está reduzindo risco nos projetos novos.",
+   "aplicacao_wise": "Colocar no mapa da Wise Makers: no Exploit, a consultoria comercial (retorno alto) e o Wise Hub como produto vendido, se for o caso; no Explore, o Programa Wise Partners e, dentro dele, as apostas por tipo de parceiro e formato de oferta. Revisar a posição a cada trimestre com a evidência acumulada.",
+   "citacoes": [
+    {
+     "trecho": "These companies manage a portfolio of existing business models that they exploit and continuously improve.",
+     "pagina": "p. 2-5"
+    },
+    {
+     "trecho": "Search involves maximizing expected returns and minimizing innovation risk.",
+     "pagina": "p. 12-13"
+    },
+    {
+     "trecho": "You decrease the risk of working on an idea that might fail by testing and adapting it.",
+     "pagina": "p. 12-13"
+    },
+    {
+     "trecho": "The Exploit portfolio is all about keeping your existing business models on a growth trajectory.",
+     "pagina": "p. 12-13"
+    },
+    {
+     "trecho": "The journey in the Explore portfolio is one of search and pivot until you have enough evidence that a new business idea will work.",
+     "pagina": "p. 20-21"
+    },
+    {
+     "trecho": "The activity of renovating an outdated business model to shift it toward a new, more competitive business model.",
+     "pagina": "p. 32-33"
+    },
+    {
+     "trecho": "We distinguish between three different types of innovation heavily borrowed from Harvard professor Clayton Christensen: efficiency, sustaining, and transformative innovation.",
+     "pagina": "p. 38-39"
+    },
+    {
+     "trecho": "Create an innovation funnel, spread bets to minimize innovation risk.",
+     "pagina": "p. 48-49"
+    }
+   ]
+  },
+  {
+   "nome": "Biblioteca de padrões: Invent (frontstage, backstage, profit formula) e Improve (shifts). NÃO LIDA nesta rodada",
+   "paginas": "p. 128-280 (fora do trecho lido)",
+   "nota": "Os nomes abaixo vêm do sumário lido (só os grupos e páginas) e, para os padrões individuais, do meu conhecimento prévio do livro. Não foram conferidos no texto e não têm citação. Servem como lista do que ler quando o arquivo puder ser lido inteiro. 'Gap fillers' não aparece nem no trecho lido nem na lista que conheço.",
+   "componentes": [
+    {
+     "nome": "Frontstage disruption (sumário: p. 142)",
+     "descricao": "Não verificado. Grupos que conheço: Market Explorers; Channel Kings (com os subpadrões Disintermediators e Opportunity Builders); Gravity Creators (Stickiness Scalers, Superglue Makers). Aplicável à Wise: Channel Kings, porque o programa cria um canal novo de acesso a indústrias pela base dos parceiros; Gravity Creators, se o Wise Hub e os níveis aumentarem o custo de saída do parceiro."
+    },
+    {
+     "nome": "Backstage disruption (sumário: p. 162)",
+     "descricao": "Não verificado. Grupos que conheço: Resource Castles (inclui User Base e Platform Castles); Activity Differentiators; Scalers (inclui Delegators, Licensors, Franchisors). Aplicável à Wise: Scalers do tipo Delegators (outros fazem parte do trabalho, aqui a prospecção feita pelos parceiros) e Resource Castles do tipo base de usuários (a rede de parceiros como ativo difícil de copiar)."
+    },
+    {
+     "nome": "Profit formula disruption (sumário: p. 188)",
+     "descricao": "Não verificado. Grupos que conheço: Revenue Differentiators (inclui Recurring Revenue, Bait and Hook, Freemium Providers, Subsidizers); Cost Differentiators; Margin Masters. Aplicável à Wise: Subsidizers e Bait and Hook (diagnóstico e Hub gratuitos pagos pela consultoria), e Recurring Revenue (mensalidade)."
+    },
+    {
+     "nome": "Improve: shift patterns (sumário: p. 230 a 266)",
+     "descricao": "Não verificado. Mudanças que conheço do livro, aplicáveis: de venda para plataforma (Sales to Platform) e de B2B para (B2)B2C, que aqui seria Wise para parceiro para indústria."
+    }
+   ],
+   "logica": "Pelo sumário lido, os padrões Invent se dividem pelo canvas: frontstage é o lado direito (cliente, proposta, canais, relacionamento), backstage é o lado esquerdo (recursos, atividades, parceiros) e profit formula é receita e custo. Essa leitura do lado direito e esquerdo é inferência minha a partir dos nomes, a confirmar.",
+   "aplicacao_wise": "Ler as p. 128 a 212 e 228 a 280 quando houver acesso ao arquivo inteiro e substituir esta lista por citações. Até lá, usar os nomes só como hipótese de enquadramento.",
+   "citacoes": [
+    {
+     "trecho": "Business Model Patterns (invent patterns and shift patterns)",
+     "pagina": "p. x-xi"
+    },
+    {
+     "trecho": "Frontstage Disruption p. 142",
+     "pagina": "sumário, logo após a p. xiii"
+    },
+    {
+     "trecho": "Backstage Disruption p. 162",
+     "pagina": "sumário, logo após a p. xiii"
+    },
+    {
+     "trecho": "Profit formula Disruption p. 188",
+     "pagina": "sumário, logo após a p. xiii"
+    },
+    {
+     "trecho": "Profit Formula Driven Shifts p. 266",
+     "pagina": "sumário, logo após a p. xiii"
+    }
+   ]
+  }
+ ],
+ "recomendacoes": [
+  {
+   "tema": "Posição no portfólio",
+   "recomendacao": "Declarar no mapeamento que o Programa Wise Partners é projeto do portfólio Explore e registrar seu retorno esperado e o nível de evidência em cada um dos quatro riscos.",
+   "processo": "Governança do programa",
+   "citacao": "Risk decreases with the amount of evidence that supports the desirability, feasibility, viability, and adaptability of a business idea.",
+   "pagina": "p. 10-11",
+   "aplicabilidade": "alta",
+   "porque": "Evita cobrar do programa metas e processos de um negócio maduro."
+  },
+  {
+   "tema": "Critério de transferência",
+   "recomendacao": "Escrever o critério para o programa virar operação padrão (evidência forte nos quatro riscos) e decidir onde ele vai morar dentro da Wise Makers.",
+   "processo": "Governança do programa",
+   "citacao": "This typically happens once you’ve produced strong evidence of desirability, feasibility, viability, and adaptability.",
+   "pagina": "p. 22-23",
+   "aplicabilidade": "alta",
+   "porque": "Sem critério, o programa fica eternamente em piloto ou vira operação sem prova."
+  },
+  {
+   "tema": "Financiamento em parcelas",
+   "recomendacao": "Separar as apostas internas do programa (tipo de parceiro, canal de recrutamento, formato da oferta) com verba e prazo próprios, liberando a próxima parcela só com evidência.",
+   "processo": "Planejamento e orçamento do programa",
+   "citacao": "Of all those ideas only those with sufficient traction and evidence receive follow-up funding.",
+   "pagina": "p. 54-55",
+   "aplicabilidade": "média",
+   "porque": "O livro mostra que não dá para escolher o vencedor antes; parcelas limitam a perda."
+  },
+  {
+   "tema": "Orientação de exploração",
+   "recomendacao": "Redigir a orientação do programa: quem pode ser parceiro, quais ofertas gratuitas são permitidas, teto de custo por parceiro ativo e o que está fora.",
+   "processo": "Política do programa",
+   "citacao": "Portfolio guidance provides explicit boundaries to understand what to focus on and what not to, where to invest and where to divest, or what to explore and what not to explore.",
+   "pagina": "p. 50-51",
+   "aplicabilidade": "média",
+   "porque": "Dá limites claros para a equipe decidir sozinha."
+  },
+  {
+   "tema": "Risco de adaptabilidade",
+   "recomendacao": "Incluir no mapa de hipóteses do programa uma linha de adaptabilidade (mudanças no mercado de software, no custo de mídia, em regras de comissão) além das três do Testing Business Ideas.",
+   "processo": "Oficina de mapa de hipóteses",
+   "citacao": "The risk that a business won’t be able to adapt to the competitive environment, technology, regulatory, social, or market trends, or that the macro environment is not favorable (lacking infrastructure, recession, etc.).",
+   "pagina": "p. 18-19",
+   "aplicabilidade": "média",
+   "porque": "É o quarto risco que o livro acrescenta e que os outros três não cobrem."
+  }
+ ],
+ "metricas": [
+  {
+   "nome": "Posição no mapa de portfólio",
+   "definicao": "Retorno esperado do programa (receita de consultoria via parceiros projetada em 12 meses) contra risco de inovação (nota de evidência em desejabilidade, viabilidade técnica, viabilidade financeira e adaptabilidade), revista por trimestre.",
+   "citacao": "A strategic management tool to simultaneously visualize, analyze, and manage the business models you are improving and growing and the future business models you are searching for and testing.",
+   "pagina": "p. 2-5"
+  },
+  {
+   "nome": "Apostas ativas e aposentadas",
+   "definicao": "Número de apostas do programa em teste, quantas receberam nova parcela, quantas foram aposentadas e quantas transferidas para operação, por trimestre.",
+   "citacao": "Exploration requires making a large number of small bets that you gradually reduce over time, based on evidence.",
+   "pagina": "p. 16-17"
+  }
+ ],
+ "alertas": [
+  {
+   "alerta": "Tratar o programa com metas e cultura de execução linear mata a exploração; explorar e gerir são profissões diferentes.",
+   "citacao": "Exploration and exploitation are two radically different professions that require a different skill set and different experience.",
+   "pagina": "p. 16-17"
+  },
+  {
+   "alerta": "Uma ou duas apostas grandes não bastam; o livro mostra que a maioria das apostas iniciais não retorna o capital.",
+   "citacao": "You can’t pick the winner without investing in projects that will fail.",
+   "pagina": "p. 54-55"
+  },
+  {
+   "alerta": "Leitura parcial: os padrões de modelo de negócio (channel kings, delegators, subsidizers, bait and hook, freemium providers e outros) não foram lidos; não usar os nomes da lista como se fossem citação do livro."
+  }
+ ],
+ "tensoes_com_o_desenho": [
+  {
+   "tensao": "O pedido inclui padrões de frontstage, backstage e profit formula, mas o texto disponível termina na p. 62.",
+   "como_resolver": "Obter o PDF em partes menores (abaixo de 10 MB) ou em outro formato e reler as p. 128 a 280 para completar esta nota."
+  }
+ ]
+}

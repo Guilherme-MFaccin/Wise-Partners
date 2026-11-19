@@ -119,7 +119,7 @@ bloco("rec", "Fontes de receita", "Revenue Streams", ["Consultoria contratada pe
     ("De onde vem o dinheiro", "Da consultoria que o cliente do parceiro contrata depois do diagnóstico: mensalidade da Wise Makers. No Premium e no Elite, também da Tríade e da Swallow.", DECIDIDO + " · FO-14"),
     ("Quem não paga", "O parceiro não paga para participar e o cliente do parceiro não paga o diagnóstico nem o Hub.", DECIDIDO + " · v7 e FO-15"),
     ("Contrapartida da Prateleira", "Não é dinheiro: o fornecedor dá uma ação conjunta ou uma condição comercial ao cliente.", DECIDIDO + " · FO-02"),
-    ("Tipo de receita", "Pelo livro, é receita recorrente de assinatura (a mensalidade da consultoria), com o diagnóstico gratuito como porta de entrada, o padrão que o livro chama de free as a business model.", PROPOSTA)],
+    ("Tipo de receita", "Receita recorrente de assinatura (a mensalidade da consultoria). O diagnóstico gratuito segue o padrão que o livro chama de isca e anzol (bait and hook): uma oferta gratuita, cara para quem oferece, que leva à compra paga. Não é freemium, porque o freemium depende de o usuário gratuito custar quase nada, e cada diagnóstico custa horas de consultor. O Wise Hub, sim, fica mais perto do freemium.", PROPOSTA)],
     P_("P-31", "P-32", "P-79", "P-81", "P-33", "P-37", "P-39"), ["Portal (oportunidades, origem, proteção de 180 dias)", "WhatsApp (closer avisa o Gerente)"], ["Gerente registra e devolve ao parceiro", "Closer da empresa do grupo fecha"])
 
 bloco("rk", "Recursos principais", "Key Resources", ["Gerente e consultores", "Matriz 5x5 e roteiro, cases,", "minicurso, marca Wise Makers", "Portal e Wise Hub"], [
@@ -142,7 +142,7 @@ bloco("par", "Parcerias principais", "Key Partnerships", ["Empresas do grupo e c
     ("Fornecedores de ferramentas", "Meta (anúncios), Google (agenda e GA4), serviço de e-mail, Supabase e Netlify (portal).", DECIDIDO + " · portal"),
     ("Entidades da Parceria Institucional", "Associações e federações que ajudam a convidar para os encontros.", DECIDIDO + " · v7"),
     ("Jurídico", "Revisa o termo de adesão e a política de privacidade.", DECIDIDO + " · conversa de 07/11"),
-    ("Os parceiros não estão aqui", "Pelo livro, num modelo de plataforma, os parceiros do programa são um dos lados (um segmento de clientes), não parceiros-chave do modelo. É por isso que estão no bloco de segmentos.", PROPOSTA)],
+    ("Os parceiros, em dois papéis", "O parceiro recebe uma proposta de valor própria (por isso está em segmentos de clientes) e, ao mandar o link para a base, faz a prospecção dos clientes dele para a Wise (por isso conta também como parceria principal do canal). O livro de propostas de valor chama isso de encaixe com intermediário e pede um canvas de proposta de valor para cada lado: é o que fazem as duas perguntas do bloco seguinte do formulário.", PROPOSTA)],
     P_("P-02"), ["WhatsApp (closers)", "E-mail"], ["Gerente combina com os closers", "Diretor responde pelo grupo"])
 
 bloco("cus", "Estrutura de custos", "Cost Structure", ["Comissão (40% + 10%)", "Horas de diagnóstico e do Gerente", "Anúncios", "Portal e ferramentas"], [
@@ -243,7 +243,7 @@ item("canvas", G1, "O canvas do Programa Wise Partners está certo?", "Proposta 
                                      "Coloquei cada um dos " + str(len(PX)) + " processos do mapa no bloco que ele sustenta. Assim fica visível, para cada parte do modelo de negócio, quais processos a fazem acontecer, em que ferramenta e quem faz."]},
     {"t": "O canvas", "k": "fig", "v": desenho_canvas()},
     {"t": "Como ler", "k": "ul", "v": ["Cada bloco tem uma pergunta própria, logo a seguir, com o conteúdo completo, a origem de cada item, os processos, as ferramentas e os responsáveis.",
-                                       "Os parceiros aparecem como segmento de clientes, e não como parceria principal: o programa é uma plataforma de dois lados, em que o parceiro recebe valor e também traz o outro lado (os clientes dele)."]},
+                                       "O parceiro aparece em dois papéis: é um segmento de clientes, porque recebe uma proposta de valor própria, e é parceria principal, porque leva a Wise até os clientes dele. Os processos dele estão no bloco de segmentos e nos de relacionamento e canais."]},
     {"t": "De onde vem", "k": "cit", "v": cits_livro("business-model-generation", "canvas", "building blocks", n=4)}], AP)
 
 item("arquitetura", G1, "Como o mapa de processos passa a ser organizado?", "Decisão em aberto", "aberto", [
@@ -396,7 +396,7 @@ item("hipoteses", G6, "Estas são as hipóteses de maior risco do modelo, e este
         ["O cliente do parceiro quer (desejabilidade)", "Clientes que recebem o link marcam a reunião de 2 horas. Número: reuniões marcadas sobre cadastros no ICP, e comparecimento."],
         ["Dá para entregar (viabilidade técnica)", "A agenda comporta as reuniões: 5 por semana do Gerente e consultores disponíveis para o resto. Número: dias entre o cadastro e a reunião."],
         ["Se paga (viabilidade financeira)", "Diagnósticos viram clientes da consultoria em número suficiente para o CAC ficar abaixo dos canais ativos. Número: clientes fechados sobre diagnósticos feitos, e custo por diagnóstico."]]},
-    {"t": "De onde vem", "k": "cit", "v": cits_livro("testing-business-ideas", "assumption", "desirability", "viability", n=3)}], AP)
+    {"t": "De onde vem", "k": "cit", "v": cits_livro("testing-business-ideas", "Três tipos de hipótese", n=3) + cits_livro("testing-business-ideas", "Assumptions Mapping", n=2)}], AP)
 item("mais", G6, "Algo mais sobre o modelo, as ferramentas ou os responsáveis?", "Comentário livre", "igual", [
     {"t": "", "k": "p", "v": ["Qualquer ajuste que não coube nas perguntas anteriores."]}], [], tipo="texto")
 
@@ -421,7 +421,7 @@ i = pagina.index("<header>"); j = pagina.index("</header>") + len("</header>")
 pagina = pagina[:i] + f"""<header>
     <p class="eyebrow">FO-16 · Mapeamento no padrão do Business Model Canvas</p>
     <h1>O Wise Partners em nove blocos: processos, ferramentas e responsáveis</h1>
-    <p class="lead">Coloquei os {len(PX)} processos do mapa aprovado (v11) no Business Model Canvas, a partir dos quatro livros da pasta (Business Model Generation, Value Proposition Design, Testing Business Ideas e The Invincible Company). Para cada bloco você vê o conteúdo, de onde veio cada item, os processos que o sustentam, as ferramentas e quem faz. Depois vêm o que entra em cada ferramenta, o que cada responsável faz, passo a passo, e a reunião de diagnóstico de 2 horas com a Matriz 5x5 mesclada ao roteiro.</p>
+    <p class="lead">Coloquei os {len(PX)} processos do mapa aprovado (v11) no Business Model Canvas, a partir dos quatro livros da pasta (Business Model Generation, Value Proposition Design, Testing Business Ideas e The Invincible Company; os dois últimos lidos até a p. 64 e a p. 62). Para cada bloco você vê o conteúdo, de onde veio cada item, os processos que o sustentam, as ferramentas e quem faz. Depois vêm o que entra em cada ferramenta, o que cada responsável faz, passo a passo, e a reunião de diagnóstico de 2 horas com a Matriz 5x5 mesclada ao roteiro.</p>
     <div class="guia">
       <p><strong>Etiquetas nos itens de cada bloco:</strong></p>
       <ul class="decs">
