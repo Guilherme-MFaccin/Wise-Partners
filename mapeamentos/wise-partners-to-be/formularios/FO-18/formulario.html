@@ -1,0 +1,254 @@
+<title>O que Falta para o Portal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@0;1&display=swap">
+<style>
+/* Coluna de leitura longa: cada decisão é um capítulo com figura, contexto, lógica, citações e a escolha no fim */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-soft: #e6eefb; --accent-fg: #ffffff; --ok: #1d7a46; --warn: #9a5b00; --soft2: #eef1f5; --barra2: #8fb3ea;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --serif: "IBM Plex Serif", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px; }
+.barra-in { max-width: 780px; margin: 0 auto; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.trilho { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.trilho i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.cont, .salvo { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+main { max-width: 780px; margin: 0 auto; display: grid; gap: 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+h2 { font-size: 21px; line-height: 1.35; margin: 4px 0 0; text-wrap: balance; }
+h3 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 66ch; }
+.aviso { border: 1px solid var(--line); border-left: 4px solid var(--warn); background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px; display: grid; gap: 14px; min-width: 0; }
+.q.feita { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.num { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 700; margin-right: 8px; }
+.fig { overflow-x: auto; background: var(--soft2); border-radius: 10px; padding: 14px; }
+.fig svg { display: block; width: 100%; height: auto; }
+.fig .b { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.fig .b.hi { fill: var(--accent-soft); stroke: var(--accent); }
+.fig .b2 { fill: var(--bg); stroke: var(--line); stroke-width: 1; }
+.fig .card { fill: var(--accent-soft); stroke: var(--accent); stroke-width: .8; }
+.fig .tx { fill: var(--fg); } .fig .mu { fill: var(--muted); } .fig .inv { fill: var(--accent-fg); font-weight: 600; }
+.fig .ln { stroke: var(--muted); stroke-width: 1.4; } .fig .ln.fino { stroke: var(--line); stroke-width: 1; } .fig .dash { stroke-dasharray: 5 4; }
+.fig .pt { fill: var(--accent); } .fig .vazio { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.fig .barra1 { fill: var(--accent); } .fig .barra2 { fill: var(--barra2); } .fig .faixa { fill: var(--accent-soft); opacity: .7; }
+.ctx { display: grid; gap: 10px; max-width: 70ch; }
+.logica { background: var(--accent-soft); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+.cits { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cits li { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.cits q { font-family: var(--serif); font-style: italic; quotes: "\201C" "\201D"; overflow-wrap: anywhere; }
+.cits small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+details.ver { font-size: 15px; } details.ver summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+.dica { font-size: 13px; color: var(--muted); }
+.op { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.op:hover { border-color: var(--accent); }
+.op input { margin: 3px 0 0; accent-color: var(--accent); flex: none; width: 18px; height: 18px; }
+.op:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.op.ns { border-style: dashed; color: var(--muted); }
+textarea { width: 100%; box-sizing: border-box; min-height: 80px; font: 15px/1.5 var(--sans); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+.comentar { justify-self: start; background: none; border: 0; color: var(--accent); font: 500 14px var(--sans); cursor: pointer; padding: 2px 0; }
+button.principal { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 20px; font: 600 16px var(--sans); cursor: pointer; }
+button.sec { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 8px; padding: 10px 16px; font: 600 15px var(--sans); cursor: pointer; }
+button:focus-visible, .op:focus-within, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.fim { display: grid; gap: 12px; justify-items: start; }
+.estado { font-weight: 600; color: var(--ok); } .estado.erro { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { .trilho i { transition: none; } }
+.indice ol { margin: 18px 0 0; padding-left: 20px; columns: 2; column-gap: 28px; font-size: 14px; line-height: 1.9; }
+.indice a { color: var(--accent); font-weight: 600; text-decoration: none; } .indice a:hover { text-decoration: underline; }
+.indice span { color: var(--muted); font-size: 12px; }
+.guia { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 10px; font-size: 15px; }
+.topo { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.selo { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.selo.novo { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.selo.mudou { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.selo.aberto { border-color: var(--warn); color: var(--warn); }
+.selo.sai { border-style: dashed; }
+.pts, .passos { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 72ch; }
+.passos { list-style: none; padding-left: 0; }
+.passos li { padding: 7px 12px; background: var(--soft2); border-radius: 8px; font-size: 15px; }
+.kv { margin: 0; display: grid; grid-template-columns: minmax(110px, max-content) 1fr; gap: 6px 16px; font-size: 15px; }
+.kv dt { color: var(--muted); font-weight: 600; } .kv dd { margin: 0; }
+.decs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.decs li { border: 1px solid var(--line); border-left-width: 4px; border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px; }
+.decs li.ok { border-left-color: var(--ok); } .decs li.rv { border-left-color: var(--accent); background: var(--accent-soft); } .decs li.ab { border-left-color: var(--warn); }
+.decs .org { font-size: 12px; color: var(--muted); font-weight: 600; }
+.decs li.rv .org { color: var(--accent); } .decs li.ab .org { color: var(--warn); }
+.decs p { font-size: 15px; }
+h3 { margin-top: 10px; }
+@media (max-width: 640px) { .indice ol { columns: 1; } .kv { grid-template-columns: 1fr; gap: 2px 0; } .kv dd { margin-bottom: 8px; } }
+</style>
+<div class="barra"><div class="barra-in">
+  <div class="trilho" aria-hidden="true"><i id="trilho"></i></div>
+  <span class="cont" id="cont">0 de 18</span>
+  <span class="salvo" id="salvo" role="status"></span>
+</div></div>
+<main>
+  <header>
+    <p class="eyebrow">FO-18 · Portal Wise Partners</p>
+    <h1>O que falta decidir para desenvolver o portal</h1>
+    <p class="lead">O mapeamento (versão 12) e o modelo de negócio estão no mesmo documento. Para levar tudo ao portal, faltam algumas regras que o portal vai aplicar sozinho, como o diagnóstico de 2 horas funciona por dentro, quem vai usar e a ordem de construção. Este formulário substitui o FO-17, que não precisa mais ser respondido. As respostas são salvas enquanto você marca.</p>
+    <nav class="indice" aria-label="Blocos do formulário"><ol><li><a href="#c-PT-niveis">Regras que o portal vai aplicar</a> <span>7 perguntas</span></li><li><a href="#c-PT-roteiro_hub">O diagnóstico de 2 horas no portal</a> <span>6 perguntas</span></li><li><a href="#c-PT-acessos">Pessoas e acessos</a> <span>2 perguntas</span></li><li><a href="#c-PT-ordem">Ordem de construção</a> <span>3 perguntas</span></li></ol></nav>
+  </header>
+  <div class="aviso" id="aviso" hidden></div>
+  <form id="form" novalidate></form>
+  <section class="fim">
+    <button type="button" class="principal" id="enviar">Enviar respostas</button>
+    <span class="estado" id="estado" role="status"></span>
+    <button type="button" class="sec" id="copiar" hidden>Copiar respostas</button>
+  </section>
+</main>
+<script type="application/json" id="dados">[{"id": "PT-niveis", "bloco": "Regras que o portal vai aplicar", "texto": "Qual é a ordem e o critério de cada nível?", "selo": "Contradição a resolver", "cls": "aberto", "secoes": [{"t": "O que estava aprovado (FO-14)", "k": "kv", "v": [["Select", "Entrada de todos."], ["Premium", "60 dias no programa e, além disso, 3 clientes fechados ou a avaliação com o Igor. A Wise passa a recomendar o parceiro."], ["Elite", "60 dias no Premium, ou 6 clientes fechados, ou a avaliação. Base Ativa."]]}, {"t": "O que você escreveu no FO-16", "k": "p", "v": ["'Para passar para o nível elite, o parceiro tem que passar, pelo menos 1 cliente para fazermos o diagnóstico. Só assim podemos indicá-lo para nossos clientes. Para passar para o nível premium, pelo menos, 1 cliente tem que fechar a consultoria da wise makers.'", "Ao pé da letra, o Elite fica mais fácil que o Premium e a recomendação muda de nível. O portal vai calcular a subida sozinho, então precisa de uma regra só."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["A primeira: Premium com 1 cliente diagnosticado (a Wise já viu o parceiro trazer cliente e passa a recomendá-lo) e Elite com 1 cliente que fechou a consultoria. Mantém a escada e o portal apura sozinho."]}], "opcoes": ["Premium: 1 cliente diagnosticado (passa a ser recomendado). Elite: 1 cliente que fechou a consultoria", "Como escrevi: Elite com 1 cliente diagnosticado; Premium com 1 cliente fechado (comente a ordem)", "Continuam os critérios do FO-14", "Outra regra (comente)"], "tipo": "escolha"}, {"id": "PT-niveis_tempo", "bloco": "Regras que o portal vai aplicar", "texto": "Os 60 dias e a avaliação com o Igor continuam junto com os critérios de clientes?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Os critérios do FO-14 tinham tempo mínimo e uma porta de exceção. Os do FO-16 falam só em clientes."]}], "opcoes": ["Não: só os critérios de clientes", "Sim: 60 dias e o critério de clientes", "Só a avaliação com o Igor continua, como exceção"], "tipo": "escolha"}, {"id": "PT-atuais", "bloco": "Regras que o portal vai aplicar", "texto": "Quais parceiros atuais receberam a promessa verbal do Premium ou do Elite?", "selo": "Dado que só você tem", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Você decidiu que todos os parceiros atuais voltam ao Select, menos os que já receberam a promessa verbal dos benefícios do Premium ou do Elite. Para o portal reclassificar, preciso dos nomes."]}], "opcoes": [], "tipo": "texto"}, {"id": "PT-comissao_wise", "bloco": "Regras que o portal vai aplicar", "texto": "Quanto o parceiro paga à Wise quando um cliente da Wise fecha com ele?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["No FO-16 você disse que o parceiro pode pagar com a comissão dele quando um cliente da Wise, recomendado pela Prateleira, fecha com ele."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Espelhar a regra que a Wise paga: 40% do primeiro pagamento. O parceiro entende na hora, porque é a regra que ele recebe."]}], "opcoes": ["40% do primeiro pagamento, espelhando a regra da Wise", "20% do primeiro pagamento", "10% do valor do contrato no primeiro ano", "Outro (comente)"], "tipo": "escolha"}, {"id": "PT-meta", "bloco": "Regras que o portal vai aplicar", "texto": "Qual é a meta de clientes e o período para a calculadora?", "selo": "Valores", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["A aba Modelo de negócio do documento (https://claude.ai/artifact/WfaLCeHodE6SXdQuTkpxS2) tem a calculadora de metas, custos e ganhos. Com os valores de partida (6 clientes em 6 meses), ela pede 3.000 contatos, 150 parceiros aprovados, 75 ativados e cerca de 17 conversas de entrada por semana nos 2 primeiros meses.", "Escreva os números que souber: meta de clientes, período, custo-hora seu e dos consultores, verba de anúncios, mensalidade média e permanência média dos clientes. O que ficar em branco continua como hipótese."]}], "opcoes": [], "tipo": "texto"}, {"id": "PT-hub_marcas", "bloco": "Regras que o portal vai aplicar", "texto": "Como o parceiro Select recebe o 'Wise Hub com as duas marcas'?", "selo": "Decisão em aberto desde o FO-14", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O que existe: a página do cliente mostra a logo do parceiro ao lado da Wise, e o cliente recebe o link do Hub depois do diagnóstico."]}], "opcoes": ["A página do cliente com as duas marcas já cumpre; dentro do Hub nada muda", "Alguém da Wise configura a logo do parceiro dentro do Hub (comente quem)", "O Hub já faz isso sozinho a partir de algum cadastro (comente como)", "Não sei: ver com quem cuida do Hub"], "tipo": "escolha"}, {"id": "PT-vpc", "bloco": "Regras que o portal vai aplicar", "texto": "As 30 propostas de valor por categoria podem servir de ponto de partida?", "selo": "Proposta da revisão", "cls": "mudou", "secoes": [{"t": "Contexto", "k": "p", "v": ["Você disse que gostou do modelo de negócio. As 30 propostas de valor (uma por categoria de parceiro) são proposta minha; elas vão orientar os textos da página dos parceiros quando cada campanha mirar uma categoria."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Aprovar como ponto de partida e ajustar cada uma quando a campanha daquela categoria for ao ar."]}], "opcoes": ["Sim, como ponto de partida", "Sim, mas quero revisar algumas antes (comente quais)", "Não, quero revisar todas antes"], "tipo": "escolha"}, {"id": "PT-roteiro_hub", "bloco": "O diagnóstico de 2 horas no portal", "texto": "Como o roteiro gerado pela IA chega ao Wise Hub?", "selo": "Decisão técnica", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Você pediu que o roteiro adaptado fique no Wise Hub, no lugar mais adequado. O portal já tem uma função de IA (que usa o Claude) para gerar o roteiro a partir do cadastro. O Wise Hub é outra plataforma: não sei se ela aceita receber conteúdo de fora."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Se o Hub não tiver como receber, o roteiro fica no portal, na ficha do cliente, e o Hub ganha um link para ele. Assim não depende de integração para começar."]}], "opcoes": ["O Hub tem API ou integração; quem cuida dele pode receber o roteiro (comente quem)", "O roteiro fica no portal, na ficha do cliente, e o Hub tem um link para ele", "Alguém copia o roteiro para o Hub à mão", "Não sei: ver com quem cuida do Hub"], "tipo": "escolha"}, {"id": "PT-cadastro_campos", "bloco": "O diagnóstico de 2 horas no portal", "texto": "Que informações o cadastro do cliente do parceiro passa a pedir, para a IA montar o roteiro?", "selo": "Proposta da revisão", "cls": "mudou", "secoes": [{"t": "Contexto", "k": "p", "v": ["Hoje o cadastro pede: nome, e-mail, WhatsApp, empresa, CNPJ, número de vendedores, faixa de faturamento e o principal desafio. Para o roteiro sair pronto, a IA precisa de um pouco mais, mas cada campo a mais reduz quem termina o cadastro."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Ciclo de venda (já decidido), segmento e o que a empresa vende, ticket médio, canais de onde vêm os clientes e o sistema de gestão usado. Com o site da empresa, a IA cobre o resto."]}], "opcoes": ["Ciclo de venda (faixas)", "Segmento e o que a empresa vende", "Ticket médio (faixas)", "Canais de onde vêm os clientes", "Sistema de gestão ou CRM que usa", "Site da empresa", "Se tem metas por vendedor"], "tipo": "multipla"}, {"id": "PT-plano", "bloco": "O diagnóstico de 2 horas no portal", "texto": "Como o plano de ação é escrito?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O plano sai em PDF pelo portal e por e-mail, em até 2 dias úteis, só com o que o cliente contou na reunião. Falta decidir como ele é escrito: à mão por quem conduziu, ou com a ajuda da IA."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Quem conduz preenche no portal, por pilar, a nota e os pontos ouvidos; a IA monta o plano a partir disso e quem conduz revisa antes de enviar. Mantém o padrão entre consultores e cabe no prazo."]}], "opcoes": ["Quem conduz preenche por pilar e a IA monta o plano; quem conduz revisa", "A IA monta o plano a partir da transcrição do Meet; quem conduz revisa", "Quem conduz escreve o plano inteiro num modelo"], "tipo": "escolha"}, {"id": "PT-gravacao", "bloco": "O diagnóstico de 2 horas no portal", "texto": "A reunião de diagnóstico é gravada ou transcrita?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["A transcrição do Google Meet ajudaria a IA a montar o plano e a pesquisa da UniCesumar. Gravar exige consentimento do cliente, que pode entrar no termo de uso do diagnóstico."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Transcrição com consentimento no termo, sem gravar vídeo. O plano fica mais fiel ao que foi dito."]}], "opcoes": ["Transcrição, com consentimento no termo", "Gravação de vídeo e transcrição, com consentimento", "Nem uma nem outra"], "tipo": "escolha"}, {"id": "PT-termo_texto", "bloco": "O diagnóstico de 2 horas no portal", "texto": "Quem escreve o termo de uso do diagnóstico?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O cliente do parceiro aceita o termo antes de enviar o cadastro. Ele diz que o plano sai só da reunião, que mais informações ou outra reunião são horas pagas, e trata dos dados e da pesquisa."]}], "opcoes": ["Você escreve um rascunho e o Bruno valida com o jurídico", "O jurídico escreve do zero", "Eu escrevo"], "tipo": "escolha"}, {"id": "PT-hora_extra", "bloco": "O diagnóstico de 2 horas no portal", "texto": "Qual é o valor da hora de consultoria extra que o termo cita?", "selo": "Dado que só você tem", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O termo vai dizer que mais informações para o plano, ou outra reunião, são horas de consultoria pagas. O valor da hora pode aparecer no termo ou ficar 'conforme proposta'."]}], "opcoes": ["Conforme proposta, sem valor no termo", "Valor fixo por hora (comente o valor)"], "tipo": "escolha"}, {"id": "PT-acessos", "bloco": "Pessoas e acessos", "texto": "Quem são os diretores e os consultores que vão usar o portal?", "selo": "Dado que só você tem", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Diretores entram como administradores; consultores, com o perfil de consultor (veem clientes e oportunidades e registram diagnósticos e checagens). Para criar os acessos, preciso do nome e do e-mail de cada um."]}], "opcoes": [], "tipo": "texto"}, {"id": "PT-resend", "bloco": "Pessoas e acessos", "texto": "A conta de e-mail do portal (Resend) já foi criada e o domínio configurado?", "selo": "Dependência", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O plano de ação por e-mail, os lembretes de etapa, o comunicado do mês e o resultado do autodiagnóstico dependem disso. O código está pronto; falta a conta, o DNS (com o Bruno) e a chave guardada nos segredos do Supabase."]}], "opcoes": ["Sim, está tudo pronto", "A conta existe, falta o DNS", "Ainda não foi criada"], "tipo": "escolha"}, {"id": "PT-ordem", "bloco": "Ordem de construção", "texto": "O que entra na primeira entrega do portal?", "selo": "Decisão em aberto", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Já está construído e espera o seu 'pode publicar': a fila de espera dos parceiros e a página 'Modelo de negócio e arquitetura de processos', só para o time interno.", "O resto do to-be que muda o portal, em blocos. Marque o que precisa estar pronto primeiro."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Página do cliente e diagnóstico primeiro: são o que o parceiro vai mandar aos clientes na semana em que entrar. Níveis e onboarding vêm logo depois, porque só pesam quando houver parceiros ativos."]}], "opcoes": ["Página do cliente: diagnóstico de 2 horas, valores, cases, termo de uso e ciclo de venda", "Roteiro por IA e plano de ação em PDF pelo portal e por e-mail", "Acessos de diretores e consultores, com registro do diagnóstico pelo consultor", "Níveis Select, Premium e Elite com subida automática e onboarding por etapas com lembretes", "Painel da semana com o funil da campanha, o CAP e o CAC", "Entrada de parceiros por outras origens, com a origem registrada", "Cases e valores mantidos pelo portal (sem mexer no código)"], "tipo": "multipla"}, {"id": "PT-prazo", "bloco": "Ordem de construção", "texto": "Até quando a primeira entrega precisa estar no ar?", "selo": "Dado que só você tem", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["A data define o tamanho da primeira entrega. Uma referência: a campanha de anúncios e a gravação do vídeo do cliente pelo Igor."]}], "opcoes": ["Esta semana", "Em até 2 semanas", "Em até 1 mês", "Outra data (comente)"], "tipo": "escolha"}, {"id": "PT-mais", "bloco": "Ordem de construção", "texto": "Algo mais que o portal precisa ter e que não apareceu aqui?", "selo": "Comentário livre", "cls": "igual", "secoes": [{"t": "", "k": "p", "v": ["Telas, relatórios, integrações ou ajustes que você já combinou com o Igor."]}], "opcoes": [], "tipo": "texto"}]</script>
+<script>
+const ITENS = JSON.parse(document.getElementById('dados').textContent);
+const COL = 'fo23_itens', META = 'respostas/FO-23', CHAVE = 'fo23-rascunho';
+let estado = { respostas: {} };
+let db = null; const pend = new Set(); let timer = null;
+const $ = (id) => document.getElementById(id);
+const agora = () => new Date().toISOString();
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+
+function montar() {
+  const form = $('form'); let n = 0;
+  const lista = (cls, itens) => { const u = el('ul', cls); itens.forEach(t => u.appendChild(el('li', null, t))); return u; };
+  for (const it of ITENS) {
+    n++;
+    const card = el('article', 'q'); card.id = 'c-' + it.id;
+    const topo = el('div', 'topo'); topo.append(el('p', 'eyebrow', it.bloco), el('span', 'selo ' + it.cls, it.selo)); card.appendChild(topo);
+    const h = el('h2'); h.append(el('span', 'num', String(n).padStart(3, '0')), document.createTextNode(it.texto)); card.appendChild(h);
+    for (const s of it.secoes) {
+      if (s.t && s.k !== 'cit' && s.k !== 'det' && s.k !== 'antes') card.appendChild(el('h3', null, s.t));
+      if (s.k === 'p') { const c = el('div', 'ctx'); s.v.forEach(t => c.appendChild(el('p', null, t))); card.appendChild(c); }
+      else if (s.k === 'rec') { s.v.forEach(t => card.appendChild(el('p', 'logica', t))); }
+      else if (s.k === 'ul') card.appendChild(lista('pts', s.v));
+      else if (s.k === 'passos') card.appendChild(lista('passos', s.v));
+      else if (s.k === 'fig') { const f = el('div', 'fig'); f.innerHTML = s.v; card.appendChild(f); }
+      else if (s.k === 'kv') { const dl = el('dl', 'kv'); s.v.forEach(([a, b]) => { dl.append(el('dt', null, a), el('dd', null, b)); }); card.appendChild(dl); }
+      else if (s.k === 'dec') {
+        const u = el('ul', 'decs');
+        s.v.forEach(([tit, txt, org]) => {
+          const o = (org || '').toLowerCase();
+          const cls = o.includes('em aberto') ? 'ab' : o.includes('proposta da revis') ? 'rv' : 'ok';
+          const rot = cls === 'ab' ? 'Em aberto: há pergunta logo abaixo' : cls === 'rv' ? org : 'Já decidido por você · ' + org;
+          const li = el('li', cls); li.append(el('strong', null, tit), el('span', 'org', rot), el('p', null, txt)); u.appendChild(li);
+        });
+        card.appendChild(u);
+      }
+      else if (s.k === 'det' || s.k === 'antes') { const dt = el('details', 'ver'); dt.appendChild(el('summary', null, s.t)); dt.appendChild(lista(s.k === 'antes' ? 'passos' : 'pts', s.v)); card.appendChild(dt); }
+      else if (s.k === 'cit') {
+        const dt = el('details', 'ver'); dt.appendChild(el('summary', null, s.t + ' (' + s.v.length + (s.v.length > 1 ? ' fontes)' : ' fonte)')));
+        const ul = el('ul', 'cits'); s.v.forEach(c => { const li = el('li'); li.append(el('q', null, c.trecho), el('small', null, c.fonte)); ul.appendChild(li); });
+        dt.appendChild(ul); card.appendChild(dt);
+      }
+    }
+    const fs = el('fieldset'); fs.appendChild(el('legend', null, 'Sua decisão'));
+    it.opcoes.forEach((op, k) => {
+      const lab = el('label', 'op');
+      const inp = el('input'); inp.type = it.tipo === 'multipla' ? 'checkbox' : 'radio'; inp.name = it.id; inp.value = op; inp.id = it.id + '-' + k;
+      inp.addEventListener('change', () => mudou(it)); lab.append(inp, el('span', null, op)); fs.appendChild(lab);
+    });
+    card.appendChild(fs);
+    const b = el('button', 'comentar', 'Comentar'); b.type = 'button';
+    const obs = el('textarea'); obs.id = it.id + '-obs'; obs.hidden = true; obs.placeholder = 'Ajuste, exceção ou outra resposta';
+    obs.setAttribute('aria-label', 'Comentário sobre a pergunta ' + n);
+    b.addEventListener('click', () => { obs.hidden = false; b.hidden = true; obs.focus(); });
+    obs.addEventListener('input', () => mudou(it));
+    if (it.tipo === 'texto') { obs.hidden = false; b.hidden = true; obs.rows = 6; obs.placeholder = 'Escreva aqui'; }
+    card.append(b, obs);
+    form.appendChild(card);
+  }
+}
+function ler(it) {
+  const marc = [...document.querySelectorAll('input[name="' + it.id + '"]:checked')].map(i => i.value);
+  const obs = $(it.id + '-obs').value.trim();
+  if (!marc.length && !obs) return null;
+  const r = { valor: it.tipo === 'multipla' ? marc : (marc[0] || '') }; if (obs) r.obs = obs; return r;
+}
+function aplicar() {
+  for (const it of ITENS) {
+    const r = estado.respostas[it.id];
+    const vals = r ? (Array.isArray(r.valor) ? r.valor : [r.valor]) : [];
+    document.querySelectorAll('input[name="' + it.id + '"]').forEach(i => { i.checked = vals.includes(i.value); });
+    if (r && r.obs) { const o = $(it.id + '-obs'); o.value = r.obs; o.hidden = false; o.previousElementSibling.hidden = true; } else if (it.tipo !== 'texto') { const o = $(it.id + '-obs'); o.value = ''; }
+  }
+  progresso();
+}
+function progresso() {
+  let feitas = 0;
+  for (const it of ITENS) { const ok = !!estado.respostas[it.id]; if (ok) feitas++; $('c-' + it.id).classList.toggle('feita', ok); }
+  $('cont').textContent = feitas + ' de ' + ITENS.length;
+  $('trilho').style.width = (100 * feitas / ITENS.length) + '%';
+}
+function guardarLocal() { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} }
+function mudou(it) {
+  const r = ler(it);
+  if (r) estado.respostas[it.id] = { ...r, em: agora() }; else delete estado.respostas[it.id];
+  progresso(); guardarLocal(); $('salvo').textContent = 'Salvando...';
+  pend.add(it.id); clearTimeout(timer); timer = setTimeout(gravar, 700);
+}
+// cada resposta é um registro próprio: uma aba antiga nunca apaga o que outra gravou
+async function gravar() {
+  if (!db) { $('salvo').textContent = 'Só neste navegador'; return false; }
+  const ids = [...pend]; pend.clear(); let ok = true;
+  for (const id of ids) {
+    const r = estado.respostas[id];
+    try { if (r) await db.collection(COL).doc(id).set(r); else await db.collection(COL).doc(id).delete(); }
+    catch (e) { ok = false; pend.add(id); }
+  }
+  $('salvo').textContent = ok ? 'Salvo' : 'Não salvou';
+  return ok;
+}
+$('enviar').addEventListener('click', async () => {
+  clearTimeout(timer);
+  for (const id of Object.keys(estado.respostas)) pend.add(id);
+  let ok = await gravar();
+  if (ok) {
+    try { const m = await db.doc(META).get(); const base = m.exists ? m.data() : {};
+          await db.doc(META).set({ ...base, enviado: true, enviado_em: agora(), decisoes: Object.keys(estado.respostas).length }); }
+    catch (e) { ok = false; }
+  }
+  const e = $('estado');
+  if (ok) { e.className = 'estado'; e.textContent = 'Enviado: ' + Object.keys(estado.respostas).length + ' respostas gravadas. Volte ao chat e escreva "respondi". Dá para mudar depois: é só editar e enviar de novo.'; }
+  else { e.className = 'estado erro'; e.textContent = 'Não consegui gravar. Clique em Copiar respostas e cole no chat.'; $('copiar').hidden = false; }
+});
+$('copiar').addEventListener('click', async () => {
+  const txt = JSON.stringify(estado.respostas, null, 1);
+  try { await navigator.clipboard.writeText(txt); $('estado').textContent = 'Respostas copiadas: cole no chat.'; }
+  catch (e) { const t = el('textarea'); t.value = txt; $('copiar').after(t); t.select(); $('estado').textContent = 'Selecione e copie o texto abaixo.'; }
+});
+function semBanco(msg) { const a = $('aviso'); a.hidden = false; a.textContent = msg; $('copiar').hidden = false; }
+
+montar();
+const validos = new Set(ITENS.map(i => i.id));
+let local = {};
+try { const r = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+      if (r && r.respostas) for (const [k, v] of Object.entries(r.respostas)) if (v && validos.has(k)) local[k] = { ...v, em: v.em || '' }; } catch (e) {}
+estado.respostas = { ...local }; aplicar();
+$('salvo').textContent = 'Carregando...';
+const espera = setTimeout(() => { if (!db) { $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui conectar ao armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); } }, 10000);
+(async () => {
+  const c = window.claude && await window.claude.use('db');
+  if (!c) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Esta página não consegue salvar aqui. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); return; }
+  try {
+    const snap = await c.collection(COL).get(); db = c; clearTimeout(espera);
+    const servidor = {}; snap.docs.forEach(d => { if (d.exists && validos.has(d.id)) servidor[d.id] = d.data(); });
+    const junto = { ...servidor };
+    for (const [k, v] of Object.entries(local)) { const s = servidor[k]; if (!s || (v.em || '') > (s.em || '')) { junto[k] = v; pend.add(k); } }
+    estado.respostas = junto; aplicar(); guardarLocal();
+    if (pend.size) await gravar(); else $('salvo').textContent = 'Salvo';
+  } catch (e) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui ler o armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); }
+})();
+</script>

@@ -1,0 +1,127 @@
+# FO-18: o que falta decidir para desenvolver o portal do Wise Partners (inclui o que ficou aberto no FO-17, que não foi respondido).
+import json, os, sys, re
+BASE = "/home/user/mapeamentos/wise-partners-to-be"
+SAIDA = BASE + "/formularios/FO-18/formulario.html"
+DOC = "https://claude.ai/artifact/WfaLCeHodE6SXdQuTkpxS2"
+ITENS = []
+def item(iid, bloco, texto, selo, cls, secoes, opcoes, tipo="escolha"):
+    ITENS.append({"id": "PT-" + iid, "bloco": bloco, "texto": texto, "selo": selo, "cls": cls, "secoes": [s for s in secoes if s and s.get("v")], "opcoes": opcoes, "tipo": tipo})
+def rec(t): return {"t": "O que eu recomendo, e por quê", "k": "rec", "v": [t]}
+def ctx(*t): return {"t": "Contexto", "k": "p", "v": list(t)}
+
+# ---------------------------------------------------------------- 1. regras do programa que o portal vai aplicar
+G1 = "Regras que o portal vai aplicar"
+item("niveis", G1, "Qual é a ordem e o critério de cada nível?", "Contradição a resolver", "aberto", [
+    {"t": "O que estava aprovado (FO-14)", "k": "kv", "v": [["Select", "Entrada de todos."], ["Premium", "60 dias no programa e, além disso, 3 clientes fechados ou a avaliação com o Igor. A Wise passa a recomendar o parceiro."], ["Elite", "60 dias no Premium, ou 6 clientes fechados, ou a avaliação. Base Ativa."]]},
+    {"t": "O que você escreveu no FO-16", "k": "p", "v": ["'Para passar para o nível elite, o parceiro tem que passar, pelo menos 1 cliente para fazermos o diagnóstico. Só assim podemos indicá-lo para nossos clientes. Para passar para o nível premium, pelo menos, 1 cliente tem que fechar a consultoria da wise makers.'",
+                                                       "Ao pé da letra, o Elite fica mais fácil que o Premium e a recomendação muda de nível. O portal vai calcular a subida sozinho, então precisa de uma regra só."]},
+    rec("A primeira: Premium com 1 cliente diagnosticado (a Wise já viu o parceiro trazer cliente e passa a recomendá-lo) e Elite com 1 cliente que fechou a consultoria. Mantém a escada e o portal apura sozinho.")],
+    ["Premium: 1 cliente diagnosticado (passa a ser recomendado). Elite: 1 cliente que fechou a consultoria", "Como escrevi: Elite com 1 cliente diagnosticado; Premium com 1 cliente fechado (comente a ordem)",
+     "Continuam os critérios do FO-14", "Outra regra (comente)"])
+item("niveis_tempo", G1, "Os 60 dias e a avaliação com o Igor continuam junto com os critérios de clientes?", "Decisão em aberto", "aberto", [
+    ctx("Os critérios do FO-14 tinham tempo mínimo e uma porta de exceção. Os do FO-16 falam só em clientes.")],
+    ["Não: só os critérios de clientes", "Sim: 60 dias e o critério de clientes", "Só a avaliação com o Igor continua, como exceção"])
+item("atuais", G1, "Quais parceiros atuais receberam a promessa verbal do Premium ou do Elite?", "Dado que só você tem", "aberto", [
+    ctx("Você decidiu que todos os parceiros atuais voltam ao Select, menos os que já receberam a promessa verbal dos benefícios do Premium ou do Elite. Para o portal reclassificar, preciso dos nomes.")],
+    [], tipo="texto")
+item("comissao_wise", G1, "Quanto o parceiro paga à Wise quando um cliente da Wise fecha com ele?", "Decisão em aberto", "aberto", [
+    ctx("No FO-16 você disse que o parceiro pode pagar com a comissão dele quando um cliente da Wise, recomendado pela Prateleira, fecha com ele."),
+    rec("Espelhar a regra que a Wise paga: 40% do primeiro pagamento. O parceiro entende na hora, porque é a regra que ele recebe.")],
+    ["40% do primeiro pagamento, espelhando a regra da Wise", "20% do primeiro pagamento", "10% do valor do contrato no primeiro ano", "Outro (comente)"])
+item("meta", G1, "Qual é a meta de clientes e o período para a calculadora?", "Valores", "aberto", [
+    ctx(f"A aba Modelo de negócio do documento ({DOC}) tem a calculadora de metas, custos e ganhos. Com os valores de partida (6 clientes em 6 meses), ela pede 3.000 contatos, 150 parceiros aprovados, 75 ativados e cerca de 17 conversas de entrada por semana nos 2 primeiros meses.",
+        "Escreva os números que souber: meta de clientes, período, custo-hora seu e dos consultores, verba de anúncios, mensalidade média e permanência média dos clientes. O que ficar em branco continua como hipótese.")],
+    [], tipo="texto")
+item("hub_marcas", G1, "Como o parceiro Select recebe o 'Wise Hub com as duas marcas'?", "Decisão em aberto desde o FO-14", "aberto", [
+    ctx("O que existe: a página do cliente mostra a logo do parceiro ao lado da Wise, e o cliente recebe o link do Hub depois do diagnóstico.")],
+    ["A página do cliente com as duas marcas já cumpre; dentro do Hub nada muda", "Alguém da Wise configura a logo do parceiro dentro do Hub (comente quem)",
+     "O Hub já faz isso sozinho a partir de algum cadastro (comente como)", "Não sei: ver com quem cuida do Hub"])
+item("vpc", G1, "As 30 propostas de valor por categoria podem servir de ponto de partida?", "Proposta da revisão", "mudou", [
+    ctx("Você disse que gostou do modelo de negócio. As 30 propostas de valor (uma por categoria de parceiro) são proposta minha; elas vão orientar os textos da página dos parceiros quando cada campanha mirar uma categoria."),
+    rec("Aprovar como ponto de partida e ajustar cada uma quando a campanha daquela categoria for ao ar.")],
+    ["Sim, como ponto de partida", "Sim, mas quero revisar algumas antes (comente quais)", "Não, quero revisar todas antes"])
+
+# ---------------------------------------------------------------- 2. o diagnóstico no portal
+G2 = "O diagnóstico de 2 horas no portal"
+item("roteiro_hub", G2, "Como o roteiro gerado pela IA chega ao Wise Hub?", "Decisão técnica", "aberto", [
+    ctx("Você pediu que o roteiro adaptado fique no Wise Hub, no lugar mais adequado. O portal já tem uma função de IA (que usa o Claude) para gerar o roteiro a partir do cadastro. O Wise Hub é outra plataforma: não sei se ela aceita receber conteúdo de fora."),
+    rec("Se o Hub não tiver como receber, o roteiro fica no portal, na ficha do cliente, e o Hub ganha um link para ele. Assim não depende de integração para começar.")],
+    ["O Hub tem API ou integração; quem cuida dele pode receber o roteiro (comente quem)", "O roteiro fica no portal, na ficha do cliente, e o Hub tem um link para ele",
+     "Alguém copia o roteiro para o Hub à mão", "Não sei: ver com quem cuida do Hub"])
+item("cadastro_campos", G2, "Que informações o cadastro do cliente do parceiro passa a pedir, para a IA montar o roteiro?", "Proposta da revisão", "mudou", [
+    ctx("Hoje o cadastro pede: nome, e-mail, WhatsApp, empresa, CNPJ, número de vendedores, faixa de faturamento e o principal desafio. Para o roteiro sair pronto, a IA precisa de um pouco mais, mas cada campo a mais reduz quem termina o cadastro."),
+    rec("Ciclo de venda (já decidido), segmento e o que a empresa vende, ticket médio, canais de onde vêm os clientes e o sistema de gestão usado. Com o site da empresa, a IA cobre o resto.")],
+    ["Ciclo de venda (faixas)", "Segmento e o que a empresa vende", "Ticket médio (faixas)", "Canais de onde vêm os clientes", "Sistema de gestão ou CRM que usa", "Site da empresa", "Se tem metas por vendedor"], tipo="multipla")
+item("plano", G2, "Como o plano de ação é escrito?", "Decisão em aberto", "aberto", [
+    ctx("O plano sai em PDF pelo portal e por e-mail, em até 2 dias úteis, só com o que o cliente contou na reunião. Falta decidir como ele é escrito: à mão por quem conduziu, ou com a ajuda da IA."),
+    rec("Quem conduz preenche no portal, por pilar, a nota e os pontos ouvidos; a IA monta o plano a partir disso e quem conduz revisa antes de enviar. Mantém o padrão entre consultores e cabe no prazo.")],
+    ["Quem conduz preenche por pilar e a IA monta o plano; quem conduz revisa", "A IA monta o plano a partir da transcrição do Meet; quem conduz revisa", "Quem conduz escreve o plano inteiro num modelo"])
+item("gravacao", G2, "A reunião de diagnóstico é gravada ou transcrita?", "Decisão em aberto", "aberto", [
+    ctx("A transcrição do Google Meet ajudaria a IA a montar o plano e a pesquisa da UniCesumar. Gravar exige consentimento do cliente, que pode entrar no termo de uso do diagnóstico."),
+    rec("Transcrição com consentimento no termo, sem gravar vídeo. O plano fica mais fiel ao que foi dito.")],
+    ["Transcrição, com consentimento no termo", "Gravação de vídeo e transcrição, com consentimento", "Nem uma nem outra"])
+item("termo_texto", G2, "Quem escreve o termo de uso do diagnóstico?", "Decisão em aberto", "aberto", [
+    ctx("O cliente do parceiro aceita o termo antes de enviar o cadastro. Ele diz que o plano sai só da reunião, que mais informações ou outra reunião são horas pagas, e trata dos dados e da pesquisa.")],
+    ["Você escreve um rascunho e o Bruno valida com o jurídico", "O jurídico escreve do zero", "Eu escrevo"])
+item("hora_extra", G2, "Qual é o valor da hora de consultoria extra que o termo cita?", "Dado que só você tem", "aberto", [
+    ctx("O termo vai dizer que mais informações para o plano, ou outra reunião, são horas de consultoria pagas. O valor da hora pode aparecer no termo ou ficar 'conforme proposta'.")],
+    ["Conforme proposta, sem valor no termo", "Valor fixo por hora (comente o valor)"])
+
+# ---------------------------------------------------------------- 3. pessoas e acessos
+G3 = "Pessoas e acessos"
+item("acessos", G3, "Quem são os diretores e os consultores que vão usar o portal?", "Dado que só você tem", "aberto", [
+    ctx("Diretores entram como administradores; consultores, com o perfil de consultor (veem clientes e oportunidades e registram diagnósticos e checagens). Para criar os acessos, preciso do nome e do e-mail de cada um.")],
+    [], tipo="texto")
+item("resend", G3, "A conta de e-mail do portal (Resend) já foi criada e o domínio configurado?", "Dependência", "aberto", [
+    ctx("O plano de ação por e-mail, os lembretes de etapa, o comunicado do mês e o resultado do autodiagnóstico dependem disso. O código está pronto; falta a conta, o DNS (com o Bruno) e a chave guardada nos segredos do Supabase.")],
+    ["Sim, está tudo pronto", "A conta existe, falta o DNS", "Ainda não foi criada"])
+
+# ---------------------------------------------------------------- 4. ordem de construção
+G4 = "Ordem de construção"
+item("ordem", G4, "O que entra na primeira entrega do portal?", "Decisão em aberto", "aberto", [
+    ctx("Já está construído e espera o seu 'pode publicar': a fila de espera dos parceiros e a página 'Modelo de negócio e arquitetura de processos', só para o time interno.",
+        "O resto do to-be que muda o portal, em blocos. Marque o que precisa estar pronto primeiro."),
+    rec("Página do cliente e diagnóstico primeiro: são o que o parceiro vai mandar aos clientes na semana em que entrar. Níveis e onboarding vêm logo depois, porque só pesam quando houver parceiros ativos.")],
+    ["Página do cliente: diagnóstico de 2 horas, valores, cases, termo de uso e ciclo de venda",
+     "Roteiro por IA e plano de ação em PDF pelo portal e por e-mail",
+     "Acessos de diretores e consultores, com registro do diagnóstico pelo consultor",
+     "Níveis Select, Premium e Elite com subida automática e onboarding por etapas com lembretes",
+     "Painel da semana com o funil da campanha, o CAP e o CAC",
+     "Entrada de parceiros por outras origens, com a origem registrada",
+     "Cases e valores mantidos pelo portal (sem mexer no código)"], tipo="multipla")
+item("prazo", G4, "Até quando a primeira entrega precisa estar no ar?", "Dado que só você tem", "aberto", [
+    ctx("A data define o tamanho da primeira entrega. Uma referência: a campanha de anúncios e a gravação do vídeo do cliente pelo Igor.")],
+    ["Esta semana", "Em até 2 semanas", "Em até 1 mês", "Outra data (comente)"])
+item("mais", G4, "Algo mais que o portal precisa ter e que não apareceu aqui?", "Comentário livre", "igual", [{"t": "", "k": "p", "v": ["Telas, relatórios, integrações ou ajustes que você já combinou com o Igor."]}], [], tipo="texto")
+
+# ---------------------------------------------------------------- página (renderizador do FO-14)
+json.dump(ITENS, open(BASE + "/ferramentas/fo18_itens.json", "w"), ensure_ascii=False, indent=1)
+src14 = open(BASE + "/ferramentas/fo14_pagina.py", encoding="utf-8").read()
+MONTAR = src14[src14.index('MONTAR = r"""') + len('MONTAR = r"""'):src14.index('"""\npagina = pagina[:i] + MONTAR')]
+CSS = src14[src14.index('pagina = pagina.replace("</style>", """') + len('pagina = pagina.replace("</style>", """'):src14.index('</style>""", 1)')]
+MONTAR = MONTAR.replace("card.append(b, obs);", "if (it.tipo === 'texto') { obs.hidden = false; b.hidden = true; obs.rows = 6; obs.placeholder = 'Escreva aqui'; }\n    card.append(b, obs);")
+pagina = open(BASE + "/ferramentas/fo09_modelo.html", encoding="utf-8").read()
+i = pagina.index("function montar() {"); j = pagina.index("function ler(it) {")
+pagina = pagina[:i] + MONTAR + pagina[j:]
+for a, b in {"<title>Perguntas ao patrocinador</title>": "<title>O que Falta para o Portal</title>",
+             "const COL = 'fo14_itens', META = 'respostas/FO-14', CHAVE = 'fo14-rascunho';": "const COL = 'fo23_itens', META = 'respostas/FO-23', CHAVE = 'fo23-rascunho';"}.items():
+    assert a in pagina, a; pagina = pagina.replace(a, b)
+esc = lambda t: str(t).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+blocos = []
+for it in ITENS:
+    if not blocos or blocos[-1][0] != it["bloco"]: blocos.append([it["bloco"], it["id"], 0])
+    blocos[-1][2] += 1
+indice = "".join(f'<li><a href="#c-{esc(a)}">{esc(b)}</a> <span>{n} {"pergunta" if n == 1 else "perguntas"}</span></li>' for b, a, n in blocos)
+i = pagina.index("<header>"); j = pagina.index("</header>") + len("</header>")
+pagina = pagina[:i] + f"""<header>
+    <p class="eyebrow">FO-18 · Portal Wise Partners</p>
+    <h1>O que falta decidir para desenvolver o portal</h1>
+    <p class="lead">O mapeamento (versão 12) e o modelo de negócio estão no mesmo documento. Para levar tudo ao portal, faltam algumas regras que o portal vai aplicar sozinho, como o diagnóstico de 2 horas funciona por dentro, quem vai usar e a ordem de construção. Este formulário substitui o FO-17, que não precisa mais ser respondido. As respostas são salvas enquanto você marca.</p>
+    <nav class="indice" aria-label="Blocos do formulário"><ol>{indice}</ol></nav>
+  </header>""" + pagina[j:]
+pagina = pagina.replace("</style>", CSS + "</style>", 1)
+pagina = pagina.replace("__DADOS__", json.dumps(ITENS, ensure_ascii=False).replace("</", "<\\/")).replace("__TOTAL__", str(len(ITENS)))
+assert "—" not in pagina and "–" not in pagina
+os.makedirs(os.path.dirname(SAIDA), exist_ok=True)
+open(SAIDA, "w", encoding="utf-8").write(pagina)
+print(len(ITENS), "perguntas;", len(pagina) // 1024, "KB")

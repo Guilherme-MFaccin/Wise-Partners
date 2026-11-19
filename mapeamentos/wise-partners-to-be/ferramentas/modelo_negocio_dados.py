@@ -55,19 +55,28 @@ CANVAS = {
 
 # ---------------------------------------------------------------- a conta do canal (valores de partida para a calculadora)
 CONTA = [
-    # chave, rótulo, valor, unidade, origem
-    ("mensalidade", "Mensalidade média da consultoria", 6000, "R$", "Playbook v3.1: média de R$ 5.500 a R$ 6.000 (régua de R$ 3.500 a R$ 12.000)"),
-    ("meses", "Permanência média do cliente", 12, "meses", "Exemplo da especificação 002; a confirmar"),
-    ("com_parceiro", "Comissão do parceiro", 40, "% da 1ª mensalidade", "Regra de comissão (FO-14)"),
-    ("com_gerente", "Comissão do Gerente", 10, "% da 1ª mensalidade", "Regra de comissão (v7)"),
-    ("custo_hora", "Custo-hora de quem conduz", 20.45, "R$ por hora", "Exemplo da especificação 002; a confirmar"),
-    ("h_diag", "Horas por diagnóstico", 3, "horas", "2 h de reunião, mais revisão do roteiro e do plano (proposta)"),
-    ("h_parceiro", "Horas por parceiro aprovado", 1.25, "horas", "Qualificação, conversa de 45 min e confirmações (proposta)"),
-    ("anuncios", "Verba de anúncios por mês", 3000, "R$", "Exemplo; a definir pelo Igor"),
-    ("aprovados", "Parceiros aprovados por mês", 30, "parceiros", "Exemplo; a medir"),
-    ("ativacao", "Parceiros que ativam", 50, "% dos aprovados", "Hipótese a testar"),
-    ("diag_por_ativo", "Diagnósticos por parceiro ativado", 3, "diagnósticos", "Hipótese a testar"),
-    ("conv", "Diagnósticos que viram cliente", 10, "%", "Hipótese a testar"),
+    # grupo, chave, rótulo, valor, unidade, origem
+    ("Meta", "meta", "Clientes novos que queremos fechar", 6, "clientes", "Exemplo; a meta é do Igor"),
+    ("Meta", "periodo", "Em quanto tempo", 6, "meses", "Exemplo"),
+    ("Funil de parceiros", "janela", "Meses dedicados a buscar parceiros", 2, "meses", "Os primeiros meses do período (proposta)"),
+    ("Funil de parceiros", "tx_cadastro", "Contatos que viram cadastro", 10, "%", "Hipótese a testar (cliques do anúncio ou conversas em eventos)"),
+    ("Funil de parceiros", "tx_aprovacao", "Cadastros aprovados na fila", 50, "%", "Hipótese a testar"),
+    ("Funil de parceiros", "ativacao", "Aprovados que ativam (1º cliente pelo link)", 50, "%", "Hipótese a testar"),
+    ("Funil de parceiros", "dias_ativar", "Tempo da aprovação até a ativação", 30, "dias", "Hipótese a testar"),
+    ("Funil de clientes", "cad_mes", "Clientes que cada parceiro ativado cadastra por mês", 1, "clientes", "Hipótese a testar"),
+    ("Funil de clientes", "tx_icp", "Cadastros que estão no ICP", 40, "%", "Hipótese a testar"),
+    ("Funil de clientes", "tx_compar", "Reuniões que acontecem (comparecimento)", 80, "%", "Hipótese a testar"),
+    ("Funil de clientes", "conv", "Diagnósticos que viram cliente", 10, "%", "Hipótese a testar"),
+    ("Funil de clientes", "ciclo", "Tempo do diagnóstico até o fechamento", 45, "dias", "Hipótese a testar"),
+    ("Receita", "mensalidade", "Mensalidade média da consultoria", 6000, "R$", "Playbook v3.1: média de R$ 5.500 a R$ 6.000 (régua de R$ 3.500 a R$ 12.000)"),
+    ("Receita", "meses", "Permanência média do cliente", 12, "meses", "Exemplo da especificação 002; a confirmar"),
+    ("Custos", "com_parceiro", "Comissão do parceiro", 40, "% da 1ª mensalidade", "Regra de comissão (FO-14)"),
+    ("Custos", "com_gerente", "Comissão do Gerente", 10, "% da 1ª mensalidade", "Regra de comissão (v7)"),
+    ("Custos", "custo_hora", "Custo-hora de quem conduz", 20.45, "R$ por hora", "Exemplo da especificação 002; a confirmar"),
+    ("Custos", "h_diag", "Horas por diagnóstico", 3, "horas", "2 h de reunião, mais revisão do roteiro e do plano (proposta)"),
+    ("Custos", "h_parceiro", "Horas por parceiro aprovado", 1.25, "horas", "Qualificação, conversa de 45 min e confirmações (proposta)"),
+    ("Custos", "anuncios", "Verba de anúncios por mês de busca", 3000, "R$", "Exemplo; a definir pelo Igor"),
+    ("Capacidade", "cap_gerente", "Reuniões de diagnóstico do Gerente por semana", 5, "reuniões", "FO-15"),
 ]
 
 # ---------------------------------------------------------------- Value Proposition Canvas do cliente do parceiro (refeito no FO-16)

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
   Bell, BarChart3, Building2, Handshake, Wallet, FileSearch, Users2, Clock, Inbox, Upload, Settings, UserCog, Menu, LogOut, Plus, UserCircle,
-  TrendingUp, Receipt, Radar, CalendarRange, GraduationCap, Megaphone, Trophy, GitMerge, Target,
+  TrendingUp, Receipt, Radar, CalendarRange, GraduationCap, Megaphone, Trophy, GitMerge, Target, Network,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { AvisoSenhaProvisoria } from "@/components/conta/AvisoSenhaProvisoria";
@@ -26,6 +26,7 @@ const ITENS: Item[] = [
   { to: "/app/atividades", rotulo: "Atividades", icone: Clock, papeis: ["admin", "parcerias", "consultor", "comercial"] },
   { to: "/app/pendencias", rotulo: "Pendências", icone: Inbox, papeis: ["admin", "parcerias"] },
   { to: "/app/meu-painel", rotulo: "Meu painel", icone: Target, papeis: ["admin", "parcerias"] },
+  { to: "/app/modelo-e-processos", rotulo: "Modelo e processos", icone: Network, papeis: ["admin", "parcerias", "consultor", "comercial", "financeiro"] },
   { to: "/app/resultado", rotulo: "Resultado do canal", icone: TrendingUp, papeis: ["admin"] },
   { to: "/app/custos", rotulo: "Custos", icone: Receipt, papeis: ["admin"] },
   { to: "/app/acoes", rotulo: "Ações conjuntas", icone: CalendarRange, papeis: ["admin", "parcerias", "consultor"] },

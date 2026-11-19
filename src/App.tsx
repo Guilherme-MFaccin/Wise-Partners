@@ -36,6 +36,7 @@ const Comunicados = lazy(() => import("@/pages/app/Comunicados"));
 const Ranking = lazy(() => import("@/pages/app/Ranking"));
 const Cruzamento = lazy(() => import("@/pages/app/Cruzamento"));
 const MeuPainel = lazy(() => import("@/pages/app/MeuPainel"));
+const ModeloProcessos = lazy(() => import("@/pages/app/ModeloProcessos"));
 
 const PInicio = lazy(() => import("@/pages/parceiro/Inicio"));
 const PIndicacoes = lazy(() => import("@/pages/parceiro/Indicacoes"));
@@ -125,6 +126,7 @@ export default function App() {
                   <Route path="ranking" element={<Ranking />} />
                   <Route path="cruzamento" element={<Cruzamento />} />
                   <Route path="meu-painel" element={<MeuPainel />} />
+                  <Route path="modelo-e-processos" element={<ModeloProcessos />} />
                 </Route>
                 <Route path="/parceiro" element={<Protegida publico="parceiro"><ParceiroLayout /></Protegida>}>
                   <Route index element={<PInicio />} />
