@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-15" name="3.1 Apurar o CAC e o valor devolvido" processRef="Process_P-15" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-15" name="3.1 Apurar o CAC e o valor devolvido" isExecutable="false">
-    <bpmn:documentation>As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos (inclusive anúncios) divididos pelos clientes fechados vindos de parceiros. Valor devolvido: diagnósticos feitos na base do parceiro, formações do Base Ativa, desfechos devolvidos, oportunidades enviadas de volta, apresentações feitas e acessos dados. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos (inclusive anúncios) divididos pelos clientes fechados vindos de parceiros. Valor devolvido: diagnósticos feitos na base do parceiro, formações do Base Ativa, desfechos devolvidos, oportunidades enviadas de volta, apresentações feitas e acessos dados. O painel mostra em reais o CAP, o custo por diagnóstico e o CAC. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-15">
       <bpmn:lane id="Lane_P-15_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-15_i1</bpmn:flowNodeRef>

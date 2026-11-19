@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_95" transform="translate(3448,52702)" data-frame="6.1 Conduzir o diagnóstico do cliente do parceiro">
+<g id="f_P_95" transform="translate(3448,52794)" data-frame="6.1 Conduzir o diagnóstico do cliente do parceiro">
 <rect data-type="frame" x="0" y="0" width="6308" height="858" fill="#ffffff" />
 <text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">6.1 Conduzir o diagnóstico do cliente do parceiro</text>
 <foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="6.1 Conduzir o diagnóstico do cliente do parceiro">
@@ -9,27 +9,27 @@ flowchart LR
     classDef hipotese fill:#FFFFFF,stroke:#8A9099,color:#3F4650,stroke-dasharray: 5 5
     classDef contestado fill:#FDE2E1,stroke:#C53030,color:#7F1D1D
     subgraph raia_PA_01 ["Gerente de Parcerias"]
-      n_i1(["Cliente se cadastra pelo link do parceiro"]):::confirmado
-      n_t1["Registrar o cadastro com a origem no parceiro e avisar o parceiro"]:::confirmado
+      n_i1(["Cliente se cadastra pelo link do parceiro e aceita o termo"]):::confirmado
+      n_t1["Registrar o cadastro e o aceite e avisar o parceiro"]:::confirmado
       n_g1{"A empresa está no ICP da Wise?"}:::confirmado
       n_t2["Liberar o autodiagnóstico na hora"]:::confirmado
       n_t3["Mostrar o resultado e o link do Wise Hub"]:::confirmado
       n_t4["Enviar o resultado e um próximo passo por e-mail"]:::confirmado
-      n_t5["Liberar a agenda para a reunião"]:::confirmado
+      n_t5["Liberar a agenda com o link do Google Meet"]:::confirmado
       n_e1&gt;"Cliente marca o horário"]:::confirmado
       n_t6["Conferir a agenda da semana"]:::confirmado
       n_g2{"O Gerente já tem 5 reuniões na semana?"}:::confirmado
       n_t7["Passar a reunião a um consultor da Wise"]:::confirmado
-      n_t8["Adaptar o roteiro ao cliente (Gerente ou consultor)"]:::confirmado
-      n_t9["Abrir a reunião de cerca de 2 horas (Gerente ou consultor)"]:::confirmado
+      n_t8["Gerar com IA o roteiro adaptado e publicá-lo no Wise Hub"]:::confirmado
+      n_t9["Abrir a reunião com o roteiro pronto (Gerente ou consultor)"]:::confirmado
       n_g0{"O cliente compareceu?"}:::confirmado
       n_ta["Oferecer um novo horário ou o autodiagnóstico"]:::confirmado
-      n_tb["Conduzir o diagnóstico pela Matriz 5x5 e pelo roteiro (Gerente ou consultor)"]:::confirmado
-      n_tc["Montar o plano de ação com o cliente (Gerente ou consultor)"]:::confirmado
+      n_tb["Conduzir o diagnóstico pelos 5 pilares (Gerente ou consultor)"]:::confirmado
+      n_tc["Mostrar o Wise Hub e como usar o plano de ação"]:::confirmado
       n_g3{"Pesquisa aprovada pelo CEP e consentida pelo cliente?"}:::confirmado
       n_td["Aplicar a pesquisa"]:::confirmado
       n_te["Registrar o diagnóstico e o plano no portal (Gerente ou consultor)"]:::confirmado
-      n_tf["Enviar o diagnóstico e o plano em até 2 dias úteis (Gerente ou consultor)"]:::confirmado
+      n_tf["Gerar o plano de ação em PDF e enviar pelo portal e por e-mail"]:::confirmado
       n_tg["Liberar o acesso ao Wise Hub"]:::confirmado
       n_g4{"O cliente autorizou mostrar o resultado ao parceiro?"}:::confirmado
       n_th["Liberar o resultado ao parceiro no portal"]:::confirmado
@@ -74,12 +74,12 @@ flowchart LR
     n_g5 --&gt;|Sim| n_ti
     n_ti --&gt; n_f3
     n_g5 --&gt;|Não| n_f2
-    ext_X2 -.-&gt;|Cadastro de qualificação| n_i1
+    ext_X2 -.-&gt;|Cadastro e aceite do termo| n_i1
     n_t1 -.-&gt;|Aviso de novo cliente| ext_X1
     n_t3 -.-&gt;|Resultado e link do Hub| ext_X2
     n_t4 -.-&gt;|E-mail do resultado| ext_X2
     ext_X2 -.-&gt;|Horário marcado| n_e1
-    n_tf -.-&gt;|Diagnóstico e plano de ação| ext_X2
+    n_tf -.-&gt;|Plano de ação em PDF| ext_X2
     n_tg -.-&gt;|Acesso ao Hub| ext_X2
     n_th -.-&gt;|Resultado autorizado| ext_X1
 

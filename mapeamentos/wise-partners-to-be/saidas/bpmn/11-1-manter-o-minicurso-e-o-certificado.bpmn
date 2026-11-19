@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-88" name="11.1 Manter o minicurso e o certificado" processRef="Process_P-88" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-88" name="11.1 Manter o minicurso e o certificado" isExecutable="false">
-    <bpmn:documentation>Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. O minicurso mostra os cases e o valor de referência do diagnóstico. No portal: entrega o minicurso e as trilhas e emite o certificado. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. O minicurso mostra os cases e o valor de referência do diagnóstico. O roteiro adaptado de cada reunião fica no Wise Hub, onde quem conduz o diagnóstico o acessa. No portal: entrega o minicurso e as trilhas e emite o certificado. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-88">
       <bpmn:lane id="Lane_P-88_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-88_i1</bpmn:flowNodeRef>

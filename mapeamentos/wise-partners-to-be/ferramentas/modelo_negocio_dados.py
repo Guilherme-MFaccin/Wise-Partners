@@ -1,0 +1,211 @@
+# Conteúdo do quadro de modelo de negócio do Programa Wise Partners (separado do mapa de processos, decisão do FO-16).
+# Origem de cada item: D = já decidido pelo patrocinador (com o formulário), P = proposta da revisão a validar, F = fonte documental.
+
+# ---------------------------------------------------------------- Business Model Canvas: só o que é do modelo, em frases curtas
+CANVAS = {
+    "par": ("Parcerias principais", [
+        ("Empresas do grupo: Wise Makers, Tríade e Swallow, cujos closers fecham a venda", "D"),
+        ("UniCesumar: pesquisa de maturidade comercial, com o Comitê de Ética", "D"),
+        ("Meta e Google: anúncios, agenda, Meet e medição", "D"),
+        ("Entidades e órgãos de governo: conectam a parceiros e a eventos", "D"),
+        ("Jurídico: termos e política de privacidade", "D"),
+        ("Os parceiros, no papel de quem leva a Wise até os clientes deles", "P")]),
+    "ak": ("Atividades principais", [
+        ("Diagnosticar os clientes dos parceiros e entregar o plano de ação", "D"),
+        ("Atrair, selecionar e ativar parceiros", "D"),
+        ("Levar cada oportunidade ao closer e devolver o andamento ao parceiro", "D"),
+        ("Manter o portal, os cases e os materiais", "D")]),
+    "rk": ("Recursos principais", [
+        ("Agenda de quem conduz os diagnósticos: o recurso mais escasso", "P"),
+        ("Matriz 5x5 e roteiro de diagnóstico gerado por IA", "D"),
+        ("Portal Wise Partners e Wise Hub", "D"),
+        ("8 cases com +35% de faturamento em média", "D"),
+        ("Marca e método da Wise Makers", "D")]),
+    "pv": ("Proposta de valor", [
+        ("Para o cliente do parceiro: a consultoria comercial da Wise em formato de diagnóstico de 2 horas com plano de ação e Wise Hub, R$ 5.000 de valor, sem custo", "D"),
+        ("Para o parceiro: um benefício de peso para oferecer à base, que retém e diferencia, mais 40% da primeira mensalidade de cada cliente que contratar", "D"),
+        ("Premium: ser recomendado pela Wise aos clientes dela", "D"),
+        ("Elite: uma formação por ano para a base do parceiro", "D"),
+        ("Para a Wise: clientes novos com custo menor que o dos canais ativos", "D")]),
+    "rel": ("Relacionamento", [
+        ("Entrada pessoal: fila, WhatsApp e conversa de 45 minutos", "D"),
+        ("Select: automatizado e comunidade (portal, e-mail, encontro trimestral)", "D"),
+        ("Premium e Elite: atendimento dedicado, revisão trimestral", "D"),
+        ("Cliente do parceiro: pessoal na reunião, depois autosserviço no Hub", "D")]),
+    "can": ("Canais", [
+        ("Parceiros: anúncios, eventos, feiras, orgânico, contatos dos consultores e sócios, instituições e indicação de clientes", "D"),
+        ("Página dos parceiros, fila e WhatsApp", "D"),
+        ("Clientes dos parceiros: o link enviado pelo próprio parceiro, a página do cliente, a agenda e o Meet", "D"),
+        ("Portal e e-mail para entregar e acompanhar", "D")]),
+    "seg": ("Segmentos de clientes", [
+        ("Parceiros: empresas que vendem para empresas com time comercial, de qualquer categoria e tamanho, sem concorrentes", "D"),
+        ("Clientes dos parceiros: no ICP, 3 vendedores ou mais, R$ 250 mil por mês e ciclo de venda acima de 2 dias", "D"),
+        ("Clientes da Wise, que recebem recomendações", "D"),
+        ("Plataforma de dois lados: um lado só existe com o outro", "P")]),
+    "cus": ("Estrutura de custos", [
+        ("Comissões: 40% da primeira mensalidade ao parceiro e 10% ao Gerente (R$ 3.000 por cliente de R$ 6.000)", "D"),
+        ("Horas de diagnóstico: cerca de 3 horas por cliente no ICP", "P"),
+        ("CAP: anúncios e horas de fila e conversa por parceiro aprovado", "D"),
+        ("Portal, ferramentas e o tempo do Gerente", "D")]),
+    "rec": ("Fontes de receita", [
+        ("Mensalidade da consultoria contratada pelo cliente do parceiro: média de R$ 5.500 a R$ 6.000", "F"),
+        ("Comissão paga à Wise pelo parceiro quando um cliente da Wise fecha com ele", "D"),
+        ("Parceiro e cliente do parceiro não pagam: o diagnóstico é a isca, a consultoria é o anzol", "P")]),
+}
+
+# ---------------------------------------------------------------- a conta do canal (valores de partida para a calculadora)
+CONTA = [
+    # chave, rótulo, valor, unidade, origem
+    ("mensalidade", "Mensalidade média da consultoria", 6000, "R$", "Playbook v3.1: média de R$ 5.500 a R$ 6.000 (régua de R$ 3.500 a R$ 12.000)"),
+    ("meses", "Permanência média do cliente", 12, "meses", "Exemplo da especificação 002; a confirmar"),
+    ("com_parceiro", "Comissão do parceiro", 40, "% da 1ª mensalidade", "Regra de comissão (FO-14)"),
+    ("com_gerente", "Comissão do Gerente", 10, "% da 1ª mensalidade", "Regra de comissão (v7)"),
+    ("custo_hora", "Custo-hora de quem conduz", 20.45, "R$ por hora", "Exemplo da especificação 002; a confirmar"),
+    ("h_diag", "Horas por diagnóstico", 3, "horas", "2 h de reunião, mais revisão do roteiro e do plano (proposta)"),
+    ("h_parceiro", "Horas por parceiro aprovado", 1.25, "horas", "Qualificação, conversa de 45 min e confirmações (proposta)"),
+    ("anuncios", "Verba de anúncios por mês", 3000, "R$", "Exemplo; a definir pelo Igor"),
+    ("aprovados", "Parceiros aprovados por mês", 30, "parceiros", "Exemplo; a medir"),
+    ("ativacao", "Parceiros que ativam", 50, "% dos aprovados", "Hipótese a testar"),
+    ("diag_por_ativo", "Diagnósticos por parceiro ativado", 3, "diagnósticos", "Hipótese a testar"),
+    ("conv", "Diagnósticos que viram cliente", 10, "%", "Hipótese a testar"),
+]
+
+# ---------------------------------------------------------------- Value Proposition Canvas do cliente do parceiro (refeito no FO-16)
+VPC_CLIENTE = {
+    "produtos": ["Diagnóstico comercial de cerca de 2 horas com a equipe da Wise, pelos 5 pilares (valor de referência R$ 2.000)",
+                 "Plano de ação em PDF em até 2 dias úteis", "Wise Hub: imersão de mais de 20 horas, trilhas, calculadoras, planilhas e checklists (R$ 3.000)"],
+    "aliviam": ["Processo de vendas desenhado, etapa por etapa, no lugar do improviso", "Metas e comissionamento que puxam resultado, saídos dos números da empresa",
+                "CRM usado de verdade, como registro único", "Script e playbook para o time vender igual", "Rotina de gestão semanal que tira o dono do dia a dia",
+                "Recrutamento e integração de vendedores com método"],
+    "criam": ["Crescimento de faturamento: os 8 cases da Wise cresceram, +35% em média", "Previsibilidade: saber quanto vai vender e de onde vem", "Time que vende sem depender do dono",
+              "Mais venda para a carteira atual"],
+    "tarefas": ["Crescer o faturamento com previsibilidade", "Montar e gerir um time comercial que performa", "Tirar o dono da operação de vendas"],
+    "dores": ["Vendas dependem do dono ou de um vendedor estrela", "Metas definidas no chute e comissão que não incentiva", "Leads e propostas perdidos sem acompanhamento",
+              "CRM pago que ninguém usa", "Vendedor novo demora meses para produzir"],
+    "ganhos": ["Faturamento maior todo ano", "Comercial organizado, com números confiáveis", "Tempo do dono de volta para a estratégia"],
+}
+VPC_CLIENTE_FONTE = ("Escopo da consultoria da Wise Makers (Instruções do projeto: processo de vendas, metas, comissionamento, CRM, script, playbook, rotina de gestão, recrutamento e onboarding de vendedores), "
+                     "os 5 pilares da Matriz 5x5 e os cases de novembro de 2026. O diagnóstico é a mesma consultoria em formato breve: os benefícios são os mesmos (FO-16).")
+
+# ---------------------------------------------------------------- Value Proposition Canvas por categoria de parceiro (todas as da lista aprovada)
+# Para todas: consultoria gratuita à base, comissão de 40%, certificado, Wise Hub com as duas marcas, minicurso; Premium e Elite por cima.
+COMUM = ["Consultoria gratuita para os clientes da carteira (diagnóstico de 2 horas e Wise Hub, R$ 5.000 de valor)", "40% da primeira mensalidade de cada cliente que contratar a Wise",
+         "Certificado, Wise Hub com as duas marcas e minicurso", "Premium: recomendação aos clientes da Wise; Elite: formação anual para a base"]
+CATEGORIAS = [
+    # (grupo, nome, o que vende, tarefas, dores, ganhos, aliviam, criam)
+    ("Software de gestão", "ERP", "Sistema de gestão integrado (pedidos, estoque, financeiro, produção)",
+     ["Reter a base e vender módulos novos", "Implantar sem atrasar"], ["Cliente usa só o fiscal e cancela na renovação", "Comercial do cliente fora do sistema"], ["Renovação e LTV maiores", "Venda de módulo comercial e CRM"],
+     ["Cliente com processo comercial passa a usar pedidos e metas dentro do ERP", "Motivo de contato com a base que não é cobrança"], ["Raio-x comercial da base", "Casos de clientes que cresceram usando o ERP"]),
+    ("Software de gestão", "CRM", "Software de gestão de relacionamento e funil de vendas",
+     ["Fazer o time do cliente usar o CRM todo dia", "Evitar churn nos primeiros meses"], ["CRM vira agenda cara e é cancelado", "Cliente culpa a ferramenta pela falta de processo"], ["Adoção e expansão de licenças", "Diferencial contra CRMs mais baratos"],
+     ["A consultoria desenha o processo que o CRM vai registrar", "Funil e metas configurados com método"], ["Mais usuários ativos e mais licenças", "Argumento de venda: o CRM vem com consultoria"]),
+    ("Software de gestão", "PCP", "Planejamento e controle da produção",
+     ["Ligar a previsão de vendas ao plano de produção", "Mostrar ganho de eficiência na fábrica"], ["Previsão de vendas não confiável estraga o plano", "Comercial e produção não conversam"], ["Plano de produção estável", "Cliente que vê valor e amplia o contrato"],
+     ["Comercial com meta e previsão confiáveis alimenta o PCP", "Rotina de gestão que junta vendas e produção"], ["Projetos de integração vendas e produção", "Casos conjuntos de indústria"]),
+    ("Software de gestão", "Software de gestão de manutenção", "Gestão de manutenção industrial",
+     ["Entrar e crescer em indústrias", "Comprovar retorno da manutenção"], ["Venda longa e técnica", "Cliente sem verba porque vende pouco"], ["Mais contratos em indústrias", "Cliente que investe porque cresceu"],
+     ["Indústria que vende mais tem verba para investir em manutenção", "Contato qualificado com a diretoria da indústria"], ["Acesso a indústrias da base da Wise (Premium)", "Casos de indústrias em crescimento"]),
+    ("Software de gestão", "EPM", "Gestão de desempenho, orçamento e indicadores",
+     ["Fazer o cliente planejar e acompanhar metas", "Mostrar o painel em uso"], ["Metas comerciais sem base em dados", "Painel bonito que ninguém consulta"], ["Clientes que usam o planejamento todo mês", "Expansão para outras áreas"],
+     ["Metas comerciais desdobradas com método, prontas para o EPM", "Rotina de gestão que usa os indicadores"], ["Indicadores comerciais confiáveis no painel", "Casos de gestão por dados"]),
+    ("Serviços técnicos", "SST", "Saúde e segurança do trabalho",
+     ["Manter contratos recorrentes com indústrias", "Ser lembrado além da obrigação legal"], ["Visto como custo obrigatório e trocado por preço", "Pouco acesso à diretoria"], ["Contratos mais longos", "Relação com a diretoria"],
+     ["Oferecer algo que a diretoria quer: crescer vendas", "Motivo de reunião com o dono"], ["Diferencial contra concorrentes de preço", "Indicação de volta (Premium)"]),
+    ("Serviços técnicos", "ESG", "Consultoria e relatórios de sustentabilidade",
+     ["Vender projetos de ESG para indústrias", "Ligar ESG a resultado de negócio"], ["Cliente vê ESG como custo", "Projetos pontuais, sem recorrência"], ["Projetos maiores e recorrentes", "Clientes que crescem e investem"],
+     ["Pacote que junta crescimento comercial e sustentabilidade", "Diagnóstico como porta para conversar com o dono"], ["Casos de indústrias que cresceram", "Relação contínua com a base"]),
+    ("Serviços técnicos", "Qualidade e laboratório", "Certificações, ensaios e gestão da qualidade",
+     ["Manter clientes em certificações e ensaios", "Vender novos serviços para a base"], ["Contato só na auditoria", "Pressão de preço"], ["Relação ao longo do ano", "Mais serviços por cliente"],
+     ["Um benefício gratuito que gera contato fora da auditoria", "Cliente com comercial forte vende o selo de qualidade"], ["Diferencial na renovação", "Indicação de volta (Premium)"]),
+    ("Serviços técnicos", "Eficiência energética", "Projetos de redução de consumo e geração de energia",
+     ["Vender projetos com retorno claro", "Chegar ao decisor"], ["Projeto travado por falta de caixa do cliente", "Venda técnica e longa"], ["Mais projetos fechados", "Clientes com caixa para investir"],
+     ["Cliente que cresce vendas tem caixa para o projeto", "Acesso ao dono pelo diagnóstico"], ["Base de indústrias da Wise (Premium)", "Casos conjuntos"]),
+    ("Serviços técnicos", "Automação industrial", "Automação de processos e máquinas",
+     ["Vender projetos de automação", "Manter contratos de suporte"], ["Indústria adia investimento", "Venda depende de engenharia"], ["Mais projetos e contratos de suporte", "Clientes em expansão"],
+     ["Indústria com demanda crescente precisa automatizar", "Conversa com a diretoria sobre crescimento"], ["Leads de indústrias em expansão", "Casos de crescimento"]),
+    ("Tecnologia", "Tecnologia digital", "Desenvolvimento de sistemas, apps e transformação digital",
+     ["Vender projetos e contratos de evolução", "Mostrar retorno do digital"], ["Projetos sem dono do lado do cliente", "Retorno difícil de provar"], ["Contratos recorrentes", "Clientes que voltam"],
+     ["Processo comercial claro mostra onde o digital ajuda", "Diagnóstico como ponto de partida de projeto"], ["Projetos maiores com base no plano de ação", "Indicação de volta (Premium)"]),
+    ("Tecnologia", "Infraestrutura e data center", "Nuvem, servidores, redes e hospedagem",
+     ["Renovar contratos e vender mais capacidade", "Ser lembrado como parceiro, não fornecedor"], ["Concorrência por preço", "Relação só técnica"], ["Contratos mais longos", "Relação com a diretoria"],
+     ["Benefício de negócio para oferecer além da infraestrutura", "Motivo para falar com o dono"], ["Diferencial na renovação", "Clientes que crescem e consomem mais"]),
+    ("Tecnologia", "Dados e ciência de dados", "BI, análise e projetos de dados",
+     ["Vender projetos de dados com uso real", "Mostrar valor rápido"], ["Cliente sem dados comerciais organizados", "Painel sem decisão"], ["Projetos que viram rotina", "Expansão de escopo"],
+     ["Comercial com dados confiáveis e indicadores definidos", "Rotina de gestão que consome os painéis"], ["Projetos de BI comercial", "Casos conjuntos"]),
+    ("Tecnologia", "Segurança da informação", "Proteção de dados, LGPD e cibersegurança",
+     ["Vender proteção antes do incidente", "Manter contratos de monitoramento"], ["Cliente só compra depois do problema", "Visto como custo"], ["Contratos recorrentes", "Relação com a diretoria"],
+     ["Benefício de crescimento junto da proteção", "Contato com o dono por um motivo positivo"], ["Diferencial na proposta", "Clientes que crescem e protegem mais dados"]),
+    ("Serviços de negócio", "Consultoria de gestão", "Consultoria em finanças, processos ou estratégia (sem ser comercial)",
+     ["Ampliar o escopo nos clientes", "Entregar resultado mais rápido"], ["Cliente quer resultado de receita, que a consultoria não cobre", "Projetos que acabam sem continuidade"], ["Projetos integrados", "Clientes que renovam"],
+     ["A Wise cobre a frente comercial que a consultoria não faz", "Plano conjunto para o cliente"], ["Clientes com resultado completo", "Indicação de volta (Premium)"]),
+    ("Serviços de negócio", "Design", "Marca, embalagem, design de produto",
+     ["Vender projetos de marca e produto", "Mostrar que o design vende"], ["Projeto sem medida de resultado", "Cliente sem time para usar a marca nova"], ["Projetos com resultado provado", "Clientes recorrentes"],
+     ["Time comercial que sabe vender a marca nova", "Cases com crescimento medido"], ["Indicações de quem cresceu", "Projetos conjuntos de lançamento"]),
+    ("Serviços de negócio", "Comércio exterior e logística internacional", "Importação, exportação e logística",
+     ["Levar indústrias a exportar", "Manter operações recorrentes"], ["Indústria sem estrutura comercial para o exterior", "Operações pontuais"], ["Clientes exportando de forma contínua", "Mais operações"],
+     ["Estrutura comercial que sustenta a venda para fora", "Plano de ação com metas por mercado"], ["Clientes com volume para operar", "Casos conjuntos de exportação"]),
+    ("Serviços de negócio", "Jurídico", "Assessoria jurídica empresarial",
+     ["Manter clientes em contrato mensal", "Ser visto como parceiro do crescimento"], ["Contato só em problema", "Troca por escritório mais barato"], ["Contratos mais longos", "Indicações de clientes satisfeitos"],
+     ["Benefício de negócio que gera contato positivo", "Contratos e políticas comerciais (comissão, termos) bem estruturados"], ["Diferencial na renovação", "Clientes que crescem e demandam mais"]),
+    ("Serviços de negócio", "Tributário", "Planejamento e recuperação tributária",
+     ["Mostrar economia ao cliente", "Manter relação depois do projeto"], ["Relação termina no projeto", "Cliente desconfia de promessa de economia"], ["Projetos recorrentes", "Relação contínua"],
+     ["Benefício gratuito que mantém o contato depois do projeto", "Cliente que cresce gera mais oportunidades tributárias"], ["Clientes com mais receita para planejar", "Indicação de volta (Premium)"]),
+    ("Serviços de negócio", "Contabilidade consultiva", "Contabilidade com assessoria de gestão",
+     ["Deixar de ser só obrigação fiscal", "Reter e cobrar mais por consultoria"], ["Cliente vê a contabilidade como custo", "Troca por preço"], ["Honorários maiores", "Clientes fiéis"],
+     ["Oferecer crescimento comercial à carteira, junto da gestão", "Números comerciais que a contabilidade consegue ler"], ["Posicionamento de consultivo", "Clientes que crescem e pagam mais"]),
+    ("Serviços de negócio", "RH", "Recrutamento, folha e desenvolvimento de pessoas",
+     ["Preencher vagas comerciais com quem fica", "Vender desenvolvimento ao cliente"], ["Vendedor contratado sai em meses", "Cliente sem perfil claro da vaga"], ["Contratações que dão certo", "Mais vagas por cliente"],
+     ["Perfil de vendedor, comissão e integração definidos pela consultoria", "Vendedor novo produz mais rápido"], ["Recolocação com resultado", "Projetos conjuntos de time comercial"]),
+    ("Institucional", "Federações e confederações", "Representação e serviços à indústria",
+     ["Entregar valor prático às indústrias filiadas", "Mostrar resultado da representação"], ["Associado não percebe o que recebe", "Programas genéricos"], ["Associados ativos e satisfeitos", "Dados do setor"],
+     ["Programa gratuito de diagnóstico para os associados", "Formações com casos reais"], ["Raio-x da maturidade comercial do setor", "Eventos com conteúdo de crescimento"]),
+    ("Institucional", "Sistema S", "Formação e serviços para empresas (SENAI, SESI, SEBRAE e afins)",
+     ["Ampliar o atendimento a empresas", "Mostrar impacto dos programas"], ["Programas com pouca adesão", "Resultado difícil de medir"], ["Mais empresas atendidas", "Indicadores de impacto"],
+     ["Diagnóstico e plano de ação com resultado medido", "Conteúdo pronto no Wise Hub"], ["Dados de maturidade por região ou setor", "Casos para divulgar"]),
+    ("Institucional", "Institutos", "Institutos de pesquisa, tecnologia ou desenvolvimento",
+     ["Ligar pesquisa a empresas", "Gerar projetos com a indústria"], ["Pouco contato com a diretoria das empresas", "Projetos sem continuidade"], ["Mais projetos com empresas", "Dados de campo"],
+     ["Porta de entrada para empresas pelo diagnóstico", "Pesquisa conjunta, como a da UniCesumar"], ["Base de dados de maturidade comercial", "Publicações conjuntas"]),
+    ("Institucional", "Associações comerciais e empresariais", "Rede e serviços para empresas locais",
+     ["Reter e atrair associados", "Oferecer benefícios concretos"], ["Associado sai por não ver benefício", "Eventos esvaziados"], ["Associados que renovam", "Eventos cheios"],
+     ["Benefício de R$ 5.000 gratuito para associados no perfil", "Encontros com conteúdo de vendas"], ["Argumento de adesão", "Casos de associados que cresceram"]),
+    ("Institucional", "Associações setoriais", "Representação de um setor específico",
+     ["Fortalecer as empresas do setor", "Gerar dados do setor"], ["Empresas do setor sem gestão comercial", "Pouca participação"], ["Setor mais competitivo", "Participação maior"],
+     ["Programa de diagnóstico para o setor", "Raio-x agregado da maturidade comercial do setor"], ["Benchmark setorial", "Eventos com casos do setor"]),
+    ("Institucional", "Secretarias de indústria e comércio", "Políticas públicas de desenvolvimento econômico",
+     ["Apoiar o crescimento das empresas locais", "Mostrar resultado de programas"], ["Programas sem medida de impacto", "Pouco alcance nas empresas"], ["Empresas locais crescendo", "Indicadores para prestar contas"],
+     ["Programa de diagnóstico gratuito para empresas do município", "Resultado medido e agregado"], ["Dados de desenvolvimento local", "Casos de empresas da região"]),
+    ("Institucional", "Sindicatos patronais", "Representação e serviços para empresas de um setor",
+     ["Oferecer serviços além da negociação coletiva", "Manter contribuição dos associados"], ["Associado só vê a contribuição", "Serviços pouco usados"], ["Associados que veem valor", "Mais participação"],
+     ["Benefício concreto de gestão comercial", "Formações para os associados"], ["Argumento de valor do sindicato", "Casos de associados"]),
+    ("Institucional", "Parques tecnológicos", "Ambiente para empresas de base tecnológica",
+     ["Fazer as empresas residentes crescerem", "Atrair novas empresas"], ["Startups com produto e sem comercial", "Saída de empresas que não decolam"], ["Residentes que crescem", "Parque mais atrativo"],
+     ["Estrutura comercial para empresas de tecnologia", "Diagnóstico como serviço do parque"], ["Indicadores de crescimento das residentes", "Casos para atrair empresas"]),
+    ("Institucional", "Universidades", "Ensino, pesquisa e extensão",
+     ["Ligar alunos e pesquisa a empresas", "Gerar pesquisa aplicada"], ["Pouco acesso a dados reais de empresas", "Extensão sem parceiro de mercado"], ["Pesquisa publicada com dados de campo", "Projetos de extensão"],
+     ["Pesquisa conjunta com consentimento e anonimização", "Diagnósticos como campo de pesquisa"], ["Dados de maturidade comercial", "Projetos com empresas"]),
+]
+
+# ---------------------------------------------------------------- canais nas cinco fases (corrigido no FO-16)
+FASES = ["Conhecimento", "Avaliação", "Compra", "Entrega", "Pós-venda"]
+CANAIS = {
+    "Parceiro": ["Anúncios no Meta, eventos, feiras, orgânico, contatos dos consultores e sócios, instituições e órgãos de governo, indicação de clientes",
+                 "Página dos parceiros com vídeo, valor de referência e cases; WhatsApp", "Cadastro com aceite, fila, conversa de entrada de 45 minutos no Meet",
+                 "Portal: link, página do cliente com a logo, minicurso, kit", "Grupo de WhatsApp, e-mail e comunicado do mês, encontro trimestral, lembretes"],
+    "Cliente do parceiro": ["Mensagem do próprio parceiro com o link (a mensagem pronta é só sugestão)", "Página do cliente com as duas marcas, o valor de referência e os cases",
+                            "Cadastro, aceite do termo, agenda com link do Meet", "Reunião de 2 horas; plano de ação em PDF pelo portal e por e-mail; Wise Hub",
+                            "Wise Hub; se quiser mais, horas de consultoria ou a consultoria completa, com o closer"],
+}
+
+# ---------------------------------------------------------------- mapa de hipóteses (importância x evidência) e portfólio
+HIPOTESES = [
+    # (texto, tipo, importância 1-3, evidência 1-3)
+    ("Clientes dos parceiros marcam a reunião de 2 horas", "Desejabilidade", 3, 1),
+    ("Diagnósticos viram clientes da consultoria (10% ou mais)", "Viabilidade financeira", 3, 1),
+    ("Parceiros mandam o link para a base depois de aprovados", "Desejabilidade", 3, 1),
+    ("A agenda comporta as reuniões (5 por semana do Gerente e consultores)", "Viabilidade técnica", 3, 2),
+    ("A IA gera um roteiro bom o bastante para a reunião", "Viabilidade técnica", 2, 1),
+    ("Parceiros de outras categorias, além de software, querem o programa", "Desejabilidade", 2, 1),
+    ("O CAC fica abaixo do dos canais ativos", "Viabilidade financeira", 3, 1),
+    ("Os cases convencem o cliente do parceiro", "Desejabilidade", 2, 2),
+    ("A comissão de 40% motiva o parceiro", "Desejabilidade", 2, 2),
+]

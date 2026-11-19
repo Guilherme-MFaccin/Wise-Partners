@@ -733,7 +733,7 @@
     {
       "id": "CV-01",
       "nome": "Jornada do parceiro: do candidato ao parceiro em crescimento",
-      "gatilho": "Campanha de aquisição no ar",
+      "gatilho": "Campanha de anúncios ou contato por outra origem",
       "valor": "Parceiro ativo, subindo de Select para Premium e Elite",
       "stakeholder": "Empresa parceira",
       "ofertas": [
@@ -742,7 +742,7 @@
       ],
       "etapas": [
         {
-          "nome": "Atrair pela campanha e selecionar pela fila",
+          "nome": "Atrair (campanha e outras origens) e selecionar pela fila",
           "processos": [
             "P-20"
           ]
@@ -778,7 +778,8 @@
         "EV-0069",
         "EV-0332",
         "EV-0350",
-        "EV-0387"
+        "EV-0387",
+        "EV-0414"
       ]
     },
     {
@@ -1023,7 +1024,40 @@
       "nome": "Wise Hub",
       "status": "declarado",
       "evidencias": [
-        "EV-0014"
+        "EV-0014",
+        "EV-0412"
+      ]
+    },
+    {
+      "id": "SI-05",
+      "nome": "Google Agenda",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0408"
+      ]
+    },
+    {
+      "id": "SI-06",
+      "nome": "Google Meet",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0409"
+      ]
+    },
+    {
+      "id": "SI-07",
+      "nome": "E-mail do portal",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0410"
+      ]
+    },
+    {
+      "id": "SI-08",
+      "nome": "Meta Ads, pixel e GA4",
+      "status": "confirmado",
+      "evidencias": [
+        "EV-0411"
       ]
     }
   ],
@@ -1536,7 +1570,7 @@
       "nome": "Definir o modelo econômico do canal",
       "pai": "P-01",
       "ordem": 5,
-      "descricao": "Fixar como se calcula o CAC do Wise Partners: comissões, horas e custos diretos (inclusive os anúncios da campanha de parceiros) divididos pelos clientes fechados vindos de parceiros, e os custos por parceiro aprovado e por parceiro ativado. Ninguém informa o CAC de outros canais. No portal: calcula o CAC do Wise Partners a cada mês a partir de comissões, horas, anúncios e custos diretos.",
+      "descricao": "Fixar como se calcula o CAC do Wise Partners: comissões, horas e custos diretos (inclusive os anúncios da campanha de parceiros) divididos pelos clientes fechados vindos de parceiros, e os custos por parceiro aprovado e por parceiro ativado. Ninguém informa o CAC de outros canais. A conta também separa o CAP (custo de aquisição do parceiro: anúncios e horas de fila e conversa divididos pelos parceiros aprovados) e o custo de cada diagnóstico (horas de reunião e de plano de ação), com valores em reais. No portal: calcula o CAC do Wise Partners a cada mês a partir de comissões, horas, anúncios e custos diretos.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -1563,7 +1597,9 @@
         "EV-0027",
         "EV-0023",
         "EV-0153",
-        "EV-0383"
+        "EV-0383",
+        "EV-0423",
+        "EV-0424"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -2638,7 +2674,7 @@
       "nome": "Apurar o CAC e o valor devolvido",
       "pai": "P-14",
       "ordem": 1,
-      "descricao": "As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos (inclusive anúncios) divididos pelos clientes fechados vindos de parceiros. Valor devolvido: diagnósticos feitos na base do parceiro, formações do Base Ativa, desfechos devolvidos, oportunidades enviadas de volta, apresentações feitas e acessos dados. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa.",
+      "descricao": "As duas medidas-mãe, com o mesmo peso. CAC: comissões, horas e custos diretos (inclusive anúncios) divididos pelos clientes fechados vindos de parceiros. Valor devolvido: diagnósticos feitos na base do parceiro, formações do Base Ativa, desfechos devolvidos, oportunidades enviadas de volta, apresentações feitas e acessos dados. O painel mostra em reais o CAP, o custo por diagnóstico e o CAC. No portal: calcula as duas a cada mês e a tendência do trimestre, sem nenhum número informado de fora do programa.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Fechamento do mês",
@@ -2678,7 +2714,8 @@
         "EV-0027",
         "EV-0028",
         "EV-0282",
-        "EV-0373"
+        "EV-0373",
+        "EV-0423"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3424,7 +3461,7 @@
       "nome": "Atrair e selecionar parceiros",
       "pai": null,
       "ordem": 4,
-      "descricao": "Da campanha de aquisição ao parceiro com acesso. Todo parceiro entra pelo mesmo caminho, sem exceção: anúncio, landing page, cadastro com aceite, fila no portal, conferência do cadastro, contato do Gerente pelo WhatsApp em até 24 horas úteis, qualificação pela mensagem, link da agenda, confirmação na véspera e no dia, e a conversa de entrada, em que a conta é criada. Quem não responde vai para a retomada. A fila existe para que concorrentes e pessoas sem interesse não tenham acesso ao que a Wise oferece. No portal: recebe o cadastro na fila, avisa os administradores, guarda a origem da campanha e registra cada mudança de situação até a aprovação.",
+      "descricao": "Da campanha de aquisição ao parceiro com acesso. Todo parceiro entra pelo mesmo caminho, sem exceção: anúncio, landing page, cadastro com aceite, fila no portal, conferência do cadastro, contato do Gerente pelo WhatsApp em até 24 horas úteis, qualificação pela mensagem, link da agenda, confirmação na véspera e no dia, e a conversa de entrada, em que a conta é criada. Quem não responde vai para a retomada. A fila existe para que concorrentes e pessoas sem interesse não tenham acesso ao que a Wise oferece. O candidato pode vir da campanha de anúncios ou de outras origens: orgânica, eventos, feiras, contatos dos consultores e sócios, instituições de governo e indicação de clientes. Todos passam pela mesma fila. No portal: recebe o cadastro na fila, avisa os administradores, guarda a origem da campanha e registra cada mudança de situação até a aprovação.",
       "dono": "PA-01",
       "participantes": [
         "PA-06"
@@ -3454,7 +3491,9 @@
         "EV-0332",
         "EV-0333",
         "EV-0334",
-        "EV-0373"
+        "EV-0373",
+        "EV-0413",
+        "EV-0414"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -3731,6 +3770,10 @@
         {
           "nome": "Cadastros pela página",
           "de": "P-98"
+        },
+        {
+          "nome": "Cadastros de outras origens",
+          "de": "P-101"
         }
       ],
       "saidas": [
@@ -5696,7 +5739,7 @@
       "nome": "Recomendar parceiros ao cliente pela Prateleira",
       "pai": "P-31",
       "ordem": 4,
-      "descricao": "O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente com os parceiros Premium e Elite da categoria, sem recomendação suspensa; cada parceiro que entra no pedido dá uma contrapartida não financeira. Quando o consultor já sabe quem resolve, a página pode ter um parceiro só. Trinta dias depois, o Gerente pergunta ao cliente e ao parceiro como foi. No portal: lista os parceiros Premium e Elite por categoria, monta a página, registra a contrapartida combinada e o retorno do cliente.",
+      "descricao": "O consultor relata a necessidade, o Gerente registra o pedido e publica a página do cliente com os parceiros Premium e Elite da categoria, sem recomendação suspensa; cada parceiro que entra no pedido dá uma contrapartida não financeira. Quando o consultor já sabe quem resolve, a página pode ter um parceiro só. Trinta dias depois, o Gerente pergunta ao cliente e ao parceiro como foi. Quando um cliente da Wise fecha com o parceiro recomendado, o parceiro pode pagar a contrapartida com uma comissão à Wise. No portal: lista os parceiros Premium e Elite por categoria, monta a página, registra a contrapartida combinada e o retorno do cliente.",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -5748,7 +5791,8 @@
         "EV-0189",
         "EV-0052",
         "EV-0289",
-        "EV-0373"
+        "EV-0373",
+        "EV-0422"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9074,7 +9118,7 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "confirmado",
+      "status": "contestado",
       "hipoteses": [],
       "evidencias": [
         "EV-0222",
@@ -9090,7 +9134,8 @@
         "EV-0356",
         "EV-0374",
         "EV-0377",
-        "EV-0384"
+        "EV-0384",
+        "EV-0425"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9177,7 +9222,7 @@
       "nome": "Fixar a regra de comissão e a contrapartida da Prateleira",
       "pai": "P-05",
       "ordem": 2,
-      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. No portal: calcula a comissão sozinho e registra a contrapartida combinada.",
+      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. Além da contrapartida não financeira, o parceiro recomendado pela Prateleira pode pagar à Wise uma comissão sobre o cliente da Wise que fechar com ele. No portal: calcula a comissão sozinho e registra a contrapartida combinada.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9218,7 +9263,8 @@
         "EV-0023",
         "EV-0029",
         "EV-0375",
-        "EV-0377"
+        "EV-0377",
+        "EV-0422"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9430,10 +9476,10 @@
     },
     {
       "id": "P-64",
-      "nome": "Manter o termo de adesão",
+      "nome": "Manter o termo de adesão e o termo de uso do diagnóstico",
       "pai": "P-05",
       "ordem": 4,
-      "descricao": "Termo de adesão curto e igual para todos, aceito no formulário do cadastro. Cada mudança gera uma versão nova com data de vigência; o aceite de cada parceiro fica ligado à versão que ele leu. Quando a versão muda, o portal pede o aceite da versão nova no próximo acesso, depois dos 30 dias de aviso. No portal: guarda as versões do termo e mostra na página a versão vigente.",
+      "descricao": "Dois termos curtos, com número de versão. O termo de adesão do parceiro, aceito no cadastro da página dos parceiros. O termo de uso do diagnóstico, aceito pelo cliente do parceiro antes de enviar o cadastro: o diagnóstico e o plano de ação saem só do que ele contar na reunião; mais informações ou outra reunião são horas de consultoria pagas. Cada mudança gera uma versão nova com data de vigência; o aceite de cada um fica ligado à versão que leu. Quando a versão muda, o portal pede o aceite da nova no próximo acesso, depois dos 30 dias de aviso. No portal: guarda as versões dos dois termos e mostra em cada página a versão vigente.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9469,12 +9515,13 @@
         "EV-0007",
         "EV-0100",
         "EV-0376",
-        "EV-0386"
+        "EV-0386",
+        "EV-0418"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "guarda as versões do termo e mostra na página a versão vigente.",
+      "portal": "guarda as versões dos dois termos e mostra em cada página a versão vigente.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -10150,7 +10197,7 @@
       "nome": "Entregar o link da página do cliente e a mensagem pronta",
       "pai": "P-27",
       "ordem": 3,
-      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. A mensagem pronta diz que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
+      "descricao": "O link exclusivo do parceiro (partners.wisemakers.com.br/c/código) leva à página do cliente com as duas marcas; a mensagem pronta já vai com o link. É esse link que registra a origem por 180 dias. A mensagem pronta diz que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo. Na maior parte das vezes o parceiro escreve a própria mensagem e só usa o link; a mensagem pronta é uma sugestão. No portal: gera o link e a mensagem na tela Indicar do parceiro.",
       "dono": "PA-01",
       "participantes": [
         "PA-05"
@@ -10183,7 +10230,8 @@
         "EV-0284",
         "EV-0339",
         "EV-0373",
-        "EV-0401"
+        "EV-0401",
+        "EV-0414"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -11328,7 +11376,7 @@
       "nome": "Manter o minicurso e o certificado",
       "pai": "P-59",
       "ordem": 1,
-      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. O minicurso mostra os cases e o valor de referência do diagnóstico. No portal: entrega o minicurso e as trilhas e emite o certificado.",
+      "descricao": "Minicurso de como vender a Wise e trilhas por empresa do grupo; o certificado de parceiro Wise vale desde o Select. O Igor grava e revisa; o Gerente atualiza. O minicurso do Select é só da Wise Makers; as trilhas da Tríade e da Swallow abrem no Premium. O minicurso mostra os cases e o valor de referência do diagnóstico. O roteiro adaptado de cada reunião fica no Wise Hub, onde quem conduz o diagnóstico o acessa. No portal: entrega o minicurso e as trilhas e emite o certificado.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -11368,7 +11416,8 @@
         "EV-0375",
         "EV-0373",
         "EV-0405",
-        "EV-0401"
+        "EV-0401",
+        "EV-0416"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -11558,7 +11607,7 @@
       "nome": "Manter o perfil do cliente ideal e as frases",
       "pai": "P-59",
       "ordem": 3,
-      "descricao": "Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. O perfil para a reunião de diagnóstico é: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa. Abaixo disso, o cliente faz o autodiagnóstico. No portal: mostra na área do parceiro.",
+      "descricao": "Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. O perfil para a reunião de diagnóstico é: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa (ciclo de venda acima de 2 dias). Abaixo disso, o cliente faz o autodiagnóstico. No portal: mostra na área do parceiro.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Mudança de oferta ou da regra do ICP",
@@ -11587,7 +11636,8 @@
         "EV-0078",
         "EV-0258",
         "EV-0373",
-        "EV-0397"
+        "EV-0397",
+        "EV-0419"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -12287,7 +12337,7 @@
       "nome": "Conduzir o diagnóstico do cliente do parceiro",
       "pai": "P-31",
       "ordem": 0,
-      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação e a página decide pelo ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa); o parceiro é avisado. No ICP: agenda do Google e uma reunião de cerca de 2 horas, com diagnóstico e plano de ação na mesma conversa. A base é a Matriz 5x5, mesclada ao roteiro de diagnóstico da Wise, que é adaptado a cada cliente antes da reunião. O Gerente conduz até 5 reuniões por semana (10 horas); o que passar vai para um consultor da Wise, que registra o diagnóstico no portal. O cliente recebe o diagnóstico e o plano de ação num documento da Wise em até 2 dias úteis, e o acesso ao Wise Hub. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo, sem ligação. Vale para os clientes de todos os parceiros, desde o Select. Valor de referência: o diagnóstico custaria R$ 2.000 contratado direto com a Wise, e o Wise Hub R$ 3.000; para o cliente do parceiro, sai sem custo. Se a empresa já é cliente da Wise ou já negocia com ela, é atendida sem proteção de origem nem comissão, e o parceiro é avisado. A pesquisa da UniCesumar só entra com aprovação do Comitê de Ética e consentimento. Se o cliente pede para contratar, abre-se a oportunidade. No portal: registra o cadastro com a origem no parceiro, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, calcula o resultado da matriz, recebe o registro do diagnóstico feito pelo Gerente ou pelo consultor e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
+      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação, aceita o termo de uso do diagnóstico e a página decide pelo ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa (ciclo de venda acima de 2 dias)); o parceiro é avisado. No ICP: agenda do Google com link do Google Meet. Antes da reunião, a IA gera o roteiro adaptado ao cliente a partir do cadastro (Matriz 5x5 como base, mesclada ao roteiro de diagnóstico) e o deixa no Wise Hub; quem conduz chega com o roteiro pronto. A reunião dura cerca de 2 horas: diagnóstico pelos 5 pilares e, na parte final, como usar o Wise Hub e o plano de ação. Tudo sai do que o cliente conta na reunião: a Wise não pede dados depois nem marca outro encontro. O plano de ação em PDF chega em até 2 dias úteis pelo portal e por e-mail. Mais informações para compor o plano, ou outra reunião para explicá-lo, são horas de consultoria pagas, como diz o termo. O Gerente conduz até 5 reuniões por semana; o que passar vai para um consultor da Wise, que registra no portal. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo. Valor de referência: diagnóstico R$ 2.000 e Wise Hub R$ 3.000, sem custo para o cliente do parceiro. Se a empresa já é cliente da Wise ou já negocia com ela, não há proteção de origem nem comissão. Se o cliente pede para contratar, abre-se a oportunidade. No portal: registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail.",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -12319,7 +12369,10 @@
       "cliente": "Cliente do parceiro e parceiro",
       "sistemas": [
         "SI-01",
-        "SI-04"
+        "SI-04",
+        "SI-05",
+        "SI-06",
+        "SI-07"
       ],
       "indicadores": [],
       "frequencia": "Até 5 reuniões de cerca de 2 horas por semana com o Gerente; o que passar vai para um consultor da Wise",
@@ -12356,7 +12409,15 @@
         "EV-0397",
         "EV-0398",
         "EV-0399",
-        "EV-0400"
+        "EV-0400",
+        "EV-0415",
+        "EV-0416",
+        "EV-0417",
+        "EV-0418",
+        "EV-0419",
+        "EV-0420",
+        "EV-0409",
+        "EV-0421"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -12364,14 +12425,13 @@
         "F-002",
         "F-003"
       ],
-      "portal": "registra o cadastro com a origem no parceiro, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, calcula o resultado da matriz, recebe o registro do diagnóstico feito pelo Gerente ou pelo consultor e mostra ao parceiro a empresa, a situação e o resultado só com autorização.",
+      "portal": "registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
-          "EV-0389",
-          "EV-0394",
-          "EV-0395",
-          "EV-0396"
+          "EV-0416",
+          "EV-0417",
+          "EV-0418"
         ],
         "raias": [
           "PA-01"
@@ -12390,13 +12450,13 @@
           {
             "id": "i1",
             "tipo": "inicio",
-            "nome": "Cliente se cadastra pelo link do parceiro",
+            "nome": "Cliente se cadastra pelo link do parceiro e aceita o termo",
             "raia": "PA-01"
           },
           {
             "id": "t1",
             "tipo": "tarefa",
-            "nome": "Registrar o cadastro com a origem no parceiro e avisar o parceiro",
+            "nome": "Registrar o cadastro e o aceite e avisar o parceiro",
             "raia": "PA-01",
             "sistema": "SI-01",
             "modo": "automatico"
@@ -12434,9 +12494,9 @@
           {
             "id": "t5",
             "tipo": "tarefa",
-            "nome": "Liberar a agenda para a reunião",
+            "nome": "Liberar a agenda com o link do Google Meet",
             "raia": "PA-01",
-            "sistema": "SI-01",
+            "sistema": "SI-05",
             "modo": "automatico"
           },
           {
@@ -12471,14 +12531,17 @@
           {
             "id": "t8",
             "tipo": "tarefa",
-            "nome": "Adaptar o roteiro ao cliente (Gerente ou consultor)",
-            "raia": "PA-01"
+            "nome": "Gerar com IA o roteiro adaptado e publicá-lo no Wise Hub",
+            "raia": "PA-01",
+            "sistema": "SI-04",
+            "modo": "automatico"
           },
           {
             "id": "t9",
             "tipo": "tarefa",
-            "nome": "Abrir a reunião de cerca de 2 horas (Gerente ou consultor)",
-            "raia": "PA-01"
+            "nome": "Abrir a reunião com o roteiro pronto (Gerente ou consultor)",
+            "raia": "PA-01",
+            "sistema": "SI-06"
           },
           {
             "id": "g0",
@@ -12496,14 +12559,16 @@
           {
             "id": "tb",
             "tipo": "tarefa",
-            "nome": "Conduzir o diagnóstico pela Matriz 5x5 e pelo roteiro (Gerente ou consultor)",
-            "raia": "PA-01"
+            "nome": "Conduzir o diagnóstico pelos 5 pilares (Gerente ou consultor)",
+            "raia": "PA-01",
+            "sistema": "SI-06"
           },
           {
             "id": "tc",
             "tipo": "tarefa",
-            "nome": "Montar o plano de ação com o cliente (Gerente ou consultor)",
-            "raia": "PA-01"
+            "nome": "Mostrar o Wise Hub e como usar o plano de ação",
+            "raia": "PA-01",
+            "sistema": "SI-06"
           },
           {
             "id": "g3",
@@ -12528,8 +12593,10 @@
           {
             "id": "tf",
             "tipo": "tarefa",
-            "nome": "Enviar o diagnóstico e o plano em até 2 dias úteis (Gerente ou consultor)",
-            "raia": "PA-01"
+            "nome": "Gerar o plano de ação em PDF e enviar pelo portal e por e-mail",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "automatico"
           },
           {
             "id": "tg",
@@ -12738,7 +12805,7 @@
           {
             "de": "X2",
             "para": "i1",
-            "rotulo": "Cadastro de qualificação"
+            "rotulo": "Cadastro e aceite do termo"
           },
           {
             "de": "t1",
@@ -12763,7 +12830,7 @@
           {
             "de": "tf",
             "para": "X2",
-            "rotulo": "Diagnóstico e plano de ação"
+            "rotulo": "Plano de ação em PDF"
           },
           {
             "de": "tg",
@@ -12783,7 +12850,7 @@
       "nome": "Manter a página do cliente e o kit de convite",
       "pai": "P-59",
       "ordem": 4,
-      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. A página mostra, no topo, na oferta e no quadro de comparação, que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo; e mostra os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
+      "descricao": "Página do cliente com as duas marcas (o parceiro sobe a logo), vídeo da Wise explicando a consultoria gratuita, cadastro de qualificação, agenda e autodiagnóstico, e a mensagem pronta para o parceiro enviar com o link dele. O Igor grava; o Gerente mantém atualizado. A página mostra, no topo, na oferta e no quadro de comparação, que o diagnóstico com plano de ação custaria R$ 2.000 contratado direto com a Wise Makers e o Wise Hub R$ 3.000 (total de R$ 5.000); para o cliente do parceiro, sem custo; e mostra os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. A mensagem pronta é uma sugestão: o parceiro costuma mandar o link com o texto dele. No portal: gera a página e a mensagem com o link exclusivo do parceiro.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Mudança na oferta, no vídeo, na agenda ou na regra do ICP",
@@ -12827,7 +12894,8 @@
         "EV-0403",
         "EV-0404",
         "EV-0405",
-        "EV-0390"
+        "EV-0390",
+        "EV-0414"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -13045,7 +13113,7 @@
       "nome": "Rodar a campanha de aquisição de parceiros",
       "pai": "P-20",
       "ordem": 0,
-      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. A página dos parceiros mostra o que o parceiro passa a oferecer, com o valor de referência (R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub, sem custo para o cliente dele), e os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
+      "descricao": "Escolher o tipo de parceiro e o público, gravar os vídeos, montar os anúncios, configurar a página dos parceiros (vídeo, agenda, pixel e código de cada anúncio), pôr no ar e acompanhar toda semana o gasto e o custo por parceiro aprovado e ativado, até encerrar a campanha com o resultado registrado. A página dos parceiros mostra o que o parceiro passa a oferecer, com o valor de referência (R$ 2.000 do diagnóstico e R$ 3.000 do Wise Hub, sem custo para o cliente dele), e os 8 cases da Wise Makers, com nome e segmento, e o destaque '+35% em média' de crescimento de faturamento. O anúncio é um dos canais de entrada, não o único: os parceiros também chegam por outras origens (4.0). No portal: guarda a configuração da página, registra a origem de cada cadastro e mostra o funil por anúncio.",
       "dono": "PA-02",
       "participantes": [
         "PA-01"
@@ -13092,7 +13160,8 @@
       "evidencias": [
         "EV-0373",
         "EV-0401",
-        "EV-0405"
+        "EV-0405",
+        "EV-0413"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -13503,6 +13572,128 @@
           }
         ],
         "mensagens": []
+      }
+    },
+    {
+      "id": "P-101",
+      "nome": "Trazer candidatos por outras origens",
+      "pai": "P-20",
+      "ordem": 0,
+      "descricao": "Parceiros também chegam sem anúncio: de forma orgânica, em eventos e feiras, por contatos pessoais dos consultores e dos sócios, por instituições e órgãos de governo e por indicação de clientes. Quem fez o contato envia o link da página dos parceiros e registra a origem; o candidato segue pelo mesmo caminho da fila. No portal: registra a origem de cada candidato, para comparar o custo e o resultado de cada canal.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-07",
+        "PA-02"
+      ],
+      "gatilho": "Contato com um possível parceiro fora da campanha",
+      "entradas": [],
+      "saidas": [
+        {
+          "nome": "Cadastros de outras origens",
+          "para": "P-21"
+        }
+      ],
+      "cliente": "Candidato a parceiro",
+      "sistemas": [
+        "SI-01",
+        "SI-02"
+      ],
+      "indicadores": [],
+      "frequencia": "Quando acontece",
+      "dores": [],
+      "regras": [],
+      "status": "confirmado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0413",
+        "EV-0414"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [
+        "F-015"
+      ],
+      "portal": "registra a origem de cada candidato, para comparar o custo e o resultado de cada canal.",
+      "fluxo": {
+        "status": "confirmado",
+        "evidencias": [
+          "EV-0413"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [
+          {
+            "id": "X1",
+            "nome": "Possível parceiro"
+          }
+        ],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Contato com um possível parceiro fora da campanha",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Enviar o link da página dos parceiros",
+            "raia": "PA-01",
+            "sistema": "SI-02"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Registrar a origem do candidato",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "e1",
+            "tipo": "espera",
+            "nome": "Cadastro pela página",
+            "raia": "PA-01",
+            "evento": "mensagem"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Candidato na fila",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "e1"
+          },
+          {
+            "de": "e1",
+            "para": "f1"
+          }
+        ],
+        "mensagens": [
+          {
+            "de": "t1",
+            "para": "X1",
+            "rotulo": "Link da página"
+          },
+          {
+            "de": "X1",
+            "para": "e1",
+            "rotulo": "Cadastro"
+          }
+        ]
       }
     }
   ],
@@ -17169,6 +17360,348 @@
       "data": "2026-11-19",
       "trecho": "Sim, é isso. ",
       "local": "FO-15/PD-link_confirma"
+    },
+    {
+      "id": "EV-0408",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-agenda"
+    },
+    {
+      "id": "EV-0409",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Google Meet. ",
+      "local": "FO-16/BM-video-qual"
+    },
+    {
+      "id": "EV-0410",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-email"
+    },
+    {
+      "id": "EV-0411",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-meta"
+    },
+    {
+      "id": "EV-0412",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-hub"
+    },
+    {
+      "id": "EV-0413",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). Não vamos trazer parceiros exclusivamente através de anúncios no meta. Existe a possibilidade do parceiro vir de forma orgânica, através de eventos, etc",
+      "local": "FO-16/BM-bloco-can"
+    },
+    {
+      "id": "EV-0414",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). O ponto 1: conhecimento, não pode ser somente o anúncio do meta. Tem que ser todos os canais que já mencionei anteriormente: eventos, feiras, orgânico, contatos pessoais dos consultores e sócios, instituições governamentais, o próprio cliente, etc etc.\n\nJá o cliente do parceiro o ponto 1: conhecimento, não pode se restringir com a mensagem pronta. Na maior parte das vezes será uma mensagem gerada pelo próprio parceiro e ele dá só o link.",
+      "local": "FO-16/BM-canais-fases"
+    },
+    {
+      "id": "EV-0415",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-diag-mescla"
+    },
+    {
+      "id": "EV-0416",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Não aprovo (comente). O roteiro tem que ser adaptado automáticamente com IA a partir das informações deixadas no formulário. O responsável por fazer a reunião já deve ir para a reunião com o roteiro finalizado. Deve ser acessivel na plataforma wise hub no lugar mais adequado para isso",
+      "local": "FO-16/BM-diag-adapta"
+    },
+    {
+      "id": "EV-0417",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). Não teremos um próximo encontro no plano de ação. A etapa de plano de ação é mostrar ao cliente do parceiro como usar a ferramenta do wise hub e como utilizar o plano de ação para benefício dele. O diagnóstico deve concluir com o plano de ação em PDF alguns dias depois via portal e por e-mail. Se o cliente do parceiro quiser mais uma reunião para explicar o plano de ação, vai precisar pagar pela hora de consultoria.",
+      "local": "FO-16/BM-diag-agenda"
+    },
+    {
+      "id": "EV-0418",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Não aprovo (comente). No plano de ação não podemos agendar outra reunião. Também não podemos pedir mais informação para ele passar e melhorarmos depois. Tudo tem que ser feito a partir das informações que ele passa na reunião de diagnóstico, exclusivamente. Se ele quiser enviar mais informações para compor melhor o plano de ação, deve ser cobradas horas de consultoria a mais.\nTudo isso tem que estar escrito em algum termo que o cliente do parceiro tem que aceitar antes de enviar o formulário",
+      "local": "FO-16/BM-diag-plano"
+    },
+    {
+      "id": "EV-0419",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Vamos perguntar o ciclo de vendas e colocar o corte em 2 dias",
+      "local": "FO-16/BM-diag-complexa"
+    },
+    {
+      "id": "EV-0420",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Montado no portal e gerado em PDF. ",
+      "local": "FO-16/BM-doc-onde"
+    },
+    {
+      "id": "EV-0421",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Sim, é este. ",
+      "local": "FO-16/BM-matriz"
+    },
+    {
+      "id": "EV-0422",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). Existe a possibilidade também do parceiro pagar com a comissão dele, caso algum cliente da Wise venha a fechar com ele",
+      "local": "FO-16/BM-bloco-rec"
+    },
+    {
+      "id": "EV-0423",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. Como já disse anteriormente, você tem que colocar os valores para ficar mais claro",
+      "local": "FO-16/BM-bloco-cus"
+    },
+    {
+      "id": "EV-0424",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). A estrutura está ok, mas o business model canvas está totalmente disfuncional. Com isso não dá para se entender nada. Sobre a estrutura de custos, você precisa colocar efetivamente o custo de tempo e outros custos, como tráfego, CAP (Custo de Aquisição do Parceiro), etc.\n\nDeixe tudo mais claro. O que não é para estar lá no canvas, não coloque. O que precisa ser lógico, deixe lógico, claro, simples e consistente",
+      "local": "FO-16/BM-canvas"
+    },
+    {
+      "id": "EV-0425",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). Vou ter que atualizar o critério de definição dos níveis:\n- Para passar para o nível elite, o parceiro tem que passar, pelo menos 1 cliente para fazermos o diagnóstico. Só assim podemos indica-lo para nossos clientes\n- Para passar para o nível premium, pelo menos, 1 cliente tem que fechar a consultoria da wise makers",
+      "local": "FO-16/BM-bloco-pv"
+    },
+    {
+      "id": "EV-0426",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Os dois quadros separados. Além do business model canvas, deixe outras formas de mapear o modelo de negócio baseado nos livros que linkei. O business model canvas é só mais uma maneira de analisar tudo",
+      "local": "FO-16/BM-arquitetura"
+    },
+    {
+      "id": "EV-0427",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-bloco-par"
+    },
+    {
+      "id": "EV-0428",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-bloco-ak"
+    },
+    {
+      "id": "EV-0429",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-bloco-rk"
+    },
+    {
+      "id": "EV-0430",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-bloco-rel"
+    },
+    {
+      "id": "EV-0431",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-bloco-seg"
+    },
+    {
+      "id": "EV-0432",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). Não quero que você faça isso para empresas de software de gestão, mas absolutamente todas as categorias, mesmo que venham a ser muitos value proposition canvas diferentes",
+      "local": "FO-16/BM-vpc-parceiro"
+    },
+    {
+      "id": "EV-0433",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo com ajustes (comente). A dor não é \"mostrar onde a venda 'trava'\"Isso é uma forma horrível de dizer o que a consultoria da Wise Makers faz.\nPreciso que você refatore isso de maneira a colocar todos os benefícios da consultoria Wise Makers em absoluto para o cliente, pois, a pesar de ser uma consultoria mais breve do que aquela contratada, que vem justamente com uma assessoria, os benefícios são os mesmos. Alí você colocou como se fosse somente o diagnóstico que, por si só, não é muito valioso",
+      "local": "FO-16/BM-vpc-cliente"
+    },
+    {
+      "id": "EV-0434",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-portal"
+    },
+    {
+      "id": "EV-0435",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-whatsapp"
+    },
+    {
+      "id": "EV-0436",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-video"
+    },
+    {
+      "id": "EV-0437",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-fer-doc"
+    },
+    {
+      "id": "EV-0438",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-01"
+    },
+    {
+      "id": "EV-0439",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-02"
+    },
+    {
+      "id": "EV-0440",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-07"
+    },
+    {
+      "id": "EV-0441",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-03"
+    },
+    {
+      "id": "EV-0442",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-04"
+    },
+    {
+      "id": "EV-0443",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-05"
+    },
+    {
+      "id": "EV-0444",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-resp-PA-06"
+    },
+    {
+      "id": "EV-0445",
+      "tipo": "validacao",
+      "fonte": "FO-16: processos no Business Model Canvas",
+      "pessoa": "PE-01",
+      "data": "2026-11-19",
+      "trecho": "Aprovo como está. ",
+      "local": "FO-16/BM-hipoteses"
     }
   ],
   "perguntas": [
@@ -25854,10 +26387,90 @@
       "recomendo": ""
     },
     {
-      "id": "Q-0236",
-      "texto": "Como a página confere a 'venda mais complexa' do ICP?",
+      "id": "Q-0237",
+      "texto": "Qual é a ordem e o critério de cada nível?",
+      "tipo": "escolha",
+      "opcoes": [],
+      "alvo": [
+        "P-61",
+        "CT-08"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 11,
+      "bloco": "Níveis",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "ct-niveis",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0238",
+      "texto": "Qual é a comissão que o parceiro paga à Wise quando um cliente da Wise fecha com ele?",
       "tipo": "aberta",
       "opcoes": [],
+      "alvo": [
+        "P-35"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 11,
+      "bloco": "Modelo de negócio",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-fo16",
+      "contexto": [
+        "No FO-16 você disse que o parceiro pode pagar com a comissão dele. Falta o percentual e sobre o quê."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0239",
+      "texto": "Quais são os valores reais para a conta do canal (custo-hora, verba de anúncios, mensalidade média e permanência)?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-06"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 11,
+      "bloco": "Modelo de negócio",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-fo16",
+      "contexto": [
+        "O canvas precisa mostrar os custos em reais. Alguns valores vêm da especificação e do Playbook; outros só você tem."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0240",
+      "texto": "O modelo de diagnóstico 5x5 que eu uso é este?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, é este",
+        "É outra versão (comente ou mande o arquivo)"
+      ],
       "alvo": [
         "P-95"
       ],
@@ -25865,15 +26478,1205 @@
         "PE-01"
       ],
       "rodada": 10,
-      "bloco": "Diagnóstico",
-      "status": "aberta",
-      "formulario": null,
-      "respostas": [],
-      "respondida_por": [],
-      "chave": "pendente-fo15",
-      "contexto": [
-        "O cadastro hoje pergunta vendedores e faturamento. 'Venda mais complexa' não tem campo: precisa de uma pergunta no cadastro ou de uma conferência do Gerente antes de confirmar a reunião."
+      "bloco": "A Matriz 5x5",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0421"
       ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-matriz",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0241",
+      "texto": "O canvas do Programa Wise Partners está certo?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0424"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-canvas",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0242",
+      "texto": "Como o mapa de processos passa a ser organizado?",
+      "tipo": "escolha",
+      "opcoes": [
+        "O canvas como camada de cima, ligado aos processos",
+        "Refazer a hierarquia pelos 9 blocos",
+        "Os dois quadros separados",
+        "Outra (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0426"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-arquitetura",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0243",
+      "texto": "Bloco Parcerias principais: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0427"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-par",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0244",
+      "texto": "Bloco Atividades principais: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0428"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-ak",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0245",
+      "texto": "Bloco Recursos principais: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0429"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-rk",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0246",
+      "texto": "Bloco Proposta de valor: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0425"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-pv",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0247",
+      "texto": "Bloco Relacionamento: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0430"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-rel",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0248",
+      "texto": "Bloco Canais: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0413"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-can",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0249",
+      "texto": "Bloco Segmentos de clientes: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0431"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-seg",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0250",
+      "texto": "Bloco Estrutura de custos: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0423"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-cus",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0251",
+      "texto": "Bloco Fontes de receita: o conteúdo e os processos estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O mapa no padrão do Business Model Canvas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0422"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-bloco-rec",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0252",
+      "texto": "A proposta de valor para o parceiro encaixa no que ele precisa?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "As duas propostas de valor",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0432"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-vpc-parceiro",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0253",
+      "texto": "A proposta de valor para o cliente do parceiro encaixa no que ele precisa?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "As duas propostas de valor",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0433"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-vpc-cliente",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0254",
+      "texto": "Os canais nas cinco fases estão certos?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "As duas propostas de valor",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0414"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-canais-fases",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0255",
+      "texto": "Portal Wise Partners: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0434"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-portal",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0256",
+      "texto": "WhatsApp: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0435"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-whatsapp",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0257",
+      "texto": "Google Agenda: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0408"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-agenda",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0258",
+      "texto": "Videochamada: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0436"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-video",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0259",
+      "texto": "E-mail: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0410"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-email",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0260",
+      "texto": "Meta Ads, pixel e GA4: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0411"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-meta",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0261",
+      "texto": "Wise Hub: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0412"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-hub",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0262",
+      "texto": "Documento do diagnóstico: é isso que entra nesta ferramenta?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0437"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-fer-doc",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0263",
+      "texto": "Qual ferramenta de videochamada é a padrão?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Google Meet",
+        "Zoom",
+        "Microsoft Teams",
+        "Outra (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0409"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-video-qual",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0264",
+      "texto": "Onde o documento do diagnóstico é feito e guardado?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Montado no portal e gerado em PDF",
+        "Num modelo no Google Docs, numa pasta do Drive por parceiro",
+        "Num modelo de apresentação (Canva ou Slides)",
+        "Outro (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que entra em cada ferramenta",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0420"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-doc-onde",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0265",
+      "texto": "Gerente de Parcerias (Guilherme): é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0438"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-01",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0266",
+      "texto": "Diretores (Igor e demais): é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0439"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-02",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0267",
+      "texto": "Consultores da Wise Makers: é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0440"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-07",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0268",
+      "texto": "Closers das empresas do grupo: é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0441"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-03",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0269",
+      "texto": "Financeiro: é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0442"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-04",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0270",
+      "texto": "Parceiro (responsável nomeado): é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0443"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-05",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0271",
+      "texto": "Candidato a parceiro: é isso que este papel faz?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que cada responsável faz",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0444"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-resp-PA-06",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0272",
+      "texto": "A mescla da Matriz 5x5 com o roteiro de diagnóstico está certa?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "A reunião de diagnóstico de 2 horas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0415"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-diag-mescla",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0273",
+      "texto": "A divisão das 2 horas está boa?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "A reunião de diagnóstico de 2 horas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0417"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-diag-agenda",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0274",
+      "texto": "O plano de ação padrão tem estas três partes?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "A reunião de diagnóstico de 2 horas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0418"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-diag-plano",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0275",
+      "texto": "Quem adapta o roteiro a cada cliente, e com o quê?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "A reunião de diagnóstico de 2 horas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0416"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-diag-adapta",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0276",
+      "texto": "Como se confere a 'venda mais complexa' do ICP?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Pergunta no cadastro sobre o ciclo de venda, com corte em 30 dias",
+        "Pergunta no cadastro sobre o ticket médio (comente o corte)",
+        "O Gerente confere antes de confirmar a reunião",
+        "Outra forma (comente)"
+      ],
+      "alvo": [
+        "P-95"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "A reunião de diagnóstico de 2 horas",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0419"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-diag-complexa",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": ""
+    },
+    {
+      "id": "Q-0277",
+      "texto": "Estas são as hipóteses de maior risco do modelo, e estes os números para acompanhar?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Aprovo como está",
+        "Aprovo com ajustes (comente)",
+        "Não aprovo (comente)"
+      ],
+      "alvo": [
+        "P-20"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 10,
+      "bloco": "O que testar primeiro",
+      "status": "respondida",
+      "formulario": "FO-09",
+      "respostas": [
+        "EV-0445"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
+      "chave": "BM-hipoteses",
+      "contexto": [],
       "logica": "",
       "citacoes": [],
       "visual": "",
@@ -26281,6 +28084,65 @@
       "enviado_em": "2026-11-18",
       "prazo": "",
       "identificacao": false
+    },
+    {
+      "id": "FO-09",
+      "titulo": "FO-16: processos no Business Model Canvas",
+      "rodada": 10,
+      "para": [
+        "PE-01"
+      ],
+      "canal": "artifact",
+      "perguntas": [
+        "Q-0240",
+        "Q-0241",
+        "Q-0242",
+        "Q-0243",
+        "Q-0244",
+        "Q-0245",
+        "Q-0246",
+        "Q-0247",
+        "Q-0248",
+        "Q-0249",
+        "Q-0250",
+        "Q-0251",
+        "Q-0252",
+        "Q-0253",
+        "Q-0254",
+        "Q-0255",
+        "Q-0256",
+        "Q-0257",
+        "Q-0258",
+        "Q-0259",
+        "Q-0260",
+        "Q-0261",
+        "Q-0262",
+        "Q-0263",
+        "Q-0264",
+        "Q-0265",
+        "Q-0266",
+        "Q-0267",
+        "Q-0268",
+        "Q-0269",
+        "Q-0270",
+        "Q-0271",
+        "Q-0272",
+        "Q-0273",
+        "Q-0274",
+        "Q-0275",
+        "Q-0276",
+        "Q-0277"
+      ],
+      "introducao": "O canvas, as ferramentas, os responsáveis e o diagnóstico de 2 horas.",
+      "link": "https://claude.ai/artifact/7zQHXNkz1hVmaibz9Rbq8L",
+      "status": "respondido",
+      "respondido_por": [
+        "PE-01"
+      ],
+      "respostas_recebidas": 1,
+      "enviado_em": "2026-11-19",
+      "prazo": "",
+      "identificacao": false
     }
   ],
   "contradicoes": [
@@ -26488,6 +28350,21 @@
         "EV-0274",
         "EV-0275"
       ]
+    },
+    {
+      "id": "CT-08",
+      "descricao": "Critério dos níveis. No FO-14 você aprovou: Premium com 60 dias e 3 clientes fechados (ou a avaliação com o Igor), e é no Premium que a Wise passa a recomendar o parceiro; Elite com 60 dias no Premium ou 6 clientes fechados. No FO-16 você escreveu: 'Para passar para o nível elite, o parceiro tem que passar, pelo menos 1 cliente para fazermos o diagnóstico. Só assim podemos indicá-lo para nossos clientes. Para passar para o nível premium, pelo menos, 1 cliente tem que fechar a consultoria da wise makers.' Lido ao pé da letra, o Elite fica mais fácil que o Premium e a recomendação passa para o Elite.",
+      "elemento": "P-61",
+      "evidencias": [
+        "EV-0425",
+        "EV-0374"
+      ],
+      "status": "aberta",
+      "pergunta": "Q-0237",
+      "resolucao": "",
+      "evidencias_resolucao": [],
+      "lado_patrocinador": "FO-16",
+      "lado_livros": "FO-14"
     }
   ],
   "decisoes": [
@@ -27189,6 +29066,70 @@
         "EV-0405",
         "EV-0406"
       ]
+    },
+    {
+      "id": "DE-67",
+      "data": "2026-11-19",
+      "texto": "O mapa de processos e o modelo de negócio ficam em dois quadros separados. O modelo de negócio usa o Business Model Canvas e as outras ferramentas dos livros (Value Proposition Canvas por categoria de parceiro, mapa de hipóteses, portfólio), com valores em reais.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0426",
+        "EV-0424"
+      ]
+    },
+    {
+      "id": "DE-68",
+      "data": "2026-11-19",
+      "texto": "Os parceiros também chegam sem anúncio: orgânico, eventos, feiras, contatos dos consultores e sócios, instituições de governo e indicação de clientes.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0413",
+        "EV-0414"
+      ]
+    },
+    {
+      "id": "DE-69",
+      "data": "2026-11-19",
+      "texto": "O roteiro do diagnóstico é gerado por IA a partir do cadastro e fica no Wise Hub; quem conduz chega com ele pronto.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0416"
+      ]
+    },
+    {
+      "id": "DE-70",
+      "data": "2026-11-19",
+      "texto": "A reunião termina mostrando o Wise Hub e como usar o plano de ação; não há outro encontro nem pedido de dados depois. Mais informações ou outra reunião são horas pagas, e isso está no termo de uso do diagnóstico, aceito antes do cadastro.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0417",
+        "EV-0418"
+      ]
+    },
+    {
+      "id": "DE-71",
+      "data": "2026-11-19",
+      "texto": "O plano de ação é montado no portal e gerado em PDF, enviado pelo portal e por e-mail. A videochamada padrão é o Google Meet.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0420",
+        "EV-0409"
+      ]
+    },
+    {
+      "id": "DE-72",
+      "data": "2026-11-19",
+      "texto": "Venda mais complexa: ciclo de venda acima de 2 dias, perguntado no cadastro.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0419"
+      ]
     }
   ],
   "glossario": [
@@ -27421,6 +29362,10 @@
     {
       "data": "2026-11-19",
       "evento": "To-be v11: FO-15 aplicado. Diretores administram o portal e consultores registram a parte deles; diagnóstico de cerca de 2 horas com plano de ação, pela Matriz 5x5 mesclada ao roteiro, até 5 por semana com o Gerente; ICP com 3 vendedores, R$ 250 mil por mês e venda complexa; valor de referência R$ 2.000 mais R$ 3.000 do Hub; cases com nome e média de +35%, atualizados a cada trimestre (processo novo)."
+    },
+    {
+      "data": "2026-11-19",
+      "evento": "To-be v12: FO-16 aplicado. O canvas vira quadro separado de modelo de negócio; parceiros também por outras origens (processo novo 4.0); roteiro do diagnóstico por IA no Wise Hub; reunião sem encontro extra e termo de uso do diagnóstico; venda complexa = ciclo acima de 2 dias; contradição aberta no critério dos níveis."
     }
   ]
 }

@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-06" name="1.5 Definir o modelo econômico do canal" processRef="Process_P-06" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-06" name="1.5 Definir o modelo econômico do canal" isExecutable="false">
-    <bpmn:documentation>Fixar como se calcula o CAC do Wise Partners: comissões, horas e custos diretos (inclusive os anúncios da campanha de parceiros) divididos pelos clientes fechados vindos de parceiros, e os custos por parceiro aprovado e por parceiro ativado. Ninguém informa o CAC de outros canais. No portal: calcula o CAC do Wise Partners a cada mês a partir de comissões, horas, anúncios e custos diretos. [status do fluxo: Confirmado; evidências: EV-0383]</bpmn:documentation>
+    <bpmn:documentation>Fixar como se calcula o CAC do Wise Partners: comissões, horas e custos diretos (inclusive os anúncios da campanha de parceiros) divididos pelos clientes fechados vindos de parceiros, e os custos por parceiro aprovado e por parceiro ativado. Ninguém informa o CAC de outros canais. A conta também separa o CAP (custo de aquisição do parceiro: anúncios e horas de fila e conversa divididos pelos parceiros aprovados) e o custo de cada diagnóstico (horas de reunião e de plano de ação), com valores em reais. No portal: calcula o CAC do Wise Partners a cada mês a partir de comissões, horas, anúncios e custos diretos. [status do fluxo: Confirmado; evidências: EV-0383]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-06">
       <bpmn:lane id="Lane_P-06_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-06_i1</bpmn:flowNodeRef>

@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-90" name="11.3 Manter o perfil do cliente ideal e as frases" processRef="Process_P-90" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-90" name="11.3 Manter o perfil do cliente ideal e as frases" isExecutable="false">
-    <bpmn:documentation>Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. O perfil para a reunião de diagnóstico é: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa. Abaixo disso, o cliente faz o autodiagnóstico. No portal: mostra na área do parceiro. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Perfil do cliente ideal e frases que reconhecem a dor, por empresa do grupo. O perfil para a reunião de diagnóstico é: 3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa (ciclo de venda acima de 2 dias). Abaixo disso, o cliente faz o autodiagnóstico. No portal: mostra na área do parceiro. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-90">
       <bpmn:lane id="Lane_P-90_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-90_i1</bpmn:flowNodeRef>
