@@ -80,3 +80,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado com a navegação nova (seis seções internas, cinco do parceiro), Tarefas, Candidatos, Diagnósticos e Programa, Páginas.
 * Documento "Modelo e processos" na versão v13.
 * Conferido no ar: páginas únicas em 375, 768 e 1440 px sem erro; a página do cliente não mostra o nome do parceiro do link; sem login, cases e fila de tarefas são recusados.
+
+## Publicação de 21/11/2026 (wireframe e coerência da entrada)
+
+* Migração `20261120000031` (etapas do onboarding, ativação no primeiro cliente pelo link, lembrete aos 14 dias, modo fila travado) aplicada e registrada.
+* Função `cadastro-parceiro` publicada sem o caminho de acesso direto.
+* Site publicado: Programa, Wireframe; raiz sem login abre /parceiros; criação de senha no primeiro acesso; Primeiros passos em seis etapas; tela Indicar com um link na frente.
+* Documento "Modelo e processos" na versão v14.
+* Conferido no ar: / leva a /parceiros; /entrar mostra o caminho para candidatos; o cadastro não pede senha; sem login, etapas e marcas do onboarding não aparecem.
