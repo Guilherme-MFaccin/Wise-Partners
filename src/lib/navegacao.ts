@@ -18,7 +18,7 @@ export const SECOES_INTERNAS: SecaoNav[] = [
   {
     id: "tarefas", rotulo: "Tarefas", icone: ListChecks, descricao: "O que fugiu da regra e precisa de alguém da Wise",
     abas: [
-      { to: "/app", rotulo: "Fila de hoje", exato: true },
+      { to: "/app", rotulo: "Tarefas", exato: true },
       { to: "/app/meu-painel", rotulo: "Minha carteira", papeis: GESTAO },
       { to: "/app/atividades", rotulo: "Contatos e horas", papeis: SEM_FINANCEIRO },
     ],

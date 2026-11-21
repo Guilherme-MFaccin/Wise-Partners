@@ -572,6 +572,17 @@ insert into public.cadastros_cliente (parceiro_id, nome, email, whatsapp, empres
 update public.cadastros_cliente set diagnostico_em = now() - interval '1 day' where chave = 'demo5';
 
 -- -------------------------------------------------------------------------------------
+-- Tarefas manuais do gerenciador (as de regra nascem da sincronização ao abrir a tela)
+-- -------------------------------------------------------------------------------------
+insert into public.tarefas (titulo, descricao, status, prioridade, responsavel_id, criado_por, parceiro_id, etiquetas, checklist, inicio, prazo) values
+  ('Preparar a pauta da revisão trimestral', 'Levar os números do trimestre e a jogada sugerida do tipo.', 'fazendo', 'alta', pg_temp.uid(1), pg_temp.uid(1), 'd0000000-0000-4000-a000-000000001008', '{ritual}',
+   '[{"texto": "Puxar o painel da semana", "feito": true}, {"texto": "Separar os casos parados", "feito": false}]', current_date - 2, current_date + 1),
+  ('Gravar o vídeo do encontro trimestral', null, 'a_fazer', 'normal', pg_temp.uid(2), pg_temp.uid(1), null, '{comunidade}', '[]', null, current_date + 6),
+  ('Revisar a ficha da Prateleira com o parceiro', null, 'aguardando', 'normal', pg_temp.uid(3), pg_temp.uid(1), 'd0000000-0000-4000-a000-000000001012', '{prateleira}', '[]', current_date - 5, current_date - 1),
+  ('Montar o comunicado do mês', 'Números do mês e eventos.', 'a_fazer', 'urgente', pg_temp.uid(1), pg_temp.uid(1), null, '{comunidade}', '[]', null, current_date),
+  ('Ligar para o parceiro sobre o cruzamento', null, 'feito', 'baixa', pg_temp.uid(3), pg_temp.uid(1), 'd0000000-0000-4000-a000-000000001009', '{}', '[]', current_date - 6, current_date - 3);
+
+-- -------------------------------------------------------------------------------------
 -- Rotinas: status de atividade, régua, faixas e alertas como no dia a dia
 -- -------------------------------------------------------------------------------------
 select pg_temp.como(null);

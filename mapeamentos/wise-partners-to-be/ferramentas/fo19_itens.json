@@ -1,0 +1,425 @@
+[
+ {
+  "id": "HB-ofertantes",
+  "bloco": "Quem participa do hub",
+  "texto": "Quem pode oferecer produtos e serviços no catálogo?",
+  "selo": "Mudança de modelo",
+  "cls": "mudou",
+  "secoes": [
+   {
+    "t": "Como o modelo está hoje (to-be v14 e canvas)",
+    "k": "kv",
+    "v": [
+     [
+      "Parceiros",
+      "Empresas que vendem para empresas, em 30 categorias (21 comerciais e 9 institucionais), entrando pela fila e pela conversa de entrada."
+     ],
+     [
+      "Clientes dos parceiros",
+      "Recebem a consultoria da Wise sem custo (diagnóstico de 2 horas e Wise Hub) pelo link do parceiro."
+     ],
+     [
+      "Clientes da Wise",
+      "Recebem recomendações pela Prateleira: a Wise indica parceiros Premium e Elite quando o cliente pede um fornecedor."
+     ],
+     [
+      "Receita",
+      "Mensalidade da consultoria; comissão que o parceiro paga à Wise quando um cliente da Wise fecha com ele."
+     ]
+    ]
+   },
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Você disse que o portal passa a ser de parceiros que não precisam estar nas categorias definidas antes, e que os clientes da Wise também podem ser parceiros. Vira uma comunidade de indústrias e de empresas que prestam serviço para indústrias."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Qualquer empresa B2B aprovada pela Wise, inclusive clientes da Wise, com as categorias virando filtro do catálogo (não porta de entrada). Quem não se encaixa escolhe 'Outra' e a Wise cria a categoria na aprovação. A conversa de entrada continua: é ela que mantém a qualidade do catálogo."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Qualquer empresa B2B aprovada pela Wise, inclusive clientes da Wise; categorias viram filtro",
+   "Só as categorias atuais, mais os clientes da Wise",
+   "Qualquer empresa, sem aprovação da Wise",
+   "Outro (comente)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-compradores",
+  "bloco": "Quem participa do hub",
+  "texto": "Quem pode entrar no portal para ver o catálogo e usar as condições?",
+  "selo": "Mudança de modelo",
+  "cls": "mudou",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "O catálogo é o benefício para quem compra. Quanto mais gente vê, mais valor para o parceiro; quanto mais restrito, mais exclusivo."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Começar pelos clientes ativos da consultoria Wise (o catálogo vira mais um motivo para ficar e renovar) e pelos parceiros, que também compram uns dos outros. Os clientes dos parceiros que fizeram o diagnóstico entram numa segunda fase, como gancho para contratar a consultoria."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Clientes ativos da Wise e os parceiros (recomendado)",
+   "Clientes ativos, ex-clientes da Wise e parceiros",
+   "Também os clientes dos parceiros que fizeram o diagnóstico",
+   "Qualquer indústria que se cadastrar, com aprovação"
+  ],
+  "tipo": "multipla"
+ },
+ {
+  "id": "HB-dois_papeis",
+  "bloco": "Quem participa do hub",
+  "texto": "Uma mesma empresa pode comprar e oferecer no hub?",
+  "selo": "Arquitetura",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Exemplo: uma indústria cliente da Wise oferece embalagens no catálogo e, ao mesmo tempo, compra serviços de contabilidade de outro parceiro."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Sim. Uma empresa, um cadastro, dois papéis: membro (compra) e parceiro (oferece). As pessoas da empresa usam o mesmo login e veem as duas coisas."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Sim, uma empresa com os dois papéis e o mesmo login",
+   "Sim, mas com cadastros separados",
+   "Não: cada empresa tem um papel só"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-entrada_cliente",
+  "bloco": "Quem participa do hub",
+  "texto": "Como o cliente da Wise recebe o acesso ao hub?",
+  "selo": "Processo novo",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Hoje só parceiros e o time da Wise têm login. Os clientes da consultoria não entram no portal."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "O acesso nasce quando o cliente contrata a consultoria: o consultor cria pelo portal, com senha provisória (o mesmo fluxo dos parceiros). Sai do hub quando o contrato termina, a não ser que a empresa também seja parceira."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Criado pela Wise quando o cliente contrata a consultoria",
+   "Convite do consultor quando ele achar que faz sentido",
+   "Autocadastro do cliente com aprovação da Wise",
+   "Outro (comente)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-oferta",
+  "bloco": "O que o catálogo oferece",
+  "texto": "O que aparece para cada parceiro no catálogo?",
+  "selo": "Arquitetura",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Hoje o parceiro tem uma ficha de apresentação (P-86), usada nas recomendações da Prateleira."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "A ficha da empresa e uma ou mais ofertas, cada uma com: o que é, para quem serve, a condição especial para membros (desconto, bônus ou prazo), validade e como usar. O cliente compara ofertas, não só empresas."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Ficha da empresa e ofertas com condição especial (recomendado)",
+   "Só a ficha da empresa com a condição geral",
+   "Só ofertas, sem ficha"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-condicao",
+  "bloco": "O que o catálogo oferece",
+  "texto": "A condição especial é obrigatória para estar no catálogo?",
+  "selo": "Regra nova",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "O que diferencia o hub de uma lista de fornecedores é o benefício exclusivo para quem é membro."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Sim. Toda oferta precisa de uma condição só para membros, validada pela Wise: desconto mínimo de 10% ou um benefício equivalente (por exemplo, implantação grátis ou um mês sem custo)."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Sim, com desconto mínimo de 10% ou benefício equivalente",
+   "Sim, com o valor que o parceiro quiser",
+   "Não: a condição é opcional",
+   "Outro (comente o mínimo)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-uso",
+  "bloco": "O que o catálogo oferece",
+  "texto": "Como o cliente usa uma condição do catálogo?",
+  "selo": "Processo novo",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Precisamos saber que o negócio nasceu no hub, para medir valor, cobrar a comissão e dar retorno às duas partes."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "O cliente clica em 'Quero esta condição' e confirma que aceita compartilhar o contato. O portal gera um pedido com protocolo, avisa o parceiro, e os dois acompanham o andamento (contato feito, proposta, fechado, perdido). É o mesmo modelo das indicações, que já existe."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Pedido pelo portal com protocolo e acompanhamento (recomendado)",
+   "Código de desconto que o cliente informa ao parceiro",
+   "Contato direto, sem registro no portal"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-avaliacao",
+  "bloco": "O que o catálogo oferece",
+  "texto": "O cliente avalia o parceiro depois do serviço?",
+  "selo": "Regra nova",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "A permanência na Prateleira já usa uma nota (P-87). Uma avaliação de quem comprou daria a base mais confiável."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Sim: nota de 1 a 5 e um comentário, pedidos 30 dias depois do fechamento. A nota aparece só para a Wise no começo; depois de juntar avaliações, pode aparecer no catálogo."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Sim, nota só para a Wise no começo",
+   "Sim, nota visível no catálogo desde o início",
+   "Não por enquanto"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-receita",
+  "bloco": "Dinheiro e níveis",
+  "texto": "Como a Wise ganha com o hub?",
+  "selo": "Mudança no canvas",
+  "cls": "mudou",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "No FO-16 você disse que o parceiro pode pagar comissão à Wise quando um cliente da Wise fecha com ele. O percentual ainda está em aberto no FO-18."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Comissão do parceiro sobre negócio fechado pelo hub, com o percentual do FO-18. Sem mensalidade no começo: o catálogo precisa encher antes de cobrar para aparecer. A receita principal continua sendo a consultoria, e o hub vira motivo de entrada e de retenção."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Comissão do parceiro sobre negócio fechado pelo hub (recomendado)",
+   "Mensalidade do parceiro para aparecer no catálogo",
+   "Destaque pago no catálogo",
+   "Gratuito por enquanto, sem cobrança"
+  ],
+  "tipo": "multipla"
+ },
+ {
+  "id": "HB-niveis",
+  "bloco": "Dinheiro e níveis",
+  "texto": "Quem aparece no catálogo, em relação aos níveis?",
+  "selo": "Decisão ligada ao FO-18",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Hoje a recomendação na Prateleira é benefício do Premium. Também está em aberto se os pacotes (Base Ativa, Formação, Prateleira) continuam."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Todo parceiro aprovado aparece no catálogo, inclusive o Select. Premium e Elite ganham destaque e a recomendação ativa da Wise (a Prateleira). Os pacotes saem e os benefícios passam a seguir só o nível."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Todos aparecem; Premium e Elite com destaque e recomendação ativa; pacotes saem",
+   "Só Premium e Elite aparecem",
+   "Todos aparecem igual, sem destaque",
+   "Outro (comente)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-comissao_cliente_parceiro",
+  "bloco": "Dinheiro e níveis",
+  "texto": "A comissão de 40% que a Wise paga ao parceiro continua igual?",
+  "selo": "Confirmação",
+  "cls": "igual",
+  "secoes": [
+   {
+    "t": "Contexto",
+    "k": "p",
+    "v": [
+     "Hoje a Wise paga 40% da primeira mensalidade quando um cliente trazido pelo parceiro contrata a consultoria. O hub não muda isso, mas cria o caminho inverso (cliente da Wise que compra do parceiro)."
+    ]
+   },
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Continua igual. Os dois sentidos ficam simétricos: quem traz o cliente recebe."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Continua igual",
+   "Muda (comente)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-nome",
+  "bloco": "Nome, prioridade e prazo",
+  "texto": "Como chamar a área que o cliente vê?",
+  "selo": "Comunicação",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Manter Wise Partners como nome do programa e chamar a área do cliente de 'Catálogo de parceiros', com o selo 'condição para membros' em cada oferta. É direto e não cria uma marca nova."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Catálogo de parceiros",
+   "Clube Wise Partners",
+   "Benefícios Wise",
+   "Outro (comente)"
+  ],
+  "tipo": "escolha"
+ },
+ {
+  "id": "HB-fases",
+  "bloco": "Nome, prioridade e prazo",
+  "texto": "O que entra na primeira entrega do hub?",
+  "selo": "Ordem de construção",
+  "cls": "aberto",
+  "secoes": [
+   {
+    "t": "O que eu recomendo, e por quê",
+    "k": "rec",
+    "v": [
+     "Fase 1: cadastro de ofertas pelo parceiro, validação pela Wise, catálogo para clientes ativos e parceiros, pedido com protocolo e acompanhamento. Fase 2: avaliações, comissão do hub e clientes dos parceiros. Fase 3: abrir para outras indústrias."
+    ]
+   }
+  ],
+  "opcoes": [
+   "Ofertas e validação pela Wise",
+   "Catálogo com busca e filtros por categoria",
+   "Pedido com protocolo e acompanhamento",
+   "Acesso dos clientes da Wise",
+   "Avaliações",
+   "Comissão do hub",
+   "Acesso dos clientes dos parceiros"
+  ],
+  "tipo": "multipla"
+ },
+ {
+  "id": "HB-prazo",
+  "bloco": "Nome, prioridade e prazo",
+  "texto": "Até quando a primeira entrega precisa estar no ar?",
+  "selo": "Prazo",
+  "cls": "aberto",
+  "secoes": [],
+  "opcoes": [],
+  "tipo": "texto"
+ },
+ {
+  "id": "HB-mais",
+  "bloco": "Nome, prioridade e prazo",
+  "texto": "Algo mais sobre o hub que não apareceu aqui?",
+  "selo": "Comentário livre",
+  "cls": "igual",
+  "secoes": [
+   {
+    "t": "",
+    "k": "p",
+    "v": [
+     "Exemplos de parceiros e ofertas que você já imagina, conversas com o Igor ou com clientes."
+    ]
+   }
+  ],
+  "opcoes": [],
+  "tipo": "texto"
+ }
+]

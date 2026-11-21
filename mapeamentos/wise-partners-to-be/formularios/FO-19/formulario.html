@@ -1,0 +1,254 @@
+<title>Hub de Negócios Wise</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital@0;1&display=swap">
+<style>
+/* Coluna de leitura longa: cada decisão é um capítulo com figura, contexto, lógica, citações e a escolha no fim */
+:root {
+  --bg: #f6f7f9; --surface: #ffffff; --fg: #18202b; --muted: #5a6574; --line: #dde2e8;
+  --accent: #1f5fbf; --accent-soft: #e6eefb; --accent-fg: #ffffff; --ok: #1d7a46; --warn: #9a5b00; --soft2: #eef1f5; --barra2: #8fb3ea;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --serif: "IBM Plex Serif", Georgia, serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11161d; --surface: #18202a; --fg: #e7ecf2; --muted: #9aa6b4; --line: #2a3542;
+  --accent: #6aa3ff; --accent-soft: #1b2a40; --accent-fg: #0b1220; --ok: #5cc98b; --warn: #e0a54a; --soft2: #202a36; --barra2: #3d5f94; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.6 var(--sans); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.barra { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 10px; }
+.barra-in { max-width: 780px; margin: 0 auto; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.trilho { flex: 1 1 160px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.trilho i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.cont, .salvo { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+main { max-width: 780px; margin: 0 auto; display: grid; gap: 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 10px; text-wrap: balance; }
+h2 { font-size: 21px; line-height: 1.35; margin: 4px 0 0; text-wrap: balance; }
+h3 { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; }
+p { margin: 0; } .lead { color: var(--muted); max-width: 66ch; }
+.aviso { border: 1px solid var(--line); border-left: 4px solid var(--warn); background: var(--surface); border-radius: 8px; padding: 12px 14px; font-size: 15px; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 20px; display: grid; gap: 14px; min-width: 0; }
+.q.feita { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.num { color: var(--accent); font-variant-numeric: tabular-nums; font-weight: 700; margin-right: 8px; }
+.fig { overflow-x: auto; background: var(--soft2); border-radius: 10px; padding: 14px; }
+.fig svg { display: block; width: 100%; height: auto; }
+.fig .b { fill: var(--surface); stroke: var(--line); stroke-width: 1.2; }
+.fig .b.hi { fill: var(--accent-soft); stroke: var(--accent); }
+.fig .b2 { fill: var(--bg); stroke: var(--line); stroke-width: 1; }
+.fig .card { fill: var(--accent-soft); stroke: var(--accent); stroke-width: .8; }
+.fig .tx { fill: var(--fg); } .fig .mu { fill: var(--muted); } .fig .inv { fill: var(--accent-fg); font-weight: 600; }
+.fig .ln { stroke: var(--muted); stroke-width: 1.4; } .fig .ln.fino { stroke: var(--line); stroke-width: 1; } .fig .dash { stroke-dasharray: 5 4; }
+.fig .pt { fill: var(--accent); } .fig .vazio { fill: none; stroke: var(--line); stroke-width: 1.5; }
+.fig .barra1 { fill: var(--accent); } .fig .barra2 { fill: var(--barra2); } .fig .faixa { fill: var(--accent-soft); opacity: .7; }
+.ctx { display: grid; gap: 10px; max-width: 70ch; }
+.logica { background: var(--accent-soft); border-radius: 10px; padding: 12px 14px; font-size: 15px; }
+.cits { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.cits li { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.cits q { font-family: var(--serif); font-style: italic; quotes: "\201C" "\201D"; overflow-wrap: anywhere; }
+.cits small { display: block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+details.ver { font-size: 15px; } details.ver summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+legend { font-weight: 600; padding: 0; margin-bottom: 6px; }
+.dica { font-size: 13px; color: var(--muted); }
+.op { display: flex; gap: 10px; align-items: flex-start; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.op:hover { border-color: var(--accent); }
+.op input { margin: 3px 0 0; accent-color: var(--accent); flex: none; width: 18px; height: 18px; }
+.op:has(input:checked) { background: var(--accent-soft); border-color: var(--accent); }
+.op.ns { border-style: dashed; color: var(--muted); }
+textarea { width: 100%; box-sizing: border-box; min-height: 80px; font: 15px/1.5 var(--sans); color: var(--fg); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; resize: vertical; }
+.comentar { justify-self: start; background: none; border: 0; color: var(--accent); font: 500 14px var(--sans); cursor: pointer; padding: 2px 0; }
+button.principal { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px; padding: 12px 20px; font: 600 16px var(--sans); cursor: pointer; }
+button.sec { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); border-radius: 8px; padding: 10px 16px; font: 600 15px var(--sans); cursor: pointer; }
+button:focus-visible, .op:focus-within, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.fim { display: grid; gap: 12px; justify-items: start; }
+.estado { font-weight: 600; color: var(--ok); } .estado.erro { color: var(--warn); }
+@media (prefers-reduced-motion: reduce) { .trilho i { transition: none; } }
+.indice ol { margin: 18px 0 0; padding-left: 20px; columns: 2; column-gap: 28px; font-size: 14px; line-height: 1.9; }
+.indice a { color: var(--accent); font-weight: 600; text-decoration: none; } .indice a:hover { text-decoration: underline; }
+.indice span { color: var(--muted); font-size: 12px; }
+.guia { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 10px; font-size: 15px; }
+.topo { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.selo { font-size: 12px; font-weight: 600; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+.selo.novo { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.selo.mudou { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.selo.aberto { border-color: var(--warn); color: var(--warn); }
+.selo.sai { border-style: dashed; }
+.pts, .passos { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 72ch; }
+.passos { list-style: none; padding-left: 0; }
+.passos li { padding: 7px 12px; background: var(--soft2); border-radius: 8px; font-size: 15px; }
+.kv { margin: 0; display: grid; grid-template-columns: minmax(110px, max-content) 1fr; gap: 6px 16px; font-size: 15px; }
+.kv dt { color: var(--muted); font-weight: 600; } .kv dd { margin: 0; }
+.decs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.decs li { border: 1px solid var(--line); border-left-width: 4px; border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px; }
+.decs li.ok { border-left-color: var(--ok); } .decs li.rv { border-left-color: var(--accent); background: var(--accent-soft); } .decs li.ab { border-left-color: var(--warn); }
+.decs .org { font-size: 12px; color: var(--muted); font-weight: 600; }
+.decs li.rv .org { color: var(--accent); } .decs li.ab .org { color: var(--warn); }
+.decs p { font-size: 15px; }
+h3 { margin-top: 10px; }
+@media (max-width: 640px) { .indice ol { columns: 1; } .kv { grid-template-columns: 1fr; gap: 2px 0; } .kv dd { margin-bottom: 8px; } }
+</style>
+<div class="barra"><div class="barra-in">
+  <div class="trilho" aria-hidden="true"><i id="trilho"></i></div>
+  <span class="cont" id="cont">0 de 15</span>
+  <span class="salvo" id="salvo" role="status"></span>
+</div></div>
+<main>
+  <header>
+    <p class="eyebrow">FO-19 · Wise Partners como hub de negócios</p>
+    <h1>O catálogo de parceiros para os clientes da Wise</h1>
+    <p class="lead">O Wise Partners passa a ser um hub: os clientes da Wise veem o catálogo de parceiros e usam condições especiais, e qualquer cliente também pode ser parceiro. Antes de reestruturar o modelo de negócio e o portal, preciso de algumas decisões. Cada pergunta traz o contexto e a minha recomendação. As respostas são salvas enquanto você marca.</p>
+    <nav class="indice" aria-label="Blocos do formulário"><ol><li><a href="#c-HB-ofertantes">Quem participa do hub</a> <span>4 perguntas</span></li><li><a href="#c-HB-oferta">O que o catálogo oferece</a> <span>4 perguntas</span></li><li><a href="#c-HB-receita">Dinheiro e níveis</a> <span>3 perguntas</span></li><li><a href="#c-HB-nome">Nome, prioridade e prazo</a> <span>4 perguntas</span></li></ol></nav>
+  </header>
+  <div class="aviso" id="aviso" hidden></div>
+  <form id="form" novalidate></form>
+  <section class="fim">
+    <button type="button" class="principal" id="enviar">Enviar respostas</button>
+    <span class="estado" id="estado" role="status"></span>
+    <button type="button" class="sec" id="copiar" hidden>Copiar respostas</button>
+  </section>
+</main>
+<script type="application/json" id="dados">[{"id": "HB-ofertantes", "bloco": "Quem participa do hub", "texto": "Quem pode oferecer produtos e serviços no catálogo?", "selo": "Mudança de modelo", "cls": "mudou", "secoes": [{"t": "Como o modelo está hoje (to-be v14 e canvas)", "k": "kv", "v": [["Parceiros", "Empresas que vendem para empresas, em 30 categorias (21 comerciais e 9 institucionais), entrando pela fila e pela conversa de entrada."], ["Clientes dos parceiros", "Recebem a consultoria da Wise sem custo (diagnóstico de 2 horas e Wise Hub) pelo link do parceiro."], ["Clientes da Wise", "Recebem recomendações pela Prateleira: a Wise indica parceiros Premium e Elite quando o cliente pede um fornecedor."], ["Receita", "Mensalidade da consultoria; comissão que o parceiro paga à Wise quando um cliente da Wise fecha com ele."]]}, {"t": "Contexto", "k": "p", "v": ["Você disse que o portal passa a ser de parceiros que não precisam estar nas categorias definidas antes, e que os clientes da Wise também podem ser parceiros. Vira uma comunidade de indústrias e de empresas que prestam serviço para indústrias."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Qualquer empresa B2B aprovada pela Wise, inclusive clientes da Wise, com as categorias virando filtro do catálogo (não porta de entrada). Quem não se encaixa escolhe 'Outra' e a Wise cria a categoria na aprovação. A conversa de entrada continua: é ela que mantém a qualidade do catálogo."]}], "opcoes": ["Qualquer empresa B2B aprovada pela Wise, inclusive clientes da Wise; categorias viram filtro", "Só as categorias atuais, mais os clientes da Wise", "Qualquer empresa, sem aprovação da Wise", "Outro (comente)"], "tipo": "escolha"}, {"id": "HB-compradores", "bloco": "Quem participa do hub", "texto": "Quem pode entrar no portal para ver o catálogo e usar as condições?", "selo": "Mudança de modelo", "cls": "mudou", "secoes": [{"t": "Contexto", "k": "p", "v": ["O catálogo é o benefício para quem compra. Quanto mais gente vê, mais valor para o parceiro; quanto mais restrito, mais exclusivo."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Começar pelos clientes ativos da consultoria Wise (o catálogo vira mais um motivo para ficar e renovar) e pelos parceiros, que também compram uns dos outros. Os clientes dos parceiros que fizeram o diagnóstico entram numa segunda fase, como gancho para contratar a consultoria."]}], "opcoes": ["Clientes ativos da Wise e os parceiros (recomendado)", "Clientes ativos, ex-clientes da Wise e parceiros", "Também os clientes dos parceiros que fizeram o diagnóstico", "Qualquer indústria que se cadastrar, com aprovação"], "tipo": "multipla"}, {"id": "HB-dois_papeis", "bloco": "Quem participa do hub", "texto": "Uma mesma empresa pode comprar e oferecer no hub?", "selo": "Arquitetura", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Exemplo: uma indústria cliente da Wise oferece embalagens no catálogo e, ao mesmo tempo, compra serviços de contabilidade de outro parceiro."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Sim. Uma empresa, um cadastro, dois papéis: membro (compra) e parceiro (oferece). As pessoas da empresa usam o mesmo login e veem as duas coisas."]}], "opcoes": ["Sim, uma empresa com os dois papéis e o mesmo login", "Sim, mas com cadastros separados", "Não: cada empresa tem um papel só"], "tipo": "escolha"}, {"id": "HB-entrada_cliente", "bloco": "Quem participa do hub", "texto": "Como o cliente da Wise recebe o acesso ao hub?", "selo": "Processo novo", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Hoje só parceiros e o time da Wise têm login. Os clientes da consultoria não entram no portal."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["O acesso nasce quando o cliente contrata a consultoria: o consultor cria pelo portal, com senha provisória (o mesmo fluxo dos parceiros). Sai do hub quando o contrato termina, a não ser que a empresa também seja parceira."]}], "opcoes": ["Criado pela Wise quando o cliente contrata a consultoria", "Convite do consultor quando ele achar que faz sentido", "Autocadastro do cliente com aprovação da Wise", "Outro (comente)"], "tipo": "escolha"}, {"id": "HB-oferta", "bloco": "O que o catálogo oferece", "texto": "O que aparece para cada parceiro no catálogo?", "selo": "Arquitetura", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Hoje o parceiro tem uma ficha de apresentação (P-86), usada nas recomendações da Prateleira."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["A ficha da empresa e uma ou mais ofertas, cada uma com: o que é, para quem serve, a condição especial para membros (desconto, bônus ou prazo), validade e como usar. O cliente compara ofertas, não só empresas."]}], "opcoes": ["Ficha da empresa e ofertas com condição especial (recomendado)", "Só a ficha da empresa com a condição geral", "Só ofertas, sem ficha"], "tipo": "escolha"}, {"id": "HB-condicao", "bloco": "O que o catálogo oferece", "texto": "A condição especial é obrigatória para estar no catálogo?", "selo": "Regra nova", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["O que diferencia o hub de uma lista de fornecedores é o benefício exclusivo para quem é membro."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Sim. Toda oferta precisa de uma condição só para membros, validada pela Wise: desconto mínimo de 10% ou um benefício equivalente (por exemplo, implantação grátis ou um mês sem custo)."]}], "opcoes": ["Sim, com desconto mínimo de 10% ou benefício equivalente", "Sim, com o valor que o parceiro quiser", "Não: a condição é opcional", "Outro (comente o mínimo)"], "tipo": "escolha"}, {"id": "HB-uso", "bloco": "O que o catálogo oferece", "texto": "Como o cliente usa uma condição do catálogo?", "selo": "Processo novo", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Precisamos saber que o negócio nasceu no hub, para medir valor, cobrar a comissão e dar retorno às duas partes."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["O cliente clica em 'Quero esta condição' e confirma que aceita compartilhar o contato. O portal gera um pedido com protocolo, avisa o parceiro, e os dois acompanham o andamento (contato feito, proposta, fechado, perdido). É o mesmo modelo das indicações, que já existe."]}], "opcoes": ["Pedido pelo portal com protocolo e acompanhamento (recomendado)", "Código de desconto que o cliente informa ao parceiro", "Contato direto, sem registro no portal"], "tipo": "escolha"}, {"id": "HB-avaliacao", "bloco": "O que o catálogo oferece", "texto": "O cliente avalia o parceiro depois do serviço?", "selo": "Regra nova", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["A permanência na Prateleira já usa uma nota (P-87). Uma avaliação de quem comprou daria a base mais confiável."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Sim: nota de 1 a 5 e um comentário, pedidos 30 dias depois do fechamento. A nota aparece só para a Wise no começo; depois de juntar avaliações, pode aparecer no catálogo."]}], "opcoes": ["Sim, nota só para a Wise no começo", "Sim, nota visível no catálogo desde o início", "Não por enquanto"], "tipo": "escolha"}, {"id": "HB-receita", "bloco": "Dinheiro e níveis", "texto": "Como a Wise ganha com o hub?", "selo": "Mudança no canvas", "cls": "mudou", "secoes": [{"t": "Contexto", "k": "p", "v": ["No FO-16 você disse que o parceiro pode pagar comissão à Wise quando um cliente da Wise fecha com ele. O percentual ainda está em aberto no FO-18."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Comissão do parceiro sobre negócio fechado pelo hub, com o percentual do FO-18. Sem mensalidade no começo: o catálogo precisa encher antes de cobrar para aparecer. A receita principal continua sendo a consultoria, e o hub vira motivo de entrada e de retenção."]}], "opcoes": ["Comissão do parceiro sobre negócio fechado pelo hub (recomendado)", "Mensalidade do parceiro para aparecer no catálogo", "Destaque pago no catálogo", "Gratuito por enquanto, sem cobrança"], "tipo": "multipla"}, {"id": "HB-niveis", "bloco": "Dinheiro e níveis", "texto": "Quem aparece no catálogo, em relação aos níveis?", "selo": "Decisão ligada ao FO-18", "cls": "aberto", "secoes": [{"t": "Contexto", "k": "p", "v": ["Hoje a recomendação na Prateleira é benefício do Premium. Também está em aberto se os pacotes (Base Ativa, Formação, Prateleira) continuam."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Todo parceiro aprovado aparece no catálogo, inclusive o Select. Premium e Elite ganham destaque e a recomendação ativa da Wise (a Prateleira). Os pacotes saem e os benefícios passam a seguir só o nível."]}], "opcoes": ["Todos aparecem; Premium e Elite com destaque e recomendação ativa; pacotes saem", "Só Premium e Elite aparecem", "Todos aparecem igual, sem destaque", "Outro (comente)"], "tipo": "escolha"}, {"id": "HB-comissao_cliente_parceiro", "bloco": "Dinheiro e níveis", "texto": "A comissão de 40% que a Wise paga ao parceiro continua igual?", "selo": "Confirmação", "cls": "igual", "secoes": [{"t": "Contexto", "k": "p", "v": ["Hoje a Wise paga 40% da primeira mensalidade quando um cliente trazido pelo parceiro contrata a consultoria. O hub não muda isso, mas cria o caminho inverso (cliente da Wise que compra do parceiro)."]}, {"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Continua igual. Os dois sentidos ficam simétricos: quem traz o cliente recebe."]}], "opcoes": ["Continua igual", "Muda (comente)"], "tipo": "escolha"}, {"id": "HB-nome", "bloco": "Nome, prioridade e prazo", "texto": "Como chamar a área que o cliente vê?", "selo": "Comunicação", "cls": "aberto", "secoes": [{"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Manter Wise Partners como nome do programa e chamar a área do cliente de 'Catálogo de parceiros', com o selo 'condição para membros' em cada oferta. É direto e não cria uma marca nova."]}], "opcoes": ["Catálogo de parceiros", "Clube Wise Partners", "Benefícios Wise", "Outro (comente)"], "tipo": "escolha"}, {"id": "HB-fases", "bloco": "Nome, prioridade e prazo", "texto": "O que entra na primeira entrega do hub?", "selo": "Ordem de construção", "cls": "aberto", "secoes": [{"t": "O que eu recomendo, e por quê", "k": "rec", "v": ["Fase 1: cadastro de ofertas pelo parceiro, validação pela Wise, catálogo para clientes ativos e parceiros, pedido com protocolo e acompanhamento. Fase 2: avaliações, comissão do hub e clientes dos parceiros. Fase 3: abrir para outras indústrias."]}], "opcoes": ["Ofertas e validação pela Wise", "Catálogo com busca e filtros por categoria", "Pedido com protocolo e acompanhamento", "Acesso dos clientes da Wise", "Avaliações", "Comissão do hub", "Acesso dos clientes dos parceiros"], "tipo": "multipla"}, {"id": "HB-prazo", "bloco": "Nome, prioridade e prazo", "texto": "Até quando a primeira entrega precisa estar no ar?", "selo": "Prazo", "cls": "aberto", "secoes": [], "opcoes": [], "tipo": "texto"}, {"id": "HB-mais", "bloco": "Nome, prioridade e prazo", "texto": "Algo mais sobre o hub que não apareceu aqui?", "selo": "Comentário livre", "cls": "igual", "secoes": [{"t": "", "k": "p", "v": ["Exemplos de parceiros e ofertas que você já imagina, conversas com o Igor ou com clientes."]}], "opcoes": [], "tipo": "texto"}]</script>
+<script>
+const ITENS = JSON.parse(document.getElementById('dados').textContent);
+const COL = 'fo24_itens', META = 'respostas/FO-24', CHAVE = 'fo24-rascunho';
+let estado = { respostas: {} };
+let db = null; const pend = new Set(); let timer = null;
+const $ = (id) => document.getElementById(id);
+const agora = () => new Date().toISOString();
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+
+function montar() {
+  const form = $('form'); let n = 0;
+  const lista = (cls, itens) => { const u = el('ul', cls); itens.forEach(t => u.appendChild(el('li', null, t))); return u; };
+  for (const it of ITENS) {
+    n++;
+    const card = el('article', 'q'); card.id = 'c-' + it.id;
+    const topo = el('div', 'topo'); topo.append(el('p', 'eyebrow', it.bloco), el('span', 'selo ' + it.cls, it.selo)); card.appendChild(topo);
+    const h = el('h2'); h.append(el('span', 'num', String(n).padStart(3, '0')), document.createTextNode(it.texto)); card.appendChild(h);
+    for (const s of it.secoes) {
+      if (s.t && s.k !== 'cit' && s.k !== 'det' && s.k !== 'antes') card.appendChild(el('h3', null, s.t));
+      if (s.k === 'p') { const c = el('div', 'ctx'); s.v.forEach(t => c.appendChild(el('p', null, t))); card.appendChild(c); }
+      else if (s.k === 'rec') { s.v.forEach(t => card.appendChild(el('p', 'logica', t))); }
+      else if (s.k === 'ul') card.appendChild(lista('pts', s.v));
+      else if (s.k === 'passos') card.appendChild(lista('passos', s.v));
+      else if (s.k === 'fig') { const f = el('div', 'fig'); f.innerHTML = s.v; card.appendChild(f); }
+      else if (s.k === 'kv') { const dl = el('dl', 'kv'); s.v.forEach(([a, b]) => { dl.append(el('dt', null, a), el('dd', null, b)); }); card.appendChild(dl); }
+      else if (s.k === 'dec') {
+        const u = el('ul', 'decs');
+        s.v.forEach(([tit, txt, org]) => {
+          const o = (org || '').toLowerCase();
+          const cls = o.includes('em aberto') ? 'ab' : o.includes('proposta da revis') ? 'rv' : 'ok';
+          const rot = cls === 'ab' ? 'Em aberto: há pergunta logo abaixo' : cls === 'rv' ? org : 'Já decidido por você · ' + org;
+          const li = el('li', cls); li.append(el('strong', null, tit), el('span', 'org', rot), el('p', null, txt)); u.appendChild(li);
+        });
+        card.appendChild(u);
+      }
+      else if (s.k === 'det' || s.k === 'antes') { const dt = el('details', 'ver'); dt.appendChild(el('summary', null, s.t)); dt.appendChild(lista(s.k === 'antes' ? 'passos' : 'pts', s.v)); card.appendChild(dt); }
+      else if (s.k === 'cit') {
+        const dt = el('details', 'ver'); dt.appendChild(el('summary', null, s.t + ' (' + s.v.length + (s.v.length > 1 ? ' fontes)' : ' fonte)')));
+        const ul = el('ul', 'cits'); s.v.forEach(c => { const li = el('li'); li.append(el('q', null, c.trecho), el('small', null, c.fonte)); ul.appendChild(li); });
+        dt.appendChild(ul); card.appendChild(dt);
+      }
+    }
+    const fs = el('fieldset'); fs.appendChild(el('legend', null, 'Sua decisão'));
+    it.opcoes.forEach((op, k) => {
+      const lab = el('label', 'op');
+      const inp = el('input'); inp.type = it.tipo === 'multipla' ? 'checkbox' : 'radio'; inp.name = it.id; inp.value = op; inp.id = it.id + '-' + k;
+      inp.addEventListener('change', () => mudou(it)); lab.append(inp, el('span', null, op)); fs.appendChild(lab);
+    });
+    card.appendChild(fs);
+    const b = el('button', 'comentar', 'Comentar'); b.type = 'button';
+    const obs = el('textarea'); obs.id = it.id + '-obs'; obs.hidden = true; obs.placeholder = 'Ajuste, exceção ou outra resposta';
+    obs.setAttribute('aria-label', 'Comentário sobre a pergunta ' + n);
+    b.addEventListener('click', () => { obs.hidden = false; b.hidden = true; obs.focus(); });
+    obs.addEventListener('input', () => mudou(it));
+    if (it.tipo === 'texto') { obs.hidden = false; b.hidden = true; obs.rows = 6; obs.placeholder = 'Escreva aqui'; }
+    card.append(b, obs);
+    form.appendChild(card);
+  }
+}
+function ler(it) {
+  const marc = [...document.querySelectorAll('input[name="' + it.id + '"]:checked')].map(i => i.value);
+  const obs = $(it.id + '-obs').value.trim();
+  if (!marc.length && !obs) return null;
+  const r = { valor: it.tipo === 'multipla' ? marc : (marc[0] || '') }; if (obs) r.obs = obs; return r;
+}
+function aplicar() {
+  for (const it of ITENS) {
+    const r = estado.respostas[it.id];
+    const vals = r ? (Array.isArray(r.valor) ? r.valor : [r.valor]) : [];
+    document.querySelectorAll('input[name="' + it.id + '"]').forEach(i => { i.checked = vals.includes(i.value); });
+    if (r && r.obs) { const o = $(it.id + '-obs'); o.value = r.obs; o.hidden = false; o.previousElementSibling.hidden = true; } else if (it.tipo !== 'texto') { const o = $(it.id + '-obs'); o.value = ''; }
+  }
+  progresso();
+}
+function progresso() {
+  let feitas = 0;
+  for (const it of ITENS) { const ok = !!estado.respostas[it.id]; if (ok) feitas++; $('c-' + it.id).classList.toggle('feita', ok); }
+  $('cont').textContent = feitas + ' de ' + ITENS.length;
+  $('trilho').style.width = (100 * feitas / ITENS.length) + '%';
+}
+function guardarLocal() { try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (e) {} }
+function mudou(it) {
+  const r = ler(it);
+  if (r) estado.respostas[it.id] = { ...r, em: agora() }; else delete estado.respostas[it.id];
+  progresso(); guardarLocal(); $('salvo').textContent = 'Salvando...';
+  pend.add(it.id); clearTimeout(timer); timer = setTimeout(gravar, 700);
+}
+// cada resposta é um registro próprio: uma aba antiga nunca apaga o que outra gravou
+async function gravar() {
+  if (!db) { $('salvo').textContent = 'Só neste navegador'; return false; }
+  const ids = [...pend]; pend.clear(); let ok = true;
+  for (const id of ids) {
+    const r = estado.respostas[id];
+    try { if (r) await db.collection(COL).doc(id).set(r); else await db.collection(COL).doc(id).delete(); }
+    catch (e) { ok = false; pend.add(id); }
+  }
+  $('salvo').textContent = ok ? 'Salvo' : 'Não salvou';
+  return ok;
+}
+$('enviar').addEventListener('click', async () => {
+  clearTimeout(timer);
+  for (const id of Object.keys(estado.respostas)) pend.add(id);
+  let ok = await gravar();
+  if (ok) {
+    try { const m = await db.doc(META).get(); const base = m.exists ? m.data() : {};
+          await db.doc(META).set({ ...base, enviado: true, enviado_em: agora(), decisoes: Object.keys(estado.respostas).length }); }
+    catch (e) { ok = false; }
+  }
+  const e = $('estado');
+  if (ok) { e.className = 'estado'; e.textContent = 'Enviado: ' + Object.keys(estado.respostas).length + ' respostas gravadas. Volte ao chat e escreva "respondi". Dá para mudar depois: é só editar e enviar de novo.'; }
+  else { e.className = 'estado erro'; e.textContent = 'Não consegui gravar. Clique em Copiar respostas e cole no chat.'; $('copiar').hidden = false; }
+});
+$('copiar').addEventListener('click', async () => {
+  const txt = JSON.stringify(estado.respostas, null, 1);
+  try { await navigator.clipboard.writeText(txt); $('estado').textContent = 'Respostas copiadas: cole no chat.'; }
+  catch (e) { const t = el('textarea'); t.value = txt; $('copiar').after(t); t.select(); $('estado').textContent = 'Selecione e copie o texto abaixo.'; }
+});
+function semBanco(msg) { const a = $('aviso'); a.hidden = false; a.textContent = msg; $('copiar').hidden = false; }
+
+montar();
+const validos = new Set(ITENS.map(i => i.id));
+let local = {};
+try { const r = JSON.parse(localStorage.getItem(CHAVE) || 'null');
+      if (r && r.respostas) for (const [k, v] of Object.entries(r.respostas)) if (v && validos.has(k)) local[k] = { ...v, em: v.em || '' }; } catch (e) {}
+estado.respostas = { ...local }; aplicar();
+$('salvo').textContent = 'Carregando...';
+const espera = setTimeout(() => { if (!db) { $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui conectar ao armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); } }, 10000);
+(async () => {
+  const c = window.claude && await window.claude.use('db');
+  if (!c) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Esta página não consegue salvar aqui. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); return; }
+  try {
+    const snap = await c.collection(COL).get(); db = c; clearTimeout(espera);
+    const servidor = {}; snap.docs.forEach(d => { if (d.exists && validos.has(d.id)) servidor[d.id] = d.data(); });
+    const junto = { ...servidor };
+    for (const [k, v] of Object.entries(local)) { const s = servidor[k]; if (!s || (v.em || '') > (s.em || '')) { junto[k] = v; pend.add(k); } }
+    estado.respostas = junto; aplicar(); guardarLocal();
+    if (pend.size) await gravar(); else $('salvo').textContent = 'Salvo';
+  } catch (e) { clearTimeout(espera); $('salvo').textContent = 'Só neste navegador'; semBanco('Não consegui ler o armazenamento desta página. Suas respostas ficam neste navegador; ao terminar, clique em Copiar respostas e cole no chat.'); }
+})();
+</script>

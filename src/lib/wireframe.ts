@@ -7,8 +7,23 @@ export type TipoBloco =
   | "texto" | "acoes" | "passos" | "video" | "kanban" | "calendario" | "editor";
 export type Bloco = { tipo: TipoBloco; rotulo: string; itens?: string[]; largura?: 12 | 8 | 6 | 4 };
 export type Area = "publica" | "acesso" | "interna" | "parceiro";
+// Tipos de acesso para o filtro "Ver como" do wireframe. Os papéis internos são os do portal (perfis.papel).
+export type Perfil = "admin" | "parcerias" | "consultor" | "comercial" | "financeiro" | "parceiro_resp" | "parceiro" | "cliente_parceiro" | "cliente_wise" | "visitante";
+export const PERFIS: { id: Perfil; nome: string; descricao: string }[] = [
+  { id: "admin", nome: "Administrador", descricao: "Diretores e quem administra o portal: vê tudo do time da Wise." },
+  { id: "parcerias", nome: "Gerente de parcerias", descricao: "Dono dos processos do programa." },
+  { id: "consultor", nome: "Consultor", descricao: "Conduz diagnósticos e acompanha parceiros." },
+  { id: "comercial", nome: "Comercial", descricao: "Closer das empresas do grupo." },
+  { id: "financeiro", nome: "Financeiro", descricao: "Comissões e pagamentos." },
+  { id: "parceiro_resp", nome: "Parceiro (responsável)", descricao: "Responsável nomeado na empresa parceira." },
+  { id: "parceiro", nome: "Parceiro (usuário)", descricao: "Demais pessoas da empresa parceira." },
+  { id: "cliente_parceiro", nome: "Cliente do parceiro", descricao: "Chega pelo link do parceiro; não tem login." },
+  { id: "cliente_wise", nome: "Cliente da Wise", descricao: "Hoje recebe recomendações da Prateleira; o catálogo do hub depende do FO-19." },
+  { id: "visitante", nome: "Visitante ou candidato", descricao: "Quem conhece o programa e se cadastra." },
+];
 export type Tela = {
   id: string; rota: string; nome: string; area: Area; pergunta: string; quem: string; processos: string[]; blocos: Bloco[]; nota?: string;
+  perfis?: Perfil[]; // só nas públicas e de acesso; internas e do parceiro seguem o menu (src/lib/navegacao.ts)
 };
 export type Passo = { texto: string; quem: "Candidato" | "Parceiro" | "Cliente do parceiro" | "Wise" | "Portal" | "Cliente da Wise"; tela?: string };
 export type Jornada = { id: string; nome: string; resumo: string; processos: string[]; passos: Passo[] };
@@ -26,7 +41,7 @@ export const AREAS: Record<Area, { nome: string; descricao: string }> = {
 
 export const TELAS: Tela[] = [
   // ---------------------------------------------------------------- públicas
-  { id: "pub-parceiros", rota: "/parceiros", nome: "Página dos parceiros", area: "publica", quem: "Visitante (qualquer empresa que vende para empresas)",
+  { id: "pub-parceiros", perfis: ["visitante", "admin", "parcerias"], rota: "/parceiros", nome: "Página dos parceiros", area: "publica", quem: "Visitante (qualquer empresa que vende para empresas)",
     pergunta: "Vale a pena oferecer a consultoria da Wise à minha base?", processos: ["P-98", "P-101", "P-21"],
     blocos: [
       b("topo", "Topo", ["Promessa: consultoria de R$ 5.000 sem custo", "Botão Quero ser parceiro", "Link Já sou parceiro"], 8), b("video", "Vídeo do Igor", [], 4),
@@ -39,7 +54,7 @@ export const TELAS: Tela[] = [
       b("formulario", "Cadastro (entra na fila)", ["Nome e cargo", "E-mail e WhatsApp", "Empresa e CNPJ", "Categoria", "Clientes ativos", "Aceite do termo e da política"]),
     ],
     nota: "Textos, seções, perguntas, vídeo, valores e cases vêm de Programa, Páginas. Depois do cadastro: mensagem de que a Wise chama no WhatsApp em até 24 horas úteis." },
-  { id: "pub-cliente", rota: "/c/:codigo", nome: "Página do cliente do parceiro", area: "publica", quem: "Cliente que recebeu o link do parceiro",
+  { id: "pub-cliente", perfis: ["cliente_parceiro", "admin", "parcerias"], rota: "/c/:codigo", nome: "Página do cliente do parceiro", area: "publica", quem: "Cliente que recebeu o link do parceiro",
     pergunta: "O que eu ganho com essa consultoria e como começo?", processos: ["P-95", "P-96", "P-75"],
     blocos: [
       b("topo", "Topo", ["Consultoria de R$ 5.000 sem custo", "O fornecedor que enviou o link é parceiro da Wise", "Botão Quero meu diagnóstico"], 8), b("video", "Vídeo", [], 4),
@@ -49,38 +64,40 @@ export const TELAS: Tela[] = [
       b("acoes", "Depois do cadastro", ["No perfil: agenda da reunião", "Fora do perfil: autodiagnóstico na hora e link do Wise Hub"]),
     ],
     nota: "Igual para todos os parceiros. O código do link só atribui o cadastro; o nome do parceiro não aparece." },
-  { id: "pub-indicacao", rota: "/i/:token", nome: "Indicação direta", area: "publica", quem: "Empresa indicada que já quer conversar sobre a consultoria completa",
+  { id: "pub-indicacao", perfis: ["cliente_parceiro"], rota: "/i/:token", nome: "Indicação direta", area: "publica", quem: "Empresa indicada que já quer conversar sobre a consultoria completa",
     pergunta: "Como peço contato da Wise Makers?", processos: ["P-32", "P-79"],
     blocos: [b("topo", "Fale com a Wise Makers"), b("formulario", "Formulário curto", ["Nome", "Empresa e CNPJ", "Contato", "Necessidade"]), b("texto", "Confirmação")],
     nota: "Link secundário do parceiro (recolhido na tela Indicar). A indicação entra atribuída a ele." },
-  { id: "pub-rfp", rota: "/r/:token", nome: "Recomendação da Prateleira", area: "publica", quem: "Cliente da Wise que pediu um fornecedor",
+  { id: "pub-rfp", perfis: ["cliente_wise"], rota: "/r/:token", nome: "Recomendação da Prateleira", area: "publica", quem: "Cliente da Wise que pediu um fornecedor",
     pergunta: "Quais fornecedores a Wise recomenda para a minha necessidade?", processos: ["P-35"],
     blocos: [b("topo", "Necessidade do cliente"), b("cartoes", "Parceiros Premium e Elite recomendados", ["Ficha de apresentação", "Contato"]), b("acoes", "Quero falar com este fornecedor")] },
-  { id: "pub-legais", rota: "/parceiros/termo e /parceiros/privacidade", nome: "Termo e política", area: "publica", quem: "Qualquer pessoa",
+  { id: "pub-legais", perfis: ["visitante", "cliente_parceiro", "parceiro_resp", "parceiro"], rota: "/parceiros/termo e /parceiros/privacidade", nome: "Termo e política", area: "publica", quem: "Qualquer pessoa",
     pergunta: "O que eu aceito ao me cadastrar?", processos: ["P-63", "P-64"], blocos: [b("texto", "Texto vigente com versão e data")] },
   // ---------------------------------------------------------------- acesso
-  { id: "entrar", rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Parceiros e time da Wise",
+  { id: "entrar", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Parceiros e time da Wise",
     pergunta: "Como entro no portal?", processos: ["P-93"],
     blocos: [
       b("formulario", "Entrar", ["E-mail", "Senha", "Esqueci minha senha"], 6),
       b("texto", "Para quem ainda não tem acesso", ["Fez o cadastro? O acesso chega pelo WhatsApp depois da conversa de entrada", "Ainda não é parceiro? Conheça o programa"], 6),
     ],
     nota: "Não existe cadastro aberto: a conta só nasce na aprovação (parceiro) ou pela tela Usuários." },
-  { id: "primeiro-acesso", rota: "(qualquer rota logada)", nome: "Crie a sua senha", area: "acesso", quem: "Quem entrou com senha provisória",
+  { id: "primeiro-acesso", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "(qualquer rota logada)", nome: "Crie a sua senha", area: "acesso", quem: "Quem entrou com senha provisória",
     pergunta: "Qual vai ser a minha senha?", processos: ["P-23", "P-93"],
     blocos: [b("formulario", "Nova senha", ["Nova senha", "Confirmação", "Salvar e entrar", "Sair"], 6)],
     nota: "Aparece no lugar de qualquer tela enquanto a senha for provisória." },
-  { id: "redefinir", rota: "/redefinir-senha", nome: "Redefinir a senha", area: "acesso", quem: "Quem pediu o link por e-mail",
+  { id: "redefinir", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "/redefinir-senha", nome: "Redefinir a senha", area: "acesso", quem: "Quem pediu o link por e-mail",
     pergunta: "Como crio uma senha nova?", processos: ["P-93"], blocos: [b("formulario", "Nova senha", ["Nova senha", "Confirmação"], 6)],
     nota: "Depende do e-mail próprio (Resend). Sem ele, a senha provisória nova vem do responsável da empresa ou da Wise." },
   // ---------------------------------------------------------------- time da Wise
-  { id: "i-tarefas", rota: "/app", nome: "Tarefas: fila de hoje", area: "interna", quem: "Todo o time (cada papel vê o que é dele)",
-    pergunta: "O que fugiu da regra e precisa de alguém da Wise hoje?", processos: ["P-08", "P-09", "P-97"],
+  { id: "i-tarefas", rota: "/app", nome: "Tarefas", area: "interna", quem: "Todo o time (Gerente e administradores abrem no quadro de todos; os demais, nas próprias)",
+    pergunta: "O que cada pessoa da Wise tem para fazer, em que pé está e o que atrasou?", processos: ["P-08", "P-09", "P-46", "P-97"],
     blocos: [
-      b("filtros", "Grupos e escopo", ["Todas", "Decidir", "Responder", "Acompanhar", "Minhas ou de todos"]),
-      b("lista", "Agora", ["Ícone do tipo, o que fazer, parceiro, há quanto tempo, de quem", "Ação ali mesmo (validar, aprovar, concluir) ou Abrir"]),
-      b("lista", "Esta semana"), b("lista", "Quando der"),
-    ] },
+      b("indicadores", "Atalhos", ["Minhas abertas", "Atrasadas", "Vencem hoje", "Sem responsável"]),
+      b("filtros", "Barra", ["Quadro, Lista ou Calendário", "Agrupar por estado, responsável, prioridade, prazo, parceiro ou origem", "Filtros combináveis", "Busca", "Nova tarefa"]),
+      b("kanban", "Quadro (arrastar muda estado, dono ou prioridade)", ["A fazer", "Fazendo", "Aguardando", "Feito"]),
+      b("texto", "Painel da tarefa", ["Estado, prioridade, responsável, parceiro, início e prazo", "Descrição, etiquetas e checklist", "Comentários", "Se nasceu de regra: o que a regra diz e onde se resolve"]),
+    ],
+    nota: "As exceções das regras (P-09) viram tarefas sozinhas e se fecham sozinhas quando o caso se resolve. Preferências de visão e filtros ficam guardadas por pessoa." },
   { id: "i-carteira", rota: "/app/meu-painel", nome: "Minha carteira", area: "interna", quem: "Gerente e administradores",
     pergunta: "Estou no ritmo das minhas metas e qual parceiro da carteira precisa de mim?", processos: ["P-46", "P-07"],
     blocos: [b("indicadores", "Metas do trimestre"), b("lista", "Parceiros da carteira com o próximo contato")] },
@@ -243,7 +260,7 @@ export const JORNADAS: Jornada[] = [
     ] },
   { id: "rotina", nome: "Rotina do Gerente", resumo: "Exceções do dia, revisão da semana e carteira.", processos: ["P-08", "P-09", "P-10", "P-46"],
     passos: [
-      { quem: "Wise", texto: "Abre Tarefas e resolve o que está em Agora", tela: "i-tarefas" },
+      { quem: "Wise", texto: "Abre Tarefas no quadro, filtra as atrasadas e as de hoje e arrasta o que começou para Fazendo", tela: "i-tarefas" },
       { quem: "Wise", texto: "Na conversa da semana com o Diretor, usa o Painel da semana", tela: "i-painel" },
       { quem: "Wise", texto: "Confere a carteira e os contatos que passaram da cadência", tela: "i-carteira" },
     ] },
