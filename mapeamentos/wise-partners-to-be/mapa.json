@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-19",
-    "atualizado_em": "2026-11-19"
+    "criado_em": "2026-11-22",
+    "atualizado_em": "2026-11-22"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -964,6 +964,29 @@
         "EV-0392"
       ],
       "descricao": "Atende o cliente da Wise; relata necessidades para a Prateleira, conduz diagnósticos quando a agenda do Gerente enche e faz a checagem aos 6 e 12 meses. Entra no portal com o perfil de consultor: vê os clientes e as oportunidades e registra os diagnósticos e as checagens que faz, sem editar páginas nem regras."
+    },
+    {
+      "id": "PA-08",
+      "nome": "Empresa cliente do Grupo Tríade",
+      "area": null,
+      "externo": true,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0448",
+        "EV-0449"
+      ],
+      "descricao": "Cliente da Wise Makers ou da Tríade Digital com login no portal: vê o catálogo, pede condições e pode oferecer os próprios produtos e serviços."
+    },
+    {
+      "id": "PA-09",
+      "nome": "CS da Tríade Digital",
+      "area": null,
+      "externo": false,
+      "status": "declarado",
+      "evidencias": [
+        "EV-0448"
+      ],
+      "descricao": "Cria o login dos clientes da Tríade que já estão na base e apresenta o portal e os benefícios a cada um."
     }
   ],
   "pessoas": [
@@ -8966,7 +8989,7 @@
       "nome": "Manter a Prateleira de fornecedores",
       "pai": null,
       "ordem": 10,
-      "descricao": "Categorias e fichas verificadas dos parceiros Premium e Elite, sem limite por categoria; a permanência depende da nota de qualidade e do retorno dos clientes. No portal: guarda as fichas, calcula a nota e marca a permanência.",
+      "descricao": "Categorias e fichas verificadas dos parceiros Premium e Elite, sem limite por categoria; a permanência depende da nota de qualidade e do retorno dos clientes. No portal: guarda as fichas, calcula a nota e marca a permanência. Com o FO-19, a Prateleira passa a ser também o Catálogo de parceiros: os membros veem as ofertas sem depender de uma recomendação da Wise.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Parceiro sobe para Premium ou ficha desatualizada",
@@ -8991,7 +9014,8 @@
         "EV-0219",
         "EV-0220",
         "EV-0352",
-        "EV-0373"
+        "EV-0373",
+        "EV-0451"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -9092,7 +9116,7 @@
       "nome": "Definir níveis, benefícios e critérios de subida",
       "pai": "P-05",
       "ordem": 1,
-      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão pela regra de comissão, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. A subida ao Premium exige os 60 dias e, além disso, 3 clientes fechados ou a avaliação. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
+      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão pela regra de comissão, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. A subida ao Premium exige os 60 dias e, além disso, 3 clientes fechados ou a avaliação. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro. Critério dos níveis (FO-19): Premium: um cliente do parceiro, dentro do perfil, fez o diagnóstico com a Wise Makers (passa a ver o catálogo e usar as condições). Elite: um cliente trazido pelo parceiro contratou alguma empresa do Grupo Tríade (passa a oferecer no catálogo). O portal sobe o nível sozinho. Os pacotes saem e os benefícios seguem o nível.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9126,7 +9150,7 @@
       "frequencia": "",
       "dores": [],
       "regras": [],
-      "status": "contestado",
+      "status": "declarado",
       "hipoteses": [],
       "evidencias": [
         "EV-0222",
@@ -9143,12 +9167,13 @@
         "EV-0374",
         "EV-0377",
         "EV-0384",
-        "EV-0425"
+        "EV-0425",
+        "EV-0450"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro.",
+      "portal": "guarda a tabela de níveis e sobe o nível sozinho pelos critérios do FO-19; os benefícios do catálogo seguem o nível.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -13712,6 +13737,379 @@
           }
         ]
       }
+    },
+    {
+      "id": "P-102",
+      "nome": "Conectar negócios pelo Catálogo de parceiros",
+      "pai": null,
+      "ordem": 11,
+      "descricao": "O Wise Partners vira um hub de negócios, uma comunidade de indústrias e de empresas que prestam serviço para indústrias, no modelo do ecossistema de parceiros da G4, sem cobrança alta para entrar. Oferecem no catálogo os parceiros Elite (um cliente trazido por eles contratou uma empresa do Grupo Tríade) e as empresas clientes do grupo. Veem o catálogo e usam as condições os parceiros Premium (um cliente deles, no perfil, fez o diagnóstico com a Wise), os Elite e os clientes do grupo. Na plataforma não há distinção visual entre Premium e Elite. Uma empresa pode comprar e oferecer com o mesmo login. Toda oferta tem uma condição só para membros, do valor que o parceiro quiser, validada pela Wise. Um dos objetivos é ter algo de valor imediato para oferecer aos leads capturados.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Empresa com acesso ao catálogo",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Clientes do Grupo Tríade e parceiros",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0450",
+        "EV-0451",
+        "EV-0452",
+        "EV-0449",
+        "EV-0453"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "é a seção Catálogo: na área do parceiro (Catálogo, Minhas ofertas, Pedidos) e na área da Wise (Ofertas, Pedidos, Clientes do grupo).",
+      "tipo": "finalistico"
+    },
+    {
+      "id": "P-103",
+      "nome": "Dar acesso aos clientes do grupo",
+      "pai": "P-102",
+      "ordem": 1,
+      "descricao": "Os clientes da Tríade que já estão na base recebem o login pela CS da Tríade Digital, que apresenta o portal e os benefícios a cada um. Os clientes da Wise recebem a mensagem do consultor responsável. A mensagem leva um vídeo do Igor com os benefícios de estar no ecossistema por ser cliente do Grupo Tríade.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-07",
+        "PA-09"
+      ],
+      "gatilho": "Cliente ativo do Grupo Tríade sem acesso",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Empresa cliente do Grupo Tríade",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0448"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "é a tela Catálogo, Clientes do grupo: cadastro da empresa, acesso com senha provisória e mensagem pronta para o WhatsApp.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0448"
+        ],
+        "raias": [
+          "PA-09",
+          "PA-08"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Cliente ativo do grupo sem acesso",
+            "raia": "PA-09"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Cadastrar a empresa cliente no portal",
+            "raia": "PA-09",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Criar o acesso com senha provisória",
+            "raia": "PA-09",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Mandar a mensagem com o vídeo do Igor e o acesso",
+            "raia": "PA-09"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Entrar no portal e criar a senha",
+            "raia": "PA-08"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Cliente com acesso ao catálogo",
+            "raia": "PA-08"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-104",
+      "nome": "Validar as ofertas do catálogo",
+      "pai": "P-102",
+      "ordem": 2,
+      "descricao": "A Wise confere cada oferta (o que é, para quem serve e a condição para membros) antes de publicar. Oferta publicada que muda de texto volta para validação.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Oferta enviada por parceiro Elite ou cliente do grupo",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Membros do catálogo",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0454",
+        "EV-0455"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "mostra as ofertas para validar em Catálogo, Ofertas, e cada uma vira tarefa (decidir) até a decisão.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0454"
+        ],
+        "raias": [
+          "PA-01"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Oferta enviada para validação",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Ler a oferta e a condição para membros",
+            "raia": "PA-01"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "A oferta está clara e tem condição só para membros?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Publicar a oferta",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Oferta publicada",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Recusar com o motivo",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Oferta devolvida para ajuste",
+            "raia": "PA-01"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t2",
+            "para": "f1"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "f2"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-105",
+      "nome": "Atender o pedido de condição",
+      "pai": "P-102",
+      "ordem": 3,
+      "descricao": "O membro pede a condição pelo portal e recebe um protocolo; quem oferece recebe o contato e fala com ele. Não há etapas de acompanhamento: quem oferece só marca, se quiser, se fechou. A comissão do parceiro à Wise sobre negócio fechado pelo catálogo não é obrigatória. A avaliação de quem comprou entra depois, com a nota visível só para a Wise.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-05",
+        "PA-08"
+      ],
+      "gatilho": "Pedido de condição no catálogo",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Empresa que pediu e empresa que oferece",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0456",
+        "EV-0453",
+        "EV-0457",
+        "EV-0458"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "gera o protocolo, avisa quem oferece e o responsável na Wise, e mostra os pedidos em Catálogo, Pedidos.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0456"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-08",
+          "PA-05"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Oferta escolhida no catálogo",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Pedir a condição e aceitar compartilhar o contato",
+            "raia": "PA-08",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Gerar o protocolo e avisar quem oferece",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Falar com a empresa que pediu",
+            "raia": "PA-05"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Marcar se fechou negócio",
+            "raia": "PA-05",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Pedido atendido",
+            "raia": "PA-05"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "t4"
+          },
+          {
+            "de": "t4",
+            "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
     }
   ],
   "evidencias": [
@@ -17737,6 +18135,132 @@
       "data": "2026-11-20",
       "trecho": "Preciso que você estruture todo o Wireframe do portal wise partners e deixe disponível em algum lugar da aba de Programa. Você verá, pela lógica, que existem algumas inconsistências com relação ao login como parceiro, criação de conta como parceiro etc etc. Preciso que você ajuste também tudo o que tem de incoerência lógica arquitetônica do wireframe, além de deixa-lo visível no próprio portal",
       "local": "Sessão de trabalho, wireframe do portal"
+    },
+    {
+      "id": "EV-0448",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Outro (comente) Comentário: Para os clientes da Tríade que já estão na base, o login será criado pela CS da Tríade Digital e ela entrará em contato com cada cliente mostrando o portal e o que ele tem de benefícios. Já para os clientes da Wise, cada respectivo consultor responsável vai enviar a mensagem para cada cliente da sua carteira. Seria ideal criarmos um vídeo feito pelo Igor para enviar para cada cliente mostrando os benefícios de estar no ecossistema por ser um cliente do Grupo Tríade",
+      "local": "HB-entrada_cliente"
+    },
+    {
+      "id": "EV-0449",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Sim, uma empresa com os dois papéis e o mesmo login",
+      "local": "HB-dois_papeis"
+    },
+    {
+      "id": "EV-0450",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Clientes ativos da Wise e os parceiros (recomendado) Comentário: Vamos fazer um modelo de negócio semelhante ao que a G4 faz com o ecossistema de parceiros. Lá, a empresa que quiser se cadastrar tem que pagar muito. Aqui no Wise Makers, não precisa pagar muito, mas precisa ser cliente ou parceiro premium (um dos clientes dele dentro do nosso ICP tem que fazer um diagnóstico com a Wise Makers) para que ele possa desfrutar do hub de parceiros para encontrar o parceiro ideal. Ao mesmo tempo, ele deve ser elite (um cliente que ele trouxer tem que contratar alguma empresa do Grupo Tríade)",
+      "local": "HB-compradores"
+    },
+    {
+      "id": "EV-0451",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Qualquer empresa B2B aprovada pela Wise, inclusive clientes da Wise; categorias viram filtro",
+      "local": "HB-ofertantes"
+    },
+    {
+      "id": "EV-0452",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Todos aparecem; Premium e Elite com destaque e recomendação ativa; pacotes saem Comentário: Não vamos fazer distinção dentro da plataforma se os participantes são premium ou elite. Só pode aparecer lá se são elite. Só pode desfrutar dos descontos se é premium.",
+      "local": "HB-niveis"
+    },
+    {
+      "id": "EV-0453",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Comentário: Sica a recomendação, mas adapte-a a aquilo que já estipulei em respostas anteriores:\n- Fase 1, ok. Regra de entrada do parceiro colocando a oferta apenas sendo elite e de quem vê o catálogo apenas sendo premium. Clientes entram nos dois lados, seja oferecendo seus serviços ou produtos, seja vendo o catálogo. Não precisa de acompanhamento\n\nUm dos objetivos de abrirmos para fazer um catálogo dos serviços dos parceiros entre eles é para conseguirmos oferecer algo de imediato para leads que conseguimos capturar e para vincular-los com algo interessante.",
+      "local": "HB-fases"
+    },
+    {
+      "id": "EV-0454",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Ficha da empresa e ofertas com condição especial (recomendado)",
+      "local": "HB-oferta"
+    },
+    {
+      "id": "EV-0455",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Sim, com o valor que o parceiro quiser",
+      "local": "HB-condicao"
+    },
+    {
+      "id": "EV-0456",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Pedido pelo portal com protocolo e acompanhamento (recomendado)",
+      "local": "HB-uso"
+    },
+    {
+      "id": "EV-0457",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Comissão do parceiro sobre negócio fechado pelo hub (recomendado) Comentário: A comissão não é obrigatória",
+      "local": "HB-receita"
+    },
+    {
+      "id": "EV-0458",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Sim, nota só para a Wise no começo",
+      "local": "HB-avaliacao"
+    },
+    {
+      "id": "EV-0459",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Continua igual",
+      "local": "HB-comissao_cliente_parceiro"
+    },
+    {
+      "id": "EV-0460",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Catálogo de parceiros",
+      "local": "HB-nome"
+    },
+    {
+      "id": "EV-0461",
+      "tipo": "formulario",
+      "fonte": "FO-19: Wise Partners como hub de negócios",
+      "pessoa": "PE-01",
+      "data": "2026-11-22",
+      "trecho": "Comentário: Imediato",
+      "local": "HB-prazo"
     }
   ],
   "perguntas": [
@@ -26435,10 +26959,14 @@
       ],
       "rodada": 11,
       "bloco": "Níveis",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0452"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "ct-niveis",
       "contexto": [],
       "logica": "",
@@ -27730,10 +28258,14 @@
       ],
       "rodada": 12,
       "bloco": "Níveis",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0452"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "pendente-v14",
       "contexto": [
         "Hoje todo Select aprovado recebe o pacote Prateleira, mas no canvas ser recomendado na Prateleira é benefício do Premium."
@@ -27742,6 +28274,32 @@
       "citacoes": [],
       "visual": "",
       "recomendo": ""
+    },
+    {
+      "id": "Q-0279",
+      "texto": "Como os leads capturados (por exemplo, os clientes dos parceiros que fizeram o autodiagnóstico) ganham algo do catálogo sem ter acesso às condições?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 13,
+      "bloco": "Catálogo",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v15",
+      "contexto": [
+        "Você disse que um objetivo do catálogo é oferecer algo de imediato aos leads. Pela regra, só membros veem as condições."
+      ],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Uma vitrine sem as condições (empresas e o que oferecem), com o convite para virar cliente e liberar os descontos."
     }
   ],
   "formularios": [
@@ -28420,10 +28978,13 @@
         "EV-0425",
         "EV-0374"
       ],
-      "status": "aberta",
+      "status": "resolvida",
       "pergunta": "Q-0237",
-      "resolucao": "",
-      "evidencias_resolucao": [],
+      "resolucao": "Premium: um cliente do parceiro, dentro do perfil, fez o diagnóstico com a Wise Makers (passa a ver o catálogo e usar as condições). Elite: um cliente trazido pelo parceiro contratou alguma empresa do Grupo Tríade (passa a oferecer no catálogo). O portal sobe o nível sozinho.",
+      "evidencias_resolucao": [
+        "EV-0450",
+        "EV-0452"
+      ],
       "lado_patrocinador": "FO-16",
       "lado_livros": "FO-14"
     }
@@ -29251,6 +29812,112 @@
       "evidencias": [
         "EV-0447"
       ]
+    },
+    {
+      "id": "DE-79",
+      "data": "2026-11-22",
+      "texto": "O Wise Partners vira um hub de negócios: catálogo de parceiros com condições só para membros, no modelo do ecossistema da G4 e sem cobrança alta para entrar.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0450"
+      ]
+    },
+    {
+      "id": "DE-80",
+      "data": "2026-11-22",
+      "texto": "Oferecem no catálogo só os parceiros Elite e as empresas clientes do Grupo Tríade. Veem e usam as condições os Premium, os Elite e os clientes do grupo. Sem distinção visual entre Premium e Elite.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0452",
+        "EV-0453"
+      ]
+    },
+    {
+      "id": "DE-81",
+      "data": "2026-11-22",
+      "texto": "Premium: um cliente do parceiro, dentro do perfil, fez o diagnóstico com a Wise Makers (passa a ver o catálogo e usar as condições). Elite: um cliente trazido pelo parceiro contratou alguma empresa do Grupo Tríade (passa a oferecer no catálogo). O portal sobe o nível sozinho.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0450"
+      ]
+    },
+    {
+      "id": "DE-82",
+      "data": "2026-11-22",
+      "texto": "Os pacotes saem; os benefícios seguem o nível.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0452"
+      ]
+    },
+    {
+      "id": "DE-83",
+      "data": "2026-11-22",
+      "texto": "Qualquer empresa B2B aprovada pela Wise pode participar, inclusive os clientes da Wise; as categorias viram filtro.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0451"
+      ]
+    },
+    {
+      "id": "DE-84",
+      "data": "2026-11-22",
+      "texto": "Uma empresa pode comprar e oferecer, com o mesmo login.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0449"
+      ]
+    },
+    {
+      "id": "DE-85",
+      "data": "2026-11-22",
+      "texto": "A condição para membros é obrigatória, no valor que o parceiro quiser; a Wise valida a oferta.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0455",
+        "EV-0454"
+      ]
+    },
+    {
+      "id": "DE-86",
+      "data": "2026-11-22",
+      "texto": "O pedido sai com protocolo, sem etapas de acompanhamento; a comissão do parceiro sobre negócio do catálogo não é obrigatória.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0456",
+        "EV-0453",
+        "EV-0457"
+      ]
+    },
+    {
+      "id": "DE-87",
+      "data": "2026-11-22",
+      "texto": "Os clientes da Tríade recebem o login pela CS da Tríade Digital; os clientes da Wise, pelo consultor responsável; com um vídeo do Igor sobre os benefícios.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0448"
+      ]
+    },
+    {
+      "id": "DE-88",
+      "data": "2026-11-22",
+      "texto": "A comissão de 40% que a Wise paga ao parceiro continua igual. O nome da área é Catálogo de parceiros. Prazo: imediato.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0459",
+        "EV-0460",
+        "EV-0461"
+      ]
     }
   ],
   "glossario": [
@@ -29451,7 +30118,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-19",
+      "data": "2026-11-22",
       "evento": "Mapeamento iniciado"
     },
     {
@@ -29497,6 +30164,10 @@
     {
       "data": "2026-11-20",
       "evento": "To-be v14: wireframe do portal em Programa, Wireframe; entrada sempre pela fila; senha própria no primeiro acesso; onboarding por etapas e ativação no primeiro cliente pelo link aplicados no portal; glossário de parceiro ativo corrigido; pergunta aberta sobre pacotes e níveis."
+    },
+    {
+      "data": "2026-11-22",
+      "evento": "To-be v15: FO-19 aplicado. Catálogo de parceiros (processo novo com três subprocessos), papéis Empresa cliente do Grupo Tríade e CS da Tríade, critério dos níveis decidido (CT-08 resolvida), pacotes saem, canvas atualizado."
     }
   ]
 }

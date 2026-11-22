@@ -1,5 +1,5 @@
 import {
-  Award, BarChart3, Building2, GraduationCap, Handshake, Home, ListChecks, Megaphone, Network, Send, UserPlus, type LucideIcon,
+  Award, BarChart3, Building2, Store, GraduationCap, Handshake, Home, ListChecks, Megaphone, Network, Send, UserPlus, type LucideIcon,
 } from "lucide-react";
 
 // Arquitetura do portal (v3, 20/11/2026): seções pela cadeia de valor do to-be, cada uma com poucas abas.
@@ -40,6 +40,14 @@ export const SECOES_INTERNAS: SecaoNav[] = [
     ],
   },
   {
+    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Hub de negócios: ofertas dos membros, pedidos e clientes do grupo (FO-19)",
+    abas: [
+      { to: "/app/catalogo", rotulo: "Ofertas", papeis: SEM_FINANCEIRO, exato: true },
+      { to: "/app/catalogo/pedidos", rotulo: "Pedidos", papeis: SEM_FINANCEIRO },
+      { to: "/app/catalogo/clientes", rotulo: "Clientes do grupo", papeis: SEM_FINANCEIRO },
+    ],
+  },
+  {
     id: "oportunidades", rotulo: "Oportunidades", icone: Handshake, descricao: "Gerar oportunidades no ecossistema (P-31, P-58)",
     abas: [
       { to: "/app/indicacoes", rotulo: "Indicações", papeis: TODOS_INTERNOS },
@@ -74,7 +82,8 @@ export const SECOES_INTERNAS: SecaoNav[] = [
 ];
 
 // Área do parceiro. Filtros: `responsavel` (só o responsável nomeado), `onboarding` (só com plano), `comercial` (só parceria comercial)
-export type AbaParceiro = Aba & { responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados" };
+// `hub`: abas do Catálogo de parceiros; a empresa só cliente do grupo vê apenas estas
+export type AbaParceiro = Aba & { responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados"; hub?: "ver" | "ofertar" | "pedidos" };
 export type SecaoParceiro = Omit<SecaoNav, "abas"> & { abas: AbaParceiro[] };
 
 export const SECOES_PARCEIRO: SecaoParceiro[] = [
@@ -92,6 +101,14 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
       { to: "/parceiro/indicacoes", rotulo: "Minhas indicações" },
       { to: "/parceiro/rfps", rotulo: "Prateleira" },
       { to: "/parceiro/cruzamento", rotulo: "Cruzamento", comercial: true },
+    ],
+  },
+  {
+    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Condições especiais entre os membros do ecossistema",
+    abas: [
+      { to: "/parceiro/catalogo", rotulo: "Catálogo", hub: "ver" },
+      { to: "/parceiro/ofertas", rotulo: "Minhas ofertas", hub: "ofertar" },
+      { to: "/parceiro/pedidos", rotulo: "Pedidos", hub: "pedidos" },
     ],
   },
   {

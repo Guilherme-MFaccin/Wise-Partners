@@ -583,6 +583,32 @@ insert into public.tarefas (titulo, descricao, status, prioridade, responsavel_i
   ('Ligar para o parceiro sobre o cruzamento', null, 'feito', 'baixa', pg_temp.uid(3), pg_temp.uid(1), 'd0000000-0000-4000-a000-000000001009', '{}', '[]', current_date - 6, current_date - 3);
 
 -- -------------------------------------------------------------------------------------
+-- Catálogo de parceiros (hub): empresa cliente do grupo com acesso, ofertas e um pedido
+-- -------------------------------------------------------------------------------------
+select pg_temp.como(null);
+insert into public.parceiros (id, nome_fantasia, cnpj, tipo_parceria, origem, etapa, cliente_grupo, empresa_grupo_cliente_id, consultor_cliente_id)
+values (pg_temp.uid(1100), 'Metalúrgica Sul', pg_temp.cnpj(9301), 'cliente', 'cliente_grupo', 'qualificacao', true,
+        (select id from public.empresas_grupo where codigo = 'triade'), pg_temp.uid(3));
+insert into public.convites (email, nome, papel, parceiro_id, is_responsavel_parceiro) values
+  ('gustavo@metalurgicasul.demo', 'Gustavo Lima', 'parceiro', pg_temp.uid(1100), true);
+insert into auth.users (id, email) values (pg_temp.uid(17), 'gustavo@metalurgicasul.demo');
+
+select pg_temp.como(pg_temp.uid(1));
+insert into public.ofertas_hub (id, parceiro_id, titulo, descricao, para_quem, condicao, como_usar, validade, estado) values
+  (pg_temp.uid(2001), pg_temp.uid(1004), 'Implantação do CRM com treinamento do time', 'CRM com funil, metas por vendedor e integração com o WhatsApp, implantado em 30 dias.',
+   'Indústrias com 3 vendedores ou mais', '20% de desconto nos 6 primeiros meses', 'Peça a condição e um consultor da Litoral CRM fala com você em até 2 dias úteis.', current_date + 90, 'publicada'),
+  (pg_temp.uid(2002), pg_temp.uid(1006), 'Diagnóstico de automação da linha de produção', 'Levantamento de gargalos da linha e proposta de automação com retorno estimado.',
+   'Indústrias de transformação', 'Diagnóstico sem custo para membros', null, null, 'publicada'),
+  (pg_temp.uid(2003), pg_temp.uid(1007), 'Programa de segurança do trabalho', 'PGR, treinamentos de NR e acompanhamento mensal.',
+   null, '15% de desconto no primeiro ano', null, null, 'em_validacao'),
+  (pg_temp.uid(2004), pg_temp.uid(1100), 'Peças usinadas sob medida', 'Usinagem CNC de peças em aço e alumínio, lotes pequenos e médios.',
+   'Indústrias que precisam de peças de reposição', 'Frete grátis no primeiro pedido', null, current_date + 60, 'publicada');
+insert into public.pedidos_hub (oferta_id, ofertante_id, solicitante_id, solicitante_perfil_id, ofertante_nome, solicitante_nome, titulo_oferta, condicao, mensagem) values
+  (pg_temp.uid(2001), pg_temp.uid(1004), pg_temp.uid(1010), pg_temp.uid(16), 'Litoral CRM', 'Pinhão Software', 'Implantação do CRM com treinamento do time', '20% de desconto nos 6 primeiros meses',
+   'Temos 6 vendedores e queremos começar no próximo mês.');
+select pg_temp.como(null);
+
+-- -------------------------------------------------------------------------------------
 -- Rotinas: status de atividade, régua, faixas e alertas como no dia a dia
 -- -------------------------------------------------------------------------------------
 select pg_temp.como(null);

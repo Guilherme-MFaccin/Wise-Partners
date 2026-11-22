@@ -1,6 +1,7 @@
 // Criação de acesso (FR-001, FR-002, FR-007, FR-072). Quem pode dar acesso a quem:
 // administrador cria qualquer papel; time de parcerias cria usuários de parceiro;
-// o responsável do parceiro cria usuários da própria empresa.
+// o responsável do parceiro cria usuários da própria empresa; consultores e comercial criam o acesso de empresas
+// clientes do grupo (Catálogo de parceiros, FO-19).
 // O acesso é por e-mail e senha: a conta nasce com uma senha provisória, que quem criou repassa à pessoa.
 // A senha nunca vai por e-mail; o portal pede a troca pela faixa de senha provisória.
 import { cors, erro, json } from "../_shared/cors.ts";
@@ -30,6 +31,11 @@ Deno.serve(async (req) => {
       // tudo permitido
     } else if (quem.papel === "parcerias") {
       if (papel !== "parceiro") return erro("O time de parcerias convida apenas usuários de parceiros.", 403);
+      if (diretor) return erro("Sem permissão.", 403);
+    } else if ((quem.papel === "consultor" || quem.papel === "comercial") && papel === "parceiro" && parceiroId) {
+      // Catálogo de parceiros (FO-19): consultores da Wise e a CS da Tríade criam o acesso das empresas clientes do grupo
+      const { data: alvo } = await admin().from("parceiros").select("cliente_grupo").eq("id", parceiroId).maybeSingle();
+      if (!alvo?.cliente_grupo) return erro("Consultores e comercial criam acesso só para empresas clientes do grupo.", 403);
       if (diretor) return erro("Sem permissão.", 403);
     } else if (quem.papel === "parceiro" && quem.is_responsavel_parceiro) {
       papel = "parceiro";

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { useEtapasOnboarding } from "@/components/portal/EtapasOnboarding";
 import { ArrowRight, CalendarCheck, CheckCircle2, Circle, ExternalLink, FileSearch, Handshake, ListChecks, Mail, Megaphone, MessageSquareHeart } from "lucide-react";
@@ -76,6 +76,8 @@ export default function Inicio() {
   ].sort((a, b) => a.data.localeCompare(b.data));
   const naoLidos = (comunicadosQ.data ?? []).filter((l) => !l.lido_em && l.comunicado);
   const pesquisaPendente = assinado && pesquisaQ.isSuccess && !pesquisaQ.data;
+  // Empresa só cliente do grupo: a área dela é o Catálogo de parceiros (FO-19)
+  if (p.tipo_parceria === "cliente") return <Navigate to="/parceiro/catalogo" replace />;
 
   return (
     <div className="space-y-6">

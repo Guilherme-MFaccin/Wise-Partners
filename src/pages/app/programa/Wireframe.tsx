@@ -32,11 +32,12 @@ function perfisDaTela(t: Tela): Perfil[] {
     return (aba?.papeis as Perfil[] | undefined) ?? INTERNOS;
   }
   const aba = SECOES_PARCEIRO.flatMap((s) => s.abas).find((a) => a.to === t.rota);
+  if (aba?.hub) return ["parceiro_resp", "parceiro", "cliente_grupo"];
   return aba?.responsavel ? ["parceiro_resp"] : ["parceiro_resp", "parceiro"];
 }
 const ve = (perfil: Perfil | null, t: Tela | undefined) => !!t && (!perfil || perfisDaTela(t).includes(perfil));
 const ATOR: Record<Passo["quem"], Perfil[]> = {
-  Candidato: ["visitante"], Parceiro: ["parceiro_resp", "parceiro"], "Cliente do parceiro": ["cliente_parceiro"], "Cliente da Wise": ["cliente_wise"],
+  Candidato: ["visitante"], Parceiro: ["parceiro_resp", "parceiro"], "Cliente do parceiro": ["cliente_parceiro"], "Cliente da Wise": ["cliente_wise", "cliente_grupo"],
   Wise: ["admin", "parcerias", "consultor", "comercial", "financeiro"], Portal: [],
 };
 

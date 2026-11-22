@@ -9,6 +9,7 @@ Vale acima das seções seguintes onde houver diferença. Pedido do patrocinador
 | Tarefas | Fila de hoje (tela inicial), Minha carteira, Contatos e horas | P-08, P-09, P-46 |
 | Candidatos | Fila de cadastros, Origens e campanha | P-20 a P-25, P-98, P-101 |
 | Parceiros | Carteira (com a ficha), Ações conjuntas, Base Ativa, Comunicados | P-26, P-40, P-47, P-54 |
+| Catálogo | Ofertas, Pedidos, Clientes do grupo | P-102 a P-105 |
 | Oportunidades | Indicações, Diagnósticos, Prateleira, Cruzamento, Comissões | P-31 a P-39, P-58, P-95 |
 | Resultados | Painel da semana, Canal e CAC, Custos, Maturidade, Ranking | P-14 a P-19 |
 | Programa | Modelo e processos, Wireframe, Páginas, Capacitação, Regras e configurações, Usuários, Importação | P-01, P-05, P-59, P-60, P-96, P-100 |
@@ -25,6 +26,7 @@ Vale acima das seções seguintes onde houver diferença. Pedido do patrocinador
 * **Ficha do parceiro** e **Regras e configurações** usam abas agrupadas (`NavegacaoSecoes` com `grupo`): a ficha pela jornada (quem é, entrada, relação, resultado, saída); as configurações por assunto (regras do programa, metas e medição, operação, sistema).
 * **Páginas públicas**: uma página dos parceiros e uma página do cliente, únicas, sem citar nenhum parceiro; o link exclusivo só atribui o cadastro. Textos, seções, perguntas, vídeo, valores, cases e publicação são editados em Programa, Páginas.
 * Nomes seguem o glossário do to-be: Prateleira (antes "Pedidos de RFP"), Painel da semana, Diagnósticos.
+* **Catálogo de parceiros** (22/11/2026, FO-19): hub de negócios. Seção Catálogo na área da Wise (Ofertas para validar, Pedidos, Clientes do grupo) e na área do parceiro (Catálogo, Minhas ofertas, Pedidos). Oferecem os parceiros Elite e as empresas clientes do Grupo Tríade; veem e usam as condições os Premium, os Elite e os clientes do grupo (`pode_ver_catalogo()`, `pode_ofertar()`). A empresa só cliente do grupo é um registro em `parceiros` com tipo `cliente` e vê apenas a seção Catálogo. Nível sobe sozinho: Premium no diagnóstico de um cliente no perfil, Elite quando um cliente trazido contrata o grupo.
 * **Tarefas** (21/11/2026) virou gerenciador no modelo do ClickUp e do Monday: tabela `tarefas` (estado, prioridade, responsável, início, prazo, parceiro, etiquetas, checklist, comentários); visões Quadro, Lista e Calendário; agrupar por estado, responsável, prioridade, prazo, parceiro ou origem; filtros combináveis guardados por pessoa; arrastar no quadro muda estado, dono ou prioridade. As exceções do P-09 viram tarefas sozinhas (`sincronizar_tarefas()`) e se fecham quando o caso se resolve.
 * **Wireframe com "Ver como"**: filtra mapa, telas e jornadas por tipo de acesso (administrador, gerente, consultor, comercial, financeiro, parceiro responsável ou usuário, cliente do parceiro, cliente da Wise, visitante).
 * **Wireframe** (Programa, Wireframe; dados em `src/lib/wireframe.ts`): mapa do portal, sete jornadas, o desenho de baixa fidelidade de cada uma das 52 telas e a lista de ajustes de coerência com o to-be. Toda tela nova entra lá.

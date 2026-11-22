@@ -8,7 +8,7 @@ export type TipoBloco =
 export type Bloco = { tipo: TipoBloco; rotulo: string; itens?: string[]; largura?: 12 | 8 | 6 | 4 };
 export type Area = "publica" | "acesso" | "interna" | "parceiro";
 // Tipos de acesso para o filtro "Ver como" do wireframe. Os papéis internos são os do portal (perfis.papel).
-export type Perfil = "admin" | "parcerias" | "consultor" | "comercial" | "financeiro" | "parceiro_resp" | "parceiro" | "cliente_parceiro" | "cliente_wise" | "visitante";
+export type Perfil = "admin" | "parcerias" | "consultor" | "comercial" | "financeiro" | "parceiro_resp" | "parceiro" | "cliente_grupo" | "cliente_parceiro" | "cliente_wise" | "visitante";
 export const PERFIS: { id: Perfil; nome: string; descricao: string }[] = [
   { id: "admin", nome: "Administrador", descricao: "Diretores e quem administra o portal: vê tudo do time da Wise." },
   { id: "parcerias", nome: "Gerente de parcerias", descricao: "Dono dos processos do programa." },
@@ -17,8 +17,9 @@ export const PERFIS: { id: Perfil; nome: string; descricao: string }[] = [
   { id: "financeiro", nome: "Financeiro", descricao: "Comissões e pagamentos." },
   { id: "parceiro_resp", nome: "Parceiro (responsável)", descricao: "Responsável nomeado na empresa parceira." },
   { id: "parceiro", nome: "Parceiro (usuário)", descricao: "Demais pessoas da empresa parceira." },
+  { id: "cliente_grupo", nome: "Cliente do Grupo Tríade", descricao: "Empresa cliente com login: vê o catálogo, pede condições e pode oferecer." },
   { id: "cliente_parceiro", nome: "Cliente do parceiro", descricao: "Chega pelo link do parceiro; não tem login." },
-  { id: "cliente_wise", nome: "Cliente da Wise", descricao: "Hoje recebe recomendações da Prateleira; o catálogo do hub depende do FO-19." },
+  { id: "cliente_wise", nome: "Cliente da Wise sem login", descricao: "Recebe as recomendações da Prateleira por link." },
   { id: "visitante", nome: "Visitante ou candidato", descricao: "Quem conhece o programa e se cadastra." },
 ];
 export type Tela = {
@@ -36,7 +37,7 @@ export const AREAS: Record<Area, { nome: string; descricao: string }> = {
   publica: { nome: "Páginas públicas", descricao: "Sem login. Únicas para todos, sem citar nenhum parceiro." },
   acesso: { nome: "Acesso", descricao: "Entrar, criar a senha no primeiro acesso e recuperar a senha." },
   interna: { nome: "Time da Wise", descricao: "Seis seções pela cadeia de valor do to-be." },
-  parceiro: { nome: "Área do parceiro", descricao: "Cinco seções, tudo em autoatendimento (P-59)." },
+  parceiro: { nome: "Área do parceiro e do cliente", descricao: "Seis seções em autoatendimento (P-59); o cliente do grupo vê só o Catálogo." },
 };
 
 export const TELAS: Tela[] = [
@@ -71,21 +72,21 @@ export const TELAS: Tela[] = [
   { id: "pub-rfp", perfis: ["cliente_wise"], rota: "/r/:token", nome: "Recomendação da Prateleira", area: "publica", quem: "Cliente da Wise que pediu um fornecedor",
     pergunta: "Quais fornecedores a Wise recomenda para a minha necessidade?", processos: ["P-35"],
     blocos: [b("topo", "Necessidade do cliente"), b("cartoes", "Parceiros Premium e Elite recomendados", ["Ficha de apresentação", "Contato"]), b("acoes", "Quero falar com este fornecedor")] },
-  { id: "pub-legais", perfis: ["visitante", "cliente_parceiro", "parceiro_resp", "parceiro"], rota: "/parceiros/termo e /parceiros/privacidade", nome: "Termo e política", area: "publica", quem: "Qualquer pessoa",
+  { id: "pub-legais", perfis: ["visitante", "cliente_parceiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "/parceiros/termo e /parceiros/privacidade", nome: "Termo e política", area: "publica", quem: "Qualquer pessoa",
     pergunta: "O que eu aceito ao me cadastrar?", processos: ["P-63", "P-64"], blocos: [b("texto", "Texto vigente com versão e data")] },
   // ---------------------------------------------------------------- acesso
-  { id: "entrar", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Parceiros e time da Wise",
+  { id: "entrar", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Parceiros e time da Wise",
     pergunta: "Como entro no portal?", processos: ["P-93"],
     blocos: [
       b("formulario", "Entrar", ["E-mail", "Senha", "Esqueci minha senha"], 6),
       b("texto", "Para quem ainda não tem acesso", ["Fez o cadastro? O acesso chega pelo WhatsApp depois da conversa de entrada", "Ainda não é parceiro? Conheça o programa"], 6),
     ],
     nota: "Não existe cadastro aberto: a conta só nasce na aprovação (parceiro) ou pela tela Usuários." },
-  { id: "primeiro-acesso", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "(qualquer rota logada)", nome: "Crie a sua senha", area: "acesso", quem: "Quem entrou com senha provisória",
+  { id: "primeiro-acesso", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "(qualquer rota logada)", nome: "Crie a sua senha", area: "acesso", quem: "Quem entrou com senha provisória",
     pergunta: "Qual vai ser a minha senha?", processos: ["P-23", "P-93"],
     blocos: [b("formulario", "Nova senha", ["Nova senha", "Confirmação", "Salvar e entrar", "Sair"], 6)],
     nota: "Aparece no lugar de qualquer tela enquanto a senha for provisória." },
-  { id: "redefinir", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro"], rota: "/redefinir-senha", nome: "Redefinir a senha", area: "acesso", quem: "Quem pediu o link por e-mail",
+  { id: "redefinir", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "/redefinir-senha", nome: "Redefinir a senha", area: "acesso", quem: "Quem pediu o link por e-mail",
     pergunta: "Como crio uma senha nova?", processos: ["P-93"], blocos: [b("formulario", "Nova senha", ["Nova senha", "Confirmação"], 6)],
     nota: "Depende do e-mail próprio (Resend). Sem ele, a senha provisória nova vem do responsável da empresa ou da Wise." },
   // ---------------------------------------------------------------- time da Wise
@@ -130,6 +131,16 @@ export const TELAS: Tela[] = [
     pergunta: "Qual ciclo da Base Ativa está em curso e quem é o próximo?", processos: ["P-44"], blocos: [b("lista", "Fila"), b("lista", "Ciclos em curso com encontros")] },
   { id: "i-comunicados", rota: "/app/comunicados", nome: "Comunicados", area: "interna", quem: "Gerente, consultores",
     pergunta: "O que os parceiros precisam saber neste mês e quem já leu?", processos: ["P-82", "P-13"], blocos: [b("acoes", "Novo comunicado"), b("lista", "Comunicados com leitura")] },
+  { id: "i-cat-ofertas", rota: "/app/catalogo", nome: "Ofertas do catálogo", area: "interna", quem: "Time interno (a gestão publica e recusa)",
+    pergunta: "Que ofertas esperam a validação da Wise e o que já está no ar para os membros?", processos: ["P-104", "P-86"],
+    blocos: [b("abas", "Para validar, Publicadas, Pausadas e recusadas"), b("lista", "Oferta com empresa, condição e descrição", ["Publicar", "Recusar com motivo", "Pausar"])],
+    nota: "Oferta esperando validação vira tarefa (decidir). Editar uma oferta publicada volta para validação." },
+  { id: "i-cat-pedidos", rota: "/app/catalogo/pedidos", nome: "Pedidos do catálogo", area: "interna", quem: "Time interno",
+    pergunta: "Quem pediu o quê a quem, e o que virou negócio?", processos: ["P-105"],
+    blocos: [b("tabela", "Protocolo, quando, quem pediu, quem oferece, oferta e condição, resultado")] },
+  { id: "i-cat-clientes", rota: "/app/catalogo/clientes", nome: "Clientes do grupo", area: "interna", quem: "Gerente, consultores e CS da Tríade",
+    pergunta: "Quais clientes do Grupo Tríade já entraram no catálogo e quem ainda precisa do acesso?", processos: ["P-103"],
+    blocos: [b("acoes", "Cadastrar cliente"), b("lista", "Empresa, de qual empresa do grupo, consultor, acessos", ["Criar acesso (senha provisória)", "Mensagem pronta para o WhatsApp", "Encerrar"])] },
   { id: "i-indicacoes", rota: "/app/indicacoes", nome: "Indicações", area: "interna", quem: "Todo o time interno",
     pergunta: "Que oportunidades estão abertas e alguma está parada?", processos: ["P-31", "P-32", "P-33", "P-34"],
     blocos: [b("filtros", "Sentido, etapa, parceiro"), b("kanban", "Etapas da indicação", ["Recebida", "Qualificada", "Com o closer", "Proposta", "Fechada ou perdida"])] },
@@ -187,6 +198,16 @@ export const TELAS: Tela[] = [
     pergunta: "Para quais clientes da Wise fomos recomendados?", processos: ["P-35"], blocos: [b("lista", "Pedidos em que a empresa foi apresentada")] },
   { id: "p-cruzamento", rota: "/parceiro/cruzamento", nome: "Cruzamento", area: "parceiro", quem: "Parceiros comerciais",
     pergunta: "Temos clientes em comum com a Wise?", processos: ["P-37", "P-92"], blocos: [b("passos", "Termo, arquivo da carteira, resultado")] },
+  { id: "p-catalogo", rota: "/parceiro/catalogo", nome: "Catálogo de parceiros", area: "parceiro", quem: "Parceiros Premium e Elite e clientes do grupo",
+    pergunta: "Que condições especiais as empresas do ecossistema oferecem para você?", processos: ["P-102", "P-105"],
+    blocos: [b("filtros", "Busca e categorias"), b("cartoes", "Ofertas", ["Empresa e categoria", "Condição para membros em destaque", "Quero esta condição"]), b("texto", "Pedido: mensagem, aviso de contato compartilhado, protocolo")],
+    nota: "Select vê o aviso de que o catálogo abre no Premium (um cliente seu fez o diagnóstico)." },
+  { id: "p-ofertas", rota: "/parceiro/ofertas", nome: "Minhas ofertas", area: "parceiro", quem: "Parceiros Elite e clientes do grupo",
+    pergunta: "O que a sua empresa oferece aos membros e em que pé está a validação?", processos: ["P-104"],
+    blocos: [b("acoes", "Nova oferta (vai para validação)"), b("lista", "Ofertas com situação", ["Editar", "Pausar ou retomar", "Apagar"])] },
+  { id: "p-pedidos", rota: "/parceiro/pedidos", nome: "Pedidos do catálogo", area: "parceiro", quem: "Quem vê ou oferece no catálogo",
+    pergunta: "Quem pediu as suas condições e quais condições a sua empresa pediu?", processos: ["P-105"],
+    blocos: [b("lista", "Recebidos", ["Ver o contato", "Fechou negócio", "Não avançou"], 6), b("lista", "Feitos pela sua empresa", ["Protocolo e resultado"], 6)] },
   { id: "p-capacitacao", rota: "/parceiro/capacitacao", nome: "Capacitação", area: "parceiro", quem: "Usuários do parceiro",
     pergunta: "Que trilhas a minha equipe pode fazer?", processos: ["P-88"], blocos: [b("cartoes", "Minicurso e trilhas"), b("tabela", "Equipe e certificados")] },
   { id: "p-kit", rota: "/parceiro/materiais", nome: "Kit e materiais", area: "parceiro", quem: "Usuários do parceiro",
@@ -251,6 +272,16 @@ export const JORNADAS: Jornada[] = [
       { quem: "Parceiro", texto: "Acompanha a etapa", tela: "p-indicacoes" },
       { quem: "Wise", texto: "Cliente fecha: comissão de 40% da primeira mensalidade, paga com nota fiscal", tela: "i-comissoes" },
     ] },
+  { id: "catalogo", nome: "Catálogo de parceiros", resumo: "Hub de negócios: o cliente do grupo e o parceiro Premium pedem condições a quem é Elite ou cliente.", processos: ["P-102", "P-103", "P-104", "P-105"],
+    passos: [
+      { quem: "Wise", texto: "A CS da Tríade ou o consultor cadastra a empresa cliente e cria o acesso", tela: "i-cat-clientes" },
+      { quem: "Cliente da Wise", texto: "Recebe a mensagem com os benefícios e entra com a senha provisória", tela: "entrar" },
+      { quem: "Parceiro", texto: "Elite ou cliente do grupo cria a oferta com a condição para membros", tela: "p-ofertas" },
+      { quem: "Wise", texto: "Valida e publica a oferta", tela: "i-cat-ofertas" },
+      { quem: "Cliente da Wise", texto: "Encontra a oferta no catálogo e pede a condição", tela: "p-catalogo" },
+      { quem: "Portal", texto: "Gera o protocolo e avisa quem oferece e o responsável na Wise" },
+      { quem: "Parceiro", texto: "Vê o contato, fala com quem pediu e marca se fechou", tela: "p-pedidos" },
+    ] },
   { id: "acessos", nome: "Acessos e senha", resumo: "Quem cria acesso, como se recupera a senha.", processos: ["P-93"],
     passos: [
       { quem: "Wise", texto: "Cria acesso do time ou de parceiro, com senha provisória", tela: "i-usuarios" },
@@ -284,8 +315,8 @@ export const AJUSTES: Ajuste[] = [
   { tema: "Lembrete de onboarding", antes: "Tarefa quando vencia o prazo de 90 dias.", agora: "Tarefa quando o parceiro fica 14 dias parado numa etapa.", base: "P-97", situacao: "corrigido" },
   { tema: "Dois links do parceiro", antes: "A tela Indicar mostrava dois links exclusivos lado a lado.", agora: "O link da página do cliente fica na frente; o de indicação direta fica recolhido, para quem já quer contratar.", base: "P-75", situacao: "corrigido" },
   { tema: "Página do cliente com a marca do parceiro", antes: "Logo e nome do parceiro na página e no processo P-27.", agora: "Página única, sem citar ninguém; o link só atribui o cadastro.", base: "Decisão de 20/11/2026, to-be v13", situacao: "corrigido" },
-  { tema: "Pacotes e níveis", antes: "Os pacotes da especificação v2 (Base Ativa, Formação, Prateleira) convivem com os níveis do canvas (Select, Premium, Elite). Todo Select aprovado recebe o pacote Prateleira, mas no canvas ser recomendado na Prateleira é benefício do Premium.", agora: "Falta decidir se os pacotes saem e os benefícios passam a seguir só o nível.", base: "Canvas, Proposta de valor; FO-18 (níveis)", situacao: "decisao" },
-  { tema: "Critério dos níveis", antes: "No FO-16 o Elite ficou mais fácil que o Premium.", agora: "Contradição CT-08 aberta, pergunta no FO-18.", base: "P-61", situacao: "decisao" },
+  { tema: "Critério dos níveis", antes: "No FO-16 o Elite ficou mais fácil que o Premium (contradição CT-08).", agora: "Premium: um cliente do parceiro, no perfil, fez o diagnóstico. Elite: um cliente trazido contratou uma empresa do grupo. O portal sobe o nível sozinho.", base: "FO-19, resposta sobre quem vê o catálogo", situacao: "corrigido" },
+  { tema: "Pacotes e níveis", antes: "Os pacotes da especificação v2 (Base Ativa, Formação, Prateleira) convivem com os níveis.", agora: "Decidido no FO-19 que os pacotes saem e os benefícios seguem o nível. Falta tirar os pacotes das telas, das contrapartidas e da Base Ativa (próxima entrega).", base: "FO-19, níveis", situacao: "decisao" },
   { tema: "Wise Hub com a marca do parceiro", antes: "P-27 prevê o Hub com as duas marcas.", agora: "Em aberto no FO-18; o portal não promete a marca.", base: "P-27 passo 4", situacao: "decisao" },
   { tema: "E-mails próprios", antes: "Sem o Resend, recuperação de senha e avisos por e-mail dependem do e-mail padrão.", agora: "Falta criar a conta e o DNS (Bruno).", base: "P-93, P-82", situacao: "decisao" },
 ];

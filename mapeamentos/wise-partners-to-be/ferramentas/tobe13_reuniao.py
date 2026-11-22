@@ -2,7 +2,15 @@
 # Os textos abaixo trazem a versão decidida; a resposta da Rodada 6 sobe cada elemento para confirmado em tobe12_rodada6.py.
 # A transcrição é automática, parcial e não separa quem fala; por isso tudo o que vem dela entra como hipótese
 # e só vira desenho com a resposta do patrocinador na Rodada 6.
-_TR = re.sub(r"\s+", " ", open(BASE + "/fontes/reunioes/2026-11-04-igor.md", encoding="utf-8").read())
+_ARQ_TR = BASE + "/fontes/reunioes/2026-11-04-igor.md"
+if os.path.exists(_ARQ_TR):
+    _TR = re.sub(r"\s+", " ", open(_ARQ_TR, encoding="utf-8").read())
+else:
+    # A transcrição fica fora do git (dado sensível). Sem ela, os trechos são conferidos contra as citações
+    # já registradas no mapa salvo no repositório, que vieram da própria transcrição.
+    import subprocess
+    _salvo = json.loads(subprocess.run(["git", "-C", BASE, "show", "HEAD:mapeamentos/wise-partners-to-be/mapa.json"], capture_output=True, text=True, check=True).stdout)
+    _TR = " || ".join(re.sub(r"\s+", " ", e.get("trecho") or "") for e in _salvo["evidencias"] if (e.get("fonte") or "").startswith("Reunião Guilherme e Igor"))
 def R(gravacao, tempo, trecho):
     t = re.sub(r"\s+", " ", trecho)
     assert t in _TR, f"Trecho não está na transcrição: {t[:80]}"

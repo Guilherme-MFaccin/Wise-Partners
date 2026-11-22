@@ -115,28 +115,25 @@ describe("Scorecard e nível de entrada (Apêndice A)", () => {
 });
 
 describe("Nível por resultado (Apêndice B)", () => {
-  it("subida imediata no dia em que cumpre todos os grupos do nível acima", () =>
+  it("subida pela regra do FO-19 (22/11/2026): indicação fechada leva a Elite no mesmo dia, sem mexer no pacote", () =>
     transacao(async (q) => {
-      const resp = await novoUsuarioParceiro(q, P.C, "gama@parceiro.com");
-      let id = await indicacao(q, P.C, "Subida SA", { cliente_cnpj: "45.723.174/0001-10", necessidade: "Estruturar o comercial" });
+      await semGatilhos(q, async () => {
+        await q.sql("update public.parceiros set nivel = 'C', pacote = 'C' where id = $1", [P.C]);
+      });
+      const id = await indicacao(q, P.C, "Subida SA", { cliente_cnpj: "45.723.174/0001-10", necessidade: "Estruturar o comercial" });
       await q.sql("select public.validar_indicacao($1, '{\"icp_confirmado\": true}')", [id]);
-      await q.sql("update public.indicacoes set etapa = 'fechada', valor_base = 5000 where id = $1", [id]);
       await q.sistema();
-      // Sem certificação do responsável ainda não sobe
       expect((await q.um("select nivel from public.parceiros where id = $1", [P.C])).nivel).toBe("C");
-      await certificar(q, resp, P.C);
-      id = await indicacao(q, P.C, "Outra SA");
-      await q.sistema();
+      await q.sql("update public.indicacoes set etapa = 'fechada', valor_base = 5000 where id = $1", [id]);
       const p = await q.um("select nivel, pacote from public.parceiros where id = $1", [P.C]);
-      expect(p).toEqual({ nivel: "B", pacote: "C" }); // o pacote não muda sozinho
-      const rv = await q.sql("select resultado from public.revisoes_nivel where parceiro_id = $1", [P.C]);
-      expect(rv.map((r) => r.resultado)).toEqual(["subida"]);
+      expect(p).toEqual({ nivel: "A", pacote: "C" }); // o pacote não muda sozinho
     }));
 
   it("isenção nos primeiros 180 dias; observação; proposta de rebaixamento sem mudança automática; pacote depois da descida", () =>
     transacao(async (q) => {
       await semGatilhos(q, async () => {
-        await q.sql("update public.parceiros set data_assinatura = public.hoje() - 300 where id = $1", [P.B]);
+        // nível Premium de partida (a regra do FO-19 pode ter subido o parceiro de teste pelos dados iniciais)
+        await q.sql("update public.parceiros set data_assinatura = public.hoje() - 300, nivel = 'B' where id = $1", [P.B]);
       });
       await q.sql("select public.revisao_trimestral(public.hoje())");
       const r1 = await q.sql("select parceiro_id, resultado from public.revisoes_nivel where parceiro_id in ($1, $2)", [P.A, P.B]);

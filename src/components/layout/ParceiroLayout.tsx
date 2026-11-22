@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { useMeuParceiro } from "@/components/portal/dados";
 import { useComunicadosNaoLidos, usePlanoOnboarding } from "@/components/portal/dadosV2";
 import { SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
+import { useAcessoHub } from "@/components/catalogo/dados";
 import { BarraAbas, MenuSecoes, filtrarSecoes } from "@/components/layout/Navegacao";
 
 // Seções da área do parceiro (src/lib/navegacao.ts), filtradas por responsável, onboarding e tipo de parceria
@@ -20,8 +21,12 @@ function useSecoes() {
   const onboardingQ = usePlanoOnboarding();
   const temPlano = !!onboardingQ.data?.plano;
   const comercial = parceiroQ.data?.tipo_parceria === "comercial";
+  const hub = useAcessoHub();
+  const soCliente = parceiroQ.data?.tipo_parceria === "cliente";
+  const verHub = (a: AbaParceiro) => a.hub === "ver" ? true : a.hub === "ofertar" ? !!hub.data?.ofertar : !!(hub.data?.ver || hub.data?.ofertar);
   return filtrarSecoes(SECOES_PARCEIRO, (a: AbaParceiro) =>
-    (!a.responsavel || !!perfil?.is_responsavel_parceiro) && (!a.onboarding || temPlano) && (!a.comercial || comercial));
+    a.hub ? verHub(a)
+      : !soCliente && (!a.responsavel || !!perfil?.is_responsavel_parceiro) && (!a.onboarding || temPlano) && (!a.comercial || comercial));
 }
 
 function Contador({ n }: { n: number }) {

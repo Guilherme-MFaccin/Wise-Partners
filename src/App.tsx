@@ -43,6 +43,12 @@ const FilaCandidatos = lazy(() => import("@/pages/app/candidatos/Fila"));
 const OrigensCandidatos = lazy(() => import("@/pages/app/candidatos/Origens"));
 const Paginas = lazy(() => import("@/pages/app/programa/Paginas"));
 const Wireframe = lazy(() => import("@/pages/app/programa/Wireframe"));
+const OfertasCatalogo = lazy(() => import("@/pages/app/catalogo/Ofertas"));
+const PedidosCatalogo = lazy(() => import("@/pages/app/catalogo/Pedidos"));
+const ClientesGrupo = lazy(() => import("@/pages/app/catalogo/Clientes"));
+const PCatalogo = lazy(() => import("@/pages/parceiro/catalogo/Catalogo"));
+const POfertas = lazy(() => import("@/pages/parceiro/catalogo/Ofertas"));
+const PPedidos = lazy(() => import("@/pages/parceiro/catalogo/Pedidos"));
 
 const PInicio = lazy(() => import("@/pages/parceiro/Inicio"));
 const PIndicacoes = lazy(() => import("@/pages/parceiro/Indicacoes"));
@@ -118,6 +124,9 @@ export default function App() {
                   <Route path="diagnosticos" element={<Diagnosticos />} />
                   <Route path="programa/paginas" element={<Paginas />} />
                   <Route path="programa/wireframe" element={<Wireframe />} />
+                  <Route path="catalogo" element={<OfertasCatalogo />} />
+                  <Route path="catalogo/pedidos" element={<PedidosCatalogo />} />
+                  <Route path="catalogo/clientes" element={<ClientesGrupo />} />
                   <Route path="parceiros" element={<Parceiros />} />
                   <Route path="parceiros/:id" element={<FichaParceiro />} />
                   <Route path="indicacoes" element={<Indicacoes />} />
@@ -147,6 +156,9 @@ export default function App() {
                   <Route index element={<PInicio />} />
                   <Route path="contrapartidas" element={<Navigate to="/parceiro/acoes" replace />} />
                   <Route path="acoes" element={<PAcoes />} />
+                  <Route path="catalogo" element={<PCatalogo />} />
+                  <Route path="ofertas" element={<POfertas />} />
+                  <Route path="pedidos" element={<PPedidos />} />
                   <Route path="nivel" element={<PNivel />} />
                   <Route path="parceria" element={<PParceria />} />
                   <Route path="onboarding" element={<POnboarding />} />

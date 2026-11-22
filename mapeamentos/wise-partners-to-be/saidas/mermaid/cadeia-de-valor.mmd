@@ -17,17 +17,19 @@ flowchart TB
       P_40["7 Desenvolver o parceiro"]:::confirmado
       P_47["8 Cultivar a comunidade Wise Partners"]:::confirmado
       P_54["9 Reter ou encerrar a parceria"]:::confirmado
+      P_102["10 Conectar negócios pelo Catálogo de parceiros"]:::declarado
       P_20 --> P_26
       P_26 --> P_31
       P_31 --> P_40
       P_40 --> P_47
       P_47 --> P_54
+      P_54 --> P_102
     end
     subgraph cat_suporte ["Suporte"]
     direction LR
-      P_58["10 Manter a Prateleira de fornecedores"]:::confirmado
-      P_59["11 Equipar o parceiro para indicar"]:::confirmado
-      P_60["12 Operar o portal no centro da gestão"]:::confirmado
+      P_58["11 Manter a Prateleira de fornecedores"]:::confirmado
+      P_59["12 Equipar o parceiro para indicar"]:::confirmado
+      P_60["13 Operar o portal no centro da gestão"]:::confirmado
     end
     cat_gestao ~~~ cat_finalistico
     cat_finalistico ~~~ cat_suporte

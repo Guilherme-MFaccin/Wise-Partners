@@ -14,34 +14,39 @@ CANVAS = {
         ("Diagnosticar os clientes dos parceiros e entregar o plano de ação", "D"),
         ("Atrair, selecionar e ativar parceiros", "D"),
         ("Levar cada oportunidade ao closer e devolver o andamento ao parceiro", "D"),
-        ("Manter o portal, os cases e os materiais", "D")]),
+        ("Manter o portal, os cases e os materiais", "D"),
+        ("Operar o Catálogo de parceiros: dar acesso aos clientes do grupo, validar ofertas e registrar pedidos", "D")]),
     "rk": ("Recursos principais", [
         ("Agenda de quem conduz os diagnósticos: o recurso mais escasso", "P"),
         ("Matriz 5x5 e roteiro de diagnóstico gerado por IA", "D"),
         ("Portal Wise Partners e Wise Hub", "D"),
         ("8 cases com +35% de faturamento em média", "D"),
-        ("Marca e método da Wise Makers", "D")]),
+        ("Marca e método da Wise Makers", "D"),
+        ("Catálogo de parceiros com condições só para membros e a base de clientes do Grupo Tríade", "D")]),
     "pv": ("Proposta de valor", [
         ("Para o cliente do parceiro: a consultoria comercial da Wise em formato de diagnóstico de 2 horas com plano de ação e Wise Hub, R$ 5.000 de valor, sem custo", "D"),
         ("Para o parceiro: um benefício de peso para oferecer à base, que retém e diferencia, mais 40% da primeira mensalidade de cada cliente que contratar", "D"),
-        ("Premium: ser recomendado pela Wise aos clientes dela", "D"),
-        ("Elite: uma formação por ano para a base do parceiro", "D"),
+        ("Premium (um cliente seu, no perfil, fez o diagnóstico): acesso ao Catálogo de parceiros e às condições especiais", "D"),
+        ("Elite (um cliente trazido contratou uma empresa do grupo): ofertas no catálogo, vistas pelos clientes do Grupo Tríade e pelos Premium", "D"),
+        ("Para os clientes do Grupo Tríade: um ecossistema de fornecedores de indústria com condições especiais, e vitrine para os próprios produtos", "D"),
         ("Para a Wise: clientes novos com custo menor que o dos canais ativos", "D")]),
     "rel": ("Relacionamento", [
         ("Entrada pessoal: fila, WhatsApp e conversa de 45 minutos", "D"),
         ("Select: automatizado e comunidade (portal, e-mail, encontro trimestral)", "D"),
         ("Premium e Elite: atendimento dedicado, revisão trimestral", "D"),
-        ("Cliente do parceiro: pessoal na reunião, depois autosserviço no Hub", "D")]),
+        ("Cliente do parceiro: pessoal na reunião, depois autosserviço no Hub", "D"),
+        ("Clientes do grupo: acesso pela CS da Tríade ou pelo consultor, com vídeo do Igor; depois autosserviço no catálogo", "D")]),
     "can": ("Canais", [
         ("Parceiros: anúncios, eventos, feiras, orgânico, contatos dos consultores e sócios, instituições e indicação de clientes", "D"),
         ("Página dos parceiros, fila e WhatsApp", "D"),
         ("Clientes dos parceiros: o link enviado pelo próprio parceiro, a página do cliente, a agenda e o Meet", "D"),
-        ("Portal e e-mail para entregar e acompanhar", "D")]),
+        ("Portal e e-mail para entregar e acompanhar", "D"),
+        ("Catálogo de parceiros no portal: pedido de condição com protocolo", "D")]),
     "seg": ("Segmentos de clientes", [
         ("Parceiros: empresas que vendem para empresas com time comercial, de qualquer categoria e tamanho, sem concorrentes", "D"),
         ("Clientes dos parceiros: no ICP, 3 vendedores ou mais, R$ 250 mil por mês e ciclo de venda acima de 2 dias", "D"),
-        ("Clientes da Wise, que recebem recomendações", "D"),
-        ("Plataforma de dois lados: um lado só existe com o outro", "P")]),
+        ("Clientes do Grupo Tríade (Wise Makers e Tríade Digital): usam as condições do catálogo e também podem oferecer", "D"),
+        ("Ecossistema de muitos lados: indústrias e quem presta serviço para indústrias, no modelo da G4 sem cobrança alta para entrar", "D")]),
     "cus": ("Estrutura de custos", [
         ("Comissões: 40% da primeira mensalidade ao parceiro e 10% ao Gerente (R$ 3.000 por cliente de R$ 6.000)", "D"),
         ("Horas de diagnóstico: cerca de 3 horas por cliente no ICP", "P"),
@@ -49,7 +54,7 @@ CANVAS = {
         ("Portal, ferramentas e o tempo do Gerente", "D")]),
     "rec": ("Fontes de receita", [
         ("Mensalidade da consultoria contratada pelo cliente do parceiro: média de R$ 5.500 a R$ 6.000", "F"),
-        ("Comissão paga à Wise pelo parceiro quando um cliente da Wise fecha com ele", "D"),
+        ("Comissão paga à Wise pelo parceiro quando um cliente da Wise fecha com ele; no catálogo, opcional", "D"),
         ("Parceiro e cliente do parceiro não pagam: o diagnóstico é a isca, a consultoria é o anzol", "P")]),
 }
 

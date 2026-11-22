@@ -11,7 +11,8 @@ export type MeuParceiro = {
   id: string;
   nome_fantasia: string;
   razao_social: string | null;
-  tipo_parceria: "comercial" | "institucional";
+  tipo_parceria: "comercial" | "institucional" | "cliente";
+  cliente_grupo?: boolean;
   perfil_institucional: string | null;
   nivel: string | null;
   pacote: string | null;
@@ -26,7 +27,7 @@ export function useMeuParceiro() {
     queryKey: ["portal-parceiro", perfil?.parceiro_id],
     queryFn: async () =>
       ok<any>(await supabase.from("parceiros")
-        .select("id, nome_fantasia, razao_social, tipo_parceria, perfil_institucional, nivel, pacote, data_assinatura, responsavel_id")
+        .select("id, nome_fantasia, razao_social, tipo_parceria, perfil_institucional, nivel, pacote, data_assinatura, responsavel_id, cliente_grupo")
         .eq("id", perfil!.parceiro_id).single()) as MeuParceiro,
   });
 }

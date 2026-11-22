@@ -58,10 +58,10 @@ flowchart LR
     P_55["9.1 Retomar parceiro em risco pela abordagem do tipo"]:::confirmado
     P_56["9.2 Desligar parceiro"]:::confirmado
     P_57["9.3 Encerrar a parceria a pedido"]:::confirmado
-    P_58["10 Manter a Prateleira de fornecedores"]:::confirmado
-    P_59["11 Equipar o parceiro para indicar"]:::confirmado
-    P_60["12 Operar o portal no centro da gestão"]:::confirmado
-    P_61["1.4.1 Definir níveis, benefícios e critérios de subida"]:::contestado
+    P_58["11 Manter a Prateleira de fornecedores"]:::confirmado
+    P_59["12 Equipar o parceiro para indicar"]:::confirmado
+    P_60["13 Operar o portal no centro da gestão"]:::confirmado
+    P_61["1.4.1 Definir níveis, benefícios e critérios de subida"]:::declarado
     P_62["1.4.2 Fixar a regra de comissão e a contrapartida da Prateleira"]:::confirmado
     P_63["1.4.3 Escrever o regulamento curto e a política de dados"]:::confirmado
     P_64["1.4.4 Manter o termo de adesão e o termo de uso do diagnóstico"]:::confirmado
@@ -78,22 +78,26 @@ flowchart LR
     P_83["8.2.2 Conduzir o encontro trimestral de parceiros"]:::confirmado
     P_84["8.2.3 Abrir a mentoria mensal à carteira dos parceiros"]:::confirmado
     P_85["8.2.4 Convidar os parceiros a eventos e formações da Wise"]:::confirmado
-    P_86["10.1 Verificar a ficha do fornecedor"]:::confirmado
-    P_87["10.2 Revisar a permanência na Prateleira"]:::confirmado
-    P_88["11.1 Manter o minicurso e o certificado"]:::confirmado
-    P_89["11.2 Manter o kit de vendas e o simulador de ganho"]:::confirmado
-    P_90["11.3 Manter o perfil do cliente ideal e as frases"]:::confirmado
-    P_91["12.1 Manter as regras e automações"]:::confirmado
-    P_92["12.2 Proteger dados e privacidade"]:::confirmado
-    P_93["12.3 Conceder e revogar acessos ao portal"]:::confirmado
+    P_86["11.1 Verificar a ficha do fornecedor"]:::confirmado
+    P_87["11.2 Revisar a permanência na Prateleira"]:::confirmado
+    P_88["12.1 Manter o minicurso e o certificado"]:::confirmado
+    P_89["12.2 Manter o kit de vendas e o simulador de ganho"]:::confirmado
+    P_90["12.3 Manter o perfil do cliente ideal e as frases"]:::confirmado
+    P_91["13.1 Manter as regras e automações"]:::confirmado
+    P_92["13.2 Proteger dados e privacidade"]:::confirmado
+    P_93["13.3 Conceder e revogar acessos ao portal"]:::confirmado
     P_94["5.2 Conduzir o onboarding por etapas"]:::confirmado
     P_95["6.1 Conduzir o diagnóstico do cliente do parceiro"]:::confirmado
-    P_96["11.4 Manter a página do cliente e o kit de convite"]:::confirmado
+    P_96["12.4 Manter a página do cliente e o kit de convite"]:::confirmado
     P_97["5.4 Lembrar o parceiro parado numa etapa"]:::confirmado
     P_98["4.1 Rodar a campanha de aquisição de parceiros"]:::confirmado
-    P_99["10.3 Suspender a recomendação de um parceiro"]:::confirmado
-    P_100["11.5 Manter os cases de resultado atualizados"]:::confirmado
+    P_99["11.3 Suspender a recomendação de um parceiro"]:::confirmado
+    P_100["12.5 Manter os cases de resultado atualizados"]:::confirmado
     P_101["4.2 Trazer candidatos por outras origens"]:::confirmado
+    P_102["10 Conectar negócios pelo Catálogo de parceiros"]:::declarado
+    P_103["10.1 Dar acesso aos clientes do grupo"]:::declarado
+    P_104["10.2 Validar as ofertas do catálogo"]:::declarado
+    P_105["10.3 Atender o pedido de condição"]:::declarado
     ORG --> P_01
     P_01 --> P_02
     P_01 --> P_03
@@ -184,3 +188,7 @@ flowchart LR
     P_58 --> P_99
     P_59 --> P_100
     P_20 --> P_101
+    ORG --> P_102
+    P_102 --> P_103
+    P_102 --> P_104
+    P_102 --> P_105
