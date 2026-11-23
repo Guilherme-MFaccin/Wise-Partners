@@ -55,11 +55,14 @@ function Etapas({ atual }: { atual: number }) {
   );
 }
 
-function Opcao({ marcado, aoMudar, children, id }: { marcado: boolean; aoMudar: (v: boolean) => void; children: ReactNode; id: string }) {
+function Opcao({ marcado, aoMudar, children, id, invalido, descrito }: {
+  marcado: boolean; aoMudar: (v: boolean) => void; children: ReactNode; id: string; invalido?: boolean; descrito?: string;
+}) {
   return (
     <label htmlFor={id} className={cn("flex min-h-11 cursor-pointer items-start gap-3 rounded-[10px] border px-3 py-2.5 text-sm transition-colors",
       marcado ? "border-menta-500/50 bg-menta-500/5" : "border-white/10 hover:border-white/25")}>
-      <Checkbox id={id} checked={marcado} onCheckedChange={(v) => aoMudar(v === true)} className="mt-0.5 rounded-[4px] border-white/60" />
+      <Checkbox id={id} checked={marcado} onCheckedChange={(v) => aoMudar(v === true)} className="mt-0.5 rounded-[4px] border-white/60"
+        aria-invalid={invalido || undefined} aria-describedby={descrito} />
       <span>{children}</span>
     </label>
   );
@@ -80,6 +83,7 @@ export default function CadastroComunidade() {
   const [falha, setFalha] = useState<string | null>(null);
   const [pronto, setPronto] = useState<{ entrou: boolean } | null>(null);
   const topo = useRef<HTMLDivElement>(null);
+  const legenda = useRef<HTMLLegendElement>(null);
   const set = <K extends keyof Form>(k: K, v: Form[K]) => setF((x) => ({ ...x, [k]: v }));
   const alternar = (k: "empresas_grupo" | "interesses", v: string, on: boolean) =>
     setF((x) => ({ ...x, [k]: on ? [...new Set([...x[k], v])] : x[k].filter((y) => y !== v) }));
@@ -122,11 +126,17 @@ export default function CadastroComunidade() {
   function focarErro() {
     setTimeout(() => document.querySelector<HTMLElement>('#form-comunidade [aria-invalid="true"]')?.focus(), 0);
   }
+  // Troca de etapa: rola ao topo (sem animação com "reduzir movimento") e leva o foco ao título da etapa nova
+  function irPara(n: number) {
+    setEtapa(n);
+    const suave = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    topo.current?.scrollIntoView({ behavior: suave ? "smooth" : "auto", block: "start" });
+    setTimeout(() => legenda.current?.focus({ preventScroll: true }), 0);
+  }
   function avancar() {
     setTocado((t) => ({ ...t, [etapa]: true }));
     if (!etapaValida(etapa)) return focarErro();
-    setEtapa((e) => e + 1);
-    topo.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    irPara(etapa + 1);
   }
 
   async function enviar(e: FormEvent) {
@@ -221,7 +231,7 @@ export default function CadastroComunidade() {
 
           {etapa === 0 && (
             <fieldset className="space-y-5">
-              <legend className="text-lg font-semibold">Sua empresa</legend>
+              <legend ref={legenda} tabIndex={-1} className="text-lg font-semibold focus:outline-none">Sua empresa</legend>
               <div className="grid gap-5 sm:grid-cols-2">
                 <Campo id="cnpj" rotulo="CNPJ" erro={erro(0, "cnpj")}>
                   <Input id="cnpj" inputMode="numeric" value={f.cnpj} onChange={(e) => set("cnpj", mascaraCnpj(e.target.value))} aria-invalid={!!erro(0, "cnpj")} aria-describedby={erro(0, "cnpj") ? "cnpj-erro" : undefined} />
@@ -265,7 +275,7 @@ export default function CadastroComunidade() {
 
           {etapa === 1 && (
             <fieldset className="space-y-6">
-              <legend className="text-lg font-semibold">Relação com o Grupo Tríade</legend>
+              <legend ref={legenda} tabIndex={-1} className="text-lg font-semibold focus:outline-none">Relação com o Grupo Tríade</legend>
               <div className="space-y-2">
                 <p id="cliente-rotulo" className="text-sm font-medium">A sua empresa é cliente de alguma empresa do Grupo Tríade?</p>
                 <RadioGroup value={f.cliente} onValueChange={(v) => set("cliente", v as Form["cliente"])} aria-labelledby="cliente-rotulo" className="grid gap-2 sm:grid-cols-2"
@@ -280,30 +290,32 @@ export default function CadastroComunidade() {
                 {erro(1, "cliente") && <p id="cliente-erro" role="alert" className="text-xs text-destructive">{erro(1, "cliente")}</p>}
               </div>
               {f.cliente === "sim" && (
-                <div className="space-y-2">
-                  <p className="text-sm font-medium">De qual empresa do grupo?</p>
+                <fieldset className="space-y-2">
+                  <legend className="text-sm font-medium">De qual empresa do grupo?</legend>
                   <div className="grid gap-2 sm:grid-cols-3">
-                    {grupo.map((g) => (
-                      <Opcao key={g.id} id={`grupo-${g.codigo}`} marcado={f.empresas_grupo.includes(g.id)} aoMudar={(v) => alternar("empresas_grupo", g.id, v)}>{g.nome}</Opcao>
+                    {grupo.map((g, i) => (
+                      <Opcao key={g.id} id={`grupo-${g.codigo}`} marcado={f.empresas_grupo.includes(g.id)} aoMudar={(v) => alternar("empresas_grupo", g.id, v)}
+                        invalido={i === 0 && !!erro(1, "empresas_grupo")} descrito={erro(1, "empresas_grupo") ? "grupo-erro" : undefined}>{g.nome}</Opcao>
                     ))}
                   </div>
                   {!grupo.length && <p className="text-sm text-neutro-300">A lista não carregou. Tente de novo pelo aviso acima.</p>}
-                  {erro(1, "empresas_grupo") && <p role="alert" className="text-xs text-destructive">{erro(1, "empresas_grupo")}</p>}
+                  {erro(1, "empresas_grupo") && <p id="grupo-erro" role="alert" className="text-xs text-destructive">{erro(1, "empresas_grupo")}</p>}
                   <p className="text-xs text-neutro-300">A Wise confirma o vínculo em até 2 dias úteis antes de liberar as condições do catálogo.</p>
-                </div>
+                </fieldset>
               )}
-              <div className="space-y-2">
-                <p className="text-sm font-medium">O que a sua empresa quer na comunidade?</p>
+              <fieldset className="space-y-2">
+                <legend className="text-sm font-medium">O que a sua empresa quer na comunidade?</legend>
                 <div className="grid gap-2">
-                  {INTERESSES.map((i) => (
-                    <Opcao key={i.valor} id={`int-${i.valor}`} marcado={f.interesses.includes(i.valor)} aoMudar={(v) => alternar("interesses", i.valor, v)}>{i.rotulo}</Opcao>
+                  {INTERESSES.map((i, n) => (
+                    <Opcao key={i.valor} id={`int-${i.valor}`} marcado={f.interesses.includes(i.valor)} aoMudar={(v) => alternar("interesses", i.valor, v)}
+                      invalido={n === 0 && !!erro(1, "interesses")} descrito={erro(1, "interesses") ? "interesses-erro" : undefined}>{i.rotulo}</Opcao>
                   ))}
                 </div>
-                {erro(1, "interesses") && <p role="alert" className="text-xs text-destructive">{erro(1, "interesses")}</p>}
+                {erro(1, "interesses") && <p id="interesses-erro" role="alert" className="text-xs text-destructive">{erro(1, "interesses")}</p>}
                 {querOferecer && f.cliente !== "sim" && !querParceria && (
                   <p className="text-xs text-neutro-300">Oferecer no catálogo é para clientes do grupo e parceiros Elite. A Wise conversa com você sobre o caminho.</p>
                 )}
-              </div>
+              </fieldset>
               {(querParceria || querOferecer) && (
                 <Campo id="categoria" rotulo="Categoria da sua empresa" opcional={!querParceria} erro={erro(1, "categoria_id")}>
                   <Select value={f.categoria_id} onValueChange={(v) => set("categoria_id", v)}>
@@ -326,10 +338,10 @@ export default function CadastroComunidade() {
                   </Campo>
                   <label className="flex items-start gap-3 text-sm">
                     <Checkbox checked={f.aceite_termo_parceiro} onCheckedChange={(v) => set("aceite_termo_parceiro", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
-                      aria-invalid={!!erro(1, "aceite_termo_parceiro")} />
-                    <span>Li e aceito o <Link to="/parceiros/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de adesão do programa</Link>. A entrada como parceiro acontece depois da conversa com a Wise.</span>
+                      aria-invalid={!!erro(1, "aceite_termo_parceiro")} aria-describedby={erro(1, "aceite_termo_parceiro") ? "termo-parceiro-erro" : undefined} />
+                    <span>Li e aceito o <Link to="/parceiros/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de adesão do programa<span className="sr-only"> (abre em outra aba)</span></Link>. A entrada como parceiro acontece depois da conversa com a Wise.</span>
                   </label>
-                  {erro(1, "aceite_termo_parceiro") && <p role="alert" className="text-xs text-destructive">{erro(1, "aceite_termo_parceiro")}</p>}
+                  {erro(1, "aceite_termo_parceiro") && <p id="termo-parceiro-erro" role="alert" className="text-xs text-destructive">{erro(1, "aceite_termo_parceiro")}</p>}
                 </div>
               )}
               <Campo id="como_conheceu" rotulo="Como conheceu a comunidade" opcional>
@@ -343,7 +355,7 @@ export default function CadastroComunidade() {
 
           {etapa === 2 && (
             <fieldset className="space-y-5">
-              <legend className="text-lg font-semibold">Seu acesso</legend>
+              <legend ref={legenda} tabIndex={-1} className="text-lg font-semibold focus:outline-none">Seu acesso</legend>
               <div className="grid gap-5 sm:grid-cols-2">
                 <Campo id="nome" rotulo="Seu nome" erro={erro(2, "nome")}>
                   <Input id="nome" autoComplete="name" value={f.nome} onChange={(e) => set("nome", e.target.value)} aria-invalid={!!erro(2, "nome")} aria-describedby={erro(2, "nome") ? "nome-erro" : undefined} />
@@ -380,14 +392,14 @@ export default function CadastroComunidade() {
               )}
               <div className="space-y-3 text-sm">
                 <label className="flex items-start gap-3">
-                  <Checkbox checked={f.aceite_uso} onCheckedChange={(v) => set("aceite_uso", v === true)} className="mt-0.5 rounded-[4px] border-white/60" aria-invalid={!!erro(2, "aceites") && !f.aceite_uso} />
-                  <span>Li e aceito o <Link to="/comunidade/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de uso da comunidade</Link>.</span>
+                  <Checkbox checked={f.aceite_uso} onCheckedChange={(v) => set("aceite_uso", v === true)} className="mt-0.5 rounded-[4px] border-white/60" aria-invalid={!!erro(2, "aceites") && !f.aceite_uso} aria-describedby={erro(2, "aceites") ? "aceites-erro" : undefined} />
+                  <span>Li e aceito o <Link to="/comunidade/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de uso da comunidade<span className="sr-only"> (abre em outra aba)</span></Link>.</span>
                 </label>
                 <label className="flex items-start gap-3">
-                  <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5 rounded-[4px] border-white/60" aria-invalid={!!erro(2, "aceites") && !f.aceite_privacidade} />
-                  <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade</Link>.</span>
+                  <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5 rounded-[4px] border-white/60" aria-invalid={!!erro(2, "aceites") && !f.aceite_privacidade} aria-describedby={erro(2, "aceites") ? "aceites-erro" : undefined} />
+                  <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade<span className="sr-only"> (abre em outra aba)</span></Link>.</span>
                 </label>
-                {erro(2, "aceites") && <p role="alert" className="text-xs text-destructive">{erro(2, "aceites")}</p>}
+                {erro(2, "aceites") && <p id="aceites-erro" role="alert" className="text-xs text-destructive">{erro(2, "aceites")}</p>}
               </div>
             </fieldset>
           )}
@@ -395,7 +407,7 @@ export default function CadastroComunidade() {
           {falha && <p role="alert" className="rounded-[10px] border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">{falha}</p>}
 
           <div className="flex flex-col-reverse gap-3 border-t border-white/10 pt-5 sm:flex-row sm:justify-between">
-            {etapa > 0 ? <Button type="button" variant="ghost" onClick={() => setEtapa((e) => e - 1)} disabled={enviando}><ArrowLeft className="mr-1.5 h-4 w-4" aria-hidden />Voltar</Button> : <span />}
+            {etapa > 0 ? <Button type="button" variant="ghost" onClick={() => irPara(etapa - 1)} disabled={enviando}><ArrowLeft className="mr-1.5 h-4 w-4" aria-hidden />Voltar</Button> : <span />}
             <Button type="submit" size="lg" className="h-12 px-6" disabled={enviando}>
               {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Criando o acesso...</>
                 : etapa < 2 ? <>Continuar<ArrowRight className="ml-1.5 h-4 w-4" aria-hidden /></> : "Criar acesso e entrar"}

@@ -31,7 +31,7 @@ export function AvatarEmpresa({ nome, caminho, tamanho = "md" }: { nome: string;
 export function Condicao({ o, compacta }: { o: OfertaCatalogo; compacta?: boolean }) {
   if (o.liberada && o.condicao) {
     return (
-      <p className={cn("flex items-start gap-2 rounded-[10px] border border-menta-500/30 bg-menta-500/5 px-3 py-2 font-semibold text-menta-300", compacta ? "text-sm" : "text-[15px]")}>
+      <p className={cn("flex items-start gap-2 rounded-[10px] border border-menta-500/30 bg-menta-500/5 px-3 py-2 font-semibold text-menta-300", compacta ? "text-sm" : "text-base")}>
         <BadgePercent className="mt-0.5 h-4 w-4 shrink-0" aria-hidden /><span><span className="sr-only">Condição para membros: </span>{o.condicao}</span>
       </p>
     );
@@ -54,21 +54,21 @@ export function CartaoOferta({ o, aoPedir, aoVerEmpresa }: { o: OfertaCatalogo; 
         <AvatarEmpresa nome={o.empresa} caminho={o.logo_caminho} />
         <div className="min-w-0 flex-1">
           {aoVerEmpresa ? (
-            <button type="button" onClick={() => aoVerEmpresa(o.parceiro_id)} className="block max-w-full truncate text-left text-sm font-semibold hover:underline">{o.empresa}</button>
+            <button type="button" tabIndex={-1} onClick={() => aoVerEmpresa(o.parceiro_id)} className="block max-w-full truncate text-left text-sm font-semibold hover:underline">{o.empresa}</button>
           ) : <p className="truncate text-sm font-semibold">{o.empresa}</p>}
           <p className="truncate text-xs text-neutro-300">{[area, local(o)].filter(Boolean).join(" · ") || "Empresa do ecossistema"}</p>
         </div>
       </div>
-      <h3 className="mt-4 text-base font-semibold leading-snug">{o.titulo}</h3>
+      <h2 className="mt-4 text-base font-semibold leading-snug">{o.titulo}</h2>
       <p className="mt-2 line-clamp-3 text-sm text-neutro-100">{o.descricao}</p>
       {o.para_quem && <p className="mt-2 line-clamp-2 text-xs text-neutro-300"><span className="font-semibold">Para quem: </span>{o.para_quem}</p>}
       <div className="mt-4"><Condicao o={o} compacta /></div>
       <div className="mt-auto flex flex-wrap items-center gap-2 pt-4">
         {o.validade && <span className="inline-flex items-center gap-1 text-xs text-neutro-300"><CalendarDays className="h-3.5 w-3.5" aria-hidden />Até {data(o.validade)}</span>}
         <span className="ml-auto flex items-center gap-2">
-          {aoVerEmpresa && <Button size="sm" variant="ghost" onClick={() => aoVerEmpresa(o.parceiro_id)}>Ver a empresa</Button>}
+          {aoVerEmpresa && <Button size="sm" variant="ghost" onClick={() => aoVerEmpresa(o.parceiro_id)}>Ver a empresa<span className="sr-only"> {o.empresa}</span></Button>}
           {o.propria ? <span className="text-xs text-neutro-300">Sua oferta</span>
-            : o.liberada && aoPedir && <Button size="sm" onClick={() => aoPedir(o)}>Pedir a condição</Button>}
+            : o.liberada && aoPedir && <Button size="sm" onClick={() => aoPedir(o)}>Pedir a condição<span className="sr-only">: {o.titulo}</span></Button>}
         </span>
       </div>
     </article>
@@ -102,7 +102,7 @@ export function CartaoEmpresa({ e, aoAbrir }: { e: EmpresaCatalogo; aoAbrir: (id
         </div>
       </div>
       {e.categorias.length > 0 && (
-        <ul className="mt-3 flex flex-wrap gap-1.5">{e.categorias.slice(0, 3).map((c) => <li key={c} className="rounded-full bg-white/5 px-2 py-0.5 text-[11px] text-neutro-300">{c}</li>)}</ul>
+        <ul className="mt-3 flex flex-wrap gap-1.5">{e.categorias.slice(0, 3).map((c) => <li key={c} className="rounded-full bg-white/5 px-2 py-0.5 text-xs text-neutro-300">{c}</li>)}</ul>
       )}
       <p className="mt-4 text-sm text-neutro-100">{e.ofertas[0].titulo}</p>
       <p className="mt-auto pt-4 text-xs text-neutro-300"><span className="tabular-nums">{e.ofertas.length}</span> {e.ofertas.length === 1 ? "oferta" : "ofertas"} no catálogo</p>
@@ -186,22 +186,22 @@ export function DialogoParceria({ aberto, fechar }: { aberto: boolean; fechar: (
           <div className="space-y-1.5">
             <Label htmlFor="par-cat">Categoria da sua empresa</Label>
             <Select value={f.categoria_id} onValueChange={(v) => setF((x) => ({ ...x, categoria_id: v }))}>
-              <SelectTrigger id="par-cat" aria-invalid={tocado && !!erros.categoria_id}><SelectValue placeholder="Escolha a categoria" /></SelectTrigger>
+              <SelectTrigger id="par-cat" aria-invalid={tocado && !!erros.categoria_id} aria-describedby={tocado && erros.categoria_id ? "par-cat-erro" : undefined}><SelectValue placeholder="Escolha a categoria" /></SelectTrigger>
               <SelectContent>{opcoes.map((c) => <SelectItem key={c.id} value={c.id}>{c.nome}</SelectItem>)}</SelectContent>
             </Select>
-            {tocado && erros.categoria_id && <p className="text-xs text-red-300">{erros.categoria_id}</p>}
+            {tocado && erros.categoria_id && <p id="par-cat-erro" className="text-xs text-destructive">{erros.categoria_id}</p>}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="par-cli">Clientes ativos, mais ou menos</Label>
             <Input id="par-cli" inputMode="numeric" value={f.clientes_ativos} onChange={(e) => setF((x) => ({ ...x, clientes_ativos: e.target.value.replace(/\D/g, "").slice(0, 7) }))}
-              aria-invalid={tocado && !!erros.clientes_ativos} />
-            {tocado && erros.clientes_ativos && <p className="text-xs text-red-300">{erros.clientes_ativos}</p>}
+              aria-invalid={tocado && !!erros.clientes_ativos} aria-describedby={tocado && erros.clientes_ativos ? "par-cli-erro" : undefined} />
+            {tocado && erros.clientes_ativos && <p id="par-cli-erro" className="text-xs text-destructive">{erros.clientes_ativos}</p>}
           </div>
           <label className="flex items-start gap-3 text-sm">
-            <Checkbox checked={f.aceite_termo_parceiro} onCheckedChange={(v) => setF((x) => ({ ...x, aceite_termo_parceiro: v === true }))} className="mt-0.5" aria-invalid={tocado && !!erros.aceite} />
-            <span>Li e aceito o <a href="/parceiros/termo" target="_blank" rel="noreferrer" className="text-menta-300 underline underline-offset-2">termo de adesão do programa</a>.</span>
+            <Checkbox checked={f.aceite_termo_parceiro} onCheckedChange={(v) => setF((x) => ({ ...x, aceite_termo_parceiro: v === true }))} className="mt-0.5" aria-invalid={tocado && !!erros.aceite} aria-describedby={tocado && erros.aceite ? "par-aceite-erro" : undefined} />
+            <span>Li e aceito o <a href="/parceiros/termo" target="_blank" rel="noreferrer" className="text-menta-300 underline underline-offset-2">termo de adesão do programa<span className="sr-only"> (abre em outra aba)</span></a>.</span>
           </label>
-          {tocado && erros.aceite && <p className="text-xs text-red-300">{erros.aceite}</p>}
+          {tocado && erros.aceite && <p id="par-aceite-erro" className="text-xs text-destructive">{erros.aceite}</p>}
         </form>
         <DialogFooter>
           <Button variant="ghost" onClick={fechar}>Cancelar</Button>
@@ -342,9 +342,9 @@ export function DialogoOferta({ aberto, oferta, parceiroId, fechar }: { aberto: 
 export function FiltroCategorias({ categorias, ativa, aoMudar }: { categorias: string[]; ativa: string; aoMudar: (c: string) => void }) {
   if (categorias.length < 2) return null;
   return (
-    <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none]" role="radiogroup" aria-label="Categoria">
+    <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none]" role="group" aria-label="Categoria">
       {["", ...categorias].map((c) => (
-        <button key={c || "todas"} type="button" role="radio" aria-checked={ativa === c} onClick={() => aoMudar(c)}
+        <button key={c || "todas"} type="button" aria-pressed={ativa === c} onClick={() => aoMudar(c)}
           className={cn("min-h-9 shrink-0 rounded-full border border-white/10 px-3 text-sm text-neutro-300 hover:text-white", ativa === c && "border-menta-500/50 bg-menta-500/10 text-white")}>
           {c || "Todas"}
         </button>

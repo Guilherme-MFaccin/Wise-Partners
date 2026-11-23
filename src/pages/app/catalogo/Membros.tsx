@@ -43,6 +43,8 @@ const faixa = (v: string | null) => FAIXAS_FATURAMENTO.find((f) => f.valor === v
 const pendConfirmar = (m: Membro) => m.vinculo_cliente === "a_confirmar";
 const pendConsultoria = (m: Membro) => m.interesses.includes("conhecer_consultoria") && !m.lead_atendido_em;
 const pendParceria = (m: Membro) => !!m.fila && FILA_ABERTA.includes(m.fila.status);
+// O que a Wise precisa fazer agora com a empresa (o mesmo critério do filtro "Com pendência")
+const proximoPasso = (m: Membro) => pendConfirmar(m) ? "Confirmar cliente" : pendConsultoria(m) ? "Falar sobre a consultoria" : pendParceria(m) ? "Conversa de parceria" : null;
 
 function useMembros(ativo: boolean) {
   return useQuery({
@@ -98,7 +100,7 @@ function Detalhe({ m, grupo, fechar }: { m: Membro; grupo: { id: string; nome: s
         {linha("Local", [m.cidade, m.uf].filter(Boolean).join(", "))}
         {linha("Faturamento", faixa(m.faturamento))}
         {linha("Vendedores", m.vendedores !== null ? <span className="tabular-nums">{m.vendedores}</span> : null)}
-        {linha("Site", m.site)}
+        {linha("Site", m.site ? <a href={/^https?:/.test(m.site) ? m.site : `https://${m.site}`} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">{m.site}<span className="sr-only"> (abre em outra aba)</span></a> : null)}
         {linha("Contato", <>{m.nome}{m.cargo ? `, ${m.cargo}` : ""}<br /><span className="text-neutro-300">{m.email}</span></>)}
         {linha("Conheceu por", m.como_conheceu)}
         {linha("Cadastro", `${data(m.created_at)} (${haQuanto(m.created_at)})`)}
@@ -208,12 +210,12 @@ export default function MembrosComunidade() {
     <div>
       {cab}
       <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center">
-        <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none]" role="radiogroup" aria-label="Filtrar empresas">
+        <div className="flex gap-1.5 overflow-x-auto pb-1 [scrollbar-width:none]" role="group" aria-label="Filtrar empresas">
           {atalhos.map((a) => (
-            <button key={a.id} type="button" role="radio" aria-checked={filtro === a.id} onClick={() => setFiltro(a.id)}
+            <button key={a.id} type="button" aria-pressed={filtro === a.id} onClick={() => setFiltro(a.id)}
               className={cn("flex min-h-9 shrink-0 items-center gap-2 rounded-full border border-white/10 px-3 text-sm text-neutro-300 hover:text-white",
                 filtro === a.id && "border-menta-500/50 bg-menta-500/10 text-white")}>
-              {a.rotulo}<span className={cn("tabular-nums", !a.n && "text-neutro-500")}>{q.isLoading ? "" : a.n ?? 0}</span>
+              {a.rotulo}<span className={cn("tabular-nums", !a.n && "text-neutro-300")}>{q.isLoading ? "" : a.n ?? 0}</span>
             </button>
           ))}
         </div>
@@ -235,12 +237,15 @@ export default function MembrosComunidade() {
             : filtro === "pendentes" ? "Todas as empresas da comunidade estão em dia." : "Mude o filtro ou a busca."}
         </Vazio>
       )}
+      {q.isSuccess && membros.length >= 1000 && (
+        <p className="mb-3 rounded-[10px] border border-white/10 bg-white/5 px-3 py-2 text-sm">Mostrando as 1.000 empresas mais recentes. Use a busca para achar as mais antigas.</p>
+      )}
       {q.isSuccess && lista.length > 0 && (
         <ul className="overflow-hidden rounded-[14px] border border-white/10 bg-card">
           {lista.map((m) => (
             <li key={m.id} className="border-b border-white/5 last:border-0">
               <button type="button" onClick={() => abrir(m.id)}
-                className="grid w-full gap-2 px-4 py-3 text-left hover:bg-white/5 focus-visible:bg-white/5 focus-visible:outline-none md:grid-cols-[1.4fr_1fr_1.4fr_7rem] md:items-center">
+                className="grid w-full gap-2 px-4 py-3 text-left hover:bg-white/5 focus-visible:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring md:grid-cols-[1.4fr_1fr_1.4fr_7rem] md:items-center">
                 <span className="min-w-0">
                   <span className="block truncate font-semibold">{m.empresa}</span>
                   <span className="block truncate text-xs text-neutro-300">{[m.segmento, [m.cidade, m.uf].filter(Boolean).join(", ")].filter(Boolean).join(" · ")}</span>
@@ -250,9 +255,10 @@ export default function MembrosComunidade() {
                   <span className="block truncate text-xs text-neutro-300">{m.vendedores !== null ? `${m.vendedores} vendedores` : ""}{faixa(m.faturamento) ? ` · ${faixa(m.faturamento)}` : ""}</span>
                 </span>
                 <span className="flex flex-wrap gap-1.5">
-                  {m.vinculo_cliente !== "nao_declarado" && <Pilula tom={VINCULO[m.vinculo_cliente].tom}>{VINCULO[m.vinculo_cliente].rotulo}</Pilula>}
+                  {proximoPasso(m) && <Pilula tom="alerta">{proximoPasso(m)}</Pilula>}
+                  {m.vinculo_cliente !== "nao_declarado" && m.vinculo_cliente !== "a_confirmar" && <Pilula tom={VINCULO[m.vinculo_cliente].tom}>{VINCULO[m.vinculo_cliente].rotulo}</Pilula>}
                   {m.parceiro && m.parceiro.tipo_parceria !== "cliente" && <Pilula tom="menta">Parceira</Pilula>}
-                  {m.interesses.filter((i) => i !== "comprar").map((i) => <Pilula key={i}>{INTERESSE[i]}</Pilula>)}
+                  {m.interesses.filter((i) => i !== "comprar").map((i) => <span key={i} className="text-xs text-neutro-300">{INTERESSE[i]}</span>)}
                 </span>
                 <span className="text-xs text-neutro-300 md:text-right">{data(m.created_at)}</span>
               </button>

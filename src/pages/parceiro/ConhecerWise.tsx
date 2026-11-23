@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ClipboardList, Lock, Sparkles, Users } from "lucide-react";
 import { Cabecalho } from "@/components/comum/Cabecalho";
-import { Carregando, ErroCarga } from "@/components/comum/Estados";
+import { ErroCarga } from "@/components/comum/Estados";
 import { Button } from "@/components/ui/button";
 import { useAcessoHub } from "@/components/catalogo/dados";
+import { DialogoParceria } from "@/components/catalogo/Componentes";
 import { ConteudoTrilha } from "@/pages/parceiro/Trilha";
 
 // Conhecer a Wise Makers: o que a Wise Makers faz, o que a empresa indicada recebe e o minicurso "Como vender a Wise Makers".
@@ -21,10 +23,22 @@ const RECEBE = [
 
 export default function ConhecerWise() {
   const acesso = useAcessoHub();
+  const [parceria, setParceria] = useState(false);
   const cab = <Cabecalho titulo="Conhecer a Wise Makers" descricao="O que a Wise Makers faz, e como apresentar a consultoria gratuita a quem você conhece?" />;
-  if (acesso.isLoading) return <div>{cab}<Carregando /></div>;
+  if (acesso.isLoading) {
+    return (
+      <div className="space-y-8">{cab}
+        <div className="grid gap-4 sm:grid-cols-3" aria-busy="true" aria-label="Carregando">
+          {Array.from({ length: 3 }).map((_, i) => <div key={i} className="h-32 rounded-[14px] border border-white/10 bg-card motion-safe:animate-pulse" />)}
+        </div>
+        <div className="h-56 rounded-[14px] border border-white/10 bg-card motion-safe:animate-pulse" />
+      </div>
+    );
+  }
   if (acesso.error) return <div>{cab}<ErroCarga erro={acesso.error} aoTentar={() => acesso.refetch()} /></div>;
   const indicar = !!acesso.data?.indicar;
+  const a = acesso.data;
+  const naFila = !!a?.pedido_parceria && ["fila", "contatado", "reuniao_marcada"].includes(a.pedido_parceria);
 
   return (
     <div className="space-y-8">
@@ -33,7 +47,7 @@ export default function ConhecerWise() {
         {FATOS.map((f) => (
           <div key={f.numero} className="rounded-[14px] border border-white/10 bg-card p-5">
             <f.icone className="h-5 w-5 text-menta-400" aria-hidden />
-            <p className="mt-3 font-display text-[36px] font-bold leading-none tabular-nums">{f.numero}</p>
+            <p className="mt-3 text-[28px] font-bold leading-none tabular-nums">{f.numero}</p>
             <p className="mt-2 text-sm text-neutro-300">{f.texto}</p>
           </div>
         ))}
@@ -59,10 +73,18 @@ export default function ConhecerWise() {
               <Button asChild className="mt-auto self-start"><Link to="/parceiro/indicar">Pegar o meu link<ArrowRight className="ml-1.5 h-4 w-4" aria-hidden /></Link></Button>
             </>
           ) : (
-            <p className="mt-2 flex items-start gap-2 text-sm text-neutro-300">
-              <Lock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-              O link de indicação é de clientes do Grupo Tríade confirmados e de parceiros do programa. Quando a sua empresa tiver o acesso, ele aparece em Indicar a Wise Makers.
-            </p>
+            <>
+              <p className="mt-2 flex items-start gap-2 text-sm text-neutro-300">
+                <Lock className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+                {a?.vinculo_cliente === "a_confirmar"
+                  ? "O link sai assim que a Wise confirmar que a sua empresa é cliente do grupo, em até 2 dias úteis."
+                  : naFila ? "O link sai quando a sua empresa entrar no programa de parceiros. O pedido já está com a Wise, que fala com você pelo WhatsApp."
+                  : "O link de indicação é de clientes do Grupo Tríade confirmados e de parceiros do programa."}
+              </p>
+              {a?.vinculo_cliente !== "a_confirmar" && !naFila && (
+                <Button variant="outline" className="mt-auto self-start" onClick={() => setParceria(true)}>Quero ser parceiro</Button>
+              )}
+            </>
           )}
         </div>
       </section>
@@ -71,6 +93,7 @@ export default function ConhecerWise() {
         <p id="minicurso" className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Minicurso</p>
         <ConteudoTrilha param="como_vender" embutido />
       </section>
+      <DialogoParceria aberto={parceria} fechar={() => setParceria(false)} />
     </div>
   );
 }

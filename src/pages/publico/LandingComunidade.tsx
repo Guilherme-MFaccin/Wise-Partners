@@ -40,7 +40,7 @@ function VisualCatalogo() {
       <div className="rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-2 text-sm font-semibold"><Store className="h-4 w-4 text-menta-400" />Catálogo de parceiros</span>
-          <span className="rounded-full border border-white/10 px-2 py-0.5 text-[11px] text-neutro-300">Só para membros</span>
+          <span className="rounded-full border border-white/10 px-2 py-0.5 text-xs text-neutro-300">Só para membros</span>
         </div>
         <div className="mt-4 space-y-3">
           {cartoes.map((c, i) => (
@@ -48,7 +48,7 @@ function VisualCatalogo() {
               <div className="flex items-center gap-3">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[8px] bg-white/5 text-neutro-300"><Building2 className="h-4 w-4" /></span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[11px] uppercase tracking-wider text-neutro-300">{c.area}</p>
+                  <p className="text-xs uppercase tracking-wider text-neutro-300">{c.area}</p>
                   <p className="truncate text-sm font-semibold">{c.titulo}</p>
                 </div>
               </div>
@@ -80,14 +80,14 @@ function CartaoEmpresaGrupo({ e }: { e: EmpresaGrupo }) {
 }
 
 function Marca({ sim }: { sim: boolean }) {
-  return sim ? <Check className="mx-auto h-5 w-5 text-menta-400" aria-label="Sim" /> : <X className="mx-auto h-5 w-5 text-neutro-500" aria-label="Não" />;
+  return sim ? <Check className="mx-auto h-5 w-5 text-menta-400" role="img" aria-label="Sim" /> : <X className="mx-auto h-5 w-5 text-neutro-300" role="img" aria-label="Não" />;
 }
 
 // Tabela no computador; no celular, um cartão por perfil com o que ele acessa
 function QuadroAcessos() {
   return (
     <>
-      <div className="hidden overflow-hidden rounded-[14px] border border-white/10 bg-card md:block">
+      <div className="hidden overflow-hidden rounded-[14px] border border-white/10 bg-card lg:block">
         <table className="w-full table-fixed text-left text-sm">
           <caption className="sr-only">O que cada empresa acessa na comunidade</caption>
           <thead>
@@ -106,14 +106,14 @@ function QuadroAcessos() {
           </tbody>
         </table>
       </div>
-      <ul className="grid gap-3 sm:grid-cols-2 md:hidden">
+      <ul className="grid gap-3 sm:grid-cols-2 lg:hidden">
         {PERFIS_ACESSO.map((p, i) => (
           <li key={p} className="rounded-[14px] border border-white/10 bg-card p-4">
             <p className="font-semibold">{p}</p>
             <ul className="mt-3 space-y-2 text-sm">
               {LINHAS_ACESSO.map((l) => (
                 <li key={l.rotulo} className={`flex items-start gap-2 ${l.marcas[i] ? "" : "text-neutro-300"}`}>
-                  {l.marcas[i] ? <Check className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-label="Sim" /> : <X className="mt-0.5 h-4 w-4 shrink-0 text-neutro-500" aria-label="Não" />}
+                  {l.marcas[i] ? <Check className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" role="img" aria-label="Sim" /> : <X className="mt-0.5 h-4 w-4 shrink-0 text-neutro-300" role="img" aria-label="Não" />}
                   {l.rotulo}
                 </li>
               ))}

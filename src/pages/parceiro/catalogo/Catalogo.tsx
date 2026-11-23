@@ -39,7 +39,7 @@ function AvisoAcesso({ aoPedirParceria }: { aoPedirParceria: () => void }) {
   const caixa = "mb-5 flex flex-col gap-3 rounded-[14px] border p-4 sm:flex-row sm:items-start sm:p-5";
   if (a.vinculo_cliente === "a_confirmar") {
     return (
-      <section className={`${caixa} border-warning/30 bg-warning/5`} aria-live="polite">
+      <section className={`${caixa} border-warning/30 bg-warning/5`}>
         <Clock className="h-5 w-5 shrink-0 text-warning" aria-hidden />
         <div className="min-w-0 text-sm">
           <p className="font-semibold">Estamos confirmando que a sua empresa é cliente {a.empresas_grupo?.length ? `da ${a.empresas_grupo.join(" e da ")}` : "do Grupo Tríade"}</p>

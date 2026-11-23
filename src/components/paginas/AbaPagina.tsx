@@ -84,14 +84,14 @@ function CartaoPublicacao({ tabela, publicada, url, semLink, desligado, nome }: 
   );
 }
 
-function CamposVideo({ url, formato, aoMudarUrl, aoMudarFormato, desligado }: {
-  url: string; formato: FormatoVideo; aoMudarUrl: (v: string) => void; aoMudarFormato: (v: FormatoVideo) => void; desligado: boolean;
+function CamposVideo({ url, formato, aoMudarUrl, aoMudarFormato, desligado, semVideo = "Vazio, a página mostra a capa com o Igor." }: {
+  url: string; formato: FormatoVideo; aoMudarUrl: (v: string) => void; aoMudarFormato: (v: FormatoVideo) => void; desligado: boolean; semVideo?: string;
 }) {
   const invalido = url.trim() !== "" && !fonteVideo(url.trim());
   return (
     <div className="grid gap-4 sm:grid-cols-2">
       <CampoTexto rotulo="Endereço do vídeo" valor={url} aoMudar={aoMudarUrl} desligado={desligado} placeholder="https://youtu.be/..." maximo={500}
-        ajuda={invalido ? "Use um link do YouTube, do Vimeo ou de um arquivo que comece com https://." : "YouTube, Vimeo ou arquivo de vídeo. Vazio, a página mostra a capa com o Igor."} />
+        ajuda={invalido ? "Use um link do YouTube, do Vimeo ou de um arquivo que comece com https://." : `YouTube, Vimeo ou arquivo de vídeo. ${semVideo}`} />
       <div className="space-y-1.5">
         <Label htmlFor="formato-video" className="text-[13px] font-medium">Formato do vídeo</Label>
         <Select value={formato} onValueChange={(v) => aoMudarFormato(v as FormatoVideo)} disabled={desligado}>
@@ -365,7 +365,8 @@ export function AbaComunidade({ desligado }: { desligado: boolean }) {
 
   async function salvar() {
     const erro = validarComum(f.conteudo, f.video_url) || (temTravessao(f.termo_uso_texto) ? "Há travessão ou meia-risca no termo de uso." : "")
-      || (!f.termo_uso_texto.trim() ? "O termo de uso não pode ficar vazio." : "") || (!/^\d{4}-\d{2}-\d{2}$/.test(f.termo_uso_versao) ? "Informe a data da versão do termo." : "");
+      || (!f.termo_uso_texto.trim() ? "O termo de uso não pode ficar vazio." : "")
+      || (termoMudou ? "Mude a data da versão: o texto do termo de uso mudou." : "") || (!/^\d{4}-\d{2}-\d{2}$/.test(f.termo_uso_versao) ? "Informe a data da versão do termo." : "");
     if (erro) return toast.error(erro);
     setSalvando(true);
     const { error } = await (supabase.from("config_comunidade" as any) as any).update({
@@ -383,8 +384,8 @@ export function AbaComunidade({ desligado }: { desligado: boolean }) {
     <div className="space-y-4">
       <CartaoPublicacao tabela="config_comunidade" publicada={cfg.data.publicada} url="/comunidade" desligado={desligado} nome="página da comunidade" />
 
-      <Cartao titulo="Vídeo do topo" descricao="Sem vídeo, o topo mostra uma ilustração do catálogo.">
-        <CamposVideo url={f.video_url} formato={f.video_formato} desligado={desligado}
+      <Cartao titulo="Vídeo do topo">
+        <CamposVideo url={f.video_url} formato={f.video_formato} desligado={desligado} semVideo="Vazio, o topo mostra uma ilustração do catálogo."
           aoMudarUrl={(v) => form.set("video_url", v)} aoMudarFormato={(v) => form.set("video_formato", v)} />
       </Cartao>
 
@@ -399,7 +400,7 @@ export function AbaComunidade({ desligado }: { desligado: boolean }) {
       <Cartao titulo="Termo de uso da comunidade" descricao="A empresa aceita este termo no cadastro. Mudou o texto, mude a versão: cada cadastro guarda a versão que aceitou.">
         <div className="sm:w-56">
           <CampoTexto rotulo="Versão" tipo="date" valor={f.termo_uso_versao} aoMudar={(v) => form.set("termo_uso_versao", v)} desligado={desligado} maximo={10}
-            ajuda={termoMudou ? "O texto mudou: atualize a data da versão." : undefined} />
+            ajuda={termoMudou ? "O texto mudou: mude a data da versão para salvar." : undefined} />
         </div>
         <CampoTexto rotulo="Texto do termo" longo valor={f.termo_uso_texto} aoMudar={(v) => form.set("termo_uso_texto", v)} desligado={desligado} maximo={60000}
           ajuda="Parágrafos separados por uma linha em branco." />
