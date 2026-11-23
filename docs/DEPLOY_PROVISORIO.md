@@ -96,3 +96,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: Tarefas em quadro, lista e calendário; seção Catálogo na área da Wise (Ofertas, Pedidos, Clientes do grupo) e na do parceiro (Catálogo, Minhas ofertas, Pedidos); Wireframe com a opção Ver como.
 * Documento "Modelo e processos" na versão v15.
 * Conferido no ar: /parceiros e /entrar em 375, 768 e 1440 px sem erro e sem rolagem lateral; sem login, tarefas, ofertas, pedidos e catálogo são recusados.
+
+## Publicação de 23/11/2026 (Comunidade Wise Partners)
+
+* Migração `20261123000034` (Comunidade: `config_comunidade`, `membros_comunidade`, cadastro com conta na hora, confirmação do cliente do grupo, catálogo em vitrine, link de indicação para clientes confirmados, minicurso aberto às empresas, tarefas novas) aplicada e registrada.
+* Função `cadastro-comunidade` publicada (sem verificação de JWT, como as outras páginas públicas).
+* Site publicado: `/comunidade` (a raiz sem login abre ela), `/comunidade/cadastro`, `/comunidade/termo`; área logada por tipo de acesso; seção Comunidade na área da Wise; aba Comunidade em Programa, Páginas.
+* Documento "Modelo e processos" na versão v16.
+* Conferido no ar: as quatro páginas em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão; a função devolve a configuração e recusa senha curta e CNPJ inválido sem gravar nada. O cadastro completo (criar conta e entrar) não foi testado em produção, para não criar dados de teste no banco real.
