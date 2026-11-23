@@ -88,3 +88,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: Programa, Wireframe; raiz sem login abre /parceiros; criação de senha no primeiro acesso; Primeiros passos em seis etapas; tela Indicar com um link na frente.
 * Documento "Modelo e processos" na versão v14.
 * Conferido no ar: / leva a /parceiros; /entrar mostra o caminho para candidatos; o cadastro não pede senha; sem login, etapas e marcas do onboarding não aparecem.
+
+## Publicação de 23/11/2026 (gerenciador de tarefas e Catálogo de parceiros)
+
+* Migrações `20261121000032` (gerenciador de tarefas: tabela de tarefas, comentários e sincronização com as regras) e `20261122000033` (Catálogo de parceiros: ofertas, pedidos com protocolo, clientes do grupo, níveis pelo FO-19) aplicadas e registradas.
+* Função `convidar-usuario` publicada: consultor e comercial criam o acesso de clientes do grupo.
+* Site publicado: Tarefas em quadro, lista e calendário; seção Catálogo na área da Wise (Ofertas, Pedidos, Clientes do grupo) e na do parceiro (Catálogo, Minhas ofertas, Pedidos); Wireframe com a opção Ver como.
+* Documento "Modelo e processos" na versão v15.
+* Conferido no ar: /parceiros e /entrar em 375, 768 e 1440 px sem erro e sem rolagem lateral; sem login, tarefas, ofertas, pedidos e catálogo são recusados.
