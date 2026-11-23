@@ -21,7 +21,8 @@ describe("Quem vê e quem oferece", () => {
       await q.como(U.parcerias);
       await q.sql(`update public.ofertas_hub set estado = 'publicada' where id = '${oferta}'`);
       await q.como(U.parceiroB);
-      expect(await q.sql("select * from public.catalogo_hub()")).toEqual([]);
+      // Select vê a vitrine (empresa e oferta), sem a condição
+      expect(await q.sql("select titulo, condicao, liberada from public.catalogo_hub()")).toEqual([{ titulo: "Implantação de CRM", condicao: null, liberada: false }]);
       await q.sistema();
       await q.sql(nivel(P.B, "B"));
       await q.como(U.parceiroB);

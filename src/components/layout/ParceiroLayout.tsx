@@ -10,23 +10,32 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { cn } from "@/lib/utils";
 import { useMeuParceiro } from "@/components/portal/dados";
 import { useComunicadosNaoLidos, usePlanoOnboarding } from "@/components/portal/dadosV2";
-import { SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
+import { ORDEM_MEMBRO, SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
 import { useAcessoHub } from "@/components/catalogo/dados";
 import { BarraAbas, MenuSecoes, filtrarSecoes } from "@/components/layout/Navegacao";
 
-// Seções da área do parceiro (src/lib/navegacao.ts), filtradas por responsável, onboarding e tipo de parceria
-function useSecoes() {
+// Seções da área logada (src/lib/navegacao.ts), filtradas pelo acesso que o banco devolve (acesso_comunidade):
+// parceiro do programa vê as suas seções; empresa sem parceria (cliente do grupo ou cadastrada) vê Catálogo, Indicar e Conhecer.
+export function useSecoes() {
   const { perfil } = useAuth();
-  const parceiroQ = useMeuParceiro();
   const onboardingQ = usePlanoOnboarding();
+  const parceiroQ = useMeuParceiro();
+  const hub = useAcessoHub();
   const temPlano = !!onboardingQ.data?.plano;
   const comercial = parceiroQ.data?.tipo_parceria === "comercial";
-  const hub = useAcessoHub();
-  const soCliente = parceiroQ.data?.tipo_parceria === "cliente";
-  const verHub = (a: AbaParceiro) => a.hub === "ver" ? true : a.hub === "ofertar" ? !!hub.data?.ofertar : !!(hub.data?.ver || hub.data?.ofertar);
-  return filtrarSecoes(SECOES_PARCEIRO, (a: AbaParceiro) =>
-    a.hub ? verHub(a)
-      : !soCliente && (!a.responsavel || !!perfil?.is_responsavel_parceiro) && (!a.onboarding || temPlano) && (!a.comercial || comercial));
+  const a = hub.data;
+  const membro = !!a && !a.parceiroPrograma;
+  const verHub = (x: AbaParceiro) => x.hub === "ver" ? true : x.hub === "ofertar" ? !!a?.ofertar : !!(a?.ver || a?.ofertar);
+  const secoes = filtrarSecoes(SECOES_PARCEIRO, (x: AbaParceiro) => {
+    if (x.hub) return verHub(x);
+    if (x.indicar && !a?.indicar) return false;
+    if (membro) return !!x.membro;
+    return (!x.responsavel || !!perfil?.is_responsavel_parceiro) && (!x.onboarding || temPlano) && (!x.comercial || comercial);
+  });
+  if (!membro) return secoes;
+  return secoes
+    .map((s) => ({ ...s, rotulo: s.rotuloMembro ?? s.rotulo }))
+    .sort((x, y) => ORDEM_MEMBRO.indexOf(x.id) - ORDEM_MEMBRO.indexOf(y.id));
 }
 
 function Contador({ n }: { n: number }) {
@@ -70,7 +79,7 @@ export function ParceiroLayout() {
       <aside className="sticky top-0 hidden h-screen flex-col gap-4 border-r border-white/10 bg-neutro-900 p-4 lg:flex">
         <Link to="/parceiro" className="block shrink-0 px-2 pt-1">
           <Logo />
-          <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-menta-500">Portal do parceiro</p>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-menta-500">Comunidade Wise Partners</p>
         </Link>
         <div className="-mx-1 min-h-0 flex-1 overflow-y-auto px-1">
           <Navegacao />

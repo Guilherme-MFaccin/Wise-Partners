@@ -38,6 +38,9 @@ verify_jwt = false
 [functions.cliente-parceiro]
 verify_jwt = false
 
+[functions.cadastro-comunidade]
+verify_jwt = false
+
 [functions.cruzamento-carteiras]
 verify_jwt = true
 

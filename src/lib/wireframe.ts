@@ -1,4 +1,4 @@
-// Wireframe do Portal Wise Partners (20/11/2026): o que cada tela mostra, que caminho cada pessoa faz e o que foi
+// Wireframe do Portal Wise Partners (20/11/2026; Comunidade Wise Partners em 23/11/2026): o que cada tela mostra, que caminho cada pessoa faz e o que foi
 // ajustado para o portal não contradizer o to-be (v14) nem o canvas. Mostrado em Programa, Wireframe.
 // As seções e abas das áreas logadas vêm de src/lib/navegacao.ts; aqui ficam os blocos de cada tela.
 
@@ -8,7 +8,7 @@ export type TipoBloco =
 export type Bloco = { tipo: TipoBloco; rotulo: string; itens?: string[]; largura?: 12 | 8 | 6 | 4 };
 export type Area = "publica" | "acesso" | "interna" | "parceiro";
 // Tipos de acesso para o filtro "Ver como" do wireframe. Os papéis internos são os do portal (perfis.papel).
-export type Perfil = "admin" | "parcerias" | "consultor" | "comercial" | "financeiro" | "parceiro_resp" | "parceiro" | "cliente_grupo" | "cliente_parceiro" | "cliente_wise" | "visitante";
+export type Perfil = "admin" | "parcerias" | "consultor" | "comercial" | "financeiro" | "parceiro_resp" | "parceiro" | "cliente_grupo" | "membro" | "cliente_parceiro" | "cliente_wise" | "visitante";
 export const PERFIS: { id: Perfil; nome: string; descricao: string }[] = [
   { id: "admin", nome: "Administrador", descricao: "Diretores e quem administra o portal: vê tudo do time da Wise." },
   { id: "parcerias", nome: "Gerente de parcerias", descricao: "Dono dos processos do programa." },
@@ -17,16 +17,17 @@ export const PERFIS: { id: Perfil; nome: string; descricao: string }[] = [
   { id: "financeiro", nome: "Financeiro", descricao: "Comissões e pagamentos." },
   { id: "parceiro_resp", nome: "Parceiro (responsável)", descricao: "Responsável nomeado na empresa parceira." },
   { id: "parceiro", nome: "Parceiro (usuário)", descricao: "Demais pessoas da empresa parceira." },
-  { id: "cliente_grupo", nome: "Cliente do Grupo Tríade", descricao: "Empresa cliente com login: vê o catálogo, pede condições e pode oferecer." },
+  { id: "cliente_grupo", nome: "Cliente do Grupo Tríade", descricao: "Empresa cliente confirmada: usa as condições do catálogo, oferece, indica a Wise Makers e faz o minicurso." },
+  { id: "membro", nome: "Empresa cadastrada", descricao: "Entrou pela Comunidade sem vínculo confirmado: vê o catálogo em vitrine e o minicurso; pode pedir para ser parceira." },
   { id: "cliente_parceiro", nome: "Cliente do parceiro", descricao: "Chega pelo link do parceiro; não tem login." },
   { id: "cliente_wise", nome: "Cliente da Wise sem login", descricao: "Recebe as recomendações da Prateleira por link." },
-  { id: "visitante", nome: "Visitante ou candidato", descricao: "Quem conhece o programa e se cadastra." },
+  { id: "visitante", nome: "Visitante ou candidato", descricao: "Qualquer empresa que conhece a Comunidade ou o programa e se cadastra." },
 ];
 export type Tela = {
   id: string; rota: string; nome: string; area: Area; pergunta: string; quem: string; processos: string[]; blocos: Bloco[]; nota?: string;
   perfis?: Perfil[]; // só nas públicas e de acesso; internas e do parceiro seguem o menu (src/lib/navegacao.ts)
 };
-export type Passo = { texto: string; quem: "Candidato" | "Parceiro" | "Cliente do parceiro" | "Wise" | "Portal" | "Cliente da Wise"; tela?: string };
+export type Passo = { texto: string; quem: "Candidato" | "Empresa" | "Parceiro" | "Cliente do parceiro" | "Wise" | "Portal" | "Cliente da Wise"; tela?: string };
 export type Jornada = { id: string; nome: string; resumo: string; processos: string[]; passos: Passo[] };
 export type Ajuste = { tema: string; antes: string; agora: string; base: string; situacao: "corrigido" | "decisao" };
 
@@ -37,11 +38,35 @@ export const AREAS: Record<Area, { nome: string; descricao: string }> = {
   publica: { nome: "Páginas públicas", descricao: "Sem login. Únicas para todos, sem citar nenhum parceiro." },
   acesso: { nome: "Acesso", descricao: "Entrar, criar a senha no primeiro acesso e recuperar a senha." },
   interna: { nome: "Time da Wise", descricao: "Seis seções pela cadeia de valor do to-be." },
-  parceiro: { nome: "Área do parceiro e do cliente", descricao: "Seis seções em autoatendimento (P-59); o cliente do grupo vê só o Catálogo." },
+  parceiro: { nome: "Área logada das empresas", descricao: "Comunidade Wise Partners. Parceiros: seis seções (P-59). Cliente do grupo e empresa cadastrada: Catálogo primeiro, Indicar a Wise Makers (só com vínculo confirmado) e Conhecer a Wise Makers." },
 };
 
 export const TELAS: Tela[] = [
   // ---------------------------------------------------------------- públicas
+  { id: "pub-comunidade", perfis: ["visitante", "membro", "cliente_grupo", "admin", "parcerias"], rota: "/comunidade", nome: "Página da Comunidade Wise Partners", area: "publica",
+    quem: "Qualquer empresa: clientes do grupo, parceiros, quem quer ser parceiro e quem quer conhecer",
+    pergunta: "O que é a comunidade, o que a minha empresa ganha e como eu entro?", processos: ["P-106", "P-102", "P-58"],
+    blocos: [
+      b("acoes", "Menu: Entrar e Cadastrar"),
+      b("topo", "Topo", ["O portal de negócios do ecossistema do Grupo Tríade", "Cadastrar minha empresa", "Já tenho acesso"], 8), b("video", "Vídeo ou ilustração do catálogo", [], 4),
+      b("cartoes", "O que é", ["Catálogo de parceiros", "Indicação da consultoria", "Conhecer a Wise Makers"]),
+      b("cartoes", "Empresas do Grupo Tríade", ["Wise Makers", "Tríade", "Swallow"]),
+      b("cartoes", "Para quem é", ["Clientes do grupo", "Parceiros do programa", "Quem quer ser parceiro", "Quem quer conhecer"]),
+      b("passos", "Como funciona", ["Cadastre a empresa", "A Wise confirma o acesso", "Use, ofereça e indique"]),
+      b("tabela", "O que cada empresa acessa", ["Cadastrada", "Cliente do grupo", "Premium", "Elite"]),
+      b("indicadores", "Catálogo em números", ["Ofertas", "Empresas oferecendo", "Empresas no ecossistema", "Categorias com ofertas"]),
+      b("texto", "Indique a Wise Makers"), b("lista", "Perguntas frequentes"), b("acoes", "Chamada final: Cadastrar minha empresa"),
+    ],
+    nota: "Página única para qualquer empresa, sem citar parceiro. Textos, seções, perguntas, vídeo e o termo de uso vêm de Programa, Páginas, Comunidade. Os números são contagens do banco, sem nomes nem condições." },
+  { id: "pub-cadastro-comunidade", perfis: ["visitante", "admin", "parcerias"], rota: "/comunidade/cadastro", nome: "Cadastro na comunidade", area: "publica", quem: "Qualquer empresa",
+    pergunta: "Quem é a minha empresa, qual é a relação dela com o Grupo Tríade e como eu entro?", processos: ["P-106"],
+    blocos: [
+      b("passos", "Três etapas", ["Empresa", "Relação", "Acesso"]),
+      b("formulario", "Empresa", ["CNPJ e nome", "O que a empresa faz", "Cidade e UF", "Faturamento por mês", "Pessoas que vendem", "Site"], 4),
+      b("formulario", "Relação com o grupo", ["É cliente do grupo? De qual empresa", "O que quer: usar condições, oferecer, indicar, conhecer a consultoria, ser parceiro", "Categoria e clientes ativos (para ser parceiro)", "Termo de adesão (para ser parceiro)", "Como conheceu"], 4),
+      b("formulario", "Acesso", ["Nome, cargo, e-mail e WhatsApp", "Senha e confirmação", "O que acontece depois do cadastro", "Termo de uso e política de privacidade"], 4),
+    ],
+    nota: "Cria a conta na hora e entra no portal. CNPJ ou e-mail já cadastrados são recusados com o caminho certo (pedir acesso ao responsável ou entrar)." },
   { id: "pub-parceiros", perfis: ["visitante", "admin", "parcerias"], rota: "/parceiros", nome: "Página dos parceiros", area: "publica", quem: "Visitante (qualquer empresa que vende para empresas)",
     pergunta: "Vale a pena oferecer a consultoria da Wise à minha base?", processos: ["P-98", "P-101", "P-21"],
     blocos: [
@@ -72,14 +97,14 @@ export const TELAS: Tela[] = [
   { id: "pub-rfp", perfis: ["cliente_wise"], rota: "/r/:token", nome: "Recomendação da Prateleira", area: "publica", quem: "Cliente da Wise que pediu um fornecedor",
     pergunta: "Quais fornecedores a Wise recomenda para a minha necessidade?", processos: ["P-35"],
     blocos: [b("topo", "Necessidade do cliente"), b("cartoes", "Parceiros Premium e Elite recomendados", ["Ficha de apresentação", "Contato"]), b("acoes", "Quero falar com este fornecedor")] },
-  { id: "pub-legais", perfis: ["visitante", "cliente_parceiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "/parceiros/termo e /parceiros/privacidade", nome: "Termo e política", area: "publica", quem: "Qualquer pessoa",
+  { id: "pub-legais", perfis: ["visitante", "cliente_parceiro", "parceiro_resp", "parceiro", "cliente_grupo", "membro"], rota: "/parceiros/termo, /parceiros/privacidade e /comunidade/termo", nome: "Termos e política", area: "publica", quem: "Qualquer pessoa",
     pergunta: "O que eu aceito ao me cadastrar?", processos: ["P-63", "P-64"], blocos: [b("texto", "Texto vigente com versão e data")] },
   // ---------------------------------------------------------------- acesso
-  { id: "entrar", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Parceiros e time da Wise",
+  { id: "entrar", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo", "membro"], rota: "/entrar", nome: "Entrar", area: "acesso", quem: "Empresas da comunidade, parceiros e time da Wise",
     pergunta: "Como entro no portal?", processos: ["P-93"],
     blocos: [
       b("formulario", "Entrar", ["E-mail", "Senha", "Esqueci minha senha"], 6),
-      b("texto", "Para quem ainda não tem acesso", ["Fez o cadastro? O acesso chega pelo WhatsApp depois da conversa de entrada", "Ainda não é parceiro? Conheça o programa"], 6),
+      b("texto", "Para quem ainda não tem acesso", ["Ainda não tem acesso? Cadastre a sua empresa na comunidade", "Fez o cadastro pela página de parceiros? O acesso chega pelo WhatsApp depois da conversa de entrada"], 6),
     ],
     nota: "Não existe cadastro aberto: a conta só nasce na aprovação (parceiro) ou pela tela Usuários." },
   { id: "primeiro-acesso", perfis: ["admin", "parcerias", "consultor", "comercial", "financeiro", "parceiro_resp", "parceiro", "cliente_grupo"], rota: "(qualquer rota logada)", nome: "Crie a sua senha", area: "acesso", quem: "Quem entrou com senha provisória",
@@ -131,6 +156,14 @@ export const TELAS: Tela[] = [
     pergunta: "Qual ciclo da Base Ativa está em curso e quem é o próximo?", processos: ["P-44"], blocos: [b("lista", "Fila"), b("lista", "Ciclos em curso com encontros")] },
   { id: "i-comunicados", rota: "/app/comunicados", nome: "Comunicados", area: "interna", quem: "Gerente, consultores",
     pergunta: "O que os parceiros precisam saber neste mês e quem já leu?", processos: ["P-82", "P-13"], blocos: [b("acoes", "Novo comunicado"), b("lista", "Comunicados com leitura")] },
+  { id: "i-cat-membros", rota: "/app/catalogo/membros", nome: "Empresas da comunidade", area: "interna", quem: "Gestão, consultores e comercial",
+    pergunta: "Quem entrou na Comunidade Wise Partners, e o que cada empresa espera da Wise agora?", processos: ["P-106", "P-107", "P-103"],
+    blocos: [
+      b("filtros", "Com pendência, Cliente a confirmar, Querem a consultoria, Querem ser parceiras, Todas; busca"),
+      b("lista", "Empresa, contato, porte, vínculo e interesses, data"),
+      b("texto", "Detalhe da empresa", ["Confirmar cliente (de qual empresa do grupo)", "Não é cliente, com motivo para a empresa", "Marcar o lead da consultoria como atendido", "Abrir na fila de candidatos", "Falar no WhatsApp"]),
+    ],
+    nota: "Cliente a confirmar e lead da consultoria viram tarefa até alguém resolver. Quem quer ser parceira entra também na fila de candidatos." },
   { id: "i-cat-ofertas", rota: "/app/catalogo", nome: "Ofertas do catálogo", area: "interna", quem: "Time interno (a gestão publica e recusa)",
     pergunta: "Que ofertas esperam a validação da Wise e o que já está no ar para os membros?", processos: ["P-104", "P-86"],
     blocos: [b("abas", "Para validar, Publicadas, Pausadas e recusadas"), b("lista", "Oferta com empresa, condição e descrição", ["Publicar", "Recusar com motivo", "Pausar"])],
@@ -170,8 +203,8 @@ export const TELAS: Tela[] = [
   { id: "i-wireframe", rota: "/app/programa/wireframe", nome: "Wireframe", area: "interna", quem: "Todo o time interno",
     pergunta: "Como o portal está organizado e que caminho cada pessoa faz?", processos: ["P-60"], blocos: [b("abas", "Mapa, Jornadas, Telas, Coerência"), b("texto", "Esta tela")] },
   { id: "i-paginas", rota: "/app/programa/paginas", nome: "Páginas", area: "interna", quem: "Administradores editam; Gerente consulta",
-    pergunta: "O que os parceiros e os clientes veem nas páginas públicas, e está tudo no ar?", processos: ["P-96", "P-98", "P-100"],
-    blocos: [b("abas", "Página dos parceiros, Página do cliente, Cases, Textos legais, Medição"), b("editor", "Publicação, vídeo, valores, perfil da reunião, seções e perguntas")] },
+    pergunta: "O que as empresas, os parceiros e os clientes deles veem nas páginas públicas, e está tudo no ar?", processos: ["P-96", "P-98", "P-100", "P-106"],
+    blocos: [b("abas", "Comunidade, Página dos parceiros, Página do cliente, Cases, Textos legais, Medição"), b("editor", "Publicação, vídeo, valores, perfil da reunião, seções e perguntas")] },
   { id: "i-capacitacao", rota: "/app/capacitacao", nome: "Capacitação", area: "interna", quem: "Time interno sem o financeiro",
     pergunta: "Que trilhas existem e quem já fez?", processos: ["P-88"], blocos: [b("lista", "Trilhas, módulos e testes"), b("tabela", "Progresso e certificados")] },
   { id: "i-regras", rota: "/app/configuracoes", nome: "Regras e configurações", area: "interna", quem: "Administradores editam; Gerente consulta",
@@ -189,7 +222,7 @@ export const TELAS: Tela[] = [
   { id: "p-passos", rota: "/parceiro/onboarding", nome: "Primeiros passos", area: "parceiro", quem: "Usuários do parceiro em onboarding",
     pergunta: "O que falta para a parceria ficar ativa?", processos: ["P-94", "P-30"],
     blocos: [b("passos", "Seis etapas, sem prazo", ["Entrar e criar a senha", "Minicurso", "Anúncio (marca)", "Enviar o link (marca)", "Primeiro cliente: ativa", "Primeiro diagnóstico: concluído"])] },
-  { id: "p-indicar", rota: "/parceiro/indicar", nome: "Indicar", area: "parceiro", quem: "Parceiros comerciais",
+  { id: "p-indicar", rota: "/parceiro/indicar", nome: "Indicar", area: "parceiro", quem: "Parceiros e clientes do grupo confirmados",
     pergunta: "Como levo a consultoria aos meus clientes?", processos: ["P-75", "P-32"],
     blocos: [b("formulario", "Seu link da página do cliente", ["Copiar", "Mensagem pronta", "Enviar pelo WhatsApp", "Quem entrou pelo link"]), b("acoes", "Registrar indicação"), b("texto", "Link de indicação direta (recolhido)")] },
   { id: "p-indicacoes", rota: "/parceiro/indicacoes", nome: "Minhas indicações", area: "parceiro", quem: "Usuários do parceiro",
@@ -198,16 +231,25 @@ export const TELAS: Tela[] = [
     pergunta: "Para quais clientes da Wise fomos recomendados?", processos: ["P-35"], blocos: [b("lista", "Pedidos em que a empresa foi apresentada")] },
   { id: "p-cruzamento", rota: "/parceiro/cruzamento", nome: "Cruzamento", area: "parceiro", quem: "Parceiros comerciais",
     pergunta: "Temos clientes em comum com a Wise?", processos: ["P-37", "P-92"], blocos: [b("passos", "Termo, arquivo da carteira, resultado")] },
-  { id: "p-catalogo", rota: "/parceiro/catalogo", nome: "Catálogo de parceiros", area: "parceiro", quem: "Parceiros Premium e Elite e clientes do grupo",
-    pergunta: "Que condições especiais as empresas do ecossistema oferecem para você?", processos: ["P-102", "P-105"],
-    blocos: [b("filtros", "Busca e categorias"), b("cartoes", "Ofertas", ["Empresa e categoria", "Condição para membros em destaque", "Quero esta condição"]), b("texto", "Pedido: mensagem, aviso de contato compartilhado, protocolo")],
-    nota: "Select vê o aviso de que o catálogo abre no Premium (um cliente seu fez o diagnóstico)." },
+  { id: "p-catalogo", rota: "/parceiro/catalogo", nome: "Catálogo de parceiros", area: "parceiro", quem: "Todas as empresas da comunidade (primeira aba de quem não é parceiro)",
+    pergunta: "Que empresas do ecossistema podem atender a sua, e com que condição especial?", processos: ["P-102", "P-105"],
+    blocos: [
+      b("texto", "Aviso do que falta para usar as condições", ["Cliente a confirmar: até 2 dias úteis", "Não confirmado: motivo", "Select: abre no Premium", "Empresa cadastrada: Quero ser parceiro"]),
+      b("filtros", "Busca, Por oferta ou Por empresa, categorias"),
+      b("cartoes", "Ofertas", ["Logo, empresa, categoria e cidade", "O que é e para quem serve", "Condição em destaque, ou travada na vitrine", "Ver a empresa", "Pedir a condição"]),
+      b("texto", "Ficha da empresa: todas as ofertas, como usar e site"), b("texto", "Pedido: mensagem, aviso de contato compartilhado, protocolo"),
+    ],
+    nota: "Condições para clientes do grupo confirmados e parceiros Premium e Elite. Os demais veem a vitrine: empresas e ofertas, sem a condição." },
   { id: "p-ofertas", rota: "/parceiro/ofertas", nome: "Minhas ofertas", area: "parceiro", quem: "Parceiros Elite e clientes do grupo",
     pergunta: "O que a sua empresa oferece aos membros e em que pé está a validação?", processos: ["P-104"],
     blocos: [b("acoes", "Nova oferta (vai para validação)"), b("lista", "Ofertas com situação", ["Editar", "Pausar ou retomar", "Apagar"])] },
   { id: "p-pedidos", rota: "/parceiro/pedidos", nome: "Pedidos do catálogo", area: "parceiro", quem: "Quem vê ou oferece no catálogo",
     pergunta: "Quem pediu as suas condições e quais condições a sua empresa pediu?", processos: ["P-105"],
     blocos: [b("lista", "Recebidos", ["Ver o contato", "Fechou negócio", "Não avançou"], 6), b("lista", "Feitos pela sua empresa", ["Protocolo e resultado"], 6)] },
+  { id: "p-conhecer", rota: "/parceiro/wise-makers", nome: "Conhecer a Wise Makers", area: "parceiro", quem: "Todas as empresas da comunidade",
+    pergunta: "O que a Wise Makers faz, e como apresentar a consultoria gratuita a quem você conhece?", processos: ["P-108", "P-88"],
+    blocos: [b("indicadores", "300+ empresas, 1.500+ vendedores, Matriz 5x5"), b("lista", "O que a empresa indicada recebe", [], 8), b("acoes", "Pegar o meu link (com acesso) ou o que falta", [], 4),
+      b("passos", "Minicurso Como vender a Wise Makers", ["Módulos em ordem", "Teste e certificado só para parceiros com contrato"])] },
   { id: "p-capacitacao", rota: "/parceiro/capacitacao", nome: "Capacitação", area: "parceiro", quem: "Usuários do parceiro",
     pergunta: "Que trilhas a minha equipe pode fazer?", processos: ["P-88"], blocos: [b("cartoes", "Minicurso e trilhas"), b("tabela", "Equipe e certificados")] },
   { id: "p-kit", rota: "/parceiro/materiais", nome: "Kit e materiais", area: "parceiro", quem: "Usuários do parceiro",
@@ -272,6 +314,17 @@ export const JORNADAS: Jornada[] = [
       { quem: "Parceiro", texto: "Acompanha a etapa", tela: "p-indicacoes" },
       { quem: "Wise", texto: "Cliente fecha: comissão de 40% da primeira mensalidade, paga com nota fiscal", tela: "i-comissoes" },
     ] },
+  { id: "comunidade", nome: "Entrada pela Comunidade", resumo: "Qualquer empresa se cadastra, entra na hora e o acesso cresce com o vínculo confirmado.", processos: ["P-106", "P-107", "P-21"],
+    passos: [
+      { quem: "Empresa", texto: "Conhece a comunidade e clica em Cadastrar", tela: "pub-comunidade" },
+      { quem: "Empresa", texto: "Conta quem é, a relação com o grupo e o que quer; cria a senha", tela: "pub-cadastro-comunidade" },
+      { quem: "Portal", texto: "Cria a empresa e a conta, classifica e entra direto no Catálogo" },
+      { quem: "Empresa", texto: "Vê as empresas e as ofertas em vitrine e faz o minicurso", tela: "p-catalogo" },
+      { quem: "Wise", texto: "Cliente declarado vira tarefa: confirma ou não, com motivo", tela: "i-cat-membros" },
+      { quem: "Cliente da Wise", texto: "Confirmado: usa as condições, oferece e pega o link de indicação", tela: "p-indicar" },
+      { quem: "Wise", texto: "Quem quer ser parceiro está na fila; a conversa de entrada aprova e a mesma conta vira parceiro", tela: "i-fila" },
+      { quem: "Wise", texto: "Quem quer conhecer a consultoria vira tarefa para o comercial", tela: "i-tarefas" },
+    ] },
   { id: "catalogo", nome: "Catálogo de parceiros", resumo: "Hub de negócios: o cliente do grupo e o parceiro Premium pedem condições a quem é Elite ou cliente.", processos: ["P-102", "P-103", "P-104", "P-105"],
     passos: [
       { quem: "Wise", texto: "A CS da Tríade ou o consultor cadastra a empresa cliente e cria o acesso", tela: "i-cat-clientes" },
@@ -304,7 +357,10 @@ export const JORNADAS: Jornada[] = [
 ];
 
 export const AJUSTES: Ajuste[] = [
-  { tema: "Endereço do portal", antes: "Quem abria partners.wisemakers.com.br sem login caía na tela de login.", agora: "Cai na página dos parceiros, que tem o botão Já sou parceiro.", base: "P-98, canal Página dos parceiros", situacao: "corrigido" },
+  { tema: "Endereço do portal", antes: "Quem abria partners.wisemakers.com.br sem login caía na página dos parceiros.", agora: "Cai na página da Comunidade Wise Partners, com Cadastrar e Entrar no menu; a página dos parceiros continua em /parceiros para as campanhas.", base: "Decisão de 23/11/2026, P-106", situacao: "corrigido" },
+  { tema: "Conta na hora pela comunidade", antes: "Só a Wise criava acessos; o cadastro pela página só entrava na fila.", agora: "A empresa cria a conta no cadastro da comunidade e entra na hora, com acesso limitado ao vínculo confirmado. Ser parceiro continua pela fila e pela conversa de entrada; a aprovação reaproveita a conta.", base: "Decisão de 23/11/2026; P-21 a P-23 mantidos", situacao: "corrigido" },
+  { tema: "Empresas da comunidade na carteira", antes: "Clientes do grupo cadastrados no catálogo apareciam na carteira de parceiros, em qualificação.", agora: "A carteira mostra só parceiros; as empresas da comunidade ficam em Comunidade, Empresas.", base: "P-106", situacao: "corrigido" },
+  { tema: "Indicação por clientes do grupo", antes: "O link de indicação era só de parceiros com contrato.", agora: "Cliente do grupo confirmado também tem o link. A comissão para cliente que indica segue a regra de parceiro até a Wise decidir.", base: "Decisão de 23/11/2026; pergunta aberta no mapeamento v16", situacao: "decisao" },
   { tema: "Acesso direto sem conversa", antes: "Um modo da página criava a conta na hora, com a senha escolhida no cadastro.", agora: "A entrada é sempre pela fila, WhatsApp e conversa de entrada; o modo saiu da página, da função, do editor e foi travado no banco.", base: "P-21 a P-23; canvas, Relacionamento: entrada pessoal", situacao: "corrigido" },
   { tema: "Login para quem ainda não tem acesso", antes: "O candidato na fila tentava entrar e só via senha inválida.", agora: "O login explica que o acesso chega pelo WhatsApp depois da conversa e leva à página do programa.", base: "P-21, P-23", situacao: "corrigido" },
   { tema: "Senha provisória", antes: "Era só um aviso no topo; dava para usar o portal com a senha mandada pelo WhatsApp.", agora: "No primeiro acesso, a pessoa cria a própria senha antes de qualquer tela.", base: "P-23 passo 14, P-93", situacao: "corrigido" },

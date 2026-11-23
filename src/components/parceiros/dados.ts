@@ -328,7 +328,8 @@ const COLUNAS_LISTA =
 export function useCarteira() {
   const parceiros = useQuery({
     queryKey: ["parceiros", "lista"],
-    queryFn: () => lista<ParceiroLista>(supabase.from("parceiros").select(COLUNAS_LISTA).order("nome_fantasia")),
+    // Empresas só da comunidade (tipo cliente) ficam em Comunidade, Empresas; a carteira é de parceiros
+    queryFn: () => lista<ParceiroLista>(supabase.from("parceiros").select(COLUNAS_LISTA).neq("tipo_parceria", "cliente").order("nome_fantasia")),
   });
   const vinculos = useQuery({
     queryKey: ["parceiros", "categorias"],

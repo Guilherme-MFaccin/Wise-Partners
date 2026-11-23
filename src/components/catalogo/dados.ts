@@ -5,8 +5,9 @@ import { toastErro } from "@/lib/erros";
 
 // Catálogo de parceiros (FO-19). Quem oferece: Elite e clientes do grupo. Quem vê e usa: Premium, Elite e clientes do grupo.
 export type OfertaCatalogo = {
-  oferta_id: string; titulo: string; descricao: string; para_quem: string | null; condicao: string; como_usar: string | null; validade: string | null;
+  oferta_id: string; titulo: string; descricao: string; para_quem: string | null; condicao: string | null; como_usar: string | null; validade: string | null;
   parceiro_id: string; empresa: string; site: string | null; cliente_grupo: boolean; categoria: string | null; categorias: string[]; propria: boolean;
+  liberada: boolean; logo_caminho: string | null; cidade: string | null; uf: string | null;
 };
 export type Oferta = {
   id: string; parceiro_id: string; titulo: string; descricao: string; para_quem: string | null; condicao: string; como_usar: string | null;
@@ -26,19 +27,37 @@ export const ESTADOS_OFERTA: Record<Oferta["estado"], { rotulo: string; tom: "ne
 };
 export const RESULTADOS: Record<Pedido["resultado"], string> = { enviado: "Enviado", fechado: "Fechou negócio", nao_avancou: "Não avançou" };
 
-// O banco decide quem vê e quem oferece (pode_ver_catalogo, pode_ofertar)
+// O banco decide o que cada conta acessa (acesso_comunidade): condições, ofertas, indicação e o vínculo declarado
+export type AcessoComunidade = {
+  empresa: boolean; parceiro_programa?: boolean; cliente_grupo?: boolean; nivel?: "select" | "premium" | "elite" | null;
+  ver_condicoes?: boolean; ofertar?: boolean; indicar?: boolean;
+  vinculo_cliente?: "nao_declarado" | "a_confirmar" | "confirmado" | "nao_confirmado" | null; vinculo_motivo?: string | null;
+  empresas_grupo?: string[]; pedido_parceria?: string | null;
+};
 export function useAcessoHub() {
   const { perfil } = useAuth();
   return useQuery({
     queryKey: ["acesso-hub", perfil?.parceiro_id],
     enabled: !!perfil?.parceiro_id,
-    staleTime: 5 * 60_000,
+    staleTime: 60_000,
     queryFn: async () => {
-      const [v, o] = await Promise.all([supabase.rpc("pode_ver_catalogo" as any), supabase.rpc("pode_ofertar" as any)]);
-      if (v.error) throw v.error;
-      if (o.error) throw o.error;
-      return { ver: !!v.data, ofertar: !!o.data };
+      const { data, error } = await supabase.rpc("acesso_comunidade" as any);
+      if (error) throw error;
+      const a = (data ?? { empresa: false }) as AcessoComunidade;
+      return { ...a, ver: !!a.ver_condicoes, ofertar: !!a.ofertar, indicar: !!a.indicar, parceiroPrograma: !!a.parceiro_programa };
     },
+  });
+}
+
+export function usePedirParceria() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (dados: { categoria_id: string; clientes_ativos: string; aceite_termo_parceiro: boolean }) => {
+      const { error } = await supabase.rpc("pedir_parceria_comunidade" as any, { p: dados });
+      if (error) throw error;
+    },
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["acesso-hub"] }),
+    onError: toastErro,
   });
 }
 

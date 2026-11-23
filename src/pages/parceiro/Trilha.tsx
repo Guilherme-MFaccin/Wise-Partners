@@ -27,6 +27,12 @@ const ICONES: Record<string, any> = { video_arquivo: PlayCircle, video_link: Pla
 // Trilha: módulos em ordem, conclusão de cada um, teste final e certificado (FR-152 a FR-154)
 export default function Trilha() {
   const { trilha: param } = useParams();
+  return <ConteudoTrilha param={param} />;
+}
+
+// `embutido`: dentro da aba Conhecer a Wise Makers (sem o voltar e com título de seção). O teste e o certificado
+// são de parceiros com contrato; a empresa da comunidade faz os módulos.
+export function ConteudoTrilha({ param, embutido }: { param?: string; embutido?: boolean }) {
   const qc = useQueryClient();
   const q = useTrilha(param);
   const meuQ = useProgresso("eu");
@@ -40,8 +46,10 @@ export default function Trilha() {
   if (!q.data) {
     return (
       <div>
-        <Voltar />
-        <Vazio titulo="Trilha não encontrada">A trilha não existe ou ainda não foi publicada.</Vazio>
+        {!embutido && <Voltar />}
+        {embutido
+          ? <Vazio titulo="O minicurso está em preparação">A Wise publica o minicurso em breve, e ele aparece aqui.</Vazio>
+          : <Vazio titulo="Trilha não encontrada">A trilha não existe ou ainda não foi publicada.</Vazio>}
       </div>
     );
   }
@@ -72,10 +80,19 @@ export default function Trilha() {
 
   return (
     <div className="space-y-6">
-      <Voltar />
-      <Cabecalho titulo={trilha.titulo}
-        descricao={<>Versão {trilha.versao} · {modulos.length} módulos · teste final com nota mínima de {trilha.nota_minima}%</>} />
-      {trilha.descricao && <p className="-mt-3 text-sm text-muted-foreground">{trilha.descricao}</p>}
+      {embutido ? (
+        <div>
+          <h2 className="text-lg font-semibold">{trilha.titulo}</h2>
+          <p className="mt-1 text-sm text-muted-foreground">{modulos.length} módulos{trilha.descricao ? ` · ${trilha.descricao}` : ""}</p>
+        </div>
+      ) : (
+        <>
+          <Voltar />
+          <Cabecalho titulo={trilha.titulo}
+            descricao={<>Versão {trilha.versao} · {modulos.length} módulos · teste final com nota mínima de {trilha.nota_minima}%</>} />
+          {trilha.descricao && <p className="-mt-3 text-sm text-muted-foreground">{trilha.descricao}</p>}
+        </>
+      )}
 
       <section className="rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
         <div className="flex justify-between text-sm"><span className="font-semibold">Seu progresso</span><span className="text-muted-foreground">{nFeitos} de {modulos.length} módulos</span></div>
@@ -94,7 +111,10 @@ export default function Trilha() {
         ))}
       </ol>
 
-      {!certAtual && (
+      {!certAtual && embutido && !parceiroQ.data?.data_assinatura && (
+        <p className="rounded-[14px] border border-white/10 bg-card p-4 text-sm text-muted-foreground">O teste final e o certificado são para parceiros do programa com contrato.</p>
+      )}
+      {!certAtual && (!embutido || !!parceiroQ.data?.data_assinatura) && (
         <Teste trilha={trilha} perguntas={perguntas} liberado={todos} tentativa={tentativaQ.data ?? null}
           onAprovado={() => {
             qc.invalidateQueries({ queryKey: ["portal-trilha-progresso"] });

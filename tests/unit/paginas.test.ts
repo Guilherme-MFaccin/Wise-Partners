@@ -52,3 +52,24 @@ describe("paginas", () => {
     expect(META_CLIENTE.map((m) => m.chave)).toEqual([...BLOCOS_CLIENTE]);
   });
 });
+
+describe("página da comunidade", () => {
+  it("todo bloco tem descrição no editor, nenhum texto tem travessão e o padrão volta igual", async () => {
+    const { BLOCOS_COMUNIDADE, META_COMUNIDADE, PADRAO_COMUNIDADE, compactarConteudo: compactar, montarConteudo: montar, temTravessao: travessao } = await import("@/lib/paginas");
+    expect(META_COMUNIDADE.map((m) => m.chave).sort()).toEqual([...BLOCOS_COMUNIDADE].sort());
+    expect(travessao(PADRAO_COMUNIDADE)).toBe(false);
+    expect(compactar(PADRAO_COMUNIDADE, PADRAO_COMUNIDADE)).toEqual({});
+    expect(montar(PADRAO_COMUNIDADE, { secoes: { grupo: { visivel: false } } }).secoes.grupo.visivel).toBe(false);
+  });
+});
+
+describe("navegação da área logada", () => {
+  it("quem não é parceiro vê Catálogo, Indicar e Conhecer, com o Catálogo primeiro", async () => {
+    const { SECOES_PARCEIRO, ORDEM_MEMBRO } = await import("@/lib/navegacao");
+    const doMembro = SECOES_PARCEIRO.filter((s) => s.abas.some((a) => a.membro)).map((s) => s.id);
+    expect(doMembro.sort()).toEqual([...ORDEM_MEMBRO].sort());
+    expect(ORDEM_MEMBRO[0]).toBe("catalogo");
+    const indicar = SECOES_PARCEIRO.flatMap((s) => s.abas).filter((a) => a.indicar).map((a) => a.to);
+    expect(indicar).toEqual(["/parceiro/indicar", "/parceiro/indicacoes"]);
+  });
+});

@@ -46,6 +46,8 @@ const Wireframe = lazy(() => import("@/pages/app/programa/Wireframe"));
 const OfertasCatalogo = lazy(() => import("@/pages/app/catalogo/Ofertas"));
 const PedidosCatalogo = lazy(() => import("@/pages/app/catalogo/Pedidos"));
 const ClientesGrupo = lazy(() => import("@/pages/app/catalogo/Clientes"));
+const MembrosComunidade = lazy(() => import("@/pages/app/catalogo/Membros"));
+const PConhecer = lazy(() => import("@/pages/parceiro/ConhecerWise"));
 const PCatalogo = lazy(() => import("@/pages/parceiro/catalogo/Catalogo"));
 const POfertas = lazy(() => import("@/pages/parceiro/catalogo/Ofertas"));
 const PPedidos = lazy(() => import("@/pages/parceiro/catalogo/Pedidos"));
@@ -74,6 +76,8 @@ const IndicacaoLink = lazy(() => import("@/pages/publico/IndicacaoLink"));
 const LandingParceiros = lazy(() => import("@/pages/publico/LandingParceiros"));
 const LandingCliente = lazy(() => import("@/pages/publico/LandingCliente"));
 const TextoLegalParceiros = lazy(() => import("@/pages/publico/TextoLegalParceiros"));
+const LandingComunidade = lazy(() => import("@/pages/publico/LandingComunidade"));
+const CadastroComunidade = lazy(() => import("@/pages/publico/CadastroComunidade"));
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 30_000, retry: 1, refetchOnWindowFocus: false } } });
 
@@ -90,11 +94,11 @@ function Protegida({ publico, children }: { publico: "interno" | "parceiro"; chi
   return <>{children}</>;
 }
 
-// Raiz do domínio: quem não entrou vê a página do programa (com "Já sou parceiro" para o login); quem entrou vai para a sua área
+// Raiz do domínio: quem não entrou vê a página da Comunidade Wise Partners (Cadastrar e Entrar no menu); quem entrou vai para a sua área
 function Inicio() {
   const { session, perfil, carregando } = useAuth();
   if (carregando) return <Carregando />;
-  if (!session) return <Navigate to="/parceiros" replace />;
+  if (!session) return <Navigate to="/comunidade" replace />;
   if (!perfil) return <SemAcesso />;
   return <Navigate to={perfil.papel === "parceiro" ? "/parceiro" : "/app"} replace />;
 }
@@ -113,6 +117,9 @@ export default function App() {
                 <Route path="/r/:token" element={<PaginaRfp />} />
                 <Route path="/i/:token" element={<IndicacaoLink />} />
                 <Route path="/parceiros" element={<LandingParceiros />} />
+                <Route path="/comunidade" element={<LandingComunidade />} />
+                <Route path="/comunidade/cadastro" element={<CadastroComunidade />} />
+                <Route path="/comunidade/termo" element={<TextoLegalParceiros qual="uso" />} />
                 <Route path="/c/:codigo" element={<LandingCliente />} />
                 <Route path="/parceiros/termo" element={<TextoLegalParceiros qual="termo" />} />
                 <Route path="/parceiros/privacidade" element={<TextoLegalParceiros qual="privacidade" />} />
@@ -127,6 +134,7 @@ export default function App() {
                   <Route path="catalogo" element={<OfertasCatalogo />} />
                   <Route path="catalogo/pedidos" element={<PedidosCatalogo />} />
                   <Route path="catalogo/clientes" element={<ClientesGrupo />} />
+                  <Route path="catalogo/membros" element={<MembrosComunidade />} />
                   <Route path="parceiros" element={<Parceiros />} />
                   <Route path="parceiros/:id" element={<FichaParceiro />} />
                   <Route path="indicacoes" element={<Indicacoes />} />
@@ -157,6 +165,7 @@ export default function App() {
                   <Route path="contrapartidas" element={<Navigate to="/parceiro/acoes" replace />} />
                   <Route path="acoes" element={<PAcoes />} />
                   <Route path="catalogo" element={<PCatalogo />} />
+                  <Route path="wise-makers" element={<PConhecer />} />
                   <Route path="ofertas" element={<POfertas />} />
                   <Route path="pedidos" element={<PPedidos />} />
                   <Route path="nivel" element={<PNivel />} />

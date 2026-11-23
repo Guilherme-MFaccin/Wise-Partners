@@ -32,12 +32,14 @@ function perfisDaTela(t: Tela): Perfil[] {
     return (aba?.papeis as Perfil[] | undefined) ?? INTERNOS;
   }
   const aba = SECOES_PARCEIRO.flatMap((s) => s.abas).find((a) => a.to === t.rota);
+  if (aba?.hub === "ver") return ["parceiro_resp", "parceiro", "cliente_grupo", "membro"];
   if (aba?.hub) return ["parceiro_resp", "parceiro", "cliente_grupo"];
+  if (aba?.membro) return aba.indicar ? ["parceiro_resp", "parceiro", "cliente_grupo"] : ["parceiro_resp", "parceiro", "cliente_grupo", "membro"];
   return aba?.responsavel ? ["parceiro_resp"] : ["parceiro_resp", "parceiro"];
 }
 const ve = (perfil: Perfil | null, t: Tela | undefined) => !!t && (!perfil || perfisDaTela(t).includes(perfil));
 const ATOR: Record<Passo["quem"], Perfil[]> = {
-  Candidato: ["visitante"], Parceiro: ["parceiro_resp", "parceiro"], "Cliente do parceiro": ["cliente_parceiro"], "Cliente da Wise": ["cliente_wise", "cliente_grupo"],
+  Candidato: ["visitante"], Empresa: ["visitante", "membro", "cliente_grupo"], Parceiro: ["parceiro_resp", "parceiro"], "Cliente do parceiro": ["cliente_parceiro"], "Cliente da Wise": ["cliente_wise", "cliente_grupo"],
   Wise: ["admin", "parcerias", "consultor", "comercial", "financeiro"], Portal: [],
 };
 
@@ -133,7 +135,7 @@ function Mapa({ perfil, abrir }: { perfil: Perfil | null; abrir: (id: string) =>
 
 // ---------------------------------------------------------------- jornadas
 const TOM_ATOR: Record<Passo["quem"], string> = {
-  Candidato: "bg-sky-500/15 text-sky-300", Parceiro: "bg-menta-500/15 text-menta-300", "Cliente do parceiro": "bg-warning/15 text-warning",
+  Candidato: "bg-sky-500/15 text-sky-300", Empresa: "bg-sky-500/15 text-sky-300", Parceiro: "bg-menta-500/15 text-menta-300", "Cliente do parceiro": "bg-warning/15 text-warning",
   Wise: "bg-white/10 text-neutro-100", Portal: "bg-violet-500/15 text-violet-300", "Cliente da Wise": "bg-warning/15 text-warning",
 };
 

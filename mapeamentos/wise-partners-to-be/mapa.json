@@ -2,7 +2,7 @@
   "schema": "mapa-processos/1.0",
   "organizacao": {
     "nome": "Programa Wise Partners (to-be)",
-    "slug": "x",
+    "slug": "programa-wise-partners-to-be",
     "descricao": "Canal de aquisição mais barato que os canais ativos: um ecossistema pequeno, orquestrado pela Wise Makers com o portal no centro, em que parceiros que vendem para a indústria geram e recebem oportunidades e ganham comunidade, reconhecimento e comissão pela regra de comissão.",
     "setor": "Consultoria de gestão para indústrias (ecossistema de parceiros)",
     "objetivo_do_mapeamento": "Refatorar todos os conceitos de uma vez: princípios ordenados de 17 livros, hierarquia e arquitetura de processos to-be com o portal no centro da gestão, e o modelo de negócio do programa. As decisões do patrocinador não pesam mais que os livros: onde divergem, a divergência fica registrada e é conciliada.",
@@ -28,8 +28,8 @@
       "Atividade",
       "Tarefa"
     ],
-    "criado_em": "2026-11-22",
-    "atualizado_em": "2026-11-22"
+    "criado_em": "2026-11-23",
+    "atualizado_em": "2026-11-23"
   },
   "configuracao": {},
   "modelo_operacional": {
@@ -3780,7 +3780,7 @@
       "nome": "Receber o cadastro com o aceite",
       "pai": "P-20",
       "ordem": 1,
-      "descricao": "No envio do formulário, o portal valida os campos e os dois aceites, barra quem já tem acesso, quem já é parceiro e quem já está na fila, registra o cadastro com a origem (campanha, anúncio e vídeo) e as versões do termo e da política, avisa os administradores e mostra ao candidato o próximo passo. Candidatos de outras origens recebem o link da página e entram pela mesma fila. No portal: é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação.",
+      "descricao": "No envio do formulário, o portal valida os campos e os dois aceites, barra quem já tem acesso, quem já é parceiro e quem já está na fila, registra o cadastro com a origem (campanha, anúncio e vídeo) e as versões do termo e da política, avisa os administradores e mostra ao candidato o próximo passo. Candidatos de outras origens recebem o link da página e entram pela mesma fila. No portal: é a fila de espera em Configurações, com a situação, a observação e os botões de WhatsApp, agenda e aprovação. Desde 23/11/2026, o pedido para ser parceiro também chega pelo cadastro da Comunidade, com a conta já criada; a fila, o WhatsApp e a conversa de entrada continuam, e a aprovação reaproveita a conta.",
       "dono": "PA-01",
       "participantes": [
         "PA-06"
@@ -3827,7 +3827,8 @@
         "EV-0100",
         "EV-0340",
         "EV-0373",
-        "EV-0446"
+        "EV-0446",
+        "EV-0464"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -13740,16 +13741,16 @@
     },
     {
       "id": "P-102",
-      "nome": "Conectar negócios pelo Catálogo de parceiros",
+      "nome": "Conectar negócios na Comunidade Wise Partners",
       "pai": null,
       "ordem": 11,
-      "descricao": "O Wise Partners vira um hub de negócios, uma comunidade de indústrias e de empresas que prestam serviço para indústrias, no modelo do ecossistema de parceiros da G4, sem cobrança alta para entrar. Oferecem no catálogo os parceiros Elite (um cliente trazido por eles contratou uma empresa do Grupo Tríade) e as empresas clientes do grupo. Veem o catálogo e usam as condições os parceiros Premium (um cliente deles, no perfil, fez o diagnóstico com a Wise), os Elite e os clientes do grupo. Na plataforma não há distinção visual entre Premium e Elite. Uma empresa pode comprar e oferecer com o mesmo login. Toda oferta tem uma condição só para membros, do valor que o parceiro quiser, validada pela Wise. Um dos objetivos é ter algo de valor imediato para oferecer aos leads capturados.",
+      "descricao": "A Comunidade Wise Partners é o portal onde as empresas do ecossistema do Grupo Tríade contratam produtos e serviços entre si: clientes das empresas do grupo, parceiros, quem quer ser parceiro e quem quer conhecer. Qualquer empresa se cadastra pela página da comunidade e entra na hora, com o acesso que o vínculo dela permite. O Wise Partners vira um hub de negócios, uma comunidade de indústrias e de empresas que prestam serviço para indústrias, no modelo do ecossistema de parceiros da G4, sem cobrança alta para entrar. Oferecem no catálogo os parceiros Elite (um cliente trazido por eles contratou uma empresa do Grupo Tríade) e as empresas clientes do grupo. Veem o catálogo e usam as condições os parceiros Premium (um cliente deles, no perfil, fez o diagnóstico com a Wise), os Elite e os clientes do grupo. Na plataforma não há distinção visual entre Premium e Elite. Uma empresa pode comprar e oferecer com o mesmo login. Toda oferta tem uma condição só para membros, do valor que o parceiro quiser, validada pela Wise. Um dos objetivos é ter algo de valor imediato para oferecer aos leads capturados.",
       "dono": "PA-01",
       "participantes": [],
-      "gatilho": "Empresa com acesso ao catálogo",
+      "gatilho": "Empresa que se cadastra na comunidade ou recebe o acesso da Wise",
       "entradas": [],
       "saidas": [],
-      "cliente": "Clientes do Grupo Tríade e parceiros",
+      "cliente": "Empresas do ecossistema do Grupo Tríade",
       "sistemas": [
         "SI-01"
       ],
@@ -13764,20 +13765,22 @@
         "EV-0451",
         "EV-0452",
         "EV-0449",
-        "EV-0453"
+        "EV-0453",
+        "EV-0462",
+        "EV-0466"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "é a seção Catálogo: na área do parceiro (Catálogo, Minhas ofertas, Pedidos) e na área da Wise (Ofertas, Pedidos, Clientes do grupo).",
+      "portal": "é a Comunidade Wise Partners: a página /comunidade (Cadastrar e Entrar), o cadastro com conta na hora e, dentro, o Catálogo como primeira aba de quem não é parceiro, Indicar a Wise Makers e Conhecer a Wise Makers; na área da Wise, a seção Comunidade (Empresas, Ofertas, Pedidos, Clientes do grupo).",
       "tipo": "finalistico"
     },
     {
       "id": "P-103",
       "nome": "Dar acesso aos clientes do grupo",
       "pai": "P-102",
-      "ordem": 1,
-      "descricao": "Os clientes da Tríade que já estão na base recebem o login pela CS da Tríade Digital, que apresenta o portal e os benefícios a cada um. Os clientes da Wise recebem a mensagem do consultor responsável. A mensagem leva um vídeo do Igor com os benefícios de estar no ecossistema por ser cliente do Grupo Tríade.",
+      "ordem": 3,
+      "descricao": "Os clientes da Tríade que já estão na base recebem o login pela CS da Tríade Digital, que apresenta o portal e os benefícios a cada um. Os clientes da Wise recebem a mensagem do consultor responsável. A mensagem leva um vídeo do Igor com os benefícios de estar no ecossistema por ser cliente do Grupo Tríade. Com a Comunidade (23/11/2026), o cliente também pode se cadastrar sozinho pela página; nesse caso a Wise só confirma o vínculo (P-107).",
       "dono": "PA-01",
       "participantes": [
         "PA-07",
@@ -13797,7 +13800,8 @@
       "status": "declarado",
       "hipoteses": [],
       "evidencias": [
-        "EV-0448"
+        "EV-0448",
+        "EV-0465"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -13884,7 +13888,7 @@
       "id": "P-104",
       "nome": "Validar as ofertas do catálogo",
       "pai": "P-102",
-      "ordem": 2,
+      "ordem": 4,
       "descricao": "A Wise confere cada oferta (o que é, para quem serve e a condição para membros) antes de publicar. Oferta publicada que muda de texto volta para validação.",
       "dono": "PA-01",
       "participantes": [],
@@ -14001,7 +14005,7 @@
       "id": "P-105",
       "nome": "Atender o pedido de condição",
       "pai": "P-102",
-      "ordem": 3,
+      "ordem": 5,
       "descricao": "O membro pede a condição pelo portal e recebe um protocolo; quem oferece recebe o contato e fala com ele. Não há etapas de acompanhamento: quem oferece só marca, se quiser, se fechou. A comissão do parceiro à Wise sobre negócio fechado pelo catálogo não é obrigatória. A avaliação de quem comprou entra depois, com a nota visível só para a Wise.",
       "dono": "PA-01",
       "participantes": [
@@ -14106,6 +14110,410 @@
           {
             "de": "t4",
             "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-106",
+      "nome": "Receber a empresa na Comunidade",
+      "pai": "P-102",
+      "ordem": 1,
+      "descricao": "Qualquer empresa conhece a comunidade pela página geral, que não cita nenhum parceiro, e se cadastra em três etapas: a empresa (CNPJ, o que faz, local, faturamento e time de vendas), a relação com o Grupo Tríade (se é cliente e de qual empresa, e o que quer: usar condições, oferecer, indicar, conhecer a consultoria ou ser parceira) e o acesso (contato e senha). A conta nasce na hora e a pessoa entra direto no portal. O cadastro classifica a empresa: cliente do grupo a confirmar, lead de parceiro, lead da consultoria ou empresa cadastrada.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-08"
+      ],
+      "gatilho": "Empresa que clicou em Cadastrar na página da comunidade",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Empresa do ecossistema",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0462",
+        "EV-0463",
+        "EV-0464",
+        "EV-0465"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "é a página /comunidade e o cadastro /comunidade/cadastro, editáveis em Programa, Páginas, Comunidade; as empresas aparecem em Comunidade, Empresas.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0462"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-08"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Empresa clicou em Cadastrar na página da comunidade",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Contar quem é a empresa e a relação com o grupo",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Criar a senha e aceitar o termo de uso",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Criar a empresa e a conta e classificar o cadastro",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "A empresa declarou ser cliente do grupo?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "nome": "Abrir a tarefa de confirmar o cliente",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "g2",
+            "tipo": "decisao",
+            "nome": "A empresa quer ser parceira?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "nome": "Colocar o pedido na fila de candidatos",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "nome": "Entrar no portal pelo Catálogo",
+            "raia": "PA-08",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Empresa na comunidade",
+            "raia": "PA-08"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "t2"
+          },
+          {
+            "de": "t2",
+            "para": "t3"
+          },
+          {
+            "de": "t3",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t4",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t4",
+            "para": "g2"
+          },
+          {
+            "de": "g1",
+            "para": "g2",
+            "rotulo": "Não"
+          },
+          {
+            "de": "g2",
+            "para": "t5",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t5",
+            "para": "t6"
+          },
+          {
+            "de": "g2",
+            "para": "t6",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t6",
+            "para": "f1"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-107",
+      "nome": "Confirmar o cliente do grupo declarado",
+      "pai": "P-102",
+      "ordem": 2,
+      "descricao": "Quem declara no cadastro que é cliente de uma empresa do grupo vê o catálogo em vitrine até a Wise confirmar o vínculo. A confirmação libera as condições, os pedidos, as ofertas e o link de indicação; a recusa vai com o motivo para a empresa. O cadastro do cliente pela CS da Tríade ou pelo consultor também confirma.",
+      "dono": "PA-01",
+      "participantes": [
+        "PA-07",
+        "PA-09"
+      ],
+      "gatilho": "Empresa que se declarou cliente do grupo",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Empresa cliente do Grupo Tríade",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0464",
+        "EV-0467"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "vira tarefa (decidir) e se resolve em Comunidade, Empresas: Confirmar cliente ou Não é cliente, com motivo.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0464"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-03",
+          "PA-08"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Empresa se declarou cliente do grupo",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Conferir o contrato com a empresa do grupo",
+            "raia": "PA-03"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "A empresa é cliente ativa do grupo?",
+            "raia": "PA-03"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Confirmar o cliente e a empresa do grupo",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Condições e link de indicação liberados",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Registrar o motivo para a empresa",
+            "raia": "PA-03",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Empresa segue com o catálogo em vitrine",
+            "raia": "PA-08"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t2",
+            "para": "f1"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "f2"
+          }
+        ],
+        "mensagens": []
+      }
+    },
+    {
+      "id": "P-108",
+      "nome": "Apresentar a Wise Makers às empresas da comunidade",
+      "pai": "P-102",
+      "ordem": 6,
+      "descricao": "Toda empresa da comunidade tem a aba Conhecer a Wise Makers: o que a Wise Makers faz, o que a empresa indicada recebe e o minicurso Como vender a Wise Makers. Clientes do grupo confirmados e parceiros têm o link próprio para indicar a consultoria gratuita.",
+      "dono": "PA-01",
+      "participantes": [],
+      "gatilho": "Empresa com acesso ao portal",
+      "entradas": [],
+      "saidas": [],
+      "cliente": "Empresas da comunidade",
+      "sistemas": [
+        "SI-01"
+      ],
+      "indicadores": [],
+      "frequencia": "Contínuo",
+      "dores": [],
+      "regras": [],
+      "status": "declarado",
+      "hipoteses": [],
+      "evidencias": [
+        "EV-0468",
+        "EV-0467"
+      ],
+      "situacao": "no_papel",
+      "fluxo_dispensado": null,
+      "principios": [],
+      "portal": "é a aba Conhecer a Wise Makers (/parceiro/wise-makers), com o minicurso aberto a todas as empresas; o teste e o certificado seguem para parceiros com contrato.",
+      "fluxo": {
+        "status": "declarado",
+        "evidencias": [
+          "EV-0468"
+        ],
+        "raias": [
+          "PA-01",
+          "PA-08"
+        ],
+        "externos": [],
+        "nos": [
+          {
+            "id": "i1",
+            "tipo": "inicio",
+            "nome": "Empresa abriu Conhecer a Wise Makers",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "nome": "Assistir aos módulos do minicurso Como vender a Wise Makers",
+            "raia": "PA-08"
+          },
+          {
+            "id": "g1",
+            "tipo": "decisao",
+            "nome": "A empresa tem o link de indicação?",
+            "raia": "PA-01"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "nome": "Mandar o link a quem tem time comercial",
+            "raia": "PA-08"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "nome": "Consultoria indicada",
+            "raia": "PA-08"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "nome": "Mostrar o que falta para ter o link",
+            "raia": "PA-01",
+            "sistema": "SI-01",
+            "modo": "sistema"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "nome": "Empresa conhece a Wise Makers",
+            "raia": "PA-08"
+          }
+        ],
+        "ligacoes": [
+          {
+            "de": "i1",
+            "para": "t1"
+          },
+          {
+            "de": "t1",
+            "para": "g1"
+          },
+          {
+            "de": "g1",
+            "para": "t2",
+            "rotulo": "Sim"
+          },
+          {
+            "de": "t2",
+            "para": "f1"
+          },
+          {
+            "de": "g1",
+            "para": "t3",
+            "rotulo": "Não"
+          },
+          {
+            "de": "t3",
+            "para": "f2"
           }
         ],
         "mensagens": []
@@ -18261,6 +18669,78 @@
       "data": "2026-11-22",
       "trecho": "Comentário: Imediato",
       "local": "HB-prazo"
+    },
+    {
+      "id": "EV-0462",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "Preciso que você faça uma nova estrutura de páginas, editáveis na seção de páginas do portal wise partners, que será o modo de acessar a comunidade Wise Partners. Ela deve conter uma landing page onde se fala sobre o que é a Comunidade Wise Partners (é o portal onde as empresas podem contratar produtos e serviços do ecossistema da Wise Partners, que compreende todas as empresas relacionadas ao Grupo Tríade). A landing page deve servir para qualquer empresa, seja um cliente de qualquer empresa do Grupo Tríade que também parceiros, prospectos clientes, prospectos parceiros, etc.",
+      "local": "Conversa de 23/11/2026, comunidade"
+    },
+    {
+      "id": "EV-0463",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "A landing page deve ter dois botões no menu: um de cadastrar e outro de login.",
+      "local": "Conversa de 23/11/2026, botoes"
+    },
+    {
+      "id": "EV-0464",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "Ao fazer o cadastro através da landing page, ele deve preencher todas as informações para sabermos se é um lead de parceiro, se é já um cliente do Grupo Tríade, etc etc.",
+      "local": "Conversa de 23/11/2026, cadastro"
+    },
+    {
+      "id": "EV-0465",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "Ao acessar, ele entrará direto no portal Wise Partners dentro da sua própria conta.",
+      "local": "Conversa de 23/11/2026, acesso"
+    },
+    {
+      "id": "EV-0466",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "O catálogo de parceiros deve ser a primeira aba do portal para clientes do Grupo Tríade. O catálogo deve ser muito bem apresentado, para não parecer algo feito de qualquer jeito.",
+      "local": "Conversa de 23/11/2026, catalogo"
+    },
+    {
+      "id": "EV-0467",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "Os clientes, que terão seu login e senha no portal Wise Partners, terão também acesso ao link de afiliado e podem indicar a consultoria gratuita da Wise Makers.",
+      "local": "Conversa de 23/11/2026, afiliado"
+    },
+    {
+      "id": "EV-0468",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "O parceiro Premium verá a mesma coisa: Catálogo das empresas da Comunidade Wise Partners com seus descontos, aba para indicar a Wise Makers e uma aba para conhecer melhor a Wise Makers (basicamente um minicurso sobre como vender a Wise Makers)",
+      "local": "Conversa de 23/11/2026, premium"
+    },
+    {
+      "id": "EV-0469",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 23/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-23",
+      "trecho": "O parceiro Elite terá a possibilidade de também cadastrar a própria empresa com uma oferta na Comunidade Wise Partners",
+      "local": "Conversa de 23/11/2026, elite"
     }
   ],
   "perguntas": [
@@ -28288,10 +28768,14 @@
       ],
       "rodada": 13,
       "bloco": "Catálogo",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0462"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "pendente-v15",
       "contexto": [
         "Você disse que um objetivo do catálogo é oferecer algo de imediato aos leads. Pela regra, só membros veem as condições."
@@ -28300,6 +28784,160 @@
       "citacoes": [],
       "visual": "",
       "recomendo": "Uma vitrine sem as condições (empresas e o que oferecem), com o convite para virar cliente e liberar os descontos."
+    },
+    {
+      "id": "Q-0280",
+      "texto": "Quem se declara cliente do grupo no cadastro precisa da confirmação da Wise antes de ver as condições?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, confirmar antes",
+        "Não, liberar na hora"
+      ],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim: confirmar antes protege as condições dos ofertantes; a vitrine já mostra o valor da comunidade."
+    },
+    {
+      "id": "Q-0281",
+      "texto": "Empresa cadastrada sem vínculo vê a vitrine do catálogo e o minicurso?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim, como vitrine: mostra o ecossistema e convida a virar cliente ou parceira."
+    },
+    {
+      "id": "Q-0282",
+      "texto": "Quem pede para ser parceiro pela comunidade passa pela conversa de entrada como os demais?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim, mantém a entrada pessoal (DE-30) e reaproveita a conta."
+    },
+    {
+      "id": "Q-0283",
+      "texto": "O cliente do grupo que indica a consultoria pelo link recebe a mesma comissão do parceiro?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, 40% da primeira mensalidade",
+        "Outra recompensa",
+        "Sem comissão"
+      ],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Decidir antes da primeira indicação de cliente: a mesma regra simplifica, mas pode pedir contrato com o cliente."
+    },
+    {
+      "id": "Q-0284",
+      "texto": "Clientes do grupo continuam oferecendo no catálogo, além dos parceiros Elite?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, como no FO-19",
+        "Não, só o Elite oferece"
+      ],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim, como no FO-19: clientes estão dos dois lados."
+    },
+    {
+      "id": "Q-0285",
+      "texto": "A raiz do portal abre a página da comunidade?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-102"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 14,
+      "bloco": "Comunidade",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v16",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim: a comunidade serve a qualquer empresa e tem o caminho para ser parceiro."
     }
   ],
   "formularios": [
@@ -29918,6 +30556,144 @@
         "EV-0460",
         "EV-0461"
       ]
+    },
+    {
+      "id": "DE-89",
+      "data": "2026-11-23",
+      "texto": "O portal passa a ser a Comunidade Wise Partners: o lugar onde as empresas do ecossistema do Grupo Tríade contratam produtos e serviços entre si.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0462"
+      ]
+    },
+    {
+      "id": "DE-90",
+      "data": "2026-11-23",
+      "texto": "A página da comunidade é única para qualquer empresa (clientes do grupo, parceiros, prospectos de cliente e de parceria), editável em Programa, Páginas, com Cadastrar e Entrar no menu.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0462",
+        "EV-0463"
+      ]
+    },
+    {
+      "id": "DE-91",
+      "data": "2026-11-23",
+      "texto": "O cadastro na comunidade pergunta o necessário para classificar a empresa (cliente do grupo, lead de parceiro, lead da consultoria) e abre a conta na hora.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0464",
+        "EV-0465"
+      ]
+    },
+    {
+      "id": "DE-92",
+      "data": "2026-11-23",
+      "texto": "O Catálogo de parceiros é a primeira aba para clientes do Grupo Tríade e precisa ser bem apresentado.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0466"
+      ]
+    },
+    {
+      "id": "DE-93",
+      "data": "2026-11-23",
+      "texto": "Clientes com login têm o link de indicação da consultoria gratuita da Wise Makers.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0467"
+      ]
+    },
+    {
+      "id": "DE-94",
+      "data": "2026-11-23",
+      "texto": "Parceiro Premium vê o Catálogo com as condições, a aba para indicar a Wise Makers e a aba Conhecer a Wise Makers, com o minicurso de como vender a Wise Makers.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0468"
+      ]
+    },
+    {
+      "id": "DE-95",
+      "data": "2026-11-23",
+      "texto": "Parceiro Elite também cadastra a própria empresa com ofertas no catálogo.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0469"
+      ]
+    },
+    {
+      "id": "DE-96",
+      "data": "2026-11-23",
+      "texto": "Cliente do grupo declarado no cadastro vê o catálogo em vitrine (empresas e ofertas, sem as condições) até a Wise confirmar o vínculo, em até 2 dias úteis.",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0280",
+      "evidencias": [
+        "EV-0464"
+      ]
+    },
+    {
+      "id": "DE-97",
+      "data": "2026-11-23",
+      "texto": "Empresa sem vínculo (nem cliente do grupo nem parceira) vê o catálogo em vitrine e o minicurso, sem as condições e sem o link de indicação. Isso responde a pergunta do v15 sobre algo imediato para os leads.",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0281",
+      "evidencias": [
+        "EV-0464"
+      ]
+    },
+    {
+      "id": "DE-98",
+      "data": "2026-11-23",
+      "texto": "Quem quer ser parceiro pelo cadastro da comunidade entra na mesma fila de candidatos, com WhatsApp e conversa de entrada; a aprovação transforma a mesma conta em parceiro.",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0282",
+      "evidencias": [
+        "EV-0464"
+      ]
+    },
+    {
+      "id": "DE-99",
+      "data": "2026-11-23",
+      "texto": "Cliente do grupo que indica pelo link segue, por ora, a regra de comissão do parceiro (40% da primeira mensalidade).",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0283",
+      "evidencias": [
+        "EV-0464"
+      ]
+    },
+    {
+      "id": "DE-100",
+      "data": "2026-11-23",
+      "texto": "Clientes do grupo continuam podendo oferecer no catálogo, como decidido no FO-19; o pedido de 23/11 citou ofertas só para o Elite.",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0284",
+      "evidencias": [
+        "EV-0464"
+      ]
+    },
+    {
+      "id": "DE-101",
+      "data": "2026-11-23",
+      "texto": "A raiz do portal (partners.wisemakers.com.br) abre a página da comunidade; a página dos parceiros continua em /parceiros para as campanhas.",
+      "por": null,
+      "provisoria": true,
+      "pergunta": "Q-0285",
+      "evidencias": [
+        "EV-0464"
+      ]
     }
   ],
   "glossario": [
@@ -30118,7 +30894,7 @@
   "ideias": [],
   "historico": [
     {
-      "data": "2026-11-22",
+      "data": "2026-11-23",
       "evento": "Mapeamento iniciado"
     },
     {
@@ -30168,6 +30944,10 @@
     {
       "data": "2026-11-22",
       "evento": "To-be v15: FO-19 aplicado. Catálogo de parceiros (processo novo com três subprocessos), papéis Empresa cliente do Grupo Tríade e CS da Tríade, critério dos níveis decidido (CT-08 resolvida), pacotes saem, canvas atualizado."
+    },
+    {
+      "data": "2026-11-23",
+      "evento": "To-be v16: Comunidade Wise Partners. Página geral com Cadastrar e Entrar, cadastro com conta na hora e classificação (P-106), confirmação do cliente do grupo (P-107), Conhecer a Wise Makers (P-108); Catálogo como primeira aba de quem não é parceiro; link de indicação para clientes; canvas atualizado; 6 decisões provisórias com pergunta."
     }
   ]
 }

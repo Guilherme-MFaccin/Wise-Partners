@@ -10,6 +10,7 @@ import type { FormatoVideo } from "@/lib/landing";
 export const CHAVES = {
   parceiros: ["paginas", "config-landing"] as const,
   cliente: ["paginas", "config-landing-cliente"] as const,
+  comunidade: ["paginas", "config-comunidade"] as const,
   cases: ["paginas", "cases"] as const,
   resumo: ["paginas", "cases", "resumo"] as const,
   link: ["paginas", "link-exemplo"] as const,
@@ -27,6 +28,18 @@ export type ConfigCliente = {
   icp_min_vendedores: number; icp_faturamento_min: string | null; valor_diagnostico: number | string; valor_hub: number | string;
   conteudo: Conteudo | null; updated_at: string;
 };
+
+export type ConfigComunidadePagina = {
+  publicada: boolean; video_url: string | null; video_formato: FormatoVideo; conteudo: Conteudo | null;
+  termo_uso_versao: string; termo_uso_texto: string; updated_at: string;
+};
+
+export function useConfigComunidade() {
+  return useQuery({
+    queryKey: CHAVES.comunidade,
+    queryFn: async () => ok<any>(await (supabase.from("config_comunidade" as any) as any).select("*").eq("id", 1).maybeSingle()) as ConfigComunidadePagina | null,
+  });
+}
 
 export type CaseLinha = {
   id: string; empresa: string; segmento: string; crescimento: number | string; periodo: string; ordem: number; ativo: boolean;

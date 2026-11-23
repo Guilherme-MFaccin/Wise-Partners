@@ -40,8 +40,9 @@ export const SECOES_INTERNAS: SecaoNav[] = [
     ],
   },
   {
-    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Hub de negócios: ofertas dos membros, pedidos e clientes do grupo (FO-19)",
+    id: "catalogo", rotulo: "Comunidade", icone: Store, descricao: "Comunidade Wise Partners: empresas cadastradas, ofertas do catálogo, pedidos e clientes do grupo",
     abas: [
+      { to: "/app/catalogo/membros", rotulo: "Empresas", papeis: SEM_FINANCEIRO },
       { to: "/app/catalogo", rotulo: "Ofertas", papeis: SEM_FINANCEIRO, exato: true },
       { to: "/app/catalogo/pedidos", rotulo: "Pedidos", papeis: SEM_FINANCEIRO },
       { to: "/app/catalogo/clientes", rotulo: "Clientes do grupo", papeis: SEM_FINANCEIRO },
@@ -81,10 +82,14 @@ export const SECOES_INTERNAS: SecaoNav[] = [
   },
 ];
 
-// Área do parceiro. Filtros: `responsavel` (só o responsável nomeado), `onboarding` (só com plano), `comercial` (só parceria comercial)
-// `hub`: abas do Catálogo de parceiros; a empresa só cliente do grupo vê apenas estas
-export type AbaParceiro = Aba & { responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados"; hub?: "ver" | "ofertar" | "pedidos" };
-export type SecaoParceiro = Omit<SecaoNav, "abas"> & { abas: AbaParceiro[] };
+// Área logada das empresas (Comunidade Wise Partners). Filtros: `responsavel` (só o responsável nomeado), `onboarding` (só com plano),
+// `comercial` (só parceria comercial), `hub` (abas do Catálogo, pelo acesso do banco), `membro` (aba que a empresa sem parceria
+// também vê: cliente do grupo ou empresa cadastrada na comunidade), `indicar` (só com o link liberado: parceiro ou cliente confirmado).
+// Para quem não é parceiro, o Catálogo vem primeiro e as seções usam `rotuloMembro`.
+export type AbaParceiro = Aba & {
+  responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados"; hub?: "ver" | "ofertar" | "pedidos"; membro?: boolean; indicar?: boolean;
+};
+export type SecaoParceiro = Omit<SecaoNav, "abas"> & { abas: AbaParceiro[]; rotuloMembro?: string };
 
 export const SECOES_PARCEIRO: SecaoParceiro[] = [
   {
@@ -95,25 +100,26 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
     ],
   },
   {
-    id: "oportunidades", rotulo: "Oportunidades", icone: Send, descricao: "Indicar e acompanhar",
+    id: "oportunidades", rotulo: "Oportunidades", rotuloMembro: "Indicar a Wise Makers", icone: Send, descricao: "Indicar e acompanhar",
     abas: [
-      { to: "/parceiro/indicar", rotulo: "Indicar" },
-      { to: "/parceiro/indicacoes", rotulo: "Minhas indicações" },
+      { to: "/parceiro/indicar", rotulo: "Indicar", membro: true, indicar: true },
+      { to: "/parceiro/indicacoes", rotulo: "Minhas indicações", membro: true, indicar: true },
       { to: "/parceiro/rfps", rotulo: "Prateleira" },
       { to: "/parceiro/cruzamento", rotulo: "Cruzamento", comercial: true },
     ],
   },
   {
-    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Condições especiais entre os membros do ecossistema",
+    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Empresas do ecossistema e as condições especiais entre os membros",
     abas: [
-      { to: "/parceiro/catalogo", rotulo: "Catálogo", hub: "ver" },
-      { to: "/parceiro/ofertas", rotulo: "Minhas ofertas", hub: "ofertar" },
-      { to: "/parceiro/pedidos", rotulo: "Pedidos", hub: "pedidos" },
+      { to: "/parceiro/catalogo", rotulo: "Catálogo", hub: "ver", membro: true },
+      { to: "/parceiro/ofertas", rotulo: "Minhas ofertas", hub: "ofertar", membro: true },
+      { to: "/parceiro/pedidos", rotulo: "Pedidos", hub: "pedidos", membro: true },
     ],
   },
   {
-    id: "aprender", rotulo: "Aprender", icone: GraduationCap, descricao: "Minicurso, kit e regras",
+    id: "aprender", rotulo: "Aprender", rotuloMembro: "Conhecer a Wise Makers", icone: GraduationCap, descricao: "Minicurso, kit e regras",
     abas: [
+      { to: "/parceiro/wise-makers", rotulo: "Conhecer a Wise Makers", membro: true },
       { to: "/parceiro/capacitacao", rotulo: "Capacitação", prefixos: ["/parceiro/capacitacao/"] },
       { to: "/parceiro/materiais", rotulo: "Kit e materiais" },
       { to: "/parceiro/regras", rotulo: "Regras do programa" },
@@ -138,6 +144,9 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
     ],
   },
 ];
+
+// Ordem para a empresa sem parceria: o Catálogo é a primeira aba (cliente do grupo e empresa cadastrada)
+export const ORDEM_MEMBRO = ["catalogo", "oportunidades", "aprender"];
 
 // A aba ativa é a de caminho mais específico que casa com a URL
 export function casaAba(aba: Aba, caminho: string) {

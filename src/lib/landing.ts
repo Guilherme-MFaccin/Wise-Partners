@@ -8,6 +8,23 @@ export const URL_CADASTRO = `${import.meta.env.VITE_SUPABASE_URL ?? "http://loca
 const CHAVE = (import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY ?? import.meta.env.VITE_SUPABASE_ANON_KEY ?? "anon") as string;
 export const CABECALHOS = { apikey: CHAVE, Authorization: `Bearer ${CHAVE}` };
 
+// Comunidade Wise Partners (/comunidade e /comunidade/cadastro)
+export const URL_COMUNIDADE = `${import.meta.env.VITE_SUPABASE_URL ?? "http://localhost:54321"}/functions/v1/cadastro-comunidade`;
+export type EmpresaGrupo = { id: string; codigo: string; nome: string; site: string | null; descricao: string | null };
+export type ResumoComunidade = { ofertas: number; empresas_ofertando: number; membros: number; categorias: string[] };
+export type ConfigComunidade = {
+  publicada: boolean; video_url: string | null; video_formato?: FormatoVideo;
+  termo_uso_versao?: string; privacidade_versao?: string | null; termo_parceiro_versao?: string | null;
+  empresas_grupo?: EmpresaGrupo[]; categorias?: { id: string; nome: string; grupo?: "comercial" | "institucional" }[];
+  resumo?: ResumoComunidade | null;
+} & DadosPagina;
+
+export async function carregarComunidade(): Promise<ConfigComunidade> {
+  const r = await fetch(URL_COMUNIDADE, { headers: CABECALHOS });
+  if (!r.ok) throw new Error("Não foi possível carregar a página agora.");
+  return r.json();
+}
+
 export type FormatoVideo = "auto" | "horizontal" | "vertical" | "quadrado";
 
 // Parte comum das duas páginas: conteúdo salvo no portal, valores de referência, perfil da reunião e cases.
@@ -38,8 +55,8 @@ export async function carregarConfig(): Promise<ConfigLanding> {
   return r.json();
 }
 
-export async function carregarTexto(qual: "termo" | "privacidade"): Promise<TextoLegal> {
-  const r = await fetch(`${URL_CADASTRO}?texto=${qual}`, { headers: CABECALHOS });
+export async function carregarTexto(qual: "termo" | "privacidade" | "uso"): Promise<TextoLegal> {
+  const r = await fetch(qual === "uso" ? `${URL_COMUNIDADE}?texto=uso` : `${URL_CADASTRO}?texto=${qual}`, { headers: CABECALHOS });
   if (!r.ok) throw new Error("Não foi possível carregar o texto agora.");
   return r.json();
 }

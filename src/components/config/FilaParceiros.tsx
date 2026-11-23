@@ -16,7 +16,7 @@ import { useAuth } from "@/hooks/useAuth";
 
 type Cadastro = {
   id: string; created_at: string; parceiro_id: string | null; empresa: string; nome: string; email: string; whatsapp: string; cargo: string | null;
-  site: string | null; categoria_nome: string | null; clientes_ativos: number | null; utm_campaign: string | null; utm_content: string | null;
+  site: string | null; origem?: string | null; categoria_nome: string | null; clientes_ativos: number | null; utm_campaign: string | null; utm_content: string | null;
   status: string; observacao: string | null; aprovado_em: string | null;
 };
 
@@ -57,13 +57,13 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
   const qc = useQueryClient();
   const [aprovar, setAprovar] = useState<Cadastro | null>(null);
   const [aprovando, setAprovando] = useState(false);
-  const [acesso, setAcesso] = useState<{ nome: string; email: string; whatsapp: string; senha: string; parceiro_id: string; erro?: string } | null>(null);
+  const [acesso, setAcesso] = useState<{ nome: string; email: string; whatsapp: string; senha: string; parceiro_id: string; erro?: string; jaTinha?: boolean } | null>(null);
   const [verHistorico, setVerHistorico] = useState(false);
 
   const cad = useQuery({
     queryKey: ["config", "landing", "cadastros"],
     queryFn: async () => ok<any>(await supabase.from("cadastros_landing")
-      .select("id, created_at, parceiro_id, empresa, nome, email, whatsapp, cargo, site, categoria_nome, clientes_ativos, utm_campaign, utm_content, status, observacao, aprovado_em")
+      .select("id, created_at, parceiro_id, empresa, nome, email, whatsapp, cargo, site, categoria_nome, clientes_ativos, utm_campaign, utm_content, status, observacao, aprovado_em, origem")
       .order("created_at", { ascending: false }).limit(300)) as Cadastro[],
   });
   const recarregar = () => qc.invalidateQueries({ queryKey: ["config", "landing", "cadastros"] });
@@ -85,6 +85,14 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
     }
     const senha = senhaProvisoria();
     const parceiroId = (r as { parceiro_id: string }).parceiro_id;
+    // Empresa que já era da Comunidade Wise Partners: a conta existe e passa a abrir a área do parceiro
+    if ((r as { ja_tem_acesso?: boolean }).ja_tem_acesso) {
+      setAcesso({ nome: c.nome, email: c.email, whatsapp: c.whatsapp, senha: "", parceiro_id: parceiroId, jaTinha: true });
+      setAprovando(false);
+      setAprovar(null);
+      recarregar();
+      return;
+    }
     try {
       await convidarUsuario({ email: c.email, nome: c.nome, papel: "parceiro", parceiro_id: parceiroId, is_responsavel_parceiro: true, senha });
       setAcesso({ nome: c.nome, email: c.email, whatsapp: c.whatsapp, senha, parceiro_id: parceiroId });
@@ -130,7 +138,7 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
                   <TableCell className="whitespace-nowrap tabular-nums">{data(c.created_at)}</TableCell>
                   <TableCell className="min-w-[170px]">
                     <span className="font-medium">{c.empresa}</span>
-                    <span className="block text-xs text-neutro-300">{c.categoria_nome ?? "Sem tipo"} · {c.clientes_ativos ?? "?"} clientes</span>
+                    <span className="block text-xs text-neutro-300">{c.categoria_nome ?? "Sem tipo"} · {c.clientes_ativos ?? "?"} clientes{c.origem === "comunidade" ? " · pela Comunidade" : ""}</span>
                     {c.site && <span className="block text-xs text-neutro-300">{c.site}</span>}
                   </TableCell>
                   <TableCell className="min-w-[170px]">
@@ -215,15 +223,16 @@ export function FilaParceiros({ agendaUrl }: { agendaUrl: string | null }) {
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              {acesso?.erro ? "Parceiro criado, sem acesso" : <><CheckCircle2 className="h-5 w-5 text-menta-400" /> Acesso criado</>}
+              {acesso?.erro ? "Parceiro criado, sem acesso" : <><CheckCircle2 className="h-5 w-5 text-menta-400" /> {acesso?.jaTinha ? "Parceiro aprovado" : "Acesso criado"}</>}
             </DialogTitle>
             <DialogDescription>
               {acesso?.erro
                 ? `O parceiro foi criado, mas a conta não: ${acesso.erro} Crie o acesso pela ficha do parceiro, em Usuários.`
+                : acesso?.jaTinha ? "A empresa já entrava pela Comunidade Wise Partners. O mesmo login agora abre a área do parceiro, com o onboarding. Avise pelo WhatsApp."
                 : "Mande a mensagem abaixo pelo WhatsApp. A senha não fica guardada em lugar nenhum: se fechar esta janela sem copiar, gere outra pela ficha do parceiro."}
             </DialogDescription>
           </DialogHeader>
-          {acesso && !acesso.erro && (
+          {acesso && !acesso.erro && !acesso.jaTinha && (
             <>
               <p className="whitespace-pre-line rounded-[10px] border border-white/10 bg-white/5 p-3 text-sm">{msgAcesso(acesso)}</p>
               <div className="flex flex-wrap gap-2">

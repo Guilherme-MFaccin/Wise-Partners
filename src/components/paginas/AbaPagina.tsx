@@ -7,7 +7,7 @@ import { toastErro } from "@/lib/erros";
 import { fonteVideo, type FormatoVideo } from "@/lib/landing";
 import { FAIXAS_FATURAMENTO } from "@/lib/diagnostico";
 import {
-  META_CLIENTE, META_PARCEIROS, PADRAO_CLIENTE, PADRAO_PARCEIROS, compactarConteudo, montarConteudo, perfilReuniao, pisoFaixa, reais, resolverDados,
+  META_CLIENTE, META_COMUNIDADE, META_PARCEIROS, PADRAO_CLIENTE, PADRAO_COMUNIDADE, PADRAO_PARCEIROS, type BlocoComunidade, compactarConteudo, montarConteudo, perfilReuniao, pisoFaixa, reais, resolverDados,
   temTravessao, type BlocoCliente, type BlocoParceiros, type ConteudoPronto, type ResumoCases,
 } from "@/lib/paginas";
 import { Pilula } from "@/components/comum/Selos";
@@ -21,10 +21,11 @@ import {
 import { BarraSalvar, CampoTexto, Cartao, EsqueletoEditor } from "@/components/paginas/Campos";
 import { EditorBlocos, EditorPerguntas, QuadroMarcadores } from "@/components/paginas/EditorBlocos";
 import {
-  CHAVES, useConfigCliente, useConfigParceiros, useFormulario, useLinkExemplo, useResumoCases, type ConfigCliente,
+  CHAVES, useConfigCliente, useConfigComunidade, useConfigParceiros, useFormulario, useLinkExemplo, useResumoCases, type ConfigCliente,
 } from "@/components/paginas/dados";
 
-type Tabela = "config_landing" | "config_landing_cliente";
+type Tabela = "config_landing" | "config_landing_cliente" | "config_comunidade";
+const CHAVE_TABELA = { config_landing: CHAVES.parceiros, config_landing_cliente: CHAVES.cliente, config_comunidade: CHAVES.comunidade };
 
 // Publicar ou tirar do ar: grava na hora (tirar do ar pede confirmação)
 function CartaoPublicacao({ tabela, publicada, url, semLink, desligado, nome }: {
@@ -36,12 +37,12 @@ function CartaoPublicacao({ tabela, publicada, url, semLink, desligado, nome }: 
 
   async function mudar(v: boolean) {
     setSalvando(true);
-    const { error } = await supabase.from(tabela).update({ publicada: v }).eq("id", 1);
+    const { error } = await (supabase.from(tabela as any) as any).update({ publicada: v }).eq("id", 1);
     setSalvando(false);
     setConfirmar(false);
     if (error) return toastErro(error);
     toast.success(v ? `A ${nome} está no ar.` : `A ${nome} saiu do ar.`);
-    qc.invalidateQueries({ queryKey: tabela === "config_landing" ? CHAVES.parceiros : CHAVES.cliente });
+    qc.invalidateQueries({ queryKey: CHAVE_TABELA[tabela] });
   }
 
   return (
@@ -330,6 +331,79 @@ export function AbaCliente({ desligado }: { desligado: boolean }) {
       <EditorBlocos meta={META_CLIENTE} padrao={PADRAO_CLIENTE} valor={f.conteudo} desligado={desligado} aoMudar={(c) => form.set("conteudo", c)} />
       <EditorPerguntas padrao={PADRAO_CLIENTE} valor={f.conteudo} desligado={desligado} aoMudar={(c) => form.set("conteudo", c)} />
       <QuadroMarcadores vars={vars} />
+
+      {!desligado && <BarraSalvar sujo={form.sujo} salvando={salvando} aoSalvar={salvar} aoDescartar={form.descartar} />}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Página da Comunidade Wise Partners (/comunidade): qualquer empresa; Cadastrar e Entrar no menu
+// ---------------------------------------------------------------------------
+type FormComunidade = {
+  video_url: string; video_formato: FormatoVideo; conteudo: ConteudoPronto<BlocoComunidade>; termo_uso_versao: string; termo_uso_texto: string;
+};
+
+export function AbaComunidade({ desligado }: { desligado: boolean }) {
+  const qc = useQueryClient();
+  const cfg = useConfigComunidade();
+  const cli = useConfigCliente();
+  const resumo = useResumoCases();
+  const dados = useMemo<FormComunidade | null>(() => (cfg.data ? {
+    video_url: cfg.data.video_url ?? "", video_formato: cfg.data.video_formato ?? "auto", conteudo: montarConteudo(PADRAO_COMUNIDADE, cfg.data.conteudo),
+    termo_uso_versao: cfg.data.termo_uso_versao, termo_uso_texto: cfg.data.termo_uso_texto,
+  } : null), [cfg.data]);
+  const form = useFormulario(dados);
+  const [salvando, setSalvando] = useState(false);
+  const vars = useMemo(() => resolverDados({ valores: valoresDe(cli.data), icp: null, cases: resumo.data ?? RESUMO_VAZIO }).vars, [cli.data, resumo.data]);
+
+  if (cfg.isLoading) return <EsqueletoEditor />;
+  if (cfg.error) return <ErroCarga erro={cfg.error} aoTentar={() => cfg.refetch()} />;
+  if (!cfg.data || !form.f) return <Vazio titulo="Configuração da página não encontrada">A migração da Comunidade Wise Partners ainda não foi aplicada neste banco.</Vazio>;
+  const f = form.f;
+  const termoMudou = f.termo_uso_texto !== dados!.termo_uso_texto && f.termo_uso_versao === dados!.termo_uso_versao;
+
+  async function salvar() {
+    const erro = validarComum(f.conteudo, f.video_url) || (temTravessao(f.termo_uso_texto) ? "Há travessão ou meia-risca no termo de uso." : "")
+      || (!f.termo_uso_texto.trim() ? "O termo de uso não pode ficar vazio." : "") || (!/^\d{4}-\d{2}-\d{2}$/.test(f.termo_uso_versao) ? "Informe a data da versão do termo." : "");
+    if (erro) return toast.error(erro);
+    setSalvando(true);
+    const { error } = await (supabase.from("config_comunidade" as any) as any).update({
+      video_url: f.video_url.trim() || null, video_formato: f.video_formato, conteudo: compactarConteudo(PADRAO_COMUNIDADE, f.conteudo),
+      termo_uso_versao: f.termo_uso_versao, termo_uso_texto: f.termo_uso_texto.trim(),
+    }).eq("id", 1);
+    setSalvando(false);
+    if (error) return toastErro(error);
+    form.salvo();
+    toast.success("Página da comunidade atualizada.");
+    qc.invalidateQueries({ queryKey: CHAVES.comunidade });
+  }
+
+  return (
+    <div className="space-y-4">
+      <CartaoPublicacao tabela="config_comunidade" publicada={cfg.data.publicada} url="/comunidade" desligado={desligado} nome="página da comunidade" />
+
+      <Cartao titulo="Vídeo do topo" descricao="Sem vídeo, o topo mostra uma ilustração do catálogo.">
+        <CamposVideo url={f.video_url} formato={f.video_formato} desligado={desligado}
+          aoMudarUrl={(v) => form.set("video_url", v)} aoMudarFormato={(v) => form.set("video_formato", v)} />
+      </Cartao>
+
+      <Cartao titulo="Cadastro e acesso" descricao="Quem se cadastra cria a senha e entra no portal na hora. Cliente do grupo declarado espera a confirmação da Wise para ver as condições; quem quer ser parceiro entra também na fila de candidatos. As empresas aparecem em Comunidade, Empresas.">
+        <p className="text-sm text-neutro-300">As empresas do grupo mostradas na página vêm do cadastro de empresas do grupo, com a descrição de cada uma. Os números do catálogo são calculados pelo banco.</p>
+      </Cartao>
+
+      <EditorBlocos meta={META_COMUNIDADE} padrao={PADRAO_COMUNIDADE} valor={f.conteudo} desligado={desligado} aoMudar={(c) => form.set("conteudo", c)} />
+      <EditorPerguntas padrao={PADRAO_COMUNIDADE} valor={f.conteudo} desligado={desligado} aoMudar={(c) => form.set("conteudo", c)} />
+      <QuadroMarcadores vars={vars} />
+
+      <Cartao titulo="Termo de uso da comunidade" descricao="A empresa aceita este termo no cadastro. Mudou o texto, mude a versão: cada cadastro guarda a versão que aceitou.">
+        <div className="sm:w-56">
+          <CampoTexto rotulo="Versão" tipo="date" valor={f.termo_uso_versao} aoMudar={(v) => form.set("termo_uso_versao", v)} desligado={desligado} maximo={10}
+            ajuda={termoMudou ? "O texto mudou: atualize a data da versão." : undefined} />
+        </div>
+        <CampoTexto rotulo="Texto do termo" longo valor={f.termo_uso_texto} aoMudar={(v) => form.set("termo_uso_texto", v)} desligado={desligado} maximo={60000}
+          ajuda="Parágrafos separados por uma linha em branco." />
+      </Cartao>
 
       {!desligado && <BarraSalvar sujo={form.sujo} salvando={salvando} aoSalvar={salvar} aoDescartar={form.descartar} />}
     </div>

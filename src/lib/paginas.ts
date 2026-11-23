@@ -496,3 +496,116 @@ export const META_CLIENTE: MetaBloco<BlocoCliente>[] = [
     campos: { eyebrow: "Sobretítulo", titulo: "Título", botao: "Botão de envio" },
     listas: { itens: { rotulo: "Garantias", comTexto: false, nomeItem: "garantia" } } },
 ];
+
+// ---------------------------------------------------------------------------
+// Página da Comunidade Wise Partners (/comunidade): para qualquer empresa (clientes do Grupo Tríade, parceiros,
+// prospectos de cliente e de parceria). Cadastro e login no menu; o cadastro abre a conta na hora.
+// ---------------------------------------------------------------------------
+export const BLOCOS_COMUNIDADE = [
+  "topo", "o_que_e", "grupo", "para_quem", "como_funciona", "acessos", "catalogo", "indicar", "perguntas", "cadastro",
+] as const;
+export type BlocoComunidade = (typeof BLOCOS_COMUNIDADE)[number];
+
+export const PADRAO_COMUNIDADE: ConteudoPronto<BlocoComunidade> = {
+  secoes: {
+    topo: bloco({
+      eyebrow: "Comunidade Wise Partners · ecossistema do Grupo Tríade",
+      titulo: "Produtos e serviços para a sua empresa, com condições que só os membros têm.",
+      texto: "A Comunidade Wise Partners é o portal onde as empresas do ecossistema do Grupo Tríade fazem negócio entre si: clientes, parceiros e fornecedores mostram o que fazem e contratam uns dos outros com condições especiais.",
+      botao: "Cadastrar minha empresa",
+      nota: "Cadastro em 3 minutos. Você entra no portal na hora.",
+    }),
+    o_que_e: bloco({
+      eyebrow: "O que é",
+      titulo: "Um portal para fazer negócio dentro do ecossistema.",
+      texto: "Cada empresa entra com o próprio login e encontra, num lugar só, o que o ecossistema tem para oferecer.",
+      itens: [
+        { titulo: "Catálogo de parceiros", texto: "Empresas do ecossistema com ofertas e condições só para membros. A Wise valida cada oferta antes de publicar." },
+        { titulo: "Indicação da consultoria", texto: "Um link próprio para indicar a consultoria comercial gratuita da Wise Makers a quem você conhece." },
+        { titulo: "Conhecer a Wise Makers", texto: "Um minicurso curto sobre o método da Wise Makers e sobre como apresentar a consultoria." },
+      ],
+    }),
+    grupo: bloco({
+      eyebrow: "Quem está por trás",
+      titulo: "As empresas do Grupo Tríade, num ecossistema só.",
+      texto: "A comunidade reúne quem já compra das empresas do grupo e quem vende junto com elas.",
+    }),
+    para_quem: bloco({
+      eyebrow: "Para quem é",
+      titulo: "Para qualquer empresa que faz negócio com outras empresas.",
+      itens: [
+        { titulo: "Clientes do Grupo Tríade", texto: "Usam as condições do catálogo, indicam a consultoria e podem oferecer os próprios produtos e serviços." },
+        { titulo: "Parceiros do programa", texto: "Parceiros Premium usam as condições. Parceiros Elite também oferecem no catálogo." },
+        { titulo: "Empresas que querem ser parceiras", texto: "Fazem o cadastro, conhecem o ecossistema e pedem a entrada no programa Wise Partners." },
+        { titulo: "Empresas que querem conhecer", texto: "Veem quem está na comunidade e o que cada empresa oferece, e falam com a Wise quando quiserem." },
+      ],
+    }),
+    como_funciona: bloco({
+      eyebrow: "Como funciona",
+      titulo: "Três passos até usar o catálogo.",
+      itens: [
+        { titulo: "Cadastre a sua empresa", texto: "Conte quem é a empresa e qual é a relação dela com o Grupo Tríade. Você cria a senha e entra no portal na hora." },
+        { titulo: "A Wise confirma o seu acesso", texto: "Se a sua empresa é cliente do grupo, a Wise confirma o vínculo em até 2 dias úteis e libera as condições." },
+        { titulo: "Use, ofereça e indique", texto: "Peça condições com protocolo, publique as suas ofertas quando puder e indique a consultoria da Wise Makers." },
+      ],
+    }),
+    acessos: bloco({
+      eyebrow: "O que cada empresa acessa",
+      titulo: "O acesso cresce com a relação da sua empresa com o grupo.",
+      texto: "Toda empresa cadastrada vê quem está na comunidade e o que cada uma oferece. As condições, a indicação e as ofertas seguem o vínculo.",
+    }),
+    catalogo: bloco({
+      eyebrow: "Catálogo de parceiros",
+      titulo: "Condições especiais que só aparecem para quem é membro.",
+      texto: "Cada oferta traz o que a empresa faz, para quem serve e uma condição exclusiva. Você pede pelo portal, recebe um protocolo e a empresa fala com você.",
+      nota: "As condições aparecem depois do login, para clientes do Grupo Tríade e parceiros Premium e Elite.",
+    }),
+    indicar: bloco({
+      eyebrow: "Indique a Wise Makers",
+      titulo: "Indique a consultoria comercial gratuita para quem você conhece.",
+      texto: "Clientes do grupo e parceiros têm um link próprio. A empresa indicada recebe um diagnóstico comercial, um plano de ação e o acesso ao Wise Hub, que valem {valor_total}, sem custo.",
+      botao: "Quero meu link",
+    }),
+    perguntas: bloco({ eyebrow: "Perguntas frequentes", titulo: "O que as empresas perguntam antes de entrar." }),
+    cadastro: bloco({
+      eyebrow: "Cadastro",
+      titulo: "Coloque a sua empresa no ecossistema do Grupo Tríade.",
+      texto: "O cadastro leva uns 3 minutos. No fim, você cria a senha e já entra no portal.",
+      botao: "Cadastrar minha empresa",
+      itens: so("Sem custo para entrar", "Ofertas validadas pela Wise", "Seu contato só vai para quem você pedir"),
+    }),
+  },
+  perguntas: [
+    { pergunta: "Quanto custa?", resposta: "Nada. O cadastro e o uso do portal não têm custo." },
+    { pergunta: "Quem pode usar as condições do catálogo?", resposta: "Os clientes das empresas do Grupo Tríade e os parceiros Premium e Elite do programa Wise Partners. As outras empresas cadastradas veem as empresas e as ofertas, sem as condições." },
+    { pergunta: "Sou cliente do Grupo Tríade. Como libero as condições?", resposta: "Marque no cadastro de qual empresa do grupo você é cliente. A Wise confirma o vínculo em até 2 dias úteis e avisa você no portal." },
+    { pergunta: "Como a minha empresa oferece algo no catálogo?", resposta: "Clientes do Grupo Tríade e parceiros Elite cadastram ofertas com uma condição só para membros. A Wise valida cada oferta antes de publicar." },
+    { pergunta: "O que acontece quando eu peço uma condição?", resposta: "Você recebe um protocolo, e a empresa que oferece recebe o seu contato para falar com você. O negócio é fechado entre as duas empresas." },
+    { pergunta: "Quero ser parceiro do programa. Por onde começo?", resposta: "Marque no cadastro que quer ser parceiro. A equipe da Wise fala com você pelo WhatsApp e marca uma conversa de entrada de 45 minutos." },
+    { pergunta: "Quem é a Wise Makers?", resposta: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná, e uma das empresas do Grupo Tríade. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
+  ],
+};
+
+export const META_COMUNIDADE: MetaBloco<BlocoComunidade>[] = [
+  { chave: "topo", rotulo: "Topo", descricao: "O que é a comunidade, vídeo e o botão de cadastro.", ocultavel: false,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", botao: "Botão", nota: "Nota ao lado do botão" } },
+  { chave: "o_que_e", rotulo: "O que é", descricao: "As três frentes do portal.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto" }, listas: { itens: { rotulo: "Frentes", comTexto: true, nomeItem: "frente" } } },
+  { chave: "grupo", rotulo: "Empresas do Grupo Tríade", descricao: "As empresas do grupo vêm do cadastro de empresas do grupo, com a descrição de cada uma.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto" } },
+  { chave: "para_quem", rotulo: "Para quem é", descricao: "Os perfis de empresa que entram na comunidade.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título" }, listas: { itens: { rotulo: "Perfis", comTexto: true, nomeItem: "perfil" } } },
+  { chave: "como_funciona", rotulo: "Como funciona", descricao: "Os passos do cadastro ao uso.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título" }, listas: { itens: { rotulo: "Passos", comTexto: true, nomeItem: "passo" } } },
+  { chave: "acessos", rotulo: "O que cada empresa acessa", descricao: "Tabela de acessos por vínculo. As linhas e as marcas seguem as regras do portal e não são editáveis.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto" } },
+  { chave: "catalogo", rotulo: "Catálogo de parceiros", descricao: "Números do catálogo e categorias com ofertas, calculados pelo banco.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", nota: "Nota sobre as condições" } },
+  { chave: "indicar", rotulo: "Indicação da consultoria", descricao: "Chamada para o link de indicação.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", botao: "Botão" } },
+  { chave: "perguntas", rotulo: "Perguntas frequentes", descricao: "Título da seção. As perguntas ficam no quadro abaixo.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título" } },
+  { chave: "cadastro", rotulo: "Chamada final", descricao: "Fechamento com o botão de cadastro e as garantias.", ocultavel: false,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", botao: "Botão" },
+    listas: { itens: { rotulo: "Garantias", comTexto: false, nomeItem: "garantia" } } },
+];

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { carregarTexto } from "@/lib/landing";
 
 // Termo de adesão e política de privacidade da landing page, com o texto vigente da configuração do portal.
-export default function TextoLegalParceiros({ qual }: { qual: "termo" | "privacidade" }) {
+export default function TextoLegalParceiros({ qual }: { qual: "termo" | "privacidade" | "uso" }) {
   const { data, isLoading, isError, refetch } = useQuery({ queryKey: ["texto-legal", qual], queryFn: () => carregarTexto(qual), retry: 1 });
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function TextoLegalParceiros({ qual }: { qual: "termo" | "privaci
       <header className="border-b border-white/10">
         <div className="mx-auto flex h-16 max-w-3xl items-center justify-between px-4 sm:px-6">
           <Logo className="h-7" />
-          <Button asChild variant="ghost" size="sm"><Link to="/parceiros"><ArrowLeft className="mr-1 h-4 w-4" aria-hidden />Voltar</Link></Button>
+          <Button asChild variant="ghost" size="sm"><Link to={qual === "uso" ? "/comunidade" : "/parceiros"}><ArrowLeft className="mr-1 h-4 w-4" aria-hidden />Voltar</Link></Button>
         </div>
       </header>
       <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
@@ -45,6 +45,7 @@ export default function TextoLegalParceiros({ qual }: { qual: "termo" | "privaci
         )}
         {data && (
           <article className="space-y-4">
+            {!blocos[0]?.startsWith("## ") && <h1 className="text-[28px] font-semibold leading-tight">{data.titulo}</h1>}
             {blocos.map((b, i) =>
               b.startsWith("## ") ? (
                 i === 0
