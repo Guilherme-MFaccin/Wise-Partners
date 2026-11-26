@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 // a abertura passa pela Edge Function ver-como, que registra cada uso. Administradores não entram na lista.
 type Conta = {
   perfil_id: string; nome: string; email: string; papel: string; responsavel: boolean; ativo: boolean; parceiro_id: string | null; empresa: string | null;
-  tipo: string; ultimo_acesso: string | null; ultima_visualizacao: string | null;
+  tipo: string; ultimo_acesso: string | null; ultima_visualizacao: string | null; demonstracao: boolean;
 };
 
 // Tipos de acesso, na ordem da hierarquia do portal
@@ -116,7 +116,7 @@ export default function VerComoAdmin() {
       {cab}
       <p className="flex gap-2 rounded-[10px] border border-warning/30 bg-warning/5 px-3 py-2 text-sm">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-warning" aria-hidden />
-        <span>A conta abre numa aba nova, com uma faixa de aviso, e você continua com o seu acesso nesta aba. O que você fizer lá vale como se fosse a pessoa, e cada visualização fica registrada no histórico.</span>
+        <span>A conta abre numa aba nova, com uma faixa de aviso, e você continua com o seu acesso nesta aba. O que você fizer lá vale como se fosse a pessoa, e cada visualização fica registrada no histórico. As contas marcadas como Demonstração são fictícias: ficam fora dos números, das listas e dos e-mails do time.</span>
       </p>
 
       <section aria-labelledby="publicas" className="space-y-3">
@@ -163,7 +163,7 @@ export default function VerComoAdmin() {
                     {t.contas.map((c) => (
                       <li key={c.perfil_id} className="flex flex-col gap-2 border-b border-white/5 px-4 py-3 last:border-0 sm:flex-row sm:items-center">
                         <div className="min-w-0 flex-1">
-                          <p className="truncate font-medium">{c.nome}{c.responsavel && <span className="ml-2 align-middle"><Pilula>Responsável</Pilula></span>}{!c.ativo && <span className="ml-2 align-middle"><Pilula tom="perigo">Desativada</Pilula></span>}</p>
+                          <p className="truncate font-medium">{c.nome}{c.demonstracao && <span className="ml-2 align-middle"><Pilula tom="info">Demonstração</Pilula></span>}{c.responsavel && <span className="ml-2 align-middle"><Pilula>Responsável</Pilula></span>}{!c.ativo && <span className="ml-2 align-middle"><Pilula tom="perigo">Desativada</Pilula></span>}</p>
                           <p className="truncate text-xs text-neutro-300">{[c.empresa, c.email].filter(Boolean).join(" · ")}</p>
                           <p className="text-xs text-neutro-300">
                             {c.ultimo_acesso ? `Último acesso em ${data(c.ultimo_acesso)}` : "Ainda não entrou"}

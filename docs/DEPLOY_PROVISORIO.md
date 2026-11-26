@@ -128,3 +128,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: seção "Depois do diagnóstico" nas duas páginas públicas, jornada com a comissão em Conhecer a Wise Makers, venda pontual e contrato contínuo na indicação e nas comissões, preços em Programa, Páginas, Valores.
 * Documento "Modelo e processos" na versão v19.
 * Conferido no ar: `/parceiros` e a página do cliente de um link ativo em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão, com os preços da jornada, "+40" empresas B2B e sem o depoimento da Cristal. No banco, a regra da Wise (6 e 1,5 no pontual, 40 no contínuo), os preços (4.997, 4.997 e 3.997) e os cases (6 ativos) conferem.
+
+## Publicação de 26/11/2026 (contas de demonstração)
+
+* Migração `20261126000039` (marca `demonstracao` em `parceiros` e `perfis`, regras de acesso restritivas, funções dos painéis, filas, rotinas, ranking, comunicados, pesquisas e catálogo lendo `parceiros_visiveis()`, nenhum e-mail para conta de demonstração, `contas_para_ver_como` com a marca) aplicada e registrada. As funções foram regeradas a partir das definições em produção.
+* Dez contas criadas com `scripts/contas-demonstracao/` (passo 1 no banco, usuários no Auth com senha aleatória e e-mail confirmado, passo 3 no banco): cliente do grupo, empresa da comunidade, parceiro Elite, Premium, Select e em entrada, gerente de parcerias, consultor, comercial e financeiro. E-mails `demo.<tipo>@example.com`, que não recebem mensagens.
+* Conferido em produção, como um administrador real (consulta desfeita no fim): nenhuma empresa de demonstração nas telas, as 33 empresas reais intactas, as dez contas no Ver como, ranking e fila de tarefas sem as empresas de demonstração; nenhuma notificação criada na operação.
+* Site: o selo Demonstração na tela Ver como ainda não foi publicado (a lista já funciona com o site atual).
+* A migração `20261126000038` (Swallow com 1,5% ao gerente) continua aguardando publicação.

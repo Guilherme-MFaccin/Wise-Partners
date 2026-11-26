@@ -12,4 +12,4 @@ Especificações em `specs/`, princípios em `.specify/memory/constitution.md`, 
 - Gráficos só com shadcn chart (Recharts) e tokens `--chart-*`. Componente não agrega dados: o banco entrega séries prontas.
 - Antes de dizer que terminou uma tela: capturas em 375, 768 e 1440 px com o seed de demonstração, crítica e auditoria do Impeccable sem itens críticos ou altos, nenhum texto com travessão.
 - Nunca usar travessão nem meia-risca em textos, dados de exemplo ou mensagens.
-- Dados de demonstração só por `supabase/seed_demo.sql`, nunca em migração e nunca no projeto de produção.
+- Dados de demonstração só por `supabase/seed_demo.sql`, nunca em migração e nunca no projeto de produção. Única exceção, pedida pelo patrocinador em 26/11/2026: as dez contas do Ver como criadas por `scripts/contas-demonstracao/`, com a marca `demonstracao` (fora dos números, das listas, das rotinas e dos e-mails do time real). Nada além delas.
