@@ -11,7 +11,8 @@ import { SeloNivel } from "@/components/comum/Selos";
 
 type Conteudo = {
   niveis?: { codigo: string; nome: string; requisitos: { grupo: string; descricao: string }[] | null }[] | null;
-  pacotes?: { codigo: string; nome: string; entregas: string[] | null }[] | null;
+  // Entregas da Wise em cada nível (os pacotes saíram em 26/11/2026)
+  beneficios?: { codigo: string; nome: string; entregas: string[] | null }[] | null;
   comissoes?: { empresa: string; base: string | null; percentual_parceiro: number | null }[] | null;
   protecao_dias?: number;
   sla?: Record<string, number>;
@@ -54,7 +55,7 @@ export default function Regras() {
   return (
     <div className="space-y-6">
       <Cabecalho titulo="Regras do programa"
-        descricao="Como funciona o Wise Partners: níveis, pacotes, comissão, proteção das indicações, prazos, ranking e premiação." />
+        descricao="Como funciona o Wise Partners: níveis e benefícios, comissão, proteção das indicações, prazos, ranking e premiação." />
 
       {proxima && (
         <div className="flex gap-3 rounded-[14px] border border-menta-500/30 bg-menta-500/5 p-4 text-sm">
@@ -142,12 +143,12 @@ function VersaoRegras({ v }: { v: Versao }) {
         </Secao>
       )}
 
-      {!!c.pacotes?.length && (
-        <Secao titulo="Pacotes e benefícios">
+      {!!c.beneficios?.length && (
+        <Secao titulo="Benefícios de cada nível">
           <div className="grid gap-3 md:grid-cols-3">
-            {c.pacotes.map((p) => (
+            {c.beneficios.map((p) => (
               <div key={p.codigo} className="rounded-[10px] border border-white/10 p-3">
-                <p className="mb-2 font-semibold">Pacote {p.nome}</p>
+                <div className="mb-2"><SeloNivel tipo="comercial" nivel={p.codigo} /></div>
                 <Lista itens={p.entregas ?? []} />
               </div>
             ))}

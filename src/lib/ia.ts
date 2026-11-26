@@ -39,7 +39,7 @@ export function arquivoParaBase64(arquivo: File): Promise<string> {
 // Formatos de entrada e saída de cada tarefa (validados por zod na Edge Function)
 // ---------------------------------------------------------------------------
 
-// resumir_contato: entrada { texto, parceiro: { nome, etapa, nivel, pacote, proximo_passo, campos }, hoje: "AAAA-MM-DD" }
+// resumir_contato: entrada { texto, parceiro: { nome, etapa, nivel, proximo_passo, campos }, hoje: "AAAA-MM-DD" }
 export type ResultadoResumo = {
   resumo: string;
   decisoes: string[];

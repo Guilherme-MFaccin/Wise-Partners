@@ -45,8 +45,8 @@ describe("Fila de espera dos parceiros", () => {
       const a = (await q.um("select public.aprovar_cadastro_landing($1) as a", [r.cadastro_id])).a;
       expect(a).toMatchObject({ email: "bruno@softfila.com.br", empresa: "Soft Fila" });
       await q.sistema();
-      const p = await q.um("select etapa, nivel, pacote, origem from public.parceiros where id = $1", [a.parceiro_id]);
-      expect(p).toMatchObject({ etapa: "onboarding", nivel: "C", pacote: "C", origem: "landing_saas" });
+      const p = await q.um("select etapa, nivel, origem from public.parceiros where id = $1", [a.parceiro_id]);
+      expect(p).toMatchObject({ etapa: "onboarding", nivel: "C", origem: "landing_saas" });
       expect((await q.um("select tipo from public.aprovacoes where parceiro_id = $1", [a.parceiro_id])).tipo).toBe("aceite_eletronico");
       const c = await q.um("select status, parceiro_id is not null as tem, observacao from public.cadastros_landing where id = $1", [r.cadastro_id]);
       expect(c).toMatchObject({ status: "aprovado", tem: true, observacao: "Falei no WhatsApp" });

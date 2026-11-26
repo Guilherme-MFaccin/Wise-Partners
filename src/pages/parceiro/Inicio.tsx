@@ -6,7 +6,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ok } from "@/lib/erros";
 import { data, hojeISO } from "@/lib/formato";
-import { PACOTES, rotulo } from "@/lib/rotulos";
 import { Button } from "@/components/ui/button";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga } from "@/components/comum/Estados";
@@ -33,10 +32,11 @@ export default function Inicio() {
     queryKey: ["portal-responsavel", p?.responsavel_id],
     queryFn: async () => ok<any>(await supabase.from("perfis").select("nome, email").eq("id", p!.responsavel_id).maybeSingle()) as { nome: string; email: string } | null,
   });
-  const pacoteQ = useQuery({
-    enabled: !!p?.pacote,
-    queryKey: ["pacote", p?.pacote],
-    queryFn: async () => ok<any>(await supabase.from("pacotes").select("codigo, nome, entregas, wise_hub").eq("codigo", p!.pacote).maybeSingle()) as
+  // Entregas da Wise e Wise Hub seguem o nível da parceria comercial (os pacotes saíram em 26/11/2026)
+  const beneficiosQ = useQuery({
+    enabled: p?.tipo_parceria === "comercial" && !!p?.nivel,
+    queryKey: ["beneficios-nivel", p?.nivel],
+    queryFn: async () => ok<any>(await supabase.from("niveis").select("codigo, nome, entregas, wise_hub").eq("tipo_parceria", "comercial").eq("codigo", p!.nivel).maybeSingle()) as
       { codigo: string; nome: string; entregas: string[]; wise_hub: boolean } | null,
   });
   const indicacoesQ = useQuery({
@@ -56,9 +56,9 @@ export default function Inicio() {
   const estados = (contrapartidasQ.data ?? []).map(estadoContrapartida);
   const pendentes = estados.filter((e) => e.codigo === "pendente" || e.codigo === "recusada").length;
   const atrasadas = estados.filter((e) => e.codigo === "atrasada").length;
-  // Wise Hub: só pacotes que incluem o Hub (B e A), e só depois da assinatura
+  // Wise Hub: só nos níveis que incluem o Hub (Premium e Elite), e só depois da assinatura
   const hubUrl = typeof hubQ.data === "string" ? hubQ.data.trim() : "";
-  const mostraHub = assinado && !!pacoteQ.data?.wise_hub && !!hubUrl;
+  const mostraHub = assinado && !!beneficiosQ.data?.wise_hub && !!hubUrl;
 
   // Nível e onboarding entram no quadro "Seus objetivos"
   const nivel = nivelQ.data;
@@ -94,12 +94,11 @@ export default function Inicio() {
         </div>
       )}
 
-      <section className="grid gap-4 rounded-[14px] border border-white/10 bg-card p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-4">
+      <section className="grid gap-4 rounded-[14px] border border-white/10 bg-card p-4 sm:grid-cols-2 sm:p-5 lg:grid-cols-3">
         <Info titulo="Parceria">{p.nome_fantasia}</Info>
         <Info titulo="Nível"><SeloNivel tipo={p.tipo_parceria} nivel={p.nivel} /></Info>
-        <Info titulo="Pacote">{p.tipo_parceria === "institucional" ? "Parceria institucional" : rotulo(PACOTES, p.pacote) || "A definir"}</Info>
         <Info titulo="Início">{assinado ? data(p.data_assinatura) : "Após a assinatura"}</Info>
-        <div className="sm:col-span-2 lg:col-span-4">
+        <div className="sm:col-span-2 lg:col-span-3">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Responsável na Wise</p>
           {responsavelQ.data ? (
             <p className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -162,16 +161,16 @@ export default function Inicio() {
 
       <div className="grid gap-6 lg:grid-cols-2">
         <section className="rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
-          <h2 className="font-semibold">Entregas da Wise no seu pacote</h2>
+          <h2 className="font-semibold">Entregas da Wise no seu nível</h2>
           {p.tipo_parceria === "institucional" ? (
             <p className="mt-2 text-sm text-muted-foreground">As entregas da parceria institucional seguem o calendário de ações combinado com a Wise.</p>
-          ) : pacoteQ.data?.entregas?.length ? (
+          ) : beneficiosQ.data?.entregas?.length ? (
             <ul className="mt-3 space-y-2 text-sm">
-              {pacoteQ.data.entregas.map((e) => (
+              {beneficiosQ.data.entregas.map((e) => (
                 <li key={e} className="flex gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" /> {e}</li>
               ))}
             </ul>
-          ) : <p className="mt-2 text-sm text-muted-foreground">O pacote ainda não foi definido.</p>}
+          ) : <p className="mt-2 text-sm text-muted-foreground">O nível ainda não foi definido.</p>}
           {!assinado && <p className="mt-3 text-xs text-muted-foreground">As entregas começam depois da assinatura.</p>}
         </section>
         <ResumoEtapas parceiroId={perfil!.parceiro_id!} />

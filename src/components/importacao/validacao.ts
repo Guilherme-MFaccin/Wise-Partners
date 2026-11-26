@@ -4,13 +4,12 @@ import { ETAPAS, PERFIS_INSTITUCIONAIS } from "@/lib/rotulos";
 // Nada é gravado aqui: o resultado alimenta a prévia, e a gravação só acontece na confirmação.
 
 export const CABECALHO = [
-  "nome", "tipo_parceria", "categoria_principal", "categoria_secundaria", "etapa", "nivel_preliminar", "pacote_previsto",
+  "nome", "tipo_parceria", "categoria_principal", "categoria_secundaria", "etapa", "nivel_preliminar",
   "cidade_uf", "contato_principal", "cargo", "email", "telefone", "origem", "proximo_passo", "observacoes",
 ];
 
 export type Referencias = {
   categorias: { id: string; nome: string; tipo: string }[];
-  pacotes: { codigo: string; nome: string; niveis_permitidos: string[] }[];
   nomesExistentes: Set<string>; // nomes fantasia normalizados já cadastrados
 };
 
@@ -24,7 +23,6 @@ export type LinhaImportacao = {
     tipo_parceria: "comercial" | "institucional";
     etapa: string;
     nivel: string | null;
-    pacote: string | null;
     cidade: string | null;
     uf: string | null;
     origem: string | null;
@@ -62,13 +60,6 @@ function nivelDe(texto: string): { nivel: string | null; ok: boolean } {
   if (inst) return { nivel: inst[1].toUpperCase(), ok: true };
   if (/^[abc]$/.test(n)) return { nivel: n.toUpperCase(), ok: true };
   return { nivel: null, ok: false };
-}
-
-function pacoteDe(texto: string, pacotes: Referencias["pacotes"]) {
-  const n = normalizar(texto);
-  if (INDEFINIDO.includes(n)) return { pacote: null as Referencias["pacotes"][number] | null, ok: true };
-  const p = pacotes.find((x) => normalizar(x.nome) === n || normalizar(x.codigo) === n || n.startsWith(normalizar(x.codigo) + " "));
-  return { pacote: p ?? null, ok: !!p };
 }
 
 export function validarLinhas(linhas: Record<string, string>[], ref: Referencias): LinhaImportacao[] {
@@ -126,14 +117,6 @@ export function validarLinhas(linhas: Record<string, string>[], ref: Referencias
 
     const nv = nivelDe(v("nivel_preliminar"));
     if (!nv.ok) erros.push(`Nível "${v("nivel_preliminar")}" não reconhecido.`);
-    let pacote: string | null = null;
-    const pc = pacoteDe(v("pacote_previsto"), ref.pacotes);
-    if (!pc.ok) erros.push(`Pacote "${v("pacote_previsto")}" não reconhecido.`);
-    else if (pc.pacote) {
-      if (tipo === "institucional") avisos.push("Pacote ignorado em parceria institucional.");
-      else if (!nv.nivel || !pc.pacote.niveis_permitidos.includes(nv.nivel)) avisos.push(`Pacote ${pc.pacote.nome} não disponível para o nível informado: fica sem pacote.`);
-      else pacote = pc.pacote.codigo;
-    }
 
     let cidade: string | null = null;
     let uf: string | null = null;
@@ -163,7 +146,6 @@ export function validarLinhas(linhas: Record<string, string>[], ref: Referencias
         tipo_parceria: tipo ?? "comercial",
         etapa,
         nivel: nv.nivel,
-        pacote,
         cidade,
         uf,
         origem: v("origem") || null,

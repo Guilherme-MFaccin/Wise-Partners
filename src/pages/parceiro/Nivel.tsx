@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { AlertTriangle, ArrowUpRight, CheckCircle2, CircleDashed, Info, Package } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CheckCircle2, CircleDashed, Info } from "lucide-react";
 import { data } from "@/lib/formato";
-import { GRUPOS_REQUISITO, PACOTES, nomeNivel, rotulo } from "@/lib/rotulos";
+import { GRUPOS_REQUISITO, nomeNivel, rotulo } from "@/lib/rotulos";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga } from "@/components/comum/Estados";
 import { Pilula, SeloNivel } from "@/components/comum/Selos";
@@ -10,7 +10,7 @@ import { useMeuNivel, type CumpreNivel } from "@/components/portal/dadosV2";
 const ORDEM_GRUPOS = ["resultado", "capacitacao", "regras"];
 
 // Meu nível (FR-124): nível atual pelo nome, requisitos cumpridos e faltantes, nível acima,
-// observação e pacote pendente. Nunca mostra notas internas, faixa nem maturidade.
+// observação e o que o nível inclui. Nunca mostra notas internas, faixa nem maturidade.
 export default function Nivel() {
   const q = useMeuNivel();
   if (q.isLoading) return <Carregando />;
@@ -44,8 +44,8 @@ export default function Nivel() {
           <div className="mt-2">{n.nivel ? <SeloNivel tipo="comercial" nivel={n.nivel} className="px-3 py-1 text-sm" /> : <span className="text-sm">A definir</span>}</div>
         </div>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Pacote</p>
-          <p className="mt-2 font-semibold">{rotulo(PACOTES, n.pacote) || "A definir"}</p>
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Wise Hub</p>
+          <p className="mt-2 font-semibold">{n.wise_hub ? "Incluído no seu nível" : "A partir do Premium"}</p>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Situação</p>
@@ -63,16 +63,6 @@ export default function Nivel() {
           <p>
             Na última revisão trimestral, alguns requisitos do nível {nomeNivel("comercial", n.nivel)} não foram cumpridos.
             O nível continua o mesmo, em observação até {data(n.em_observacao_ate)}. Cumprindo os requisitos abaixo até lá, a observação termina.
-          </p>
-        </div>
-      )}
-
-      {n.pacote_pendente && (
-        <div className="flex gap-3 rounded-[14px] border border-white/10 bg-white/5 p-4 text-sm">
-          <Package className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
-          <p>
-            Mudança de pacote programada: {rotulo(PACOTES, n.pacote_pendente)}
-            {n.pacote_pendente_em ? `, a partir de ${data(n.pacote_pendente_em)}` : ""}. Até lá, as entregas do pacote atual continuam valendo.
           </p>
         </div>
       )}
@@ -106,7 +96,7 @@ export default function Nivel() {
         <BlocoRequisitos titulo={`Para chegar ao ${nomeAcima}`}
           descricao={n.acima.cumpre
             ? `Vocês já cumprem os requisitos do ${nomeAcima}. A subida é registrada pela Wise.`
-            : `Ao cumprir todos os requisitos abaixo, a parceria sobe para o ${nomeAcima}. O pacote só muda se vocês escolherem um pacote superior.`}
+            : `Ao cumprir todos os requisitos abaixo, a parceria sobe para o ${nomeAcima}, com as entregas da Wise desse nível.`}
           nivel={n.acima} destaque />
       ) : n.nivel === "A" ? (
         <div className="flex gap-3 rounded-[14px] border border-menta-500/30 bg-menta-500/5 p-4 text-sm">

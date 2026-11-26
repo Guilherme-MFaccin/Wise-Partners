@@ -4,7 +4,7 @@ import { valorCampoTexto } from "@/components/comum/CampoDinamico";
 import { DocumentoPdf } from "@/lib/pdf";
 import { data as fmtData, dataHora, formatarCnpj, hojeISO, semTravessao } from "@/lib/formato";
 import {
-  ETAPAS, NATUREZAS, PACOTES, PAPEIS_CONTATO, PERFIS_INSTITUCIONAIS, PERIODICIDADES, STATUS_ATIVIDADE, TIPOS_DOCUMENTO,
+  ETAPAS, NATUREZAS, PAPEIS_CONTATO, PERFIS_INSTITUCIONAIS, PERIODICIDADES, STATUS_ATIVIDADE, TIPOS_DOCUMENTO,
   TIPOS_PARCERIA, nomeNivel, rotulo,
 } from "@/lib/rotulos";
 import { nomePerfil, passoAtivo, type Categoria, type Parceiro, type ParceiroCategoria, type PerfilResumo, type ProximoPasso } from "../dados";
@@ -103,7 +103,6 @@ function linhasClassificacao(p: Parceiro): [string, string][] {
     ["Nível", p.nivel ? nomeNivel(p.tipo_parceria, p.nivel) : ""],
     ["Nível sugerido", p.nivel_sugerido ? nomeNivel(p.tipo_parceria, p.nivel_sugerido) : ""],
     ["Motivo do ajuste de nível", p.nivel_ajuste_motivo ?? ""],
-    ["Pacote", rotulo(PACOTES, p.pacote)],
     ["Status de atividade", rotulo(STATUS_ATIVIDADE, p.status_atividade) + (p.pausado_ate ? ` até ${fmtData(p.pausado_ate)}` : "")],
     ["Motivo da inatividade", p.motivo_inatividade ?? ""],
     ["Último contato", fmtData(p.ultimo_contato)],

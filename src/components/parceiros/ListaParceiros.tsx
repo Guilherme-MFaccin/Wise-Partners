@@ -10,7 +10,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Pilula, SeloNivel, SeloStatus } from "@/components/comum/Selos";
 import { Vazio } from "@/components/comum/Estados";
 import { data, somenteDigitos } from "@/lib/formato";
-import { ETAPAS, PACOTES, STATUS_ATIVIDADE, TIPOS_PARCERIA, rotulo } from "@/lib/rotulos";
+import { ETAPAS, STATUS_ATIVIDADE, TIPOS_PARCERIA, rotulo } from "@/lib/rotulos";
 import { Campo } from "./ui";
 import {
   nomePerfil, normalizar, perfisInternos, preenchido, useCampos,
@@ -24,7 +24,6 @@ type Filtros = {
   tipo: string;
   categoria: string;
   nivel: string;
-  pacote: string;
   etapa: string;
   status: string;
   responsavel: string;
@@ -34,7 +33,7 @@ type Filtros = {
 };
 
 const VAZIO: Filtros = {
-  texto: "", tipo: TODOS, categoria: TODOS, nivel: TODOS, pacote: TODOS, etapa: TODOS, status: TODOS,
+  texto: "", tipo: TODOS, categoria: TODOS, nivel: TODOS, etapa: TODOS, status: TODOS,
   responsavel: TODOS, cidade: TODOS, campo: TODOS, valorCampo: "",
 };
 
@@ -92,7 +91,6 @@ export function ListaParceiros({
       if (f.tipo !== TODOS && p.tipo_parceria !== f.tipo) return false;
       if (f.categoria !== TODOS && !vinculos.some((v) => v.parceiro_id === p.id && v.categoria_id === f.categoria)) return false;
       if (f.nivel !== TODOS && (f.nivel === "sem" ? !!p.nivel : p.nivel !== f.nivel)) return false;
-      if (f.pacote !== TODOS && (f.pacote === "sem" ? !!p.pacote : p.pacote !== f.pacote)) return false;
       if (f.etapa !== TODOS && p.etapa !== f.etapa) return false;
       if (f.status !== TODOS && p.status_atividade !== f.status) return false;
       if (f.responsavel !== TODOS && (f.responsavel === "sem" ? !!p.responsavel_id : p.responsavel_id !== f.responsavel)) return false;
@@ -151,7 +149,6 @@ export function ListaParceiros({
             </Select>
           </Campo>
           {seletor("nivel", "Nível", [["A", "Elite / Institucional A"], ["B", "Premium / Institucional B"], ["C", "Select / Institucional C"]], ["sem", "Sem nível"])}
-          {seletor("pacote", "Pacote", Object.entries(PACOTES), ["sem", "Sem pacote"])}
           {seletor("etapa", "Etapa", etapas.map((e) => [e.codigo, e.nome]))}
           {seletor("status", "Status de atividade", Object.entries(STATUS_ATIVIDADE))}
           {seletor("responsavel", "Responsável", perfisInternos(perfis).map((p) => [p.id, p.nome]), ["sem", "Sem responsável"])}
@@ -208,7 +205,7 @@ export function ListaParceiros({
                 <TableRow>
                   <TableHead>Parceiro</TableHead>
                   <TableHead>Categoria principal</TableHead>
-                  <TableHead>Nível e pacote</TableHead>
+                  <TableHead>Nível</TableHead>
                   <TableHead>Etapa</TableHead>
                   <TableHead>Status</TableHead>
                   <TableHead>Responsável</TableHead>
@@ -227,7 +224,6 @@ export function ListaParceiros({
                     <TableCell>
                       <div className="flex flex-wrap gap-1">
                         {p.nivel && <SeloNivel tipo={p.tipo_parceria} nivel={p.nivel} />}
-                        {p.pacote && <Pilula>{rotulo(PACOTES, p.pacote)}</Pilula>}
                       </div>
                     </TableCell>
                     <TableCell className="text-sm">{rotulo(ETAPAS, p.etapa)}</TableCell>
@@ -251,7 +247,6 @@ export function ListaParceiros({
                 </p>
                 <div className="mt-2 flex flex-wrap gap-1.5">
                   {p.nivel && <SeloNivel tipo={p.tipo_parceria} nivel={p.nivel} />}
-                  {p.pacote && <Pilula>{rotulo(PACOTES, p.pacote)}</Pilula>}
                   <Pilula>{rotulo(ETAPAS, p.etapa)}</Pilula>
                   <SeloStatus status={p.status_atividade} />
                 </div>

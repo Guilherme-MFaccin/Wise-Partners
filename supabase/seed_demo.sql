@@ -72,10 +72,10 @@ values (pg_temp.uid(1), 4500, 220, 1.0, (current_date - interval '10 months')::d
 -- -------------------------------------------------------------------------------------
 create temp table demo_parceiros (
   n int primary key, nome text, razao text, cidade text, uf text, tipo text, categoria text,
-  carteira int, etapa_final text, assinatura_dias int, pacote text, id uuid
+  carteira int, etapa_final text, assinatura_dias int, nivel_previsto text, id uuid
 ) on commit drop;
 
-insert into demo_parceiros (n, nome, razao, cidade, uf, tipo, categoria, carteira, etapa_final, assinatura_dias, pacote) values
+insert into demo_parceiros (n, nome, razao, cidade, uf, tipo, categoria, carteira, etapa_final, assinatura_dias, nivel_previsto) values
   (1,  'Sistemas Araucária', 'Araucária Sistemas de Gestão Empresarial Ltda.', 'Curitiba', 'PR', 'comercial', 'ERP', 72, 'parceria_ativa', 250, 'A'),
   (2,  'Horizonte ERP', 'Horizonte Tecnologia e Software Ltda.', 'Maringá', 'PR', 'comercial', 'ERP', 38, 'parceria_ativa', 220, 'B'),
   (3,  'Mantiqueira Gestão Industrial e Integração de Sistemas Corporativos', 'Mantiqueira Gestão Industrial e Integração de Sistemas Corporativos S.A.', 'São José dos Campos', 'SP', 'comercial', 'ERP', 55, 'parceria_ativa', 190, 'A'),
@@ -120,7 +120,7 @@ insert into demo_parceiros (n, nome, razao, cidade, uf, tipo, categoria, carteir
 update demo_parceiros set id = pg_temp.uid(1000 + n);
 
 -- Parceria encerrada: um parceiro antigo, desligado
-insert into demo_parceiros (n, nome, razao, cidade, uf, tipo, categoria, carteira, etapa_final, assinatura_dias, pacote, id)
+insert into demo_parceiros (n, nome, razao, cidade, uf, tipo, categoria, carteira, etapa_final, assinatura_dias, nivel_previsto, id)
 values (41, 'Antiga Parceira Sistemas', 'Antiga Parceira Sistemas Ltda.', 'Maringá', 'PR', 'comercial', 'ERP', 12, 'parceria_encerrada', 260, 'C', pg_temp.uid(1041));
 -- Mantém 40: a encerrada substitui um "sem contato"
 delete from demo_parceiros where n = 32;
@@ -198,7 +198,7 @@ begin
       update public.parceiros set etapa = e where id = d.id;
     end loop;
     if d.assinatura_dias is not null then
-      update public.parceiros set data_assinatura = current_date - d.assinatura_dias, pacote = d.pacote where id = d.id;
+      update public.parceiros set data_assinatura = current_date - d.assinatura_dias where id = d.id;
       update public.parceiros set etapa = 'onboarding' where id = d.id;
       -- O plano de 90 dias começa na assinatura
       update public.planos_onboarding set inicio = current_date - d.assinatura_dias, prazo_final = current_date - d.assinatura_dias + 90
@@ -264,7 +264,7 @@ declare
   v_ativ text[] := array['checkin_mensal','mensagem','ligacao','mensagem','reuniao_apresentacao','mensagem','documento','evento'];
   v_textos text[] := array[
     'Alinhamos a agenda de indicações do trimestre e o próximo encontro.',
-    'Parceiro pediu a minuta revisada com o pacote atualizado.',
+    'Parceiro pediu a minuta revisada com a carteira atualizada.',
     'Conversa sobre dois clientes da carteira que estão sem processo comercial.',
     'Enviado o material da mentoria mensal e o link de indicação.',
     'Reunião de apresentação com o sócio: interesse em co-venda.',

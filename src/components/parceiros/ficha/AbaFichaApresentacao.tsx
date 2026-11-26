@@ -211,7 +211,7 @@ function Diferencas({ proposta, campos, atual, soProposto }: { proposta: Propost
   );
 }
 
-// Prévia no estilo da página do cliente (fundo escuro, acento menta). Sem nível, pacote ou dados internos.
+// Prévia no estilo da página do cliente (fundo escuro, acento menta). Sem nível ou dados internos.
 function PreviaCliente({ parceiro: p, valor }: { parceiro: Parceiro; valor: (k: string) => any }) {
   const texto = (k: string) => valorCampoTexto({ tipo: Array.isArray(valor(k)) ? "multipla" : "texto_curto" }, valor(k));
   const diferenciais = (texto("diferenciais") || "").split("\n").map((x) => x.trim()).filter(Boolean);

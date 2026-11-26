@@ -35,7 +35,7 @@ describe("Funil, aprovação e onboarding", () => {
 
   it("onboarding exige contrato assinado e cria tarefas com prazo de 2 dias úteis, contrapartidas e fila do Base Ativa", () =>
     transacao(async (q) => {
-      const p = await novoParceiro(q, "Onboarding SA", { carteira_icp: 70, pacote: "A" });
+      const p = await novoParceiro(q, "Onboarding SA", { carteira_icp: 70 });
       await q.sql("insert into public.aprovacoes (parceiro_id, aprovado_por) values ($1, $2)", [p.id, U.diretor]);
       await q.como(U.parcerias);
       const msg = await q.falha("update public.parceiros set etapa = 'onboarding' where id = $1", [p.id]);
@@ -46,14 +46,14 @@ describe("Funil, aprovação e onboarding", () => {
       const esperado = await q.um("select public.add_dias_uteis(public.hoje(), 2) as d");
       expect(tarefas.every((t) => +t.prazo === +esperado.d)).toBe(true);
       const contra = await q.sql("select nome, periodicidade from public.contrapartidas where parceiro_id = $1", [p.id]);
-      expect(contra.length).toBe(13); // catálogo do pacote A para Elite
+      expect(contra.length).toBe(13); // catálogo do Elite
       expect(contra.find((c) => c.nome.startsWith("Conteúdo conjunto"))!.periodicidade).toBe("bimestral");
       expect(contra.some((c) => c.nome === "Usuários ativos no Wise Hub")).toBe(true);
       const fila = await q.sql("select estado from public.ciclos_base_ativa where parceiro_id = $1", [p.id]);
       expect(fila).toEqual([{ estado: "fila" }]);
     }));
 
-  it("pacote C de um Select gera só as contrapartidas do pacote C", () =>
+  it("um Select gera só as contrapartidas do Select", () =>
     transacao(async (q) => {
       await q.sistema();
       const n = await q.um("select count(*)::int as n from public.contrapartidas where parceiro_id = $1", [P.C]);
@@ -71,7 +71,7 @@ describe("Funil, aprovação e onboarding", () => {
     }));
 });
 
-describe("Nível, pacote e status de atividade", () => {
+describe("Nível e status de atividade", () => {
   it("sugere Elite a partir de 50, Premium de 15 a 49, Select abaixo de 15", () =>
     transacao(async (q) => {
       for (const [carteira, nivel] of [[50, "A"], [49, "B"], [15, "B"], [14, "C"], [0, "C"]] as const) {
@@ -92,13 +92,18 @@ describe("Nível, pacote e status de atividade", () => {
       expect(h).toEqual({ valor_anterior: "B", valor_novo: "A", autor_id: U.parcerias });
     }));
 
-  it("restringe pacotes ao nível: Premium só C e B", () =>
+  it("entregas, contrapartidas e ações da Wise seguem o nível: sobe e ganha as do Elite, desce e saem as que não valem", () =>
     transacao(async (q) => {
-      const p = await novoParceiro(q, "Premium SA", { carteira_icp: 20 });
-      await q.como(U.parcerias);
-      const msg = await q.falha("update public.parceiros set pacote = 'A' where id = $1", [p.id]);
-      expect(msg).toMatch(/não está disponível/);
-      await q.sql("update public.parceiros set pacote = 'B' where id = $1", [p.id]);
+      await q.sistema();
+      const ativas = async () => (await q.um(
+        "select (select count(*)::int from public.contrapartidas where parceiro_id = $1 and ativa) c, (select count(*)::int from public.acoes_wise where parceiro_id = $1 and ativa) a", [P.C]));
+      const antes = await ativas();
+      await q.sql("update public.parceiros set nivel = 'A', nivel_ajuste_motivo = 'Teste' where id = $1", [P.C]);
+      const elite = await ativas();
+      expect(elite.c).toBe(13);
+      expect(elite.a).toBeGreaterThan(antes.a);
+      await q.sql("update public.parceiros set nivel = 'C', nivel_ajuste_motivo = 'Teste' where id = $1", [P.C]);
+      expect(await ativas()).toEqual(antes);
     }));
 
   it("Elite sem contato há 31 dias fica morno; o nível nunca muda; contato devolve a ativo", () =>
@@ -371,8 +376,7 @@ describe("Contrapartidas, comprovações e alertas", () => {
       await q.sql("select public.rotina_diaria()");
       const c1 = await q.um("select estado, ativa from public.contrapartidas where id = $1", [cp.id]);
       expect(c1).toEqual({ estado: "atrasada", ativa: true });
-      const p = await q.um("select pacote, etapa from public.parceiros where id = $1", [P.B]);
-      expect(p).toEqual({ pacote: "B", etapa: "onboarding" });
+      expect((await q.um("select etapa from public.parceiros where id = $1", [P.B])).etapa).toBe("onboarding");
       expect((await q.um("select count(*)::int n from public.tarefas_onboarding where parceiro_id = $1", [P.B])).n).toBe(tarefasAntes.n);
       const painel = await q.um("select public.painel_semanal() as p");
       expect(painel.p.contrapartidas_atrasadas.some((x: any) => x.id === cp.id)).toBe(true);
@@ -482,7 +486,7 @@ describe("Ficha de apresentação proposta pelo parceiro", () => {
 describe("Base Ativa", () => {
   it("fila com estratégicos à frente; início só por administrador; 2 encontros seguidos não realizados suspendem", () =>
     transacao(async (q) => {
-      const p = await novoParceiro(q, "Fila Dois", { carteira_icp: 60, pacote: "A" });
+      const p = await novoParceiro(q, "Fila Dois", { carteira_icp: 60 });
       await q.sql("insert into public.aprovacoes (parceiro_id, aprovado_por) values ($1, $2)", [p.id, U.diretor]);
       await q.sql("update public.parceiros set etapa = 'onboarding', data_assinatura = public.hoje() - 100 where id = $1", [p.id]);
       let fila = await q.sql("select parceiro_id from public.v_fila_base_ativa order by posicao");

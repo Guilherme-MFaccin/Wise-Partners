@@ -30,8 +30,6 @@ export const CAMPOS_QUADRO: Record<TipoContrato, Campo[]> = {
     { chave: "nivel", rotulo: "Nível", tipo: "opcao", obrigatorio: sempre,
       opcoes: [{ valor: "C", rotulo: "Select" }, { valor: "B", rotulo: "Premium" }, { valor: "A", rotulo: "Elite" }] },
     { chave: "carteira_icp", rotulo: "Carteira estimada no perfil de cliente da Wise", tipo: "numero", obrigatorio: sempre },
-    { chave: "pacote", rotulo: "Pacote contratado", tipo: "opcao", obrigatorio: sempre,
-      opcoes: [{ valor: "C", rotulo: "C · Prateleira" }, { valor: "B", rotulo: "B · Formação" }, { valor: "A", rotulo: "A · Base Ativa" }] },
     { chave: "categoria_prateleira", rotulo: "Categoria do parceiro na prateleira da Wise", tipo: "texto", obrigatorio: sempre },
     { chave: "comissao_modo", rotulo: "Comissão do parceiro à Wise", tipo: "opcao", obrigatorio: sempre,
       opcoes: [{ valor: "instrumento", rotulo: "Conforme instrumento próprio do parceiro" }, { valor: "percentual", rotulo: "Percentual registrado no Quadro" }] },
@@ -97,12 +95,8 @@ export function validarQuadro(tipo: TipoContrato, d: DadosQuadro): string[] {
   const faltando = camposVisiveis(tipo, d)
     .filter((c) => c.obrigatorio?.(d) && String(d[c.chave] ?? "").trim() === "")
     .map((c) => c.rotulo);
-  if (tipo === "comercial" && d.pacote === "A" && d.base_ativa_modo === "nao_se_aplica") {
-    faltando.push("Base Ativa: no pacote A informe a data do primeiro encontro ou a posição na fila");
-  }
-  if (tipo === "comercial" && d.pacote && d.nivel) {
-    const permitidos: Record<string, string[]> = { C: ["A", "B", "C"], B: ["A", "B"], A: ["A"] };
-    if (!permitidos[d.pacote]?.includes(d.nivel)) faltando.push("Pacote não disponível para o nível escolhido");
+  if (tipo === "comercial" && d.nivel === "A" && d.base_ativa_modo === "nao_se_aplica") {
+    faltando.push("Base Ativa: no nível Elite informe a data do primeiro encontro ou a posição na fila");
   }
   return faltando;
 }
@@ -132,9 +126,6 @@ export function marcadores(tipo: TipoContrato, d: DadosQuadro, hoje: string): Re
       cx_premium: cx(d.nivel === "B"),
       cx_elite: cx(d.nivel === "A"),
       carteira_icp: ou(d.carteira_icp) + (d.carteira_icp ? " empresas" : ""),
-      cx_pacote_c: cx(d.pacote === "C"),
-      cx_pacote_b: cx(d.pacote === "B"),
-      cx_pacote_a: cx(d.pacote === "A"),
       categoria_prateleira: ou(d.categoria_prateleira),
       cx_instrumento_proprio: cx(!percentual),
       instrumento_parceiro: percentual ? "___" : ou(d.instrumento_parceiro),

@@ -122,7 +122,7 @@ Devolva: {"necessidade_resumida": frase curta que completa "preciso resolver ...
       return {
         instrucao: `Monte a página exclusiva que o cliente vai abrir, em blocos padronizados, na perspectiva da Wise Makers.
 Use somente estes blocos, nesta ordem: um "abertura" ({"tipo":"abertura","titulo","texto"}: cumprimenta a empresa cliente e retoma a necessidade em 2 ou 3 frases), um "categoria" por categoria ({"tipo":"categoria","categoria_id","titulo","texto": por que essa frente importa, em 1 ou 2 frases,"parceiros":[{"parceiro_id","nome","texto": 2 a 4 frases baseadas na "visão da Wise" e no que a empresa faz,"destaques": 2 ou 3 diferenciais curtos}]}), um "aviso" ({"tipo":"aviso","texto"} com o texto de aviso recebido, sem alterar o sentido) e um "consultor" ({"tipo":"consultor","nome","email","telefone","texto": convite curto para falar com o consultor}).
-Mantenha todos os parceiros recebidos, na ordem recebida. Não classifique ninguém como o melhor, não recomende nome único, não prometa resultado e não cite comissões, níveis, pacotes ou dados internos.
+Mantenha todos os parceiros recebidos, na ordem recebida. Não classifique ninguém como o melhor, não recomende nome único, não prometa resultado e não cite comissões, níveis ou dados internos.
 Devolva: {"blocos": [...]}.`,
         dados: { pedido: e.pedido, consultor: e.consultor, categorias: e.categorias, aviso: e.aviso },
       };

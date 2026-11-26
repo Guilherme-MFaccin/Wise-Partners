@@ -24,8 +24,8 @@ describe("Cadastro pela landing page", () => {
       const cat = await categoriaErp(q);
       const r = await q.um("select public.cadastrar_parceiro_landing($1::jsonb) as r", [JSON.stringify(dados(cat))]);
       const id = r.r.parceiro_id as string;
-      const p = await q.um("select etapa, nivel, pacote, origem, data_assinatura is not null as assinado, cnpj from public.parceiros where id = $1", [id]);
-      expect(p).toMatchObject({ etapa: "onboarding", nivel: "C", pacote: "C", origem: "landing_saas", assinado: true, cnpj: "11222333000181" });
+      const p = await q.um("select etapa, nivel, origem, data_assinatura is not null as assinado, cnpj from public.parceiros where id = $1", [id]);
+      expect(p).toMatchObject({ etapa: "onboarding", nivel: "C", origem: "landing_saas", assinado: true, cnpj: "11222333000181" });
       expect((await q.um("select tipo, aprovado_por from public.aprovacoes where parceiro_id = $1", [id]))).toMatchObject({ tipo: "aceite_eletronico", aprovado_por: null });
       expect((await q.um("select count(*)::int n from public.parceiro_categorias where parceiro_id = $1 and principal", [id])).n).toBe(1);
       expect((await q.um("select count(*)::int n from public.tarefas_onboarding where parceiro_id = $1", [id])).n).toBeGreaterThan(0);

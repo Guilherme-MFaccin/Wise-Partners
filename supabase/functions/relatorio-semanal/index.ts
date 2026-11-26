@@ -73,7 +73,7 @@ Deno.serve(async (req) => {
   const mudancas = [
     `Parceiros novos: ${conta((h) => h.tabela === "parceiros" && h.campo === "criado")}`,
     `Mudanças de etapa: ${conta((h) => h.tabela === "parceiros" && h.campo === "etapa")}`,
-    `Mudanças de nível ou pacote: ${conta((h) => h.tabela === "parceiros" && (h.campo === "nivel" || h.campo === "pacote"))}`,
+    `Mudanças de nível: ${conta((h) => h.tabela === "parceiros" && h.campo === "nivel")}`,
     `Mudanças de status de atividade: ${conta((h) => h.tabela === "parceiros" && h.campo === "status_atividade")}`,
     `Contratos assinados: ${p.contratos_assinados.length}`,
     `Indicações registradas: ${p.indicacoes.total} (${p.indicacoes.do_parceiro} dos parceiros, ${p.indicacoes.para_parceiro} para parceiros), ${p.indicacoes.fechadas} fechadas`,

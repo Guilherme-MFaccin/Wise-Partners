@@ -10,26 +10,25 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Campo } from "@/components/parceiros/ui";
-import { useCategorias, usePacotes } from "@/components/parceiros/dados";
+import { useCategorias } from "@/components/parceiros/dados";
 import { toastErro } from "@/lib/erros";
 import { semTravessao } from "@/lib/formato";
 import { TIPOS_PARCERIA } from "@/lib/rotulos";
 import { TIPOS_COMUNICADO, nomeNivelRecorte, type Comunicado, type Recorte } from "./dados";
 
-type Form = { titulo: string; corpo: string; tipo: string; niveis: string[]; pacotes: string[]; categorias: string[]; tipos: string[] };
+type Form = { titulo: string; corpo: string; tipo: string; niveis: string[]; categorias: string[]; tipos: string[] };
 
 function inicial(c: Comunicado | null): Form {
   const r: Recorte = c?.recorte ?? {};
   return {
     titulo: c?.titulo ?? "", corpo: c?.corpo ?? "", tipo: c?.tipo ?? "outro",
-    niveis: r.niveis ?? [], pacotes: r.pacotes ?? [], categorias: r.categorias ?? [], tipos: r.tipos ?? [],
+    niveis: r.niveis ?? [], categorias: r.categorias ?? [], tipos: r.tipos ?? [],
   };
 }
 
 // Criação e edição de rascunho. Recorte vazio em todos os grupos = todos os parceiros assinados.
 export function ComunicadoDialog({ aberto, comunicado, onFechar }: { aberto: boolean; comunicado: Comunicado | null; onFechar: () => void }) {
   const qc = useQueryClient();
-  const { data: pacotes = [] } = usePacotes();
   const { data: categorias = [] } = useCategorias();
   const [f, setF] = useState<Form>(() => inicial(comunicado));
 
@@ -38,14 +37,13 @@ export function ComunicadoDialog({ aberto, comunicado, onFechar }: { aberto: boo
   }, [aberto, comunicado]);
 
   const set = <K extends keyof Form>(k: K, v: Form[K]) => setF((x) => ({ ...x, [k]: v }));
-  const alternar = (k: "niveis" | "pacotes" | "categorias" | "tipos", v: string, marcado: boolean) =>
+  const alternar = (k: "niveis" | "categorias" | "tipos", v: string, marcado: boolean) =>
     setF((x) => ({ ...x, [k]: marcado ? [...x[k], v] : x[k].filter((y) => y !== v) }));
 
   const salvar = useMutation({
     mutationFn: async () => {
       const recorte: Recorte = {};
       if (f.niveis.length) recorte.niveis = f.niveis;
-      if (f.pacotes.length) recorte.pacotes = f.pacotes;
       if (f.categorias.length) recorte.categorias = f.categorias;
       if (f.tipos.length) recorte.tipos = f.tipos;
       const dados = { titulo: semTravessao(f.titulo.trim()), corpo: semTravessao(f.corpo.trim()), tipo: f.tipo, recorte };
@@ -109,13 +107,8 @@ export function ComunicadoDialog({ aberto, comunicado, onFechar }: { aberto: boo
               ))}
             </Grupo>
             <Grupo titulo="Nível">
-              {["A", "B", "C"].map((n) => (
+              {["C", "B", "A"].map((n) => (
                 <Opcao key={n} rotulo={nomeNivelRecorte(n)} marcado={f.niveis.includes(n)} onChange={(m) => alternar("niveis", n, m)} />
-              ))}
-            </Grupo>
-            <Grupo titulo="Pacote">
-              {pacotes.map((p) => (
-                <Opcao key={p.codigo} rotulo={p.nome} marcado={f.pacotes.includes(p.codigo)} onChange={(m) => alternar("pacotes", p.codigo, m)} />
               ))}
             </Grupo>
             <Grupo titulo="Categoria">

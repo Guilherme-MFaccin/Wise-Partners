@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import type { BlocoPublico, ParceiroPublico } from "./tipos";
 
 // Renderizador único da página de RFP: usado na página pública (/r/:token) e na pré-visualização
-// do editor. Mostra só o que vem nos blocos; nada de nível, pacote, status ou comissão.
+// do editor. Mostra só o que vem nos blocos; nada de nível, status ou comissão.
 export function ConteudoPaginaRfp({
   clienteNome, necessidadeResumida, blocos, onFalar, falandoCom, previa = false,
 }: {

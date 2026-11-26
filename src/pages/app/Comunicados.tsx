@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CLASSE_CARD, Barra } from "@/components/painel/Blocos";
-import { nomePerfil, useCategorias, usePacotes, usePerfis } from "@/components/parceiros/dados";
+import { nomePerfil, useCategorias, usePerfis } from "@/components/parceiros/dados";
 import { TIPOS_COMUNICADO, resumoRecorte, useComunicados, type Comunicado } from "@/components/comunicados/dados";
 import { ComunicadoDialog } from "@/components/comunicados/ComunicadoDialog";
 import { LeiturasDialog } from "@/components/comunicados/LeiturasDialog";
@@ -46,7 +46,6 @@ function TelaComunicados({ podeEditar }: { podeEditar: boolean }) {
   const qc = useQueryClient();
   const consulta = useComunicados();
   const { data: perfis = [] } = usePerfis();
-  const { data: pacotes = [] } = usePacotes();
   const { data: categorias = [] } = useCategorias();
   const [aba, setAba] = useState<Aba>("todos");
   const [edicao, setEdicao] = useState<{ c: Comunicado | null } | null>(null);
@@ -55,9 +54,8 @@ function TelaComunicados({ podeEditar }: { podeEditar: boolean }) {
   const [leituras, setLeituras] = useState<Comunicado | null>(null);
 
   const nomes = useMemo(() => ({
-    pacotes: new Map(pacotes.map((p) => [p.codigo, p.nome])),
     categorias: new Map(categorias.map((c) => [c.id, c.nome])),
-  }), [pacotes, categorias]);
+  }), [categorias]);
 
   const todos = useMemo(() => consulta.data?.comunicados ?? [], [consulta.data]);
   const contagem = consulta.data?.contagem;

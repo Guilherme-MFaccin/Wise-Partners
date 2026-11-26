@@ -115,21 +115,21 @@ describe("Scorecard e nível de entrada (Apêndice A)", () => {
 });
 
 describe("Nível por resultado (Apêndice B)", () => {
-  it("subida pela regra do FO-19 (22/11/2026): indicação fechada leva a Elite no mesmo dia, sem mexer no pacote", () =>
+  it("subida pela regra do FO-19 (22/11/2026): indicação fechada leva a Elite no mesmo dia, com as entregas e contrapartidas do Elite", () =>
     transacao(async (q) => {
       await semGatilhos(q, async () => {
-        await q.sql("update public.parceiros set nivel = 'C', pacote = 'C' where id = $1", [P.C]);
+        await q.sql("update public.parceiros set nivel = 'C' where id = $1", [P.C]);
       });
       const id = await indicacao(q, P.C, "Subida SA", { cliente_cnpj: "45.723.174/0001-10", necessidade: "Estruturar o comercial" });
       await q.sql("select public.validar_indicacao($1, '{\"icp_confirmado\": true}')", [id]);
       await q.sistema();
       expect((await q.um("select nivel from public.parceiros where id = $1", [P.C])).nivel).toBe("C");
       await q.sql("update public.indicacoes set etapa = 'fechada', valor_base = 5000 where id = $1", [id]);
-      const p = await q.um("select nivel, pacote from public.parceiros where id = $1", [P.C]);
-      expect(p).toEqual({ nivel: "A", pacote: "C" }); // o pacote não muda sozinho
+      expect((await q.um("select nivel from public.parceiros where id = $1", [P.C])).nivel).toBe("A");
+      expect((await q.um("select count(*)::int n from public.contrapartidas where parceiro_id = $1 and ativa", [P.C])).n).toBe(13);
     }));
 
-  it("isenção nos primeiros 180 dias; observação; proposta de rebaixamento sem mudança automática; pacote depois da descida", () =>
+  it("isenção nos primeiros 180 dias; observação; proposta de rebaixamento sem mudança automática; entregas do novo nível depois da descida", () =>
     transacao(async (q) => {
       await semGatilhos(q, async () => {
         // nível Premium de partida (a regra do FO-19 pode ter subido o parceiro de teste pelos dados iniciais)
@@ -152,11 +152,10 @@ describe("Nível por resultado (Apêndice B)", () => {
       await q.falha("select public.decidir_rebaixamento($1, true, '')", [prop.id]);
       await q.sql("select public.decidir_rebaixamento($1, true, 'Sem indicações há dois trimestres')", [prop.id]);
       await q.sistema();
-      const p = await q.um("select nivel, pacote, pacote_pendente, pacote_pendente_em - public.hoje() as dias from public.parceiros where id = $1", [P.B]);
-      expect(p).toEqual({ nivel: "C", pacote: "B", pacote_pendente: "C", dias: 30 });
-      await q.sql("update public.parceiros set pacote_pendente_em = public.hoje() where id = $1", [P.B]);
-      await q.sql("select public.aplicar_pacotes_pendentes()");
-      expect((await q.um("select pacote, pacote_pendente from public.parceiros where id = $1", [P.B]))).toEqual({ pacote: "C", pacote_pendente: null });
+      expect((await q.um("select nivel from public.parceiros where id = $1", [P.B])).nivel).toBe("C");
+      // Depois da descida, o que não vale para o Select sai na hora, e ficam as contrapartidas do Select
+      const ativas = async (id: string) => (await q.um("select count(*)::int n from public.contrapartidas where parceiro_id = $1 and ativa", [id])).n;
+      expect(await ativas(P.B)).toBe(await ativas(P.C));
     }));
 });
 
@@ -263,7 +262,7 @@ describe("Faixas, ranking e desligamento (Apêndices C, D e K)", () => {
       await semGatilhos(q, async () => {
         for (let k = 1; k <= 20; k++) {
           const p = await q.um(
-            "insert into public.parceiros (nome_fantasia, tipo_parceria, etapa, data_assinatura, nivel, pacote) values ($1, 'comercial', 'parceria_ativa', public.hoje() - 30, 'C', 'C') returning id",
+            "insert into public.parceiros (nome_fantasia, tipo_parceria, etapa, data_assinatura, nivel) values ($1, 'comercial', 'parceria_ativa', public.hoje() - 30, 'C') returning id",
             [`Faixa ${k}`]);
           ids.push(p.id);
           await q.sql("insert into public.pontos_ranking (parceiro_id, evento, pontos, referencia_id, data) values ($1, 'cliente_icp', $2, gen_random_uuid(), public.hoje())", [p.id, k]);

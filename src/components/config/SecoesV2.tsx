@@ -21,10 +21,11 @@ import { Aviso } from "@/components/gestao/Restrito";
 import { ok, toastErro } from "@/lib/erros";
 import { data, dataHora, hojeISO } from "@/lib/formato";
 import {
-  ETAPAS_PAINEL, FASES_PROGRAMA, GRUPOS_REQUISITO, PACOTES, PERIODICIDADES, TIPOS_ACAO, nomeNivel, rotulo,
+  ETAPAS_PAINEL, FASES_PROGRAMA, GRUPOS_REQUISITO, PERIODICIDADES, TIPOS_ACAO, nomeNivel, rotulo,
 } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { Parametros } from "./Parametros";
+import { NIVEIS_OP } from "./Secoes";
 import { TabelaConfig, type ColunaConfig, type Opcao } from "./TabelaConfig";
 
 const op = (m: Record<string, string>): Opcao[] => Object.entries(m).map(([valor, r]) => ({ valor, rotulo: r }));
@@ -131,7 +132,7 @@ export function SecaoScorecard({ somenteLeitura }: { somenteLeitura: boolean }) 
 // Régua de atendimento (Apêndice C)
 // ---------------------------------------------------------------------------
 const COL_REGUA: ColunaConfig[] = [
-  { chave: "chave", rotulo: "Chave", tipo: "texto", fixaAposCriar: true, obrigatoria: true, ajuda: "pacote:A, pacote:A:ciclo, pacote:B, pacote:C, faixa:destaque, faixa:potencial ou faixa:base." },
+  { chave: "chave", rotulo: "Chave", tipo: "texto", fixaAposCriar: true, obrigatoria: true, ajuda: "nivel:C (Select), nivel:B (Premium), nivel:A (Elite), nivel:A:ciclo (Elite durante o ciclo do Base Ativa), faixa:destaque, faixa:potencial ou faixa:base." },
   { chave: "cadencia_dias", rotulo: "Cadência da reunião (dias; vazio = sem cadência própria)", tipo: "numero" },
   { chave: "tolerancia_dias", rotulo: "Tolerância para o alerta (dias)", tipo: "numero", obrigatoria: true },
   { chave: "descricao", rotulo: "Descrição (aparece nas regras do programa)", tipo: "texto", obrigatoria: true, larga: true },
@@ -141,7 +142,7 @@ export function SecaoRegua({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (
     <div className="space-y-3">
       <p className="rounded-[10px] bg-white/5 px-3 py-2 text-sm text-muted-foreground">
-        Quando pacote e faixa pedem cadências diferentes, vale a mais frequente. O alerta sai depois da cadência mais a tolerância.
+        Quando nível e faixa pedem cadências diferentes, vale a mais frequente. O alerta sai depois da cadência mais a tolerância.
       </p>
       <TabelaConfig tabela="regua_atendimento" pk={["chave"]} ordem="chave" colunas={COL_REGUA} novo={NOVA_REGUA} podeExcluir
         tituloItem={(l) => `${l.chave} · ${l.descricao}`} somenteLeitura={somenteLeitura} />
@@ -157,13 +158,13 @@ const COL_ACOES: ColunaConfig[] = [
   { chave: "tipo_acao", rotulo: "Tipo", tipo: "select", opcoes: op(TIPOS_ACAO), obrigatoria: true },
   { chave: "periodicidade", rotulo: "Periodicidade", tipo: "select", opcoes: op(PERIODICIDADES), obrigatoria: true },
   { chave: "prazo_inicial_dias", rotulo: "Prazo inicial (dias após a assinatura)", tipo: "numero" },
-  { chave: "pacotes", rotulo: "Pacotes em que vale", tipo: "multi", opcoes: op(PACOTES).sort((a, b) => a.valor.localeCompare(b.valor)) },
+  { chave: "niveis", rotulo: "Níveis em que vale", tipo: "multi", opcoes: NIVEIS_OP },
   { chave: "comprovacao", rotulo: "Forma de comprovação", tipo: "texto", obrigatoria: true },
   { chave: "ordem", rotulo: "Ordem", tipo: "numero" },
   { chave: "ativa", rotulo: "Ativa", tipo: "booleano" },
-  { chave: "periodicidade_por_pacote", rotulo: "Periodicidade por pacote (JSON, ex.: {\"A\": \"quinzenal\"})", tipo: "json" },
+  { chave: "periodicidade_por_nivel", rotulo: "Periodicidade diferente por nível (JSON; A é Elite, B Premium, C Select; ex.: {\"A\": \"quinzenal\"})", tipo: "json" },
 ];
-const NOVA_ACAO = { nome: "", tipo_acao: "marketing", periodicidade: "mensal", prazo_inicial_dias: 0, pacotes: [], comprovacao: "", ordem: 99, ativa: true, periodicidade_por_pacote: {} };
+const NOVA_ACAO = { nome: "", tipo_acao: "marketing", periodicidade: "mensal", prazo_inicial_dias: 0, niveis: ["A", "B", "C"], comprovacao: "", ordem: 99, ativa: true, periodicidade_por_nivel: {} };
 export function SecaoAcoesWise({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (
     <TabelaConfig tabela="catalogo_acoes_wise" pk={["id"]} colunas={COL_ACOES} novo={NOVA_ACAO} podeExcluir recolhido reordenar
@@ -537,7 +538,7 @@ export function SecaoRegras({ podePublicar, somenteLeitura }: { podePublicar: bo
       <Aviso tom="info">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
         <span>
-          Publicar tira um retrato das regras atuais (níveis e requisitos, pacotes, comissões, proteção, SLA, régua, desligamento, ranking e premiação)
+          Publicar tira um retrato das regras atuais (níveis, requisitos e benefícios, comissões, proteção, SLA, régua, desligamento, ranking e premiação)
           que o parceiro vê em Regras do programa. Mudança que afeta parceiros precisa de vigência de no mínimo {diasMin ?? 30} dias e abre o rascunho
           de um comunicado em <Link to="/app/comunicados" className="text-menta-400 hover:underline">Comunicados</Link>.
         </span>

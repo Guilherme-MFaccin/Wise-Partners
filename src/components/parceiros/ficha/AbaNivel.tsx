@@ -13,7 +13,7 @@ import { Carregando, ErroCarga } from "@/components/comum/Estados";
 import { Pilula, SeloNivel } from "@/components/comum/Selos";
 import { ok, toastErro } from "@/lib/erros";
 import { data, dataHora } from "@/lib/formato";
-import { FAIXAS, GRUPOS_REQUISITO, PACOTES, RESULTADOS_REVISAO, rotulo } from "@/lib/rotulos";
+import { FAIXAS, GRUPOS_REQUISITO, RESULTADOS_REVISAO, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { Info, Numero, Secao } from "../ui";
 import { invalidarParceiro, nomePerfil, usePerfis, type Parceiro } from "../dados";
@@ -23,14 +23,13 @@ type Grupo = { cumprido: boolean; descricao: string | null; faltante: string[] }
 type CumpreNivel = { nivel: string; cumpre: boolean; grupos: Record<string, Grupo> };
 type Situacao = {
   nivel: string | null; nivel_entrada: string | null; em_observacao_ate: string | null;
-  pacote_pendente: string | null; pacote_pendente_em: string | null;
   niveis: Record<string, CumpreNivel>;
   regua: { aplica: boolean; cadencia_dias?: number; tolerancia_dias?: number; ultima_reuniao?: string | null; proxima_ate?: string; atrasada?: boolean };
   faixa: { faixa: string; pontos_ano: number; posicao: number; calculada_em: string } | null;
 };
 type Revisao = {
   id: string; trimestre: string; nivel_no_inicio: string | null; resultado: string; detalhes: any; decisao: string | null;
-  decidido_por: string | null; decidido_em: string | null; motivo: string | null; pacote_novo: string | null; pacote_efetivo_em: string | null;
+  decidido_por: string | null; decidido_em: string | null; motivo: string | null;
   created_at: string;
 };
 
@@ -83,16 +82,10 @@ export function AbaNivel({ parceiro: p }: { parceiro: Parceiro }) {
           <Numero rotulo="Faixa" valor={s.faixa ? rotulo(FAIXAS, s.faixa.faixa) : "Sem faixa"}
             detalhe={s.faixa ? `${s.faixa.pontos_ano} pontos no ano · ${s.faixa.posicao}º lugar` : "Calculada na revisão trimestral"} />
         </div>
-        {s.pacote_pendente && (
-          <p className="mt-3 rounded-[10px] border border-warning/40 bg-warning/10 p-3 text-sm">
-            Pacote pendente: <strong>{rotulo(PACOTES, s.pacote_pendente)}</strong> a partir de {data(s.pacote_pendente_em)}
-            {p.pacote_pendente_motivo ? ` (${p.pacote_pendente_motivo})` : ""}. Até lá vale o pacote atual, {rotulo(PACOTES, p.pacote) || "sem pacote"}.
-          </p>
-        )}
         <div className="mt-4 rounded-[10px] border border-white/10 p-3">
           <p className="mb-2 text-xs font-semibold text-neutro-300">Régua de atendimento</p>
           {!s.regua?.aplica ? (
-            <p className="text-sm text-muted-foreground">Não se aplica (parceiro não assinado, pausado ou sem pacote).</p>
+            <p className="text-sm text-muted-foreground">Não se aplica (parceiro não assinado, pausado ou sem nível).</p>
           ) : (
             <div className="grid gap-3 text-sm sm:grid-cols-4">
               <Info rotulo="Cadência">A cada {s.regua.cadencia_dias} dias (+{s.regua.tolerancia_dias} de tolerância)</Info>
@@ -159,9 +152,6 @@ export function AbaNivel({ parceiro: p }: { parceiro: Parceiro }) {
                   {r.decidido_em ? ` · decidido em ${dataHora(r.decidido_em)}${nomePerfil(perfis, r.decidido_por) ? ` por ${nomePerfil(perfis, r.decidido_por)}` : ""}` : ""}
                 </p>
                 {r.motivo && <p className="mt-1 whitespace-pre-wrap break-words">{r.motivo}</p>}
-                {r.pacote_novo && (
-                  <p className="mt-1 text-xs text-muted-foreground">Pacote novo: {rotulo(PACOTES, r.pacote_novo)} a partir de {data(r.pacote_efetivo_em)}</p>
-                )}
                 {r.detalhes?.grupos && <Faltantes grupos={r.detalhes.grupos} />}
               </li>
             ))}
@@ -222,7 +212,7 @@ function DecisaoRebaixamento({ parceiro: p, revisao, onFechar }: { parceiro: Par
             <RadioGroupItem value="confirmar" id="rb-confirmar" className="mt-0.5" />
             <span>
               Confirmar o rebaixamento para {nivelInterno(novo)}
-              <span className="block text-xs text-muted-foreground">Se o pacote não couber no novo nível, ele muda no fim do ciclo do Base Ativa ou em 30 dias, o que vier depois.</span>
+              <span className="block text-xs text-muted-foreground">As entregas, as contrapartidas e as ações da Wise passam a ser as do novo nível na hora; as que não valem para ele saem.</span>
             </span>
           </label>
           <label htmlFor="rb-manter" className="flex cursor-pointer items-start gap-3 rounded-[10px] border border-white/10 p-3 text-sm">

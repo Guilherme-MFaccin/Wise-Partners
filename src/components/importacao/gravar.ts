@@ -22,7 +22,7 @@ export async function gravarLinha(l: LinhaImportacao, responsavelId: string): Pr
   let contatoId: string | null = null;
   try {
     const p = await supabase.from("parceiros").insert({
-      nome_fantasia: d.nome_fantasia, tipo_parceria: d.tipo_parceria, etapa: d.etapa, nivel: d.nivel, pacote: d.pacote,
+      nome_fantasia: d.nome_fantasia, tipo_parceria: d.tipo_parceria, etapa: d.etapa, nivel: d.nivel,
       cidade: d.cidade, uf: d.uf, origem: d.origem, perfil_institucional: d.perfil_institucional,
       responsavel_id: responsavelId, created_by: responsavelId,
     }).select("id").single();

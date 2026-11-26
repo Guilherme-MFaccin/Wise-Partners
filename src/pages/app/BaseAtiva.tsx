@@ -48,7 +48,7 @@ export default function BaseAtiva() {
     <div>
       <Cabecalho
         titulo="Base Ativa"
-        descricao="Entrega do pacote A: ciclo de 12 semanas com 6 encontros quinzenais e o evento final com a base do parceiro. Estratégicos à frente na fila, depois a ordem de assinatura."
+        descricao="Entrega do nível Elite: ciclo de 12 semanas com 6 encontros quinzenais e o evento final com a base do parceiro. Estratégicos à frente na fila, depois a ordem de assinatura."
       />
 
       <Tabs value={aba} onValueChange={(v) => setAba(v as Aba)} className="mb-4">
@@ -65,7 +65,7 @@ export default function BaseAtiva() {
 
       {aba === "fila" && fila.isSuccess && (
         fila.data.length === 0
-          ? <Vazio titulo="Fila vazia">Parceiros do pacote A entram na fila ao chegar ao onboarding.</Vazio>
+          ? <Vazio titulo="Fila vazia">Parceiros Elite entram na fila ao chegar ao onboarding.</Vazio>
           : <ul className="space-y-3">{fila.data.map((f) => <FilaItem key={f.ciclo_id} item={f} />)}</ul>
       )}
 

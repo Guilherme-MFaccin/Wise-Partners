@@ -19,12 +19,12 @@ const comercial = {
   endereco: "Rua das Indústrias, 100, Jaraguá do Sul/SC",
   nivel: "A",
   carteira_icp: "60",
-  pacote: "C",
   categoria_prateleira: "ERP",
   comissao_modo: "instrumento",
   instrumento_parceiro: "Programa de Parceiros Consistem, 10% do primeiro ano",
   exigencias_solucao: "CNAE de intermediação incluído no contrato social da Wise",
-  base_ativa_modo: "nao_se_aplica",
+  base_ativa_modo: "fila",
+  ba_previsao: "março de 2027",
   responsavel_parceiro: "Juliana Loraine Denk",
   responsavel_wise: "Guilherme Faccin",
   data_inicio: "2026-11-02",
@@ -60,9 +60,9 @@ describe("Quadro de Identificação", () => {
     expect(f).not.toContain("Instrumento próprio do parceiro");
   });
 
-  it("exige Base Ativa definida no pacote A e pacote compatível com o nível", () => {
-    expect(validarQuadro("comercial", { ...comercial, pacote: "A" }).join()).toMatch(/Base Ativa/);
-    expect(validarQuadro("comercial", { ...comercial, nivel: "B", pacote: "A", base_ativa_modo: "fila", ba_previsao: "x" }).join()).toMatch(/não disponível/);
+  it("exige Base Ativa definida no nível Elite; nos outros níveis pode não se aplicar", () => {
+    expect(validarQuadro("comercial", { ...comercial, base_ativa_modo: "nao_se_aplica", ba_previsao: "" }).join()).toMatch(/Base Ativa/);
+    expect(validarQuadro("comercial", { ...comercial, nivel: "B", base_ativa_modo: "nao_se_aplica", ba_previsao: "" }).join()).not.toMatch(/Base Ativa/);
   });
 });
 
@@ -80,9 +80,10 @@ describe("Minuta em Word", () => {
   it("marca as opções escolhidas e deixa as outras em branco", () => {
     const texto = extrairTexto(preencherDocx(buf(modelo("comercial")), marcadores("comercial", comercial, "2026-10-23")));
     expect(texto).toContain("☐ Select     ☐ Premium     ☒ Elite");
-    expect(texto).toContain("☒ C · Prateleira     ☐ B · Formação     ☐ A · Base Ativa");
+    expect(texto).not.toMatch(/pacote/i); // benefícios seguem o nível (26/11/2026)
+    expect(texto).toContain("3. NÍVEL E BENEFÍCIOS");
     expect(texto).toContain("☒ Conforme instrumento próprio do Parceiro: Programa de Parceiros Consistem");
-    expect(texto).toContain("☒ Não se aplica");
+    expect(texto).toContain("☒ Em fila, previsão março de 2027");
     expect(texto).toContain("CONSISTEM SISTEMAS LTDA");
     expect(texto).toContain("60 empresas");
     expect(texto).toContain("02/11/2026");

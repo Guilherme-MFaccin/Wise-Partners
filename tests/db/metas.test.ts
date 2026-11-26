@@ -104,7 +104,7 @@ describe("Marcos do onboarding configuráveis", () => {
       await q.sistema();
       await q.sql("update public.marcos_onboarding_config set dias = 45, regra = '{\"indicacoes\": 0}' where tipo = 'marco_30'");
       const id = (await q.um(
-        "insert into public.parceiros (nome_fantasia, tipo_parceria, responsavel_id, pacote, nivel) values ('Novo Onb', 'comercial', $1, 'C', 'C') returning id",
+        "insert into public.parceiros (nome_fantasia, tipo_parceria, responsavel_id, nivel) values ('Novo Onb', 'comercial', $1, 'C') returning id",
         [U.parcerias])).id;
       await q.sql("update public.parceiros set data_assinatura = current_date where id = $1", [id]);
       await q.sql("select public.iniciar_onboarding($1)", [id]);

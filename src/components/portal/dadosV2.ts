@@ -13,10 +13,10 @@ export type CumpreNivel = { nivel: string; cumpre: boolean; grupos: Record<strin
 export type MeuNivel = {
   tipo: "comercial" | "institucional";
   nivel: string | null;
-  pacote: string | null;
   em_observacao_ate: string | null;
-  pacote_pendente: string | null;
-  pacote_pendente_em: string | null;
+  // O que o nível inclui (os pacotes saíram em 26/11/2026)
+  entregas: string[] | null;
+  wise_hub: boolean;
   atual: CumpreNivel | null;
   acima: CumpreNivel | null;
   // Resultado na janela do requisito (180 dias) e no trimestre (migração 0022)

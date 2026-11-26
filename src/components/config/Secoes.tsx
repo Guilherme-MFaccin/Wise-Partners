@@ -1,12 +1,11 @@
-import { ETAPAS_JORNADA, NATUREZAS, PACOTES, PERIODICIDADES, TIPOS_PARCERIA, rotulo } from "@/lib/rotulos";
+import { ETAPAS_JORNADA, NATUREZAS, PERIODICIDADES, TIPOS_PARCERIA, rotulo } from "@/lib/rotulos";
 import { TabelaConfig, type ColunaConfig, type Opcao } from "./TabelaConfig";
 
 // Seções simples da tela de configurações, todas pelo editor genérico.
 // Colunas definidas fora dos componentes para manter referências estáveis.
 
 const op = (m: Record<string, string>): Opcao[] => Object.entries(m).map(([valor, rotulo]) => ({ valor, rotulo }));
-const NIVEIS_OP: Opcao[] = [{ valor: "A", rotulo: "A (Elite)" }, { valor: "B", rotulo: "B (Premium)" }, { valor: "C", rotulo: "C (Select)" }];
-const PACOTES_OP: Opcao[] = op(PACOTES).sort((a, b) => a.valor.localeCompare(b.valor));
+export const NIVEIS_OP: Opcao[] = [{ valor: "C", rotulo: "Select" }, { valor: "B", rotulo: "Premium" }, { valor: "A", rotulo: "Elite" }];
 
 const COL_EMPRESAS: ColunaConfig[] = [
   { chave: "nome", rotulo: "Nome", tipo: "texto", obrigatoria: true },
@@ -30,24 +29,16 @@ const COL_NIVEIS: ColunaConfig[] = [
   { chave: "faixa_max", rotulo: "Carteira no ICP: máximo (vazio = sem limite)", tipo: "numero" },
   { chave: "dias_morno", rotulo: "Dias sem contato para morno", tipo: "numero", obrigatoria: true },
   { chave: "dias_dormente", rotulo: "Dias sem contato para dormente", tipo: "numero", obrigatoria: true },
+  // Benefícios do nível (os pacotes saíram em 26/11/2026: as entregas seguem o nível)
+  { chave: "wise_hub", rotulo: "Inclui acesso ao Wise Hub", tipo: "booleano", visivel: (l) => l.tipo_parceria === "comercial" },
+  { chave: "entregas", rotulo: "Entregas da Wise (uma por linha)", tipo: "linhas", visivel: (l) => l.tipo_parceria === "comercial" },
+  { chave: "tarefas_onboarding", rotulo: "Tarefas de onboarding (uma por linha)", tipo: "linhas", visivel: (l) => l.tipo_parceria === "comercial" },
 ];
 export function SecaoNiveis({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (
     <TabelaConfig tabela="niveis" pk={["tipo_parceria", "codigo"]} ordem="tipo_parceria" colunas={COL_NIVEIS} somenteLeitura={somenteLeitura}
-      tituloItem={(l) => `${TIPOS_PARCERIA[l.tipo_parceria]} ${l.codigo}: ${l.nome}`} />
+      tituloItem={(l) => `${TIPOS_PARCERIA[l.tipo_parceria]}: ${l.nome}`} />
   );
-}
-
-const COL_PACOTES: ColunaConfig[] = [
-  { chave: "nome", rotulo: "Nome", tipo: "texto", obrigatoria: true },
-  { chave: "niveis_permitidos", rotulo: "Níveis permitidos", tipo: "multi", opcoes: NIVEIS_OP },
-  { chave: "wise_hub", rotulo: "Inclui acesso ao Wise Hub", tipo: "booleano" },
-  { chave: "ordem", rotulo: "Ordem", tipo: "numero" },
-  { chave: "entregas", rotulo: "Entregas da Wise (uma por linha)", tipo: "linhas" },
-  { chave: "tarefas_onboarding", rotulo: "Tarefas de onboarding (uma por linha)", tipo: "linhas" },
-];
-export function SecaoPacotes({ somenteLeitura }: { somenteLeitura: boolean }) {
-  return <TabelaConfig tabela="pacotes" pk={["codigo"]} colunas={COL_PACOTES} tituloItem={(l) => l.nome} somenteLeitura={somenteLeitura} />;
 }
 
 const COL_CONTRAPARTIDAS: ColunaConfig[] = [
@@ -55,8 +46,7 @@ const COL_CONTRAPARTIDAS: ColunaConfig[] = [
   { chave: "tipo_parceria", rotulo: "Tipo de parceria", tipo: "select", opcoes: op(TIPOS_PARCERIA), obrigatoria: true },
   { chave: "periodicidade", rotulo: "Periodicidade", tipo: "select", opcoes: op(PERIODICIDADES), obrigatoria: true },
   { chave: "prazo_inicial_dias", rotulo: "Prazo inicial (dias após a assinatura)", tipo: "numero" },
-  { chave: "pacotes", rotulo: "Pacotes em que vale", tipo: "multi", opcoes: PACOTES_OP, visivel: (l) => l.tipo_parceria !== "institucional" },
-  { chave: "niveis", rotulo: "Níveis (nenhum marcado = todos)", tipo: "multi", opcoes: NIVEIS_OP, vazioNulo: true },
+  { chave: "niveis", rotulo: "Níveis em que vale (nenhum marcado = todos)", tipo: "multi", opcoes: NIVEIS_OP, vazioNulo: true, visivel: (l) => l.tipo_parceria !== "institucional" },
   { chave: "natureza_juridica", rotulo: "Natureza jurídica (nenhuma = todas)", tipo: "multi", opcoes: op(NATUREZAS), vazioNulo: true, visivel: (l) => l.tipo_parceria === "institucional" },
   { chave: "comprovacao", rotulo: "Forma de comprovação", tipo: "texto", obrigatoria: true },
   { chave: "meta", rotulo: "Meta (texto para o parceiro)", tipo: "texto", larga: true },
@@ -69,11 +59,11 @@ const COL_CONTRAPARTIDAS: ColunaConfig[] = [
   ], visivel: (l) => l.meta_quantidade !== "" && l.meta_quantidade !== null && l.meta_quantidade !== undefined },
   { chave: "ordem", rotulo: "Ordem", tipo: "numero" },
   { chave: "ativa", rotulo: "Ativa", tipo: "booleano" },
-  { chave: "periodicidade_por_pacote", rotulo: "Periodicidade por pacote (JSON, ex.: {\"A\": \"quinzenal\"})", tipo: "json" },
+  { chave: "periodicidade_por_nivel", rotulo: "Periodicidade diferente por nível (JSON; A é Elite, B Premium, C Select; ex.: {\"A\": \"quinzenal\"})", tipo: "json" },
 ];
 const NOVA_CONTRAPARTIDA = {
-  nome: "", tipo_parceria: "comercial", periodicidade: "mensal", prazo_inicial_dias: 0, pacotes: [], niveis: null,
-  natureza_juridica: null, comprovacao: "", meta: null, meta_quantidade: null, meta_unidade: null, meta_prazo_dias: null, meta_modo: "contagem", ordem: 999, ativa: true, periodicidade_por_pacote: {},
+  nome: "", tipo_parceria: "comercial", periodicidade: "mensal", prazo_inicial_dias: 0, niveis: null,
+  natureza_juridica: null, comprovacao: "", meta: null, meta_quantidade: null, meta_unidade: null, meta_prazo_dias: null, meta_modo: "contagem", ordem: 999, ativa: true, periodicidade_por_nivel: {},
 };
 export function SecaoContrapartidas({ somenteLeitura }: { somenteLeitura: boolean }) {
   return (

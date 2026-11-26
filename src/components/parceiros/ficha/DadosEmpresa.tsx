@@ -129,7 +129,7 @@ export function DadosEmpresa({ parceiro: p }: { parceiro: Parceiro }) {
             <Campo rotulo="Instagram"><Input value={f.instagram} onChange={(e) => set("instagram", e.target.value)} placeholder="@perfil" /></Campo>
             <Campo rotulo="LinkedIn"><Input value={f.linkedin} onChange={(e) => set("linkedin", e.target.value)} /></Campo>
             <Campo rotulo="Outra rede"><Input value={f.outro} onChange={(e) => set("outro", e.target.value)} /></Campo>
-            <Campo rotulo="Tipo de parceria" dica={f.tipo_parceria !== p.tipo_parceria ? "Ao mudar o tipo, revise categorias, nível e pacote." : undefined}>
+            <Campo rotulo="Tipo de parceria" dica={f.tipo_parceria !== p.tipo_parceria ? "Ao mudar o tipo, revise categorias e nível." : undefined}>
               <Select value={f.tipo_parceria} onValueChange={(v) => set("tipo_parceria", v)}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>{Object.entries(TIPOS_PARCERIA).map(([k, v]) => <SelectItem key={k} value={k}>{v}</SelectItem>)}</SelectContent>

@@ -257,7 +257,6 @@ function dadosIniciais(tipo: TipoContrato, ctx: any, nomeWise: string): DadosQua
     razao_social: p.razao_social ?? p.nome_fantasia,
     nivel: p.nivel ?? "",
     carteira_icp: p.carteira_icp != null ? String(p.carteira_icp) : "",
-    pacote: p.pacote ?? "",
     categoria_prateleira: principal,
     comissao_modo: ins?.programa_proprio ? "instrumento" : ins?.comissao_pct != null ? "percentual" : "",
     instrumento_parceiro: ins?.programa_proprio ? [ins.instrumento_nome, ins.comissao_pct != null ? `${ins.comissao_pct}% sobre ${ins.comissao_base ?? ""}` : null].filter(Boolean).join(", ") : "",
@@ -265,7 +264,7 @@ function dadosIniciais(tipo: TipoContrato, ctx: any, nomeWise: string): DadosQua
     comissao_parceiro_base: ins?.comissao_base ?? "",
     comissao_parceiro_condicao: ins?.comissao_condicao ?? "",
     exigencias_solucao: [ins?.exigencias, ins?.exigencias_solucao].filter(Boolean).join(". Solução: ") || "Não há",
-    base_ativa_modo: p.pacote === "A" ? "fila" : "nao_se_aplica",
+    base_ativa_modo: p.nivel === "A" ? "fila" : "nao_se_aplica",
     ba_primeiro_encontro: "",
     ba_previsao: "",
     responsavel_parceiro: respParceiro,
@@ -456,7 +455,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
       const { error } = await supabase.from("parceiros").update({ etapa: "onboarding" }).eq("id", parceiro.id);
       if (error) throw error;
     },
-    onSuccess: () => { toast.success("Onboarding iniciado: tarefas do pacote criadas com prazo de 2 dias úteis"); onMudou(); },
+    onSuccess: () => { toast.success("Onboarding iniciado: tarefas do nível criadas com prazo de 2 dias úteis"); onMudou(); },
     onError: toastErro,
   });
 
@@ -511,7 +510,7 @@ function ContratoAssinado({ parceiro, assinados, aprovado, contatos, podeEditar,
       {podeEditar && parceiro.data_assinatura && aprovado && !["onboarding", "parceria_ativa"].includes(parceiro.etapa) && !ETAPAS_PERDA.includes(parceiro.etapa) && (
         <div className="mt-4 border-t border-white/10 pt-4">
           <Button onClick={() => onboarding.mutate()} disabled={onboarding.isPending}>Iniciar onboarding</Button>
-          <p className="mt-2 text-xs text-muted-foreground">Cria as tarefas do pacote com prazo de 2 dias úteis, as contrapartidas e, no pacote A, a entrada na fila do Base Ativa.</p>
+          <p className="mt-2 text-xs text-muted-foreground">Cria as tarefas do nível com prazo de 2 dias úteis, as contrapartidas e, no Elite, a entrada na fila do Base Ativa.</p>
         </div>
       )}
 

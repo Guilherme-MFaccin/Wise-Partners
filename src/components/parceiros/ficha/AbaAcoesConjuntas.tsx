@@ -98,7 +98,7 @@ export function AbaAcoesConjuntas({ parceiroId }: { parceiroId: string }) {
       </div>
 
       {grupos.length === 0 ? (
-        <Vazio titulo="Nenhuma ação no plano.">As ações dos dois lados são geradas na assinatura, conforme o pacote.</Vazio>
+        <Vazio titulo="Nenhuma ação no plano.">As ações dos dois lados são geradas na assinatura, conforme o nível.</Vazio>
       ) : grupos.map(([mes, acoes]) => (
         <section key={mes} className="min-w-0">
           <h3 className="mb-2 text-sm font-semibold capitalize text-neutro-300">

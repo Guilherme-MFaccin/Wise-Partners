@@ -11,7 +11,7 @@ import { Pilula, SeloNivel, SeloStatus } from "@/components/comum/Selos";
 import { baixarBlob } from "@/lib/pdf";
 import { toastErro } from "@/lib/erros";
 import { data, haQuanto } from "@/lib/formato";
-import { ETAPAS, PACOTES, rotulo } from "@/lib/rotulos";
+import { ETAPAS, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { SeletorEtapa } from "../SeletorEtapa";
 import {
@@ -79,7 +79,6 @@ export function CabecalhoFicha({ parceiro: p, estrategico }: { parceiro: Parceir
           {p.razao_social && <p className="break-words text-sm text-muted-foreground">{p.razao_social}</p>}
           <div className="flex flex-wrap items-center gap-1.5">
             <SeloNivel tipo={p.tipo_parceria} nivel={p.nivel} />
-            {p.pacote && <Pilula>{rotulo(PACOTES, p.pacote)}</Pilula>}
             <SeloStatus status={p.status_atividade} />
             <Pilula tom={etapaPerda(etapas, p.etapa) ? "perigo" : "menta"}>{rotulo(ETAPAS, p.etapa)}</Pilula>
             {estrategico && <Pilula tom="info">Estratégico</Pilula>}

@@ -41,7 +41,6 @@ export function nomeNivel(tipo: string | null | undefined, codigo: string | null
   return (tipo === "institucional" ? NIVEIS_INSTITUCIONAL : NIVEIS_COMERCIAL)[codigo] ?? codigo;
 }
 
-export const PACOTES: Record<string, string> = { A: "A · Base Ativa", B: "B · Formação", C: "C · Prateleira" };
 
 export const STATUS_ATIVIDADE: Record<string, string> = { ativo: "Ativo", morno: "Morno", dormente: "Dormente", pausado: "Pausado" };
 

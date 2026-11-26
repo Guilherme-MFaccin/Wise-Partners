@@ -28,7 +28,7 @@ async function cadastrar(q: Q, extra: Record<string, unknown> = {}, id = NOVO, e
 
 async function ofertaElitePublicada(q: Q) {
   await q.sistema();
-  await q.sql(`update public.parceiros set nivel = 'A', pacote = 'C', nivel_ajuste_motivo = 'Teste da comunidade',
+  await q.sql(`update public.parceiros set nivel = 'A', nivel_ajuste_motivo = 'Teste da comunidade',
     data_assinatura = coalesce(data_assinatura, public.hoje() - 30) where id = '${P.A}'`);
   await q.como(U.parcerias);
   return (await q.um(`insert into public.ofertas_hub (parceiro_id, titulo, descricao, condicao, estado)

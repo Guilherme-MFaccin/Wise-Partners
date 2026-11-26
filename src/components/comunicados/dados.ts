@@ -6,7 +6,7 @@ export const TIPOS_COMUNICADO: Record<string, string> = {
   regra: "Mudança de regra", evento: "Evento", material: "Material novo", outro: "Outro",
 };
 
-export type Recorte = { niveis?: string[]; pacotes?: string[]; categorias?: string[]; tipos?: string[] };
+export type Recorte = { niveis?: string[]; categorias?: string[]; tipos?: string[] };
 
 export type Comunicado = {
   id: string;
@@ -59,19 +59,18 @@ export function useLeituras(id: string | null) {
 
 // Nível com os dois nomes (comercial e institucional), para as telas internas
 export function nomeNivelRecorte(codigo: string) {
-  return `${codigo} · ${NIVEIS_COMERCIAL[codigo] ?? codigo} / ${NIVEIS_INSTITUCIONAL[codigo] ?? codigo}`;
+  return `${NIVEIS_COMERCIAL[codigo] ?? codigo} / ${NIVEIS_INSTITUCIONAL[codigo] ?? codigo}`;
 }
 
 export function recorteVazio(r: Recorte | null | undefined) {
-  return !r || ["niveis", "pacotes", "categorias", "tipos"].every((k) => !(r as any)[k]?.length);
+  return !r || ["niveis", "categorias", "tipos"].every((k) => !(r as any)[k]?.length);
 }
 
-export function resumoRecorte(r: Recorte | null | undefined, nomes: { pacotes: Map<string, string>; categorias: Map<string, string> }) {
+export function resumoRecorte(r: Recorte | null | undefined, nomes: { categorias: Map<string, string> }) {
   if (recorteVazio(r)) return "Todos os parceiros assinados";
   const partes: string[] = [];
   if (r!.tipos?.length) partes.push(r!.tipos.map((t) => TIPOS_PARCERIA[t] ?? t).join(" ou "));
   if (r!.niveis?.length) partes.push("nível " + r!.niveis.map((n) => NIVEIS_COMERCIAL[n] ?? n).join(", "));
-  if (r!.pacotes?.length) partes.push("pacote " + r!.pacotes.map((p) => nomes.pacotes.get(p) ?? p).join(", "));
   if (r!.categorias?.length) partes.push("categoria " + r!.categorias.map((c) => nomes.categorias.get(c) ?? "removida").join(", "));
   return partes.join(" · ");
 }

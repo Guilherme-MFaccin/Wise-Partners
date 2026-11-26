@@ -29,7 +29,6 @@ export type Parceiro = {
   nivel: string | null;
   nivel_sugerido: string | null;
   nivel_ajuste_motivo: string | null;
-  pacote: string | null;
   status_atividade: string;
   motivo_inatividade: string | null;
   pausado_ate: string | null;
@@ -52,9 +51,6 @@ export type Parceiro = {
   nivel_entrada: string | null;
   elegibilidade_motivo: string | null;
   em_observacao_ate: string | null;
-  pacote_pendente: string | null;
-  pacote_pendente_em: string | null;
-  pacote_pendente_motivo: string | null;
   etapa_antes_nutricao: string | null;
   nutricao_ate: string | null;
   nutricao_cadencia_dias: number | null;
@@ -73,7 +69,6 @@ export type Categoria = {
 
 export type Etapa = { codigo: string; nome: string; ordem: number; perda: boolean; pausa?: boolean };
 export type Nivel = { tipo_parceria: string; codigo: string; nome: string; faixa_min: number | null; faixa_max: number | null };
-export type Pacote = { codigo: string; nome: string; niveis_permitidos: string[]; ordem: number };
 export type TipoAtividade = { id: string; nome: string; minutos: number; ordem: number; ativo: boolean };
 export type PerfilResumo = { id: string; nome: string; email: string; papel: string; ativo: boolean };
 export type ParceiroCategoria = { parceiro_id: string; categoria_id: string; principal: boolean };
@@ -120,14 +115,6 @@ export function useNiveis() {
     queryKey: ["cfg", "niveis"],
     ...CFG,
     queryFn: () => lista<Nivel>(supabase.from("niveis").select("tipo_parceria, codigo, nome, faixa_min, faixa_max")),
-  });
-}
-
-export function usePacotes() {
-  return useQuery({
-    queryKey: ["cfg", "pacotes"],
-    ...CFG,
-    queryFn: () => lista<Pacote>(supabase.from("pacotes").select("codigo, nome, niveis_permitidos, ordem").order("ordem")),
   });
 }
 
@@ -194,11 +181,6 @@ export function calcularNivelSugerido(niveis: Nivel[], tipo: string, carteira: n
     .filter((n) => carteira >= (n.faixa_min ?? 0) && (n.faixa_max === null || carteira <= n.faixa_max))
     .sort((a, b) => (b.faixa_min ?? -1) - (a.faixa_min ?? -1));
   return candidatos[0]?.codigo ?? null;
-}
-
-export function pacotesDoNivel(pacotes: Pacote[], nivel: string | null | undefined) {
-  if (!nivel) return [];
-  return pacotes.filter((p) => p.niveis_permitidos.includes(nivel));
 }
 
 export function etapaPerda(etapas: Etapa[] | undefined, codigo: string | null | undefined) {
@@ -318,12 +300,12 @@ export function normalizar(t: string | null | undefined) {
 export type ParceiroLista = Pick<
   Parceiro,
   | "id" | "nome_fantasia" | "razao_social" | "cnpj" | "cidade" | "uf" | "tipo_parceria" | "perfil_institucional" | "natureza_juridica"
-  | "etapa" | "nivel" | "pacote" | "status_atividade" | "responsavel_id" | "data_assinatura" | "ultimo_contato" | "motivo_perda"
+  | "etapa" | "nivel" | "status_atividade" | "responsavel_id" | "data_assinatura" | "ultimo_contato" | "motivo_perda"
   | "nutricao_ate" | "origem_tipo"
 >;
 
 const COLUNAS_LISTA =
-  "id, nome_fantasia, razao_social, cnpj, cidade, uf, tipo_parceria, perfil_institucional, natureza_juridica, etapa, nivel, pacote, status_atividade, responsavel_id, data_assinatura, ultimo_contato, motivo_perda, nutricao_ate, origem_tipo";
+  "id, nome_fantasia, razao_social, cnpj, cidade, uf, tipo_parceria, perfil_institucional, natureza_juridica, etapa, nivel, status_atividade, responsavel_id, data_assinatura, ultimo_contato, motivo_perda, nutricao_ate, origem_tipo";
 
 export function useCarteira() {
   const parceiros = useQuery({

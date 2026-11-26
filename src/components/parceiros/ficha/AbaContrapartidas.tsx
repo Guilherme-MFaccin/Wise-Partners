@@ -115,7 +115,7 @@ export function AbaContrapartidas({ parceiroId }: { parceiroId: string }) {
       )}
 
       {!contrapartidas.length ? (
-        <Vazio titulo="Nenhuma contrapartida.">As contrapartidas do pacote são criadas na assinatura do contrato.</Vazio>
+        <Vazio titulo="Nenhuma contrapartida.">As contrapartidas do nível são criadas na assinatura do contrato.</Vazio>
       ) : (
         <>
           {atrasadas > 0 && (

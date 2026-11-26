@@ -15,27 +15,25 @@ import { data, hojeISO, minutosParaHoras } from "@/lib/formato";
 import { NIVEIS_COMERCIAL, NIVEIS_INSTITUCIONAL, nomeNivel } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
 import { Campo, Info, Numero, Secao } from "../ui";
-import { calcularNivelSugerido, invalidarParceiro, pacotesDoNivel, useNiveis, usePacotes, type Parceiro } from "../dados";
+import { calcularNivelSugerido, invalidarParceiro, useNiveis, type Parceiro } from "../dados";
 
 const NENHUM = "__nenhum";
 
-// Classificação (história 5): carteira no ICP, nível sugerido, ajuste com motivo e pacote do nível.
+// Classificação (história 5): carteira no ICP, nível sugerido, ajuste com motivo. As entregas da Wise seguem o nível.
 export function Classificacao({ parceiro: p }: { parceiro: Parceiro }) {
   const { isParcerias } = useAuth();
   const qc = useQueryClient();
   const { data: niveis = [] } = useNiveis();
-  const { data: pacotes = [] } = usePacotes();
   const comercial = p.tipo_parceria === "comercial";
 
   const inicial = () => ({
     carteira: p.carteira_icp === null ? "" : String(p.carteira_icp),
     nivel: p.nivel ?? "",
     motivo: p.nivel_ajuste_motivo ?? "",
-    pacote: p.pacote ?? "",
   });
   const [f, setF] = useState(inicial);
   const [salvando, setSalvando] = useState(false);
-  useEffect(() => setF(inicial()), [p.carteira_icp, p.nivel, p.nivel_ajuste_motivo, p.pacote]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => setF(inicial()), [p.carteira_icp, p.nivel, p.nivel_ajuste_motivo]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const carteira = f.carteira === "" ? null : Number(f.carteira);
   // Com a carteira gravada, vale o nível de entrada do banco (faixa ajustada pela qualidade do scorecard)
@@ -43,18 +41,12 @@ export function Classificacao({ parceiro: p }: { parceiro: Parceiro }) {
   // Sem nível escolhido, o banco usa o sugerido
   const nivelEfetivo = f.nivel || sugerido || "";
   const ajusteManual = comercial && !!sugerido && !!nivelEfetivo && nivelEfetivo !== sugerido;
-  const pacotesPermitidos = pacotesDoNivel(pacotes, nivelEfetivo);
-  const pacoteInvalido = !!f.pacote && !pacotesPermitidos.some((x) => x.codigo === f.pacote);
   const mudou = JSON.stringify(f) !== JSON.stringify(inicial());
   const nomesNivel = comercial ? NIVEIS_COMERCIAL : NIVEIS_INSTITUCIONAL;
 
   async function salvar() {
     if (ajusteManual && !f.motivo.trim()) {
       toast.error("Ajuste manual de nível exige motivo.");
-      return;
-    }
-    if (pacoteInvalido) {
-      toast.error("O pacote escolhido não está disponível para o nível.");
       return;
     }
     setSalvando(true);
@@ -64,7 +56,6 @@ export function Classificacao({ parceiro: p }: { parceiro: Parceiro }) {
         carteira_icp: carteira,
         nivel: f.nivel || null,
         nivel_ajuste_motivo: ajusteManual ? f.motivo.trim() : null,
-        pacote: comercial ? f.pacote || null : null,
       })
       .eq("id", p.id);
     setSalvando(false);
@@ -100,21 +91,6 @@ export function Classificacao({ parceiro: p }: { parceiro: Parceiro }) {
               className={cn(!f.motivo.trim() && "border-warning")}
               onChange={(e) => setF((x) => ({ ...x, motivo: e.target.value }))} />
           </Campo>
-        )}
-        {comercial ? (
-          <Campo rotulo="Pacote" dica={nivelEfetivo ? `Disponíveis para ${nomeNivel("comercial", nivelEfetivo)}: ${pacotesPermitidos.map((x) => x.nome).join(", ")}` : "Defina o nível para escolher o pacote."}>
-            <Select value={f.pacote || NENHUM} disabled={!isParcerias || !nivelEfetivo}
-              onValueChange={(v) => setF((x) => ({ ...x, pacote: v === NENHUM ? "" : v }))}>
-              <SelectTrigger className={cn(pacoteInvalido && "border-warning")}><SelectValue /></SelectTrigger>
-              <SelectContent>
-                <SelectItem value={NENHUM}>Sem pacote</SelectItem>
-                {pacotesPermitidos.map((x) => <SelectItem key={x.codigo} value={x.codigo}>{x.nome}</SelectItem>)}
-              </SelectContent>
-            </Select>
-            {pacoteInvalido && <p className="text-xs text-warning">O pacote atual não está disponível para este nível. Escolha outro.</p>}
-          </Campo>
-        ) : (
-          <Info rotulo="Pacote">Parcerias institucionais não têm pacote.</Info>
         )}
         <Info rotulo="Nível atual"><SeloNivel tipo={p.tipo_parceria} nivel={p.nivel} /></Info>
       </div>

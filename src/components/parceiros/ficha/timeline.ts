@@ -1,7 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { data as fmtData, dataHora, moeda } from "@/lib/formato";
 import {
-  ESTADOS_COMISSAO, ESTADOS_CONTRAPARTIDA, ETAPAS, ETAPAS_INDICACAO, PACOTES, STATUS_ATIVIDADE, TIPOS_CONTATO, TIPOS_DOCUMENTO,
+  ESTADOS_COMISSAO, ESTADOS_CONTRAPARTIDA, ETAPAS, ETAPAS_INDICACAO, STATUS_ATIVIDADE, TIPOS_CONTATO, TIPOS_DOCUMENTO,
   TIPOS_PARCERIA, SENTIDOS, nomeNivel, rotulo,
 } from "@/lib/rotulos";
 import { nomePerfil, type PerfilResumo } from "../dados";
@@ -87,7 +87,8 @@ export function montarTimeline(d: DadosTimeline): ItemTimeline[] {
   const itens: ItemTimeline[] = [
     ...d.pontos.map((p) => ({ tipo: "ponto" as const, data: p.data, chave: `p${p.id}`, ponto: p })),
     ...d.historico
-      .filter((h) => !(["documentos", "indicacoes"].includes(h.tabela) && h.campo === "criado"))
+      // Os pacotes saíram em 26/11/2026 (os benefícios seguem o nível): os registros antigos deles não aparecem
+      .filter((h) => !(["documentos", "indicacoes"].includes(h.tabela) && h.campo === "criado") && !h.campo.startsWith("pacote"))
       .map((h) => ({ tipo: "historico" as const, data: h.created_at, chave: `h${h.id}`, hist: h })),
     ...d.documentos.map((doc) => ({ tipo: "documento" as const, data: doc.created_at, chave: `d${doc.id}`, doc })),
     ...d.indicacoes.map((ind) => ({ tipo: "indicacao" as const, data: ind.data || ind.created_at, chave: `i${ind.id}`, ind })),
@@ -113,7 +114,7 @@ const TABELAS: Record<string, string> = {
 
 const CAMPOS: Record<string, string> = {
   criado: "Registro criado", excluido: "Registro excluído", nome_fantasia: "Nome fantasia", razao_social: "Razão social", cnpj: "CNPJ",
-  etapa: "Etapa", nivel: "Nível", nivel_ajuste_motivo: "Motivo do ajuste de nível", pacote: "Pacote",
+  etapa: "Etapa", nivel: "Nível", nivel_ajuste_motivo: "Motivo do ajuste de nível",
   status_atividade: "Status de atividade", motivo_inatividade: "Motivo da inatividade", pausado_ate: "Pausado até",
   responsavel_id: "Responsável", carteira_icp: "Carteira no ICP", data_assinatura: "Data de assinatura", motivo_perda: "Motivo da perda",
   tipo_parceria: "Tipo de parceria", estrategico: "Estratégico", estrategico_sugerido: "Sugestão de estratégico",
@@ -140,7 +141,6 @@ export function valorHistorico(h: Pick<Historico, "tabela" | "campo">, v: string
   const { tabela, campo } = h;
   if (campo === "etapa") return rotulo(tabela === "indicacoes" ? ETAPAS_INDICACAO : ETAPAS, v);
   if (campo === "nivel") return nomeNivel(tipoParceria, v);
-  if (campo === "pacote") return rotulo(PACOTES, v);
   if (campo === "status_atividade") return rotulo(STATUS_ATIVIDADE, v);
   if (campo === "tipo_parceria") return rotulo(TIPOS_PARCERIA, v);
   if (campo === "responsavel_id") return nomePerfil(perfis, v) || "outro usuário";

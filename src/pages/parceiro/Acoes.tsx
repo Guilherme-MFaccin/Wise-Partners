@@ -19,7 +19,7 @@ const TOM: Record<string, Tom> = {
 const TOM_WISE: Record<string, Tom> = { planejada: "neutro", feita: "info", comprovada: "menta", atrasada: "alerta", cancelada: "neutro" };
 
 // Ações conjuntas (História 11): o lado do parceiro (contrapartidas da v1, com comprovação)
-// e o lado da Wise (ações do pacote, só leitura). Não há verba de marketing para parceiros.
+// e o lado da Wise (ações do nível, só leitura). Não há verba de marketing para parceiros.
 export default function Acoes() {
   const contrapartidasQ = useMinhasContrapartidas();
   const wiseQ = useAcoesWise();
@@ -100,7 +100,7 @@ function LadoWise({ lista, carregando, erro }: { lista: AcaoWise[]; carregando: 
   return (
     <>
       <p className="mb-4 rounded-[10px] bg-white/5 px-3 py-2 text-sm text-muted-foreground">
-        Ações que a Wise faz pela parceria, conforme o pacote. Se uma ação atrasar, o seu responsável na Wise é avisado.
+        Ações que a Wise faz pela parceria, conforme o nível. Se uma ação atrasar, o seu responsável na Wise é avisado.
       </p>
       {carregando ? <Carregando /> : erro ? <ErroCarga erro={erro} /> : visiveis.length === 0 ? (
         <Vazio titulo="Nenhuma ação da Wise programada">As ações da Wise aparecem aqui depois da assinatura do contrato.</Vazio>

@@ -9122,7 +9122,7 @@
       "nome": "Definir níveis, benefícios e critérios de subida",
       "pai": "P-05",
       "ordem": 1,
-      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão pela regra de comissão, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. A subida ao Premium exige os 60 dias e, além disso, 3 clientes fechados ou a avaliação. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro. Critério dos níveis (FO-19): Premium: um cliente do parceiro, dentro do perfil, fez o diagnóstico com a Wise Makers (passa a ver o catálogo e usar as condições). Elite: um cliente trazido pelo parceiro contratou alguma empresa do Grupo Tríade (passa a oferecer no catálogo). O portal sobe o nível sozinho. Os pacotes saem e os benefícios seguem o nível.",
+      "descricao": "Três níveis em escada, e todo parceiro entra pelo Select, qualquer que seja o tamanho da carteira. Select (C): consultoria gratuita aos clientes da carteira que estão no ICP da Wise, comissão pela regra de comissão, certificado de parceiro, Wise Hub com as duas marcas, grupo e comunidade, minicurso. Premium (B): tudo do Select, mais a recomendação pela Wise nas consultorias e na Prateleira, mentoria mensal aberta à carteira, eventos e formações da Wise e apresentações a outros parceiros. Elite (A): tudo do Premium, mais o Base Ativa, uma formação gratuita e exclusiva para a base do parceiro, organizada pela Wise. Para o Premium: 60 dias no programa e pelo menos 3 clientes fechados com a Wise vindos dele, ou avaliação do Gerente com o Igor. Para o Elite: 60 dias no Premium ou 6 clientes fechados vindos dele, ou avaliação do Gerente com o Igor. O nível só sobe. A subida ao Premium exige os 60 dias e, além disso, 3 clientes fechados ou a avaliação. No portal: guarda a tabela de níveis e benefícios, apura os critérios e carrega os benefícios no card do parceiro. Critério dos níveis (FO-19): Premium: um cliente do parceiro, dentro do perfil, fez o diagnóstico com a Wise Makers (passa a ver o catálogo e usar as condições). Elite: um cliente trazido pelo parceiro contratou alguma empresa do Grupo Tríade (passa a oferecer no catálogo). O portal sobe o nível sozinho. Os benefícios seguem o nível.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9174,7 +9174,8 @@
         "EV-0377",
         "EV-0384",
         "EV-0425",
-        "EV-0450"
+        "EV-0450",
+        "EV-0491"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -11071,7 +11072,7 @@
       "frequencia": "",
       "dores": [],
       "regras": [
-        "Só destaques e pacotes B e A"
+        "Só destaques e níveis Premium e Elite"
       ],
       "status": "confirmado",
       "hipoteses": [],
@@ -11079,7 +11080,8 @@
         "EV-0232",
         "EV-0233",
         "EV-0345",
-        "EV-0373"
+        "EV-0373",
+        "EV-0491"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -18951,6 +18953,15 @@
       "data": "2026-11-26",
       "trecho": "Swallow passa a 1,5% para o gerente de parcerias",
       "local": "Resposta à pergunta sobre o gerente na Swallow"
+    },
+    {
+      "id": "EV-0491",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Existe um problema: Estamos considerando a hierarquização antiga dos parceiros, que continha as prateleiras (A, B e C). Retire qualquer menção disso do portal inteiro",
+      "local": "Pedido sobre a hierarquia antiga"
     }
   ],
   "perguntas": [
@@ -29778,9 +29789,10 @@
       ],
       "status": "resolvida",
       "pergunta": "Q-0017",
-      "resolucao": "Segue o Playbook v3.1: a entrega sobe em escada pelo pacote (C, B, A), conforme a capacidade do parceiro de devolver; abrir mais é orgânico. Converge com os livros que pedem começar pequeno.",
+      "resolucao": "Segue o Playbook v3.1: a entrega sobe em escada pelo pacote (C, B, A), conforme a capacidade do parceiro de devolver; abrir mais é orgânico. Converge com os livros que pedem começar pequeno. Superado em 26/11/2026: a hierarquia antiga saiu do portal; os benefícios seguem o nível (Select, Premium, Elite).",
       "evidencias_resolucao": [
-        "EV-0019"
+        "EV-0019",
+        "EV-0491"
       ],
       "lado_patrocinador": [
         "EV-0018"
@@ -29831,11 +29843,12 @@
       ],
       "status": "resolvida",
       "pergunta": "Q-0019",
-      "resolucao": "Mantida a especificação e o Playbook v3.1: o nível mede potencial pela faixa de clientes no ICP; o pacote, que exige contrapartida, é o que libera as entregas. Revista em 09/11 (FO-12): todos entram pelo Select e sobem pelo resultado, como Bech recomendava.",
+      "resolucao": "Mantida a especificação e o Playbook v3.1: o nível mede potencial pela faixa de clientes no ICP; o pacote, que exige contrapartida, é o que libera as entregas. Revista em 09/11 (FO-12): todos entram pelo Select e sobem pelo resultado, como Bech recomendava. Superado em 26/11/2026: a hierarquia antiga saiu do portal; os benefícios seguem o nível (Select, Premium, Elite).",
       "evidencias_resolucao": [
         "EV-0032",
         "EV-0356",
-        "EV-0350"
+        "EV-0350",
+        "EV-0491"
       ],
       "lado_patrocinador": [
         "EV-0269"
@@ -31141,6 +31154,16 @@
       "evidencias": [
         "EV-0490"
       ]
+    },
+    {
+      "id": "DE-116",
+      "data": "2026-11-26",
+      "texto": "A hierarquia antiga sai do portal inteiro: os benefícios seguem o nível (Select, Premium, Elite). Entregas da Wise, Wise Hub, tarefas de onboarding, contrapartidas, ações da Wise, régua de atendimento e Base Ativa (Elite) dependem só do nível; na mudança de nível, entra o que falta e sai o que não vale. O contrato comercial passa a descrever os benefícios por nível.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0491"
+      ]
     }
   ],
   "glossario": [
@@ -31411,6 +31434,10 @@
     {
       "data": "2026-11-26",
       "evento": "To-be v20: o gerente de parcerias passa de 2% para 1,5% nas vendas da Swallow, igual à venda pontual da Wise (P-62 e a regra de comissão atualizados)."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "To-be v21: hierarquia antiga fora do portal; benefícios, contrapartidas, ações da Wise, régua e contrato seguem o nível."
     }
   ]
 }

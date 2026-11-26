@@ -140,7 +140,7 @@ CATEGORIAS = [
      ["Oferecer algo que a diretoria quer: crescer vendas", "Motivo de reunião com o dono"], ["Diferencial contra concorrentes de preço", "Indicação de volta (Premium)"]),
     ("Serviços técnicos", "ESG", "Consultoria e relatórios de sustentabilidade",
      ["Vender projetos de ESG para indústrias", "Ligar ESG a resultado de negócio"], ["Cliente vê ESG como custo", "Projetos pontuais, sem recorrência"], ["Projetos maiores e recorrentes", "Clientes que crescem e investem"],
-     ["Pacote que junta crescimento comercial e sustentabilidade", "Diagnóstico como porta para conversar com o dono"], ["Casos de indústrias que cresceram", "Relação contínua com a base"]),
+     ["Oferta que junta crescimento comercial e sustentabilidade", "Diagnóstico como porta para conversar com o dono"], ["Casos de indústrias que cresceram", "Relação contínua com a base"]),
     ("Serviços técnicos", "Qualidade e laboratório", "Certificações, ensaios e gestão da qualidade",
      ["Manter clientes em certificações e ensaios", "Vender novos serviços para a base"], ["Contato só na auditoria", "Pressão de preço"], ["Relação ao longo do ano", "Mais serviços por cliente"],
      ["Um benefício gratuito que gera contato fora da auditoria", "Cliente com comercial forte vende o selo de qualidade"], ["Diferencial na renovação", "Indicação de volta (Premium)"]),

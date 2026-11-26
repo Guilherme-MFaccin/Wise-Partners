@@ -9,7 +9,7 @@ describe("Ver como", () => {
   it("lista as contas com o tipo de acesso, sem administradores, e só para a gestão", () =>
     transacao(async (q) => {
       await q.sistema();
-      await q.sql(`update public.parceiros set nivel = 'A', pacote = 'C', nivel_ajuste_motivo = 'Teste do ver como', data_assinatura = coalesce(data_assinatura, public.hoje() - 10) where id = '${P.A}'`);
+      await q.sql(`update public.parceiros set nivel = 'A', nivel_ajuste_motivo = 'Teste do ver como', data_assinatura = coalesce(data_assinatura, public.hoje() - 10) where id = '${P.A}'`);
       await q.como(U.parcerias);
       const contas = await q.sql("select perfil_id, papel, tipo from public.contas_para_ver_como()");
       expect(contas.some((c: any) => c.papel === "admin")).toBe(false);

@@ -13,7 +13,7 @@ import { ParceiroBusca } from "@/components/comum/ParceiroBusca";
 import { arquivoParaBase64, chamarIA, type ResultadoPrint, type ResultadoResumo } from "@/lib/ia";
 import { mensagemErro, toastErro } from "@/lib/erros";
 import { hojeISO, semTravessao } from "@/lib/formato";
-import { ETAPAS, PACOTES, TIPOS_CONTATO, nomeNivel, rotulo } from "@/lib/rotulos";
+import { ETAPAS, TIPOS_CONTATO, nomeNivel, rotulo } from "@/lib/rotulos";
 import { Campo } from "@/components/parceiros/ui";
 import {
   invalidarParceiro, nomeArquivoSeguro, passoAtivo, perfisInternos, podeRegistrarContato, useParceiro, usePerfis,
@@ -131,7 +131,6 @@ export function RegistroContatoDialog({
           nome: parceiro?.nome_fantasia ?? "",
           etapa: rotulo(ETAPAS, parceiro?.etapa),
           nivel: parceiro?.nivel ? nomeNivel(parceiro.tipo_parceria, parceiro.nivel) : null,
-          pacote: parceiro?.pacote ? rotulo(PACOTES, parceiro.pacote) : null,
           proximo_passo: ativo ? `${ativo.descricao} (até ${ativo.data})` : null,
         },
         hoje: hojeISO(),

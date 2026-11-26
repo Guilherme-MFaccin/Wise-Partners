@@ -107,12 +107,13 @@ export async function prepararDados() {
     }
 
     // Parceiros: A e B assinados (Elite e Premium), C e E assinados, D sem contrato
-    const parceiros: [string, string, number, string | null][] = [
-      [P.A, "Parceiro Alfa", 60, "A"],
-      [P.B, "Parceiro Beta", 20, "B"],
-      [P.C, "Parceiro Gama", 10, "C"],
-      [P.D, "Parceiro Delta", 10, null],
-      [P.E, "Parceiro Épsilon", 10, "C"],
+    // Nível pela carteira no ICP: 60 Elite, 20 Premium, 10 Select; o último campo diz se assina
+    const parceiros: [string, string, number, boolean][] = [
+      [P.A, "Parceiro Alfa", 60, true],
+      [P.B, "Parceiro Beta", 20, true],
+      [P.C, "Parceiro Gama", 10, true],
+      [P.D, "Parceiro Delta", 10, false],
+      [P.E, "Parceiro Épsilon", 10, true],
     ];
     for (const [id, nome, carteira] of parceiros) {
       await c.query(
@@ -122,10 +123,10 @@ export async function prepararDados() {
       );
       await c.query("insert into public.parceiro_categorias (parceiro_id, categoria_id, principal) values ($1, $2, true)", [id, erp]);
     }
-    for (const [id, , , pacote] of parceiros) {
-      if (!pacote) continue;
+    for (const [id, , , assina] of parceiros) {
+      if (!assina) continue;
       await c.query("insert into public.aprovacoes (parceiro_id, aprovado_por) values ($1, $2)", [id, U.diretor]);
-      await c.query("update public.parceiros set pacote = $2, etapa = 'proposta_decisor' where id = $1", [id, pacote]);
+      await c.query("update public.parceiros set etapa = 'proposta_decisor' where id = $1", [id]);
       await c.query("update public.parceiros set etapa = 'fechamento', data_assinatura = current_date - 10 where id = $1", [id]);
       await c.query("update public.parceiros set etapa = 'onboarding' where id = $1", [id]);
     }

@@ -6,7 +6,7 @@ beforeAll(prepararDados);
 
 const OFERTA = (pid: string, estado = "em_validacao") => `insert into public.ofertas_hub (parceiro_id, titulo, descricao, condicao, estado)
   values ('${pid}', 'Implantação de CRM', 'CRM implantado em 30 dias com treinamento.', '20% de desconto', '${estado}') returning id`;
-const nivel = (pid: string, n: string) => `update public.parceiros set nivel = '${n}', pacote = 'C', nivel_ajuste_motivo = 'Teste do catálogo',
+const nivel = (pid: string, n: string) => `update public.parceiros set nivel = '${n}', nivel_ajuste_motivo = 'Teste do catálogo',
   data_assinatura = coalesce(data_assinatura, public.hoje() - 30) where id = '${pid}'`;
 
 describe("Quem vê e quem oferece", () => {

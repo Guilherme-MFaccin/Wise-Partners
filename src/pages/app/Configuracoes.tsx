@@ -6,7 +6,7 @@ import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Vazio } from "@/components/comum/Estados";
 import { NavegacaoSecoes, type Secao } from "@/components/comum/NavegacaoSecoes";
 import {
-  SecaoContrapartidas, SecaoEmpresas, SecaoEtapas, SecaoFeriados, SecaoIcp, SecaoNiveis, SecaoPacotes, SecaoTextosEmail, SecaoTiposAtividade,
+  SecaoContrapartidas, SecaoEmpresas, SecaoEtapas, SecaoFeriados, SecaoIcp, SecaoNiveis, SecaoTextosEmail, SecaoTiposAtividade,
 } from "@/components/config/Secoes";
 import {
   CHAVES_AGRUPADAS, SecaoAcoesWise, SecaoCruzamento, SecaoCustos, SecaoFase, SecaoIndicadores, SecaoPontos, SecaoRegras, SecaoRegua,
@@ -20,10 +20,9 @@ import { Backup } from "@/components/config/Backup";
 
 // Agrupadas por assunto (regras, metas e medição, operação, sistema). As páginas públicas ficam em Programa, Páginas. `admin`: aba só aparece para administradores (custos e remunerações)
 const ABAS: (Secao & { admin?: boolean })[] = [
-  { id: "niveis", rotulo: "Níveis e prazos", grupo: "Regras do programa" },
+  { id: "niveis", rotulo: "Níveis, benefícios e prazos", grupo: "Regras do programa" },
   { id: "requisitos", rotulo: "Requisitos de nível", grupo: "Regras do programa" },
   { id: "empresas", rotulo: "Empresas e comissões", grupo: "Regras do programa" },
-  { id: "pacotes", rotulo: "Pacotes", grupo: "Regras do programa" },
   { id: "contrapartidas", rotulo: "Contrapartidas", grupo: "Regras do programa" },
   { id: "sla", rotulo: "SLA e proteção", grupo: "Regras do programa" },
   { id: "pontos", rotulo: "Pontos e premiação", grupo: "Regras do programa" },
@@ -66,7 +65,6 @@ export default function Configuracoes() {
     niveis: <SecaoNiveis somenteLeitura={leitura} />,
     requisitos: <SecaoRequisitos somenteLeitura={leitura} />,
     scorecard: <SecaoScorecard somenteLeitura={leitura} />,
-    pacotes: <SecaoPacotes somenteLeitura={leitura} />,
     contrapartidas: <SecaoContrapartidas somenteLeitura={leitura} />,
     acoes: <SecaoAcoesWise somenteLeitura={leitura} />,
     regua: <SecaoRegua somenteLeitura={leitura} />,

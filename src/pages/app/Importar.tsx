@@ -45,17 +45,15 @@ export default function Importar() {
         toast.error(`Cabeçalho diferente do modelo. Use exatamente: ${CABECALHO.join(",")}`);
         return;
       }
-      // Referências para validar: categorias, pacotes e nomes já cadastrados
-      const [cats, pacs, parcs] = await Promise.all([
+      // Referências para validar: categorias e nomes já cadastrados
+      const [cats, parcs] = await Promise.all([
         supabase.from("categorias").select("id, nome, tipo"),
-        supabase.from("pacotes").select("codigo, nome, niveis_permitidos"),
         supabase.from("parceiros").select("nome_fantasia"),
       ]);
-      for (const x of [cats, pacs, parcs]) if (x.error) throw x.error;
+      for (const x of [cats, parcs]) if (x.error) throw x.error;
       setNomesCategoria(new Map((cats.data ?? []).map((c: any) => [c.id, c.nome])));
       setLinhas(validarLinhas(r.data, {
         categorias: cats.data as any,
-        pacotes: pacs.data as any,
         nomesExistentes: new Set((parcs.data ?? []).map((p: any) => normalizar(p.nome_fantasia))),
       }));
     } catch (e) {
@@ -141,7 +139,7 @@ export default function Importar() {
                             d.categoria_secundaria_id && nomesCategoria.get(d.categoria_secundaria_id),
                           ].filter(Boolean).join(" + ")}</p>
                           <p className="text-muted-foreground">
-                            {rotulo(ETAPAS, d.etapa)} · {d.nivel ? nomeNivel(d.tipo_parceria, d.nivel) : "sem nível"}{d.pacote ? ` · pacote ${d.pacote}` : ""}
+                            {rotulo(ETAPAS, d.etapa)} · {d.nivel ? nomeNivel(d.tipo_parceria, d.nivel) : "sem nível"}
                           </p>
                         </TableCell>
                         <TableCell className="min-w-[200px] align-top text-xs">

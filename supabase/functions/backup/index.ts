@@ -5,7 +5,7 @@ import { admin, agoraBrasilia, ehRotina, perfilDaRequisicao } from "../_shared/s
 import { enviarEmail, layoutEmail, modeloEmail } from "../_shared/email.ts";
 
 const TABELAS = [
-  "empresas_grupo", "perfis", "convites", "configuracoes", "feriados", "categorias", "campos_categoria", "niveis", "pacotes",
+  "empresas_grupo", "perfis", "convites", "configuracoes", "feriados", "categorias", "campos_categoria", "niveis",
   "catalogo_contrapartidas", "tipos_atividade", "etapas_funil", "criterios_icp", "modelos_contrato", "textos_email",
   "parceiros", "parceiros_interno", "parceiros_instrumento", "parceiro_categorias", "parceiro_campos", "propostas_ficha",
   "contatos", "parceiro_contatos", "pontos_contato", "atividades", "proximos_passos", "documentos", "aprovacoes",
