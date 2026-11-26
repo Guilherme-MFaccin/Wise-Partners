@@ -112,3 +112,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: página do portal (`/parceiros`) com Entrar e Cadastrar e textos para qualquer empresa; `/comunidade` leva a ela; fila com Adicionar (cliente do grupo, empresa da comunidade ou parceiro); Comunidade como primeira tela do cliente; seção Cadastros; termo de uso em Textos legais.
 * Documento "Modelo e processos" na versão v17.
 * Conferido no ar: raiz, `/parceiros`, `/comunidade`, `/comunidade/termo` e `/entrar` em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão; o formulário único abre com as três etapas; a função recusa CNPJ inválido sem gravar nada. Nenhum cadastro de teste foi criado no banco real.
+
+## Publicação de 26/11/2026 (Ver como)
+
+* Migração `20261126000036` (`tipo_acesso` e `contas_para_ver_como`, só para administrador e gerente) aplicada e registrada.
+* Função `ver-como` publicada (com verificação de JWT): confere quem pede, gera o código de entrada de uso único e registra o uso no histórico. Sem login, responde "Não autenticado".
+* Site publicado: Programa, Ver como; aba `/ver-como` com a sessão só nela e a faixa de aviso.
+* Documento "Modelo e processos" na versão v18.
+* Conferido no ar: `/ver-como` sem código mostra o aviso de link usado ou incompleto, sem erro, em 375 e 1440 px. A abertura de uma conta real não foi testada daqui (precisa do login de administrador).
