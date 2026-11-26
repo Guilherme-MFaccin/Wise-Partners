@@ -25,12 +25,12 @@
     --secondary: 240 6% 91%;          /* #e8e8ed */
     --secondary-foreground: 240 3% 12%;
     --muted: 240 6% 94%;
-    --muted-foreground: 240 2% 44%;   /* #6e6e73, 4,6:1 sobre branco */
+    --muted-foreground: 240 2% 39%;   /* #626266, 4,5:1 ou mais também sobre os véus cinza */
     --accent: 240 6% 91%;
     --accent-foreground: 240 3% 12%;
-    --destructive: 4 72% 46%;         /* #ca2c20, 5,2:1 */
+    --destructive: 4 72% 42%;         /* #b8281d */
     --destructive-foreground: 0 0% 100%;
-    --warning: 30 92% 34%;            /* #a75a07, 5,1:1 */
+    --warning: 32 100% 27%;           /* #8a4b00, 4,5:1 ou mais sobre o fundo do selo */
     --border: 240 3% 12% / 0.1;
     --input: 240 3% 12% / 0.42;       /* borda de campo com 3:1 sobre branco */
     --ring: 158 100% 28%;             /* menta escuro #00905e para o foco ter 3:1 */
@@ -39,7 +39,7 @@
     /* Cores fixas que acompanham o tema (canais RGB) */
     --tinta: 29 29 31;                /* "white" do código: texto forte e véus */
     --n-100: 58 58 60;                /* texto forte alternativo */
-    --n-300: 110 110 115;             /* texto secundário */
+    --n-300: 98 98 102;               /* texto secundário */
     --n-500: 134 134 139;             /* terciário e desabilitado */
     --n-700: 210 210 215;
     --n-800: 232 232 237;
@@ -47,9 +47,9 @@
     --m-200: 0 107 67;                /* menta para texto, com 4,5:1 ou mais sobre branco */
     --m-300: 0 115 72;
     --m-400: 0 122 77;
-    --r-200: 168 30 22;
-    --r-300: 190 36 28;
-    --s-300: 3 105 161;
+    --r-200: 150 25 18;
+    --r-300: 168 30 22;
+    --s-300: 2 88 138;
     --v-200: 109 40 217;
     --v-300: 124 58 237;
 

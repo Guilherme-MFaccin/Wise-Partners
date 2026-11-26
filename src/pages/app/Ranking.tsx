@@ -73,7 +73,7 @@ function TelaRanking({ podeEditar }: { podeEditar: boolean }) {
     <div>
       <Cabecalho titulo="Ranking e faixas" descricao="Quem se destaca no ano? Pontuação dos parceiros comerciais assinados, faixas internas de atendimento e premiação anual. É reconhecimento, sem meta." />
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
         {/* Ranking */}
         <section className={cn(CLASSE_CARD, "p-4 sm:p-5")}>
           <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">

@@ -70,3 +70,16 @@ export function SincronizarTema() {
   }, []);
   return null;
 }
+
+// O tema que está valendo agora (para bibliotecas que pedem "light" ou "dark", como os avisos)
+export function useTemaAtual(): "light" | "dark" {
+  return useSyncExternalStore(
+    (f) => {
+      const obs = new MutationObserver(f);
+      obs.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
+      return () => obs.disconnect();
+    },
+    () => (document.documentElement.classList.contains("dark") ? "dark" : "light"),
+    () => "dark" as const,
+  );
+}

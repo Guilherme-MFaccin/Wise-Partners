@@ -218,7 +218,7 @@ export function CartaoDepoimento({ d, aoAssistir }: { d: Depoimento; aoAssistir:
         <span className="absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-black shadow-lg sm:h-14 sm:w-14" aria-hidden>
           <Play className="ml-0.5 h-5 w-5 fill-current sm:h-6 sm:w-6" />
         </span>
-        <span className="absolute bottom-2 left-2 hidden text-xs font-semibold text-white sm:block" aria-hidden>Assistir ao depoimento</span>
+        <span className="absolute bottom-2 left-2 hidden text-xs font-semibold text-puro sm:block" aria-hidden>Assistir ao depoimento</span>
       </button>
       <div className="min-w-0 sm:mt-5 sm:flex sm:flex-1 sm:flex-col">
         <h3 className="font-semibold">{d.empresa}</h3>

@@ -1,4 +1,6 @@
 import { useEffect, useMemo } from "react";
+import { cn } from "@/lib/utils";
+import { useRolou } from "@/hooks/useRolou";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { BadgePercent, CheckCircle2, HeartHandshake, Repeat, Send, Sparkles, Store } from "lucide-react";
@@ -98,6 +100,7 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
 }
 
 export default function LandingParceiros() {
+  const rolou = useRolou();
   const origem = useMemo(() => capturarOrigem(), []);
   useCabecalhoPagina("Wise Partners | Ecossistema de negócios do Grupo Tríade");
 
@@ -141,7 +144,7 @@ export default function LandingParceiros() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-background text-foreground">
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-background/90 backdrop-blur">
+      <header className={cn("material-barra sticky top-0 z-20 border-b transition-colors duration-200", rolou ? "borda-material" : "border-transparent")}>
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <span className="flex min-w-0 items-center gap-3">
             <Logo className="h-7 shrink-0" />

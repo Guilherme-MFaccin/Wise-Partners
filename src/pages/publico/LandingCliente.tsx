@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { cn } from "@/lib/utils";
+import { useRolou } from "@/hooks/useRolou";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { CalendarCheck, Check, CheckCircle2, ClipboardList, ExternalLink, Loader2, Map as MapaIcone, Sparkles, X } from "lucide-react";
@@ -111,6 +113,7 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
 type Etapa = { tipo: "form" } | { tipo: "agenda"; url: string | null } | { tipo: "diagnostico"; id: string; chave: string; email: string };
 
 export default function LandingCliente() {
+  const rolou = useRolou();
   const { codigo = "" } = useParams();
   const origem = useMemo(() => capturarOrigem(), []);
   const [f, setF] = useState(VAZIO);
@@ -199,7 +202,7 @@ export default function LandingCliente() {
 
   return (
     <div className="min-h-screen overflow-x-clip bg-background text-foreground">
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-background/90 backdrop-blur">
+      <header className={cn("material-barra sticky top-0 z-20 border-b transition-colors duration-200", rolou ? "borda-material" : "border-transparent")}>
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <Logo className="h-7 shrink-0" />
           <Button size="sm" onClick={irParaCadastro} className="hidden sm:inline-flex">{botao}</Button>

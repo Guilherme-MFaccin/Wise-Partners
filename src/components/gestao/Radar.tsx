@@ -35,18 +35,18 @@ export function Radar({
       aria-label={`Radar: ${series.map((s) => s.rotulo).join(", ")}`}>
       {/* Anéis da régua */}
       {aneis.map((k) => (
-        <polygon key={k} fill="none" stroke="rgba(255,255,255,0.10)" strokeWidth={1}
+        <polygon key={k} fill="none" stroke="rgb(var(--tinta) / 0.12)" strokeWidth={1}
           points={eixos.map((_, i) => ponto(i, k).join(",")).join(" ")} />
       ))}
       {/* Eixos */}
       {eixos.map((e, i) => {
         const [x, y] = ponto(i, maximo);
-        return <line key={e.chave} x1={0} y1={0} x2={x} y2={y} stroke="rgba(255,255,255,0.12)" strokeWidth={1} />;
+        return <line key={e.chave} x1={0} y1={0} x2={x} y2={y} stroke="rgb(var(--tinta) / 0.14)" strokeWidth={1} />;
       })}
       {/* Valores da régua no primeiro eixo */}
       {aneis.map((k) => {
         const [x, y] = ponto(0, k);
-        return <text key={k} x={x + 4} y={y + 3} fontSize={8} fill="rgba(255,255,255,0.35)">{k}</text>;
+        return <text key={k} x={x + 4} y={y + 3} fontSize={8} fill="rgb(var(--tinta) / 0.5)">{k}</text>;
       })}
       {/* Séries */}
       {series.map((s, si) => {
@@ -70,7 +70,7 @@ export function Radar({
         const valor = series[0]?.valores[e.chave];
         const dy = Math.sin(a) > 0.2 ? 6 : Math.sin(a) < -0.2 ? -((linhas.length - 1) * 11) - 2 : -((linhas.length - 1) * 11) / 2 + 3;
         return (
-          <text key={e.chave} x={x} y={y + dy} textAnchor={ancora} fontSize={10} fill="rgba(255,255,255,0.75)">
+          <text key={e.chave} x={x} y={y + dy} textAnchor={ancora} fontSize={10} fill="rgb(var(--tinta) / 0.8)">
             {linhas.map((l, k) => (
               <tspan key={k} x={x} dy={k === 0 ? 0 : 11}>
                 {l}

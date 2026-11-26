@@ -4,8 +4,8 @@ import { nomeNivel, rotulo, STATUS_ATIVIDADE } from "@/lib/rotulos";
 // Cores dos níveis só em selos e marcações de nível (constituição).
 const CORES_NIVEL: Record<string, string> = {
   A: "bg-nivel-elite text-nivel-dourado border border-nivel-dourado/60",
-  B: "bg-nivel-premium text-white border border-white/20",
-  C: "bg-nivel-select text-white border border-white/20",
+  B: "bg-nivel-premium text-puro border border-puro/20",
+  C: "bg-nivel-select text-puro border border-puro/20",
 };
 
 export function SeloNivel({ tipo, nivel, className }: { tipo?: string | null; nivel?: string | null; className?: string }) {
