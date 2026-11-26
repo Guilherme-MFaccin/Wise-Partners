@@ -11,10 +11,45 @@ import {
 } from "@/components/catalogo/Componentes";
 import { useAcessoHub, useCatalogo, type OfertaCatalogo } from "@/components/catalogo/dados";
 
-// Catálogo de parceiros, a primeira aba das empresas da Comunidade Wise Partners (FO-19 e 23/11/2026).
+// Comunidade Wise Partners: a primeira tela de quem não é parceiro (26/11/2026), como uma página: o que é, os números do
+// catálogo e as ações (publicar ofertas, ver pedidos), e logo abaixo o catálogo inteiro.
 // Oferecem: parceiros Elite e clientes do Grupo Tríade. Usam as condições: clientes do grupo confirmados e parceiros Premium e Elite.
 // As demais empresas veem a vitrine (empresas e ofertas, sem a condição), com o que falta para liberar.
-const PERGUNTA = "Que empresas do ecossistema podem atender a sua, e com que condição especial?";
+const PERGUNTA = "Que empresas do ecossistema podem atender a sua, com que condição especial, e onde a sua empresa aparece?";
+
+// Abertura da Comunidade: o que a empresa faz aqui, os números do catálogo e o próximo passo
+function AberturaComunidade({ ofertas, empresas, categorias, podeOfertar, liberado }: {
+  ofertas: number; empresas: number; categorias: number; podeOfertar: boolean; liberado: boolean;
+}) {
+  const numero = (v: number, rotulo: string) => (
+    <div className="min-w-0">
+      <p className="text-[28px] font-bold leading-none tabular-nums">{v.toLocaleString("pt-BR")}</p>
+      <p className="mt-1 text-xs text-neutro-300">{rotulo}</p>
+    </div>
+  );
+  return (
+    <section aria-labelledby="abertura-comunidade" className="mb-6 grid gap-5 rounded-[14px] border border-white/10 bg-card p-5 sm:p-6 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div className="min-w-0">
+        <h2 id="abertura-comunidade" className="text-lg font-semibold">Faça negócio dentro do ecossistema do Grupo Tríade</h2>
+        <p className="mt-2 max-w-[60ch] text-sm text-neutro-300">
+          {liberado ? "Contrate das empresas da comunidade com condições só para membros" : "Conheça as empresas da comunidade e o que cada uma oferece"}
+          {podeOfertar ? ", e apresente os produtos e serviços da sua empresa para os outros membros." : "."}
+        </p>
+        {podeOfertar && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            <Button asChild size="sm"><Link to="/parceiro/ofertas">Publicar uma oferta</Link></Button>
+            <Button asChild size="sm" variant="outline"><Link to="/parceiro/pedidos">Ver os pedidos</Link></Button>
+          </div>
+        )}
+      </div>
+      <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-4 lg:border-l lg:border-t-0 lg:pl-6 lg:pt-0">
+        {numero(ofertas, ofertas === 1 ? "oferta" : "ofertas")}
+        {numero(empresas, empresas === 1 ? "empresa" : "empresas")}
+        {numero(categorias, categorias === 1 ? "categoria" : "categorias")}
+      </div>
+    </section>
+  );
+}
 
 function EsqueletoCatalogo() {
   return (
@@ -108,7 +143,7 @@ export default function Catalogo() {
   const podeOfertar = !!acesso.data?.ofertar;
 
   const cab = (
-    <Cabecalho titulo="Catálogo de parceiros" descricao={PERGUNTA} />
+    <Cabecalho titulo="Comunidade Wise Partners" descricao={PERGUNTA} />
   );
   if (acesso.isLoading) return <div>{cab}<EsqueletoCatalogo /></div>;
   if (acesso.error) return <div>{cab}<ErroCarga erro={acesso.error} aoTentar={() => acesso.refetch()} /></div>;
@@ -120,6 +155,9 @@ export default function Catalogo() {
     <div>
       {cab}
       <AvisoAcesso aoPedirParceria={() => setParceria(true)} />
+      {cat.isSuccess && (
+        <AberturaComunidade ofertas={lista.length} empresas={todasEmpresas.length} categorias={categorias.length} podeOfertar={podeOfertar} liberado={!!acesso.data?.ver} />
+      )}
 
       <div className="mb-5 space-y-3">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">

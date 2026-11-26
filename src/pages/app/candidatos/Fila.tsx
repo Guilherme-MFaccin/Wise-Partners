@@ -5,7 +5,8 @@ import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando, ErroCarga, Vazio } from "@/components/comum/Estados";
 import { FilaParceiros } from "@/components/config/FilaParceiros";
 
-// P-21 a P-25: quem se cadastrou na página dos parceiros espera contato pelo WhatsApp, conversa de entrada e aprovação.
+// Entrada única (26/11/2026): todo cadastro da página do portal cai aqui. Cliente do grupo e empresa da comunidade: o gerente
+// confere e adiciona (P-106, P-107). Parceiro: WhatsApp, conversa de entrada e aprovação (P-21 a P-25).
 export default function FilaCandidatos() {
   const { isParcerias } = useAuth();
   const cfg = useQuery({
@@ -18,12 +19,12 @@ export default function FilaCandidatos() {
     },
   });
   if (!isParcerias) {
-    return (<div><Cabecalho titulo="Fila de cadastros" /><Vazio titulo="Sem permissão">A fila de candidatos é do time de parcerias e dos administradores.</Vazio></div>);
+    return (<div><Cabecalho titulo="Fila de cadastros" /><Vazio titulo="Sem permissão">A fila de cadastros é do gerente da comunidade, do time de parcerias e dos administradores.</Vazio></div>);
   }
   return (
     <div>
       <Cabecalho titulo="Fila de cadastros"
-        descricao="Quem se cadastrou para ser parceiro e com quem ainda falta falar? Chame no WhatsApp, mande a agenda da conversa de entrada e, depois dela, aprove: o parceiro e o acesso são criados na hora." />
+        descricao="Quem se cadastrou pela página do portal e o que falta para cada empresa entrar? Cliente do grupo e empresa da comunidade: confira e adicione. Parceiro: chame no WhatsApp, faça a conversa de entrada e aprove." />
       {cfg.isLoading ? <Carregando /> : cfg.error ? <ErroCarga erro={cfg.error} /> : <FilaParceiros agendaUrl={cfg.data?.agenda_url ?? null} />}
     </div>
   );

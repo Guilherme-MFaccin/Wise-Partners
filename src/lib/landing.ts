@@ -45,6 +45,10 @@ export type ConfigLanding = {
   ga4_id: string | null;
   termo_versao: string;
   categorias: { id: string; nome: string; grupo?: "comercial" | "institucional" }[];
+  // Entrada única (26/11/2026): empresas do grupo e números do catálogo, para qualquer empresa
+  empresas_grupo?: EmpresaGrupo[];
+  resumo?: ResumoComunidade | null;
+  termo_uso_versao?: string | null;
 } & DadosPagina;
 
 export type TextoLegal = { titulo: string; versao: string; texto: string; contato?: string };

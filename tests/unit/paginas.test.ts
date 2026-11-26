@@ -53,13 +53,12 @@ describe("paginas", () => {
   });
 });
 
-describe("página da comunidade", () => {
-  it("todo bloco tem descrição no editor, nenhum texto tem travessão e o padrão volta igual", async () => {
-    const { BLOCOS_COMUNIDADE, META_COMUNIDADE, PADRAO_COMUNIDADE, compactarConteudo: compactar, montarConteudo: montar, temTravessao: travessao } = await import("@/lib/paginas");
-    expect(META_COMUNIDADE.map((m) => m.chave).sort()).toEqual([...BLOCOS_COMUNIDADE].sort());
-    expect(travessao(PADRAO_COMUNIDADE)).toBe(false);
-    expect(compactar(PADRAO_COMUNIDADE, PADRAO_COMUNIDADE)).toEqual({});
-    expect(montar(PADRAO_COMUNIDADE, { secoes: { grupo: { visivel: false } } }).secoes.grupo.visivel).toBe(false);
+describe("página do portal (entrada única)", () => {
+  it("todo bloco tem descrição no editor, os blocos da comunidade existem e nenhum texto tem travessão", () => {
+    expect(META_PARCEIROS.map((m) => m.chave).sort()).toEqual([...BLOCOS_PARCEIROS].sort());
+    for (const b of ["caminhos", "grupo", "catalogo", "acessos"] as const) expect(PADRAO_PARCEIROS.secoes[b].titulo).not.toBe("");
+    expect(temTravessao(PADRAO_PARCEIROS)).toBe(false);
+    expect(compactarConteudo(PADRAO_PARCEIROS, PADRAO_PARCEIROS)).toEqual({});
   });
 });
 

@@ -128,6 +128,22 @@ export function usePedidos(filtro: { ofertanteId?: string | null; solicitanteId?
   });
 }
 
+// Pedidos recebidos que a empresa ainda não marcou (contador da aba Pedidos)
+export function usePedidosAbertos() {
+  const { perfil } = useAuth();
+  return useQuery({
+    queryKey: ["pedidos-hub", "abertos", perfil?.parceiro_id],
+    enabled: !!perfil?.parceiro_id,
+    staleTime: 60_000,
+    queryFn: async () => {
+      const { count, error } = await supabase.from("pedidos_hub" as any).select("id", { count: "exact", head: true })
+        .eq("ofertante_id", perfil!.parceiro_id!).eq("resultado", "enviado");
+      if (error) throw error;
+      return count ?? 0;
+    },
+  });
+}
+
 export function usePedirCondicao() {
   const qc = useQueryClient();
   return useMutation({

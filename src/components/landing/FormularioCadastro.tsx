@@ -1,10 +1,7 @@
 import { useMemo, useRef, useState, type FormEvent, type ReactNode } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, ArrowRight, CheckCircle2, Eye, EyeOff, Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { Campo } from "@/components/landing/Blocos";
-import { PaginaAviso, useCabecalhoPagina } from "@/components/landing/Secoes";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -12,14 +9,12 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { FAIXAS_FATURAMENTO } from "@/lib/diagnostico";
 import {
-  CABECALHOS, URL_COMUNIDADE, capturarOrigem, carregarComunidade, cnpjValido, mascaraCnpj, mascaraTelefone, somenteDigitos, type ConfigComunidade,
+  CABECALHOS, URL_CADASTRO, capturarOrigem, cnpjValido, idsMeta, mascaraCnpj, mascaraTelefone, registrarCadastro, somenteDigitos, type EmpresaGrupo,
 } from "@/lib/landing";
 import { cn } from "@/lib/utils";
-import { CabecalhoComunidade, RodapeComunidade } from "@/pages/publico/LandingComunidade";
 
-// Cadastro na Comunidade Wise Partners (/comunidade/cadastro), em três etapas. Pergunta que a tela responde:
-// "Quem é a minha empresa, qual é a relação dela com o Grupo Tríade e como eu entro?". Classifica a empresa (cliente
-// do grupo a confirmar, lead de parceiro, lead da consultoria, quem quer oferecer) e abre a conta na hora.
+// Formulário único da página do portal (26/11/2026): qualquer empresa, em três etapas (empresa, relação com o grupo, contato).
+// O cadastro entra na fila e avisa o gerente da comunidade com o perfil declarado; o acesso sai depois que a Wise confere.
 
 const UFS = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
 const INTERESSES = [
@@ -30,12 +25,12 @@ const INTERESSES = [
   { valor: "ser_parceiro", rotulo: "Ser parceiro do programa Wise Partners" },
 ] as const;
 const COMO_CONHECEU = ["Indicação de um cliente ou parceiro", "Consultor ou CS de uma empresa do grupo", "Redes sociais", "Evento", "Busca na internet", "Outro"];
-const ETAPAS = ["Empresa", "Relação", "Acesso"] as const;
+const ETAPAS = ["Empresa", "Relação", "Contato"] as const;
 
 const VAZIO = {
   cnpj: "", empresa: "", site: "", cidade: "", uf: "", segmento: "", faturamento: "", vendedores: "",
   cliente: "" as "" | "sim" | "nao", empresas_grupo: [] as string[], interesses: [] as string[], categoria_id: "", clientes_ativos: "", como_conheceu: "",
-  aceite_termo_parceiro: false, nome: "", cargo: "", email: "", whatsapp: "", senha: "", senha2: "", aceite_uso: false, aceite_privacidade: false,
+  aceite_termo_parceiro: false, nome: "", cargo: "", email: "", whatsapp: "", aceite_uso: false, aceite_privacidade: false,
   website: "",
 };
 type Form = typeof VAZIO;
@@ -68,28 +63,24 @@ function Opcao({ marcado, aoMudar, children, id, invalido, descrito }: {
   );
 }
 
-export default function CadastroComunidade() {
-  const navigate = useNavigate();
+export function FormularioCadastro({ empresasGrupo, categorias, botao, aoEnviado }: {
+  empresasGrupo: EmpresaGrupo[]; categorias: { id: string; nome: string; grupo?: "comercial" | "institucional" }[]; botao?: string;
+  aoEnviado?: (r: { whatsapp: string; perfil: string }) => void;
+}) {
   const origem = useMemo(() => capturarOrigem(), []);
-  useCabecalhoPagina("Cadastro | Comunidade Wise Partners");
-  const { data: cfg, isLoading, isError, refetch } = useQuery<ConfigComunidade>({
-    queryKey: ["landing-comunidade"], queryFn: carregarComunidade, retry: 1, staleTime: 5 * 60_000,
-  });
   const [f, setF] = useState<Form>(VAZIO);
   const [etapa, setEtapa] = useState(0);
   const [tocado, setTocado] = useState<Record<number, boolean>>({});
-  const [verSenha, setVerSenha] = useState(false);
   const [enviando, setEnviando] = useState(false);
   const [falha, setFalha] = useState<string | null>(null);
-  const [pronto, setPronto] = useState<{ entrou: boolean } | null>(null);
+  const [pronto, setPronto] = useState<{ whatsapp: string; perfil: string } | null>(null);
   const topo = useRef<HTMLDivElement>(null);
   const legenda = useRef<HTMLLegendElement>(null);
   const set = <K extends keyof Form>(k: K, v: Form[K]) => setF((x) => ({ ...x, [k]: v }));
   const alternar = (k: "empresas_grupo" | "interesses", v: string, on: boolean) =>
     setF((x) => ({ ...x, [k]: on ? [...new Set([...x[k], v])] : x[k].filter((y) => y !== v) }));
 
-  const grupo = cfg?.empresas_grupo ?? [];
-  const categorias = cfg?.categorias ?? [];
+  const grupo = empresasGrupo;
   const querParceria = f.interesses.includes("ser_parceiro");
   const querOferecer = f.interesses.includes("oferecer");
 
@@ -115,8 +106,6 @@ export default function CadastroComunidade() {
       cargo: !f.cargo.trim() ? "Informe o seu cargo." : "",
       email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim()) ? "Informe um e-mail válido." : "",
       whatsapp: somenteDigitos(f.whatsapp).length < 10 ? "Informe o WhatsApp com DDD." : "",
-      senha: f.senha.length < 8 || !/[A-Za-z]/.test(f.senha) || !/\d/.test(f.senha) ? "Use 8 caracteres ou mais, com letras e números." : "",
-      senha2: f.senha2 !== f.senha ? "As duas senhas precisam ser iguais." : "",
       aceites: !(f.aceite_uso && f.aceite_privacidade) ? "Marque as duas caixas para continuar." : "",
     },
   };
@@ -148,17 +137,18 @@ export default function CadastroComunidade() {
     if (enviando) return;
     setEnviando(true);
     const email = f.email.trim().toLowerCase();
+    const eventId = crypto.randomUUID();
     try {
-      const r = await fetch(URL_COMUNIDADE, {
+      const r = await fetch(URL_CADASTRO, {
         method: "POST",
         headers: { ...CABECALHOS, "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...origem, website: f.website,
+          ...origem, ...idsMeta(origem), event_id: eventId, pagina: window.location.href, website: f.website,
           cnpj: somenteDigitos(f.cnpj), empresa: f.empresa.trim(), site: f.site.trim(), cidade: f.cidade.trim(), uf: f.uf, segmento: f.segmento.trim(),
           faturamento: f.faturamento, vendedores: f.vendedores, cliente_grupo: f.cliente === "sim", empresas_grupo: f.cliente === "sim" ? f.empresas_grupo : [],
           interesses: f.interesses, categoria_id: f.categoria_id, clientes_ativos: querParceria ? f.clientes_ativos : "", como_conheceu: f.como_conheceu,
-          aceite_termo_parceiro: querParceria && f.aceite_termo_parceiro,
-          nome: f.nome.trim(), cargo: f.cargo.trim(), email, whatsapp: f.whatsapp, senha: f.senha, aceite_uso: f.aceite_uso, aceite_privacidade: f.aceite_privacidade,
+          aceite_termo: querParceria && f.aceite_termo_parceiro,
+          nome: f.nome.trim(), cargo: f.cargo.trim(), email, whatsapp: f.whatsapp, aceite_uso: f.aceite_uso, aceite_privacidade: f.aceite_privacidade,
         }),
       });
       const d = await r.json().catch(() => ({}));
@@ -166,12 +156,10 @@ export default function CadastroComunidade() {
         setFalha(d?.erro ?? "Não foi possível concluir o cadastro. Tente de novo.");
         return;
       }
-      const { error } = await supabase.auth.signInWithPassword({ email, password: f.senha });
-      if (!error) {
-        navigate("/parceiro", { replace: true });
-        return;
-      }
-      setPronto({ entrou: false });
+      registrarCadastro(eventId);
+      const fim = { whatsapp: f.whatsapp, perfil: d?.perfil ?? "parceiro" };
+      setPronto(fim);
+      aoEnviado?.(fim);
     } catch {
       setFalha("Sem conexão com o servidor. Confira a internet e tente de novo.");
     } finally {
@@ -179,53 +167,29 @@ export default function CadastroComunidade() {
     }
   }
 
-  if (isLoading && !cfg) {
-    return (
-      <div className="min-h-screen bg-background text-foreground">
-        <CabecalhoComunidade acao={<span />} />
-        <div className="mx-auto max-w-2xl space-y-4 px-4 py-10 motion-safe:animate-pulse sm:px-6" aria-busy="true" aria-label="Carregando o cadastro">
-          <div className="h-8 w-2/3 rounded bg-white/10" />
-          <div className="h-2 w-full rounded bg-white/5" />
-          {Array.from({ length: 5 }).map((_, i) => <div key={i} className="h-11 w-full rounded-[10px] bg-white/5" />)}
-        </div>
-      </div>
-    );
-  }
-  if (cfg && !cfg.publicada) {
-    return <PaginaAviso titulo="O cadastro na comunidade está fechado no momento." texto="Quem já tem acesso continua entrando normalmente."
-      acao={<Button asChild variant="outline"><Link to="/entrar">Entrar no portal</Link></Button>} />;
-  }
   if (pronto) {
     return (
-      <PaginaAviso titulo="Cadastro feito. Sua conta está pronta." texto="Entre com o e-mail e a senha que você acabou de criar."
-        acao={<Button asChild><Link to="/entrar">Entrar no portal</Link></Button>} />
+      <div className="space-y-3 text-sm" role="status">
+        <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
+        <p className="text-neutro-100">
+          A equipe da Wise confere o cadastro e fala com você pelo WhatsApp {pronto.whatsapp} em até 24 horas úteis.
+          {pronto.perfil === "cliente_grupo" ? " Confirmado o vínculo com o grupo, o acesso chega pelo mesmo WhatsApp."
+            : pronto.perfil === "parceiro" ? " Para ser parceiro, antes vem uma conversa de entrada de 45 minutos." : " Depois da conferência, o acesso chega pelo mesmo WhatsApp."}
+        </p>
+      </div>
     );
   }
 
   const destinos = [
-    f.cliente === "sim" && "A Wise confirma que a sua empresa é cliente do grupo em até 2 dias úteis. Até lá, você vê as empresas e as ofertas, sem as condições.",
+    f.cliente === "sim" && "A Wise confirma que a sua empresa é cliente do grupo e manda o acesso pelo WhatsApp. A primeira tela é a Comunidade, com as condições especiais.",
     querParceria && "A equipe da Wise fala com você pelo WhatsApp para marcar a conversa de entrada no programa de parceiros.",
     f.interesses.includes("conhecer_consultoria") && "Um especialista da Wise Makers fala com você sobre a consultoria para a sua empresa.",
-    f.cliente === "nao" && !querParceria && "Você vê quem está na comunidade e o que cada empresa oferece desde o primeiro acesso.",
+    f.cliente === "nao" && !querParceria && "A Wise confere o cadastro e manda o acesso pelo WhatsApp. Você vê quem está na comunidade e o que cada empresa oferece.",
   ].filter(Boolean) as string[];
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
-      <CabecalhoComunidade acao={<Button asChild variant="ghost" size="sm"><Link to="/entrar">Já tenho acesso</Link></Button>} />
-      <main className="mx-auto w-full max-w-2xl px-4 pb-16 pt-8 sm:px-6 sm:pt-12">
-        <div ref={topo} className="scroll-mt-24">
-          <Link to="/comunidade" className="inline-flex items-center gap-1 text-sm text-neutro-300 hover:text-white"><ArrowLeft className="h-4 w-4" aria-hidden />Voltar para a comunidade</Link>
-          <h1 className="mt-4 text-balance font-display text-[28px] font-extrabold leading-tight sm:text-[36px]">Cadastre a sua empresa na Comunidade Wise Partners</h1>
-          <p className="mt-3 text-neutro-300">Uns 3 minutos. No fim, você cria a senha e entra no portal.</p>
-          <div className="mt-6"><Etapas atual={etapa} /></div>
-        </div>
-        {isError && (
-          <p className="mt-6 flex flex-wrap items-center gap-2 rounded-[10px] border border-white/10 bg-white/5 px-3 py-2 text-sm">
-            Não carregamos a lista de empresas do grupo e de categorias.
-            <Button size="sm" variant="outline" onClick={() => refetch()}>Tentar de novo</Button>
-          </p>
-        )}
-
+    <div ref={topo} className="scroll-mt-24">
+      <Etapas atual={etapa} />
         <form id="form-comunidade" onSubmit={enviar} noValidate className="mt-8 space-y-5">
           <input type="text" name="website" value={f.website} onChange={(e) => set("website", e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
 
@@ -355,7 +319,7 @@ export default function CadastroComunidade() {
 
           {etapa === 2 && (
             <fieldset className="space-y-5">
-              <legend ref={legenda} tabIndex={-1} className="text-lg font-semibold focus:outline-none">Seu acesso</legend>
+              <legend ref={legenda} tabIndex={-1} className="text-lg font-semibold focus:outline-none">Seu contato</legend>
               <div className="grid gap-5 sm:grid-cols-2">
                 <Campo id="nome" rotulo="Seu nome" erro={erro(2, "nome")}>
                   <Input id="nome" autoComplete="name" value={f.nome} onChange={(e) => set("nome", e.target.value)} aria-invalid={!!erro(2, "nome")} aria-describedby={erro(2, "nome") ? "nome-erro" : undefined} />
@@ -368,18 +332,6 @@ export default function CadastroComunidade() {
                 </Campo>
                 <Campo id="whatsapp" rotulo="WhatsApp" erro={erro(2, "whatsapp")}>
                   <Input id="whatsapp" type="tel" autoComplete="tel" value={f.whatsapp} onChange={(e) => set("whatsapp", mascaraTelefone(e.target.value))} aria-invalid={!!erro(2, "whatsapp")} aria-describedby={erro(2, "whatsapp") ? "whatsapp-erro" : undefined} />
-                </Campo>
-                <Campo id="senha" rotulo="Crie uma senha" erro={erro(2, "senha")}>
-                  <div className="relative">
-                    <Input id="senha" type={verSenha ? "text" : "password"} autoComplete="new-password" value={f.senha} onChange={(e) => set("senha", e.target.value)} className="pr-11"
-                      aria-invalid={!!erro(2, "senha")} aria-describedby={erro(2, "senha") ? "senha-erro" : "senha-ajuda"} />
-                    <button type="button" onClick={() => setVerSenha((v) => !v)} className="absolute right-1 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-[8px] text-neutro-300 hover:text-white"
-                      aria-label={verSenha ? "Esconder a senha" : "Mostrar a senha"}>{verSenha ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}</button>
-                  </div>
-                  {!erro(2, "senha") && <p id="senha-ajuda" className="text-xs text-neutro-300">8 caracteres ou mais, com letras e números.</p>}
-                </Campo>
-                <Campo id="senha2" rotulo="Repita a senha" erro={erro(2, "senha2")}>
-                  <Input id="senha2" type={verSenha ? "text" : "password"} autoComplete="new-password" value={f.senha2} onChange={(e) => set("senha2", e.target.value)} aria-invalid={!!erro(2, "senha2")} aria-describedby={erro(2, "senha2") ? "senha2-erro" : undefined} />
                 </Campo>
               </div>
               {destinos.length > 0 && (
@@ -409,13 +361,11 @@ export default function CadastroComunidade() {
           <div className="flex flex-col-reverse gap-3 border-t border-white/10 pt-5 sm:flex-row sm:justify-between">
             {etapa > 0 ? <Button type="button" variant="ghost" onClick={() => irPara(etapa - 1)} disabled={enviando}><ArrowLeft className="mr-1.5 h-4 w-4" aria-hidden />Voltar</Button> : <span />}
             <Button type="submit" size="lg" className="h-12 px-6" disabled={enviando}>
-              {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Criando o acesso...</>
-                : etapa < 2 ? <>Continuar<ArrowRight className="ml-1.5 h-4 w-4" aria-hidden /></> : "Criar acesso e entrar"}
+              {enviando ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Enviando...</>
+                : etapa < 2 ? <>Continuar<ArrowRight className="ml-1.5 h-4 w-4" aria-hidden /></> : (botao || "Enviar cadastro")}
             </Button>
           </div>
         </form>
-      </main>
-      <RodapeComunidade />
     </div>
   );
 }

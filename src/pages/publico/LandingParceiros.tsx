@@ -1,27 +1,22 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { BadgePercent, CheckCircle2, HeartHandshake, Loader2, Repeat, Sparkles } from "lucide-react";
+import { BadgePercent, CheckCircle2, HeartHandshake, Repeat, Send, Sparkles, Store } from "lucide-react";
+import { CartaoEmpresaGrupo, NumerosCatalogo, QuadroAcessos } from "@/components/landing/Comunidade";
+import { FormularioCadastro } from "@/components/landing/FormularioCadastro";
 import { Logo } from "@/components/comum/Logo";
 import { SeloNivel } from "@/components/comum/Selos";
-import { Campo, FaixaEvento, FaixaLogos, QuadroCases, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
-import {
-  BarraFixa, EsqueletoPagina, Faixa, Garantias, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina,
-} from "@/components/landing/Secoes";
+import { FaixaEvento, FaixaLogos, QuadroCases, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
+import { BarraFixa, EsqueletoPagina, Faixa, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina } from "@/components/landing/Secoes";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import {
-  CABECALHOS, URL_CADASTRO, capturarOrigem, carregarConfig, cnpjValido, idsMeta, iniciarMedicao, mascaraCnpj, mascaraTelefone,
-  registrarCadastro, somenteDigitos, type ConfigLanding,
-} from "@/lib/landing";
-import { PADRAO_PARCEIROS, montarConteudo, reais, resolverDados } from "@/lib/paginas";
+import { capturarOrigem, carregarConfig, iniciarMedicao, type ConfigLanding } from "@/lib/landing";
+import { PADRAO_PARCEIROS, montarConteudo, resolverDados } from "@/lib/paginas";
 
-// Página única dos parceiros (/parceiros): empresas que vendem para empresas, de qualquer categoria e tamanho.
-// Pergunta que a página responde: "Por que oferecer a consultoria da Wise à minha base, e como eu entro?"
+// Página do portal Wise Partners (/parceiros), a entrada única de qualquer empresa (26/11/2026): clientes do Grupo Tríade,
+// quem quer ser parceiro e quem quer conhecer o ecossistema. Pergunta que a página responde: "O que a minha empresa ganha no
+// Wise Partners, e como eu entro?"
 // Textos, seções, perguntas, valores e cases vêm do portal (Programa, Páginas); o padrão está em src/lib/paginas.ts.
-// Entrada pessoal: cadastro na fila, conversa pelo WhatsApp e conversa de entrada de 45 minutos.
+// Um cadastro só: entra na fila, a Wise confere e libera o acesso (parceiro, depois da conversa de entrada de 45 minutos).
 
 // Última configuração recebida, guardada no navegador (só o que a página pública já mostra)
 const CHAVE_CFG = "wp_cfg_landing";
@@ -42,11 +37,6 @@ async function carregarConfigGuardando(): Promise<ConfigLanding> {
   }
   return cfg;
 }
-
-const VAZIO = {
-  nome: "", cargo: "", email: "", whatsapp: "", empresa: "", cnpj: "", site: "", categoria_id: "", clientes_ativos: "",
-  aceite_termo: false, aceite_privacidade: false, website: "",
-};
 
 const ICONES_BENEFICIO = [Repeat, Sparkles, BadgePercent];
 // Selo do nível quando o título do item é o nome do nível
@@ -102,14 +92,7 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
 
 export default function LandingParceiros() {
   const origem = useMemo(() => capturarOrigem(), []);
-  const [f, setF] = useState(VAZIO);
-  const [tocado, setTocado] = useState(false);
-  const [enviando, setEnviando] = useState(false);
-  const [falha, setFalha] = useState<string | null>(null);
-  const [naFila, setNaFila] = useState<string | null>(null);
-  const set = (k: keyof typeof VAZIO, v: string | boolean) => setF((x) => ({ ...x, [k]: v }));
-
-  useCabecalhoPagina("Wise Partners | Programa de parceria da Wise Makers");
+  useCabecalhoPagina("Wise Partners | Ecossistema de negócios do Grupo Tríade");
 
   const { data: cfg, isLoading, isError, refetch } = useQuery<ConfigLanding>({
     queryKey: ["landing-parceiros"], queryFn: carregarConfigGuardando, retry: 1, staleTime: 5 * 60_000,
@@ -131,82 +114,36 @@ export default function LandingParceiros() {
 
   const perguntas = conteudo.perguntas;
 
-  const categorias = cfg?.categorias ?? [];
-  const grupos = [
-    { rotulo: "Empresas", itens: categorias.filter((c) => c.grupo !== "institucional") },
-    { rotulo: "Entidades e instituições", itens: categorias.filter((c) => c.grupo === "institucional") },
-  ].filter((g) => g.itens.length);
-
-  const erros = {
-    nome: !f.nome.trim() ? "Informe o seu nome." : "",
-    cargo: !f.cargo.trim() ? "Informe o seu cargo." : "",
-    email: !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.trim()) ? "Informe um e-mail válido." : "",
-    whatsapp: somenteDigitos(f.whatsapp).length < 10 ? "Informe o WhatsApp com DDD." : "",
-    empresa: !f.empresa.trim() ? "Informe o nome da empresa." : "",
-    cnpj: !cnpjValido(f.cnpj) ? "Informe um CNPJ válido." : "",
-    categoria_id: !f.categoria_id ? "Escolha a categoria da sua empresa." : "",
-    clientes_ativos: !/^\d{1,7}$/.test(f.clientes_ativos) ? "Informe um número aproximado." : "",
-    aceites: !(f.aceite_termo && f.aceite_privacidade) ? "Marque as duas caixas pra continuar." : "",
-  };
-  const valido = Object.values(erros).every((e) => !e);
-  const mostra = (k: keyof typeof erros) => (tocado ? erros[k] : "");
-  const irParaCadastro = () => formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-
-  async function enviar(e: FormEvent) {
-    e.preventDefault();
-    setTocado(true);
-    setFalha(null);
-    if (!valido) {
-      // Leva quem enviou ao primeiro campo com erro (o aviso aparece embaixo dele)
-      setTimeout(() => (document.querySelector<HTMLElement>('#cadastro [aria-invalid="true"]'))?.focus(), 0);
-      return;
-    }
-    if (enviando) return;
-    setEnviando(true);
-    const eventId = crypto.randomUUID();
-    const email = f.email.trim().toLowerCase();
-    try {
-      const r = await fetch(URL_CADASTRO, {
-        method: "POST",
-        headers: { ...CABECALHOS, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...f, email, cnpj: somenteDigitos(f.cnpj), ...origem, ...idsMeta(origem), event_id: eventId, pagina: window.location.href,
-        }),
-      });
-      const d = await r.json().catch(() => ({}));
-      if (!r.ok) {
-        setFalha(d?.erro ?? "Não foi possível concluir o cadastro. Tente de novo.");
-        return;
-      }
-      registrarCadastro(eventId);
-      setNaFila(f.whatsapp);
-    } catch {
-      setFalha("Sem conexão com o servidor. Confira a internet e tente de novo.");
-    } finally {
-      setEnviando(false);
-    }
-  }
+  const irParaCadastro = () => formRef.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  // Quem chega de /comunidade/cadastro ou de um link com #cadastro vai direto ao formulário
+  useEffect(() => {
+    if (!carregandoTudo && window.location.hash === "#cadastro") setTimeout(() => formRef.current?.scrollIntoView({ block: "start" }), 50);
+  }, [carregandoTudo, formRef]);
 
   if (carregandoTudo) return <EsqueletoPagina />;
   if (foraDoAr) {
     return (
-      <PaginaAviso titulo="O cadastro de parceiros está fora do ar no momento."
+      <PaginaAviso titulo="O cadastro no Wise Partners está fora do ar no momento."
         texto="Volte em breve ou fale com a Wise Makers pelo e-mail contato@wisemakers.com.br."
-        acao={<Button asChild variant="outline"><Link to="/entrar">Já sou parceiro</Link></Button>} />
+        acao={<Button asChild variant="outline"><Link to="/entrar">Entrar no portal</Link></Button>} />
     );
   }
 
-  const fixoTexto = s.topo.botao || "Quero ser parceiro";
+  const fixoTexto = s.topo.botao || "Cadastrar minha empresa";
+  const grupo = cfg?.empresas_grupo ?? [];
 
   return (
     <div className="min-h-screen overflow-x-clip bg-background text-foreground">
       <header className="sticky top-0 z-20 border-b border-white/10 bg-background/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-          <Logo className="h-7" />
-          <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm"><Link to="/entrar">Já sou parceiro</Link></Button>
-            <Button size="sm" onClick={irParaCadastro} className="hidden sm:inline-flex">{fixoTexto}</Button>
-          </div>
+          <span className="flex min-w-0 items-center gap-3">
+            <Logo className="h-7 shrink-0" />
+            <span className="hidden border-l border-white/15 pl-3 text-sm font-semibold sm:inline">Wise Partners</span>
+          </span>
+          <nav className="flex items-center gap-2" aria-label="Acesso">
+            <Button asChild variant="ghost" size="sm"><Link to="/entrar">Entrar</Link></Button>
+            <Button size="sm" onClick={irParaCadastro}>Cadastrar</Button>
+          </nav>
         </div>
       </header>
 
@@ -216,6 +153,31 @@ export default function LandingParceiros() {
           video={<Video url={cfg?.video_url ?? null} formato={cfg?.video_formato} carregando={!cfg && !isError} />} />
 
         {s.logos.visivel && <FaixaLogos titulo={s.logos.titulo} />}
+
+        {s.caminhos.visivel && (
+          <Secao eyebrow={s.caminhos.eyebrow} titulo={s.caminhos.titulo}>
+            <ul className="grid gap-4 md:grid-cols-2">
+              {s.caminhos.itens.map((x, i) => {
+                const Icone = i === 0 ? Store : Send;
+                return (
+                  <li key={`${i}-${x.titulo}`} className="min-w-0 rounded-[14px] border border-white/10 bg-card p-6">
+                    <Icone className="h-6 w-6 text-menta-400" aria-hidden />
+                    <p className="mt-3 break-words text-[22px] font-semibold leading-snug">{x.titulo}</p>
+                    {x.texto && <p className="mt-2 text-neutro-100">{x.texto}</p>}
+                  </li>
+                );
+              })}
+            </ul>
+          </Secao>
+        )}
+
+        {s.grupo.visivel && grupo.length > 0 && (
+          <Faixa>
+            <Secao eyebrow={s.grupo.eyebrow} titulo={s.grupo.titulo} texto={s.grupo.texto}>
+              <ul className="grid gap-4 md:grid-cols-3">{grupo.map((e) => <CartaoEmpresaGrupo key={e.id} e={e} />)}</ul>
+            </Secao>
+          </Faixa>
+        )}
 
         {s.para_quem.visivel && (
           <Faixa>
@@ -235,6 +197,20 @@ export default function LandingParceiros() {
         {s.como_funciona.visivel && (
           <Secao eyebrow={s.como_funciona.eyebrow} titulo={s.como_funciona.titulo}>
             <PassosNumerados itens={s.como_funciona.itens} />
+          </Secao>
+        )}
+
+        {s.catalogo.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.catalogo.eyebrow} titulo={s.catalogo.titulo} texto={s.catalogo.texto}>
+              <NumerosCatalogo resumo={cfg?.resumo} nota={s.catalogo.nota} />
+            </Secao>
+          </Faixa>
+        )}
+
+        {s.acessos.visivel && (
+          <Secao eyebrow={s.acessos.eyebrow} titulo={s.acessos.titulo} texto={s.acessos.texto}>
+            <QuadroAcessos />
           </Secao>
         )}
 
@@ -343,7 +319,7 @@ export default function LandingParceiros() {
             <p className="mt-4 max-w-[62ch] text-neutro-100">{s.cadastro.texto}</p>
             <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
               <ul className="space-y-3 text-sm text-neutro-100 lg:pt-2">
-                {s.incluido.itens_parceiro.slice(0, 6).map((t, i) => (
+                {s.cadastro.itens.map((t, i) => (
                   <li key={`${i}-${t.titulo}`} className="flex items-start gap-2"><CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" aria-hidden />{t.titulo}</li>
                 ))}
               </ul>
@@ -354,98 +330,21 @@ export default function LandingParceiros() {
                     <p className="text-neutro-300">Pode ser a conexão. Tente de novo em instantes.</p>
                     <Button variant="outline" onClick={() => refetch()}>Tentar de novo</Button>
                   </div>
-                ) : naFila ? (
-                  <div className="space-y-3 text-sm" role="status">
-                    <p className="flex items-center gap-2 text-base font-semibold"><CheckCircle2 className="h-5 w-5 text-menta-400" aria-hidden />Cadastro recebido.</p>
-                    <p className="text-neutro-100">A equipe da Wise vai falar com você pelo WhatsApp {naFila} em até 24 horas úteis para marcar a conversa de entrada de 45 minutos. Fique de olho nas mensagens.</p>
-                    <p className="text-neutro-300">Depois dessa conversa, você recebe o acesso ao portal com o seu link exclusivo.</p>
-                  </div>
                 ) : (
-                  <form onSubmit={enviar} noValidate className="space-y-4">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <Campo id="nome" rotulo="Seu nome" erro={mostra("nome")}>
-                        <Input className="border-white/40" id="nome" autoComplete="name" value={f.nome} onChange={(e) => set("nome", e.target.value)} aria-invalid={!!mostra("nome")} aria-describedby={mostra("nome") ? "nome-erro" : undefined} />
-                      </Campo>
-                      <Campo id="cargo" rotulo="Cargo" erro={mostra("cargo")}>
-                        <Input className="border-white/40" id="cargo" autoComplete="organization-title" value={f.cargo} onChange={(e) => set("cargo", e.target.value)} aria-invalid={!!mostra("cargo")} aria-describedby={mostra("cargo") ? "cargo-erro" : undefined} />
-                      </Campo>
-                      <Campo id="email" rotulo="E-mail de trabalho" erro={mostra("email")}>
-                        <Input className="border-white/40" id="email" type="email" inputMode="email" autoComplete="email" value={f.email} onChange={(e) => set("email", e.target.value)} aria-invalid={!!mostra("email")} aria-describedby={mostra("email") ? "email-erro" : undefined} />
-                      </Campo>
-                      <Campo id="whatsapp" rotulo="WhatsApp" erro={mostra("whatsapp")}>
-                        <Input className="border-white/40" id="whatsapp" type="tel" inputMode="tel" autoComplete="tel" placeholder="(44) 99999-0000" value={f.whatsapp}
-                          onChange={(e) => set("whatsapp", mascaraTelefone(e.target.value))} aria-invalid={!!mostra("whatsapp")} aria-describedby={mostra("whatsapp") ? "whatsapp-erro" : undefined} />
-                      </Campo>
-                      <Campo id="empresa" rotulo="Empresa ou entidade" erro={mostra("empresa")}>
-                        <Input className="border-white/40" id="empresa" autoComplete="organization" value={f.empresa} onChange={(e) => set("empresa", e.target.value)} aria-invalid={!!mostra("empresa")} aria-describedby={mostra("empresa") ? "empresa-erro" : undefined} />
-                      </Campo>
-                      <Campo id="cnpj" rotulo="CNPJ" erro={mostra("cnpj")}>
-                        <Input className="border-white/40" id="cnpj" inputMode="numeric" placeholder="00.000.000/0000-00" value={f.cnpj}
-                          onChange={(e) => set("cnpj", mascaraCnpj(e.target.value))} aria-invalid={!!mostra("cnpj")} aria-describedby={mostra("cnpj") ? "cnpj-erro" : undefined} />
-                      </Campo>
-                      <Campo id="categoria" rotulo="Categoria" erro={mostra("categoria_id")}>
-                        <Select value={f.categoria_id} onValueChange={(v) => set("categoria_id", v)}>
-                          <SelectTrigger id="categoria" className="border-white/40" aria-invalid={!!mostra("categoria_id")} aria-describedby={mostra("categoria_id") ? "categoria-erro" : undefined}><SelectValue placeholder="Escolha" /></SelectTrigger>
-                          <SelectContent>
-                            {grupos.map((g) => (
-                              <SelectGroup key={g.rotulo}>
-                                <SelectLabel>{g.rotulo}</SelectLabel>
-                                {g.itens.map((c) => <SelectItem key={c.id} value={c.id}>{c.nome}</SelectItem>)}
-                              </SelectGroup>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                      </Campo>
-                      <Campo id="clientes" rotulo="Clientes ou associados ativos" erro={mostra("clientes_ativos")}>
-                        <Input className="border-white/40" id="clientes" inputMode="numeric" placeholder="Ex.: 150" value={f.clientes_ativos}
-                          onChange={(e) => set("clientes_ativos", somenteDigitos(e.target.value).slice(0, 7))} aria-invalid={!!mostra("clientes_ativos")} aria-describedby={mostra("clientes_ativos") ? "clientes-erro" : undefined} />
-                      </Campo>
-                      <Campo id="site" rotulo="Site" opcional>
-                        <Input className="border-white/40" id="site" inputMode="url" autoComplete="url" placeholder="suaempresa.com.br" value={f.site} onChange={(e) => set("site", e.target.value)} />
-                      </Campo>
-                    </div>
-
-                    {/* Campo oculto contra robôs */}
-                    <div className="hidden" aria-hidden>
-                      <label htmlFor="website">Site</label>
-                      <input id="website" tabIndex={-1} autoComplete="off" value={f.website} onChange={(e) => set("website", e.target.value)} />
-                    </div>
-
-                    <div className="space-y-3 border-t border-white/10 pt-4 text-sm">
-                      <label className="flex items-start gap-3">
-                        <Checkbox checked={f.aceite_termo} onCheckedChange={(v) => set("aceite_termo", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
-                          aria-invalid={!!mostra("aceites") && !f.aceite_termo} aria-describedby={mostra("aceites") ? "aceites-erro" : undefined} />
-                        <span>Li e aceito o <Link to="/parceiros/termo" target="_blank" className="text-menta-300 underline underline-offset-2">termo de adesão ao programa</Link>.</span>
-                      </label>
-                      <label className="flex items-start gap-3">
-                        <Checkbox checked={f.aceite_privacidade} onCheckedChange={(v) => set("aceite_privacidade", v === true)} className="mt-0.5 rounded-[4px] border-white/60"
-                          aria-invalid={!!mostra("aceites") && !f.aceite_privacidade} aria-describedby={mostra("aceites") ? "aceites-erro" : undefined} />
-                        <span>Concordo com a <Link to="/parceiros/privacidade" target="_blank" className="text-menta-300 underline underline-offset-2">política de privacidade</Link> e com o uso dos meus dados pra falar sobre a parceria.</span>
-                      </label>
-                      {mostra("aceites") && <p id="aceites-erro" role="alert" className="text-xs text-destructive">{erros.aceites}</p>}
-                    </div>
-
-                    {falha && <p role="alert" className="rounded-[10px] border border-destructive/40 bg-destructive/10 px-3 py-2 text-sm">{falha}</p>}
-
-                    <Button type="submit" size="lg" className="h-12 w-full text-base" disabled={enviando}>
-                      {enviando
-                        ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />Enviando...</>
-                        : (s.cadastro.botao || "Quero ser parceiro")}
-                    </Button>
-                    <p className="text-center text-xs text-neutro-300">Valor de referência do que o seu cliente recebe: {reais(valores.total)}. Pra ele e pra você, sem custo.</p>
-                  </form>
+                  <FormularioCadastro empresasGrupo={grupo} categorias={cfg?.categorias ?? []} botao={s.cadastro.botao} />
                 )}
               </div>
             </div>
-            <Garantias itens={s.cadastro.itens} />
+
           </section>
         </div>
       </main>
 
       <footer ref={fimRef} className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-neutro-300 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>Wise Makers · Estrutura e gestão comercial · Maringá, Paraná</p>
+          <p>Wise Partners · Wise Makers, empresa do Grupo Tríade · Maringá, Paraná</p>
           <nav className="flex flex-wrap gap-x-4 gap-y-2" aria-label="Documentos">
+            <Link to="/comunidade/termo" className="hover:text-foreground">Termo de uso</Link>
             <Link to="/parceiros/termo" className="hover:text-foreground">Termo de adesão</Link>
             <Link to="/parceiros/privacidade" className="hover:text-foreground">Política de privacidade</Link>
             <Link to="/entrar" className="hover:text-foreground">Entrar no portal</Link>

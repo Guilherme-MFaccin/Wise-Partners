@@ -1,8 +1,9 @@
-// Cadastro de parceiros pela página pública (/parceiros), para empresas de qualquer categoria. Sem login.
+// Cadastro pela página do portal (/parceiros), a entrada única de qualquer empresa (26/11/2026): clientes do Grupo
+// Tríade, quem quer ser parceiro e quem quer entrar na comunidade. Sem login.
 // GET: o que a página precisa (categorias, vídeo, IDs de medição, conteúdo editável, valores de referência, perfil da
 // reunião e cases) ou, com ?texto=termo|privacidade, o texto vigente.
-// POST: o cadastro entra na fila de espera (P-21); a equipe fala com a pessoa pelo WhatsApp, faz a conversa de entrada
-// e aprova no portal (P-23), que cria o parceiro e a conta com senha provisória. Não há mais acesso direto (20/11/2026).
+// POST: todo cadastro entra na fila e avisa o gerente da comunidade com o perfil declarado. Ele confere quem é e adiciona
+// como cliente do grupo, empresa da comunidade ou parceiro (depois da conversa de entrada); o acesso sai com senha provisória.
 import { cors, erro, json } from "../_shared/cors.ts";
 import { admin } from "../_shared/supabase.ts";
 import { excedeuLimite, ipDe } from "../_shared/limite.ts";
@@ -61,16 +62,21 @@ Deno.serve(async (req) => {
         return json({ titulo: "Política de privacidade", versao: cfg.privacidade_versao, texto: cfg.privacidade_texto, contato: cfg.contato_privacidade }, 200, SEM_CACHE);
       }
       // Parceiro de qualquer categoria: comerciais e institucionais (federações, Sistema S, associações, universidades)
-      const [{ data: cats }, { data: cli }, { data: cases }] = await Promise.all([
+      const [{ data: cats }, { data: cli }, { data: cases }, { data: grupo }, { data: resumo }, { data: com }] = await Promise.all([
         sb.from("categorias").select("id, nome, tipo, ordem").in("tipo", ["comercial", "institucional"]).eq("ativa", true)
           .order("ordem").order("nome"),
         sb.from("config_landing_cliente").select(COLUNAS_CLIENTE).eq("id", 1).maybeSingle(),
         sb.rpc("resumo_cases"),
+        sb.from("empresas_grupo").select("id, codigo, nome, site, descricao_institucional, ordem").order("ordem"),
+        sb.rpc("resumo_comunidade"),
+        sb.from("config_comunidade").select("termo_uso_versao").eq("id", 1).maybeSingle(),
       ]);
       return json({
         publicada: cfg.publicada, video_url: cfg.video_url, video_formato: cfg.video_formato ?? "auto", modo_cadastro: cfg.modo_cadastro ?? "fila", pixel_meta_id: cfg.pixel_meta_id, ga4_id: cfg.ga4_id,
         termo_versao: cfg.termo_versao, categorias: (cats ?? []).map((c) => ({ id: c.id, nome: c.nome, grupo: c.tipo })),
         conteudo: cfg.conteudo ?? {}, valores: valores(cli), icp: icp(cli), cases: cases ?? null,
+        empresas_grupo: (grupo ?? []).map((e) => ({ id: e.id, codigo: e.codigo, nome: e.nome, site: e.site, descricao: e.descricao_institucional })),
+        resumo: resumo ?? null, termo_uso_versao: com?.termo_uso_versao ?? null,
       }, 200, SEM_CACHE);
     }
     if (req.method !== "POST") return erro("Método não aceito.", 405);
@@ -78,7 +84,7 @@ Deno.serve(async (req) => {
 
     const b = await req.json().catch(() => ({}));
     if (texto(b?.website, 200)) return json({ ok: true, fila: true }); // campo oculto preenchido: robô
-    // A entrada é sempre pessoal (P-21 a P-23): o cadastro entra na fila; o acesso só sai depois da conversa de entrada
+    // Todo cadastro entra na fila; o acesso só sai depois que o gerente confere quem é (e, para parceiro, da conversa de entrada)
     const email = texto(b?.email, 160).toLowerCase();
     const whatsapp = texto(b?.whatsapp, 40);
     const dados = {
@@ -88,13 +94,18 @@ Deno.serve(async (req) => {
       utm_source: texto(b?.utm_source, 120), utm_medium: texto(b?.utm_medium, 120), utm_campaign: texto(b?.utm_campaign, 120),
       utm_content: texto(b?.utm_content, 120), utm_term: texto(b?.utm_term, 120), fbclid: texto(b?.fbclid, 300),
       referencia: texto(b?.referencia, 300), aceite_termo: b?.aceite_termo === true, aceite_privacidade: b?.aceite_privacidade === true,
+      aceite_uso: b?.aceite_uso === true, cliente_grupo: b?.cliente_grupo === true,
+      empresas_grupo: Array.isArray(b?.empresas_grupo) ? b.empresas_grupo.slice(0, 5).map((x: unknown) => texto(x, 40)) : [],
+      interesses: Array.isArray(b?.interesses) ? b.interesses.slice(0, 6).map((x: unknown) => texto(x, 40)) : [],
+      segmento: texto(b?.segmento, 160), cidade: texto(b?.cidade, 80), uf: texto(b?.uf, 2), faturamento: texto(b?.faturamento, 20),
+      vendedores: /^\d{1,5}$/.test(String(b?.vendedores ?? "")) ? String(b.vendedores) : "", como_conheceu: texto(b?.como_conheceu, 160),
     };
 
-    const { error: e } = await sb.rpc("entrar_fila_landing", { p: dados });
+    const { data: fila, error: e } = await sb.rpc("entrar_fila_landing", { p: dados });
     if (e) return erro(e.message.replace(/^.*?: /, ""), e.code === "23505" ? 409 : 400);
     const { data: c } = await sb.from("config_landing").select("pixel_meta_id, capi_ativa").eq("id", 1).maybeSingle();
     if (c?.capi_ativa && c.pixel_meta_id) await eventoMeta(c.pixel_meta_id, b, email, whatsapp, req);
-    return json({ ok: true, fila: true });
+    return json({ ok: true, fila: true, perfil: fila?.perfil ?? "parceiro" });
   } catch (e) {
     return erro(e instanceof Error ? e.message : String(e), 500);
   }

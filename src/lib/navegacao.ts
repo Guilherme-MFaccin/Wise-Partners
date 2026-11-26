@@ -24,7 +24,7 @@ export const SECOES_INTERNAS: SecaoNav[] = [
     ],
   },
   {
-    id: "candidatos", rotulo: "Candidatos", icone: UserPlus, descricao: "Atrair e selecionar parceiros (P-20)",
+    id: "candidatos", rotulo: "Cadastros", icone: UserPlus, descricao: "Entrada única pela página do portal: clientes do grupo, empresas da comunidade e candidatos a parceiro (P-106, P-20)",
     abas: [
       { to: "/app/candidatos", rotulo: "Fila de cadastros", papeis: GESTAO, exato: true },
       { to: "/app/candidatos/origens", rotulo: "Origens e campanha", papeis: GESTAO },
@@ -87,7 +87,7 @@ export const SECOES_INTERNAS: SecaoNav[] = [
 // também vê: cliente do grupo ou empresa cadastrada na comunidade), `indicar` (só com o link liberado: parceiro ou cliente confirmado).
 // Para quem não é parceiro, o Catálogo vem primeiro e as seções usam `rotuloMembro`.
 export type AbaParceiro = Aba & {
-  responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados"; hub?: "ver" | "ofertar" | "pedidos"; membro?: boolean; indicar?: boolean;
+  responsavel?: boolean; onboarding?: boolean; comercial?: boolean; contador?: "comunicados" | "notificacoes" | "pedidos"; hub?: "ver" | "ofertar" | "pedidos"; membro?: boolean; indicar?: boolean;
 };
 export type SecaoParceiro = Omit<SecaoNav, "abas"> & { abas: AbaParceiro[]; rotuloMembro?: string };
 
@@ -109,11 +109,11 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
     ],
   },
   {
-    id: "catalogo", rotulo: "Catálogo", icone: Store, descricao: "Empresas do ecossistema e as condições especiais entre os membros",
+    id: "catalogo", rotulo: "Comunidade", icone: Store, descricao: "Comunidade Wise Partners: o catálogo do ecossistema, as suas ofertas e os pedidos",
     abas: [
       { to: "/parceiro/catalogo", rotulo: "Catálogo", hub: "ver", membro: true },
       { to: "/parceiro/ofertas", rotulo: "Minhas ofertas", hub: "ofertar", membro: true },
-      { to: "/parceiro/pedidos", rotulo: "Pedidos", hub: "pedidos", membro: true },
+      { to: "/parceiro/pedidos", rotulo: "Pedidos", hub: "pedidos", membro: true, contador: "pedidos" },
     ],
   },
   {
@@ -136,8 +136,9 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
     ],
   },
   {
-    id: "comunidade", rotulo: "Comunidade", icone: Megaphone, descricao: "Comunicados, reconhecimento e pesquisa",
+    id: "comunidade", rotulo: "Novidades", rotuloMembro: "Notificações", icone: Megaphone, descricao: "Notificações, comunicados, reconhecimento e pesquisa",
     abas: [
+      { to: "/parceiro/notificacoes", rotulo: "Notificações", membro: true, contador: "notificacoes" },
       { to: "/parceiro/comunicados", rotulo: "Comunicados", contador: "comunicados" },
       { to: "/parceiro/ranking", rotulo: "Ranking" },
       { to: "/parceiro/pesquisa", rotulo: "Pesquisa" },
@@ -145,8 +146,9 @@ export const SECOES_PARCEIRO: SecaoParceiro[] = [
   },
 ];
 
-// Ordem para a empresa sem parceria: o Catálogo é a primeira aba (cliente do grupo e empresa cadastrada)
-export const ORDEM_MEMBRO = ["catalogo", "oportunidades", "aprender"];
+// Ordem para a empresa sem parceria (cliente do grupo e empresa da comunidade): a Comunidade (catálogo) é a primeira tela,
+// depois Indicar a Wise Makers, Conhecer a Wise Makers e Notificações
+export const ORDEM_MEMBRO = ["catalogo", "oportunidades", "aprender", "comunidade"];
 
 // A aba ativa é a de caminho mais específico que casa com a URL
 export function casaAba(aba: Aba, caminho: string) {

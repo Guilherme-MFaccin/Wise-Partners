@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { useMeuParceiro } from "@/components/portal/dados";
 import { useComunicadosNaoLidos, usePlanoOnboarding } from "@/components/portal/dadosV2";
 import { ORDEM_MEMBRO, SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
-import { useAcessoHub } from "@/components/catalogo/dados";
+import { useAcessoHub, usePedidosAbertos } from "@/components/catalogo/dados";
 import { BarraAbas, MenuSecoes, filtrarSecoes } from "@/components/layout/Navegacao";
 
 // Seções da área logada (src/lib/navegacao.ts), filtradas pelo acesso que o banco devolve (acesso_comunidade):
@@ -41,18 +41,27 @@ export function useSecoes() {
 function Contador({ n }: { n: number }) {
   if (n <= 0) return null;
   return (
-    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-neutro-900" aria-label={`${n} não lidos`}>{n}</span>
+    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-xs font-bold tabular-nums text-neutro-900" aria-label={`${n} novos`}>{n}</span>
   );
 }
 
+// Contadores do menu: comunicados e notificações não lidos, e pedidos recebidos ainda sem resposta
+function useContadores() {
+  const { data: comunicados = 0 } = useComunicadosNaoLidos();
+  const { data: notificacoes = 0 } = useNaoLidas();
+  const { data: pedidos = 0 } = usePedidosAbertos();
+  return { comunicados, notificacoes, pedidos };
+}
+
 function Navegacao({ onNavegar }: { onNavegar?: () => void }) {
-  const { data: naoLidos = 0 } = useComunicadosNaoLidos();
-  return <MenuSecoes secoes={useSecoes()} onNavegar={onNavegar} extra={(s) => (s.id === "comunidade" ? <Contador n={naoLidos} /> : null)} />;
+  const c = useContadores();
+  return <MenuSecoes secoes={useSecoes()} onNavegar={onNavegar}
+    extra={(s) => (s.id === "comunidade" ? <Contador n={c.comunicados + c.notificacoes} /> : s.id === "catalogo" ? <Contador n={c.pedidos} /> : null)} />;
 }
 
 function AbasDaSecao() {
-  const { data: naoLidos = 0 } = useComunicadosNaoLidos();
-  return <BarraAbas secoes={useSecoes()} rotuloExtra={(a: AbaParceiro) => (a.contador === "comunicados" ? <Contador n={naoLidos} /> : null)} />;
+  const c = useContadores();
+  return <BarraAbas secoes={useSecoes()} rotuloExtra={(a: AbaParceiro) => (a.contador ? <Contador n={c[a.contador]} /> : null)} />;
 }
 
 export function ParceiroLayout() {

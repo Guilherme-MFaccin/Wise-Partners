@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-<g id="f_P_107" transform="translate(0,60814)" data-frame="10.2 Confirmar o cliente do grupo declarado">
+<g id="f_P_107" transform="translate(0,61014)" data-frame="10.2 Confirmar o cliente do grupo">
 <rect data-type="frame" x="0" y="0" width="2028" height="1258" fill="#ffffff" />
-<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">10.2 Confirmar o cliente do grupo declarado</text>
-<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="10.2 Confirmar o cliente do grupo declarado">
+<text x="64" y="131" font-family="noto_sans" font-size="67" font-weight="bold" fill="#1a1a1a">10.2 Confirmar o cliente do grupo</text>
+<foreignObject x="64" y="194" width="1600" height="900" data-type="diagram" data-title="10.2 Confirmar o cliente do grupo">
 flowchart LR
     classDef confirmado fill:#D9F2E1,stroke:#2F8F4E,color:#14532D
     classDef declarado fill:#FFF3C4,stroke:#B8860B,color:#5C4300

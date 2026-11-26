@@ -76,8 +76,7 @@ const IndicacaoLink = lazy(() => import("@/pages/publico/IndicacaoLink"));
 const LandingParceiros = lazy(() => import("@/pages/publico/LandingParceiros"));
 const LandingCliente = lazy(() => import("@/pages/publico/LandingCliente"));
 const TextoLegalParceiros = lazy(() => import("@/pages/publico/TextoLegalParceiros"));
-const LandingComunidade = lazy(() => import("@/pages/publico/LandingComunidade"));
-const CadastroComunidade = lazy(() => import("@/pages/publico/CadastroComunidade"));
+
 
 const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: 30_000, retry: 1, refetchOnWindowFocus: false } } });
 
@@ -94,11 +93,11 @@ function Protegida({ publico, children }: { publico: "interno" | "parceiro"; chi
   return <>{children}</>;
 }
 
-// Raiz do domínio: quem não entrou vê a página da Comunidade Wise Partners (Cadastrar e Entrar no menu); quem entrou vai para a sua área
+// Raiz do domínio: quem não entrou vê a página do portal (Entrar e Cadastrar no menu); quem entrou vai para a sua área
 function Inicio() {
   const { session, perfil, carregando } = useAuth();
   if (carregando) return <Carregando />;
-  if (!session) return <Navigate to="/comunidade" replace />;
+  if (!session) return <Navigate to="/parceiros" replace />;
   if (!perfil) return <SemAcesso />;
   return <Navigate to={perfil.papel === "parceiro" ? "/parceiro" : "/app"} replace />;
 }
@@ -117,8 +116,9 @@ export default function App() {
                 <Route path="/r/:token" element={<PaginaRfp />} />
                 <Route path="/i/:token" element={<IndicacaoLink />} />
                 <Route path="/parceiros" element={<LandingParceiros />} />
-                <Route path="/comunidade" element={<LandingComunidade />} />
-                <Route path="/comunidade/cadastro" element={<CadastroComunidade />} />
+                {/* Entrada única pela página do portal (26/11/2026): os endereços da comunidade levam a ela */}
+                <Route path="/comunidade" element={<Navigate to="/parceiros" replace />} />
+                <Route path="/comunidade/cadastro" element={<Navigate to="/parceiros#cadastro" replace />} />
                 <Route path="/comunidade/termo" element={<TextoLegalParceiros qual="uso" />} />
                 <Route path="/c/:codigo" element={<LandingCliente />} />
                 <Route path="/parceiros/termo" element={<TextoLegalParceiros qual="termo" />} />

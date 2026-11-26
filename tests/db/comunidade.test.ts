@@ -18,6 +18,8 @@ function dados(extra: Record<string, unknown> = {}) {
 // Faz o que a Edge Function faz: prepara o membro e cria a conta (o gatilho do Auth cria o perfil a partir do convite)
 async function cadastrar(q: Q, extra: Record<string, unknown> = {}, id = NOVO, email = "marina@metalnorte.com.br") {
   await q.sistema();
+  // O cadastro com conta na hora está fechado desde a entrada única (migração 35); aqui ele é reaberto só para testar as regras
+  await q.sql("update public.config_comunidade set publicada = true");
   const r = (await q.um(`select public.preparar_membro_comunidade('${dados({ email, ...extra })}'::jsonb) r`)).r;
   await q.sql("insert into auth.users (id, email) values ($1, $2)", [id, email]);
   await q.sql(`update public.membros_comunidade set perfil_id = '${id}' where id = '${r.membro_id}'`);
@@ -80,6 +82,7 @@ describe("Cadastro pela página da comunidade", () => {
   it("desfazer apaga tudo quando a conta não pode ser criada", () =>
     transacao(async (q) => {
       await q.sistema();
+      await q.sql("update public.config_comunidade set publicada = true");
       await q.falha(`select public.preparar_membro_comunidade('${dados({ interesses: ["ser_parceiro"], aceite_termo_parceiro: true })}'::jsonb)`);
       const ok = (await q.um(`select public.preparar_membro_comunidade('${dados()}'::jsonb) r`)).r;
       await q.sql(`select public.desfazer_membro_comunidade('${ok.parceiro_id}')`);
@@ -172,8 +175,8 @@ describe("Página pública", () => {
       expect(await q.sql("select 1 from public.config_comunidade")).toEqual([]);
       await q.como(U.parcerias);
       expect((await q.sql("select publicada from public.config_comunidade")).length).toBe(1);
-      await q.sql("update public.config_comunidade set publicada = false");
-      expect((await q.um("select publicada from public.config_comunidade")).publicada).toBe(true);
+      await q.sql("update public.config_comunidade set publicada = true");
+      expect((await q.um("select publicada from public.config_comunidade")).publicada).toBe(false);
       await q.como(U.admin);
       await q.falha(`update public.config_comunidade set conteudo = '{"secoes": {"topo": {"titulo": "A ${String.fromCharCode(8212)} B"}}}'`);
     }));

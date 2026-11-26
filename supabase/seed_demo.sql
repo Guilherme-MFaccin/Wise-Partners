@@ -609,8 +609,8 @@ insert into public.pedidos_hub (oferta_id, ofertante_id, solicitante_id, solicit
 select pg_temp.como(null);
 
 -- -------------------------------------------------------------------------------------
--- Comunidade Wise Partners: empresas que se cadastraram pela página (/comunidade/cadastro)
--- uma cliente da Wise a confirmar, um lead da consultoria, uma que quer ser parceira e o membro confirmado da Tríade
+-- Entrada única pela página do portal (26/11/2026): três cadastros na fila (cliente do grupo, comunidade e parceiro)
+-- e uma empresa já adicionada pelo gerente à comunidade, com acesso
 -- -------------------------------------------------------------------------------------
 select pg_temp.como(null);
 do $$
@@ -619,29 +619,32 @@ declare
   v_cat uuid := (select id from public.categorias where tipo = 'comercial' and ativa order by ordem, nome limit 1);
   r jsonb;
 begin
-  r := public.preparar_membro_comunidade(jsonb_build_object(
+  r := public.entrar_fila_landing(jsonb_build_object(
     'nome', 'Helena Duarte', 'cargo', 'Gerente comercial', 'email', 'helena@embalagenshorizonte.demo', 'whatsapp', '44991230001',
     'empresa', 'Embalagens Horizonte', 'cnpj', pg_temp.cnpj(9401), 'cidade', 'Londrina', 'uf', 'PR', 'segmento', 'Indústria de embalagens flexíveis',
     'faturamento', '1m_5m', 'vendedores', '8', 'cliente_grupo', true, 'empresas_grupo', jsonb_build_array(v_wise),
-    'interesses', jsonb_build_array('comprar', 'indicar'), 'como_conheceu', 'Consultor ou CS de uma empresa do grupo', 'aceite_uso', true, 'aceite_privacidade', true));
-  insert into auth.users (id, email) values (pg_temp.uid(18), 'helena@embalagenshorizonte.demo');
-  update public.membros_comunidade set perfil_id = pg_temp.uid(18), created_at = now() - interval '20 hours' where id = (r->>'membro_id')::uuid;
+    'interesses', jsonb_build_array('comprar', 'oferecer'), 'como_conheceu', 'Consultor ou CS de uma empresa do grupo', 'aceite_uso', true, 'aceite_privacidade', true));
+  update public.cadastros_landing set created_at = now() - interval '20 hours' where id = (r->>'cadastro_id')::uuid;
 
-  r := public.preparar_membro_comunidade(jsonb_build_object(
-    'nome', 'Caio Menezes', 'cargo', 'Diretor', 'email', 'caio@valenorte.demo', 'whatsapp', '44991230002',
-    'empresa', 'Construtora Vale Norte', 'cnpj', pg_temp.cnpj(9402), 'cidade', 'Maringá', 'uf', 'PR', 'segmento', 'Construção de galpões industriais',
-    'faturamento', '500k_1m', 'vendedores', '4', 'cliente_grupo', false,
-    'interesses', jsonb_build_array('comprar', 'conhecer_consultoria'), 'como_conheceu', 'Indicação de um cliente ou parceiro', 'aceite_uso', true, 'aceite_privacidade', true));
-  insert into auth.users (id, email) values (pg_temp.uid(19), 'caio@valenorte.demo');
-  update public.membros_comunidade set perfil_id = pg_temp.uid(19), created_at = now() - interval '2 days' where id = (r->>'membro_id')::uuid;
-
-  r := public.preparar_membro_comunidade(jsonb_build_object(
+  r := public.entrar_fila_landing(jsonb_build_object(
     'nome', 'Lívia Rocha', 'cargo', 'Sócia', 'email', 'livia@rotalog.demo', 'whatsapp', '44991230003',
     'empresa', 'Rota Log Sistemas', 'cnpj', pg_temp.cnpj(9403), 'cidade', 'Curitiba', 'uf', 'PR', 'segmento', 'Software de gestão de frotas',
-    'faturamento', '250k_500k', 'vendedores', '3', 'cliente_grupo', false, 'categoria_id', v_cat, 'clientes_ativos', '150', 'aceite_termo_parceiro', true,
+    'faturamento', '250k_500k', 'vendedores', '3', 'categoria_id', v_cat, 'clientes_ativos', '150', 'aceite_termo', true,
     'interesses', jsonb_build_array('ser_parceiro', 'oferecer'), 'como_conheceu', 'Redes sociais', 'aceite_uso', true, 'aceite_privacidade', true));
-  insert into auth.users (id, email) values (pg_temp.uid(20), 'livia@rotalog.demo');
-  update public.membros_comunidade set perfil_id = pg_temp.uid(20), created_at = now() - interval '3 hours' where id = (r->>'membro_id')::uuid;
+  update public.cadastros_landing set created_at = now() - interval '3 hours' where id = (r->>'cadastro_id')::uuid;
+
+  r := public.entrar_fila_landing(jsonb_build_object(
+    'nome', 'Caio Menezes', 'cargo', 'Diretor', 'email', 'caio@valenorte.demo', 'whatsapp', '44991230002',
+    'empresa', 'Construtora Vale Norte', 'cnpj', pg_temp.cnpj(9402), 'cidade', 'Maringá', 'uf', 'PR', 'segmento', 'Construção de galpões industriais',
+    'faturamento', '500k_1m', 'vendedores', '4', 'interesses', jsonb_build_array('comprar', 'conhecer_consultoria'),
+    'como_conheceu', 'Indicação de um cliente ou parceiro', 'aceite_uso', true, 'aceite_privacidade', true));
+  -- O gerente conferiu e adicionou a construtora como empresa da comunidade; o acesso saiu com senha provisória
+  perform pg_temp.como(pg_temp.uid(1));
+  r := public.aprovar_cadastro_comunidade((r->>'cadastro_id')::uuid, false);
+  perform pg_temp.como(null);
+  insert into public.convites (email, nome, papel, parceiro_id, is_responsavel_parceiro) values ('caio@valenorte.demo', 'Caio Menezes', 'parceiro', (r->>'parceiro_id')::uuid, true);
+  insert into auth.users (id, email) values (pg_temp.uid(19), 'caio@valenorte.demo');
+  update public.membros_comunidade set perfil_id = pg_temp.uid(19) where parceiro_id = (r->>'parceiro_id')::uuid;
 end $$;
 -- A Metalúrgica Sul entrou pela CS da Tríade; o registro de membro mostra o vínculo confirmado
 insert into public.membros_comunidade (parceiro_id, perfil_id, nome, cargo, email, whatsapp, empresa, cnpj, cidade, uf, segmento, faturamento, vendedores,

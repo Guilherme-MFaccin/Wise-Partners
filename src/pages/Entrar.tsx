@@ -117,10 +117,10 @@ export default function Entrar() {
             </form>
           )}
         </div>
-        {/* Quem ainda não tem acesso: a empresa se cadastra na comunidade e entra na hora; a entrada como parceiro segue pela conversa de entrada (P-21 a P-23) */}
+        {/* Quem ainda não tem acesso: a empresa se cadastra pela página do portal e a Wise libera o acesso depois de conferir */}
         <div className="mt-6 space-y-2 text-center text-sm text-muted-foreground">
-          <p>Ainda não tem acesso? <Link to="/comunidade/cadastro" className="font-semibold text-menta-400 underline-offset-4 hover:underline">Cadastre a sua empresa na comunidade</Link></p>
-          <p>Fez o cadastro pela página de parceiros? O acesso chega pelo WhatsApp, com uma senha provisória, depois da conversa de entrada com a Wise.</p>
+          <p>Ainda não tem acesso? <Link to="/parceiros#cadastro" className="font-semibold text-menta-400 underline-offset-4 hover:underline">Cadastre a sua empresa</Link></p>
+          <p>Já se cadastrou? O acesso chega pelo WhatsApp, com uma senha provisória, depois que a Wise confere o cadastro.</p>
         </div>
       </div>
     </div>

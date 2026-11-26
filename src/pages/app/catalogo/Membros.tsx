@@ -19,7 +19,8 @@ import { toastErro } from "@/lib/erros";
 import { data, formatarCnpj, haQuanto, semTravessao, somenteDigitos } from "@/lib/formato";
 import { cn } from "@/lib/utils";
 
-// Empresas da Comunidade Wise Partners: quem se cadastrou pela página, o que declarou e o que espera da Wise.
+// Empresas da Comunidade Wise Partners: quem já entrou (adicionada pelo gerente a partir da fila de cadastros), o que declarou
+// e o que ainda espera da Wise.
 // Ações: confirmar (ou não) o cliente do grupo, marcar o lead da consultoria como atendido e seguir para a fila de candidatos.
 // Cada pendência também vira tarefa (membro_vinculo e lead_comunidade) até ser resolvida.
 type Membro = {
@@ -181,7 +182,7 @@ export default function MembrosComunidade() {
   const pode = !!perfil && ["admin", "parcerias", "consultor", "comercial"].includes(perfil.papel);
   const q = useMembros(pode);
   const [params, setParams] = useSearchParams();
-  const [filtro, setFiltro] = useState<Filtro>("pendentes");
+  const [filtro, setFiltro] = useState<Filtro>(() => (["pendentes", "confirmar", "consultoria", "parceria", "todas"].includes(params.get("filtro") ?? "") ? params.get("filtro") as Filtro : "pendentes"));
   const [busca, setBusca] = useState("");
   const membros = useMemo(() => q.data?.membros ?? [], [q.data]);
   const aberto = membros.find((m) => m.id === params.get("id")) ?? null;
@@ -232,8 +233,8 @@ export default function MembrosComunidade() {
       )}
       {q.error && <ErroCarga erro={q.error} aoTentar={() => q.refetch()} />}
       {q.isSuccess && lista.length === 0 && (
-        <Vazio titulo={membros.length === 0 ? "Nenhuma empresa se cadastrou ainda" : filtro === "pendentes" ? "Nada pendente" : "Nenhuma empresa neste filtro"}>
-          {membros.length === 0 ? "As empresas que se cadastrarem pela página da comunidade aparecem aqui."
+        <Vazio titulo={membros.length === 0 ? "Nenhuma empresa na comunidade ainda" : filtro === "pendentes" ? "Nada pendente" : "Nenhuma empresa neste filtro"}>
+          {membros.length === 0 ? "As empresas aparecem aqui quando você as adiciona pela fila de cadastros."
             : filtro === "pendentes" ? "Todas as empresas da comunidade estão em dia." : "Mude o filtro ou a busca."}
         </Vazio>
       )}
