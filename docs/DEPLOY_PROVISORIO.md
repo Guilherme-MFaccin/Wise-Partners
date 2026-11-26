@@ -104,3 +104,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: `/comunidade` (a raiz sem login abre ela), `/comunidade/cadastro`, `/comunidade/termo`; área logada por tipo de acesso; seção Comunidade na área da Wise; aba Comunidade em Programa, Páginas.
 * Documento "Modelo e processos" na versão v16.
 * Conferido no ar: as quatro páginas em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão; a função devolve a configuração e recusa senha curta e CNPJ inválido sem gravar nada. O cadastro completo (criar conta e entrar) não foi testado em produção, para não criar dados de teste no banco real.
+
+## Publicação de 26/11/2026 (entrada única pela página do portal)
+
+* Migração `20261126000035` (fila única para qualquer empresa com o perfil declarado, aviso ao gerente, `aprovar_cadastro_comunidade`, termo de adesão exigido só para parceiro, cadastro com conta na hora da comunidade fechado) aplicada e registrada. Não havia cadastros da comunidade em produção.
+* Função `cadastro-parceiro` publicada: devolve as empresas do grupo, os números do catálogo e a versão do termo de uso, e recebe o formulário único.
+* Site publicado: página do portal (`/parceiros`) com Entrar e Cadastrar e textos para qualquer empresa; `/comunidade` leva a ela; fila com Adicionar (cliente do grupo, empresa da comunidade ou parceiro); Comunidade como primeira tela do cliente; seção Cadastros; termo de uso em Textos legais.
+* Documento "Modelo e processos" na versão v17.
+* Conferido no ar: raiz, `/parceiros`, `/comunidade`, `/comunidade/termo` e `/entrar` em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão; o formulário único abre com as três etapas; a função recusa CNPJ inválido sem gravar nada. Nenhum cadastro de teste foi criado no banco real.
