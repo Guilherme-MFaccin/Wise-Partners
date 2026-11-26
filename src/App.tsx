@@ -2,6 +2,7 @@ import { lazy, Suspense, type ReactNode } from "react";
 import { MODO_VER_COMO } from "@/integrations/supabase/client";
 import { FaixaVerComo } from "@/components/layout/FaixaVerComo";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { SincronizarTema } from "@/lib/tema";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -113,6 +114,7 @@ export default function App() {
       <TooltipProvider>
         <AuthProvider>
           <BrowserRouter>
+            <SincronizarTema />
             <FaixaVerComo />
             <Suspense fallback={<Carregando />}>
               <Routes>

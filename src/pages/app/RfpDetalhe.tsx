@@ -207,7 +207,7 @@ function DetalhePedido({ id }: { id: string }) {
                 i === atual ? "border-menta-500 bg-menta-500/10 text-menta-300" : "border-white/10 text-neutro-300 hover:bg-white/5",
               )}>
               <span className={cn("flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs",
-                i === atual ? "bg-menta-500 text-neutro-900" : "bg-white/10")}>
+                i === atual ? "bg-menta-500 text-primary-foreground" : "bg-white/10")}>
                 {i === 3 && publicado ? <Check className="h-3.5 w-3.5" /> : i + 1}
               </span>
               <span className="truncate">{nome}</span>

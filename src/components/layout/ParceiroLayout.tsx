@@ -8,6 +8,7 @@ import { Logo } from "@/components/comum/Logo";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { useRolou } from "@/hooks/useRolou";
 import { useMeuParceiro } from "@/components/portal/dados";
 import { useComunicadosNaoLidos, usePlanoOnboarding } from "@/components/portal/dadosV2";
 import { ORDEM_MEMBRO, SECOES_PARCEIRO, type AbaParceiro } from "@/lib/navegacao";
@@ -41,7 +42,7 @@ export function useSecoes() {
 function Contador({ n }: { n: number }) {
   if (n <= 0) return null;
   return (
-    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-xs font-bold tabular-nums text-neutro-900" aria-label={`${n} novos`}>{n}</span>
+    <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-xs font-bold tabular-nums text-primary-foreground" aria-label={`${n} novos`}>{n}</span>
   );
 }
 
@@ -68,10 +69,11 @@ export function ParceiroLayout() {
   const { perfil, sair } = useAuth();
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
+  const rolou = useRolou();
   const { data: n = 0 } = useNaoLidas();
   const rodape = (
-    <div className="shrink-0 border-t border-white/10 pt-4">
-      <Link to="/parceiro/conta" onClick={() => setMenu(false)} className="flex items-center gap-2 rounded-[8px] px-2 py-1 hover:bg-white/5">
+    <div className="borda-material shrink-0 border-t pt-4">
+      <Link to="/parceiro/conta" onClick={() => setMenu(false)} className="pressionavel flex items-center gap-2 rounded-[10px] px-2 py-1.5 hover:bg-white/5">
         <UserCircle className="h-5 w-5 shrink-0 text-neutro-300" aria-hidden="true" />
         <span className="min-w-0">
           <span className="block truncate text-sm font-semibold">{perfil?.nome}</span>
@@ -85,10 +87,10 @@ export function ParceiroLayout() {
   );
   return (
     <div className="min-h-screen lg:grid lg:grid-cols-[250px_1fr]">
-      <aside className="sticky top-0 hidden h-screen flex-col gap-4 border-r border-white/10 bg-neutro-900 p-4 lg:flex">
+      <aside className="material-lateral borda-material sticky top-0 hidden h-screen flex-col gap-4 border-r p-4 lg:flex">
         <Link to="/parceiro" className="block shrink-0 px-2 pt-1">
           <Logo />
-          <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-menta-500">Comunidade Wise Partners</p>
+          <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-menta-400">Comunidade Wise Partners</p>
         </Link>
         <div className="-mx-1 min-h-0 flex-1 overflow-y-auto px-1">
           <Navegacao />
@@ -96,7 +98,7 @@ export function ParceiroLayout() {
         {rodape}
       </aside>
       <div className="min-w-0">
-        <header className="sticky top-0 z-30 flex items-center justify-between gap-2 border-b border-white/10 bg-background/90 px-4 py-3 backdrop-blur lg:justify-end">
+        <header className={cn("material-barra sticky top-0 z-30 flex items-center justify-between gap-2 border-b px-4 py-3 transition-colors duration-200 lg:justify-end", rolou ? "borda-material" : "border-transparent")}>
           <div className="flex items-center gap-2 lg:hidden">
             <Sheet open={menu} onOpenChange={setMenu}>
               <SheetTrigger asChild><Button variant="ghost" size="icon" aria-label="Menu"><Menu /></Button></SheetTrigger>
@@ -111,9 +113,9 @@ export function ParceiroLayout() {
             </Sheet>
             <Logo className="h-6" />
           </div>
-          <Link to="/parceiro/notificacoes" className="relative rounded-full p-2 hover:bg-white/5" aria-label="Notificações">
+          <Link to="/parceiro/notificacoes" className="pressionavel relative rounded-full p-2 hover:bg-white/[0.06]" aria-label="Notificações">
             <Bell className="h-5 w-5" />
-            {n > 0 && <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-neutro-900">{n}</span>}
+            {n > 0 && <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-menta-500 px-1 text-[11px] font-bold text-primary-foreground">{n}</span>}
           </Link>
         </header>
         <AvisoSenhaProvisoria />

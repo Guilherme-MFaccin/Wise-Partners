@@ -259,7 +259,7 @@ function PreviaCliente({ parceiro: p, valor }: { parceiro: Parceiro; valor: (k: 
       )}
       <div className="mt-5">
         {whatsapp ? (
-          <span className="inline-flex items-center gap-2 rounded-full bg-menta-500 px-4 py-2 text-sm font-semibold text-neutro-900">
+          <span className="inline-flex items-center gap-2 rounded-full bg-menta-500 px-4 py-2 text-sm font-semibold text-primary-foreground">
             <MessageCircle className="h-4 w-4" /> Falar pelo WhatsApp
           </span>
         ) : email ? (

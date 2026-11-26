@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { Cabecalho } from "@/components/comum/Cabecalho";
 import { Carregando } from "@/components/comum/Estados";
+import { SeletorAparencia } from "@/components/comum/Aparencia";
 import { TrocarSenha } from "@/components/conta/TrocarSenha";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -119,6 +120,14 @@ export default function Conta() {
               <p className="text-xs text-muted-foreground">Para trocar o e-mail ou o papel, fale com um administrador.</p>
             </div>
           </div>
+        </section>
+
+        <section className="space-y-3 rounded-[14px] border border-white/10 bg-card p-4 sm:p-5">
+          <div>
+            <h2 className="font-semibold">Aparência</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Automático acompanha o claro e o escuro do seu computador ou celular. Vale só neste navegador.</p>
+          </div>
+          <SeletorAparencia className="w-full sm:w-auto" />
         </section>
 
         {RECEBEM_DIARIO.includes(perfil.papel) && (

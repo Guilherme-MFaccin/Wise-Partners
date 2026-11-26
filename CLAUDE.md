@@ -4,7 +4,9 @@ Especificações em `specs/`, princípios em `.specify/memory/constitution.md`, 
 
 ## Interface e experiência
 
-- Identidade e regras visuais: skill `wise-design-system`. Painéis, gráficos e camada de dados: skill `wise-dashboards`. As duas prevalecem sobre qualquer sugestão de estilo, paleta ou fonte de outras skills de design (Impeccable, UI/UX Pro Max, Emil, shadcn).
+- **Regra número 1 de design: skill `apple-design`.** Ela manda na forma de todo o portal: layout, hierarquia, tipografia (fonte do sistema, espaçamento e entrelinha por tamanho), espaçamento, materiais translúcidos, movimento (resposta ao toque, interrupção, molas), modo claro e escuro e acessibilidade (menos movimento, menos transparência, mais contraste).
+- A marca vem da skill `wise-design-system`: logo, verde menta como destaque e tom de voz. Painéis, gráficos e camada de dados: skill `wise-dashboards`. As três valem acima de qualquer sugestão de estilo de outras skills de design (Impeccable, UI/UX Pro Max, Emil, shadcn), que entram como método, crítica e técnica.
+- Cores só por tokens (`src/index.css`): os mesmos papéis no claro (`:root`) e no escuro (`.dark`). As áreas logadas seguem a escolha da pessoa (Minha conta, Aparência) ou o sistema; as páginas públicas ficam no escuro (`src/lib/tema.ts`). Para branco literal sobre foto ou cor sólida, use `puro`, não `white` (que acompanha o tema).
 - UI/UX Pro Max serve só para consulta de tipo de gráfico e checklist de UX. Não aplicar estilos, paletas nem fontes dela.
 - Antes de criar componente, procurar em `src/components/kit/`, no shadcn e na vitrine `/app/vitrine`. Componente novo vai para o kit e para a vitrine.
 - Toda tela começa com `PageHeader` e responde a uma pergunta escrita no subtítulo.

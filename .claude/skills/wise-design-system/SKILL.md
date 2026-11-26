@@ -5,26 +5,27 @@ description: Identidade visual, tokens, tipografia, componentes canônicos e voz
 
 # Wise Design System para o Portal Wise Partners
 
-Esta skill manda na identidade do portal. Outras skills de design (Impeccable, UI/UX Pro Max, shadcn, Emil) ajudam com método, crítica e técnica, mas **nunca trocam a marca**: paleta, fontes, voz e regras abaixo prevalecem sobre qualquer sugestão de estilo, paleta ou "direção estética" vinda delas.
+Desde 26/11/2026 a **forma** do portal segue a skill `apple-design` (regra número 1 do CLAUDE.md): layout, hierarquia, tipografia, espaçamento, materiais, movimento, modo claro e escuro e acessibilidade. Esta skill guarda a **marca**: logo, verde menta como destaque, cores de estado e de nível, voz e as regras de texto. Onde as duas falam do mesmo assunto, vale a `apple-design` para a forma e esta para a marca. Outras skills de design (Impeccable, UI/UX Pro Max, shadcn, Emil) ajudam com método, crítica e técnica, sem trocar nenhuma das duas.
 
 Leia também `referencias/tokens.md` antes de mexer em cores, superfícies ou gráficos.
 
 ## 1. Personalidade
 
-Software de gestão para quem vende por relacionamento. Sério, calmo e preciso, como Linear, Stripe Dashboard e Attio, com a assinatura da Wise: fundo quase preto, texto branco e verde menta usado com parcimônia para o que importa. Nada de gradiente decorativo, vidro, sombra pesada, ilustração genérica ou emoji em interface.
+Software de gestão para quem vende por relacionamento. Sério, calmo e preciso, com o acabamento dos apps da Apple e a assinatura da Wise: verde menta usado com parcimônia para o que importa. No escuro, fundo quase preto e texto branco; no claro, fundo cinza agrupado (`#f5f5f7`) com cartões brancos. Materiais translúcidos só nas barras e folhas (menu lateral, barra do topo, diálogos), nunca como enfeite. Nada de gradiente decorativo, sombra pesada, ilustração genérica ou emoji em interface.
 
 ## 2. Regras de cor
 
 * O menta `#00E193` é **sinal**, não decoração: botão principal, item ativo, a série principal de um gráfico, o número que bateu a meta. Se mais de 10% da área visível da tela está menta, há excesso.
-* Hierarquia por superfícies (do fundo para cima): `surface-0` fundo, `surface-1` áreas, `surface-2` cards, `surface-3` hover e cards elevados, `surface-4` popovers e campos. Diferencie camadas por superfície e borda fina, não por sombra.
+* Hierarquia por superfícies: fundo, cartões e, por cima, menus e diálogos. Diferencie camadas por superfície e borda fina; sombra só suave nos cartões do modo claro e nos elementos flutuantes (`sombra-cartao`, `sombra-flutuante`).
+* Toda cor sai de token e tem par no claro e no escuro (`src/index.css`). `white`, `neutro`, `menta-200` a `menta-400`, `red-200`, `red-300`, `sky-300`, `violet-200` e `violet-300` acompanham o tema; o menta de botão (`menta-500`, `primary`) é o mesmo nos dois. Branco literal sobre foto ou cor sólida: `puro`.
 * Cores semânticas só com significado: sucesso (menta), alerta (`#F5A623`), perigo (`#F0473A`), informação (azul do token). Nunca use vermelho para "negativo" neutro (por exemplo, uma redução de custo).
 * Cores de nível (Elite, Premium, Select) só em selos, marcações de nível e gráficos que separam níveis, com as variantes claras do `tokens.md`. Em texto para parceiro e cliente, o nível aparece pelo nome, nunca pela letra.
 * Contraste mínimo AA: 4,5:1 para texto, 3:1 para elementos gráficos e bordas de campos.
 
 ## 3. Tipografia
 
-* **Plus Jakarta Sans** para toda a interface. **Baloo 2** só para o número principal de uma tela e para títulos de páginas públicas (RFP, link de indicação). Nunca para tabelas, botões ou rótulos.
-* Escala: 12, 13, 14, 16, 18, 22, 28, 36, 48. Corpo 14; tabelas 13; rótulos 12; título de página 22 ou 28; número principal 36 ou 48.
+* **Fonte do sistema** (`font-sans`: SF Pro no Mac e no iPhone, Segoe UI no Windows, Roboto no Android), como pede a `apple-design`. **`font-display`** (a versão arredondada do sistema, SF Pro Rounded) só para o número principal de uma tela e para títulos de páginas públicas. Nunca para tabelas, botões ou rótulos. Os PDFs continuam com as fontes embutidas em `public/fonts`.
+* Escala do `tailwind.config.ts`, com entrelinha e espaçamento por tamanho: texto grande aperta (título de página com -0,024em), texto pequeno abre levemente. Corpo 14; tabelas 13; rótulos 12; título de página 28 no celular e 34 no computador; número principal 36 ou 48.
 * Números sempre com `tabular-nums` em tabelas, KPIs e eixos.
 * Pesos: 400 texto, 500 rótulos e células, 600 títulos, 700 números de destaque. Evite 800 fora de páginas públicas.
 
@@ -60,7 +61,7 @@ Toda tela e todo componente de dados tem: carregando (esqueleto do formato), vaz
 
 ## 7. Movimento
 
-Discreto e funcional: 120 a 200 ms, `ease-out` para entrar, sem bounce. Anima mudança de estado (abrir, filtrar, salvar), nunca decoração em loop. Respeite `prefers-reduced-motion`.
+Segue a `apple-design`: resposta ao pressionar (`pressionavel`, escala 0,97 em 100 ms), menus e popovers nascem do botão que os abriu, folhas com a curva `ease-folha` e diálogos com `ease-saida`. Sem bounce, a não ser em gesto com impulso. Anima mudança de estado, nunca decoração em loop. Respeite `prefers-reduced-motion`, `prefers-reduced-transparency` e `prefers-contrast` (já tratados em `src/index.css`).
 
 ## 8. Voz e texto
 

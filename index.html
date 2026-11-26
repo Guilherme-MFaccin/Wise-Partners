@@ -9,9 +9,17 @@
     <!-- Landing pages: a configuração vem da Supabase e a capa do vídeo, do YouTube; conectar cedo encurta a espera -->
     <link rel="preconnect" href="%VITE_SUPABASE_URL%" crossorigin />
     <link rel="preconnect" href="https://i.ytimg.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tema antes da primeira pintura (mesma regra de src/lib/tema.ts): áreas logadas seguem a escolha ou o sistema; páginas públicas, escuro -->
+    <script>
+      (function () {
+        var p = "sistema";
+        try { p = localStorage.getItem("wp-tema") || "sistema"; } catch (e) {}
+        var logada = /^\/(app|parceiro)(\/|$)/.test(location.pathname);
+        var escuro = !logada || p === "escuro" || (p !== "claro" && matchMedia("(prefers-color-scheme: dark)").matches);
+        if (escuro) document.documentElement.classList.add("dark");
+        else document.querySelector('meta[name="theme-color"]').setAttribute("content", "#f5f5f7");
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

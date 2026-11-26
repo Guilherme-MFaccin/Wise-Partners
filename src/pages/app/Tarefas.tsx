@@ -180,7 +180,7 @@ export default function Tarefas() {
           )}
           <Popover>
             <PopoverTrigger asChild>
-              <Button variant="outline" size="sm" className="h-9"><Filter /> Filtros{nFiltros ? <span className="rounded-full bg-menta-500 px-1.5 text-[11px] font-bold text-neutro-900">{nFiltros}</span> : null}</Button>
+              <Button variant="outline" size="sm" className="h-9"><Filter /> Filtros{nFiltros ? <span className="rounded-full bg-menta-500 px-1.5 text-[11px] font-bold text-primary-foreground">{nFiltros}</span> : null}</Button>
             </PopoverTrigger>
             <PopoverContent align="start" className="max-h-[70dvh] w-[min(92vw,420px)] space-y-4 overflow-y-auto">
               <BlocoFiltro titulo="Responsável">

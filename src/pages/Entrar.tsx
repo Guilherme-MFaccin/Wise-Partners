@@ -65,12 +65,12 @@ export default function Entrar() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Logo className="mx-auto h-9" />
-          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-menta-500">Wise Partners</p>
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-menta-400">Wise Partners</p>
         </div>
         <div className="rounded-[20px] border border-white/10 bg-card p-6">
           {modo === "enviado" ? (
             <div className="space-y-3 text-center">
-              <Mail className="mx-auto h-10 w-10 text-menta-500" aria-hidden="true" />
+              <Mail className="mx-auto h-10 w-10 text-menta-400" aria-hidden="true" />
               <h1 className="text-xl font-bold">Confira o seu e-mail</h1>
               <p className="text-sm text-muted-foreground">
                 Se <strong className="text-foreground">{emailLimpo}</strong> tiver acesso ao portal, você vai receber um link para criar uma senha nova.

@@ -221,7 +221,7 @@ export function Calendario({ tarefas, hoje, abrir }: { tarefas: Tarefa[]; hoje: 
             const fora = d.slice(0, 7) !== mes;
             return (
               <div key={d} className={cn("min-h-24 border-b border-r border-white/5 p-1.5", fora && "bg-black/20")}>
-                <p className={cn("mb-1 text-xs tabular-nums", d === hoje ? "inline-flex h-5 w-5 items-center justify-center rounded-full bg-menta-500 font-bold text-neutro-900" : fora ? "text-neutro-500" : "text-neutro-300")}>
+                <p className={cn("mb-1 text-xs tabular-nums", d === hoje ? "inline-flex h-5 w-5 items-center justify-center rounded-full bg-menta-500 font-bold text-primary-foreground" : fora ? "text-neutro-500" : "text-neutro-300")}>
                   {Number(d.slice(8))}
                 </p>
                 <div className="space-y-1">

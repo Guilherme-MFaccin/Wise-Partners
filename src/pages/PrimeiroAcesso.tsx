@@ -35,7 +35,7 @@ export default function PrimeiroAcesso() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Logo className="mx-auto h-9" />
-          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-menta-500">Wise Partners</p>
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-menta-400">Wise Partners</p>
         </div>
         <form onSubmit={salvar} className="space-y-4 rounded-[20px] border border-white/10 bg-card p-6" noValidate>
           <div>

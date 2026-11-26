@@ -201,7 +201,7 @@ function Aprovacao({ parceiro, aprovacoes, isDiretor, onMudou }: { parceiro: any
     <Secao titulo="Aprovação do Diretor">
       {a ? (
         <p className="flex items-start gap-2 text-sm">
-          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-500" />
+          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-menta-400" />
           <span>Assinatura aprovada por {a.autor?.nome ?? "Diretor"} em {dataHora(a.created_at)}.{a.observacao ? ` ${a.observacao}` : ""}</span>
         </p>
       ) : isDiretor ? (

@@ -78,7 +78,7 @@ export default function Pesquisa() {
             {Array.from({ length: 11 }, (_, n) => (
               <button key={n} type="button" role="radio" aria-checked={nota === n} onClick={() => setNota(n)}
                 className={`h-11 rounded-[10px] border text-sm font-semibold transition-colors ${nota === n
-                  ? "border-menta-500 bg-menta-500 text-neutro-900"
+                  ? "border-menta-500 bg-menta-500 text-primary-foreground"
                   : "border-white/10 hover:border-menta-500/50 hover:bg-white/5"}`}>
                 {n}
               </button>

@@ -24,8 +24,8 @@ export function MenuSecoes<A extends Aba>({ secoes, onNavegar, extra }: {
         return (
           <Link key={s.id} to={s.abas[0].to} onClick={onNavegar} aria-current={ativa ? "page" : undefined}
             className={cn(
-              "flex min-h-10 items-center gap-3 rounded-[8px] px-3 py-2 text-sm font-medium text-neutro-300 transition-colors hover:bg-white/5 hover:text-white",
-              ativa && "bg-menta-500/10 text-menta-400 hover:bg-menta-500/10 hover:text-menta-400",
+              "pressionavel flex min-h-10 items-center gap-3 rounded-[10px] px-3 py-2 text-sm font-medium text-neutro-300 transition-colors hover:bg-white/[0.06] hover:text-white",
+              ativa && "bg-menta-500/[0.14] font-semibold text-menta-400 hover:bg-menta-500/[0.14] hover:text-menta-400",
             )}>
             <s.icone className="h-4 w-4 shrink-0" aria-hidden />
             <span className="min-w-0 flex-1 truncate">{s.rotulo}</span>
@@ -47,7 +47,7 @@ export function BarraAbas<A extends Aba>({ secoes, rotuloExtra }: { secoes: Seca
   const secao = secoes[atual.secao];
   if (secao.abas.length < 2) return null;
   return (
-    <div className="-mx-4 mb-6 border-b border-white/10 px-4 sm:-mx-6 sm:px-6">
+    <div className="-mx-4 mb-6 border-b border-white/[0.08] px-4 sm:-mx-6 sm:px-6">
       <nav aria-label={secao.rotulo} className="-mb-px flex gap-1 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {secao.abas.map((a) => {
           const ativa = a.to === atual.aba.to && casaAba(a, pathname) > 0;
