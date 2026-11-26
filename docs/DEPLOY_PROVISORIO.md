@@ -134,5 +134,14 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Migração `20261126000039` (marca `demonstracao` em `parceiros` e `perfis`, regras de acesso restritivas, funções dos painéis, filas, rotinas, ranking, comunicados, pesquisas e catálogo lendo `parceiros_visiveis()`, nenhum e-mail para conta de demonstração, `contas_para_ver_como` com a marca) aplicada e registrada. As funções foram regeradas a partir das definições em produção.
 * Dez contas criadas com `scripts/contas-demonstracao/` (passo 1 no banco, usuários no Auth com senha aleatória e e-mail confirmado, passo 3 no banco): cliente do grupo, empresa da comunidade, parceiro Elite, Premium, Select e em entrada, gerente de parcerias, consultor, comercial e financeiro. E-mails `demo.<tipo>@example.com`, que não recebem mensagens.
 * Conferido em produção, como um administrador real (consulta desfeita no fim): nenhuma empresa de demonstração nas telas, as 33 empresas reais intactas, as dez contas no Ver como, ranking e fila de tarefas sem as empresas de demonstração; nenhuma notificação criada na operação.
-* Site: o selo Demonstração na tela Ver como ainda não foi publicado (a lista já funciona com o site atual).
-* A migração `20261126000038` (Swallow com 1,5% ao gerente) continua aguardando publicação.
+* Site: o selo Demonstração na tela Ver como saiu na publicação seguinte (benefícios por nível).
+
+## Publicação de 26/11/2026 (Swallow e benefícios por nível)
+
+* Migração `20261126000038` (Swallow: 1,5% do projeto ao gerente de parcerias, antes 2%) aplicada e registrada.
+* Migração `20261126000040` (hierarquia antiga fora: entregas, Wise Hub e tarefas de onboarding no nível; contrapartidas e ações da Wise por nível; régua `nivel:*`; funções sem pacote, regeradas das definições em produção; colunas, tabela e função de pacote removidas; e-mails, catálogo e regras publicadas corrigidos) aplicada e registrada.
+* Funções `relatorio-semanal`, `backup` (sem verificação de JWT) e `ai-gateway` publicadas de novo.
+* Site publicado logo depois da migração 40: telas sem pacote, benefícios por nível na área do parceiro, configuração de níveis com benefícios, contrato comercial com as cláusulas por nível e selo Demonstração no Ver como. O modelo antigo `comercial_v1.docx` saiu do site.
+* Documento "Modelo e processos" na versão v21.
+* Conferido em produção: migrações 37 a 40 registradas; nenhuma tabela, coluna, função, régua ou e-mail com pacote; entregas por nível (Elite 10, Premium 8, Select 4); regras publicadas com os benefícios por nível; Swallow com 1,5%; as 5 contrapartidas do parceiro de teste Wise (Select) mantidas. `/parceiros` e `/entrar` em 375 e 1440 px sem erro, sem rolagem lateral, sem travessão e sem pacote.
+* Ficaram como estavam, à espera do patrocinador: anotações, ofertas, contatos e próximos passos escritos pela equipe sobre parceiros reais que ainda citam pacote.
