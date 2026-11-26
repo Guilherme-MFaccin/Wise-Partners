@@ -21,7 +21,7 @@ export function SeletorAparencia({ className }: { className?: string }) {
               "pressionavel flex min-h-10 items-center justify-center gap-1.5 rounded-[9px] px-3 text-sm font-medium text-neutro-300 transition-colors hover:text-white",
               ativo && "bg-card text-white sombra-cartao dark:bg-white/[0.12]",
             )}>
-            <o.icone className="h-4 w-4" aria-hidden />
+            <o.icone className="hidden h-4 w-4 sm:block" aria-hidden />
             {o.rotulo}
           </button>
         );

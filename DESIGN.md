@@ -1,212 +1,198 @@
 ---
 name: Portal Wise Partners
-description: Ferramenta de gestão do programa de parcerias da Wise Makers, em fundo escuro com o menta como sinal.
+description: Ferramenta de gestão do programa de parcerias da Wise Makers, com a forma dos apps da Apple, modo claro e escuro e o menta como sinal da marca.
 colors:
   menta-sinal: "#00e193"
-  menta-claro: "#4defa9"
-  menta-texto: "#12e893"
-  menta-profundo: "#0a6b48"
-  fundo-app: "#101012"
-  superficie-card: "#1c1c20"
-  superficie-campo: "#303036"
-  texto-principal: "#ffffff"
-  texto-secundario: "#adadb3"
-  texto-desabilitado: "#61616a"
-  alerta-ambar: "#f5a623"
-  perigo-vermelho: "#f0473a"
+  menta-texto-escuro: "#12e893"
+  menta-texto-claro: "#007a4d"
+  menta-foco-claro: "#00905e"
+  fundo-claro: "#f5f5f7"
+  cartao-claro: "#ffffff"
+  texto-claro: "#1d1d1f"
+  texto-secundario-claro: "#626266"
+  fundo-escuro: "#101012"
+  cartao-escuro: "#1c1c20"
+  popover-escuro: "#232327"
+  texto-escuro: "#ffffff"
+  texto-secundario-escuro: "#adadb3"
+  alerta-claro: "#8a4b00"
+  alerta-escuro: "#f5a623"
+  perigo-claro: "#b8281d"
+  perigo-escuro: "#f0473a"
   nivel-elite-fundo: "#111827"
   nivel-elite-ouro: "#d97706"
   nivel-premium-fundo: "#1e3a8a"
   nivel-select-fundo: "#365314"
 typography:
   display:
-    fontFamily: "Baloo 2, Plus Jakarta Sans, sans-serif"
-    fontWeight: 800
-  headline:
-    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
-    fontSize: "1.875rem"
+    fontFamily: "ui-rounded, SF Pro Rounded, -apple-system, system-ui, sans-serif"
     fontWeight: 700
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.024em"
+  headline:
+    fontFamily: "-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+    fontSize: "2.125rem"
+    fontWeight: 700
+    letterSpacing: "-0.024em"
   title:
-    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
-    fontSize: "1rem"
+    fontFamily: "-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
+    fontSize: "1.125rem"
     fontWeight: 600
+    letterSpacing: "-0.014em"
   body:
-    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
+    fontFamily: "-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 400
+    letterSpacing: "-0.006em"
   label:
-    fontFamily: "Plus Jakarta Sans, system-ui, sans-serif"
+    fontFamily: "-apple-system, BlinkMacSystemFont, system-ui, Segoe UI, Roboto, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 600
+    letterSpacing: "0.004em"
 rounded:
   pilula: "9999px"
+  dialogo: "18px"
   card: "14px"
+  menu: "12px"
   campo: "10px"
-  interno: "8px"
+  segmento: "9px"
 spacing:
   card-padding: "16px"
   card-padding-lg: "20px"
   secao: "24px"
+  cabecalho: "32px"
 components:
   button-primary:
     backgroundColor: "{colors.menta-sinal}"
-    textColor: "{colors.fundo-app}"
+    textColor: "{colors.fundo-escuro}"
     rounded: "{rounded.pilula}"
     height: "40px"
     padding: "8px 16px"
   button-outline:
-    backgroundColor: "{colors.fundo-app}"
-    textColor: "{colors.texto-principal}"
+    backgroundColor: "{colors.cartao-claro}"
+    textColor: "{colors.texto-claro}"
     rounded: "{rounded.pilula}"
     height: "40px"
   card:
-    backgroundColor: "{colors.superficie-card}"
-    textColor: "{colors.texto-principal}"
+    backgroundColor: "{colors.cartao-claro}"
+    textColor: "{colors.texto-claro}"
     rounded: "{rounded.card}"
     padding: "{spacing.card-padding}"
   input:
-    backgroundColor: "{colors.fundo-app}"
-    textColor: "{colors.texto-principal}"
+    backgroundColor: "{colors.fundo-claro}"
+    textColor: "{colors.texto-claro}"
     rounded: "{rounded.campo}"
     height: "40px"
-  pilula-menta:
-    textColor: "{colors.menta-claro}"
-    rounded: "{rounded.pilula}"
+  segmented-control:
+    backgroundColor: "{colors.fundo-claro}"
+    textColor: "{colors.texto-secundario-claro}"
+    rounded: "{rounded.campo}"
   nav-item-ativo:
-    textColor: "{colors.menta-claro}"
-    rounded: "{rounded.interno}"
+    textColor: "{colors.menta-texto-claro}"
+    rounded: "{rounded.campo}"
 ---
 
 # Design System: Portal Wise Partners
 
-Este arquivo registra o sistema visual **como está no código hoje** (`src/index.css`, `tailwind.config.ts`, `src/components/ui`, `src/components/comum`). A regra da marca é a skill `wise-design-system` (`.claude/skills/wise-design-system/`, com `referencias/tokens.md`). Onde o código diverge da skill, a divergência está na seção final "Diferenças a corrigir" e **a skill prevalece**.
+Desde 26/11/2026 a forma do portal segue a skill `apple-design` (regra número 1 do CLAUDE.md) e a marca segue a skill `wise-design-system` (logo, verde menta como sinal, voz). O código é a fonte: `src/index.css` (tokens dos dois temas, materiais, acessibilidade), `tailwind.config.ts` (fonte, escala, curvas, cores que acompanham o tema), `src/components/ui` e `src/lib/tema.ts`.
 
 ## Overview
 
-**Creative North Star: "Sinal sobre silêncio"**
+**Creative North Star: "Ferramenta da Apple com sinal da Wise"**
 
-Uma ferramenta de trabalho escura, calma e precisa, na linha de Linear, Stripe Dashboard e Attio, com a assinatura da Wise Makers: fundo quase preto, texto branco e o verde menta reservado para o que pede atenção. O silêncio são as superfícies neutras e as bordas finas; o sinal é o menta no botão principal, no item ativo e no número que importa.
-
-Hoje a interface é densa em texto e organizada em cards de mesmo peso: a hierarquia vem mais da ordem dos blocos do que de tamanho, cor ou gráfico. O menta já é usado como acento, mas aparece em muitos lugares (títulos de seção, links, pílulas, barras), o que dilui o sinal.
+Calma, precisa e familiar como os apps da Apple: fonte do sistema, títulos grandes com espaçamento apertado, superfícies agrupadas, barras translúcidas por onde o conteúdo passa, resposta no instante do toque. A marca aparece pouco e com intenção: o logo, o menta no botão principal, no item ativo e no número que bateu a meta.
 
 **Key Characteristics:**
-- Tema escuro único, sem modo claro.
-- Profundidade por superfície e borda branca translúcida, quase sem sombra.
-- Plus Jakarta Sans em toda a interface; Baloo 2 só no logotipo e em títulos públicos.
-- Pílulas arredondadas para estados, níveis e botões.
-- Sem gráficos: números em cards e barras de progresso simples.
+- Modo claro e escuro com os mesmos papéis de cor. Nas áreas logadas vale a escolha da pessoa (Minha conta, Aparência: Automático, Claro, Escuro) ou o sistema; as páginas públicas ficam no escuro, como momento da marca.
+- Fonte do sistema (SF Pro, Segoe UI, Roboto), com espaçamento e entrelinha por tamanho; `font-display` arredondada só no número principal e em títulos públicos.
+- Barras e menu lateral translúcidos (`material-barra`, `material-lateral`), com a linha de separação só quando o conteúdo passa por baixo.
+- Botões em pílula que respondem ao pressionar (escala 0,97 em 100 ms); menus que nascem do botão que os abriu.
+- Contraste AA conferido em todas as rotas logadas nos dois temas.
 
 ## Colors
 
-Neutros quase pretos com um único acento verde menta e duas cores de estado.
+Um acento (menta) sobre neutros, com par claro e escuro para cada papel.
 
 ### Primary
-- **Menta sinal** (#00e193): botão principal, item ativo da navegação, foco, barras de progresso. Variáveis `--primary` e `--ring`.
-- **Menta claro** (#4defa9) e **menta texto** (#12e893): texto em pílulas e links sobre fundo escuro (`text-menta-300` e `text-menta-400`).
-- **Menta profundo** (#0a6b48): fundos suaves de destaque (menta a 10 a 15% de opacidade na prática).
+- **Menta sinal** (#00e193): botão principal, item ativo, barras de progresso, a série principal. Igual nos dois temas (`--primary`).
+- **Menta para texto**: #12e893 no escuro e #007a4d no claro (`menta-400`, `menta-300`), sempre com 4,5:1 ou mais.
+- **Foco**: anel menta (#00e193 no escuro, #00905e no claro) com halo suave de 20%.
 
 ### Neutral
-- **Fundo do app** (#101012): `--background`.
-- **Superfície de card** (#1c1c20): `--card` e `--popover`.
-- **Superfície de campo e secundária** (#303036): `--secondary` e `--accent`.
-- **Texto principal** (#ffffff) e **texto secundário** (#adadb3): `--foreground` e `--muted-foreground`.
-- **Bordas**: branco a 12% (`--border`) e 16% (`--input`); no código também `border-white/10` e `bg-white/5` soltos.
+- **Claro**: fundo agrupado #f5f5f7, cartão #ffffff, texto #1d1d1f, secundário #626266, bordas em grafite a 10%.
+- **Escuro**: fundo #101012, cartão #1c1c20, popover #232327, texto #ffffff, secundário #adadb3, bordas em branco a 12%.
+- `white`, `neutro`, `menta-200` a `menta-400`, `red-200`, `red-300`, `sky-300`, `violet-200` e `violet-300` leem variáveis e acompanham o tema. Branco literal sobre foto ou cor sólida: `puro`.
 
 ### Named Rules
 **A Regra do Sinal.** O menta marca o que pede ação ou bateu a meta; se mais de 10% da área visível está menta, há excesso.
 
-**A Regra da Cor com Significado.** Âmbar (#f5a623) é alerta, vermelho (#f0473a) é perigo. Nenhuma das duas serve para "negativo" neutro.
+**A Regra do Par.** Toda cor nova nasce com o valor claro e o escuro, e com o contraste conferido nos dois.
 
 ## Typography
 
-**Display Font:** Baloo 2 (com Plus Jakarta Sans de reserva)
-**Body Font:** Plus Jakarta Sans (com system-ui)
-
-**Character:** Plus Jakarta Sans dá o tom de software sério e legível; Baloo 2, arredondada e pesada, é a voz da marca e aparece pouco.
+**Font:** a do sistema. **Display:** a arredondada do sistema (SF Pro Rounded), com a do sistema de reserva.
 
 ### Hierarchy
-- **Display** (800, Baloo 2): logotipo e títulos de páginas públicas. No código, `font-display` aparece uma única vez.
-- **Headline** (700, 24 a 30 px, `text-2xl sm:text-3xl`): título de página no `Cabecalho`.
-- **Title** (600, 16 a 18 px): títulos de seção e de card.
-- **Body** (400, 14 px): texto corrido, células e descrições.
-- **Label** (600, 12 px; às vezes 10 e 11 px): pílulas, rótulos de campo e metadados.
+- **Título de página** (700, 28 px no celular e 34 px no computador, -0,024em, entrelinha 1,1): `Cabecalho`.
+- **Título de seção** (600, 16 a 18 px, -0,014em).
+- **Corpo** (400, 14 px, -0,006em, entrelinha 1,5); descrição de página em 15 px.
+- **Rótulo** (500 a 600, 12 px, +0,004em).
+- Números com `tabular-nums` em tabelas e indicadores.
 
 ## Layout
 
-Barra lateral fixa de 240 px no computador e menu em gaveta no celular; conteúdo com respiro de 24 a 32 px. As páginas empilham `Cabecalho` (título, descrição, ações) e seções em cards, em grades de 1 a 3 colunas (`md:grid-cols-2`, `xl:grid-cols-3`). Tabelas usam o `Table` do shadcn com rolagem horizontal; no celular, várias listas viram cards. Abas (`Tabs`) organizam telas longas, como a ficha do parceiro e as configurações.
+Menu lateral translúcido de 240 a 250 px no computador e gaveta no celular; barra do topo translúcida e fixa; abas da seção logo abaixo; conteúdo com respiro de 16 a 24 px e largura máxima de 1280 px. Cada página começa pelo `Cabecalho` (título, pergunta que a tela responde, ações).
 
 ## Elevation & Depth
 
-Sistema plano: a profundidade vem do contraste entre fundo (#101012) e card (#1c1c20) e da borda branca translúcida. O `Card` do shadcn ainda carrega `shadow-sm`, e há 14 usos de sombra soltos (popovers, diálogos, alguns cards).
+Camadas por superfície: fundo, cartões e, por cima, menus, avisos e diálogos. No claro os cartões têm sombra quase invisível (`sombra-cartao`); no escuro, nenhuma. Elementos flutuantes usam `sombra-flutuante`. Diálogos e folhas escurecem o fundo (preto a 40% com desfoque leve) para dar foco.
 
 ### Named Rules
-**A Regra Plana.** Camadas se separam por superfície e borda, não por sombra; sombra só em camadas flutuantes.
+**A Regra do Material.** Translucidez só nas barras e folhas; nunca uma superfície translúcida clara sobre outra.
 
 ## Shapes
 
-Cantos generosos: 14 px em cards e diálogos (`--radius`), 10 px em campos, 8 px em itens internos e da navegação, e pílula completa em botões, selos e estados. Na prática os raios aparecem como valores soltos (`rounded-[14px]`, `rounded-[10px]`, `rounded-[8px]`) em mais de 300 lugares.
+Pílula em botões, selos e estados; 18 px em diálogos; 14 px em cartões; 12 px em menus; 10 px em campos e itens do menu; 9 px nos segmentos.
 
 ## Components
 
 ### Buttons
-- **Shape:** pílula completa (9999 px), altura de 40 px (36 px no tamanho pequeno).
-- **Primary:** fundo menta (#00e193) com texto quase preto, 600.
-- **Hover / Focus:** menta a 90%; foco com anel menta.
-- **Outline / Ghost:** borda branca a 16% sobre o fundo; ghost sem borda, com fundo #303036 no hover.
+- **Primary:** menta com texto quase preto, pílula, 40 px (44 px em tela de toque).
+- **Outline:** cartão com borda fina; **Secondary:** véu cinza; **Ghost:** só véu no passar e no pressionar.
+- **Pressionar:** escala 0,97 em 100 ms; com menos movimento, sem escala.
 
-### Chips
-- **Style:** `Pilula` com fundo do tom a 15% e texto claro do tom: neutro, menta, alerta, perigo (`text-red-300`) e informação (`sky-300`).
-- **Níveis:** `SeloNivel` com Elite em fundo #111827 e texto e contorno ouro (#d97706), Premium em #1e3a8a e Select em #365314, ambos com texto branco.
+### Segmented control
+- `SeletorAparencia` e as `TabsList`: trilho com véu cinza, segmento ativo em cartão com sombra leve.
 
 ### Cards / Containers
-- **Corner Style:** 14 px.
-- **Background:** #1c1c20 (`bg-card`), às vezes `bg-white/5` para blocos internos.
-- **Shadow Strategy:** plana; ver Elevation & Depth.
-- **Border:** branco a 10 ou 12%.
-- **Internal Padding:** 16 a 20 px (`p-4 sm:p-5`).
+- 14 px, cartão branco no claro e #1c1c20 no escuro, borda fina, 16 a 20 px de respiro.
 
 ### Inputs / Fields
-- **Style:** fundo do app, borda branca a 16%, 10 px de raio, 40 px de altura.
-- **Focus:** anel menta de 2 px.
+- Fundo agrupado, borda com 3:1, 10 px; foco com borda menta e halo de 20%.
 
 ### Navigation
-- **Style:** lista vertical de 20 itens na barra lateral, 14 px, 500; item ativo com fundo menta a 10% e texto menta; ícones Lucide de 16 px. No celular, a mesma lista numa gaveta.
+- Itens de 40 px, 10 px de raio; ativo com menta a 14% e texto menta em semibold.
 
-### Indicador e Bloco (painel)
-- Card com rótulo, número grande e uma linha de detalhe; usado igual para indicadores, pendências e listas.
+### Menus, popovers, avisos e diálogos
+- Nascem do ponto de origem (`transform-origin` do Radix), raio 12 a 18 px, `sombra-flutuante`; folhas com a curva `ease-folha` e diálogos com `ease-saida`.
+
+## Motion
+
+- Resposta no pressionar, não no soltar.
+- Curvas: `ease-saida` cubic-bezier(0.23, 1, 0.32, 1) para entradas; `ease-folha` cubic-bezier(0.32, 0.72, 0, 1) para folhas. Sem bounce fora de gesto com impulso.
+- Troca de tema com transição de cor de 200 ms, sem salto de brilho.
+- Menos movimento: deslizes e escalas viram esmaecimento de 150 ms; faixas em loop e esqueletos pulsando param.
+- Menos transparência e mais contraste: barras ficam sólidas e as bordas, mais fortes.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** usar o menta só como sinal (botão principal, item ativo, valor que bateu a meta).
-- **Do** separar camadas por superfície e borda branca translúcida.
+- **Do** usar só tokens; cor nova sempre com par claro e escuro.
+- **Do** manter o menta como sinal.
 - **Do** mostrar nível pelo nome para parceiros e clientes.
 - **Do** escrever sem travessão nem meia-risca.
 
 ### Don't:
-- **Don't** criar valores soltos de raio, cor ou tamanho de fonte: usar os tokens.
+- **Don't** usar `white` para branco literal (ele acompanha o tema); use `puro`.
+- **Don't** empilhar materiais translúcidos.
+- **Don't** usar fonte da web nas telas; a do sistema já traz o ajuste fino. Os PDFs mantêm as fontes embutidas.
 - **Don't** usar vermelho para variação negativa neutra.
-- **Don't** usar Baloo 2 em tabelas, botões ou rótulos.
-
-## Diferenças a corrigir
-
-Divergências entre o código atual e a skill `wise-design-system`. **A skill é a regra**; estes itens entram na fase 3 do plano (fundação técnica).
-
-| # | Tema | Código hoje | Regra da skill | Onde |
-|---|---|---|---|---|
-| 1 | Superfícies | 2 níveis (fundo #101012 e card #1c1c20) mais `bg-white/5` e `bg-white/10` soltos | 5 tokens: `surface-0` #101012, `surface-1` #151518, `surface-2` #1c1c20, `surface-3` #24242a, `surface-4` #303036 | `src/index.css`; 68 usos de `bg-white/N` |
-| 2 | Bordas | `border-white/10`, `/15`, `/20` soltos (222 usos) e `--border` a 12% | `border-subtle` 8%, `border-default` 12%, `border-strong` 20% | Componentes de página |
-| 3 | Raios | `rounded-[14px]` (171), `rounded-[10px]` (106), `rounded-[8px]` (28), outros | Tokens `radius-card` 14, `radius-control` 10, `radius-badge` 6 | Todo `src/` |
-| 4 | Raio do botão | Botão em pílula completa | 10 px em botões e campos; círculo só em avatares e pílulas | `src/components/ui/button.tsx` |
-| 5 | Texto terciário | Só `muted-foreground` #adadb3 (625 usos) para tudo que é secundário | `text-tertiary` #8b8b93 para metadados e eixos (conferir contraste) | `src/index.css` |
-| 6 | Cores de estado | `text-red-300`, `sky-500/300`, `amber` e similares da paleta do Tailwind (36 usos) | Tokens `state-success`, `state-warning`, `state-danger`, `state-info` (#6b9cf5) com fundo suave | `Selos.tsx` e telas |
-| 7 | Gráficos | Não há tokens nem biblioteca de gráficos; radar em SVG próprio | Paleta `--chart-1` a `--chart-5`, `--chart-muted`, grade e eixo; shadcn chart (Recharts) | Fase 3 |
-| 8 | Níveis | Premium e Select com texto branco; sem cores de nível para gráfico | Premium texto #c7d6ff, Select texto #d9f99d; gráfico Elite #e9a23b, Premium #6b8ff0, Select #8cc152 | `Selos.tsx`, `tailwind.config.ts` |
-| 9 | Sombra | `shadow-sm` no `Card` e 14 sombras soltas | Sem sombra em cards; `shadow-popover` só em camadas flutuantes | `src/components/ui/card.tsx` |
-| 10 | Números | `tabular-nums` não é usado em nenhum lugar | `tabular-nums` em tabelas, KPIs e eixos | Todo `src/` |
-| 11 | Escala tipográfica | `text-[10px]` e `text-[11px]` (12 usos); título de página 24 a 30 px | Escala 12, 13, 14, 16, 18, 22, 28, 36, 48; título 22 ou 28; nada abaixo de 12 | Selos, tabelas, `Cabecalho` |
-| 12 | Número principal | Baloo 2 usada uma vez; números de destaque em Plus Jakarta | `HeroMetric` em Baloo 2 com meta e tendência | Painel, resultado do canal |
-| 13 | Movimento | Sem tokens de duração e curva; animações padrão do shadcn | `duration-fast` 120 ms, `duration-base` 180 ms, `ease-out` cubic-bezier(.2,.8,.2,1), `prefers-reduced-motion` | `tailwind.config.ts` |
-| 14 | Componentes canônicos | `Cabecalho`, `Secao`, `Bloco`, `Indicador`, `Pilula`, `Vazio` | Kit `src/components/kit/` com `PageHeader`, `KpiTile`, `HeroMetric`, `ChartCard`, `DataTable` e demais, mais a vitrine `/app/vitrine` | Fase 3 |
-| 15 | Estados | Carregando com texto ("Carregando..."), vazio e erro genéricos | Esqueleto com o formato do componente; estados parcial e sem permissão | `src/components/comum/Estados.tsx` |
