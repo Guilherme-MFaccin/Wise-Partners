@@ -120,3 +120,11 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Site publicado: Programa, Ver como; aba `/ver-como` com a sessão só nela e a faixa de aviso.
 * Documento "Modelo e processos" na versão v18.
 * Conferido no ar: `/ver-como` sem código mostra o aviso de link usado ou incompleto, sem erro, em 375 e 1440 px. A abertura de uma conta real não foi testada daqui (precisa do login de administrador).
+
+## Publicação de 26/11/2026 (proposta comercial)
+
+* Migração `20261126000037` (comissão da Wise por tipo de venda: pontual 6% e 1,5%, contínuo 40% e 10% sobre a primeira mensalidade; `comissoes.parcela`; campos da venda pontual na indicação; preços da jornada em `config_landing_cliente`; `jornada_wise()`; Chamego e Totonho fora dos cases ativos) aplicada e registrada. Não havia indicações nem comissões em produção.
+* Funções `cadastro-parceiro` e `cliente-parceiro` publicadas de novo (o código comum das páginas passou a devolver os preços da jornada).
+* Site publicado: seção "Depois do diagnóstico" nas duas páginas públicas, jornada com a comissão em Conhecer a Wise Makers, venda pontual e contrato contínuo na indicação e nas comissões, preços em Programa, Páginas, Valores.
+* Documento "Modelo e processos" na versão v19.
+* Conferido no ar: `/parceiros` e a página do cliente de um link ativo em 375, 768 e 1440 px sem erro, sem rolagem lateral e sem travessão, com os preços da jornada, "+40" empresas B2B e sem o depoimento da Cristal. No banco, a regra da Wise (6 e 1,5 no pontual, 40 no contínuo), os preços (4.997, 4.997 e 3.997) e os cases (6 ativos) conferem.
