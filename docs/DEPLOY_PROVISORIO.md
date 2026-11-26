@@ -145,3 +145,9 @@ Variáveis: `SUPABASE_ACCESS_TOKEN`, `NETLIFY_AUTH_TOKEN` e o Reference ID (`REF
 * Documento "Modelo e processos" na versão v21.
 * Conferido em produção: migrações 37 a 40 registradas; nenhuma tabela, coluna, função, régua ou e-mail com pacote; entregas por nível (Elite 10, Premium 8, Select 4); regras publicadas com os benefícios por nível; Swallow com 1,5%; as 5 contrapartidas do parceiro de teste Wise (Select) mantidas. `/parceiros` e `/entrar` em 375 e 1440 px sem erro, sem rolagem lateral, sem travessão e sem pacote.
 * Ficaram como estavam, à espera do patrocinador: anotações, ofertas, contatos e próximos passos escritos pela equipe sobre parceiros reais que ainda citam pacote.
+
+## Publicação de 26/11/2026 (redesenho pela apple-design)
+
+* Só o site, sem mudança no banco nem nas funções.
+* Forma pela skill `apple-design` (regra número 1) e marca pela `wise-design-system`: fonte do sistema com espaçamento por tamanho, modo claro e escuro nas áreas logadas (Minha conta, Aparência), páginas públicas no escuro, barras translúcidas com borda de rolagem, resposta ao toque, menus que nascem do botão, diálogos e folhas com material, botões de 44 px em tela de toque, menos movimento, menos transparência e mais contraste. Logo com versão para o fundo claro. Sem fontes da web.
+* Conferido no ar: `/parceiros`, `/entrar` e a página do cliente em 375 e 1440 px no escuro mesmo com o sistema no claro, com a fonte do sistema, sem fonte da web, sem erro, sem rolagem lateral e sem travessão; `/app` sem login leva ao `/entrar`; o logo novo responde. As telas logadas não foram abertas no ar (precisam de login); no ambiente de teste, as 75 rotas passaram nos dois temas, com contraste AA.
