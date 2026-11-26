@@ -14,6 +14,12 @@ describe("Proposta comercial", () => {
       expect((await q.um("select pct_responsavel_pontual::float p, pct_responsavel::float c from public.empresas_grupo where codigo = 'wise'"))).toEqual({ p: 1.5, c: 10 });
     }));
 
+  it("na Swallow o parceiro fica com 6% e o gerente com 1,5% do projeto", () =>
+    transacao(async (q) => {
+      await q.sistema();
+      expect((await q.um("select pct_parceiro::float p, pct_responsavel::float g from public.empresas_grupo where codigo = 'swallow'"))).toEqual({ p: 6, g: 1.5 });
+    }));
+
   it("Chamego e Totonho ficam na base, mas fora dos cases ativos", () =>
     transacao(async (q) => {
       await q.sistema();

@@ -7,7 +7,7 @@ Atualizado em 2026-11-26.
 - Completude (informação mínima levantada): **98.1%**
 - Validação (elementos confirmados): **87.4%** (153 de 175)
 - Hipóteses ainda não confirmadas: 0
-- Perguntas pendentes: 11 · Contradições abertas: 0
+- Perguntas pendentes: 10 · Contradições abertas: 0
 - Modelo de negócio: 5 de 5 temas com informação
 
 ## Processos por nível

@@ -409,7 +409,7 @@
     {
       "id": "F-029",
       "tema": "receita",
-      "texto": "Comissão por uma regra geral, igual para todos nesta fase: 40% da primeira mensalidade ao parceiro e 10% ao Gerente na Wise Makers e na Tríade; 6% e 2% do projeto na Swallow. Sobre o LTV, fica entre 2% e 4% para clientes de 12 a 24 meses. O dinheiro é igual para todos; o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio). A regra é revista depois de dois trimestres com dados de permanência dos clientes indicados.",
+      "texto": "Comissão por uma regra geral, igual para todos nesta fase: 40% da primeira mensalidade ao parceiro e 10% ao Gerente na Wise Makers e na Tríade; 6% e 1,5% do projeto na Swallow. Sobre o LTV, fica entre 2% e 4% para clientes de 12 a 24 meses. O dinheiro é igual para todos; o que varia por tipo de parceiro é o não monetário (acesso, palco, apoio). A regra é revista depois de dois trimestres com dados de permanência dos clientes indicados.",
       "status": "confirmado",
       "evidencias": [
         "EV-0024",
@@ -418,7 +418,8 @@
         "EV-0029",
         "EV-0128",
         "EV-0129",
-        "EV-0377"
+        "EV-0377",
+        "EV-0490"
       ]
     },
     {
@@ -9260,7 +9261,7 @@
       "nome": "Fixar a regra de comissão e a contrapartida da Prateleira",
       "pai": "P-05",
       "ordem": 2,
-      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. Além da contrapartida não financeira, o parceiro recomendado pela Prateleira pode pagar à Wise uma comissão sobre o cliente da Wise que fechar com ele. No portal: calcula a comissão sozinho e registra a contrapartida combinada. Regra da Wise desde 26/11/2026: venda pontual da consultoria (mês 1, ou mês 1 e mês 2), 6% ao parceiro e 1,5% ao gerente de parcerias, como na Swallow; contrato contínuo, 40% ao parceiro e 10% ao gerente sobre a primeira mensalidade.",
+      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 1,5% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. Além da contrapartida não financeira, o parceiro recomendado pela Prateleira pode pagar à Wise uma comissão sobre o cliente da Wise que fechar com ele. No portal: calcula a comissão sozinho e registra a contrapartida combinada. Regra da Wise desde 26/11/2026: venda pontual da consultoria (mês 1, ou mês 1 e mês 2), 6% ao parceiro e 1,5% ao gerente de parcerias, como na Swallow; contrato contínuo, 40% ao parceiro e 10% ao gerente sobre a primeira mensalidade. Desde a mesma data, o gerente fica com 1,5% também nas vendas da Swallow (antes 2%).",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9303,7 +9304,9 @@
         "EV-0375",
         "EV-0377",
         "EV-0422",
-        "EV-0487"
+        "EV-0487",
+        "EV-0490",
+        "EV-0490"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -18939,6 +18942,15 @@
       "data": "2026-11-26",
       "trecho": "Existe um erro com relação aos clientes da Wise e preciso que você desconsidere esta informação: Chamego não é total b2b, totonho e cristal é b2c. Resposta: Tirar da prova B2B (Recomendado)",
       "local": "Correção e resposta sobre os cases"
+    },
+    {
+      "id": "EV-0490",
+      "tipo": "entrevista",
+      "fonte": "Respostas do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Swallow passa a 1,5% para o gerente de parcerias",
+      "local": "Resposta à pergunta sobre o gerente na Swallow"
     }
   ],
   "perguntas": [
@@ -29161,10 +29173,14 @@
       ],
       "rodada": 15,
       "bloco": "Proposta comercial",
-      "status": "aberta",
+      "status": "respondida",
       "formulario": null,
-      "respostas": [],
-      "respondida_por": [],
+      "respostas": [
+        "EV-0490"
+      ],
+      "respondida_por": [
+        "PE-01"
+      ],
       "chave": "pendente-v19",
       "contexto": [],
       "logica": "",
@@ -31115,6 +31131,16 @@
       "evidencias": [
         "EV-0489"
       ]
+    },
+    {
+      "id": "DE-115",
+      "data": "2026-11-26",
+      "texto": "O gerente de parcerias fica com 1,5% nas vendas da Swallow (antes 2%), a mesma regra da venda pontual da Wise; o parceiro continua com 6% do projeto.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0490"
+      ]
     }
   ],
   "glossario": [
@@ -31381,6 +31407,10 @@
     {
       "data": "2026-11-26",
       "evento": "To-be v19: proposta comercial integrada. Diagnóstico gratuito com plano de 6 meses; jornada opcional (mês 1 guiado R$ 4.997 em vez de R$ 7.000, mês 2 Plano de Tração R$ 4.997, continuidade R$ 3.997 por mês); comissão por tipo de venda (6% e 1,5% no pontual, 40% e 10% no contínuo); prova só B2B (+40 empresas; Chamego, Totonho e Cristal fora); P-33, P-38, P-62, P-95 e P-100 atualizados; canvas e calculadora refeitos."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "To-be v20: o gerente de parcerias passa de 2% para 1,5% nas vendas da Swallow, igual à venda pontual da Wise (P-62 e a regra de comissão atualizados)."
     }
   ]
 }

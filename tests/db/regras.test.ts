@@ -163,7 +163,7 @@ describe("Indicações e comissões das três empresas", () => {
   // A Wise tem regra própria por tipo de venda (proposta comercial de 26/11/2026): teste logo abaixo
   const casos = [
     ["triade", 5000, 2000, 500],
-    ["swallow", 80000, 4800, 1600],
+    ["swallow", 80000, 4800, 1200],
   ] as const;
   for (const [codigo, base, parceiro, responsavel] of casos) {
     it(`calcula a comissão da ${codigo}: parceiro e responsável`, () =>
