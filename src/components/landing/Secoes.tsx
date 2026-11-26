@@ -199,3 +199,22 @@ export function Faixa({ children, borda = "y" }: { children: ReactNode; borda?: 
   const b = borda === "y" ? "border-y border-white/10" : borda === "t" ? "border-t border-white/10" : "";
   return <div className={`${b} bg-neutro-800/40`}>{children}</div>;
 }
+
+// Jornada da consultoria (proposta comercial de 26/11/2026): o diagnóstico gratuito e as etapas pagas, opcionais
+export function JornadaConsultoria({ itens, nota }: { itens: Item[]; nota?: string }) {
+  if (!itens.length) return null;
+  return (
+    <>
+      <ol className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {itens.map((x, i) => (
+          <li key={`${i}-${x.titulo}`} className={`min-w-0 rounded-[14px] border p-5 ${i === 0 ? "border-dashed border-menta-500/50" : "border-white/10 bg-card"}`}>
+            <span className="text-[28px] font-bold leading-none tabular-nums text-menta-400">{i}</span>
+            <p className="mt-3 break-words font-semibold">{x.titulo}</p>
+            {x.texto && <p className="mt-2 text-sm text-neutro-300">{x.texto}</p>}
+          </li>
+        ))}
+      </ol>
+      {nota && <p className="mt-4 text-sm text-neutro-300">{nota}</p>}
+    </>
+  );
+}

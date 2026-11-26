@@ -5453,7 +5453,7 @@
       "nome": "Entregar o lead ao closer",
       "pai": "P-31",
       "ordem": 2,
-      "descricao": "O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. Quando a oportunidade nasce de um diagnóstico, quem conduziu a reunião passa o caso ao closer. No portal: registra para quem foi o lead e quando.",
+      "descricao": "O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. Quando a oportunidade nasce de um diagnóstico, quem conduziu a reunião passa o caso ao closer. No portal: registra para quem foi o lead e quando. O closer apresenta a jornada da proposta comercial e registra na indicação o que o cliente comprou: a venda pontual (mês 1, ou mês 1 e mês 2) e, se houver, a primeira mensalidade do contrato contínuo, cada uma com a data de compensação.",
       "dono": "PA-01",
       "participantes": [
         "PA-03"
@@ -5492,14 +5492,16 @@
         "EV-0026",
         "EV-0366",
         "EV-0373",
-        "EV-0395"
+        "EV-0395",
+        "EV-0479",
+        "EV-0487"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-005"
       ],
-      "portal": "registra para quem foi o lead e quando.",
+      "portal": "registra para quem foi o lead e quando, e na indicação da Wise a venda pontual e o contrato contínuo, cada um com a sua compensação.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -6148,7 +6150,7 @@
       "nome": "Pagar a comissão",
       "pai": "P-31",
       "ordem": 6,
-      "descricao": "Regra de comissão: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro.",
+      "descricao": "Regra de comissão: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro. A Wise paga duas comissões possíveis por cliente: 6% das vendas pontuais (1 ou 2 meses) e 40% da primeira mensalidade do contrato contínuo, cada uma depois que o pagamento do cliente compensa.",
       "dono": "PA-04",
       "participantes": [
         "PA-01",
@@ -6182,12 +6184,13 @@
         "EV-0192",
         "EV-0368",
         "EV-0377",
-        "EV-0373"
+        "EV-0373",
+        "EV-0487"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "calcula e avisa o financeiro.",
+      "portal": "calcula cada parcela (venda pontual e contrato contínuo) e avisa o financeiro quando o pagamento compensa.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -9257,7 +9260,7 @@
       "nome": "Fixar a regra de comissão e a contrapartida da Prateleira",
       "pai": "P-05",
       "ordem": 2,
-      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. Além da contrapartida não financeira, o parceiro recomendado pela Prateleira pode pagar à Wise uma comissão sobre o cliente da Wise que fechar com ele. No portal: calcula a comissão sozinho e registra a contrapartida combinada.",
+      "descricao": "40% e 10% na Wise Makers e na Tríade, 6% e 2% do projeto na Swallow, sem exceção; o não monetário varia por tipo de parceiro; para entrar num pedido da Prateleira, contrapartida não financeira; revisão depois de dois trimestres com dados de permanência. O parceiro Select indica só a Wise Makers; Premium e Elite indicam as três empresas do grupo. Nesta fase (MVP), a regra é geral e igual para todos; com o tempo podem surgir regras específicas por caso, sempre publicadas com 30 dias de aviso. Além da contrapartida não financeira, o parceiro recomendado pela Prateleira pode pagar à Wise uma comissão sobre o cliente da Wise que fechar com ele. No portal: calcula a comissão sozinho e registra a contrapartida combinada. Regra da Wise desde 26/11/2026: venda pontual da consultoria (mês 1, ou mês 1 e mês 2), 6% ao parceiro e 1,5% ao gerente de parcerias, como na Swallow; contrato contínuo, 40% ao parceiro e 10% ao gerente sobre a primeira mensalidade.",
       "dono": "PA-01",
       "participantes": [
         "PA-02"
@@ -9299,12 +9302,13 @@
         "EV-0029",
         "EV-0375",
         "EV-0377",
-        "EV-0422"
+        "EV-0422",
+        "EV-0487"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [],
-      "portal": "calcula a comissão sozinho e registra a contrapartida combinada.",
+      "portal": "guarda as duas regras da Wise (pontual e contínuo) em Regras e configurações e calcula cada comissão sozinho.",
       "fluxo": {
         "status": "confirmado",
         "evidencias": [
@@ -12375,7 +12379,7 @@
       "nome": "Conduzir o diagnóstico do cliente do parceiro",
       "pai": "P-31",
       "ordem": 0,
-      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação, aceita o termo de uso do diagnóstico e a página decide pelo ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa (ciclo de venda acima de 2 dias)); o parceiro é avisado. No ICP: agenda do Google com link do Google Meet. Antes da reunião, a IA gera o roteiro adaptado ao cliente a partir do cadastro (Matriz 5x5 como base, mesclada ao roteiro de diagnóstico) e o deixa no Wise Hub; quem conduz chega com o roteiro pronto. A reunião dura cerca de 2 horas: diagnóstico pelos 5 pilares e, na parte final, como usar o Wise Hub e o plano de ação. Tudo sai do que o cliente conta na reunião: a Wise não pede dados depois nem marca outro encontro. O plano de ação em PDF chega em até 2 dias úteis pelo portal e por e-mail. Mais informações para compor o plano, ou outra reunião para explicá-lo, são horas de consultoria pagas, como diz o termo. O Gerente conduz até 5 reuniões por semana; o que passar vai para um consultor da Wise, que registra no portal. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo. Valor de referência: diagnóstico R$ 2.000 e Wise Hub R$ 3.000, sem custo para o cliente do parceiro. Se a empresa já é cliente da Wise ou já negocia com ela, não há proteção de origem nem comissão. Se o cliente pede para contratar, abre-se a oportunidade. No portal: registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail.",
+      "descricao": "O cliente do parceiro abre o link, preenche o cadastro de qualificação, aceita o termo de uso do diagnóstico e a página decide pelo ICP da Wise (3 vendedores ou mais, faturamento de pelo menos R$ 250 mil por mês e venda mais complexa (ciclo de venda acima de 2 dias)); o parceiro é avisado. No ICP: agenda do Google com link do Google Meet. Antes da reunião, a IA gera o roteiro adaptado ao cliente a partir do cadastro (Matriz 5x5 como base, mesclada ao roteiro de diagnóstico) e o deixa no Wise Hub; quem conduz chega com o roteiro pronto. A reunião dura cerca de 2 horas: diagnóstico pelos 5 pilares e, na parte final, como usar o Wise Hub e o plano de ação. Tudo sai do que o cliente conta na reunião: a Wise não pede dados depois nem marca outro encontro. O plano de ação em PDF chega em até 2 dias úteis pelo portal e por e-mail. Mais informações para compor o plano, ou outra reunião para explicá-lo, são horas de consultoria pagas, como diz o termo. O Gerente conduz até 5 reuniões por semana; o que passar vai para um consultor da Wise, que registra no portal. Fora do ICP: autodiagnóstico na hora, resultado com o link do Hub e e-mail com um próximo passo. Valor de referência: diagnóstico R$ 2.000 e Wise Hub R$ 3.000, sem custo para o cliente do parceiro. Se a empresa já é cliente da Wise ou já negocia com ela, não há proteção de origem nem comissão. Se o cliente pede para contratar, abre-se a oportunidade. No portal: registra o cadastro e o aceite do termo, aplica a regra do ICP, libera a agenda ou o autodiagnóstico, gera o roteiro com IA e o publica no Wise Hub, recebe o registro do diagnóstico, gera o plano de ação em PDF e o envia pelo portal e por e-mail. Desde 26/11/2026 (proposta comercial), o diagnóstico gratuito é o mesmo de antes (valor de referência de R$ 5.000), com o plano de ação para os próximos 6 meses. Na devolutiva, o consultor apresenta o caminho recomendado e a jornada opcional: mês 1 de acompanhamento guiado (4 encontros semanais de 2 horas, R$ 4.997 em vez de R$ 7.000 para quem chegou pelo parceiro), mês 2 Plano de Tração (mais 4 encontros, mais R$ 4.997) e, do mês 3 em diante, o plano mensal de continuidade (R$ 3.997).",
       "dono": "PA-01",
       "participantes": [
         "PA-07"
@@ -12456,7 +12460,10 @@
         "EV-0420",
         "EV-0409",
         "EV-0421",
-        "EV-0446"
+        "EV-0446",
+        "EV-0486",
+        "EV-0478",
+        "EV-0480"
       ],
       "situacao": "em_implantacao",
       "fluxo_dispensado": null,
@@ -13496,7 +13503,7 @@
       "nome": "Manter os cases de resultado atualizados",
       "pai": "P-59",
       "ordem": 5,
-      "descricao": "A cada trimestre, o Gerente lê a página de cases da Wise Makers e atualiza os números, os nomes e o destaque de média nas duas páginas, no kit e no minicurso. Os cases comparam os meses de trabalho com os mesmos meses do ano anterior à entrada da Wise, sem valores em reais. Hoje: Florart's Decor (decoração e ambientes de alto padrão), +89,4% de jan/25 a out/26; Maringá Portas (indústria de portas), +43,8% de jan/26 a out/26; Chamego Bandeiras (indústria de bandeiras), +39,7% de jan/25 a ago/26; Fusion Alumínios (portas de vidro e soluções para móveis planejados), +25,7% de fev/25 a nov/25; Totonho Locações (locação de móveis e peças para festas e eventos), +25,4% de jan/26 a out/26; Protectpool (soluções para piscinas e rede de revendedores), +20,8% de jan/25 a out/26; Powerfit (equipamentos esportivos para o mercado fitness), +19,9% de jan/25 a out/25; Nicopel (indústria de embalagens personalizadas), +16,5% de jan/26 a out/26; média de +35%. Todos os 8 clientes autorizaram o uso do nome. No portal: guarda os cases num lugar só, usado pelas páginas e pelo kit.",
+      "descricao": "A cada trimestre, o Gerente lê a página de cases da Wise Makers e atualiza os números, os nomes e o destaque de média nas duas páginas, no kit e no minicurso. Os cases comparam os meses de trabalho com os mesmos meses do ano anterior à entrada da Wise, sem valores em reais. Hoje: Florart's Decor (decoração e ambientes de alto padrão), +89,4% de jan/25 a out/26; Maringá Portas (indústria de portas), +43,8% de jan/26 a out/26; Chamego Bandeiras (indústria de bandeiras), +39,7% de jan/25 a ago/26; Fusion Alumínios (portas de vidro e soluções para móveis planejados), +25,7% de fev/25 a nov/25; Totonho Locações (locação de móveis e peças para festas e eventos), +25,4% de jan/26 a out/26; Protectpool (soluções para piscinas e rede de revendedores), +20,8% de jan/25 a out/26; Powerfit (equipamentos esportivos para o mercado fitness), +19,9% de jan/25 a out/25; Nicopel (indústria de embalagens personalizadas), +16,5% de jan/26 a out/26; média de +35%. Todos os 8 clientes autorizaram o uso do nome. No portal: guarda os cases num lugar só, usado pelas páginas e pelo kit. Só entram como prova empresas B2B: Chamego (não é totalmente B2B), Totonho (B2C) e Cristal Móveis (B2C) saíram dos cases e do depoimento em 26/11/2026. O número de prova da Wise passa a ser o da proposta: mais de 40 indústrias e empresas B2B estruturadas.",
       "dono": "PA-01",
       "participantes": [],
       "gatilho": "Primeiro dia útil do trimestre",
@@ -13534,7 +13541,10 @@
         "EV-0403",
         "EV-0404",
         "EV-0390",
-        "EV-0446"
+        "EV-0446",
+        "EV-0489",
+        "EV-0485",
+        "EV-0488"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
@@ -18821,6 +18831,114 @@
       "data": "2026-11-26",
       "trecho": "Preciso que você faça uma função dentro do acesso de administradores e do gerente do portal, no caso eu mesmo, para que eu possa mudar o tipo de visualização, no sentido visualizar como e daí puxar a lista de todos os possíveis acessos e para que eu possa visualizar o portal, se está funcionando",
       "local": "Conversa de 26/11/2026, ver como"
+    },
+    {
+      "id": "EV-0478",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "Diagnóstico gratuito, O Plano · mês 1, Plano de Tração · mês 2, Continuidade · meses 3 a 6",
+      "local": "página 1"
+    },
+    {
+      "id": "EV-0479",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "O Plano · Mês 1 · 4 de 2h · R$ 4.997 · Plano de Tração · Mês 2 · +4 de 2h · + R$ 4.997 · Continuidade · Meses 3 a 6 · 2 por mês, de 3 a 4h · R$ 3.997/mês",
+      "local": "página 13, Investimento"
+    },
+    {
+      "id": "EV-0480",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "Condição exclusiva para clientes [Seu CRM]: O Plano sai por R$ 4.997 (valor de tabela R$ 7.000). Pagamento à vista ou parcelado.",
+      "local": "página 13"
+    },
+    {
+      "id": "EV-0481",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "05 Metas, da meta da empresa à atividade de cada vendedor; 06 Comissão e bônus; 07 Playbook, scripts, objeções e cadências do time; 08 Reativação, campanha na base de clientes inativos",
+      "local": "página 8, Etapa 2"
+    },
+    {
+      "id": "EV-0482",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "01 Leitura dos indicadores; 02 Gestão do time; 03 Aquisição e canais; 04 Retenção e base",
+      "local": "página 9, Etapa 3"
+    },
+    {
+      "id": "EV-0483",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "Comunidade Wise Makers: treinamentos ao vivo quinzenais; Formação de gestores: treinamentos quinzenais; Plataforma Wise: +100 aulas sobre estruturação comercial",
+      "local": "página 10"
+    },
+    {
+      "id": "EV-0484",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "Atividade do time; Oportunidades no funil; Funil atualizado: negócios parados há mais de 15 dias; Conversão por etapa; Tempo de resposta; Previsão de vendas",
+      "local": "página 11"
+    },
+    {
+      "id": "EV-0485",
+      "tipo": "documento",
+      "fonte": "Proposta comercial: Método Wise Makers, Programa de Estruturação Comercial (PDF de 14 páginas)",
+      "pessoa": null,
+      "data": "2026-11-26",
+      "trecho": "+40 empresas estruturadas. Indústrias e empresas B2B de Maringá e região que decidiram crescer com método.",
+      "local": "página 12"
+    },
+    {
+      "id": "EV-0486",
+      "tipo": "entrevista",
+      "fonte": "Respostas do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "O diagnóstico que está falando na proposta será exatamente o que já oferecíamos antes, que custava R$5.000,00 e estamos dando de graça. Um detalhe, caso não tivesse dessa forma antes, vamos precisar fazer o planejamento do diagnóstico gratúito para os 6 meses seguintes e não 12 meses. Se o cliente quiser que façamos um acompanhamento guiado em 4 seções semanais de 2h cada, podemos fazer com um valor descontado de R$4.997,00 para estruturarmos as ferramentas e treinar a equipe dentro do plano que já tínhamos e dar uma perspectiva de 12 meses. Para um acompanhamento de mais um mês o valor fica mais R$4.997,00 e vamos fazer tudo aquilo que está falando na proposta que vamos fazer no segundo mês. Do terceiro mês em diante, fazemos um plano mensal para seguirmos com a consultoria, como está na proposta",
+      "local": "Resposta sobre a oferta"
+    },
+    {
+      "id": "EV-0487",
+      "tipo": "entrevista",
+      "fonte": "Respostas do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Vamos fazer 6% de todas as vendas pontuais (1 ou 2 meses) e 40% da primeira mensalidade no contrato de consultoria contínuo. Leve em consideração que os 6% de venda pontual são os mesmos da venda de um produto da Swallow. 1,5% fica para o gerente de parcerias",
+      "local": "Resposta sobre a comissão"
+    },
+    {
+      "id": "EV-0488",
+      "tipo": "entrevista",
+      "fonte": "Respostas do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Usar +40 empresas B2B (Recomendado)",
+      "local": "Resposta sobre os números de prova"
+    },
+    {
+      "id": "EV-0489",
+      "tipo": "entrevista",
+      "fonte": "Respostas do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Existe um erro com relação aos clientes da Wise e preciso que você desconsidere esta informação: Chamego não é total b2b, totonho e cristal é b2c. Resposta: Tirar da prova B2B (Recomendado)",
+      "local": "Correção e resposta sobre os cases"
     }
   ],
   "perguntas": [
@@ -29026,6 +29144,81 @@
       "citacoes": [],
       "visual": "",
       "recomendo": "Sim: a comunidade serve a qualquer empresa e tem o caminho para ser parceiro."
+    },
+    {
+      "id": "Q-0286",
+      "texto": "O gerente de parcerias fica com 1,5% também nas vendas da Swallow, hoje com 2%?",
+      "tipo": "escolha",
+      "opcoes": [
+        "Sim, 1,5% também na Swallow",
+        "Não, a Swallow continua com 2%"
+      ],
+      "alvo": [
+        "P-62"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 15,
+      "bloco": "Proposta comercial",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v19",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Sim, se a regra das vendas pontuais for a mesma da Swallow."
+    },
+    {
+      "id": "Q-0287",
+      "texto": "A Comunidade Wise Makers da proposta (treinamentos ao vivo quinzenais para quem contrata) é diferente da Comunidade Wise Partners do portal. Os nomes ficam assim?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-62"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 15,
+      "bloco": "Proposta comercial",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v19",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Manter os dois, explicando no minicurso que uma é a turma de clientes da consultoria e a outra é o ecossistema de negócios."
+    },
+    {
+      "id": "Q-0288",
+      "texto": "A Plataforma Wise da proposta (+100 aulas) é o mesmo Wise Hub que o diagnóstico gratuito libera?",
+      "tipo": "aberta",
+      "opcoes": [],
+      "alvo": [
+        "P-62"
+      ],
+      "para": [
+        "PE-01"
+      ],
+      "rodada": 15,
+      "bloco": "Proposta comercial",
+      "status": "aberta",
+      "formulario": null,
+      "respostas": [],
+      "respondida_por": [],
+      "chave": "pendente-v19",
+      "contexto": [],
+      "logica": "",
+      "citacoes": [],
+      "visual": "",
+      "recomendo": "Confirmar o nome único para usar nas páginas e no minicurso."
     }
   ],
   "formularios": [
@@ -30847,6 +31040,81 @@
         "EV-0477"
       ],
       "texto": "O administrador e o gerente da comunidade podem ver o portal como qualquer conta, a partir da lista de todos os acessos por tipo, para conferir se está funcionando. Contas de administrador ficam de fora e cada uso fica registrado."
+    },
+    {
+      "id": "DE-108",
+      "data": "2026-11-26",
+      "texto": "O diagnóstico gratuito continua o mesmo (reunião, plano de ação e Wise Hub, valor de referência de R$ 5.000), com o plano para os próximos 6 meses, e não 12.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0486"
+      ]
+    },
+    {
+      "id": "DE-109",
+      "data": "2026-11-26",
+      "texto": "Depois do diagnóstico, a jornada opcional da proposta comercial: mês 1 de acompanhamento guiado, 4 encontros semanais de 2 horas, por R$ 4.997 em vez de R$ 7.000, para estruturar as ferramentas, treinar a equipe dentro do plano e dar a perspectiva de 12 meses.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0486",
+        "EV-0480"
+      ]
+    },
+    {
+      "id": "DE-110",
+      "data": "2026-11-26",
+      "texto": "Mês 2, Plano de Tração: mais 4 encontros e mais R$ 4.997, com metas, comissão e bônus, playbook e reativação da base.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0486",
+        "EV-0481"
+      ]
+    },
+    {
+      "id": "DE-111",
+      "data": "2026-11-26",
+      "texto": "Do mês 3 em diante, plano mensal de continuidade, como na proposta: 2 encontros por mês, de 3 a 4 horas, por R$ 3.997 por mês.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0486",
+        "EV-0479",
+        "EV-0482"
+      ]
+    },
+    {
+      "id": "DE-112",
+      "data": "2026-11-26",
+      "texto": "Comissão da Wise ao parceiro: 6% das vendas pontuais (1 ou 2 meses), como na Swallow, com 1,5% para o gerente de parcerias; 40% da primeira mensalidade do contrato contínuo, com 10% para o gerente.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0487"
+      ]
+    },
+    {
+      "id": "DE-113",
+      "data": "2026-11-26",
+      "texto": "O número de prova é mais de 40 indústrias e empresas B2B estruturadas; sai o de 300 empresas e 1.500 vendedores.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0488",
+        "EV-0485"
+      ]
+    },
+    {
+      "id": "DE-114",
+      "data": "2026-11-26",
+      "texto": "Chamego, Totonho e Cristal Móveis não entram como prova B2B: saem dos cases ativos e do depoimento em vídeo.",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0489"
+      ]
     }
   ],
   "glossario": [
@@ -31109,6 +31377,10 @@
     {
       "data": "2026-11-26",
       "evento": "To-be v18: Ver como em Programa, para o administrador e o gerente conferirem o portal como cada tipo de acesso."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "To-be v19: proposta comercial integrada. Diagnóstico gratuito com plano de 6 meses; jornada opcional (mês 1 guiado R$ 4.997 em vez de R$ 7.000, mês 2 Plano de Tração R$ 4.997, continuidade R$ 3.997 por mês); comissão por tipo de venda (6% e 1,5% no pontual, 40% e 10% no contínuo); prova só B2B (+40 empresas; Chamego, Totonho e Cristal fora); P-33, P-38, P-62, P-95 e P-100 atualizados; canvas e calculadora refeitos."
     }
   ]
 }

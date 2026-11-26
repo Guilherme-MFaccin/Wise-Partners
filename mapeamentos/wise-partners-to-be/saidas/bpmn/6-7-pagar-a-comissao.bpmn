@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-38" name="6.7 Pagar a comissão" processRef="Process_P-38" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-38" name="6.7 Pagar a comissão" isExecutable="false">
-    <bpmn:documentation>Regra de comissão: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>Regra de comissão: calcular quando o cliente fecha, aguardar a compensação do primeiro pagamento, receber a nota e pagar. No portal: calcula e avisa o financeiro. A Wise paga duas comissões possíveis por cliente: 6% das vendas pontuais (1 ou 2 meses) e 40% da primeira mensalidade do contrato contínuo, cada uma depois que o pagamento do cliente compensa. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-38">
       <bpmn:lane id="Lane_P-38_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-38_i1</bpmn:flowNodeRef>

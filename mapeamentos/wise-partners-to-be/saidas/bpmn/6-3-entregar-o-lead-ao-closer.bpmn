@@ -4,7 +4,7 @@
     <bpmn:participant id="Participant_P-33" name="6.3 Entregar o lead ao closer" processRef="Process_P-33" />
   </bpmn:collaboration>
   <bpmn:process id="Process_P-33" name="6.3 Entregar o lead ao closer" isExecutable="false">
-    <bpmn:documentation>O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. Quando a oportunidade nasce de um diagnóstico, quem conduziu a reunião passa o caso ao closer. No portal: registra para quem foi o lead e quando. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
+    <bpmn:documentation>O Gerente leva o lead ao closer da empresa do grupo que vai atender e combina com ele, pessoalmente, como e quando atender; o lead indicado é tratado como especial, sem ligação fria. Gerente e closer conversam quando há indicação ou proposta nova, sem reunião fixa e sem SLA. Quando a oportunidade nasce de um diagnóstico, quem conduziu a reunião passa o caso ao closer. No portal: registra para quem foi o lead e quando. O closer apresenta a jornada da proposta comercial e registra na indicação o que o cliente comprou: a venda pontual (mês 1, ou mês 1 e mês 2) e, se houver, a primeira mensalidade do contrato contínuo, cada uma com a data de compensação. [status do fluxo: Confirmado; evidências: EV-0373]</bpmn:documentation>
     <bpmn:laneSet id="LaneSet_P-33">
       <bpmn:lane id="Lane_P-33_PA-01" name="Gerente de Parcerias">
         <bpmn:flowNodeRef>P-33_i1</bpmn:flowNodeRef>

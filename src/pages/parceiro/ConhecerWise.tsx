@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { moeda } from "@/lib/formato";
 import { Link } from "react-router-dom";
 import { ArrowRight, ClipboardList, Lock, Sparkles, Users } from "lucide-react";
 import { Cabecalho } from "@/components/comum/Cabecalho";
@@ -11,15 +14,57 @@ import { ConteudoTrilha } from "@/pages/parceiro/Trilha";
 // Conhecer a Wise Makers: o que a Wise Makers faz, o que a empresa indicada recebe e o minicurso "Como vender a Wise Makers".
 // Aberta a todas as empresas da comunidade; o link de indicação segue o acesso (parceiro ou cliente do grupo confirmado).
 const FATOS = [
-  { icone: Users, numero: "300+", texto: "empresas com o comercial estruturado pela Wise Makers" },
-  { icone: Sparkles, numero: "1.500+", texto: "vendedores capacitados em quatro anos" },
+  { icone: Users, numero: "40+", texto: "indústrias e empresas B2B com o comercial estruturado pela Wise Makers" },
+  { icone: Sparkles, numero: "6 meses", texto: "de plano de ação no diagnóstico gratuito" },
   { icone: ClipboardList, numero: "5x5", texto: "Matriz de Governança Comercial: cinco pilares, cinco critérios" },
 ];
 const RECEBE = [
   { titulo: "Diagnóstico comercial", texto: "Uma reunião de cerca de 2 horas com a equipe da Wise para empresas no perfil, ou o autodiagnóstico online." },
-  { titulo: "Plano de ação", texto: "O que priorizar, quem faz e como medir, por e-mail em até 2 dias úteis." },
+  { titulo: "Plano de ação para 6 meses", texto: "O que priorizar nos próximos 6 meses, quem faz e como medir, por e-mail em até 2 dias úteis." },
   { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas, treinamentos curtos, calculadoras, planilhas e checklists." },
 ];
+
+type Jornada = { diagnostico: number; preco_mes1: number; preco_mes1_tabela: number; preco_mes2: number; preco_continuidade: number; pct_pontual: number | null; pct_continuo: number };
+
+// Jornada da consultoria (proposta comercial de 26/11/2026), com os preços e a comissão vindos do banco
+function JornadaComPrecos({ indicar }: { indicar: boolean }) {
+  const q = useQuery({
+    queryKey: ["jornada-wise"],
+    staleTime: 10 * 60_000,
+    queryFn: async () => {
+      const { data, error } = await supabase.rpc("jornada_wise" as any);
+      if (error) throw error;
+      return data as Jornada | null;
+    },
+  });
+  if (q.isLoading) return <div className="h-40 rounded-[14px] border border-white/10 bg-card motion-safe:animate-pulse" aria-busy="true" aria-label="Carregando a jornada" />;
+  if (q.error) return <ErroCarga erro={q.error} aoTentar={() => q.refetch()} />;
+  const j = q.data;
+  if (!j) return null;
+  const pct = (v: number | null) => `${Number(v ?? 0).toLocaleString("pt-BR")}%`;
+  const etapas = [
+    { n: 0, titulo: "Diagnóstico gratuito", texto: `Reunião de cerca de 2 horas, plano para 6 meses e Wise Hub. Valor de referência ${moeda(j.diagnostico)}, sem custo.`, ganho: null },
+    { n: 1, titulo: "Mês 1: acompanhamento guiado", texto: `4 encontros semanais de 2 horas: ferramentas, equipe treinada e perspectiva de 12 meses. ${moeda(j.preco_mes1)} em vez de ${moeda(j.preco_mes1_tabela)}.`, ganho: pct(j.pct_pontual) },
+    { n: 2, titulo: "Mês 2: Plano de Tração", texto: `Mais 4 encontros: metas, comissão e bônus, playbook e reativação da base. Mais ${moeda(j.preco_mes2)}.`, ganho: pct(j.pct_pontual) },
+    { n: 3, titulo: "Do mês 3 em diante: continuidade", texto: `2 encontros por mês, de 3 a 4 horas: indicadores, gestão do time, aquisição e retenção. ${moeda(j.preco_continuidade)} por mês.`, ganho: `${pct(j.pct_continuo)} da 1ª mensalidade` },
+  ];
+  return (
+    <section aria-labelledby="jornada" className="space-y-3">
+      <h2 id="jornada" className="text-lg font-semibold">Se a empresa indicada quiser ir além</h2>
+      <p className="max-w-[68ch] text-sm text-neutro-300">O diagnóstico não obriga a nada. Quem chega pelo seu link tem condição especial no mês 1, e ao fim de cada etapa decide se segue com a Wise.</p>
+      <ol className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        {etapas.map((e) => (
+          <li key={e.n} className={`flex min-w-0 flex-col rounded-[14px] border p-5 ${e.n === 0 ? "border-dashed border-menta-500/50" : "border-white/10 bg-card"}`}>
+            <span className="text-[28px] font-bold leading-none tabular-nums text-menta-400">{e.n}</span>
+            <p className="mt-3 font-semibold">{e.titulo}</p>
+            <p className="mt-2 text-sm text-neutro-300">{e.texto}</p>
+            {indicar && e.ganho && <p className="mt-auto pt-3 text-sm"><span className="text-neutro-300">Sua comissão: </span><span className="font-semibold tabular-nums">{e.ganho}</span></p>}
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
 
 export default function ConhecerWise() {
   const acesso = useAcessoHub();
@@ -88,6 +133,8 @@ export default function ConhecerWise() {
           )}
         </div>
       </section>
+
+      <JornadaComPrecos indicar={indicar} />
 
       <section aria-labelledby="minicurso" className="space-y-2">
         <p id="minicurso" className="text-xs font-semibold uppercase tracking-[0.12em] text-menta-400">Minicurso</p>

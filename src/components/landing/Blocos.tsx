@@ -31,7 +31,7 @@ export const CASOS = {
   },
 };
 
-// Depoimentos em vídeo (os mesmos da plataformawise.com) e os números de cada caso
+// Depoimentos em vídeo (os mesmos da plataformawise.com) e os números de cada caso. Só B2B: o da Cristal Móveis (B2C) saiu em 26/11/2026.
 export type Depoimento = {
   video: string; capa: string; empresa: string; segmento: string; numero: string; legenda: string; texto: string;
   detalhe?: string; caso?: { desktop: string; celular: string; nome: string };
@@ -52,11 +52,7 @@ export const DEPOIMENTOS: Depoimento[] = [
     texto: "Análise dos dados comerciais, treinamento do time e ajuste do processo, com a operação rodando com uma equipe mais enxuta.",
     caso: { ...CASOS.fusion, nome: "da Fusion Alumínios" },
   },
-  {
-    video: "4DtnNtCxlac", capa: "/landing/depoimento-cristal.webp", empresa: "Cristal Móveis",
-    segmento: "Loja de móveis", numero: "2x", legenda: "o faturamento",
-    texto: "Dobrou o faturamento depois de estruturar o comercial com a Wise Makers. No vídeo, ela conta como foi.",
-  },
+
 ];
 
 export function Secao({ id, eyebrow, titulo, texto, children, className = "" }: { id?: string; eyebrow?: string; titulo: string; texto?: string; children: ReactNode; className?: string }) {
@@ -345,7 +341,7 @@ export function SecaoDepoimentos({ eyebrow, titulo }: { eyebrow?: string; titulo
   return (
     <>
       <Secao eyebrow={eyebrow} titulo={titulo}>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid gap-4 sm:grid-cols-2 ${DEPOIMENTOS.length >= 3 ? "lg:grid-cols-3" : ""}`}>
           {DEPOIMENTOS.map((d) => <CartaoDepoimento key={d.video} d={d} aoAssistir={() => setVideoAberto(d)} />)}
         </div>
         <figure className="mt-6 rounded-[14px] border border-white/10 bg-card p-5 sm:p-6">

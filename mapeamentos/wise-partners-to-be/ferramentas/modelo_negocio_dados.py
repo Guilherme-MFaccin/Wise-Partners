@@ -20,13 +20,13 @@ CANVAS = {
         ("Agenda de quem conduz os diagnósticos: o recurso mais escasso", "P"),
         ("Matriz 5x5 e roteiro de diagnóstico gerado por IA", "D"),
         ("Portal Wise Partners e Wise Hub", "D"),
-        ("8 cases com +35% de faturamento em média", "D"),
+        ("Mais de 40 indústrias e empresas B2B estruturadas; 6 cases B2B com +36% de faturamento em média", "D"),
         ("Marca e método da Wise Makers", "D"),
         ("Comunidade Wise Partners: o Catálogo de parceiros com condições só para membros e a base de clientes do Grupo Tríade", "D"),
         ("Minicurso Como vender a Wise Makers, aberto a todas as empresas da comunidade", "D")]),
     "pv": ("Proposta de valor", [
-        ("Para o cliente do parceiro: a consultoria comercial da Wise em formato de diagnóstico de 2 horas com plano de ação e Wise Hub, R$ 5.000 de valor, sem custo", "D"),
-        ("Para o parceiro: um benefício de peso para oferecer à base, que retém e diferencia, mais 40% da primeira mensalidade de cada cliente que contratar", "D"),
+        ("Para o cliente do parceiro: diagnóstico de 2 horas com plano de ação para os próximos 6 meses e Wise Hub, R$ 5.000 de valor, sem custo; se quiser ir além, o mês 1 guiado com desconto (R$ 4.997 em vez de R$ 7.000)", "D"),
+        ("Para o parceiro: um benefício de peso para oferecer à base, que retém e diferencia, mais 6% das vendas de 1 ou 2 meses e 40% da primeira mensalidade do contrato contínuo", "D"),
         ("Premium (um cliente seu, no perfil, fez o diagnóstico): acesso ao Catálogo de parceiros e às condições especiais", "D"),
         ("Elite (um cliente trazido contratou uma empresa do grupo): ofertas no catálogo, vistas pelos clientes do Grupo Tríade e pelos Premium", "D"),
         ("Para os clientes do Grupo Tríade: o principal é a comunidade, contratar com desconto no ecossistema e publicar os próprios produtos, sem precisar vender a consultoria; indicar a Wise é opcional", "D"),
@@ -53,12 +53,12 @@ CANVAS = {
         ("Empresas que querem conhecer o ecossistema ou ser parceiras: entram pela comunidade e veem a vitrine", "D"),
         ("Ecossistema de muitos lados: indústrias e quem presta serviço para indústrias, no modelo da G4 sem cobrança alta para entrar", "D")]),
     "cus": ("Estrutura de custos", [
-        ("Comissões: 40% da primeira mensalidade ao parceiro e 10% ao Gerente (R$ 3.000 por cliente de R$ 6.000)", "D"),
+        ("Comissões da Wise: venda pontual (mês 1 e mês 2), 6% ao parceiro e 1,5% ao Gerente; contrato contínuo, 40% e 10% da primeira mensalidade (R$ 1.998,50 sobre R$ 3.997)", "D"),
         ("Horas de diagnóstico: cerca de 3 horas por cliente no ICP", "P"),
         ("CAP: anúncios e horas de fila e conversa por parceiro aprovado", "D"),
         ("Portal, ferramentas e o tempo do Gerente", "D")]),
     "rec": ("Fontes de receita", [
-        ("Mensalidade da consultoria contratada pelo cliente do parceiro: média de R$ 5.500 a R$ 6.000", "F"),
+        ("Jornada da consultoria: mês 1 guiado R$ 4.997 (tabela R$ 7.000), mês 2 Plano de Tração R$ 4.997, plano mensal de continuidade R$ 3.997", "D"),
         ("Comissão paga à Wise pelo parceiro quando um cliente da Wise fecha com ele; no catálogo, opcional", "D"),
         ("Parceiro e cliente do parceiro não pagam: o diagnóstico é a isca, a consultoria é o anzol", "P")]),
 }
@@ -78,10 +78,16 @@ CONTA = [
     ("Funil de clientes", "tx_compar", "Reuniões que acontecem (comparecimento)", 80, "%", "Hipótese a testar"),
     ("Funil de clientes", "conv", "Diagnósticos que viram cliente", 10, "%", "Hipótese a testar"),
     ("Funil de clientes", "ciclo", "Tempo do diagnóstico até o fechamento", 45, "dias", "Hipótese a testar"),
-    ("Receita", "mensalidade", "Mensalidade média da consultoria", 6000, "R$", "Playbook v3.1: média de R$ 5.500 a R$ 6.000 (régua de R$ 3.500 a R$ 12.000)"),
-    ("Receita", "meses", "Permanência média do cliente", 12, "meses", "Exemplo da especificação 002; a confirmar"),
-    ("Custos", "com_parceiro", "Comissão do parceiro", 40, "% da 1ª mensalidade", "Regra de comissão (FO-14)"),
-    ("Custos", "com_gerente", "Comissão do Gerente", 10, "% da 1ª mensalidade", "Regra de comissão (v7)"),
+    ("Receita", "preco_mes1", "Mês 1: acompanhamento guiado (condição para o cliente do parceiro)", 4997, "R$", "Proposta comercial de 26/11/2026 (tabela R$ 7.000)"),
+    ("Receita", "tx_mes2", "Clientes do mês 1 que seguem para o mês 2", 60, "%", "Hipótese a testar"),
+    ("Receita", "preco_mes2", "Mês 2: Plano de Tração", 4997, "R$", "Proposta comercial de 26/11/2026"),
+    ("Receita", "tx_cont", "Clientes do mês 2 que seguem no plano mensal", 50, "%", "Hipótese a testar"),
+    ("Receita", "mensalidade", "Plano mensal de continuidade (do mês 3 em diante)", 3997, "R$", "Proposta comercial de 26/11/2026"),
+    ("Receita", "meses", "Meses de continuidade", 4, "meses", "Proposta: meses 3 a 6; a confirmar a permanência real"),
+    ("Custos", "com_pontual", "Comissão do parceiro na venda pontual", 6, "% do mês 1 e do mês 2", "Decisão de 26/11/2026, igual à Swallow"),
+    ("Custos", "com_pontual_ger", "Comissão do Gerente na venda pontual", 1.5, "% do mês 1 e do mês 2", "Decisão de 26/11/2026"),
+    ("Custos", "com_parceiro", "Comissão do parceiro no contrato contínuo", 40, "% da 1ª mensalidade", "Decisão de 26/11/2026 (regra do FO-14 mantida para o contínuo)"),
+    ("Custos", "com_gerente", "Comissão do Gerente no contrato contínuo", 10, "% da 1ª mensalidade", "Regra de comissão (v7)"),
     ("Custos", "custo_hora", "Custo-hora de quem conduz", 20.45, "R$ por hora", "Exemplo da especificação 002; a confirmar"),
     ("Custos", "h_diag", "Horas por diagnóstico", 3, "horas", "2 h de reunião, mais revisão do roteiro e do plano (proposta)"),
     ("Custos", "h_parceiro", "Horas por parceiro aprovado", 1.25, "horas", "Qualificação, conversa de 45 min e confirmações (proposta)"),
@@ -92,11 +98,12 @@ CONTA = [
 # ---------------------------------------------------------------- Value Proposition Canvas do cliente do parceiro (refeito no FO-16)
 VPC_CLIENTE = {
     "produtos": ["Diagnóstico comercial de cerca de 2 horas com a equipe da Wise, pelos 5 pilares (valor de referência R$ 2.000)",
-                 "Plano de ação em PDF em até 2 dias úteis", "Wise Hub: imersão de mais de 20 horas, trilhas, calculadoras, planilhas e checklists (R$ 3.000)"],
+                 "Plano de ação para os próximos 6 meses, em PDF, em até 2 dias úteis",
+                 "Se quiser ir além: mês 1 guiado (R$ 4.997 em vez de R$ 7.000), mês 2 Plano de Tração (R$ 4.997) e plano mensal (R$ 3.997)", "Wise Hub: imersão de mais de 20 horas, trilhas, calculadoras, planilhas e checklists (R$ 3.000)"],
     "aliviam": ["Processo de vendas desenhado, etapa por etapa, no lugar do improviso", "Metas e comissionamento que puxam resultado, saídos dos números da empresa",
                 "CRM usado de verdade, como registro único", "Script e playbook para o time vender igual", "Rotina de gestão semanal que tira o dono do dia a dia",
                 "Recrutamento e integração de vendedores com método"],
-    "criam": ["Crescimento de faturamento: os 8 cases da Wise cresceram, +35% em média", "Previsibilidade: saber quanto vai vender e de onde vem", "Time que vende sem depender do dono",
+    "criam": ["Crescimento de faturamento: os 6 cases B2B da Wise cresceram, +36% em média", "Previsibilidade: saber quanto vai vender e de onde vem", "Time que vende sem depender do dono",
               "Mais venda para a carteira atual"],
     "tarefas": ["Crescer o faturamento com previsibilidade", "Montar e gerir um time comercial que performa", "Tirar o dono da operação de vendas"],
     "dores": ["Vendas dependem do dono ou de um vendedor estrela", "Metas definidas no chute e comissão que não incentiva", "Leads e propostas perdidos sem acompanhamento",
@@ -108,7 +115,8 @@ VPC_CLIENTE_FONTE = ("Escopo da consultoria da Wise Makers (Instruções do proj
 
 # ---------------------------------------------------------------- Value Proposition Canvas por categoria de parceiro (todas as da lista aprovada)
 # Para todas: consultoria gratuita à base, comissão de 40%, certificado, Wise Hub com as duas marcas, minicurso; Premium e Elite por cima.
-COMUM = ["Consultoria gratuita para os clientes da carteira (diagnóstico de 2 horas e Wise Hub, R$ 5.000 de valor)", "40% da primeira mensalidade de cada cliente que contratar a Wise",
+COMUM = ["Consultoria gratuita para os clientes da carteira (diagnóstico de 2 horas, plano de 6 meses e Wise Hub, R$ 5.000 de valor)",
+         "6% do mês 1 e do mês 2 e 40% da primeira mensalidade do contrato contínuo de cada cliente que contratar a Wise",
          "Certificado, Wise Hub com as duas marcas e minicurso", "Premium: recomendação aos clientes da Wise; Elite: formação anual para a base"]
 CATEGORIAS = [
     # (grupo, nome, o que vende, tarefas, dores, ganhos, aliviam, criam)

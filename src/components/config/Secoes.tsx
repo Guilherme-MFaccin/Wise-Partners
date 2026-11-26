@@ -13,6 +13,10 @@ const COL_EMPRESAS: ColunaConfig[] = [
   { chave: "base_calculo", rotulo: "Base de cálculo da comissão", tipo: "texto", obrigatoria: true },
   { chave: "pct_parceiro", rotulo: "% do parceiro", tipo: "numero", obrigatoria: true },
   { chave: "pct_responsavel", rotulo: "% do responsável pela parceria", tipo: "numero", obrigatoria: true },
+  // Venda pontual (Wise, proposta comercial de 26/11/2026): vazio quando a empresa não tem venda pontual
+  { chave: "base_calculo_pontual", rotulo: "Base da comissão da venda pontual (vazio se não houver)", tipo: "texto" },
+  { chave: "pct_parceiro_pontual", rotulo: "% do parceiro na venda pontual", tipo: "numero" },
+  { chave: "pct_responsavel_pontual", rotulo: "% do responsável na venda pontual", tipo: "numero" },
   { chave: "site", rotulo: "Site", tipo: "texto" },
   { chave: "descricao_institucional", rotulo: "Descrição institucional (aparece no portal do parceiro)", tipo: "textarea" },
 ];

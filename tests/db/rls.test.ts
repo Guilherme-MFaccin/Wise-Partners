@@ -36,9 +36,10 @@ describe("Parceiro: só a própria parceria", () => {
   it("vê só a própria comissão como beneficiário, nunca a do responsável pela parceria", () =>
     transacao(async (q) => {
       await q.como(U.parceiroA);
+      // A Wise tem duas parcelas por indicação (venda pontual e contrato contínuo): o parceiro vê só as próprias, como parceiro
       const cs = await q.sql("select beneficiario, parceiro_id from public.comissoes");
-      expect(cs.length).toBe(1);
-      expect(cs[0]).toEqual({ beneficiario: "parceiro", parceiro_id: P.A });
+      expect(cs.length).toBeGreaterThan(0);
+      for (const c of cs) expect(c).toEqual({ beneficiario: "parceiro", parceiro_id: P.A });
     }));
 
   it("não vê campos internos da ficha (ex.: principais concorrentes)", () =>
@@ -254,7 +255,9 @@ describe("Time de parcerias, administrador e Diretor", () => {
   it("parcerias vê todas as comissões, mas não aprova assinatura", () =>
     transacao(async (q) => {
       await q.como(U.parcerias);
-      expect((await q.sql("select * from public.comissoes")).length).toBe(4);
+      const todas = await q.sql("select beneficiario from public.comissoes");
+      expect(todas.length).toBe(8);
+      expect(todas.some((c: any) => c.beneficiario === "responsavel")).toBe(true);
       expect((await q.sql("select * from public.parceiros_instrumento where programa_proprio")).length).toBe(1);
       const msg = await q.falha("insert into public.aprovacoes (parceiro_id, aprovado_por) values ($1, $2)", [P.D, U.parcerias]);
       expect(msg).toMatch(/row-level security/);

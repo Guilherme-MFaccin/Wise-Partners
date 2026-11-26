@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ROTULO_PARCELA } from "@/components/comissoes/dados";
 import { useQuery } from "@tanstack/react-query";
 import { Clock, Plus, RefreshCw } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -24,7 +25,7 @@ type Indicacao = {
   atualizacao_pendente: Record<string, any> | null;
   cliente: { razao_social: string } | null;
   empresa: { nome: string } | null;
-  comissoes: { id: string; beneficiario: string; estado: string; valor: number | null }[];
+  comissoes: { id: string; beneficiario: string; estado: string; valor: number | null; parcela?: string }[];
 };
 
 export default function Indicacoes() {
@@ -38,7 +39,7 @@ export default function Indicacoes() {
     queryKey: ["portal-indicacoes", perfil?.parceiro_id],
     queryFn: async () =>
       ok<any>(await supabase.from("indicacoes")
-        .select("id, sentido, etapa, data, valor_base, data_reuniao, atualizacao_pendente, cliente:clientes(razao_social), empresa:empresas_grupo(nome), comissoes(id, beneficiario, estado, valor)")
+        .select("id, sentido, etapa, data, valor_base, data_reuniao, atualizacao_pendente, cliente:clientes(razao_social), empresa:empresas_grupo(nome), comissoes(id, beneficiario, estado, valor, parcela)")
         .eq("parceiro_id", perfil!.parceiro_id).order("data", { ascending: false })) as Indicacao[],
   });
 
@@ -60,16 +61,19 @@ export default function Indicacoes() {
             {feitas.length === 0 ? <Vazio titulo="Nenhuma indicação feita">Use "Nova indicação" para indicar um cliente à Wise Makers, à Tríade ou à Swallow.</Vazio> : (
               <ul className="grid gap-3">
                 {feitas.map((i) => {
-                  const comissao = (i.comissoes ?? []).find((c) => c.beneficiario === "parceiro");
+                  // Wise: uma linha por parcela (venda pontual e contrato contínuo); parcela cancelada não aparece
+                  const minhas = (i.comissoes ?? []).filter((c) => c.beneficiario === "parceiro" && !(c.parcela && c.parcela !== "unica" && c.estado === "cancelada"));
                   return (
                     <li key={i.id} className="rounded-[14px] border border-white/10 bg-card p-4">
                       <Topo i={i} />
-                      <p className="mt-2 text-sm">
-                        <span className="text-muted-foreground">Sua comissão: </span>
-                        {comissao ? (
-                          <>{rotulo(ESTADOS_COMISSAO, comissao.estado)}{comissao.valor !== null && <> · {moeda(comissao.valor)}</>}</>
-                        ) : <span className="text-muted-foreground">calculada quando o negócio fechar</span>}
-                      </p>
+                      {minhas.length === 0 ? (
+                        <p className="mt-2 text-sm"><span className="text-muted-foreground">Sua comissão: calculada quando o negócio fechar</span></p>
+                      ) : minhas.map((comissao) => (
+                        <p key={comissao.id} className="mt-2 text-sm">
+                          <span className="text-muted-foreground">Sua comissão{comissao.parcela && ROTULO_PARCELA[comissao.parcela] ? ` (${ROTULO_PARCELA[comissao.parcela].toLowerCase()})` : ""}: </span>
+                          {rotulo(ESTADOS_COMISSAO, comissao.estado)}{comissao.valor !== null && <> · <span className="tabular-nums">{moeda(comissao.valor)}</span></>}
+                        </p>
+                      ))}
                     </li>
                   );
                 })}

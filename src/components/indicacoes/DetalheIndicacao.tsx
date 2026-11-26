@@ -93,9 +93,15 @@ function Dados({ i }: { i: Indicacao }) {
         <Item rotulo="Origem">{rotulo(ORIGENS_INDICACAO, i.origem)}{i.origem_detalhe ? ` · ${i.origem_detalhe}` : ""}</Item>
         <Item rotulo="CNPJ do cliente">{c?.cnpj ? formatarCnpj(c.cnpj) : "Não informado"}</Item>
         <Item rotulo="Data da reunião">{i.data_reuniao ? data(i.data_reuniao) : "Não informada"}</Item>
+        {i.empresa?.codigo === "wise" && (
+          <>
+            <Item rotulo="Venda pontual">{i.valor_pontual != null ? `${moeda(i.valor_pontual)}${i.meses_pontuais ? ` · ${i.meses_pontuais === 1 ? "mês 1" : "meses 1 e 2"}` : ""}` : "Não houve ou não informada"}</Item>
+            <Item rotulo="Compensação da venda pontual">{i.data_compensacao_pontual ? data(i.data_compensacao_pontual) : "Não informada"}</Item>
+          </>
+        )}
         <Item rotulo={rotuloValorBase(i.empresa)}>{i.valor_base != null ? moeda(i.valor_base) : "Não informado"}</Item>
         <Item rotulo="Data de fechamento">{i.data_fechamento ? data(i.data_fechamento) : "Não informada"}</Item>
-        <Item rotulo="Compensação do primeiro pagamento">{i.data_compensacao ? data(i.data_compensacao) : "Não informada"}</Item>
+        <Item rotulo={i.empresa?.codigo === "wise" ? "Compensação da primeira mensalidade" : "Compensação do primeiro pagamento"}>{i.data_compensacao ? data(i.data_compensacao) : "Não informada"}</Item>
         <Item rotulo="Última atualização">{dataHora(i.ultima_atualizacao)}</Item>
         {i.pedido_rfp_id && (
           <Item rotulo="Pedido de RFP">
@@ -143,10 +149,14 @@ function Item({ rotulo: r, children, largo }: { rotulo: string; children: ReactN
   );
 }
 
+// Preço de cada mês da jornada pontual (proposta comercial): sugere o valor; o closer ajusta se a condição for outra
+const PRECO_MES_PADRAO = 4997;
+
 type Andamento = {
   etapa: string; data_reuniao: string; valor_base: string; data_fechamento: string; data_compensacao: string;
   observacoes: string; cliente_existente: boolean; excecao_duplicidade: string;
   necessidade: string; prazo_meses: string; valor_total: string;
+  meses_pontuais: string; valor_pontual: string; data_compensacao_pontual: string;
 };
 
 function doRegistro(i: Indicacao): Andamento {
@@ -162,6 +172,9 @@ function doRegistro(i: Indicacao): Andamento {
     necessidade: i.necessidade ?? "",
     prazo_meses: i.prazo_meses != null ? String(i.prazo_meses) : "",
     valor_total: i.valor_total != null ? String(i.valor_total) : "",
+    meses_pontuais: i.meses_pontuais ? String(i.meses_pontuais) : "0",
+    valor_pontual: i.valor_pontual != null ? String(i.valor_pontual) : "",
+    data_compensacao_pontual: i.data_compensacao_pontual ?? "",
   };
 }
 
@@ -187,6 +200,12 @@ function FormAndamento({ i }: { i: Indicacao }) {
         prazo_meses: f.prazo_meses === "" ? null : Number(f.prazo_meses),
         valor_total: f.valor_total === "" ? null : Number(f.valor_total),
       };
+      if (i.empresa?.codigo === "wise") {
+        const meses = Number(f.meses_pontuais);
+        alteracoes.meses_pontuais = meses > 0 ? meses : null;
+        alteracoes.valor_pontual = meses > 0 && f.valor_pontual !== "" ? Number(f.valor_pontual) : null;
+        alteracoes.data_compensacao_pontual = meses > 0 ? f.data_compensacao_pontual || null : null;
+      }
       // Exceção para cliente existente: só administrador registra
       if (isAdmin) alteracoes.excecao_duplicidade = f.excecao_duplicidade.trim() || null;
       const { error } = await supabase.from("indicacoes").update(alteracoes).eq("id", i.id);
@@ -222,13 +241,35 @@ function FormAndamento({ i }: { i: Indicacao }) {
         <Campo rotulo="Data da reunião">
           <Input type="date" value={f.data_reuniao} onChange={(e) => set("data_reuniao", e.target.value)} />
         </Campo>
+        {i.empresa?.codigo === "wise" && (
+          <div className="grid gap-3 rounded-[10px] border border-white/10 p-3 sm:col-span-2 sm:grid-cols-3">
+            <p className="text-xs text-neutro-300 sm:col-span-3">Venda pontual (mês 1, ou mês 1 e mês 2 da jornada): comissão de 6% ao parceiro e 1,5% ao gerente.</p>
+            <Campo rotulo="Meses vendidos">
+              <Select value={f.meses_pontuais} onValueChange={(v) => setF((x) => ({ ...x, meses_pontuais: v, valor_pontual: v === "0" ? "" : x.valor_pontual || String(PRECO_MES_PADRAO * Number(v)) }))}>
+                <SelectTrigger><SelectValue /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="0">Nenhum</SelectItem>
+                  <SelectItem value="1">Mês 1 (acompanhamento guiado)</SelectItem>
+                  <SelectItem value="2">Mês 1 e mês 2 (Plano de Tração)</SelectItem>
+                </SelectContent>
+              </Select>
+            </Campo>
+            <Campo rotulo="Valor da venda pontual">
+              <Input type="number" inputMode="decimal" step="0.01" min="0" value={f.valor_pontual} disabled={f.meses_pontuais === "0"} onChange={(e) => set("valor_pontual", e.target.value)} />
+            </Campo>
+            <Campo rotulo="Compensação da venda pontual">
+              <Input type="date" value={f.data_compensacao_pontual} disabled={f.meses_pontuais === "0"} onChange={(e) => set("data_compensacao_pontual", e.target.value)} />
+            </Campo>
+            <p className="text-xs text-neutro-300 sm:col-span-3">Contrato contínuo (plano mensal a partir do mês 3): informe abaixo a primeira mensalidade. Comissão de 40% ao parceiro e 10% ao gerente.</p>
+          </div>
+        )}
         <Campo rotulo={rotuloValorBase(i.empresa)}>
           <Input type="number" inputMode="decimal" step="0.01" min="0" value={f.valor_base} onChange={(e) => set("valor_base", e.target.value)} />
         </Campo>
         <Campo rotulo="Data de fechamento">
           <Input type="date" value={f.data_fechamento} onChange={(e) => set("data_fechamento", e.target.value)} />
         </Campo>
-        <Campo rotulo="Compensação do primeiro pagamento">
+        <Campo rotulo={i.empresa?.codigo === "wise" ? "Compensação da primeira mensalidade" : "Compensação do primeiro pagamento"}>
           <Input type="date" value={f.data_compensacao} onChange={(e) => set("data_compensacao", e.target.value)} />
         </Campo>
         {i.empresa?.codigo === "wise" ? (

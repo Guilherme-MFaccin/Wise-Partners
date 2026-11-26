@@ -26,6 +26,10 @@ export type Indicacao = {
   valor_base: number | null;
   data_fechamento: string | null;
   data_compensacao: string | null;
+  // Wise (proposta comercial de 26/11/2026): venda pontual de 1 ou 2 meses, com compensação própria
+  valor_pontual?: number | null;
+  meses_pontuais?: number | null;
+  data_compensacao_pontual?: string | null;
   atualizacao_pendente: { etapa?: string; valor_base?: number | string; data_reuniao?: string; observacao?: string } | null;
   atualizacao_em: string | null;
   ultima_atualizacao: string;
@@ -65,6 +69,7 @@ export type Indicacao = {
 export const SELECT_INDICACAO = `
   id, sentido, parceiro_id, empresa_grupo_id, cliente_id, origem, origem_detalhe, data, responsavel_id, aderencia_icp, aderente_icp,
   cliente_existente, etapa, data_reuniao, valor_base, data_fechamento, data_compensacao, atualizacao_pendente, atualizacao_em,
+  valor_pontual, meses_pontuais, data_compensacao_pontual,
   ultima_atualizacao, excecao_duplicidade, pedido_rfp_id, observacoes, created_at,
   icp_confirmado, icp_confirmado_por, icp_confirmado_em, necessidade, nota_qualidade, qualificada, prazo_meses, valor_total,
   link_id, acao_wise_id, contrapartida_id, protecao_ate, protecao_expirada, sla, primeiro_contato_em, retorno_parceiro_em,

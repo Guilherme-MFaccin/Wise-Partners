@@ -31,25 +31,27 @@ export type MetaBloco<K extends string = string> = {
   listas?: Partial<Record<CampoLista, { rotulo: string; comTexto: boolean; nomeItem: string }>>;
 };
 
-export type Valores = { diagnostico: number; hub: number; total: number };
+// Valores de referência do diagnóstico gratuito e preços da jornada paga (proposta comercial de 26/11/2026)
+export type Valores = {
+  diagnostico: number; hub: number; total: number;
+  preco_mes1?: number; preco_mes1_tabela?: number; preco_mes2?: number; preco_continuidade?: number;
+};
 export type Icp = { min_vendedores: number; faturamento_min: string | null };
 export type CaseResultado = { empresa: string; segmento: string; crescimento: number; periodo: string };
 export type ResumoCases = { itens: CaseResultado[]; quantidade: number; media: number | null };
 
-export const VALORES_PADRAO: Valores = { diagnostico: 2000, hub: 3000, total: 5000 };
+export const VALORES_PADRAO: Valores = { diagnostico: 2000, hub: 3000, total: 5000, preco_mes1: 4997, preco_mes1_tabela: 7000, preco_mes2: 4997, preco_continuidade: 3997 };
 export const ICP_PADRAO: Icp = { min_vendedores: 3, faturamento_min: "250k_500k" };
 
 // Reserva só para o intervalo em que o site já foi publicado e as funções públicas ainda não devolvem os cases.
-// A fonte é a tabela cases_resultado, editada em Programa, Páginas, Cases.
+// A fonte é a tabela cases_resultado, editada em Programa, Páginas, Cases. Só cases B2B: Chamego e Totonho saíram em 26/11/2026.
 export const CASES_RESERVA: ResumoCases = {
-  quantidade: 8,
-  media: 35,
+  quantidade: 6,
+  media: 36,
   itens: [
     { empresa: "Florart's Decor", segmento: "Decoração e ambientes de alto padrão", crescimento: 89.4, periodo: "jan/25 a out/26" },
     { empresa: "Maringá Portas", segmento: "Indústria de portas", crescimento: 43.8, periodo: "jan/26 a out/26" },
-    { empresa: "Chamego Bandeiras", segmento: "Indústria de bandeiras", crescimento: 39.7, periodo: "jan/25 a ago/26" },
     { empresa: "Fusion Alumínios", segmento: "Portas de vidro e soluções para móveis planejados", crescimento: 25.7, periodo: "fev/25 a nov/25" },
-    { empresa: "Totonho Locações", segmento: "Locação de móveis e peças para festas e eventos", crescimento: 25.4, periodo: "jan/26 a out/26" },
     { empresa: "Protectpool", segmento: "Soluções para piscinas e rede de revendedores", crescimento: 20.8, periodo: "jan/25 a out/26" },
     { empresa: "Powerfit", segmento: "Equipamentos esportivos para o mercado fitness", crescimento: 19.9, periodo: "jan/25 a out/25" },
     { empresa: "Nicopel", segmento: "Indústria de embalagens personalizadas", crescimento: 16.5, periodo: "jan/26 a out/26" },
@@ -96,6 +98,10 @@ export const MARCADORES: { chave: string; descricao: string }[] = [
   { chave: "perfil_reuniao", descricao: "perfil para a reunião, gerado do ICP" },
   { chave: "media_cases", descricao: "média de crescimento dos cases" },
   { chave: "qtd_cases", descricao: "número de cases ativos" },
+  { chave: "preco_mes1", descricao: "mês 1 da jornada, com a condição especial" },
+  { chave: "preco_mes1_tabela", descricao: "mês 1 da jornada, preço de tabela" },
+  { chave: "preco_mes2", descricao: "mês 2 da jornada (Plano de Tração)" },
+  { chave: "preco_continuidade", descricao: "plano mensal de continuidade" },
 ];
 
 export type Variaveis = Record<string, string>;
@@ -108,6 +114,10 @@ export function variaveis(valores: Valores, icp: Icp, cases: ResumoCases): Varia
     perfil_reuniao: perfilReuniao(icp),
     media_cases: cases.media === null ? "" : `${cases.media > 0 ? "+" : ""}${cases.media}%`,
     qtd_cases: String(cases.quantidade),
+    preco_mes1: reais(valores.preco_mes1 ?? VALORES_PADRAO.preco_mes1!),
+    preco_mes1_tabela: reais(valores.preco_mes1_tabela ?? VALORES_PADRAO.preco_mes1_tabela!),
+    preco_mes2: reais(valores.preco_mes2 ?? VALORES_PADRAO.preco_mes2!),
+    preco_continuidade: reais(valores.preco_continuidade ?? VALORES_PADRAO.preco_continuidade!),
   };
 }
 
@@ -194,7 +204,7 @@ const so = (...titulos: string[]): Item[] => titulos.map((titulo) => ({ titulo, 
 // parceiro e quem quer conhecer o ecossistema usam o mesmo cadastro; a Wise confere cada um e libera o acesso.
 // ---------------------------------------------------------------------------
 export const BLOCOS_PARCEIROS = [
-  "topo", "logos", "caminhos", "grupo", "para_quem", "como_funciona", "catalogo", "acessos", "beneficios", "faixa_meio", "incluido", "niveis", "valor", "cases", "depoimentos",
+  "topo", "logos", "caminhos", "grupo", "para_quem", "como_funciona", "catalogo", "acessos", "beneficios", "faixa_meio", "incluido", "jornada", "niveis", "valor", "cases", "depoimentos",
   "comparacao", "perguntas", "cadastro",
 ] as const;
 export type BlocoParceiros = (typeof BLOCOS_PARCEIROS)[number];
@@ -204,7 +214,7 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
     topo: bloco({
       eyebrow: "Wise Partners · ecossistema do Grupo Tríade",
       titulo: "Mais negócios para a sua empresa dentro do ecossistema do Grupo Tríade.",
-      texto: "No Wise Partners, a sua empresa contrata serviços de outras empresas do ecossistema com condições especiais e apresenta os próprios produtos e serviços no catálogo. Se quiser, também oferece à sua base uma consultoria comercial que vale {valor_total} e recebe 40% da primeira mensalidade quando o cliente contrata.",
+      texto: "No Wise Partners, a sua empresa contrata serviços de outras empresas do ecossistema com condições especiais e apresenta os próprios produtos e serviços no catálogo. Se quiser, também oferece à sua base um diagnóstico comercial que vale {valor_total}, sem custo, e ganha comissão quando o cliente segue com a Wise.",
       botao: "Cadastrar minha empresa",
       nota: "Cadastro em 3 minutos. A Wise confere e libera o seu acesso.",
     }),
@@ -213,7 +223,7 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
       titulo: "Faça negócio na comunidade, leve a consultoria à sua base, ou os dois.",
       itens: [
         { titulo: "Comunidade Wise Partners", texto: "Contrate produtos e serviços das empresas do ecossistema com condições só para membros, e publique as ofertas da sua empresa para os outros membros. Para clientes do Grupo Tríade e parceiros." },
-        { titulo: "Programa de parceria", texto: "Ofereça aos seus clientes o diagnóstico comercial da Wise Makers, sem custo para ninguém, e receba 40% da primeira mensalidade de quem contratar a consultoria." },
+        { titulo: "Programa de parceria", texto: "Ofereça aos seus clientes o diagnóstico comercial da Wise Makers, sem custo para ninguém, e receba 6% das vendas de 1 ou 2 meses e 40% da primeira mensalidade de quem seguir com a consultoria contínua." },
       ],
     }),
     grupo: bloco({
@@ -259,11 +269,11 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
       itens: [
         { titulo: "Retenha quem já compra de você", texto: "Cliente que estrutura o comercial vende mais e tem mais um motivo pra continuar com quem ajudou. A consultoria vira parte do relacionamento, sem custo pra você." },
         { titulo: "Diferencie a sua oferta", texto: "Na hora de fechar, em vez de baixar o preço, você inclui um diagnóstico comercial e o Wise Hub. O cliente leva mais, e você protege ticket e margem." },
-        { titulo: "Receba 40% da primeira mensalidade", texto: "Quando um cliente que chegou pelo seu link contrata a consultoria da Wise, você recebe 40% da primeira mensalidade, pago ao CNPJ da sua empresa. O Wise Hub não gera comissão." },
+        { titulo: "Ganhe em cada etapa que o cliente contratar", texto: "Quando um cliente que chegou pelo seu link segue com a Wise, você recebe 6% do mês 1 e do mês 2 da jornada e 40% da primeira mensalidade do contrato contínuo, pago ao CNPJ da sua empresa. O Wise Hub não gera comissão." },
       ],
     }),
     faixa_meio: bloco({
-      titulo: "Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers.",
+      titulo: "Mais de 40 indústrias e empresas B2B estruturadas pela Wise Makers.",
       texto: "Agora esse método pode chegar aos seus clientes pelas suas mãos, sem custo.",
       botao: "Cadastrar minha empresa",
       nota: "Sem custo · Sem exclusividade · Sai quando quiser",
@@ -274,7 +284,7 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
       texto: "Vale pra toda a sua base de hoje e pra cada cliente novo. O autodiagnóstico online é aberto a qualquer cliente seu.",
       itens: [
         { titulo: "Reunião de diagnóstico com a Wise", texto: "Cerca de 2 horas, online, pela Matriz de Governança Comercial 5x5. Para empresas {perfil_reuniao}." },
-        { titulo: "Plano de ação", texto: "O que priorizar, quem faz e os indicadores pra acompanhar. Chega por e-mail em até 2 dias úteis." },
+        { titulo: "Plano de ação para 6 meses", texto: "O que priorizar nos próximos 6 meses, quem faz e os indicadores pra acompanhar. Chega por e-mail em até 2 dias úteis." },
         { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas em quatro módulos, treinamentos curtos, calculadoras, planilhas e checklists." },
         { titulo: "Autodiagnóstico online", texto: "Para as empresas abaixo do perfil da reunião: o resultado sai na hora, com o acesso ao Wise Hub." },
       ],
@@ -284,8 +294,20 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
         { titulo: "Seu link exclusivo", texto: "Cada cliente que entra por ele fica registrado como seu." },
         { titulo: "Treinamento curto", texto: "Como apresentar a consultoria na venda, na renovação e no relacionamento com a base." },
         { titulo: "Acompanhamento no portal", texto: "Quem entrou pelo seu link e em que pé está." },
-        { titulo: "40% da primeira mensalidade", texto: "Quando um cliente seu contrata a consultoria da Wise. Pago ao CNPJ da sua empresa, com nota fiscal." },
+        { titulo: "Comissão em cada etapa", texto: "6% do mês 1 e do mês 2 e 40% da primeira mensalidade do contrato contínuo, quando um cliente seu segue com a Wise. Pago ao CNPJ da sua empresa, com nota fiscal." },
       ],
+    }),
+    jornada: bloco({
+      eyebrow: "Se o seu cliente quiser ir além",
+      titulo: "Depois do diagnóstico, a jornada da Wise. Você ganha em cada etapa.",
+      texto: "O diagnóstico é gratuito e não obriga a nada. Se o cliente quiser seguir com a Wise, ele tem uma condição especial por ter chegado pelo seu link. Você recebe 6% do mês 1 e do mês 2 e 40% da primeira mensalidade do contrato contínuo.",
+      itens: [
+        { titulo: "Diagnóstico gratuito", texto: "Reunião de cerca de 2 horas, plano de ação para os próximos 6 meses e acesso ao Wise Hub. Valor de referência {valor_total}, sem custo." },
+        { titulo: "Mês 1: acompanhamento guiado", texto: "4 encontros semanais de 2 horas para estruturar as ferramentas, treinar a equipe dentro do plano e abrir a perspectiva de 12 meses. {preco_mes1} em vez de {preco_mes1_tabela}." },
+        { titulo: "Mês 2: Plano de Tração", texto: "Mais 4 encontros de 2 horas: metas por vendedor, comissão e bônus, playbook do time e campanha de reativação da base. Mais {preco_mes2}." },
+        { titulo: "Do mês 3 em diante: continuidade", texto: "Plano mensal com 2 encontros por mês, de 3 a 4 horas: leitura dos indicadores, gestão do time, aquisição e retenção. {preco_continuidade} por mês." },
+      ],
+      nota: "Ao fim de cada etapa, o cliente decide: seguir sozinho ou com a Wise.",
     }),
     niveis: bloco({
       eyebrow: "Níveis do programa",
@@ -300,7 +322,7 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
     valor: bloco({
       eyebrow: "Wise Hub",
       titulo: "O que o seu cliente recebe vale {valor_total}. Pra ele, sai de graça.",
-      texto: "Não é área de curso. É onde o seu cliente diagnostica a operação, monta o plano e estrutura o comercial, com o método aplicado em mais de 300 empresas.",
+      texto: "Não é área de curso. É onde o seu cliente diagnostica a operação, monta o plano e estrutura o comercial, com o método aplicado em mais de 40 indústrias e empresas B2B.",
       nota: "Na próxima negociação, em vez de dar desconto, você entrega {valor_total} em método.",
       itens: so("Sem cartão e sem instalação", "Plano de ação em até 2 dias úteis", "No navegador ou no celular", "Aulas com cases reais"),
     }),
@@ -340,17 +362,18 @@ export const PADRAO_PARCEIROS: ConteudoPronto<BlocoParceiros> = {
     { pergunta: "Sou cliente do Grupo Tríade. Preciso vender a consultoria da Wise?", resposta: "Não. O cliente do grupo aproveita o catálogo: contrata das outras empresas com condições especiais e publica os próprios produtos e serviços. Indicar a consultoria é opcional." },
     { pergunta: "Quem pode usar as condições do catálogo?", resposta: "Os clientes das empresas do Grupo Tríade e os parceiros Premium e Elite. As outras empresas cadastradas veem as empresas e as ofertas, sem as condições." },
     { pergunta: "O que acontece depois do cadastro?", resposta: "A Wise confere quem é a empresa. Cliente do grupo recebe o acesso pelo WhatsApp depois da confirmação do vínculo. Quem quer ser parceiro faz antes uma conversa de entrada de 45 minutos." },
-    { pergunta: "Por que é de graça? Qual é o porém?", resposta: "A Wise Makers ganha quando um cliente seu, depois do diagnóstico, decide contratar a consultoria pra ir além. Isso só acontece se ele quiser. Pra você, o programa é um benefício para a sua base, sem custo." },
+    { pergunta: "Por que é de graça? Qual é o porém?", resposta: "A Wise Makers ganha quando um cliente seu, depois do diagnóstico, decide seguir com a jornada da Wise: o mês 1 guiado, o Plano de Tração ou o plano mensal. Isso só acontece se ele quiser. Pra você, o programa é um benefício para a sua base, sem custo." },
+    { pergunta: "O que o meu cliente pode contratar depois do diagnóstico?", resposta: "Se quiser ir além, o mês 1 de acompanhamento guiado, com 4 encontros semanais, por {preco_mes1} em vez de {preco_mes1_tabela}; o mês 2, o Plano de Tração, por mais {preco_mes2}; e, do mês 3 em diante, o plano mensal de {preco_continuidade}. Ao fim de cada etapa, ele decide se segue." },
     { pergunta: "Minha empresa não vende software. Posso entrar?", resposta: "Pode. O programa é pra qualquer empresa que vende para empresas com time comercial: sistemas, serviços, indústria, consultorias e também entidades, como federações, associações, sindicatos patronais e universidades." },
     { pergunta: "A Wise vai vender outra coisa pro meu cliente?", resposta: "O diagnóstico não é apresentação de vendas. A conversa comercial só acontece se o cliente pedir, e a Wise não vende o que você vende. Se ele contratar a consultoria, você recebe a comissão." },
     { pergunta: "Vai dar trabalho pro meu time?", resposta: "Depois da conversa de entrada, o trabalho é mandar o seu link, com a sua mensagem. O treinamento e o acompanhamento ficam no portal." },
     { pergunta: "Quais dados dos meus clientes a Wise vê?", resposta: "Só o que o próprio cliente informa no diagnóstico. A Wise nunca recebe a sua lista de clientes, e o resultado individual só é compartilhado com você se o cliente autorizar." },
     { pergunta: "Todo cliente meu faz a reunião de diagnóstico?", resposta: "A reunião com a equipe da Wise é para empresas {perfil_reuniao}. As demais fazem o autodiagnóstico online, veem o resultado na hora e recebem o acesso ao Wise Hub." },
-    { pergunta: "Como e quando recebo a comissão?", resposta: "Você recebe 40% da primeira mensalidade da consultoria, depois que o primeiro pagamento do cliente compensar. O pagamento vai pro CNPJ da sua empresa, com nota fiscal, uma vez por cliente novo. O Wise Hub não gera comissão." },
+    { pergunta: "Como e quando recebo a comissão?", resposta: "Você recebe 6% do mês 1 e do mês 2 da jornada, se o cliente contratar, e 40% da primeira mensalidade do contrato contínuo, a partir do mês 3. Cada comissão sai depois que o pagamento do cliente compensar, para o CNPJ da sua empresa, com nota fiscal. O Wise Hub não gera comissão." },
     { pergunta: "O que muda nos níveis Premium e Elite?", resposta: "No Premium, a Wise passa a recomendar a sua empresa aos clientes dela. No Elite, a Wise faz uma formação por ano para a sua base. A equipe conversa com você sobre a subida de nível." },
     { pergunta: "Tem exclusividade ou meta de indicação?", resposta: "Não. Você continua trabalhando com quem quiser e não precisa bater nenhum número." },
     { pergunta: "Posso sair quando quiser?", resposta: "Pode. Basta avisar com 30 dias, sem multa. Comissões já geradas continuam sendo pagas." },
-    { pergunta: "Quem é a Wise Makers?", resposta: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
+    { pergunta: "Quem é a Wise Makers?", resposta: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná. Já estruturou o comercial de mais de 40 indústrias e empresas B2B da região." },
     { pergunta: "Quando eu começo?", resposta: "Em até 24 horas úteis depois do cadastro, a equipe da Wise fala com você pelo WhatsApp. Cliente do grupo recebe o acesso logo depois da confirmação; quem quer ser parceiro, depois da conversa de entrada." },
   ],
 };
@@ -381,6 +404,8 @@ export const META_PARCEIROS: MetaBloco<BlocoParceiros>[] = [
       itens: { rotulo: "O seu cliente recebe", comTexto: true, nomeItem: "entrega" },
       itens_parceiro: { rotulo: "Você recebe", comTexto: true, nomeItem: "entrega" },
     } },
+  { chave: "jornada", rotulo: "Jornada da consultoria", descricao: "As etapas depois do diagnóstico, com os preços da proposta comercial pelos marcadores.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", nota: "Nota abaixo das etapas" }, listas: { itens: { rotulo: "Etapas", comTexto: true, nomeItem: "etapa" } } },
   { chave: "niveis", rotulo: "Níveis", descricao: "Select, Premium e Elite, sem critérios de subida.", ocultavel: true,
     campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto" }, listas: { itens: { rotulo: "Níveis", comTexto: true, nomeItem: "nível" } } },
   { chave: "valor", rotulo: "Wise Hub e valores", descricao: "Quadro com os valores de referência e a tela do Hub.", ocultavel: true,
@@ -403,7 +428,7 @@ export const META_PARCEIROS: MetaBloco<BlocoParceiros>[] = [
 // Página do cliente do parceiro (/c/:codigo): igual para todos, sem citar parceiro
 // ---------------------------------------------------------------------------
 export const BLOCOS_CLIENTE = [
-  "topo", "logos", "como_funciona", "beneficios", "matriz", "faixa_meio", "incluido", "valor", "cases", "depoimentos", "comparacao",
+  "topo", "logos", "como_funciona", "beneficios", "matriz", "faixa_meio", "incluido", "jornada", "valor", "cases", "depoimentos", "comparacao",
   "perguntas", "equipe", "cadastro",
 ] as const;
 export type BlocoCliente = (typeof BLOCOS_CLIENTE)[number];
@@ -424,7 +449,7 @@ export const PADRAO_CLIENTE: ConteudoPronto<BlocoCliente> = {
       itens: [
         { titulo: "Conte sobre a sua empresa", texto: "Um cadastro de 2 minutos: faturamento, time comercial e o principal desafio." },
         { titulo: "Faça o diagnóstico", texto: "Para empresas {perfil_reuniao}, numa reunião online de cerca de 2 horas com a Wise. Nos outros casos, online e na hora." },
-        { titulo: "Receba o plano e entre no Hub", texto: "O plano de ação chega por e-mail em até 2 dias úteis, com o acesso ao Wise Hub pra colocar em prática." },
+        { titulo: "Receba o plano e entre no Hub", texto: "O plano de ação para os próximos 6 meses chega por e-mail em até 2 dias úteis, com o acesso ao Wise Hub pra colocar em prática." },
       ],
     }),
     beneficios: bloco({
@@ -442,7 +467,7 @@ export const PADRAO_CLIENTE: ConteudoPronto<BlocoCliente> = {
       texto: "O diagnóstico usa a Matriz de Governança Comercial 5x5: cada pilar do comercial é avaliado por cinco critérios, pra mostrar onde a operação trava e por onde começar. Na reunião, a equipe da Wise conduz a análise com você.",
     }),
     faixa_meio: bloco({
-      titulo: "Mais de 300 empresas estruturadas e 1.500 vendedores capacitados pela Wise Makers.",
+      titulo: "Mais de 40 indústrias e empresas B2B estruturadas pela Wise Makers.",
       texto: "Agora esse método chega até você pelo seu fornecedor, sem custo.",
       botao: "Quero meu diagnóstico",
       nota: "Sem custo · Sem cartão · Sem ligação insistente",
@@ -452,10 +477,22 @@ export const PADRAO_CLIENTE: ConteudoPronto<BlocoCliente> = {
       titulo: "A consultoria que o seu fornecedor incluiu pra você.",
       itens: [
         { titulo: "Reunião de diagnóstico", texto: "Cerca de 2 horas, online, com a equipe da Wise Makers. Para empresas {perfil_reuniao}." },
-        { titulo: "Plano de ação", texto: "O que priorizar primeiro, com ações, responsáveis e indicadores. Chega por e-mail em até 2 dias úteis." },
+        { titulo: "Plano de ação para 6 meses", texto: "O que priorizar nos próximos 6 meses, com ações, responsáveis e indicadores. Chega por e-mail em até 2 dias úteis." },
         { titulo: "Acesso ao Wise Hub", texto: "Imersão de mais de 20 horas, treinamentos curtos, calculadoras, planilhas e checklists." },
         { titulo: "Autodiagnóstico online", texto: "Para empresas abaixo do perfil da reunião: o resultado sai na hora, com o acesso ao Wise Hub." },
       ],
+    }),
+    jornada: bloco({
+      eyebrow: "Depois do diagnóstico",
+      titulo: "Se quiser ir além, a Wise segue com você, no seu ritmo.",
+      texto: "O diagnóstico é gratuito e não obriga a nada. Se a sua empresa quiser seguir com a Wise, tem uma condição especial por ter chegado pelo seu fornecedor.",
+      itens: [
+        { titulo: "Diagnóstico gratuito", texto: "Reunião de cerca de 2 horas, plano de ação para os próximos 6 meses e acesso ao Wise Hub. Valor de referência {valor_total}, sem custo." },
+        { titulo: "Mês 1: acompanhamento guiado", texto: "4 encontros semanais de 2 horas para estruturar as ferramentas, treinar a equipe dentro do plano e abrir a perspectiva de 12 meses. {preco_mes1} em vez de {preco_mes1_tabela}." },
+        { titulo: "Mês 2: Plano de Tração", texto: "Mais 4 encontros de 2 horas: metas por vendedor, comissão e bônus, playbook do time e campanha de reativação da base. Mais {preco_mes2}." },
+        { titulo: "Do mês 3 em diante: continuidade", texto: "Plano mensal com 2 encontros por mês, de 3 a 4 horas: leitura dos indicadores, gestão do time, aquisição e retenção. {preco_continuidade} por mês." },
+      ],
+      nota: "Ao fim de cada etapa, você decide: seguir sozinho ou com a Wise.",
     }),
     valor: bloco({
       eyebrow: "Wise Hub",
@@ -478,7 +515,7 @@ export const PADRAO_CLIENTE: ConteudoPronto<BlocoCliente> = {
         "Plano de ação com prioridades",
         "Formação pra você e o time, mais de 20 horas",
         "Calculadoras, planilhas e checklists prontos",
-        "Método aplicado em mais de 300 empresas",
+        "Método aplicado em mais de 40 empresas B2B",
         "Reunião de diagnóstico de 2 horas com a Wise",
       ),
     }),
@@ -498,8 +535,8 @@ export const PADRAO_CLIENTE: ConteudoPronto<BlocoCliente> = {
     { pergunta: "Serve pra minha empresa?", resposta: "Serve pra qualquer empresa com time comercial. Para empresas {perfil_reuniao}, o diagnóstico é numa reunião online com a equipe da Wise. Nos outros casos, você faz o autodiagnóstico online e vê o resultado na hora." },
     { pergunta: "Quanto tempo leva?", resposta: "O cadastro leva uns 2 minutos e o autodiagnóstico, uns 5. A reunião de diagnóstico dura cerca de 2 horas, online, no horário que você escolher, e o plano de ação chega por e-mail em até 2 dias úteis." },
     { pergunta: "É curso? Vou ter que assistir 20 horas?", resposta: "Não. Primeiro vem o diagnóstico e o plano. O Wise Hub tem a imersão de mais de 20 horas e as ferramentas, e você usa o que fizer sentido, no seu ritmo." },
-    { pergunta: "Depois vão me cobrar alguma coisa?", resposta: "Não. O diagnóstico com o plano de ação (valor de referência {valor_diagnostico}) e o acesso ao Wise Hub ({valor_hub}) não têm custo e não pedem cartão. Se quiser a consultoria completa da Wise depois, é uma conversa à parte." },
-    { pergunta: "Quem é a Wise Makers?", resposta: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná. Em quatro anos, estruturou o comercial de mais de 300 empresas e capacitou mais de 1.500 vendedores." },
+    { pergunta: "Depois vão me cobrar alguma coisa?", resposta: "Não. O diagnóstico com o plano de ação para 6 meses (valor de referência {valor_diagnostico}) e o acesso ao Wise Hub ({valor_hub}) não têm custo e não pedem cartão. Se quiser seguir com a Wise, o mês 1 guiado sai por {preco_mes1} em vez de {preco_mes1_tabela}, por você ter chegado pelo seu fornecedor. Só se você quiser." },
+    { pergunta: "Quem é a Wise Makers?", resposta: "Uma consultoria de estrutura e gestão comercial de Maringá, Paraná. Já estruturou o comercial de mais de 40 indústrias e empresas B2B da região." },
   ],
 };
 
@@ -517,6 +554,8 @@ export const META_CLIENTE: MetaBloco<BlocoCliente>[] = [
     campos: { titulo: "Título", texto: "Texto", botao: "Botão", nota: "Nota abaixo do botão" } },
   { chave: "incluido", rotulo: "O que você recebe", descricao: "As entregas da consultoria.", ocultavel: true,
     campos: { eyebrow: "Sobretítulo", titulo: "Título" }, listas: { itens: { rotulo: "Entregas", comTexto: true, nomeItem: "entrega" } } },
+  { chave: "jornada", rotulo: "Jornada da consultoria", descricao: "As etapas depois do diagnóstico, com os preços da proposta comercial pelos marcadores.", ocultavel: true,
+    campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto", nota: "Nota abaixo das etapas" }, listas: { itens: { rotulo: "Etapas", comTexto: true, nomeItem: "etapa" } } },
   { chave: "valor", rotulo: "Wise Hub e valores", descricao: "Quadro com os valores de referência e a tela do Hub.", ocultavel: true,
     campos: { eyebrow: "Sobretítulo", titulo: "Título", texto: "Texto" }, listas: { itens: { rotulo: "Vantagens", comTexto: false, nomeItem: "vantagem" } } },
   { chave: "cases", rotulo: "Cases de resultado", descricao: "Os cases ativos da aba Cases, com a média calculada pelo banco.", ocultavel: true,

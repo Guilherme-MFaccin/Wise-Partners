@@ -26,6 +26,7 @@ export type ConfigParceiros = {
 export type ConfigCliente = {
   publicada: boolean; video_url: string | null; video_formato: FormatoVideo; agenda_url: string | null; hub_url: string;
   icp_min_vendedores: number; icp_faturamento_min: string | null; valor_diagnostico: number | string; valor_hub: number | string;
+  preco_mes1: number | string; preco_mes1_tabela: number | string; preco_mes2: number | string; preco_continuidade: number | string;
   conteudo: Conteudo | null; updated_at: string;
 };
 

@@ -112,7 +112,11 @@ function CamposVideo({ url, formato, aoMudarUrl, aoMudarFormato, desligado, semV
 export function CartaoValores({ desligado }: { desligado: boolean }) {
   const qc = useQueryClient();
   const cfg = useConfigCliente();
-  const dados = useMemo(() => (cfg.data ? { diagnostico: String(Number(cfg.data.valor_diagnostico)), hub: String(Number(cfg.data.valor_hub)) } : null), [cfg.data]);
+  const dados = useMemo(() => (cfg.data ? {
+    diagnostico: String(Number(cfg.data.valor_diagnostico)), hub: String(Number(cfg.data.valor_hub)),
+    preco_mes1: String(Number(cfg.data.preco_mes1 ?? 4997)), preco_mes1_tabela: String(Number(cfg.data.preco_mes1_tabela ?? 7000)),
+    preco_mes2: String(Number(cfg.data.preco_mes2 ?? 4997)), preco_continuidade: String(Number(cfg.data.preco_continuidade ?? 3997)),
+  } : null), [cfg.data]);
   const form = useFormulario(dados);
   const [salvando, setSalvando] = useState(false);
   if (cfg.isLoading) return <EsqueletoEditor />;
@@ -120,21 +124,25 @@ export function CartaoValores({ desligado }: { desligado: boolean }) {
   if (!form.f) return null;
   const d = Number(form.f.diagnostico.replace(",", "."));
   const h = Number(form.f.hub.replace(",", "."));
-  const validos = Number.isFinite(d) && Number.isFinite(h) && d >= 0 && h >= 0 && form.f.diagnostico !== "" && form.f.hub !== "";
+  const precos = (["preco_mes1", "preco_mes1_tabela", "preco_mes2", "preco_continuidade"] as const).map((k) => Number(form.f![k].replace(",", ".")));
+  const validos = Number.isFinite(d) && Number.isFinite(h) && d >= 0 && h >= 0 && form.f.diagnostico !== "" && form.f.hub !== ""
+    && precos.every((x) => Number.isFinite(x) && x >= 0);
 
   async function salvar() {
-    if (!validos) return toast.error("Informe os dois valores em reais, sem negativo.");
+    if (!validos) return toast.error("Informe todos os valores em reais, sem negativo.");
     setSalvando(true);
-    const { error } = await supabase.from("config_landing_cliente").update({ valor_diagnostico: d, valor_hub: h }).eq("id", 1);
+    const { error } = await supabase.from("config_landing_cliente").update({
+      valor_diagnostico: d, valor_hub: h, preco_mes1: precos[0], preco_mes1_tabela: precos[1], preco_mes2: precos[2], preco_continuidade: precos[3],
+    }).eq("id", 1);
     setSalvando(false);
     if (error) return toastErro(error);
     form.salvo();
-    toast.success("Valores de referência atualizados nas duas páginas.");
+    toast.success("Valores atualizados nas duas páginas.");
     qc.invalidateQueries({ queryKey: CHAVES.cliente });
   }
 
   return (
-    <Cartao titulo="Valores de referência" descricao="O que o cliente do parceiro receberia se contratasse à parte. Valem para as duas páginas e entram nos textos pelos marcadores.">
+    <Cartao titulo="Valores de referência e preços da jornada" descricao="O diagnóstico gratuito (o que o cliente do parceiro pagaria à parte) e os preços da jornada da proposta comercial. Valem para as duas páginas e entram nos textos pelos marcadores.">
       <div className="grid gap-4 sm:grid-cols-3">
         <CampoTexto rotulo="Diagnóstico e plano (R$)" valor={form.f.diagnostico} tipo="number" desligado={desligado}
           aoMudar={(v) => form.set("diagnostico", v)} />
@@ -143,6 +151,12 @@ export function CartaoValores({ desligado }: { desligado: boolean }) {
           <p className="text-[13px] font-medium">Total de referência</p>
           <p className="flex h-10 items-center text-[22px] font-bold tabular-nums">{validos ? reais(d + h) : "Confira os valores"}</p>
         </div>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <CampoTexto rotulo="Mês 1 com a condição (R$)" valor={form.f.preco_mes1} tipo="number" desligado={desligado} aoMudar={(v) => form.set("preco_mes1", v)} />
+        <CampoTexto rotulo="Mês 1, preço de tabela (R$)" valor={form.f.preco_mes1_tabela} tipo="number" desligado={desligado} aoMudar={(v) => form.set("preco_mes1_tabela", v)} />
+        <CampoTexto rotulo="Mês 2, Plano de Tração (R$)" valor={form.f.preco_mes2} tipo="number" desligado={desligado} aoMudar={(v) => form.set("preco_mes2", v)} />
+        <CampoTexto rotulo="Plano mensal de continuidade (R$)" valor={form.f.preco_continuidade} tipo="number" desligado={desligado} aoMudar={(v) => form.set("preco_continuidade", v)} />
       </div>
       {!desligado && form.sujo && (
         <div className="flex justify-end gap-2">
@@ -181,7 +195,7 @@ export function AbaParceiros({ desligado }: { desligado: boolean }) {
   const form = useFormulario(dados);
   const [salvando, setSalvando] = useState(false);
   const vars = useMemo(() => resolverDados({
-    valores: cli.data ? { diagnostico: Number(cli.data.valor_diagnostico), hub: Number(cli.data.valor_hub), total: Number(cli.data.valor_diagnostico) + Number(cli.data.valor_hub) } : null,
+    valores: valoresDe(cli.data),
     icp: cli.data ? { min_vendedores: cli.data.icp_min_vendedores, faturamento_min: cli.data.icp_faturamento_min } : null,
     cases: resumo.data ?? RESUMO_VAZIO,
   }).vars, [cli.data, resumo.data]);
@@ -244,7 +258,11 @@ function valoresDe(c: ConfigCliente | null | undefined) {
   if (!c) return null;
   const diagnostico = Number(c.valor_diagnostico);
   const hub = Number(c.valor_hub);
-  return { diagnostico, hub, total: diagnostico + hub };
+  return {
+    diagnostico, hub, total: diagnostico + hub,
+    preco_mes1: Number(c.preco_mes1 ?? 4997), preco_mes1_tabela: Number(c.preco_mes1_tabela ?? 7000),
+    preco_mes2: Number(c.preco_mes2 ?? 4997), preco_continuidade: Number(c.preco_continuidade ?? 3997),
+  };
 }
 
 export function AbaCliente({ desligado }: { desligado: boolean }) {

@@ -6,19 +6,21 @@ import { U, prepararDados, transacao } from "./ajuda";
 beforeAll(prepararDados);
 
 describe("Cases de resultado", () => {
-  it("a migração carrega os 8 cases e o banco entrega a média pronta", () =>
+  // Chamego e Totonho saíram da prova B2B em 26/11/2026 (migração 37): 6 cases ativos
+  it("a migração carrega os cases ativos e o banco entrega a média pronta", () =>
     transacao(async (q) => {
       await q.sistema();
-      expect((await q.um("select count(*)::int n from public.cases_resultado where ativo")).n).toBe(8);
+      expect((await q.um("select count(*)::int n from public.cases_resultado where ativo")).n).toBe(6);
       const r = (await q.um("select public.resumo_cases() as r")).r;
-      expect(r.quantidade).toBe(8);
-      expect(r.media).toBe(35);
+      expect(r.quantidade).toBe(6);
+      expect(r.media).toBe(36);
+      expect(r.itens.map((x: any) => x.empresa)).not.toContain("Totonho Locações");
       expect(r.itens[0]).toMatchObject({ empresa: "Florart's Decor", periodo: "jan/25 a out/26" });
       // Case desligado sai da lista e da média
       await q.sql("update public.cases_resultado set ativo = false where empresa = 'Florart''s Decor'");
       const s = (await q.um("select public.resumo_cases() as r")).r;
-      expect(s.quantidade).toBe(7);
-      expect(s.media).toBe(27);
+      expect(s.quantidade).toBe(5);
+      expect(s.media).toBe(25);
     }));
 
   it("time interno lê; parceiro e anônimo não leem", () =>

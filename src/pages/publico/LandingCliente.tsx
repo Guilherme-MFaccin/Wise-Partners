@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Campo, FaixaEvento, FaixaLogos, QuadroCases, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
 import {
-  BarraFixa, EsqueletoPagina, Faixa, Garantias, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina,
+  BarraFixa, EsqueletoPagina, Faixa, Garantias, JornadaConsultoria, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina,
 } from "@/components/landing/Secoes";
 import { Autodiagnostico } from "@/components/landing/Autodiagnostico";
 import {
@@ -286,6 +286,14 @@ export default function LandingCliente() {
               </>
             )}
           </Secao>
+        )}
+
+        {s.jornada.visivel && (
+          <Faixa>
+            <Secao eyebrow={s.jornada.eyebrow} titulo={s.jornada.titulo} texto={s.jornada.texto}>
+              <JornadaConsultoria itens={s.jornada.itens} nota={s.jornada.nota} />
+            </Secao>
+          </Faixa>
         )}
 
         {s.cases.visivel && cases.itens.length > 0 && (

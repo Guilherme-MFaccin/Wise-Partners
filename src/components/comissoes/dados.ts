@@ -5,6 +5,8 @@ export type Comissao = {
   indicacao_id: string;
   parceiro_id: string;
   beneficiario: "parceiro" | "responsavel" | "grupo";
+  // Wise: venda pontual (6% e 1,5%) ou contrato contínuo (40% e 10%); demais empresas: única
+  parcela?: "unica" | "pontual" | "continuo";
   percentual: number | null;
   base_descricao: string | null;
   base_valor: number | null;
@@ -25,7 +27,7 @@ export type Comissao = {
 };
 
 export const SELECT_COMISSAO = `
-  id, indicacao_id, parceiro_id, beneficiario, percentual, base_descricao, base_valor, valor, estado,
+  id, indicacao_id, parceiro_id, beneficiario, parcela, percentual, base_descricao, base_valor, valor, estado,
   a_pagar_em, nf_recebida_em, paga_em, observacao, created_at,
   parceiro:parceiros(id, nome_fantasia, razao_social, cnpj, endereco, cidade, uf),
   responsavel:perfis!comissoes_responsavel_perfil_id_fkey(nome),
@@ -45,3 +47,5 @@ export function estadosPermitidosFinanceiro(c: Pick<Comissao, "estado" | "benefi
 export function somar(lista: Comissao[], filtro: (c: Comissao) => boolean) {
   return lista.filter(filtro).reduce((s, c) => s + Number(c.valor ?? 0), 0);
 }
+
+export const ROTULO_PARCELA: Record<string, string> = { pontual: "Venda pontual", continuo: "Contrato contínuo", unica: "" };

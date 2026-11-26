@@ -160,8 +160,8 @@ describe("Nível, pacote e status de atividade", () => {
 });
 
 describe("Indicações e comissões das três empresas", () => {
+  // A Wise tem regra própria por tipo de venda (proposta comercial de 26/11/2026): teste logo abaixo
   const casos = [
-    ["wise", 10000, 4000, 1000],
     ["triade", 5000, 2000, 500],
     ["swallow", 80000, 4800, 1600],
   ] as const;
@@ -181,6 +181,40 @@ describe("Indicações e comissões das três empresas", () => {
         ]);
       }));
   }
+
+  it("Wise: 6% e 1,5% sobre a venda pontual; 40% e 10% sobre a primeira mensalidade do contrato contínuo, cada um com a sua compensação", () =>
+    transacao(async (q) => {
+      const emp = await empresa(q, "wise");
+      await q.como(U.parcerias);
+      const r = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Jornada SA')) as id", [P.B, emp]);
+      const ler = () => q.sql("select parcela, beneficiario, percentual::float, valor::float, estado from public.comissoes where indicacao_id = $1 order by parcela, beneficiario", [r.id]);
+      expect(await ler()).toEqual([
+        { parcela: "pontual", beneficiario: "parceiro", percentual: 6, valor: null, estado: "aguardando_fechamento" },
+        { parcela: "pontual", beneficiario: "responsavel", percentual: 1.5, valor: null, estado: "aguardando_fechamento" },
+      ]);
+      // Mês 1 e mês 2 vendidos: R$ 9.994
+      await q.sql("update public.indicacoes set etapa = 'fechada', valor_pontual = 9994, meses_pontuais = 2, data_compensacao_pontual = public.hoje() where id = $1", [r.id]);
+      expect(await ler()).toEqual([
+        { parcela: "pontual", beneficiario: "parceiro", percentual: 6, valor: 599.64, estado: "a_pagar" },
+        { parcela: "pontual", beneficiario: "responsavel", percentual: 1.5, valor: 149.91, estado: "a_pagar" },
+      ]);
+      // Depois, o contrato contínuo: primeira mensalidade de R$ 3.997
+      await q.sql("update public.indicacoes set valor_base = 3997 where id = $1", [r.id]);
+      expect((await ler()).filter((c: any) => c.parcela === "continuo")).toEqual([
+        { parcela: "continuo", beneficiario: "parceiro", percentual: 40, valor: 1598.8, estado: "aguardando_compensacao" },
+        { parcela: "continuo", beneficiario: "responsavel", percentual: 10, valor: 399.7, estado: "aguardando_compensacao" },
+      ]);
+    }));
+
+  it("Wise: quem fecha direto o contrato contínuo não tem venda pontual", () =>
+    transacao(async (q) => {
+      const emp = await empresa(q, "wise");
+      await q.como(U.parcerias);
+      const r = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Direto SA')) as id", [P.B, emp]);
+      await q.sql("update public.indicacoes set etapa = 'fechada', valor_base = 3997 where id = $1", [r.id]);
+      const cs = await q.sql("select parcela, estado from public.comissoes where indicacao_id = $1 and beneficiario = 'parceiro' order by parcela", [r.id]);
+      expect(cs).toEqual([{ parcela: "continuo", estado: "aguardando_compensacao" }, { parcela: "pontual", estado: "cancelada" }]);
+    }));
 
   it("ao compensar o primeiro pagamento, a comissão fica a pagar e o financeiro é avisado com obrigatoriedade", () =>
     transacao(async (q) => {
@@ -205,12 +239,12 @@ describe("Indicações e comissões das três empresas", () => {
       await q.como(U.parcerias);
       const antiga = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Antiga SA')) as id", [P.B, emp]);
       await q.como(U.admin);
-      await q.sql("update public.empresas_grupo set pct_parceiro = 30 where codigo = 'wise'");
+      await q.sql("update public.empresas_grupo set pct_parceiro_pontual = 5 where codigo = 'wise'");
       await q.como(U.parcerias);
       const nova = await q.um("select public.registrar_indicacao(jsonb_build_object('parceiro_id',$1::text,'empresa_grupo_id',$2::text,'cliente_razao_social','Nova SA')) as id", [P.B, emp]);
       const pct = async (id: string) => (await q.um("select percentual::float as p from public.comissoes where indicacao_id = $1 and beneficiario = 'parceiro'", [id])).p;
-      expect(await pct(antiga.id)).toBe(40);
-      expect(await pct(nova.id)).toBe(30);
+      expect(await pct(antiga.id)).toBe(6);
+      expect(await pct(nova.id)).toBe(5);
     }));
 
   it("indicação do grupo para o parceiro registra a comissão a receber pelo instrumento dele", () =>

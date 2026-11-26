@@ -6,7 +6,7 @@ import { CLASSE_CARD } from "@/components/painel/Blocos";
 import { data, formatarCnpj, moeda } from "@/lib/formato";
 import { BENEFICIARIOS, ESTADOS_COMISSAO, ESTADOS_COMISSAO_RECEBER, rotulo } from "@/lib/rotulos";
 import { cn } from "@/lib/utils";
-import { ESTADOS_TODOS, estadosPermitidosFinanceiro, type Comissao } from "./dados";
+import { ESTADOS_TODOS, ROTULO_PARCELA, estadosPermitidosFinanceiro, type Comissao } from "./dados";
 
 // Cartão de uma comissão, com os dados para nota fiscal quando o beneficiário é o parceiro.
 export function ComissaoItem({ c, modo, onMudarEstado }: {
@@ -30,11 +30,11 @@ export function ComissaoItem({ c, modo, onMudarEstado }: {
             {p ? <Link to={`/app/parceiros/${p.id}`} className="hover:text-menta-400">{p.nome_fantasia}</Link> : "Parceiro"}
             <span className="font-normal text-muted-foreground"> · {c.indicacao?.cliente?.razao_social}</span>
           </p>
-          <p className="text-sm text-muted-foreground">{c.indicacao?.empresa?.nome} · {beneficiario}</p>
+          <p className="text-sm text-muted-foreground">{c.indicacao?.empresa?.nome}{c.parcela && ROTULO_PARCELA[c.parcela] ? ` · ${ROTULO_PARCELA[c.parcela]}` : ""} · {beneficiario}</p>
         </div>
         <div className="flex items-center gap-2">
           <SeloEstado estado={c.estado} mapa={mapa} />
-          <span className="text-lg font-bold">{c.valor != null ? moeda(c.valor) : "A calcular"}</span>
+          <span className="text-lg font-bold tabular-nums">{c.valor != null ? moeda(c.valor) : "A calcular"}</span>
         </div>
       </div>
 

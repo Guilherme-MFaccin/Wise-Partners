@@ -7,7 +7,7 @@ import { FormularioCadastro } from "@/components/landing/FormularioCadastro";
 import { Logo } from "@/components/comum/Logo";
 import { SeloNivel } from "@/components/comum/Selos";
 import { FaixaEvento, FaixaLogos, QuadroCases, QuadroValorHub, Secao, SecaoDepoimentos, Video } from "@/components/landing/Blocos";
-import { BarraFixa, EsqueletoPagina, Faixa, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina } from "@/components/landing/Secoes";
+import { BarraFixa, EsqueletoPagina, Faixa, JornadaConsultoria, ListaPerguntas, PaginaAviso, PassosNumerados, TabelaComparacao, Topo, useBarraFixa, useCabecalhoPagina } from "@/components/landing/Secoes";
 import { Button } from "@/components/ui/button";
 import { capturarOrigem, carregarConfig, iniciarMedicao, type ConfigLanding } from "@/lib/landing";
 import { PADRAO_PARCEIROS, montarConteudo, resolverDados } from "@/lib/paginas";
@@ -72,7 +72,7 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
     );
   }
   if (posicao === 2) {
-    const passos = ["Cliente entra pelo seu link", "Faz o diagnóstico", "Contrata a consultoria da Wise"];
+    const passos = ["Cliente entra pelo seu link", "Faz o diagnóstico gratuito", "Contrata a jornada da Wise"];
     return (
       <div className="rounded-[14px] border border-white/10 bg-card p-5" aria-hidden>
         <ul className="space-y-2">
@@ -80,10 +80,17 @@ function VisualBeneficio({ posicao }: { posicao: number }) {
             <li key={p} className="flex items-center gap-2 text-sm text-neutro-100"><CheckCircle2 className="h-4 w-4 shrink-0 text-neutro-300" />{p}</li>
           ))}
         </ul>
-        <div className="mt-4 rounded-[10px] border border-menta-500/40 bg-menta-500/10 px-4 py-3">
-          <p className="text-[28px] font-bold leading-none tabular-nums text-menta-400">40%</p>
-          <p className="mt-1 text-sm">da primeira mensalidade, pago ao CNPJ da sua empresa</p>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <div className="rounded-[10px] border border-white/10 bg-background/40 px-4 py-3">
+            <p className="text-[28px] font-bold leading-none tabular-nums">6%</p>
+            <p className="mt-1 text-sm">do mês 1 e do mês 2 da jornada</p>
+          </div>
+          <div className="rounded-[10px] border border-menta-500/40 bg-menta-500/10 px-4 py-3">
+            <p className="text-[28px] font-bold leading-none tabular-nums text-menta-400">40%</p>
+            <p className="mt-1 text-sm">da primeira mensalidade do contrato contínuo</p>
+          </div>
         </div>
+        <p className="mt-2 text-xs text-neutro-300">Pago ao CNPJ da sua empresa, com nota fiscal.</p>
       </div>
     );
   }
@@ -258,6 +265,12 @@ export default function LandingParceiros() {
               ))}
             </div>
             {s.incluido.texto && <p className="mt-4 text-sm text-neutro-300">{s.incluido.texto}</p>}
+          </Secao>
+        )}
+
+        {s.jornada.visivel && (
+          <Secao eyebrow={s.jornada.eyebrow} titulo={s.jornada.titulo} texto={s.jornada.texto}>
+            <JornadaConsultoria itens={s.jornada.itens} nota={s.jornada.nota} />
           </Secao>
         )}
 

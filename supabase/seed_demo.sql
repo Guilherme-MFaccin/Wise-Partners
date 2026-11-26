@@ -654,6 +654,20 @@ values (pg_temp.uid(1100), pg_temp.uid(17), 'Gustavo Lima', 'Diretor comercial',
   '{comprar,oferecer,indicar}', '2026-11-23', '2026-11-07', pg_temp.uid(3), now() - interval '5 days', now() - interval '6 days');
 
 -- -------------------------------------------------------------------------------------
+-- Proposta comercial (26/11/2026): um cliente indicado fechou a jornada da Wise (mês 1 e mês 2, depois o plano mensal),
+-- para as comissões mostrarem as duas parcelas; e um link ativo de parceiro para abrir a página do cliente
+-- -------------------------------------------------------------------------------------
+select pg_temp.como(null);
+update public.indicacoes set etapa = 'fechada', data_fechamento = current_date - 20, meses_pontuais = 2, valor_pontual = 9994,
+       data_compensacao_pontual = current_date - 15, valor_base = 3997, prazo_meses = 4
+ where id = (select i.id from public.indicacoes i join public.empresas_grupo e on e.id = i.empresa_grupo_id
+              where e.codigo = 'wise' and i.sentido = 'parceiro_para_grupo' and i.etapa = 'proposta' order by i.created_at limit 1);
+insert into public.links_cliente (parceiro_id, codigo)
+select p.id, 'demo' || substr(md5(p.id::text), 1, 6) from public.parceiros p
+ where p.data_assinatura is not null and p.tipo_parceria = 'comercial' order by p.nome_fantasia limit 1
+on conflict do nothing;
+
+-- -------------------------------------------------------------------------------------
 -- Rotinas: status de atividade, régua, faixas e alertas como no dia a dia
 -- -------------------------------------------------------------------------------------
 select pg_temp.como(null);

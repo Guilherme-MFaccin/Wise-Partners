@@ -166,8 +166,8 @@ a {{ color: var(--accent); }}
 <p class="nota">CAP: custo de aquisição do parceiro. CAC: custo de aquisição do cliente vindo de parceiro. O valor percebido pelo cliente do parceiro (R$ 5.000: diagnóstico R$ 2.000 e Wise Hub R$ 3.000) não entra como custo.</p></div></div></section>
 
 <section class="s" id="dois-lados"><div><h2>Uma plataforma de dois lados</h2><p class="lead">O programa só funciona se os dois lados estiverem presentes: parceiros que mandam o link e clientes que fazem o diagnóstico. Os dois lados não pagam; quem paga é o cliente que contrata a consultoria. O diagnóstico gratuito segue o padrão de isca e anzol: é caro para quem oferece e leva à compra paga. O Wise Hub fica mais perto do freemium, porque custa pouco por usuário.</p></div>
-<div class="dois"><div class="no"><b>Parceiro</b><br><small>qualquer categoria</small></div><div class="seta"><b>recebe</b> benefício para a base e 40% da 1ª mensalidade<br><b>entrega</b> o link aos clientes dele</div>
-<div class="no w"><b>Wise Makers</b><br><small>orquestra a plataforma</small></div><div class="seta"><b>entrega</b> diagnóstico de 2 h, plano e Hub (R$ 5.000)<br><b>recebe</b> a mensalidade de quem contratar</div><div class="no"><b>Cliente do parceiro</b><br><small>no ICP da Wise</small></div></div></section>
+<div class="dois"><div class="no"><b>Parceiro</b><br><small>qualquer categoria</small></div><div class="seta"><b>recebe</b> benefício para a base, 6% do pontual e 40% da 1ª mensalidade do contínuo<br><b>entrega</b> o link aos clientes dele</div>
+<div class="no w"><b>Wise Makers</b><br><small>orquestra a plataforma</small></div><div class="seta"><b>entrega</b> diagnóstico de 2 h, plano de 6 meses e Hub (R$ 5.000)<br><b>recebe</b> a jornada de quem contratar</div><div class="no"><b>Cliente do parceiro</b><br><small>no ICP da Wise</small></div></div></section>
 
 <section class="s" id="cliente"><div><h2>Proposta de valor para o cliente do parceiro</h2><p class="lead">O diagnóstico é a consultoria da Wise em formato breve: os benefícios são os mesmos da consultoria contratada, como você pediu no FO-16. Prova: os 8 cases cresceram, +{media}% em média.</p></div>
 {vpc_cliente}<p class="nota">De onde vem: {e(VPC_CLIENTE_FONTE)}</p>
@@ -229,16 +229,20 @@ window.iniciarModelo = function (raiz) {{
       ['Reuniões além da agenda do Gerente', 'limite de ' + num(v('cap_gerente'), 0) + ' por semana; o resto vai para consultores', num(excedente, 1) + ' por semana'],
       ['Horas de diagnóstico no período', num(v('h_diag'), 1) + ' h por diagnóstico', num(diag * v('h_diag'), 0) + ' h'],
     ]);
-    const mrr = v('meta') * v('mensalidade');
-    const ltv = mrr * v('meses');
-    const comissoes = mrr * (v('com_parceiro') + v('com_gerente')) / 100;
+    // Jornada da proposta comercial: mês 1 para todos os fechados, mês 2 e plano mensal para parte deles
+    const m1 = v('meta'), m2 = m1 * v('tx_mes2') / 100, cont = m2 * v('tx_cont') / 100;
+    const pontual = m1 * v('preco_mes1') + m2 * v('preco_mes2');
+    const mrr = cont * v('mensalidade');
+    const ltv = pontual + mrr * v('meses');
+    const comissoes = pontual * (v('com_pontual') + v('com_pontual_ger')) / 100 + mrr * (v('com_parceiro') + v('com_gerente')) / 100;
     const custoDiag = diag * v('h_diag') * v('custo_hora');
     const custoParc = aprovados * v('h_parceiro') * v('custo_hora') + v('anuncios') * janela;
     const total = comissoes + custoDiag + custoParc;
     tabela('ganhos', [
-      ['Receita mensal nova', v('meta') + ' clientes de ' + brl(v('mensalidade')), brl(mrr), true],
-      ['Receita contratada', 'permanência de ' + num(v('meses'), 0) + ' meses', brl(ltv), true],
-      ['Comissões', 'parceiro e Gerente sobre a 1ª mensalidade', brl(comissoes)],
+      ['Vendas pontuais', num(m1, 0) + ' no mês 1 e ' + num(m2, 1) + ' no mês 2', brl(pontual), true],
+      ['Receita mensal nova', num(cont, 1) + ' clientes no plano mensal de ' + brl(v('mensalidade')), brl(mrr)],
+      ['Receita contratada', 'vendas pontuais e ' + num(v('meses'), 0) + ' meses de plano mensal', brl(ltv), true],
+      ['Comissões', 'parceiro e Gerente: ' + num(v('com_pontual'), 1) + '% e ' + num(v('com_pontual_ger'), 1) + '% do pontual, ' + num(v('com_parceiro'), 0) + '% e ' + num(v('com_gerente'), 0) + '% da 1ª mensalidade', brl(comissoes)],
       ['Diagnósticos', num(up(diag), 0) + ' reuniões', brl(custoDiag)],
       ['Busca de parceiros (CAP total)', 'anúncios e horas de fila e conversa', brl(custoParc)],
       ['CAP por parceiro aprovado', 'busca de parceiros dividida pelos aprovados', brl(custoParc / aprovados)],
