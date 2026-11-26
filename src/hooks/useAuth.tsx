@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import type { Session } from "@supabase/supabase-js";
-import { supabase } from "@/integrations/supabase/client";
+import { MODO_VER_COMO, supabase } from "@/integrations/supabase/client";
 
 export type Perfil = {
   id: string;
@@ -66,7 +66,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     carregando,
     recarregarPerfil: () => carregarPerfil(session),
     sair: async () => {
-      await supabase.auth.signOut();
+      await supabase.auth.signOut(MODO_VER_COMO ? { scope: "local" } : undefined);
+      if (MODO_VER_COMO) {
+        try { sessionStorage.removeItem("wp_ver_como"); } catch { /* sem armazenamento */ }
+      }
       setPerfil(null);
     },
     isAdmin: papel === "admin",

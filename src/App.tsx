@@ -1,4 +1,6 @@
 import { lazy, Suspense, type ReactNode } from "react";
+import { MODO_VER_COMO } from "@/integrations/supabase/client";
+import { FaixaVerComo } from "@/components/layout/FaixaVerComo";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/sonner";
@@ -47,6 +49,8 @@ const OfertasCatalogo = lazy(() => import("@/pages/app/catalogo/Ofertas"));
 const PedidosCatalogo = lazy(() => import("@/pages/app/catalogo/Pedidos"));
 const ClientesGrupo = lazy(() => import("@/pages/app/catalogo/Clientes"));
 const MembrosComunidade = lazy(() => import("@/pages/app/catalogo/Membros"));
+const VerComoAdmin = lazy(() => import("@/pages/app/programa/VerComo"));
+const VerComo = lazy(() => import("@/pages/VerComo"));
 const PConhecer = lazy(() => import("@/pages/parceiro/ConhecerWise"));
 const PCatalogo = lazy(() => import("@/pages/parceiro/catalogo/Catalogo"));
 const POfertas = lazy(() => import("@/pages/parceiro/catalogo/Ofertas"));
@@ -88,8 +92,9 @@ function Protegida({ publico, children }: { publico: "interno" | "parceiro"; chi
   if (!perfil) return <SemAcesso />;
   if (publico === "interno" && perfil.papel === "parceiro") return <Navigate to="/parceiro" replace />;
   if (publico === "parceiro" && perfil.papel !== "parceiro") return <Navigate to="/app" replace />;
-  // Senha provisória (acesso criado pela Wise ou pelo responsável do parceiro): cria a própria senha antes de entrar
-  if (session.user.user_metadata?.senha_provisoria) return <PrimeiroAcesso />;
+  // Senha provisória (acesso criado pela Wise ou pelo responsável do parceiro): cria a própria senha antes de entrar.
+  // Na aba de Ver como não: quem visualiza não troca a senha da pessoa.
+  if (session.user.user_metadata?.senha_provisoria && !MODO_VER_COMO) return <PrimeiroAcesso />;
   return <>{children}</>;
 }
 
@@ -108,10 +113,12 @@ export default function App() {
       <TooltipProvider>
         <AuthProvider>
           <BrowserRouter>
+            <FaixaVerComo />
             <Suspense fallback={<Carregando />}>
               <Routes>
                 <Route path="/" element={<Inicio />} />
                 <Route path="/entrar" element={<Entrar />} />
+                <Route path="/ver-como" element={<VerComo />} />
                 <Route path="/redefinir-senha" element={<RedefinirSenha />} />
                 <Route path="/r/:token" element={<PaginaRfp />} />
                 <Route path="/i/:token" element={<IndicacaoLink />} />
@@ -135,6 +142,7 @@ export default function App() {
                   <Route path="catalogo/pedidos" element={<PedidosCatalogo />} />
                   <Route path="catalogo/clientes" element={<ClientesGrupo />} />
                   <Route path="catalogo/membros" element={<MembrosComunidade />} />
+                  <Route path="programa/ver-como" element={<VerComoAdmin />} />
                   <Route path="parceiros" element={<Parceiros />} />
                   <Route path="parceiros/:id" element={<FichaParceiro />} />
                   <Route path="indicacoes" element={<Indicacoes />} />

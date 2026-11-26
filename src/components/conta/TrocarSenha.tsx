@@ -1,14 +1,22 @@
 import { useState } from "react";
 import { KeyRound, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { MODO_VER_COMO, supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { mensagemErroAcesso, problemaSenhaPessoal } from "@/lib/senha";
 import { Button } from "@/components/ui/button";
 import { CampoSenha, CamposNovaSenha } from "./CamposNovaSenha";
 
 // Troca de senha em Minha conta: confere a senha atual antes de gravar a nova
+// Na aba de Ver como a senha da pessoa visualizada não pode ser trocada
 export function TrocarSenha() {
+  if (MODO_VER_COMO) {
+    return <p className="rounded-[10px] border border-white/10 bg-white/5 px-3 py-2 text-sm text-neutro-300">Você está vendo o portal como outra pessoa. A senha dela não pode ser trocada daqui.</p>;
+  }
+  return <FormTrocarSenha />;
+}
+
+function FormTrocarSenha() {
   const { session, perfil } = useAuth();
   const [atual, setAtual] = useState("");
   const [nova, setNova] = useState("");

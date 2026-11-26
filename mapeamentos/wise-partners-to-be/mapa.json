@@ -9102,14 +9102,15 @@
         "EV-0392",
         "EV-0393",
         "EV-0446",
-        "EV-0447"
+        "EV-0447",
+        "EV-0477"
       ],
       "situacao": "no_papel",
       "fluxo_dispensado": null,
       "principios": [
         "F-006"
       ],
-      "portal": "é o próprio processo. A navegação segue a cadeia de valor em seis seções com poucas abas cada: Tarefas, Candidatos, Parceiros, Oportunidades, Resultados e Programa; a área do parceiro tem cinco: Início, Oportunidades, Aprender, Minha parceria e Comunidade. O wireframe de todas as telas e jornadas fica em Programa, Wireframe.",
+      "portal": "é o próprio processo. A navegação segue a cadeia de valor em seis seções com poucas abas cada: Tarefas, Candidatos, Parceiros, Oportunidades, Resultados e Programa; a área do parceiro tem cinco: Início, Oportunidades, Aprender, Minha parceria e Comunidade. O wireframe de todas as telas e jornadas fica em Programa, Wireframe; em Programa, Ver como, o administrador e o gerente abrem o portal como qualquer conta (por tipo de acesso), numa aba separada com aviso fixo e registro no histórico, para conferir o que cada pessoa vê.",
       "tipo": "suporte"
     },
     {
@@ -18811,6 +18812,15 @@
       "data": "2026-11-26",
       "trecho": "Caso eventualmente seja efetivamente um cliente do grupo Tríade, talvez ele não tenha interesse em vender o serviço da Wisemakers, estruturação comercial, para os clientes dele, como, por exemplo, se faz um CRM. Mas ele vai se beneficiar com outras coisas do portal Wise Partners, como, por exemplo, o catálogo, onde ele pode apresentar os produtos dele ou os serviços dele, etc.",
       "local": "Conversa de 26/11/2026, abrangente"
+    },
+    {
+      "id": "EV-0477",
+      "tipo": "entrevista",
+      "fonte": "Pedido do patrocinador no Claude Code, 26/11/2026",
+      "pessoa": "PE-01",
+      "data": "2026-11-26",
+      "trecho": "Preciso que você faça uma função dentro do acesso de administradores e do gerente do portal, no caso eu mesmo, para que eu possa mudar o tipo de visualização, no sentido visualizar como e daí puxar a lista de todos os possíveis acessos e para que eu possa visualizar o portal, se está funcionando",
+      "local": "Conversa de 26/11/2026, ver como"
     }
   ],
   "perguntas": [
@@ -30827,6 +30837,16 @@
       "evidencias": [
         "EV-0474"
       ]
+    },
+    {
+      "id": "DE-107",
+      "data": "2026-11-26",
+      "por": "PE-01",
+      "provisoria": false,
+      "evidencias": [
+        "EV-0477"
+      ],
+      "texto": "O administrador e o gerente da comunidade podem ver o portal como qualquer conta, a partir da lista de todos os acessos por tipo, para conferir se está funcionando. Contas de administrador ficam de fora e cada uso fica registrado."
     }
   ],
   "glossario": [
@@ -31085,6 +31105,10 @@
     {
       "data": "2026-11-26",
       "evento": "To-be v17: entrada única pela página do portal. Um formulário para qualquer empresa, aviso ao gerente com o perfil declarado, conferência e adição (P-106 e P-107 refeitos); Comunidade como primeira tela do cliente do grupo; vídeo geral a regravar; canvas atualizado."
+    },
+    {
+      "data": "2026-11-26",
+      "evento": "To-be v18: Ver como em Programa, para o administrador e o gerente conferirem o portal como cada tipo de acesso."
     }
   ]
 }

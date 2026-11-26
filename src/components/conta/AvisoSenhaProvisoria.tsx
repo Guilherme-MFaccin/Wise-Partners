@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { KeyRound } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { MODO_VER_COMO } from "@/integrations/supabase/client";
 
 // Faixa no topo enquanto a pessoa usa a senha provisória que recebeu de quem criou o acesso.
 // Some quando ela troca a senha (Minha conta ou redefinição pelo e-mail).
 export function AvisoSenhaProvisoria() {
   const { session, perfil } = useAuth();
-  if (!session?.user.user_metadata?.senha_provisoria || !perfil) return null;
+  // Na aba de Ver como, quem visualiza não troca a senha da pessoa
+  if (MODO_VER_COMO || !session?.user.user_metadata?.senha_provisoria || !perfil) return null;
   const conta = perfil.papel === "parceiro" ? "/parceiro/conta" : "/app/conta";
   return (
     <div className="border-b border-warning/30 bg-warning/10 px-4 py-2.5 text-sm sm:px-6">

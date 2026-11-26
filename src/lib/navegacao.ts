@@ -74,6 +74,7 @@ export const SECOES_INTERNAS: SecaoNav[] = [
       { to: "/app/modelo-e-processos", rotulo: "Modelo e processos", papeis: TODOS_INTERNOS },
       { to: "/app/programa/wireframe", rotulo: "Wireframe", papeis: TODOS_INTERNOS },
       { to: "/app/programa/paginas", rotulo: "Páginas", papeis: GESTAO },
+      { to: "/app/programa/ver-como", rotulo: "Ver como", papeis: GESTAO },
       { to: "/app/capacitacao", rotulo: "Capacitação", papeis: SEM_FINANCEIRO },
       { to: "/app/configuracoes", rotulo: "Regras e configurações", papeis: GESTAO },
       { to: "/app/usuarios", rotulo: "Usuários", papeis: GESTAO },
