@@ -1,0 +1,19 @@
+# Recorte do grafo (graphify): código do portal e docs do projeto.
+# Fora: saídas geradas, skills de terceiros, capturas, imagens, PDFs e planilhas.
+mapeamentos/
+.claude/
+.specify/templates/
+.impeccable/
+CLAUDE-SECURITY-*/
+public/
+dist/
+docs/ux/capturas/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.svg
+*.pdf
+*.docx
+*.xlsx
